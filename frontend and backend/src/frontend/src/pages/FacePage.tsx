@@ -13,38 +13,42 @@ import {
 import { openEntityDrawer } from "@/components/crimenet/AppShell";
 import { formatDateTime, formatPercent } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
-import { useRole } from "@/lib/crimenet/role-context";
-import { getFaceRecords } from "@/lib/crimenet/services";
+import { roleLabels, useRole } from "@/lib/crimenet/role-context";
+import { getFaceRecords, postFaceDecision } from "@/lib/crimenet/services";
 import type { FaceRecord } from "@/lib/crimenet/types";
 import { ScanFace } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const matchTone: Record<
   FaceRecord["matchStatus"],
-  "success" | "warning" | "neutral"
+  "success" | "warning" | "neutral" | "danger"
 > = {
   confirmed: "success",
   probable: "warning",
   unverified: "neutral",
+  rejected: "danger",
 };
 
 const matchLabelKey: Record<
   FaceRecord["matchStatus"],
-  "matchConfirmed" | "matchProbable" | "matchUnverified"
+  "matchConfirmed" | "matchProbable" | "matchUnverified" | "matchRejected"
 > = {
   confirmed: "matchConfirmed",
   probable: "matchProbable",
   unverified: "matchUnverified",
+  rejected: "matchRejected",
 };
 
 export function FacePage() {
-  const { language } = useRole();
+  const { language, role } = useRole();
   const strings = getStrings(language);
   const [records, setRecords] = useState<FaceRecord[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [status, setStatus] = useState("all");
   const [district, setDistrict] = useState("all");
   const [loading, setLoading] = useState(true);
+  const [decisionBusy, setDecisionBusy] = useState(false);
+  const [decisionNote, setDecisionNote] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -58,6 +62,32 @@ export function FacePage() {
       cancelled = true;
     };
   }, []);
+
+  const pendingMatches = useMemo(
+    () => records.filter((row) => row.matchStatus === "probable"),
+    [records],
+  );
+
+  async function decide(decision: "confirm" | "reject") {
+    if (!selected || decisionBusy) return;
+    setDecisionBusy(true);
+    setDecisionNote(null);
+    try {
+      const updated = await postFaceDecision({
+        faceId: selected.id,
+        decision,
+        reviewer: roleLabels[role],
+      });
+      setRecords((current) =>
+        current.map((row) => (row.id === updated.id ? updated : row)),
+      );
+      setDecisionNote(strings.decisionRecorded);
+    } catch {
+      setDecisionNote(strings.decisionFailed);
+    } finally {
+      setDecisionBusy(false);
+    }
+  }
 
   const districts = useMemo(
     () =>
@@ -105,7 +135,7 @@ export function FacePage() {
       align: "right",
       render: (row) => (
         <span className="font-mono-id text-xs tabular-nums text-foreground">
-          {formatPercent(row.confidence, 1)}
+          {formatPercent(row.confidence * 100, 1)}
         </span>
       ),
     },
@@ -200,7 +230,11 @@ export function FacePage() {
           <MetricCard
             label={strings.needsReview}
             value={String(
-              records.filter((row) => row.matchStatus !== "confirmed").length,
+              records.filter(
+                (row) =>
+                  row.matchStatus === "probable" ||
+                  row.matchStatus === "unverified",
+              ).length,
             )}
             delta="+1 today"
             trend="up"
@@ -210,6 +244,21 @@ export function FacePage() {
           />
         </section>
       )}
+
+      {!loading && pendingMatches.length > 0 ? (
+        <div
+          data-ocid="face.alert_banner"
+          className="mt-5 flex flex-wrap items-center gap-3 rounded-lg border border-risk-medium/40 bg-risk-medium/10 px-4 py-3"
+        >
+          <StatusPill label={strings.faceAlertTitle} tone="warning" pulse />
+          <p className="min-w-0 flex-1 text-sm text-foreground">
+            {strings.faceAlertBody}
+          </p>
+          <span className="font-mono-id text-xs tabular-nums text-risk-medium">
+            {pendingMatches.length}
+          </span>
+        </div>
+      ) : null}
 
       <div className="mt-5">
         <FilterBar
@@ -224,6 +273,7 @@ export function FacePage() {
                 { value: "confirmed", label: strings.matchConfirmed },
                 { value: "probable", label: strings.matchProbable },
                 { value: "unverified", label: strings.matchUnverified },
+                { value: "rejected", label: strings.matchRejected },
               ],
             },
             {
@@ -275,14 +325,46 @@ export function FacePage() {
           }
           footer={
             selected ? (
-              <button
-                type="button"
-                data-ocid="face.open_entity_button"
-                onClick={() => openEntityDrawer(selected.entityId)}
-                className="w-full rounded-md border border-info/40 bg-info/12 py-2 text-sm font-medium text-info transition-smooth hover:bg-info/20"
-              >
-                {strings.openRecord}
-              </button>
+              <div className="flex flex-col gap-2">
+                {selected.matchStatus === "probable" ? (
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      type="button"
+                      data-ocid="face.confirm_button"
+                      disabled={decisionBusy}
+                      onClick={() => void decide("confirm")}
+                      className="rounded-md border border-risk-low/40 bg-risk-low/12 py-2 text-sm font-medium text-risk-low transition-smooth hover:bg-risk-low/20 disabled:opacity-50"
+                    >
+                      {strings.confirmMatch}
+                    </button>
+                    <button
+                      type="button"
+                      data-ocid="face.reject_button"
+                      disabled={decisionBusy}
+                      onClick={() => void decide("reject")}
+                      className="rounded-md border border-risk-critical/40 bg-risk-critical/12 py-2 text-sm font-medium text-risk-critical transition-smooth hover:bg-risk-critical/20 disabled:opacity-50"
+                    >
+                      {strings.rejectMatch}
+                    </button>
+                  </div>
+                ) : null}
+                {decisionNote ? (
+                  <p
+                    data-ocid="face.decision_note"
+                    className="text-center text-xs text-muted-foreground"
+                  >
+                    {decisionNote}
+                  </p>
+                ) : null}
+                <button
+                  type="button"
+                  data-ocid="face.open_entity_button"
+                  onClick={() => openEntityDrawer(selected.entityId)}
+                  className="w-full rounded-md border border-info/40 bg-info/12 py-2 text-sm font-medium text-info transition-smooth hover:bg-info/20"
+                >
+                  {strings.openRecord}
+                </button>
+              </div>
             ) : undefined
           }
         >
@@ -290,8 +372,29 @@ export function FacePage() {
             <>
               <DetailField
                 label={strings.confidence}
-                value={formatPercent(selected.confidence, 1)}
+                value={formatPercent(selected.confidence * 100, 1)}
                 mono
+              />
+              <DetailField
+                label={strings.similarityLabel}
+                value={
+                  selected.similarity != null
+                    ? formatPercent(selected.similarity * 100, 1)
+                    : "—"
+                }
+                mono
+              />
+              <DetailField
+                label={strings.matchedWith}
+                value={selected.matchedWith || "—"}
+              />
+              <DetailField
+                label={strings.matchedFrom}
+                value={
+                  selected.matchedFrom?.length
+                    ? selected.matchedFrom.join(", ")
+                    : "—"
+                }
               />
               <DetailField
                 label={strings.camera}
@@ -308,6 +411,12 @@ export function FacePage() {
                 label={strings.matchStatus}
                 value={strings[matchLabelKey[selected.matchStatus]]}
               />
+              {selected.decidedBy ? (
+                <DetailField
+                  label={strings.decidedByLabel}
+                  value={`${selected.decidedBy} · ${formatDateTime(selected.decidedAt ?? "")}`}
+                />
+              ) : null}
               <DetailField label={strings.risk} value={selected.risk} />
               <p className="mt-3 text-sm text-muted-foreground">
                 {selected.notes}

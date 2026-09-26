@@ -1,6 +1,6 @@
 import { AppShell } from "@/components/crimenet/AppShell";
 import { RoleProvider } from "@/lib/crimenet/role-context";
-import { getToken } from "@/lib/crimenet/services";
+import { getToken, setUnauthorizedHandler } from "@/lib/crimenet/services";
 import { AiInvestigatorPage } from "@/pages/AiInvestigatorPage";
 import { AnalyticsPage } from "@/pages/AnalyticsPage";
 import { CaseWorkbenchPage } from "@/pages/CaseWorkbenchPage";
@@ -182,6 +182,13 @@ const routeTree = rootRoute.addChildren([
 ]);
 
 const router = createRouter({ routeTree });
+
+// A stored token can stop verifying (signing secret rotated server-side, or
+// the 12h TTL ran out). The service layer drops the token; this sends the
+// investigator back to sign-in so their next write does not fail again.
+setUnauthorizedHandler(() => {
+  void router.navigate({ to: "/signin" });
+});
 
 declare module "@tanstack/react-router" {
   interface Register {

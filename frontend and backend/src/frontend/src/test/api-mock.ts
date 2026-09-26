@@ -202,6 +202,32 @@ async function handleWrite(path: string, init: RequestInit): Promise<Response> {
     return json(record, 201);
   }
 
+  if (method === "POST" && path === "/api/faces/decision") {
+    const body = JSON.parse(String(init.body)) as {
+      faceId: string;
+      decision: "confirm" | "reject";
+      reviewer: string;
+      note?: string;
+    };
+    const rows = (fixtures["/api/faces"] as Array<Record<string, unknown>>).map(
+      (row) =>
+        row.id === body.faceId
+          ? {
+              ...row,
+              matchStatus:
+                body.decision === "confirm" ? "confirmed" : "rejected",
+              decidedBy: body.reviewer,
+              decidedAt: new Date().toISOString(),
+              ...(body.note ? { notes: body.note } : {}),
+            }
+          : row,
+    );
+    const updated = rows.find((row) => row.id === body.faceId);
+    if (!updated) return json({ detail: `No face ${body.faceId}` }, 404);
+    fixtures["/api/faces"] = rows;
+    return json(updated);
+  }
+
   const firNumberCase = path.match(/^\/api\/cases\/([^/]+)\/firs$/);
   if (method === "POST" && firNumberCase) {
     const caseId = firNumberCase[1];

@@ -94,6 +94,41 @@ class ResolutionEngine:
         self.candidate_formatter = CandidateFormatter()
         self.graph = KnowledgeGraph()
 
+    @staticmethod
+    def _load_face_candidates(output_dir: str) -> List[MergeCandidate]:
+        """Face-match candidates from Stage 2.5 (RESEARCH_FACE_RECOGNITION
+        doc 08 §4) — emitted as MergeCandidates with signal ``face_match``.
+        Callers filter to candidates whose endpoints are real entities."""
+        path = Path(output_dir) / "face_embeddings.json"
+        if not path.is_file():
+            return []
+        try:
+            with path.open(encoding="utf-8") as fh:
+                data = json.load(fh)
+        except (OSError, ValueError):
+            return []
+        if not isinstance(data, dict):
+            return []
+        out: List[MergeCandidate] = []
+        for cand in data.get("candidates") or []:
+            if not isinstance(cand, dict):
+                continue
+            a = str(cand.get("source_entity_id") or "")
+            b = str(cand.get("candidate_entity_id") or "")
+            if not a or not b:
+                continue
+            signals = cand.get("signals") or {}
+            out.append(MergeCandidate(
+                entity_ids=[a, b],
+                signal="face_match",
+                description=(
+                    f"Face embeddings match "
+                    f"(similarity {float(signals.get('face_similarity', 0.0)):.3f})"
+                ),
+                confidence=float(cand.get("confidence") or 0.0),
+            ))
+        return out
+
     def resolve(
         self,
         entities: List[dict],
@@ -138,7 +173,15 @@ class ResolutionEngine:
 
         # Step 5: Multi-signal disambiguation on top candidates
         print("[RESOLUTION] Step 5: Multi-signal disambiguation...")
-        all_candidates = rule_candidates + phonetic_cands + fuzzy_cands
+        # Face-based candidates (Stage 2.5 — RESEARCH_FACE_RECOGNITION doc 08 §4):
+        # person↔person pairs whose faces matched at the review floor.
+        face_cands = [
+            c for c in self._load_face_candidates(output_dir)
+            if all(eid in entities_by_id for eid in c.entity_ids)
+        ]
+        if face_cands:
+            print(f"  -> {len(face_cands)} face-match candidates found")
+        all_candidates = rule_candidates + phonetic_cands + fuzzy_cands + face_cands
         all_candidates = deduplicate_candidates(all_candidates)
         disambiguated = self._disambiguate_pass(all_candidates, entities_by_id)
         print(f"  -> {len(disambiguated)} disambiguated pairs")

@@ -332,6 +332,18 @@ export interface UiStrings {
   matchConfirmed: string;
   matchProbable: string;
   matchUnverified: string;
+  matchRejected: string;
+  confirmMatch: string;
+  rejectMatch: string;
+  matchedWith: string;
+  matchedFrom: string;
+  similarityLabel: string;
+  decidedByLabel: string;
+  decidedAtLabel: string;
+  faceAlertTitle: string;
+  faceAlertBody: string;
+  decisionRecorded: string;
+  decisionFailed: string;
   cameraLabel: string;
   capturedLabel: string;
   caseSummary: string;
@@ -941,6 +953,19 @@ const en: UiStrings = {
   matchConfirmed: "Confirmed",
   matchProbable: "Probable",
   matchUnverified: "Unverified",
+  matchRejected: "Rejected",
+  confirmMatch: "Confirm match",
+  rejectMatch: "Reject match",
+  matchedWith: "Matched with",
+  matchedFrom: "Matched from",
+  similarityLabel: "Similarity",
+  decidedByLabel: "Decided by",
+  decidedAtLabel: "Decided at",
+  faceAlertTitle: "Face match awaiting review",
+  faceAlertBody:
+    "An identity candidate links a CCTV frame to a known subject. Confirm or reject it to record the investigator decision.",
+  decisionRecorded: "Decision recorded",
+  decisionFailed: "Decision could not be saved",
   cameraLabel: "Camera",
   capturedLabel: "Captured",
   caseSummary: "Case Summary",
@@ -1560,6 +1585,19 @@ const hi: UiStrings = {
   matchConfirmed: "पुष्ट",
   matchProbable: "संभावित",
   matchUnverified: "असत्यापित",
+  matchRejected: "अस्वीकृत",
+  confirmMatch: "मिलान पुष्टि करें",
+  rejectMatch: "मिलान अस्वीकार करें",
+  matchedWith: "इससे मिलान",
+  matchedFrom: "स्रोत फ़ाइलें",
+  similarityLabel: "समरूपता",
+  decidedByLabel: "निर्णयकर्ता",
+  decidedAtLabel: "निर्णय समय",
+  faceAlertTitle: "मिलान समीक्षा बाकी",
+  faceAlertBody:
+    "एक पहचान उम्मीदवार सीसीटीवी फ्रेम को ज्ञात विषय से जोड़ता है। इसे पुष्टि या अस्वीकार करें।",
+  decisionRecorded: "निर्णय दर्ज किया गया",
+  decisionFailed: "निर्णय सहेजा नहीं जा सका",
   cameraLabel: "कैमरा",
   capturedLabel: "कैप्चर",
   caseSummary: "केस सारांश",

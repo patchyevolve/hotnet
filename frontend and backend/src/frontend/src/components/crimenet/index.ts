@@ -13,6 +13,16 @@ export { Sparkline } from "./Sparkline";
 export { DonutChart } from "./DonutChart";
 export { BarSeries } from "./BarSeries";
 export { GraphCanvas } from "./GraphCanvas";
+export type { GraphCanvasProps } from "./GraphCanvas";
+export { GraphControls } from "./GraphControls";
+export type { GraphControlsProps } from "./GraphControls";
+export { GraphLegend } from "./GraphLegend";
+export type { GraphLegendProps } from "./GraphLegend";
+export { EntityDetailPanel, EdgeDetailPanel } from "./EntityDetailPanel";
+export type {
+  EntityDetailPanelProps,
+  EdgeDetailPanelProps,
+} from "./EntityDetailPanel";
 export { MapCanvas } from "./MapCanvas";
 export { FlowCanvas } from "./FlowCanvas";
 export { Timeline } from "./Timeline";

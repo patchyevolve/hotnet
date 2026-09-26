@@ -148,6 +148,10 @@ ENV/
 .eggs/
 *.whl
 
+# Face-recognition model weights (insightface buffalo_l, ~333 MB) —
+# downloaded per environment, shared host↔container via bind mount.
+.insightface/
+
 # ============================================================
 # RUST
 # ============================================================

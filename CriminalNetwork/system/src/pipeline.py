@@ -190,6 +190,8 @@ class Pipeline:
         self.audit_trail = AuditTrail()
         self.calibrator = ConfidenceCalibrator()
         self.cross_case_guard = CrossCaseGuard()
+        # Stage 2.5 face-processing stats (RESEARCH_FACE_RECOGNITION doc 08 §7)
+        self._face_summary: dict = {"faces": 0, "matches": 0, "candidates": 0}
 
     def _start_run(self, trigger: str = "new_evidence", parent_run_id: str = None, case_id: str = None) -> PipelineRun:
         """Start a new pipeline run — per DATA_FLOW.md Pipeline Run Versioning."""
@@ -909,6 +911,13 @@ class Pipeline:
             self._mark_processed(file_path)
             processed_count += 1
 
+        # Step 2.5: Face processing (Stage 2.5 — RESEARCH_FACE_RECOGNITION doc 08 §7)
+        print("[PIPELINE] Step 2.5/8: Face processing (Stage 2.5)...")
+        face_stats = self._run_faces(evidence_files=evidence_files)
+        print(f"[PIPELINE]   -> {face_stats.get('faces', 0)} faces, "
+              f"{face_stats.get('matches', 0)} matches, "
+              f"{face_stats.get('candidates', 0)} candidates")
+
         # Step 3: Export results
         print("[PIPELINE] Step 3/8: Exporting results...")
         self.audit_trail.log("extraction", "extraction_completed", {
@@ -1177,6 +1186,7 @@ class Pipeline:
                 if not self._is_processed(file_str):
                     all_files.append(file_str)
 
+        new_file_infos: List[dict] = []
         if not all_files:
             print("[PIPELINE] No new files to extract.")
             # Still run resolution and temporal enrichment on existing data
@@ -1193,12 +1203,17 @@ class Pipeline:
                 self.ingestion.finalize_adversarial_checks(run_id=run.run_id)
                 result = self.extraction.extract_from_file(file_info, run_id=run.run_id)
                 self._mark_processed(file_path)
+                new_file_infos.append(file_info)
 
                 file_name = Path(file_path).name
                 print(f"[PIPELINE]   -> Processed: {file_name}")
 
             # Assign dependency groups after batch ingestion
             self.ingestion._assign_dependency_groups()
+
+        # Face processing (Stage 2.5 — RESEARCH_FACE_RECOGNITION doc 08 §7)
+        print("[PIPELINE] Face processing (Stage 2.5)...")
+        self._run_faces(evidence_files=new_file_infos)
 
         # Export results
         output = self._export_results()
@@ -1357,6 +1372,7 @@ class Pipeline:
 
         # Step 1-2: Ingest + Extract per FIR (tagging with fir_id)
         print(f"[PIPELINE] Step 1-2/8: Ingesting and extracting per FIR...")
+        feed_file_infos: List[dict] = []
         for fir_ctx in feed_result.firs:
             print(f"\n[PIPELINE] --- FIR: {fir_ctx.fir_id} ({fir_ctx.fir_number}) ---")
             self.fir_entities[fir_ctx.fir_id] = []
@@ -1385,6 +1401,7 @@ class Pipeline:
 
                 # Extract
                 result = self.extraction.extract_from_file(file_info, run_id=run.run_id)
+                feed_file_infos.append(file_info)
 
                 # Tag extracted entities/relations with fir_id
                 if isinstance(result, dict):
@@ -1406,6 +1423,10 @@ class Pipeline:
                 self._mark_processed(fpath)
 
             print(f"[PIPELINE]   FIR {fir_ctx.fir_id}: {len(self.fir_entities.get(fir_ctx.fir_id, []))} entities, {len(self.fir_relations.get(fir_ctx.fir_id, []))} relations")
+
+        # Face processing (Stage 2.5 — RESEARCH_FACE_RECOGNITION doc 08 §7)
+        print("[PIPELINE] Face processing (Stage 2.5)...")
+        self._run_faces(evidence_files=feed_file_infos)
 
         # Export results
         print("\n[PIPELINE] Step 3/8: Exporting results...")
@@ -1592,11 +1613,98 @@ class Pipeline:
             print(f"[PIPELINE] Reprocessed: {file_path}")
 
         return output
+    def _run_faces(self, evidence_files: Optional[List[dict]] = None) -> dict:
+        """Stage 2.5 — face processing (RESEARCH_FACE_RECOGNITION doc 08 §7).
+
+        Matches this run's face embeddings against each other and against faces
+        from previous runs (incremental), links faces to person entities via
+        doc 11 context, then writes ``face_embeddings.json`` (faces, matches,
+        candidates, stats) for Stage 3 resolution, Stage 5 graph edges and the
+        /api/faces projection.
+        """
+        from .faces.engine import camera_from_text, timestamp_from_text
+        from .faces.stage import FaceProcessingStage
+
+        evidence_files = evidence_files or []
+
+        # Overlay context per file (doc 11 §6.4 — camera id + capture time).
+        file_contexts: dict = {}
+        for info in evidence_files:
+            content = info.get("content") if isinstance(info.get("content"), dict) else {}
+            ocr = str(content.get("ocr_text") or content.get("content") or "")
+            file_contexts[info.get("file_name", "")] = {
+                "ocr_text": ocr,
+                "camera": camera_from_text(ocr),
+                "overlay_timestamp": timestamp_from_text(ocr),
+                "captured_at": timestamp_from_text(ocr) or str(info.get("modified_time", "")),
+            }
+
+        # Text corpus for REFERENCED_BY context (doc 11 §1 C1).
+        file_texts: dict = {}
+        for info in self.ingestion.ingestion_log:
+            content = info.get("content") if isinstance(info.get("content"), dict) else {}
+            text = str(content.get("ocr_text") or content.get("content") or "")
+            if text:
+                file_texts[info.get("file_name", "")] = text[:5000]
+        all_files = sorted({*file_texts.keys(), *file_contexts.keys()})
+
+        # Faces from previous runs stay matched incrementally.
+        previous_faces: List[dict] = []
+        previous_path = self.output_dir / "face_embeddings.json"
+        if previous_path.is_file():
+            try:
+                with previous_path.open(encoding="utf-8") as fh:
+                    previous_data = json.load(fh)
+                if isinstance(previous_data, dict):
+                    previous_faces = [f for f in previous_data.get("faces", []) if isinstance(f, dict)]
+            except (OSError, ValueError):
+                previous_faces = []
+
+        persons = [
+            {
+                "id": e.id,
+                "name": e.name,
+                "source_id": getattr(e, "source_id", ""),
+                "minted_from": (getattr(e, "attributes", None) or {}).get("minted_from", ""),
+            }
+            for e in self.extraction.entities
+            if getattr(e.entity_type, "value", "") == "PERSON"
+        ]
+
+        stage = FaceProcessingStage()
+        result = stage.process(
+            self.extraction.face_embeddings,
+            persons,
+            previous_faces=previous_faces,
+            file_contexts=file_contexts,
+            all_files=all_files,
+            file_texts=file_texts,
+        )
+
+        payload = {
+            "faces": result["faces"],
+            "matches": result["matches"],
+            "candidates": result["candidates"],
+            "stats": result["stats"],
+        }
+        with open(self.output_dir / "face_embeddings.json", "w", encoding="utf-8") as fh:
+            json.dump(payload, fh, indent=2, default=str)
+
+        self._face_summary = result["stats"]
+        self.audit_trail.log("faces", "face_processing_completed", dict(result["stats"]))
+        print(f"[FACES]   -> {result['stats'].get('faces', 0)} faces, "
+              f"{result['stats'].get('matches', 0)} matches, "
+              f"{result['stats'].get('candidates', 0)} candidates")
+        return result["stats"]
+
     def _export_results(self) -> dict:
         """Export all extracted data to output files with full metadata."""
 
         # Main extraction output
         db_ready = self.extraction.export_for_db()
+        # Stage 2.5 face stats ride along so extraction_output.json consumers
+        # see the same run totals as face_embeddings.json.
+        db_ready["faces"] = self._face_summary
         output_file = self.output_dir / "extraction_output.json"
         with open(output_file, "w") as f:
             json.dump(db_ready, f, indent=2)

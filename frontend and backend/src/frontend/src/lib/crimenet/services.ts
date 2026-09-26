@@ -115,6 +115,18 @@ export function setToken(token: string | null): void {
   }
 }
 
+let unauthorizedHandler: (() => void) | null = null;
+
+/**
+ * Registered once by the app shell. Called when the stored token no longer
+ * verifies (the signing secret rotated, or the token expired) so the shell can
+ * send the investigator to sign-in instead of leaving them on a page whose
+ * writes keep failing.
+ */
+export function setUnauthorizedHandler(handler: (() => void) | null): void {
+  unauthorizedHandler = handler;
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const token = getToken();
   const headers = new Headers(init?.headers);
@@ -123,6 +135,14 @@ async function request<T>(path: string, init?: RequestInit): Promise<T> {
     headers.set("Content-Type", "application/json");
   }
   const response = await fetch(path, { ...init, headers });
+  if (response.status === 401 && token) {
+    // A rejected signature means the token this client holds is unusable.
+    // Drop it and hand back a message an investigator can act on; the
+    // registered handler navigates to sign-in.
+    setToken(null);
+    unauthorizedHandler?.();
+    throw new ApiError(401, "Session expired. Please sign in again.");
+  }
   if (!response.ok) {
     let detail = `${response.status} ${response.statusText}`;
     try {
@@ -335,6 +355,22 @@ export async function getFaceRecords(): Promise<FaceRecord[]> {
   return read<FaceRecord[]>("/api/faces", []);
 }
 
+/**
+ * Record an investigator's confirm/reject decision on a face match.
+ * Returns the updated projection record (persisted server-side).
+ */
+export async function postFaceDecision(input: {
+  faceId: string;
+  decision: "confirm" | "reject";
+  reviewer: string;
+  note?: string;
+}): Promise<FaceRecord> {
+  return request<FaceRecord>("/api/faces/decision", {
+    method: "POST",
+    body: JSON.stringify(input),
+  });
+}
+
 export async function getEvidence(): Promise<EvidenceRecord[]> {
   return read<EvidenceRecord[]>("/api/evidence", []);
 }
@@ -406,4 +442,21 @@ export async function search(query: string): Promise<SearchResultGroup[]> {
   const term = query.trim();
   if (term.length < 2) return [];
   return read<SearchResultGroup[]>(`/api/search${qs({ q: term })}`, []);
+}
+
+// ---------------------------------------------------------------------------
+// Enriched graph data — merges /api/network + /api/analytics + /api/entities
+// ---------------------------------------------------------------------------
+
+export async function getEnrichedGraphData(caseId?: string): Promise<{
+  network: NetworkGraph;
+  analytics: AnalyticsData;
+  entities: EntityRecord[];
+}> {
+  const [network, analytics, entities] = await Promise.all([
+    getNetworkGraph(caseId),
+    getAnalytics(caseId),
+    getEntities(),
+  ]);
+  return { network, analytics, entities };
 }

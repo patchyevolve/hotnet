@@ -117,3 +117,18 @@ class JobView(BaseModel):
     error: str | None = None
     returncode: int | None = None
     runId: str | None = None
+
+
+class FaceDecision(BaseModel):
+    """Investigator confirm/reject of a proposed face match.
+
+    The pipeline proposes (doc 08 §3.2 candidates, §4.3 tiers); the
+    investigator disposes. CONFIRMED / rejected are never derived from
+    similarity alone — they only ever come from this payload or from an
+    identity document confirmation.
+    """
+
+    faceId: str = Field(min_length=1, max_length=160)
+    decision: Literal["confirm", "reject"]
+    reviewer: str = Field(default="", max_length=80)
+    note: str = Field(default="", max_length=500)

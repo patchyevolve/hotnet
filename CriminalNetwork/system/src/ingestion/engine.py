@@ -196,6 +196,18 @@ class IngestionEngine:
         self.adversarial_checks[path.name] = adversarial
         file_info["adversarial_check"] = adversarial.to_dict()
 
+        # Stage 1 (face): detect faces in images — RESEARCH_FACE_RECOGNITION
+        # doc 08 §2. One RetinaFace+ArcFace pass; records stay PENDING until
+        # Stage 2 finalizes them. Degrades to zero faces without the model.
+        if file_type == "image":
+            from ..faces.engine import analyze_image
+
+            face_crops = analyze_image(file_path, file_name=path.name)
+            file_info["face_crops"] = face_crops
+            file_info["face_count"] = len(face_crops)
+            if face_crops:
+                print(f"[FACES]   -> {path.name}: {len(face_crops)} face(s) detected")
+
         # Track in current run
         if self.current_run:
             self.current_run.input_snapshot.append(path.name)
@@ -374,7 +386,7 @@ class IngestionEngine:
     def _parse_image(self, file_path: str) -> dict:
         """Parse image file using OCR (pytesseract + Pillow). Supports English + Hindi."""
         try:
-            from PIL import Image
+            from PIL import Image, ImageEnhance, ImageOps
             import pytesseract
             import shutil
 
@@ -396,15 +408,52 @@ class IngestionEngine:
                 ratio = max_width / img.width
                 img = img.resize((max_width, int(img.height * ratio)), Image.LANCZOS)
 
-            # OCR with English + Hindi
+            # OCR with English + Hindi; fall back to English when the hin
+            # traineddata is not installed on this host/container.
+            #
+            # Multi-pass concat: CCTV overlays (green captions on scanlines)
+            # are read differently by each pass — the default dense pass gets
+            # 'CAM! 4', the sparse --psm 11 pass gets 'CAM 4:', and a
+            # preprocessed grayscale+autocontrast+sharpen pass with --psm 6
+            # reads the timestamp block '2024-06-25 14:32:01' exactly. No
+            # single pass wins, so feed every reading to the extractors and
+            # let the timestamp/camera parsers pick the coherent one; the
+            # extra noise lines match no downstream pattern.
+            #
+            # The overlay pass runs eng-only: the hin traineddata degrades
+            # digit shapes on stylized fonts ('14:32:01' -> '4:32:0!').
             lang = "hin+eng"
-            text = pytesseract.image_to_string(img, lang=lang,
-                                               config=f"--tessdata-dir {tessdata_prefix}" if tessdata_prefix else "")
+            tess_config = f"--tessdata-dir {tessdata_prefix}" if tessdata_prefix else ""
+
+            pre = ImageOps.autocontrast(img.convert("L").resize(
+                (img.width * 2, img.height * 2), Image.LANCZOS))
+            pre = ImageEnhance.Sharpness(pre).enhance(2.0)
+            variants = ((img, "", lang), (img, "--psm 11", lang),
+                        (pre, "--psm 6", "eng"))
+
+            def _ocr_passes(image_variants, base_config: str) -> list[str]:
+                texts: list[str] = []
+                for image, extra, pass_lang in image_variants:
+                    try:
+                        texts.append(pytesseract.image_to_string(
+                            image, lang=pass_lang,
+                            config=f"{base_config} {extra}".strip(),
+                        ))
+                    except pytesseract.TesseractError:
+                        return texts
+                return texts
+
+            texts = _ocr_passes(variants, tess_config)
+            if not any(t.strip() for t in texts):
+                lang = "eng"
+                variants = tuple((im, ex, "eng") for im, ex, _ in variants)
+                texts = _ocr_passes(variants, tess_config)
+            text = "\n".join(t for t in texts if t)
 
             # Get per-word confidence scores for quality gate
             ocr_data = pytesseract.image_to_data(img, lang=lang,
                                                   output_type=pytesseract.Output.DICT,
-                                                  config=f"--tessdata-dir {tessdata_prefix}" if tessdata_prefix else "")
+                                                  config=tess_config)
 
             # Calculate quality metrics
             words = []

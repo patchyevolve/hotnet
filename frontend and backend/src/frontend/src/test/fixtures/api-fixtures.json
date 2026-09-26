@@ -16592,12 +16592,57 @@
       }
     ]
   },
-  "/api/faces": [],
+  "/api/faces": [
+    {
+      "id": "face_suresh_0",
+      "subject": "Suresh",
+      "entityId": "PERSON_f73ad70629191b0d",
+      "confidence": 0.55,
+      "camera": "",
+      "capturedAt": "2026-09-26T20:13:57.932871",
+      "risk": "low",
+      "matchStatus": "confirmed",
+      "matchedWith": "Suresh",
+      "matchedFrom": ["liftCCTV.jpeg"],
+      "similarity": 0.5306,
+      "decidedBy": "Insp. Rao",
+      "decidedAt": "2026-09-26T20:14:09+00:00",
+      "notes": "identity hint from filename context; capture time from file metadata"
+    },
+    {
+      "id": "face_liftCCTV_0",
+      "subject": "Suresh",
+      "entityId": "PERSON_f73ad70629191b0d",
+      "confidence": 0.65,
+      "camera": "CAM_4",
+      "capturedAt": "2024-06-25T14:32:01",
+      "risk": "low",
+      "matchStatus": "probable",
+      "matchedWith": "Suresh",
+      "matchedFrom": ["liftCCTV.jpeg", "suresh.jpeg"],
+      "similarity": 0.5306,
+      "decidedBy": "",
+      "decidedAt": "",
+      "notes": "identity candidate via face match (similarity 0.531); capture time from image overlay"
+    }
+  ],
   "/api/faces/status": {
-    "available": false,
-    "stage": "pending",
-    "reason": "Face recognition runs as a pipeline stage and is not enabled.",
-    "endpoints": ["/api/faces", "/api/faces/status"]
+    "available": true,
+    "modelAvailable": true,
+    "reason": "Face recognition runs as pipeline stages 1.5 (detection), 2 (embedding) and 2.5 (matching).",
+    "endpoints": ["/api/faces", "/api/faces/status", "/api/faces/decision"],
+    "stats": {
+      "faces": 2,
+      "extracted": 2,
+      "low_quality": 0,
+      "rejected": 0,
+      "linked_faces": 1,
+      "matches": 1,
+      "high_confidence_matches": 0,
+      "candidates": 1,
+      "identity_candidates": 1,
+      "cross_person_matches": 0
+    }
   },
   "/api/evidence": [
     {

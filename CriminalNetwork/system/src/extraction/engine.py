@@ -18,6 +18,7 @@ from ..models.schema import (
 )
 from ..ai.caller import AICaller
 from ..ingestion.column_mapper import ColumnMapper
+from ..faces.context import filename_name
 
 
 def make_confidence(
@@ -128,11 +129,13 @@ class ExtractionEngine:
             if re.search(r'\b' + re.escape(kw) + r'\b', lower):
                 return True
         return False
-
     def __init__(self, ai_caller: Optional[AICaller] = None,
-                 llm_extraction_threshold: int = 50, max_text_length: int = 5000):
+                 llm_extraction_threshold: int = 50,
+                 max_text_length: int = 5000):
         self.entities = []
         self.relations = []
+        # Stage 2 (face): embedding records promoted from Stage 1 detections.
+        self.face_embeddings: List[dict] = []
         self.entity_index = {}  # id -> entity
         self.relation_index = {}  # id -> relation
         self.extraction_log = []
@@ -286,6 +289,13 @@ class ExtractionEngine:
                     existing.source.reliability_location = relation.source.reliability_location
                     existing.source.reliability_timing = relation.source.reliability_timing
 
+        # Stage 2 (face): promote face crops detected at ingestion into
+        # embedding records — RESEARCH_FACE_RECOGNITION doc 08 §3.
+        if file_info.get("face_crops"):
+            self.face_embeddings.extend(
+                self._extract_face_embeddings(file_info, run_id=run_id)
+            )
+
         log_entry = {
             "file_name": file_name,
             "entities_found": len(new_entities),
@@ -301,6 +311,35 @@ class ExtractionEngine:
             "relations": new_relations,
             "log": log_entry,
         }
+
+    def _extract_face_embeddings(self, file_info: dict, run_id: str = "") -> List[dict]:
+        """Stage 2 face path: finalize face records detected at ingestion.
+
+        Cutoffs per RESEARCH_FACE_RECOGNITION doc 08 §3.2: detector confidence
+        below 0.5 → REJECTED, quality below 0.3 → LOW_QUALITY with the embedding
+        dropped, otherwise EXTRACTED (embedding kept for Stage 2.5 matching).
+        """
+        from ..faces.engine import DET_CUTOFF, QUALITY_CUTOFF
+
+        records: List[dict] = []
+        for crop in file_info.get("face_crops") or []:
+            if not isinstance(crop, dict):
+                continue
+            rec = dict(crop)
+            if rec.get("status") in (None, "PENDING"):
+                det = float(rec.get("detector_confidence") or 0.0)
+                quality = float(rec.get("quality_score") or 0.0)
+                if det < DET_CUTOFF:
+                    rec["status"] = "REJECTED"
+                    rec["embedding_vector"] = []
+                elif quality < QUALITY_CUTOFF:
+                    rec["status"] = "LOW_QUALITY"
+                    rec["embedding_vector"] = []
+                else:
+                    rec["status"] = "EXTRACTED"
+            rec["run_id"] = run_id
+            records.append(rec)
+        return records
 
     def resolve_dangling_references(self) -> int:
         """
@@ -942,6 +981,29 @@ OUTPUT (JSON):
                 name=date_match.group(1),
                 attributes={"date": date_match.group(1), "source_image": file_name},
                 confidence=ConfidenceSchema(score=0.7, basis=["Date from filename"]),
+                source=source,
+                extraction_method="code",
+            ))
+
+        # Filename-derived subject (doc 11 §5 Priority 5): a name-shaped image
+        # filename ('suresh.jpg') mints a weak PERSON the face stage can link
+        # its detected face to — only when the file's own text named nobody,
+        # and only when the name is name-shaped (surveillance words, digits
+        # and ID-document files never mint).
+        person_name = filename_name(file_name)
+        person_from_content = any(
+            e.entity_type == EntityType.PERSON for e in entities
+        )
+        if person_name and not person_from_content:
+            entities.append(ExtractedEntity(
+                id=generate_id("PERSON", person_name),
+                entity_type=EntityType.PERSON,
+                name=person_name,
+                attributes={"minted_from": "filename", "source_image": file_name},
+                confidence=ConfidenceSchema(
+                    score=0.55,
+                    basis=["Person name inferred from filename (doc 11 filename context)"],
+                ),
                 source=source,
                 extraction_method="code",
             ))

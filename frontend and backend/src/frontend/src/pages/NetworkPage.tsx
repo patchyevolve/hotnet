@@ -1,204 +1,368 @@
-import {
-  DetailField,
-  DetailPanel,
-  EmptyState,
-  FilterBar,
-  GraphCanvas,
-  PageHeader,
-  RiskBadge,
-} from "@/components/crimenet";
+/**
+ * NetworkPage — Criminal Network Analysis
+ *
+ * Full analysis-grade graph visualization: force-directed Canvas renderer,
+ * mode/colour/size controls, analytical filters, entity detail panel,
+ * path analysis, neighbourhood expansion, community hulls, and legend.
+ */
+
 import { openEntityDrawer } from "@/components/crimenet/AppShell";
+import {
+  EdgeDetailPanel,
+  EntityDetailPanel,
+} from "@/components/crimenet/EntityDetailPanel";
+import { GraphCanvas } from "@/components/crimenet/GraphCanvas";
+import { GraphControls } from "@/components/crimenet/GraphControls";
+import { GraphLegend } from "@/components/crimenet/GraphLegend";
+import { EmptyState, FilterBar, PageHeader } from "@/components/crimenet/index";
 import { entityKindLabels } from "@/lib/crimenet/format";
+import {
+  applyFilters,
+  applyNodeSizing,
+  buildSelectionState,
+  defaultFilters,
+  enrichGraph,
+  findShortestPath,
+  hasActiveFilters,
+  uniqueRelationshipTypes,
+} from "@/lib/crimenet/graphTransform";
 import { getStrings } from "@/lib/crimenet/i18n";
 import { useRole } from "@/lib/crimenet/role-context";
 import {
+  getAnalytics,
   getCases,
   getEntities,
   getNetworkGraph,
 } from "@/lib/crimenet/services";
 import type {
   CaseRecord,
-  EntityRecord,
-  NetworkGraph,
-  RiskLevel,
+  ColorMode,
+  EnrichedGraph,
+  GraphEdge,
+  GraphFilterState,
+  GraphMode,
+  GraphNode,
+  GraphSelectionState,
+  SizeMetric,
 } from "@/lib/crimenet/types";
 import { Network } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-const dateRanges = [
+// ---------------------------------------------------------------------------
+// Constants
+// ---------------------------------------------------------------------------
+
+const DATE_RANGE_OPTIONS = [
   { value: "all", label: "Any date" },
   { value: "7", label: "Last 7 days" },
   { value: "30", label: "Last 30 days" },
   { value: "90", label: "Last 90 days" },
 ] as const;
 
-/** Edge labels arrive as `SHARED_PHONE`; the UI shows `Shared Phone`. */
-function titleCase(value: string): string {
-  return value.replace(/\b\p{L}/gu, (char) => char.toUpperCase());
-}
-
-const legendColors = [
-  "var(--info)",
-  "var(--risk-medium)",
-  "var(--risk-high)",
-  "var(--risk-critical)",
-];
+// ---------------------------------------------------------------------------
+// Page
+// ---------------------------------------------------------------------------
 
 export function NetworkPage() {
   const { language } = useRole();
   const strings = getStrings(language);
-  const [graph, setGraph] = useState<NetworkGraph | null>(null);
-  const [entities, setEntities] = useState<EntityRecord[]>([]);
+
+  // -- Raw data -----------------------------------------------------------
+  const [enriched, setEnriched] = useState<EnrichedGraph | null>(null);
   const [cases, setCases] = useState<CaseRecord[]>([]);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [kind, setKind] = useState("all");
-  const [relationship, setRelationship] = useState("all");
-  const [caseId, setCaseId] = useState("all");
-  const [risk, setRisk] = useState("all");
-  const [dateRange, setDateRange] = useState("all");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
-    void Promise.all([getNetworkGraph(), getEntities(), getCases()]).then(
-      ([graphResult, entityResult, caseResult]) => {
-        if (cancelled) return;
-        setGraph(graphResult);
-        setEntities(entityResult);
-        setCases(caseResult);
-        setSelectedId(graphResult.nodes[0]?.id ?? null);
-        setLoading(false);
-      },
-    );
+    setLoading(true);
+    void Promise.all([
+      getNetworkGraph(),
+      getAnalytics(),
+      getEntities(),
+      getCases(),
+    ]).then(([network, analytics, entities, caseList]) => {
+      if (cancelled) return;
+      const eg = enrichGraph(network, analytics, entities);
+      const sized = { ...eg, nodes: applyNodeSizing(eg.nodes, "radius") };
+      setEnriched(sized);
+      setCases(caseList);
+      setLoading(false);
+    });
     return () => {
       cancelled = true;
     };
   }, []);
 
-  const entityMap = useMemo(
-    () => new Map(entities.map((entity) => [entity.id, entity])),
-    [entities],
-  );
+  // -- Visualization controls --------------------------------------------
+  const [graphMode, setGraphMode] = useState<GraphMode>("network");
+  const [colorMode, setColorMode] = useState<ColorMode>("entityType");
+  const [sizeMetric, setSizeMetric] = useState<SizeMetric>("radius");
+  const [frozen, setFrozen] = useState(true);
+  const [showCommunityHulls, setShowCommunityHulls] = useState(false);
+  const [neighbourhoodHops, setNeighbourhoodHops] = useState<1 | 2 | 3>(1);
 
-  // The legend and the relationship filter describe the graph that actually
-  // loaded, not a fixed vocabulary.
-  const relationshipOptions = useMemo(() => {
-    const counts = new Map<string, number>();
-    for (const edge of graph?.edges ?? []) {
-      const key = edge.label.toLowerCase();
-      counts.set(key, (counts.get(key) ?? 0) + 1);
+  // Re-apply sizing when the metric changes
+  const sizedEnriched = useMemo(() => {
+    if (!enriched) return null;
+    return { ...enriched, nodes: applyNodeSizing(enriched.nodes, sizeMetric) };
+  }, [enriched, sizeMetric]);
+
+  // -- Filters -----------------------------------------------------------
+  const [filters, setFilters] = useState<GraphFilterState>(defaultFilters);
+  const [quickKind, setQuickKind] = useState("all");
+  const [quickRisk, setQuickRisk] = useState("all");
+  const [quickCase, setQuickCase] = useState("all");
+  const [quickRelType, setQuickRelType] = useState("all");
+  const [quickDateRange, setQuickDateRange] = useState("all");
+
+  const resetFilters = useCallback(() => {
+    setFilters(defaultFilters());
+    setQuickKind("all");
+    setQuickRisk("all");
+    setQuickCase("all");
+    setQuickRelType("all");
+    setQuickDateRange("all");
+  }, []);
+
+  // Merge the quick-filter dropdowns into the full filter state
+  const mergedFilters = useMemo<GraphFilterState>(() => {
+    const base = { ...filters };
+    if (quickKind !== "all") {
+      base.entityTypes = new Set([
+        quickKind as GraphFilterState["entityTypes"] extends Set<infer T>
+          ? T
+          : never,
+      ]);
     }
-    return [...counts.entries()]
-      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-      .map(([value, count]) => ({
-        value,
-        count,
-        label: titleCase(value),
-      }));
-  }, [graph]);
+    if (quickRisk !== "all") {
+      base.riskLevels = new Set([
+        quickRisk as GraphFilterState["riskLevels"] extends Set<infer T>
+          ? T
+          : never,
+      ]);
+    }
+    if (quickCase !== "all") base.caseId = quickCase;
+    if (quickRelType !== "all")
+      base.relationshipTypes = new Set([quickRelType]);
+    if (quickDateRange !== "all") {
+      const days = Number(quickDateRange);
+      base.dateTo = new Date().toISOString();
+      base.dateFrom = new Date(Date.now() - days * 86_400_000).toISOString();
+    } else {
+      base.dateFrom = "";
+      base.dateTo = "";
+    }
+    return base;
+  }, [filters, quickKind, quickRisk, quickCase, quickRelType, quickDateRange]);
 
   const filteredGraph = useMemo(() => {
-    if (!graph) return null;
+    if (!sizedEnriched) return null;
+    const { nodes, edges } = applyFilters(sizedEnriched, mergedFilters);
+    return { ...sizedEnriched, nodes, edges };
+  }, [sizedEnriched, mergedFilters]);
 
-    const cutoff =
-      dateRange === "all"
-        ? null
-        : Date.now() - Number(dateRange) * 24 * 60 * 60 * 1000;
+  // -- Selection state ---------------------------------------------------
+  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  const [selectedEdgeId, setSelectedEdgeId] = useState<string | null>(null);
+  const [selectedNodeIds, setSelectedNodeIds] = useState<Set<string>>(
+    new Set(),
+  );
 
-    const matchesDate = (entityId: string) => {
-      if (!cutoff) return true;
-      const entity = entityMap.get(entityId);
-      if (!entity) return true;
-      return new Date(entity.lastSeen).getTime() >= cutoff;
-    };
+  // Path analysis
+  const [pathMode, setPathMode] = useState(false);
+  const [pathSource, setPathSource] = useState<string | null>(null);
+  const [pathTarget, setPathTarget] = useState<string | null>(null);
+  const pathSourceClickedRef = useRef(false);
 
-    const matchesCase = (entityId: string) => {
-      if (caseId === "all") return true;
-      const entity = entityMap.get(entityId);
-      if (!entity) return false;
-      return entity.linkedCaseIds.includes(caseId);
-    };
+  const clearPath = useCallback(() => {
+    setPathSource(null);
+    setPathTarget(null);
+    pathSourceClickedRef.current = false;
+  }, []);
 
-    const nodes = graph.nodes.filter(
-      (node) =>
-        (kind === "all" || node.kind === kind) &&
-        (risk === "all" || node.risk === risk) &&
-        matchesCase(node.id) &&
-        matchesDate(node.id),
+  const handleSelectNode = useCallback(
+    (id: string | null) => {
+      if (!id) {
+        setSelectedNodeId(null);
+        setSelectedNodeIds(new Set());
+        setSelectedEdgeId(null);
+        return;
+      }
+
+      if (pathMode) {
+        // First click = source, second = target
+        if (!pathSource) {
+          setPathSource(id);
+          pathSourceClickedRef.current = true;
+        } else if (!pathTarget && id !== pathSource) {
+          setPathTarget(id);
+        }
+        return;
+      }
+
+      setSelectedNodeId(id);
+      setSelectedEdgeId(null);
+    },
+    [pathMode, pathSource, pathTarget],
+  );
+
+  const handleSelectEdge = useCallback((id: string | null) => {
+    setSelectedEdgeId(id);
+    setSelectedNodeId(null);
+  }, []);
+
+  // Neighbourhood highlight
+  const neighbourhoodState = useMemo(() => {
+    if (!filteredGraph || !selectedNodeId) return null;
+    return buildSelectionState(
+      filteredGraph.nodes,
+      filteredGraph.edges,
+      selectedNodeId,
+      neighbourhoodHops,
     );
-    const nodeIds = new Set(nodes.map((node) => node.id));
-    const edges = graph.edges.filter(
-      (edge) =>
-        nodeIds.has(edge.source) &&
-        nodeIds.has(edge.target) &&
-        (relationship === "all" ||
-          edge.label.toLowerCase().includes(relationship)),
+  }, [filteredGraph, selectedNodeId, neighbourhoodHops]);
+
+  // Path resolution
+  const pathResult = useMemo(() => {
+    if (!filteredGraph || !pathSource || !pathTarget) return null;
+    return findShortestPath(
+      filteredGraph.nodes,
+      filteredGraph.edges,
+      pathSource,
+      pathTarget,
     );
-    return { ...graph, nodes, edges };
-  }, [graph, kind, risk, relationship, caseId, dateRange, entityMap]);
+  }, [filteredGraph, pathSource, pathTarget]);
 
-  const selectedEntity =
-    entities.find((entity) => entity.id === selectedId) ?? null;
+  // Assembled selection state passed to canvas
+  const selectionState = useMemo<Partial<GraphSelectionState>>(
+    () => ({
+      selectedNodeId,
+      selectedNodeIds,
+      selectedEdgeId,
+      highlightedNodeIds: neighbourhoodState?.highlightedNodeIds ?? new Set(),
+      highlightedEdgeIds: neighbourhoodState?.highlightedEdgeIds ?? new Set(),
+      pathSource,
+      pathTarget,
+      pathNodeIds: pathResult?.pathNodeIds ?? new Set(),
+      pathEdgeIds: pathResult?.pathEdgeIds ?? new Set(),
+    }),
+    [
+      selectedNodeId,
+      selectedNodeIds,
+      selectedEdgeId,
+      neighbourhoodState,
+      pathSource,
+      pathTarget,
+      pathResult,
+    ],
+  );
 
-  const resetFilters = () => {
-    setKind("all");
-    setRelationship("all");
-    setCaseId("all");
-    setRisk("all");
-    setDateRange("all");
-  };
+  // -- Derived display data ---------------------------------------------
+  const selectedNode = useMemo(
+    () => filteredGraph?.nodes.find((n) => n.id === selectedNodeId) ?? null,
+    [filteredGraph, selectedNodeId],
+  );
+
+  const selectedEdge = useMemo(
+    () => filteredGraph?.edges.find((e) => e.id === selectedEdgeId) ?? null,
+    [filteredGraph, selectedEdgeId],
+  );
+
+  const edgeSourceNode = useMemo(
+    () =>
+      selectedEdge
+        ? (filteredGraph?.nodes.find((n) => n.id === selectedEdge.source) ??
+          null)
+        : null,
+    [selectedEdge, filteredGraph],
+  );
+
+  const edgeTargetNode = useMemo(
+    () =>
+      selectedEdge
+        ? (filteredGraph?.nodes.find((n) => n.id === selectedEdge.target) ??
+          null)
+        : null,
+    [selectedEdge, filteredGraph],
+  );
+
+  // Path labels
+  const pathSourceLabel = useMemo(
+    () => filteredGraph?.nodes.find((n) => n.id === pathSource)?.label,
+    [filteredGraph, pathSource],
+  );
+  const pathTargetLabel = useMemo(
+    () => filteredGraph?.nodes.find((n) => n.id === pathTarget)?.label,
+    [filteredGraph, pathTarget],
+  );
+
+  // Relationship types for filter dropdown & legend
+  const relationshipTypes = useMemo(
+    () => uniqueRelationshipTypes(filteredGraph?.edges ?? []),
+    [filteredGraph],
+  );
+
+  const edgeLabelsForLegend = useMemo(
+    () => [...new Set(filteredGraph?.edges.map((e) => e.label) ?? [])],
+    [filteredGraph],
+  );
+
+  // ---------------------------------------------------------------------------
+  // Render
+  // ---------------------------------------------------------------------------
 
   return (
-    <div data-ocid="network.page" className="flex flex-col">
+    <div data-ocid="network.page" className="flex flex-col gap-4 pb-6">
       <PageHeader
         eyebrow={strings.linkAnalysis}
         title={strings.network}
         description={strings.networkDescription}
       />
 
+      {/* Quick filter bar */}
       <FilterBar
         filters={[
           {
             id: "kind",
             label: strings.entityType,
-            value: kind,
-            onChange: setKind,
+            value: quickKind,
+            onChange: setQuickKind,
             options: [
               { value: "all", label: strings.all },
-              ...Object.entries(entityKindLabels).map(([value, label]) => ({
-                value,
-                label,
+              ...Object.entries(entityKindLabels).map(([v, l]) => ({
+                value: v,
+                label: l,
               })),
             ],
           },
           {
             id: "relationship",
             label: strings.relationshipType,
-            value: relationship,
-            onChange: setRelationship,
+            value: quickRelType,
+            onChange: setQuickRelType,
             options: [
               { value: "all", label: strings.all },
-              ...relationshipOptions.map((option) => ({
-                value: option.value,
-                label: `${option.label} (${option.count})`,
+              ...relationshipTypes.map((r) => ({
+                value: r.label,
+                label: `${r.label} (${r.count})`,
               })),
             ],
           },
           {
             id: "case",
             label: strings.caseFilter,
-            value: caseId,
-            onChange: setCaseId,
+            value: quickCase,
+            onChange: setQuickCase,
             options: [
               { value: "all", label: strings.all },
-              ...cases.map((item) => ({ value: item.id, label: item.id })),
+              ...cases.map((c) => ({ value: c.id, label: c.id })),
             ],
           },
           {
             id: "risk",
             label: strings.riskLevel,
-            value: risk,
-            onChange: setRisk,
+            value: quickRisk,
+            onChange: setQuickRisk,
             options: [
               { value: "all", label: strings.all },
               { value: "critical", label: "Critical" },
@@ -210,11 +374,11 @@ export function NetworkPage() {
           {
             id: "dateRange",
             label: strings.dateRange,
-            value: dateRange,
-            onChange: setDateRange,
-            options: dateRanges.map((item) => ({
-              value: item.value,
-              label: item.label,
+            value: quickDateRange,
+            onChange: setQuickDateRange,
+            options: DATE_RANGE_OPTIONS.map((o) => ({
+              value: o.value,
+              label: o.label,
             })),
           },
         ]}
@@ -223,13 +387,44 @@ export function NetworkPage() {
         resultLabel="nodes"
       />
 
-      <div className="mt-4 grid gap-4 lg:grid-cols-[1fr_320px]">
-        {loading || !filteredGraph ? (
+      {/* Visualization controls */}
+      <GraphControls
+        graphMode={graphMode}
+        onGraphModeChange={setGraphMode}
+        colorMode={colorMode}
+        onColorModeChange={setColorMode}
+        sizeMetric={sizeMetric}
+        onSizeMetricChange={(m) => {
+          setSizeMetric(m);
+        }}
+        frozen={frozen}
+        onFrozenChange={setFrozen}
+        showCommunityHulls={showCommunityHulls}
+        onCommunityHullsChange={setShowCommunityHulls}
+        pathMode={pathMode}
+        onPathModeChange={(active) => {
+          setPathMode(active);
+          if (!active) clearPath();
+        }}
+        pathSource={pathSource}
+        pathTarget={pathTarget}
+        pathSourceLabel={pathSourceLabel}
+        pathTargetLabel={pathTargetLabel}
+        onClearPath={clearPath}
+        neighbourhoodHops={neighbourhoodHops}
+        onNeighbourhoodHopsChange={setNeighbourhoodHops}
+        nodeCount={filteredGraph?.nodes.length ?? 0}
+        edgeCount={filteredGraph?.edges.length ?? 0}
+      />
+
+      {/* Main canvas + detail panel */}
+      <div className="grid gap-4 lg:grid-cols-[1fr_300px]">
+        {loading ? (
           <div
             data-ocid="network.loading_state"
-            className="panel h-[560px] animate-pulse bg-muted/20"
+            className="h-[580px] animate-pulse rounded-lg bg-card/50"
           />
-        ) : filteredGraph.nodes.length === 0 ? (
+        ) : !filteredGraph || filteredGraph.nodes.length === 0 ? (
           <EmptyState
             icon={<Network className="size-5" aria-hidden />}
             title={strings.emptyTitle}
@@ -238,104 +433,56 @@ export function NetworkPage() {
         ) : (
           <GraphCanvas
             graph={filteredGraph}
-            selectedId={selectedId}
-            onSelect={setSelectedId}
+            selectedId={selectedNodeId}
+            onSelect={handleSelectNode}
+            onSelectEdge={handleSelectEdge}
             onExpand={(id) => {
-              setSelectedId(id);
+              setSelectedNodeId(id);
               openEntityDrawer(id);
             }}
-            className="h-[560px]"
+            colorMode={colorMode}
+            sizeMetric={sizeMetric}
+            graphMode={graphMode}
+            selection={selectionState}
+            frozen={frozen}
+            showCommunityHulls={showCommunityHulls}
+            className="h-[580px]"
           />
         )}
 
-        <DetailPanel
-          title={selectedEntity ? selectedEntity.name : strings.noSelection}
-          subtitle={selectedEntity?.id}
-          badge={
-            selectedEntity ? (
-              <RiskBadge risk={selectedEntity.risk} />
-            ) : undefined
-          }
-          footer={
-            selectedEntity ? (
-              <button
-                type="button"
-                data-ocid="network.open_entity_button"
-                onClick={() => openEntityDrawer(selectedEntity.id)}
-                className="w-full rounded-md border border-info/40 bg-info/12 py-2 text-sm font-medium text-info transition-smooth hover:bg-info/20"
-              >
-                {strings.openRecord}
-              </button>
-            ) : undefined
-          }
-        >
-          {selectedEntity ? (
-            <>
-              <p className="text-sm text-muted-foreground">
-                {selectedEntity.summary}
-              </p>
-              <div className="mt-3">
-                <DetailField
-                  label={strings.type}
-                  value={entityKindLabels[selectedEntity.kind]}
-                />
-                <DetailField
-                  label={strings.district}
-                  value={selectedEntity.district}
-                />
-                {selectedEntity.identifiers.map((identifier) => (
-                  <DetailField
-                    key={`${identifier.label}-${identifier.value}`}
-                    label={identifier.label}
-                    value={identifier.value}
-                    mono
-                  />
-                ))}
-                <DetailField
-                  label={strings.connections}
-                  value={String(selectedEntity.linkedEntityIds.length)}
-                  mono
-                />
-              </div>
-            </>
-          ) : (
-            <p className="text-sm text-muted-foreground">
-              {strings.selectMarker}
-            </p>
-          )}
-        </DetailPanel>
+        {/* Right panel: node or edge detail */}
+        {selectedEdgeId ? (
+          <EdgeDetailPanel
+            edge={selectedEdge}
+            sourceNode={edgeSourceNode}
+            targetNode={edgeTargetNode}
+            className="h-[580px]"
+          />
+        ) : (
+          <EntityDetailPanel
+            node={selectedNode}
+            edges={filteredGraph?.edges ?? []}
+            onOpenFull={(id) => openEntityDrawer(id)}
+            onSetPathSource={(id) => {
+              setPathMode(true);
+              setPathSource(id);
+            }}
+            onSetPathTarget={(id) => {
+              setPathMode(true);
+              setPathTarget(id);
+            }}
+            pathMode={pathMode}
+            className="h-[580px]"
+          />
+        )}
       </div>
 
-      <section className="mt-4 panel">
-        <div className="panel-header">
-          <h2 className="font-display text-sm font-semibold text-foreground">
-            {strings.graphLegend}
-          </h2>
-          <span className="text-xs text-muted-foreground">
-            {strings.expandNetworkHint}
-          </span>
-        </div>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 p-4">
-          {relationshipOptions.map((option, index) => (
-            <span
-              key={option.value}
-              className="flex items-center gap-2 text-xs text-muted-foreground"
-            >
-              <span
-                className="h-0.5 w-6 rounded-full"
-                style={{
-                  backgroundColor: legendColors[index % legendColors.length],
-                }}
-                aria-hidden
-              />
-              {option.label}
-              <span className="font-mono-id text-[11px] tabular-nums text-muted-foreground">
-                {option.count}
-              </span>
-            </span>
-          ))}
-        </div>
-      </section>
+      {/* Legend */}
+      <GraphLegend
+        colorMode={colorMode}
+        edgeLabels={edgeLabelsForLegend}
+        communityColors={filteredGraph?.communityColors ?? {}}
+      />
     </div>
   );
 }

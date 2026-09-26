@@ -1523,6 +1523,93 @@ def _detect_hidden_connections(
     return missing, multi_hop
 
 
+def create_face_edges(
+    output_dir: str,
+    entity_by_id: Dict[str, dict],
+    resolved_entities: Optional[List[dict]] = None,
+    run_id: str = "",
+) -> List["GraphEdge"]:
+    """FACE_MATCH edges between person entities linked by face similarity
+    (RESEARCH_FACE_RECOGNITION doc 08 §6.2).
+
+    Reads ``face_embeddings.json`` (Stage 2.5). Only person↔person alias
+    candidates count — identity candidates link a face record to a person,
+    not two graph nodes. Pairs resolution already merged collapse onto the
+    same node and are skipped.
+    """
+    path = Path(output_dir) / "face_embeddings.json"
+    if not path.is_file():
+        return []
+    try:
+        with path.open(encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (OSError, ValueError):
+        return []
+    if not isinstance(data, dict):
+        return []
+
+    orig_to_resolved: Dict[str, str] = {}
+    for res in resolved_entities or []:
+        if isinstance(res, dict) and res.get("id"):
+            for orig in res.get("source_entities") or []:
+                orig_to_resolved[str(orig)] = str(res["id"])
+
+    def _entity_score(entity: dict) -> float:
+        conf = entity.get("confidence") if isinstance(entity, dict) else getattr(entity, "confidence", None)
+        if isinstance(conf, dict):
+            try:
+                return float(conf.get("score", 0.5))
+            except (TypeError, ValueError):
+                return 0.5
+        try:
+            return float(getattr(conf, "score", 0.5))
+        except (TypeError, ValueError):
+            return 0.5
+
+    now = datetime.now().isoformat()
+    edges: List[GraphEdge] = []
+    seen: Set[Tuple[str, str]] = set()
+    for cand in data.get("candidates") or []:
+        if not isinstance(cand, dict) or cand.get("kind") != "person_alias":
+            continue
+        src0 = str(cand.get("source_entity_id") or "")
+        tgt0 = str(cand.get("candidate_entity_id") or "")
+        if not src0 or not tgt0:
+            continue
+        src = orig_to_resolved.get(src0, src0)
+        tgt = orig_to_resolved.get(tgt0, tgt0)
+        if src == tgt or src not in entity_by_id or tgt not in entity_by_id:
+            continue
+        key = (src, tgt) if src <= tgt else (tgt, src)
+        if key in seen:
+            continue
+        seen.add(key)
+        signals = cand.get("signals") or {}
+        similarity = float(signals.get("face_similarity", 0.0))
+        conf_schema = propagate_confidence(
+            source_confidence=_entity_score(entity_by_id[src]),
+            target_confidence=_entity_score(entity_by_id[tgt]),
+            extraction_confidence=float(cand.get("confidence") or 0.0),
+        )
+        edges.append(GraphEdge(
+            id=f"face_match_{key[0]}_{key[1]}",
+            source_id=src,
+            target_id=tgt,
+            relationship_type="FACE_MATCH",
+            edge_type="associational",
+            confidence=conf_schema.to_dict(),
+            supporting_evidence=[str(f) for f in cand.get("files") or [] if f],
+            provenance_chain=[f"face_similarity:{similarity:.3f}"],
+            epistemic_status="inference",  # resolution-class inference, not a raw observation
+            created_at=now,
+            updated_at=now,
+            run_id=run_id,
+            source_name=str(entity_by_id[src].get("name", "")) if isinstance(entity_by_id[src], dict) else "",
+            target_name=str(entity_by_id[tgt].get("name", "")) if isinstance(entity_by_id[tgt], dict) else "",
+        ))
+    return edges
+
+
 class GraphBuilder:
     """Graph Builder — Stage 5: Creates graph nodes and edges from resolved data."""
 
@@ -1640,9 +1727,19 @@ class GraphBuilder:
             run_id=run_id,
         )
 
+        # Category E: face-based edges (RESEARCH_FACE_RECOGNITION doc 08 §6.2)
+        face_edges = create_face_edges(
+            output_dir=output_dir,
+            entity_by_id=entity_by_id,
+            resolved_entities=resolved_entities,
+            run_id=run_id,
+        )
+        if face_edges:
+            print(f"[GRAPH]   -> {len(face_edges)} FACE_MATCH edge(s) from face recognition")
+
         # Merge all edge categories + deduplicate
         # Dedup key: (source_id, target_id, relationship_type) — keep higher confidence
-        all_edge_candidates = rel_edges + attr_edges + cooccurrence_edges
+        all_edge_candidates = rel_edges + attr_edges + cooccurrence_edges + face_edges
         merged_edges: Dict[Tuple[str, str, str], GraphEdge] = {}
         for edge in all_edge_candidates:
             key = (edge.source_id, edge.target_id, edge.relationship_type)

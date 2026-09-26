@@ -19,6 +19,25 @@ if (typeof Element !== "undefined" && !Element.prototype.setPointerCapture) {
   Element.prototype.hasPointerCapture = () => false;
 }
 
+// jsdom does not implement ResizeObserver, which GraphCanvas uses to track
+// the container dimensions. Provide a no-op stub.
+if (typeof globalThis.ResizeObserver === "undefined") {
+  globalThis.ResizeObserver = class ResizeObserver {
+    observe() {}
+    unobserve() {}
+    disconnect() {}
+  };
+}
+
+// jsdom does not implement HTMLCanvasElement.getContext. Provide a minimal
+// 2D context stub so GraphCanvas mounts without throwing.
+if (
+  typeof HTMLCanvasElement !== "undefined" &&
+  !HTMLCanvasElement.prototype.getContext
+) {
+  HTMLCanvasElement.prototype.getContext = () => null;
+}
+
 // Every test runs against the fixture-backed API server rather than the
 // mock-data module, which no longer exists.
 beforeEach(() => {

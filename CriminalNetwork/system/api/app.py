@@ -19,6 +19,7 @@ import json
 import os
 from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -35,7 +36,7 @@ from api.identity import (
 from api.jobs import Job, JobStore, PipelineRunner, build_argv
 from api.projection import RunProjection
 from api.registry import CaseRegistry, RegistryError
-from api.schemas import CaseCreate, FirCreate, RunRequest, SessionStart
+from api.schemas import CaseCreate, FaceDecision, FirCreate, RunRequest, SessionStart
 
 _SYSTEM_DIR = Path(__file__).resolve().parent.parent
 
@@ -602,12 +603,64 @@ def get_faces(caseId: str | None = None) -> list[dict[str, Any]]:
 
 @app.get("/api/faces/status")
 def face_status() -> dict[str, Any]:
+    """Face-recognition readiness + this run's Stage 2.5 stats.
+
+    ``available`` is True when the pipeline carries the face stages (doc 08);
+    ``modelAvailable`` says whether insightface weights are present in this
+    environment — the pipeline degrades to zero faces without them.
+    """
+    from src.faces.engine import model_available  # lazy: optional dependency
+
+    data = _projection(None).read("face_embeddings.json")
+    stats = data.get("stats", {}) if isinstance(data, dict) else {}
     return {
-        "available": False,
-        "stage": "pending",
-        "reason": "Face recognition runs as a pipeline stage and is not enabled.",
-        "endpoints": ["/api/faces", "/api/faces/status"],
+        "available": True,
+        "modelAvailable": model_available(),
+        "reason": "Face recognition runs as pipeline stages 1.5 (detection), "
+                  "2 (embedding) and 2.5 (matching).",
+        "endpoints": ["/api/faces", "/api/faces/status", "/api/faces/decision"],
+        "stats": stats,
     }
+
+
+@app.post("/api/faces/decision")
+def record_face_decision(body: FaceDecision) -> dict[str, Any]:
+    """Investigator confirm/reject of a proposed face match.
+
+    Persists to ``face_decisions.json`` beside the active case's run outputs,
+    so every later projection of the same run still shows who decided what;
+    re-running the pipeline never clears a decision.
+    """
+    projection = _projection(None)
+    current = next(
+        (row for row in projection.face_records() if row["id"] == body.faceId),
+        None,
+    )
+    if current is None:
+        raise HTTPException(
+            404, f"Face record {body.faceId} not found in the active case"
+        )
+
+    path = projection.output_dir / "face_decisions.json"
+    payload: dict[str, Any] = {"decisions": {}}
+    if path.is_file():
+        try:
+            loaded = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(loaded, dict) and isinstance(loaded.get("decisions"), dict):
+                payload = {"decisions": loaded["decisions"]}
+        except (OSError, ValueError):
+            pass
+    payload["decisions"][body.faceId] = {
+        "decision": body.decision,
+        "reviewer": body.reviewer,
+        "note": body.note,
+        "decidedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
+    path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    return next(
+        row for row in projection.face_records() if row["id"] == body.faceId
+    )
 
 
 @app.get("/api/evidence")

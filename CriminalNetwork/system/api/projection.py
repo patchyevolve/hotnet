@@ -721,18 +721,27 @@ class RunProjection:
 
         # The core relaxes into an inner disc when there are leaves to ring
         # around it, and into the full padded square when it is on its own.
+        # 31 is measured on the real 193-node corpus: the leaf rings sit at
+        # r=35..43, so the core hull must stay under ~31 to leave a visible
+        # gap; the connected nodes keep ~4 units of median neighbour spacing.
         core_limit = 31.0 if isolated else 44.0
         core_points = cls._fruchterman(
-            connected, adjacency, math.pi * core_limit * core_limit
+            connected,
+            adjacency,
+            math.pi * core_limit * core_limit,
+            max_radius=core_limit if isolated else None,
         )
 
         core_xs = [point[0] for point in core_points]
         core_ys = [point[1] for point in core_points]
         centre_x = (max(core_xs) + min(core_xs)) / 2.0
         centre_y = (max(core_ys) + min(core_ys)) / 2.0
-        span = max(max(core_xs) - min(core_xs), max(core_ys) - min(core_ys))
-        # Settle only if the relaxation overshot its disc; normally this is 1.
-        shrink = (2.0 * core_limit) / span if span > 2.0 * core_limit else 1.0
+        # Containment above already holds the disc to core_limit; this is a
+        # safety net only (normally shrink == 1).
+        max_radius = max(
+            math.hypot(x - centre_x, y - centre_y) for x, y in core_points
+        )
+        shrink = (core_limit / max_radius) if max_radius > core_limit else 1.0
 
         positions: dict[str, tuple[float, float]] = {}
         for node_id, (x, y) in zip(
@@ -766,7 +775,11 @@ class RunProjection:
 
     @classmethod
     def _fruchterman(
-        cls, members: list[int], adjacency: list[set[int]], area: float
+        cls,
+        members: list[int],
+        adjacency: list[set[int]],
+        area: float,
+        max_radius: float | None = None,
     ) -> list[tuple[float, float]]:
         """Relax the given node indices, addressed in the caller's index space.
 
@@ -801,7 +814,7 @@ class RunProjection:
             xs[i] = 50.0 + r * math.cos(theta)
             ys[i] = 50.0 + r * math.sin(theta)
 
-        temperature = 12.0
+        temperature = 0.5 * ideal
         for _ in range(cls._LAYOUT_ITERATIONS):
             dx = [0.0] * count
             dy = [0.0] * count
@@ -853,8 +866,21 @@ class RunProjection:
                 xs[i] += (dx[i] / step) * travel
                 ys[i] += (dy[i] / step) * travel
 
+            # Containment: hold the cloud inside the disc while it relaxes so
+            # repulsion equilibrates against the boundary instead of being
+            # squashed onto it afterwards (a post-hoc squash scales node
+            # spacing down with the radius — the core turns into a knot).
+            if max_radius is not None:
+                for i in range(count):
+                    ox, oy = xs[i] - 50.0, ys[i] - 50.0
+                    r = math.hypot(ox, oy)
+                    if r > max_radius and r > 1e-9:
+                        scale = max_radius / r
+                        xs[i] = 50.0 + ox * scale
+                        ys[i] = 50.0 + oy * scale
+
             # Cool, but not to nothing — a floor keeps late moves meaningful.
-            temperature = max(temperature * 0.94, cls._LAYOUT_MIN_TEMP)
+            temperature = max(temperature * 0.90, cls._LAYOUT_MIN_TEMP)
 
         return list(zip(xs, ys, strict=True))
 
@@ -1622,12 +1648,146 @@ class RunProjection:
     # Stubs with deliberately clear contracts
     # ------------------------------------------------------------------
     def face_records(self) -> list[dict[str, Any]]:
-        """Face recognition is not wired yet — returns an empty list.
+        """Stage 2.5 face output → ``FaceRecord`` (types.ts).
 
-        The endpoint exists and is typed so the page and its tests do not have
-        to change when recognition lands; only this body does.
+        Source is ``face_embeddings.json`` written by the pipeline
+        (RESEARCH_FACE_RECOGNITION doc 08 §7); total in the documented sense:
+        a run that produced no faces yields ``[]``, and a face the detector
+        rejected is dropped rather than shown with a fabricated identity.
+
+        Field derivations are structural, never invented:
+          * confidence   — ``match_confidence`` computed at Stage 2.5
+                           (doc 07 similarity mapping × doc 11 context floors)
+          * entityId     — person link from Stage 2.5 (same-file/filename
+                           context); unresolved faces keep their identity
+                           candidate's person id, else ""
+          * risk         — the linked node's usual derived risk, else low
+                           (unknown to the graph = not flagged = low)
+          * capturedAt   — CCTV overlay timestamp when the source carried one,
+                           else the file's modified time (noted per record)
+          * matchedWith / matchedFrom / similarity — provenance of the match
+                           claim: which person and which evidence files
+          * matchStatus  — ``rejected``/``confirmed`` only after an investigator
+                           decision (``face_decisions.json``); ``confirmed``
+                           also when an identity document confirmed the face;
+                           ``probable`` while a person claim awaits review;
+                           else ``unverified``
         """
-        return []
+        data = self.read("face_embeddings.json")
+        if not isinstance(data, dict):
+            return []
+        faces = [row for row in data.get("faces", []) if isinstance(row, dict)]
+        matches = [row for row in data.get("matches", []) if isinstance(row, dict)]
+        candidates = [row for row in data.get("candidates", []) if isinstance(row, dict)]
+
+        decisions_raw = self.read("face_decisions.json")
+        decisions: dict[str, Any] = {}
+        if isinstance(decisions_raw, dict) and isinstance(decisions_raw.get("decisions"), dict):
+            decisions = decisions_raw["decisions"]
+
+        identity_by_face = {
+            str(row.get("source_entity_id")): row
+            for row in candidates
+            if row.get("kind") == "identity"
+        }
+        best_similarity: dict[str, float] = {}
+        counterpart_files: dict[str, set[str]] = {}
+        for row in matches:
+            similarity = row.get("similarity")
+            if not isinstance(similarity, (int, float)):
+                continue
+            for key in ("face_a", "face_b"):
+                face_id = row.get(key)
+                if isinstance(face_id, str) and similarity > best_similarity.get(face_id, -1.0):
+                    best_similarity[face_id] = float(similarity)
+            if isinstance(row.get("face_a"), str) and isinstance(row.get("face_b"), str):
+                counterpart_files.setdefault(row["face_a"], set()).add(str(row.get("file_b") or ""))
+                counterpart_files.setdefault(row["face_b"], set()).add(str(row.get("file_a") or ""))
+
+        records: list[dict[str, Any]] = []
+        for face in faces:
+            status = str(face.get("status") or "")
+            if status == "REJECTED":
+                continue
+            face_id = str(face.get("id") or "")
+            similarity = best_similarity.get(face_id)
+            identity = identity_by_face.get(face_id, {})
+            if similarity is None and identity:
+                # identity candidates carry the pairwise similarity that
+                # produced them; it still governs the doc 08 §4.3 review floor
+                candidate_similarity = identity.get("signals", {}).get("face_similarity")
+                if isinstance(candidate_similarity, (int, float)):
+                    similarity = float(candidate_similarity)
+            entity_id = str(face.get("person_id") or identity.get("candidate_entity_id") or "")
+            subject = str(
+                face.get("person_name")
+                or identity.get("candidate_person_name")
+                or ""
+            )
+            confidence = float(face.get("match_confidence") or 0.0)
+            decision = decisions.get(face_id)
+            decision = decision if isinstance(decision, dict) else {}
+
+            if decision.get("decision") == "confirm":
+                match_status = "confirmed"
+            elif decision.get("decision") == "reject":
+                match_status = "rejected"
+            elif status == "CONFIRMED":
+                match_status = "confirmed"
+            elif entity_id:
+                # a person claim (link or identity candidate) awaits review
+                match_status = "probable"
+            else:
+                match_status = "unverified"
+
+            matched_from = sorted(
+                path
+                for path in (
+                    set(identity.get("files") or [])
+                    or counterpart_files.get(face_id, set())
+                    or ({str(face.get("file_name") or "")} if entity_id else set())
+                )
+                if path
+            )
+
+            notes_parts: list[str] = []
+            link_basis = face.get("link_basis")
+            if link_basis == "same_file_context":
+                notes_parts.append("identity from context in the same file")
+            elif link_basis == "filename_context":
+                notes_parts.append("identity hint from filename context")
+            elif identity:
+                notes_parts.append(
+                    f"identity candidate via face match "
+                    f"(similarity {float(identity.get('signals', {}).get('face_similarity', 0.0)):.3f})"
+                )
+            if status == "LOW_QUALITY":
+                notes_parts.append("below quality cutoff — embedding not stored")
+            if similarity is None and not entity_id:
+                notes_parts.append("no face match at or above 0.40 similarity")
+            if face.get("captured_at"):
+                if face.get("capture_time_source") == "overlay":
+                    notes_parts.append("capture time from image overlay")
+                elif face.get("capture_time_source") == "file_mtime":
+                    notes_parts.append("capture time from file metadata")
+
+            records.append({
+                "id": face_id,
+                "subject": subject or "Unidentified subject",
+                "entityId": entity_id,
+                "confidence": round(confidence, 4),
+                "camera": str(face.get("camera") or ""),
+                "capturedAt": str(face.get("captured_at") or face.get("created_at") or ""),
+                "risk": self._risk_for_node(entity_id),
+                "matchStatus": match_status,
+                "matchedWith": subject,
+                "matchedFrom": matched_from,
+                "similarity": round(similarity, 4) if similarity is not None else None,
+                "decidedBy": str(decision.get("reviewer") or ""),
+                "decidedAt": str(decision.get("decidedAt") or ""),
+                "notes": "; ".join(notes_parts) if notes_parts else None,
+            })
+        return records
 
     # ------------------------------------------------------------------
     # Analytics (centrality / communities / components / multi-hop)

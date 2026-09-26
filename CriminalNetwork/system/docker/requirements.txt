@@ -39,3 +39,11 @@ pillow==12.3.0
 pytesseract==0.3.13
 spacy==3.8.16
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+# --- face recognition (lazy; doc 08 — stages 1.5/2/2.5) ----------------------
+# insightface declares a dependency on opencv-python (Qt/X11 build), which
+# cannot import in a slim container; the Dockerfile swaps in the headless
+# wheel right after this install.
+insightface==2.0
+onnxruntime==1.30.0
+opencv-python-headless==5.0.0.93

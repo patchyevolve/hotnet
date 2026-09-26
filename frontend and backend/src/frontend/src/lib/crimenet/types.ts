@@ -323,7 +323,16 @@ export interface FaceRecord {
   capturedAt: string;
   district?: string;
   risk: RiskLevel;
-  matchStatus: "confirmed" | "probable" | "unverified";
+  matchStatus: "confirmed" | "probable" | "unverified" | "rejected";
+  /** Subject name of the counterpart face in the identity match, if any. */
+  matchedWith?: string;
+  /** Source files the match drew evidence from. */
+  matchedFrom?: string[];
+  /** Raw ArcFace cosine similarity (0-1) behind this record. */
+  similarity?: number;
+  /** Investigator who confirmed/rejected this match. */
+  decidedBy?: string;
+  decidedAt?: string;
   notes?: string;
 }
 
@@ -459,4 +468,193 @@ export interface IntelligenceFeedEvent {
   severity: RiskLevel;
   route: string;
   actionLabel: string;
+}
+
+// =============================================================================
+// Graph Visualization — rich types for the criminal network analysis view
+// =============================================================================
+
+/** Enriched node used by the graph visualization layer. Extends NetworkNode
+ *  with analytics data merged from /api/analytics and /api/entities. */
+export interface GraphNode {
+  // --- identity ---
+  id: string;
+  label: string;
+  kind: EntityKind;
+  risk: RiskLevel;
+  /** Pre-computed canvas position, 0-100 range, from the backend layout. */
+  x: number;
+  y: number;
+  /** Degree-proportional radius from the API (2.5–9.5). Used as size seed. */
+  radius: number;
+
+  // --- centrality metrics (from /api/analytics centrality[]) ---
+  degree?: number;
+  degreeCentrality?: number;
+  betweenness?: number;
+  closeness?: number;
+  eigenvector?: number;
+  pageRank?: number;
+
+  // --- community assignment (from /api/analytics communities[]) ---
+  communityId?: string;
+
+  // --- entity metadata (from /api/entities) ---
+  alias?: string[];
+  summary?: string;
+  firstSeen?: string;
+  lastSeen?: string;
+  linkedCaseIds?: string[];
+  linkedEntityIds?: string[];
+  tags?: string[];
+  attributes?: Record<string, string>;
+  identifiers?: EntityIdentifier[];
+  evidenceCount?: number;
+
+  // --- computed on the client ---
+  /** Normalized 0-1 score used for visual sizing under the current metric. */
+  sizeScore?: number;
+  /** Whether this node was flagged as suspicious (adversarial edge involved). */
+  suspicious?: boolean;
+}
+
+/** Relationship type vocabulary — the values the backend writes in edge labels.
+ *  The label arrives title-cased ("Called"); we compare lowercase. */
+export type RelationshipType =
+  | "calls"
+  | "called"
+  | "communicates_with"
+  | "messages"
+  | "messages_with"
+  | "transfers_money_to"
+  | "transferred_to"
+  | "transfer"
+  | "knows"
+  | "owns"
+  | "owned_by"
+  | "works_for"
+  | "employed_by"
+  | "member_of"
+  | "associated_with"
+  | "associated"
+  | "located_at"
+  | "location"
+  | "traveled_to"
+  | "visited"
+  | "uses"
+  | "used_by"
+  | "connected_to"
+  | "linked_to"
+  | "mentioned_in"
+  | "appears_in"
+  | "participated_in"
+  | "shared_phone"
+  | "shared_account"
+  | string; // open for unknown types from the backend
+
+/** Enriched edge used by the graph visualization layer. */
+export interface GraphEdge {
+  id: string;
+  source: string;
+  target: string;
+  /** Title-cased label from the backend, e.g. "Called", "Shared Phone". */
+  label: string;
+  /** Normalised lowercase key for style lookup. */
+  relationshipType: RelationshipType;
+  /** Confidence / strength score 0-1 from the API weight field. */
+  weight: number;
+  risk: RiskLevel;
+  /** Whether the edge carries a direction arrow. */
+  directed: boolean;
+  /** Visual line style category, resolved from relationshipType. */
+  lineStyle: "solid" | "dashed" | "dotted" | "thick-solid";
+  /** Relative line weight multiplier 1-3. */
+  thickness: number;
+  // optional metadata when the backend provides it
+  timestamp?: string;
+  evidenceCount?: number;
+  confidence?: number;
+}
+
+/** Graph visualization modes — change the visual encoding, not the data. */
+export type GraphMode =
+  | "network" // default relationship view
+  | "risk" // emphasize risk
+  | "community" // emphasize clusters
+  | "evidence" // emphasize evidence-backed edges
+  | "temporal" // emphasize time-stamped activity
+  | "centrality"; // emphasize important nodes
+
+/** Dimension used to color nodes. */
+export type ColorMode =
+  | "entityType"
+  | "riskLevel"
+  | "community"
+  | "evidenceStrength"
+  | "caseAssociation"
+  | "confidence"
+  | "activity";
+
+/** Metric used to size nodes. */
+export type SizeMetric =
+  | "degree"
+  | "betweenness"
+  | "pageRank"
+  | "riskScore"
+  | "evidenceCount"
+  | "radius"; // default — the API's degree weight
+
+/** Active filter state for the graph. */
+export interface GraphFilterState {
+  entityTypes: Set<EntityKind>;
+  relationshipTypes: Set<string>;
+  riskLevels: Set<RiskLevel>;
+  minConfidence: number; // 0-1
+  minDegree: number;
+  communityIds: Set<string>;
+  caseId: string; // "all" or a specific caseId
+  dateFrom: string; // ISO or ""
+  dateTo: string; // ISO or ""
+  searchQuery: string;
+}
+
+/** Complete selection state for the graph. */
+export interface GraphSelectionState {
+  /** Primary selected node id. */
+  selectedNodeId: string | null;
+  /** Multiple selected node ids (shift-click). */
+  selectedNodeIds: Set<string>;
+  /** Selected edge id. */
+  selectedEdgeId: string | null;
+  /** Hover target. */
+  hoveredNodeId: string | null;
+  hoveredEdgeId: string | null;
+  /** Highlight scope — nodes in the neighbourhood of the selected node. */
+  highlightedNodeIds: Set<string>;
+  /** Highlight scope — edges incident on the selected node. */
+  highlightedEdgeIds: Set<string>;
+  /** Path analysis: source and target node ids. */
+  pathSource: string | null;
+  pathTarget: string | null;
+  /** Node ids on the found shortest path (empty if no path). */
+  pathNodeIds: Set<string>;
+  pathEdgeIds: Set<string>;
+}
+
+/** Enriched graph — the fully-resolved graph passed to the Canvas renderer. */
+export interface EnrichedGraph {
+  caseId: string;
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  /** Community palette: communityId → hex color. */
+  communityColors: Record<string, string>;
+  /** Stats derived from the analytics endpoint. */
+  statistics?: GraphStatistics;
+}
+
+/** Viewport transform used by the Canvas renderer. */
+export interface ViewTransform {
+  offsetX: number;
+  offsetY: number;
+  scale: number;
 }

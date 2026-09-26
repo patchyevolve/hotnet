@@ -464,7 +464,9 @@ export function CaseWorkbenchPage() {
           {graph ? (
             <GraphCanvas
               graph={graph}
-              onSelect={(id) => openEntityDrawer(id)}
+              onSelect={(id) => {
+                if (id) openEntityDrawer(id);
+              }}
               className="h-[520px]"
             />
           ) : null}
