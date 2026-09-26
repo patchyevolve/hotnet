@@ -32,6 +32,7 @@ export { DetailPanel, DetailField } from "./DetailPanel";
 export { FilterBar } from "./FilterBar";
 export type { FilterDefinition, FilterOption } from "./FilterBar";
 export { EvidenceIntegrity } from "./EvidenceIntegrity";
+export { FaceComparison } from "./FaceComparison";
 export { ChainOfCustody } from "./ChainOfCustody";
 export { AuditChain } from "./AuditChain";
 export { CommandPalette } from "./CommandPalette";

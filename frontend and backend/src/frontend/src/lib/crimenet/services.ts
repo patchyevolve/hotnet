@@ -356,6 +356,14 @@ export async function getFaceRecords(): Promise<FaceRecord[]> {
 }
 
 /**
+ * URL for an ingested case image behind the side-by-side face comparison.
+ * The endpoint serves basename-only files from the active case directory.
+ */
+export function faceImageUrl(file: string): string {
+  return `/api/faces/image?file=${encodeURIComponent(file)}`;
+}
+
+/**
  * Record an investigator's confirm/reject decision on a face match.
  * Returns the updated projection record (persisted server-side).
  */

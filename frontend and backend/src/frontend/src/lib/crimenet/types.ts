@@ -314,6 +314,27 @@ export interface MapData {
   links: MapLink[];
 }
 
+/** Pixel box of a face inside its source image (pipeline `face_bbox`). */
+export interface FaceBBox {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+}
+
+/** One side of the side-by-side review pair: source file + its face box. */
+export interface FaceComparisonSide {
+  file: string;
+  bbox: FaceBBox | null;
+}
+
+/** The match pair behind a face record, shown before confirm/reject. */
+export interface FaceComparison {
+  reference: FaceComparisonSide;
+  capture: FaceComparisonSide;
+  similarity: number;
+}
+
 export interface FaceRecord {
   id: string;
   subject: string;
@@ -330,6 +351,9 @@ export interface FaceRecord {
   matchedFrom?: string[];
   /** Raw ArcFace cosine similarity (0-1) behind this record. */
   similarity?: number;
+  /** Reference/capture file pair for the side-by-side review; null when the
+   *  face has no match pair. */
+  comparison?: FaceComparison | null;
   /** Investigator who confirmed/rejected this match. */
   decidedBy?: string;
   decidedAt?: string;

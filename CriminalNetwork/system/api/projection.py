@@ -1659,8 +1659,16 @@ class RunProjection:
           * confidence   — ``match_confidence`` computed at Stage 2.5
                            (doc 07 similarity mapping × doc 11 context floors)
           * entityId     — person link from Stage 2.5 (same-file/filename
-                           context); unresolved faces keep their identity
-                           candidate's person id, else ""
+                           context), remapped through
+                           ``resolved_entities.json`` ``source_entities`` when
+                           the pipeline person id was absorbed by a resolved
+                           entity — otherwise the drawer cannot look the id
+                           up; unresolved faces keep their raw person id,
+                           else ""
+          * comparison   — the best match pair for this face, as
+                           reference/capture file + pixel bbox + similarity,
+                           so the review UI can show the two faces side by
+                           side; ``null`` when the face has no match pair
           * risk         — the linked node's usual derived risk, else low
                            (unknown to the graph = not flagged = low)
           * capturedAt   — CCTV overlay timestamp when the source carried one,
@@ -1691,6 +1699,7 @@ class RunProjection:
             if row.get("kind") == "identity"
         }
         best_similarity: dict[str, float] = {}
+        best_match_row: dict[str, dict[str, Any]] = {}
         counterpart_files: dict[str, set[str]] = {}
         for row in matches:
             similarity = row.get("similarity")
@@ -1700,9 +1709,36 @@ class RunProjection:
                 face_id = row.get(key)
                 if isinstance(face_id, str) and similarity > best_similarity.get(face_id, -1.0):
                     best_similarity[face_id] = float(similarity)
+                    best_match_row[face_id] = row
             if isinstance(row.get("face_a"), str) and isinstance(row.get("face_b"), str):
                 counterpart_files.setdefault(row["face_a"], set()).add(str(row.get("file_b") or ""))
                 counterpart_files.setdefault(row["face_b"], set()).add(str(row.get("file_a") or ""))
+
+        # Pipeline person ids (PERSON_…) that a resolved entity absorbed;
+        # entities() only serves resolved ids, so a face still pointing at
+        # the raw person id would open as "Entity not found" in the drawer.
+        resolved = self.read("resolved_entities.json")
+        if isinstance(resolved, dict):
+            resolved_items: Iterable[Any] = resolved.values()
+        elif isinstance(resolved, list):
+            resolved_items = resolved
+        else:
+            resolved_items = []
+        resolved_ids: set[str] = set()
+        absorbed_by: dict[str, str] = {}
+        for item in resolved_items:
+            if not isinstance(item, dict):
+                continue
+            target_id = str(item.get("id") or "")
+            if not target_id:
+                continue
+            resolved_ids.add(target_id)
+            for source_id in item.get("source_entities") or []:
+                absorbed_by.setdefault(str(source_id), target_id)
+
+        face_by_id = {
+            str(row.get("id") or ""): row for row in faces if row.get("id")
+        }
 
         records: list[dict[str, Any]] = []
         for face in faces:
@@ -1719,6 +1755,8 @@ class RunProjection:
                 if isinstance(candidate_similarity, (int, float)):
                     similarity = float(candidate_similarity)
             entity_id = str(face.get("person_id") or identity.get("candidate_entity_id") or "")
+            if entity_id and entity_id not in resolved_ids:
+                entity_id = absorbed_by.get(entity_id, entity_id)
             subject = str(
                 face.get("person_name")
                 or identity.get("candidate_person_name")
@@ -1749,6 +1787,33 @@ class RunProjection:
                 )
                 if path
             )
+
+            # Side-by-side review pair: this face's best match, split into the
+            # identity-bearing reference side (the face carrying the person
+            # claim) and the capture side. Files/bboxes come straight from the
+            # match row and the two face records — nothing is synthesised.
+            comparison: dict[str, Any] | None = None
+            match_row = best_match_row.get(face_id)
+            if match_row is not None:
+                pair_a = face_by_id.get(str(match_row.get("face_a") or ""), {})
+                pair_b = face_by_id.get(str(match_row.get("face_b") or ""), {})
+                if pair_a.get("person_name") or pair_a.get("person_id"):
+                    reference, capture = pair_a, pair_b
+                else:
+                    reference, capture = pair_b, pair_a
+
+                def side(row: dict[str, Any]) -> dict[str, Any]:
+                    bbox = row.get("face_bbox")
+                    return {
+                        "file": str(row.get("file_name") or ""),
+                        "bbox": bbox if isinstance(bbox, dict) else None,
+                    }
+
+                comparison = {
+                    "reference": side(reference),
+                    "capture": side(capture),
+                    "similarity": round(float(match_row["similarity"]), 4),
+                }
 
             notes_parts: list[str] = []
             link_basis = face.get("link_basis")
@@ -1783,6 +1848,7 @@ class RunProjection:
                 "matchedWith": subject,
                 "matchedFrom": matched_from,
                 "similarity": round(similarity, 4) if similarity is not None else None,
+                "comparison": comparison,
                 "decidedBy": str(decision.get("reviewer") or ""),
                 "decidedAt": str(decision.get("decidedAt") or ""),
                 "notes": "; ".join(notes_parts) if notes_parts else None,

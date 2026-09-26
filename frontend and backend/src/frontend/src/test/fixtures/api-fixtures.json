@@ -16596,7 +16596,7 @@
     {
       "id": "face_suresh_0",
       "subject": "Suresh",
-      "entityId": "PERSON_f73ad70629191b0d",
+      "entityId": "RES_da5923c0c1c805e2",
       "confidence": 0.55,
       "camera": "",
       "capturedAt": "2026-09-26T20:13:57.932871",
@@ -16607,12 +16607,33 @@
       "similarity": 0.5306,
       "decidedBy": "Insp. Rao",
       "decidedAt": "2026-09-26T20:14:09+00:00",
-      "notes": "identity hint from filename context; capture time from file metadata"
+      "notes": "identity hint from filename context; capture time from file metadata",
+      "comparison": {
+        "reference": {
+          "file": "suresh.jpeg",
+          "bbox": {
+            "x": 253.7,
+            "y": 231.6,
+            "width": 307.0,
+            "height": 409.0
+          }
+        },
+        "capture": {
+          "file": "liftCCTV.jpeg",
+          "bbox": {
+            "x": 251.8,
+            "y": 253.5,
+            "width": 317.4,
+            "height": 450.1
+          }
+        },
+        "similarity": 0.5306
+      }
     },
     {
       "id": "face_liftCCTV_0",
       "subject": "Suresh",
-      "entityId": "PERSON_f73ad70629191b0d",
+      "entityId": "RES_da5923c0c1c805e2",
       "confidence": 0.65,
       "camera": "CAM_4",
       "capturedAt": "2024-06-25T14:32:01",
@@ -16623,7 +16644,28 @@
       "similarity": 0.5306,
       "decidedBy": "",
       "decidedAt": "",
-      "notes": "identity candidate via face match (similarity 0.531); capture time from image overlay"
+      "notes": "identity candidate via face match (similarity 0.531); capture time from image overlay",
+      "comparison": {
+        "reference": {
+          "file": "suresh.jpeg",
+          "bbox": {
+            "x": 253.7,
+            "y": 231.6,
+            "width": 307.0,
+            "height": 409.0
+          }
+        },
+        "capture": {
+          "file": "liftCCTV.jpeg",
+          "bbox": {
+            "x": 251.8,
+            "y": 253.5,
+            "width": 317.4,
+            "height": 450.1
+          }
+        },
+        "similarity": 0.5306
+      }
     }
   ],
   "/api/faces/status": {
@@ -25573,5 +25615,26 @@
     "role": "INSPECTOR",
     "jurisdictionId": "JURISDICTION_DELHI_CYBERCRIME",
     "provider": "session"
+  },
+  "/api/entities/RES_da5923c0c1c805e2": {
+    "id": "RES_da5923c0c1c805e2",
+    "kind": "person",
+    "name": "Suresh",
+    "alias": [],
+    "risk": "low",
+    "summary": "Person · observation · merged via single · resolved",
+    "identifiers": [],
+    "linkedCaseIds": ["CASE_000002"],
+    "linkedEntityIds": [],
+    "firstSeen": "2026-09-26T20:14:06.200354",
+    "lastSeen": "2026-09-26T20:14:06.200354",
+    "tags": ["suresh.jpeg"],
+    "attributes": {
+      "minted_from": "filename",
+      "source_image": "suresh.jpeg"
+    },
+    "epistemicStatus": "observation",
+    "confidence": 0.55,
+    "sourceFiles": ["suresh.jpeg"]
   }
 }

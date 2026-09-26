@@ -49,6 +49,22 @@ describe("Face review", () => {
       within(detail()).getByText("liftCCTV.jpeg, suresh.jpeg"),
     ).toBeInTheDocument();
     expect(within(detail()).getAllByText("Probable").length).toBeGreaterThan(0);
+
+    // The detail panel opens with the side-by-side comparison: reference
+    // (suresh.jpeg) against the capture (liftCCTV.jpeg), pipeline bboxes and
+    // the ArcFace similarity behind the claim.
+    const comparison = screen.getByTestId("face.comparison");
+    expect(
+      within(comparison).getByTestId("face.comparison.reference_image"),
+    ).toHaveAttribute("src", "/api/faces/image?file=suresh.jpeg");
+    expect(
+      within(comparison).getByTestId("face.comparison.capture_image"),
+    ).toHaveAttribute("src", "/api/faces/image?file=liftCCTV.jpeg");
+    expect(
+      within(comparison).getByTestId("face.comparison.similarity"),
+    ).toHaveTextContent("53.1%");
+    expect(within(comparison).getByText("Reference")).toBeInTheDocument();
+    expect(within(comparison).getByText("Capture")).toBeInTheDocument();
   });
 
   it("offers confirm and reject only for the pending match", async () => {
@@ -64,6 +80,27 @@ describe("Face review", () => {
     expect(screen.getByTestId("face.reject_button")).toBeInTheDocument();
     expect(screen.getByText("Confirm match")).toBeInTheDocument();
     expect(screen.getByText("Reject match")).toBeInTheDocument();
+  });
+
+  it("opens the resolved subject entity from the record", async () => {
+    await renderLoadedFacePage();
+
+    // The record's entityId is the resolved graph node (the pipeline person
+    // id was absorbed during resolution), so the drawer finds the subject
+    // instead of landing on "Entity not found." The first row is selected
+    // by default after load.
+    await userEvent.click(screen.getByTestId("face.open_entity_button"));
+
+    const drawer = await screen.findByTestId("entity_drawer");
+    await waitFor(() => {
+      expect(
+        within(drawer).getByText("RES_da5923c0c1c805e2"),
+      ).toBeInTheDocument();
+    });
+    expect(within(drawer).getByText("Suresh")).toBeInTheDocument();
+    expect(
+      within(drawer).queryByText("Entity not found."),
+    ).not.toBeInTheDocument();
   });
 
   it("records the investigator decision and clears the alert", async () => {

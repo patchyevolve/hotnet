@@ -25,6 +25,7 @@ from typing import Any
 
 from fastapi import Depends, FastAPI, File, Header, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
 
 from api.identity import (
     JURISDICTIONS,
@@ -660,6 +661,58 @@ def record_face_decision(body: FaceDecision) -> dict[str, Any]:
 
     return next(
         row for row in projection.face_records() if row["id"] == body.faceId
+    )
+
+
+_FACE_IMAGE_TYPES = {
+    ".jpg": "image/jpeg",
+    ".jpeg": "image/jpeg",
+    ".png": "image/png",
+    ".webp": "image/webp",
+}
+
+
+def resolve_face_image(registry: CaseRegistry, case_id: str, name: str) -> Path:
+    """Resolve an ingested image inside a case directory.
+
+    The face-comparison view asks for bare filenames (``matchedFrom`` /
+    ``comparison.*.file``), so the name must carry no directory component and
+    an image extension only; ``evidence_path`` then refuses anything that
+    would escape the case directory. This route serves raw files, so it must
+    never be able to reach ``.env`` or the registry itself.
+    """
+    if Path(name).name != name:
+        raise RegistryError(f"Malformed image name: {name!r}")
+    if Path(name).suffix.lower() not in _FACE_IMAGE_TYPES:
+        raise RegistryError(f"Not an image file: {name!r}")
+    path = registry.evidence_path(case_id, name)
+    if not path.is_file():
+        raise FileNotFoundError(name)
+    return path
+
+
+@app.get("/api/faces/image")
+def get_face_image(file: str, caseId: str | None = None) -> FileResponse:
+    """Serve one ingested image for the side-by-side face comparison.
+
+    Read-only like every other findings endpoint: the path is resolved inside
+    the case's evidence directory (basename + extension allow-list + the
+    registry's traversal check), never from a caller-supplied directory.
+    """
+    case_id = caseId or get_state().active_case()
+    if not case_id:
+        raise HTTPException(404, "No active case")
+    _registry_case(case_id)
+    try:
+        path = resolve_face_image(get_registry(), case_id, file)
+    except FileNotFoundError as exc:
+        raise HTTPException(404, f"Image not found: {file}") from exc
+    except RegistryError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return FileResponse(
+        path,
+        media_type=_FACE_IMAGE_TYPES[path.suffix.lower()],
+        headers={"Cache-Control": "private, max-age=60"},
     )
 
 

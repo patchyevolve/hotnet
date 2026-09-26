@@ -338,6 +338,10 @@ export interface UiStrings {
   matchedWith: string;
   matchedFrom: string;
   similarityLabel: string;
+  faceComparisonTitle: string;
+  referenceImage: string;
+  captureImage: string;
+  noComparison: string;
   decidedByLabel: string;
   decidedAtLabel: string;
   faceAlertTitle: string;
@@ -959,6 +963,10 @@ const en: UiStrings = {
   matchedWith: "Matched with",
   matchedFrom: "Matched from",
   similarityLabel: "Similarity",
+  faceComparisonTitle: "Face comparison",
+  referenceImage: "Reference",
+  captureImage: "Capture",
+  noComparison: "No counterpart face on record.",
   decidedByLabel: "Decided by",
   decidedAtLabel: "Decided at",
   faceAlertTitle: "Face match awaiting review",
@@ -1591,6 +1599,10 @@ const hi: UiStrings = {
   matchedWith: "इससे मिलान",
   matchedFrom: "स्रोत फ़ाइलें",
   similarityLabel: "समरूपता",
+  faceComparisonTitle: "चेहरा तुलना",
+  referenceImage: "संदर्भ चित्र",
+  captureImage: "कैप्चर चित्र",
+  noComparison: "कोई समकक्ष चित्र दर्ज नहीं है।",
   decidedByLabel: "निर्णयकर्ता",
   decidedAtLabel: "निर्णय समय",
   faceAlertTitle: "मिलान समीक्षा बाकी",

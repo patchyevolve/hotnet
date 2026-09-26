@@ -4,6 +4,7 @@ import {
   DetailField,
   DetailPanel,
   EmptyState,
+  FaceComparison,
   FilterBar,
   MetricCard,
   PageHeader,
@@ -370,6 +371,7 @@ export function FacePage() {
         >
           {selected ? (
             <>
+              <FaceComparison record={selected} />
               <DetailField
                 label={strings.confidence}
                 value={formatPercent(selected.confidence * 100, 1)}
