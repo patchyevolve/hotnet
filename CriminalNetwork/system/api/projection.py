@@ -1898,6 +1898,26 @@ class RunProjection:
             }
         )
 
+        # Risk zones were the one list still dumped raw: snake_case keys
+        # silently failed against the camelCase ZoneScore type (every field
+        # optional), so the panel rendered blank rows behind a real count.
+        zones = [
+            _present(
+                {
+                    "hexId": row.get("hex_id"),
+                    "latitude": row.get("latitude"),
+                    "longitude": row.get("longitude"),
+                    "locationNames": row.get("location_names"),
+                    "evidenceCount": row.get("evidence_count"),
+                    "suspectCount": row.get("suspect_count"),
+                    "riskScore": row.get("risk_score"),
+                    "riskBand": row.get("risk_band"),
+                    "caseIds": row.get("case_ids"),
+                }
+            )
+            for row in self._list("zone_scores.json")
+        ]
+
         return {
             "runId": self.run_id,
             "statistics": statistics,
@@ -1905,7 +1925,7 @@ class RunProjection:
             "communities": communities,
             "components": components,
             "multiHopPaths": paths,
-            "zones": self._list("zone_scores.json"),
+            "zones": zones,
             "summary": self.read("analytics_summary.json") or {},
         }
 
