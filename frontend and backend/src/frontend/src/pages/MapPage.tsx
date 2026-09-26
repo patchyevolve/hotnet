@@ -238,6 +238,7 @@ export function MapPage() {
             data={filtered}
             selectedId={selectedId}
             onSelect={setSelectedId}
+            showHexes={layers.riskAreas}
             className="h-[560px]"
           />
         )}

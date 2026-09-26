@@ -71,6 +71,8 @@ known_hosts
 *.db-wal
 
 data/
+# Frontend geo basemap assets are source, not runtime dumps
+!frontend and backend/src/frontend/src/data/
 local-data/
 runtime-data/
 storage/
