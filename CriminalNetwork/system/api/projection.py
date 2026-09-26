@@ -1541,18 +1541,93 @@ class RunProjection:
         rows = []
         for entry in self._list("timeline_events.json"):
             event_type = str(entry.get("event_type") or "")
+            description = str(entry.get("description") or "")
+            prefix = f"{event_type} from "
+            if event_type and description.startswith(prefix):
+                # "social_post from 32_Adversarial_Social.json" — the title
+                # already carries the type, so keep only the provenance.
+                description = f"Extracted from {description[len(prefix):]}"
             rows.append(
                 {
                     "id": str(entry.get("id") or ""),
                     "at": str(entry.get("timestamp") or ""),
                     "title": event_type.replace("_", " ").title() or "Event",
-                    "detail": str(entry.get("description") or ""),
+                    "detail": description,
                     "kind": kind_map.get(event_type.lower(), "case"),
                     "risk": "high" if self._confidence(entry.get("confidence")) < 0.6 else "medium",
                 }
             )
         rows.sort(key=lambda row: row["at"])
         return rows
+
+    _DAY_MONTHS = (
+        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+    )
+
+    @classmethod
+    def _day_label(cls, day: str) -> str:
+        """Compact bar-chart label: ``2024-03-15`` → ``15 Mar 24``.
+
+        Day-of-month plus a two-digit year keeps labels short while staying
+        unique across years, which BarSeries needs (it keys bars by label).
+        """
+        parts = day[:10].split("-")
+        try:
+            year, month, day_of_month = parts
+            month_name = cls._DAY_MONTHS[int(month) - 1]
+            return f"{int(day_of_month)} {month_name} {year[2:]}"
+        except (ValueError, IndexError):
+            return day[:10]
+
+    def case_activity_trend(self) -> list[dict[str, Any]]:
+        """Case activity binned per day: the case's own timeline events plus
+        the pipeline audit trail's timestamps. Both are recorded facts — when
+        events happened on the case, and when the run recorded its stages.
+        """
+        counts: dict[str, int] = {}
+        for event in self.timeline_events():
+            day = str(event.get("at") or "")[:10]
+            if day:
+                counts[day] = counts.get(day, 0) + 1
+        for entry in self.audit_events():
+            day = str(entry.get("at") or "")[:10]
+            if day:
+                counts[day] = counts.get(day, 0) + 1
+        return [
+            {"label": self._day_label(day), "value": counts[day]}
+            for day in sorted(counts)[-14:]
+        ]
+
+    def recent_activity(self) -> list[dict[str, Any]]:
+        """Six newest entries with distinct subjects: the newest pipeline
+        completion, then the newest event per timeline type. The raw tail of
+        the timeline is a single extraction burst — six rows of the same type
+        on near-identical days — so taking the newest per type keeps both the
+        titles and the dates varied while every row stays a recorded fact.
+        """
+        newest_per_title: dict[str, dict[str, Any]] = {}
+        for event in self.timeline_events():  # ascending by time
+            newest_per_title[event["title"]] = event
+        rows = list(newest_per_title.values())
+
+        audit = self.audit_events()
+        if audit:
+            latest = max(audit, key=lambda row: str(row.get("at") or ""))
+            action = str(latest.get("action") or "").replace("_", " ").title()
+            target = str(latest.get("target") or "").replace("_", " ")
+            rows.append(
+                {
+                    "id": str(latest.get("id") or ""),
+                    "at": str(latest.get("at") or ""),
+                    "title": action or "Pipeline Run",
+                    "detail": f"Pipeline stage: {target}" if target else "Pipeline stage recorded",
+                    "kind": "case",
+                    "risk": str(latest.get("severity") or "low"),
+                }
+            )
+        rows.sort(key=lambda row: str(row.get("at") or ""), reverse=True)
+        return rows[:6]
 
     # ------------------------------------------------------------------
     # Reasoning layer (hypotheses / contradictions / gaps / critic)
@@ -2064,7 +2139,7 @@ class RunProjection:
 
     def dashboard(self, role: str) -> dict[str, Any]:
         counts = self.entity_counts()
-        recent = self.timeline_events()[-6:]
+        recent = self.recent_activity()
         alerts = [
             {
                 "id": item["id"],
@@ -2101,7 +2176,7 @@ class RunProjection:
                 {"label": level.title(), "value": counts["byRisk"][level], "tone": level}
                 for level in ("critical", "high", "medium", "low")
             ],
-            "caseTrend": [],
+            "caseTrend": self.case_activity_trend(),
             "districtLoad": [
                 {"label": kind, "value": value}
                 for kind, value in sorted(

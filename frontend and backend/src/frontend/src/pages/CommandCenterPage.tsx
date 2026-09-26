@@ -162,7 +162,7 @@ export function CommandCenterPage() {
                   <ArrowRight className="size-3" aria-hidden />
                 </Link>
               </div>
-              <ul className="flex flex-col divide-y divide-border/60">
+              <ul className="scrollbar-thin flex max-h-[calc(100vh-21rem)] flex-col divide-y divide-border/60 overflow-y-auto overscroll-contain">
                 {activeCases.map((item, index) => (
                   <li key={item.id}>
                     <Link
@@ -196,7 +196,7 @@ export function CommandCenterPage() {
                   {strings.liveIntelligenceFeed}
                 </h2>
               </div>
-              <ul className="flex flex-col divide-y divide-border/60">
+              <ul className="scrollbar-thin flex max-h-[calc(100vh-21rem)] flex-col divide-y divide-border/60 overflow-y-auto overscroll-contain">
                 {feed.map((event, index) => (
                   <li
                     key={event.id}
