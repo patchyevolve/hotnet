@@ -1,0 +1,73 @@
+{
+  "responses": {
+    "resp_ccb58f565e07": {
+      "task": "extract_generic",
+      "timestamp": "2026-09-26T01:17:46.448786",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "status": "success",
+      "source_file": "01_FIR.txt"
+    },
+    "resp_a93f4d0f4857": {
+      "task": "extract_generic",
+      "timestamp": "2026-09-26T01:17:49.382980",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "status": "success",
+      "source_file": "02_WITNESS_EVIDENCE.txt"
+    },
+    "resp_45a38ec266b4": {
+      "task": "resolve_entities",
+      "timestamp": "2026-09-26T01:17:52.147262",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "status": "success",
+      "source_file": "entity_resolution"
+    },
+    "resp_d8267e7a96b8": {
+      "task": "resolve_entities",
+      "timestamp": "2026-09-26T01:17:54.989610",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "status": "success",
+      "source_file": "entity_resolution"
+    },
+    "resp_61ff4d8de4e1": {
+      "task": "critic_review",
+      "timestamp": "2026-09-26T01:18:01.708887",
+      "provider": "groq",
+      "model": "openai/gpt-oss-20b",
+      "status": "success",
+      "source_file": "pipeline_analytical_outputs"
+    }
+  },
+  "by_task": {
+    "extract_generic": [
+      "resp_ccb58f565e07",
+      "resp_a93f4d0f4857"
+    ],
+    "resolve_entities": [
+      "resp_45a38ec266b4",
+      "resp_d8267e7a96b8"
+    ],
+    "critic_review": [
+      "resp_61ff4d8de4e1"
+    ]
+  },
+  "by_file": {
+    "01_FIR.txt": [
+      "resp_ccb58f565e07"
+    ],
+    "02_WITNESS_EVIDENCE.txt": [
+      "resp_a93f4d0f4857"
+    ],
+    "entity_resolution": [
+      "resp_45a38ec266b4",
+      "resp_d8267e7a96b8"
+    ],
+    "pipeline_analytical_outputs": [
+      "resp_61ff4d8de4e1"
+    ]
+  },
+  "total": 5
+}

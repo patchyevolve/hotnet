@@ -1,0 +1,11 @@
+timestamp,location,camera_id,person_description,action,duration_minutes,vehicle_description
+2024-03-14T07:25:00,Karol Bagh Main Market Camera 7,CAM_KB7,Male (blue shirt),Subject walking near RK Telecom shop,3,
+2024-03-14T07:30:00,Karol Bagh Main Market Camera 7,CAM_KB7,Male (blue shirt),Subject enters shop,,
+2024-03-14T07:35:00,Karol Bagh Main Market Camera 7,CAM_KB7,,Subject exits shop,2,
+2024-03-14T09:00:00,Lajpat Nagar Part II Camera 3,CAM_LN3,Male,Subject observed near building,8,
+2024-03-14T09:10:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male,Subject talking to another person outside building,5,
+2024-03-14T09:15:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male,Male enters building,,
+2024-03-14T09:20:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male,Male exits building,3,
+2024-03-14T16:30:00,Dwarka Sector 12 Main Gate Camera,DW_S12_1,Male,Subject on motorcycle near gate,2,BLACK HERO HONDA
+2024-03-14T16:35:00,Dwarka Sector 12 Main Gate Camera,DW_S12_1,Male,Subject enters compound,,
+2024-03-14T16:40:00,Dwarka Sector 12 Main Gate Camera,DW_S12_1,Male,Subject exits compound,5,BLACK HERO HONDA

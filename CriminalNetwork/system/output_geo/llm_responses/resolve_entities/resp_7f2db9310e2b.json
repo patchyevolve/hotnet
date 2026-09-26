@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_7f2db9310e2b",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "6d0a8fc30bc4a789",
+  "response_text": "{\"groups\":[{\"entity_ids\":[\"LOCATION_02752649638768e2\",\"LOC_0e74cea9438de0e4\"],\"merge\":true,\"confidence\":0.95,\"canonical_name\":\"Lajpat Nagar Part II\",\"reasoning\":\"Both refer to the same physical location; one includes a camera identifier but otherwise identical.\",\"signals\":{\"name_similarity\":1.0,\"shared_attributes\":1.0,\"context_alignment\":1.0,\"contradictions\":1.0,\"cultural_knowledge\":1.0},\"merge_type\":\"auto\"}]}",
+  "usage": {
+    "queue_time": 0.330238883,
+    "prompt_tokens": 673,
+    "prompt_time": 0.036095011,
+    "completion_tokens": 168,
+    "completion_time": 0.192741159,
+    "total_tokens": 841,
+    "total_time": 0.22883617,
+    "completion_tokens_details": {
+      "reasoning_tokens": 42
+    }
+  },
+  "latency_ms": 617,
+  "status": "success",
+  "timestamp": "2026-09-26T16:50:07.044725",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

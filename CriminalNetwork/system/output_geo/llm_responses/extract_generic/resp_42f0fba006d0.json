@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_42f0fba006d0",
+  "task": "extract_generic",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3b5071bfd94836f6",
+  "input_hash": "2490f2daa5fddc5f",
+  "response_text": "{\"entities\":[{\"name\":\"Rakesh Kumar\",\"type\":\"PERSON\"},{\"name\":\"Suresh Kumar\",\"type\":\"PERSON\"},{\"name\":\"Amit Sharma\",\"type\":\"PERSON\"},{\"name\":\"Meena Devi\",\"type\":\"PERSON\"},{\"name\":\"Priya Singh\",\"type\":\"PERSON\"},{\"name\":\"Vikram Rathore\",\"type\":\"PERSON\"},{\"name\":\"RK Telecom\",\"type\":\"ORGANIZATION\"},{\"name\":\"Karol Bagh\",\"type\":\"LOCATION\"},{\"name\":\"Delhi\",\"type\":\"LOCATION\"},{\"name\":\"15 lakh\",\"type\":\"AMOUNT\"},{\"name\":\"5 lakh\",\"type\":\"AMOUNT\"},{\"name\":\"28/03/2024\",\"type\":\"DATE\"}],\"relations\":[{\"source\":\"Rakesh Kumar\",\"target\":\"RK Telecom\",\"type\":\"ASSOCIATED_WITH\"},{\"source\":\"Rakesh Kumar\",\"target\":\"Karol Bagh\",\"type\":\"LOCATED_AT\"},{\"source\":\"Rakesh Kumar\",\"target\":\"Meena Devi\",\"type\":\"CALLED\"},{\"source\":\"Rakesh Kumar\",\"target\":\"28/03/2024\",\"type\":\"EVENT\"},{\"source\":\"Suresh Kumar\",\"target\":\"28/03/2024\",\"type\":\"EVENT\"},{\"source\":\"Amit Sharma\",\"target\":\"28/03/2024\",\"type\":\"EVENT\"}]}",
+  "usage": {
+    "queue_time": 0.349885374,
+    "prompt_tokens": 772,
+    "prompt_time": 0.04066001,
+    "completion_tokens": 461,
+    "completion_time": 0.481913901,
+    "total_tokens": 1233,
+    "total_time": 0.522573911,
+    "completion_tokens_details": {
+      "reasoning_tokens": 200
+    }
+  },
+  "latency_ms": 924,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:08.708600",
+  "source_file": "20_Journalist_Note.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

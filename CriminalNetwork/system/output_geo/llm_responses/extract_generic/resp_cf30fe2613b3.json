@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_cf30fe2613b3",
+  "task": "extract_generic",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3b5071bfd94836f6",
+  "input_hash": "a6d9d718eec7a143",
+  "response_text": "{\"entities\":[{\"name\":\"9876543210\",\"type\":\"PHONE\"},{\"name\":\"2025-04-13\",\"type\":\"DATE\"},{\"name\":\"Rakesh Kumar\",\"type\":\"PERSON\"}],\"relations\":[{\"source\":\"9876543210\",\"target\":\"complainant\",\"type\":\"CALLED\"}]}",
+  "usage": {
+    "queue_time": 0.345533369,
+    "prompt_tokens": 525,
+    "prompt_time": 0.029999318,
+    "completion_tokens": 247,
+    "completion_time": 0.262778306,
+    "total_tokens": 772,
+    "total_time": 0.292777624,
+    "completion_tokens_details": {
+      "reasoning_tokens": 176
+    }
+  },
+  "latency_ms": 688,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:28.407398",
+  "source_file": "02_WITNESS_EVIDENCE.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

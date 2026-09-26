@@ -1,0 +1,3 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location
+2025-04-11T19:12:00,9876543210,9861000001,74,outgoing,Hyderabad Banjara Hills Demo Tower
+2025-04-11T19:36:00,9861000001,9876543210,51,incoming,Hyderabad Banjara Hills Demo Tower

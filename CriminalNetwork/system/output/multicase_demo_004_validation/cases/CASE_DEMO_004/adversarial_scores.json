@@ -1,0 +1,35 @@
+[
+  {
+    "edge_id": "EDGE_f1e54c3d4a9a2cc7",
+    "naturalness_score": 1.0,
+    "temporal_consistency": 1.0,
+    "source_reliability": 0.95,
+    "network_coherence": 1.0,
+    "behavioral_consistency": 1.0,
+    "overall_score": 0.010000000000000009,
+    "is_suspicious": false,
+    "flags": []
+  },
+  {
+    "edge_id": "EDGE_35153718c05cf69d",
+    "naturalness_score": 1.0,
+    "temporal_consistency": 1.0,
+    "source_reliability": 0.95,
+    "network_coherence": 1.0,
+    "behavioral_consistency": 1.0,
+    "overall_score": 0.010000000000000009,
+    "is_suspicious": false,
+    "flags": []
+  },
+  {
+    "edge_id": "EDGE_40ad716478966b3c",
+    "naturalness_score": 1.0,
+    "temporal_consistency": 1.0,
+    "source_reliability": 0.95,
+    "network_coherence": 1.0,
+    "behavioral_consistency": 1.0,
+    "overall_score": 0.010000000000000009,
+    "is_suspicious": false,
+    "flags": []
+  }
+]

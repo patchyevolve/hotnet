@@ -1,0 +1,8 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location
+2024-03-12T14:28:33,9876543213,9876543210,15,incoming,Lajpat Nagar Tower 1
+2024-03-13T08:47:22,9876543213,9876543210,22,incoming,Lajpat Nagar Tower 1
+2024-03-13T10:10:44,9876543213,9876543210,28,incoming,Lajpat Nagar Tower 1
+2024-03-14T09:03:11,9876543213,01126543210,180,incoming,Lajpat Nagar Tower 1
+2024-03-14T09:07:02,9876543213,01126543210,12,incoming,Lajpat Nagar Tower 1
+2024-03-14T09:10:55,9876543213,01126543210,8,incoming,Lajpat Nagar Tower 1
+2024-03-14T14:42:33,9876543213,9876543210,5,incoming,Lajpat Nagar Tower 1

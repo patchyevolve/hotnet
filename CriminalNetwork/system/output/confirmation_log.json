@@ -1,0 +1,112 @@
+{
+  "pending": [
+    {
+      "query_entity_id": "PERSON_915ca1cfe5a261f0",
+      "query_name": "Suresh Kumar",
+      "candidates": [
+        {
+          "entity_id": "PERSON_915ca1cfe5a261f0",
+          "name": "Suresh Kumar",
+          "confidence": 0.8787878787878788,
+          "evidence_count": 1,
+          "evidence_files": [
+            "06_Bank_Suresh.csv"
+          ],
+          "signals": {
+            "rule_based": 0.8787878787878788,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_c63ac5eb1535a215",
+          "name": "Suresh Bhai",
+          "confidence": 0.8787878787878788,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "rule_based": 0.8787878787878788,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-23T00:13:18.996544"
+    },
+    {
+      "query_entity_id": "PERSON_bdae71cfb51d493f",
+      "query_name": "Meena Ji",
+      "candidates": [
+        {
+          "entity_id": "PERSON_bdae71cfb51d493f",
+          "name": "Meena Ji",
+          "confidence": 0.8916666666666667,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "rule_based": 0.8916666666666667,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_7726af14f2d056b6",
+          "name": "Meena Devi's",
+          "confidence": 0.8916666666666667,
+          "evidence_count": 1,
+          "evidence_files": [
+            "13_FIR_Rajesh.txt"
+          ],
+          "signals": {
+            "rule_based": 0.8916666666666667,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-23T00:13:18.996581"
+    },
+    {
+      "query_entity_id": "PERSON_87ad8c66656ae254",
+      "query_name": "Karol Bagh Main Market",
+      "candidates": [
+        {
+          "entity_id": "PERSON_87ad8c66656ae254",
+          "name": "Karol Bagh Main Market",
+          "confidence": 0.8763636363636362,
+          "evidence_count": 1,
+          "evidence_files": [
+            "19_Surveillance_Report.txt"
+          ],
+          "signals": {
+            "rule_based": 0.8763636363636362,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_ddf5af9bcfac37ca",
+          "name": "Karol Bagh Tower 1",
+          "confidence": 0.8763636363636362,
+          "evidence_count": 1,
+          "evidence_files": [
+            "29_Investigator_Summary.txt"
+          ],
+          "signals": {
+            "rule_based": 0.8763636363636362,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-23T00:13:18.996726"
+    }
+  ],
+  "confirmed": [],
+  "rejected": [],
+  "total_pending": 3,
+  "total_confirmed": 0,
+  "total_rejected": 0,
+  "saved_at": "2026-09-23T00:13:19.012147"
+}

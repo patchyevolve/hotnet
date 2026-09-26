@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "description": "Process only synthetic Hyderabad case CASE_DEMO_004 while consulting the persistent workspace identity index.",
+  "cases": [
+    {
+      "case_id": "CASE_DEMO_004",
+      "manifest": "multicase/CASE_DEMO_004/FIR_MANIFEST.json",
+      "description": "Single-case multicase-architecture validation"
+    }
+  ]
+}

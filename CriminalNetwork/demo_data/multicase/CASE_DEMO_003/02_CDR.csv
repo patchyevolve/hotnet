@@ -1,0 +1,3 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location
+2025-02-03T08:45:00,9876543210,9414000063,63,outgoing,Mansarovar Sector 5 Tower
+2025-02-03T09:22:00,9414000063,9876543210,82,incoming,Mansarovar Sector 5 Tower

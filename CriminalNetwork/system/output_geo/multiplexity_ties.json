@@ -1,0 +1,426 @@
+[
+  {
+    "id": "MT_026ab56bb2529766",
+    "entity_a": "RES_58d3eec5a549b5f5",
+    "entity_b": "RES_a43997b49dba49ba",
+    "tie_types": [
+      "associational",
+      "quasi-governmental"
+    ],
+    "tie_count": 4,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "criminal": [
+        "VICTIM_OF"
+      ],
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_1a8d45a97ef3ce4e",
+    "entity_a": "RES_50fa850b2b1ec9e6",
+    "entity_b": "RES_ce4c1813fe797d7d",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_dd8dc9abe8967fe0",
+    "entity_a": "RES_0a5f31f39f5d619c",
+    "entity_b": "RES_3e438bacdb6bd7b1",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_235ef32b9c11d59c",
+    "entity_a": "RES_3ad4e416b5fcd0b1",
+    "entity_b": "RES_d7b7a3807abd2258",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_f94cef5a8751678f",
+    "entity_a": "RES_01804c8fbc111dbd",
+    "entity_b": "RES_4abe7b8fe28c4e6f",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_c13475cdaed3e70c",
+    "entity_a": "RES_9eeb75085f3656ee",
+    "entity_b": "RES_ce5f6b84e2e7bf94",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_28950e27161bd422",
+    "entity_a": "RES_2c89178b4963b445",
+    "entity_b": "RES_c078bc8d6d80314b",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_a765a08c5db2071c",
+    "entity_a": "RES_0a5f31f39f5d619c",
+    "entity_b": "RES_b58f92dec7cf0b3e",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "VISITED",
+        "ASSOCIATED_WITH"
+      ]
+    }
+  },
+  {
+    "id": "MT_94820966fae06f52",
+    "entity_a": "RES_0a5f31f39f5d619c",
+    "entity_b": "RES_f90015a9027df8e3",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "MESSED",
+        "ASSOCIATE_OF",
+        "ASSOCIATED_WITH"
+      ]
+    }
+  },
+  {
+    "id": "MT_c4737bfa31a70e19",
+    "entity_a": "RES_50fa850b2b1ec9e6",
+    "entity_b": "RES_f90015a9027df8e3",
+    "tie_types": [
+      "associational",
+      "entrepreneurial"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "legitimate": [
+        "WORKS_WITH"
+      ],
+      "personal": [
+        "MESSED",
+        "ASSOCIATED_WITH"
+      ]
+    }
+  },
+  {
+    "id": "MT_dd99977c285cebb9",
+    "entity_a": "RES_7b5526f65914ca75",
+    "entity_b": "RES_e95c77c1e77f9515",
+    "tie_types": [
+      "associational",
+      "quasi-governmental"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "criminal": [
+        "LIVES_AT"
+      ],
+      "personal": [
+        "ASSOCIATED_WITH"
+      ]
+    }
+  },
+  {
+    "id": "MT_253b2cb24506cff2",
+    "entity_a": "RES_58d3eec5a549b5f5",
+    "entity_b": "RES_e41d5c9970d2fc45",
+    "tie_types": [
+      "associational",
+      "quasi-governmental"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "criminal": [
+        "VICTIM_OF"
+      ],
+      "personal": [
+        "MESSED",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_335397c23a96dc8a",
+    "entity_a": "RES_06b3f3578a482b62",
+    "entity_b": "RES_f90015a9027df8e3",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_8d2ec381f2fdbd27",
+    "entity_a": "RES_0a18a7b09bb945cb",
+    "entity_b": "RES_570cf91d41cd7a12",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_bf0ffcd4d2e8f9ad",
+    "entity_a": "RES_14039349d66ebf3c",
+    "entity_b": "RES_28a1528ee4c0119d",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_36a17ce71d701724",
+    "entity_a": "RES_3ad4e416b5fcd0b1",
+    "entity_b": "RES_6197362326e7f20c",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_d0e48f7968032077",
+    "entity_a": "RES_04842ef365a93d12",
+    "entity_b": "RES_2e6dcc0d467c0fff",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_edae58e5fa7729fd",
+    "entity_a": "RES_38774b6f969f44fa",
+    "entity_b": "RES_9168a3cc71452b89",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_74059f7a0b70251e",
+    "entity_a": "RES_58d3eec5a549b5f5",
+    "entity_b": "RES_f90015a9027df8e3",
+    "tie_types": [
+      "associational",
+      "quasi-governmental"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "personal": [
+        "CALLED"
+      ],
+      "criminal": [
+        "VICTIM_OF",
+        "SUSPECT_OF"
+      ]
+    }
+  },
+  {
+    "id": "MT_da5ca71eb74bf970",
+    "entity_a": "RES_0a5f31f39f5d619c",
+    "entity_b": "RES_f1c5114c09cb9b0a",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "VISITED",
+        "SHARED_LOCATION"
+      ]
+    }
+  },
+  {
+    "id": "MT_17003cda5db6c85c",
+    "entity_a": "RES_2e6dcc0d467c0fff",
+    "entity_b": "RES_f90015a9027df8e3",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "VISITED",
+        "SHARED_LOCATION"
+      ]
+    }
+  },
+  {
+    "id": "MT_a5da0e889bfe8ac3",
+    "entity_a": "RES_a43997b49dba49ba",
+    "entity_b": "RES_e41d5c9970d2fc45",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_fb51c45f898fc6f3",
+    "entity_a": "RES_9768897216059a61",
+    "entity_b": "RES_e95c77c1e77f9515",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "hex_id": "GRID_28.616_77.228",
+    "latitude": 28.6160006,
+    "longitude": 77.2278877,
+    "location_names": [
+      "Hyderabad"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.6,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260926_011743"
+  }
+]

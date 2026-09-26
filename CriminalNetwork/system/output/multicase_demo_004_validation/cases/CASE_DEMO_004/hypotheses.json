@@ -1,0 +1,626 @@
+[
+  {
+    "id": "HYP_a1b9e79651abb2d6",
+    "type": "relationship",
+    "description": "3 entities form a connected group (community COMM_000) whose internal structure is carried by 3 links of types: VISITED x2, CALLED x1; 3 of those links are neither identity-disputed nor event-anchored, so the claim turns on how the members are connected.",
+    "confidence": {
+      "score": 0.706667,
+      "basis": [
+        "3 supporting links, mean confidence 0.767",
+        "independence 0.333: 1 distinct files behind 3 provenance mentions",
+        "0 unresolved contradictions touching 0.000 of members",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence"
+      ],
+      "supporting_count": 3,
+      "contradicting_count": 0,
+      "unknown_count": 3,
+      "source_reliability": 0.333333,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.766667,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.767"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.333333,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.333"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [
+      "EDGE_35153718c05cf69d",
+      "EDGE_40ad716478966b3c",
+      "EDGE_f1e54c3d4a9a2cc7"
+    ],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_ab5e67c63ab1f90b",
+      "HYP_23af9258e7bf9499",
+      "HYP_a128748357ca1c27",
+      "HYP_3506820a24fb5887",
+      "HYP_e396024b8d39a46e"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_1d40d09aca94fece",
+        "description": "Verify any one supporting link against the record it cites; if that record does not contain the claimed relation, the support is void",
+        "required_evidence": "The source records named in this hypothesis's provenance",
+        "findability": "likely",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 3 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "The run does not rest on a single source file (03_CDR.csv)",
+          "if_false": "Confidence would drop to 0.300 (3 of 3 links depend on it)",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.333333,
+    "last_updated": "2026-09-25T19:48:00.313790+00:00",
+    "reasoning": "Group of 3 nodes (dominant node types: PHONE x2, LOCATION x1) with 3 internal links at mean confidence 0.767. 1 distinct source files back the links (independence 0.333); 0 unresolved contradictions and 0 expected-but-absent relations qualify the claim. Level selected as 'relationship': 3/3 links carry no identity dispute (entity 0) and no temporal anchor (event 0), the largest exclusive share. This is an inference over observations; evidence raises its confidence but never promotes it to an observation.",
+    "pattern_matches": [],
+    "generation_basis": "community",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_ab5e67c63ab1f90b",
+    "type": "entity",
+    "description": "Coordination is attributable to Hyderabad Banjara Hills Demo Tower rather than the most-connected member 9876543210.",
+    "confidence": {
+      "score": 0.73,
+      "basis": [
+        "2 supporting items at the entity level",
+        "mean supporting confidence 0.700",
+        "independence 0.500: 1 distinct files behind 2 mentions",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence"
+      ],
+      "supporting_count": 2,
+      "contradicting_count": 0,
+      "unknown_count": 3,
+      "source_reliability": 0.5,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.7,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.700"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.500"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [
+      "EDGE_40ad716478966b3c",
+      "EDGE_f1e54c3d4a9a2cc7"
+    ],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6",
+      "HYP_23af9258e7bf9499",
+      "HYP_a128748357ca1c27",
+      "HYP_3506820a24fb5887",
+      "HYP_e396024b8d39a46e"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_03879ded72642065",
+        "description": "Verify any one supporting link against the record it cites; if that record does not contain the claimed relation, the support is void",
+        "required_evidence": "The source records named in this hypothesis's provenance",
+        "findability": "likely",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 2 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "The run does not rest on a single source file (03_CDR.csv)",
+          "if_false": "Confidence would drop to 0.300 (2 of 2 links depend on it)",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.5,
+    "last_updated": "2026-09-25T19:48:00.313894+00:00",
+    "reasoning": "Second-ranked member Hyderabad Banjara Hills Demo Tower carries 2 of 3 internal links; this alternative deliberately excludes the top-ranked member.",
+    "pattern_matches": [],
+    "generation_basis": "community_alternative",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_23af9258e7bf9499",
+    "type": "event",
+    "description": "The group's links are the residue of several separate episodes rather than one coordinated pattern. Nothing in this community's evidence supports that reading today; the level is present because RULE 1 requires all five, not because it is evidenced.",
+    "confidence": {
+      "score": 0.3,
+      "basis": [
+        "0 supporting items at the event level",
+        "mean supporting confidence 0.000",
+        "source independence not measurable (no supporting items)",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence",
+        "no supporting evidence exists at this level"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 4,
+      "source_reliability": 0.0,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.0,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.0,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6",
+      "HYP_ab5e67c63ab1f90b",
+      "HYP_a128748357ca1c27",
+      "HYP_3506820a24fb5887",
+      "HYP_e396024b8d39a46e"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_2bae4a77f44a91d4",
+        "description": "Recover a record that positively establishes the primary reading over this alternative",
+        "required_evidence": "An observation bearing directly on this reading, absent from the current corpus",
+        "findability": "possible",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 0 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.0,
+    "last_updated": "2026-09-25T19:48:00.313939+00:00",
+    "reasoning": "No timeline event resolves to any member of this group, so the episode-reading has no positive support here. The level is still generated per RULE 1, reported as unsupported rather than assumed.",
+    "pattern_matches": [],
+    "generation_basis": "community_alternative",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_a128748357ca1c27",
+    "type": "relationship",
+    "description": "The ties are ordinary association between the members rather than the coordinated relationship the group appears to show.",
+    "confidence": {
+      "score": 0.706667,
+      "basis": [
+        "3 supporting items at the relationship level",
+        "mean supporting confidence 0.767",
+        "independence 0.333: 1 distinct files behind 3 mentions",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence"
+      ],
+      "supporting_count": 3,
+      "contradicting_count": 0,
+      "unknown_count": 3,
+      "source_reliability": 0.333333,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.766667,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.767"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.333333,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.333"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [
+      "EDGE_35153718c05cf69d",
+      "EDGE_40ad716478966b3c",
+      "EDGE_f1e54c3d4a9a2cc7"
+    ],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6",
+      "HYP_ab5e67c63ab1f90b",
+      "HYP_23af9258e7bf9499",
+      "HYP_3506820a24fb5887",
+      "HYP_e396024b8d39a46e"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_bed11834507596ef",
+        "description": "Verify any one supporting link against the record it cites; if that record does not contain the claimed relation, the support is void",
+        "required_evidence": "The source records named in this hypothesis's provenance",
+        "findability": "likely",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 3 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "The run does not rest on a single source file (03_CDR.csv)",
+          "if_false": "Confidence would drop to 0.300 (3 of 3 links depend on it)",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.333333,
+    "last_updated": "2026-09-25T19:48:00.314007+00:00",
+    "reasoning": "3 of 3 internal links are classified by the graph builder as 'associational' (its social/bonding category: calls, visits, association, ownership and location ties), so on that reading the group is an ordinary circle of contact rather than a coordinated network.",
+    "pattern_matches": [],
+    "generation_basis": "community_alternative",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_3506820a24fb5887",
+    "type": "causal",
+    "description": "The group is coordinated, but by a motive not represented in the ingested evidence (which would be non-criminal or benign). Nothing in this community's evidence supports that reading today; the level is present because RULE 1 requires all five, not because it is evidenced.",
+    "confidence": {
+      "score": 0.3,
+      "basis": [
+        "0 supporting items at the causal level",
+        "mean supporting confidence 0.000",
+        "source independence not measurable (no supporting items)",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence",
+        "no supporting evidence exists at this level"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 4,
+      "source_reliability": 0.0,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.0,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.0,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6",
+      "HYP_ab5e67c63ab1f90b",
+      "HYP_23af9258e7bf9499",
+      "HYP_a128748357ca1c27",
+      "HYP_e396024b8d39a46e"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_bb4716f68a5e92a3",
+        "description": "Recover a record that positively establishes the primary reading over this alternative",
+        "required_evidence": "An observation bearing directly on this reading, absent from the current corpus",
+        "findability": "possible",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 0 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.0,
+    "last_updated": "2026-09-25T19:48:00.314065+00:00",
+    "reasoning": "No evidence type in this corpus records motive, so nothing here can support or refute a motive claim either way.",
+    "pattern_matches": [],
+    "generation_basis": "community_alternative",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_e396024b8d39a46e",
+    "type": "source_error",
+    "description": "The supporting evidence is fabricated or misattributed, so the group does not exist as described. Nothing in this community's evidence supports that reading today; the level is present because RULE 1 requires all five, not because it is evidenced.",
+    "confidence": {
+      "score": 0.3,
+      "basis": [
+        "0 supporting items at the source_error level",
+        "mean supporting confidence 0.000",
+        "source independence not measurable (no supporting items)",
+        "score = 0.4*corroboration + 0.3*independence + 0.3*contradiction_absence",
+        "no supporting evidence exists at this level"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 4,
+      "source_reliability": 0.0,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "corroboration",
+          "value": 0.0,
+          "weight": 0.4,
+          "description": "Mean confidence of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "evidence_independence",
+          "value": 0.0,
+          "weight": 0.3,
+          "description": "Source-file diversity of supporting evidence: 0.000"
+        },
+        {
+          "factor_type": "contradiction_absence",
+          "value": 1.0,
+          "weight": 0.3,
+          "description": "Share of members without unresolved contradiction: 1.000"
+        }
+      ]
+    },
+    "supporting": [],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6",
+      "HYP_ab5e67c63ab1f90b",
+      "HYP_23af9258e7bf9499",
+      "HYP_a128748357ca1c27",
+      "HYP_3506820a24fb5887"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_a3710cc173a49805",
+        "description": "Recover a record that positively establishes the primary reading over this alternative",
+        "required_evidence": "An observation bearing directly on this reading, absent from the current corpus",
+        "findability": "possible",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "All 0 supporting links are correctly attributed to this group",
+          "if_false": "Confidence would fall if any supporting link were retracted",
+          "testability": "testable"
+        },
+        {
+          "assumption": "Every member is a correctly resolved identity",
+          "if_false": "Membership of the group would change, invalidating the grouping",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.0,
+    "last_updated": "2026-09-25T19:48:00.314112+00:00",
+    "reasoning": "No internal link draws on a Stage 1 flagged file (none). The level is still generated per RULE 1, with empty support rather than assumed support.",
+    "pattern_matches": [],
+    "generation_basis": "community_alternative",
+    "community_id": "COMM_000"
+  },
+  {
+    "id": "HYP_NULL",
+    "type": "event",
+    "description": "No coordinated activity occurred; the observed structure is explained by shared-evidence co-mention alone.",
+    "confidence": {
+      "score": 0.536667,
+      "basis": [
+        "null confidence = 0.7*(1 - independence) + 0.3*(1 - mean_confidence)",
+        "independence 0.333 over 3 links",
+        "mean link confidence 0.767"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 2,
+      "source_reliability": 0.333333,
+      "derivation_depth": 1,
+      "is_independent": false,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "hypothesis",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "shared_source_concentration",
+          "value": 0.666667,
+          "weight": 0.7,
+          "description": "Supporting structure is concentrated in few source files (independence 0.333)"
+        },
+        {
+          "factor_type": "absence_of_corroboration",
+          "value": 0.233333,
+          "weight": 0.3,
+          "description": "Mean link confidence 0.767 across the structure"
+        }
+      ]
+    },
+    "supporting": [],
+    "contradicting": [],
+    "missing": [],
+    "alternatives": [
+      "HYP_a1b9e79651abb2d6"
+    ],
+    "null_hypothesis": "HYP_NULL",
+    "falsifiers": [
+      {
+        "id": "FALS_75bdef401a6bd689",
+        "description": "Corroborate the observed links from a source independent of the ingested files",
+        "required_evidence": "An independent record of the interactions the graph asserts",
+        "findability": "possible",
+        "impact": "reject_hypothesis",
+        "status": "not_searched"
+      }
+    ],
+    "sensitivity": {
+      "key_assumptions": [
+        {
+          "assumption": "shared-evidence co-mention fully explains the structure",
+          "if_false": "substantive hypotheses gain the confidence the null loses",
+          "testability": "testable"
+        }
+      ],
+      "identity_sensitivity": null
+    },
+    "evidence_independence": 0.333333,
+    "last_updated": "2026-09-25T19:48:00.314174+00:00",
+    "reasoning": "The null claims the 3-link structure arises without coordination. Its confidence rises as source independence falls (0.333) and as link corroboration falls (0.767), because concentrated, weakly corroborated structure is precisely what co-mention produces. It must always remain a competing hypothesis (RULE 4). Nothing in this corpus rules it out \u2014 every observation here is also explainable as shared-source co-mention \u2014 so it reports no contradicting evidence rather than pretending the question has been settled.",
+    "pattern_matches": [
+      "SIG_1c95c4ec6580b665"
+    ],
+    "generation_basis": "null_hypothesis",
+    "community_id": ""
+  }
+]

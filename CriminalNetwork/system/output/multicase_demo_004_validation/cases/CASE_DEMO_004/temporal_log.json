@@ -1,0 +1,14 @@
+{
+  "run_id": "run_20260926_011743",
+  "timestamp": "2026-09-26T01:17:55.002580",
+  "input_entities": 10,
+  "input_relations": 4,
+  "temporal_infos": 4,
+  "spatial_infos": 1,
+  "coverage_intervals": 0,
+  "timeline_events": 0,
+  "temporal_relations": 0,
+  "event_clusters": 0,
+  "temporal_contradictions": 0,
+  "processing_time_seconds": 0.01
+}

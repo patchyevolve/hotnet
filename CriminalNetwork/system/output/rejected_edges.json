@@ -1,0 +1,37 @@
+[
+  {
+    "source_id": "PERSON_bdae71cfb51d493f",
+    "target_id": "RES_a353fb4092c96d33",
+    "relationship_type": "ASSOCIATED_WITH",
+    "confidence": 0.3,
+    "reason": "Below threshold (0.5)"
+  },
+  {
+    "source_id": "PERSON_b66694c77645402b",
+    "target_id": "RES_236180e1a6a63d8a",
+    "relationship_type": "OWNS_ACCOUNT",
+    "confidence": 0.2,
+    "reason": "Below threshold (0.5)"
+  },
+  {
+    "source_id": "PERSON_b66694c77645402b",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "confidence": 0.2,
+    "reason": "Below threshold (0.5)"
+  },
+  {
+    "source_id": "PERSON_b66694c77645402b",
+    "target_id": "RES_e3b0c44298fc1c14",
+    "relationship_type": "MESSED",
+    "confidence": 0.2,
+    "reason": "Below threshold (0.5)"
+  },
+  {
+    "source_id": "PERSON_b66694c77645402b",
+    "target_id": "RES_01de53a997d895df",
+    "relationship_type": "OWNS_ACCOUNT",
+    "confidence": 0.2,
+    "reason": "Below threshold (0.5)"
+  }
+]

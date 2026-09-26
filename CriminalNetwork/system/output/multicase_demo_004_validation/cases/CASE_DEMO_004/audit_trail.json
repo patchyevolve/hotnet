@@ -1,0 +1,158 @@
+[
+  {
+    "timestamp": "2026-09-26T01:17:44.030434",
+    "run_id": "run_20260926_011743",
+    "stage": "pipeline",
+    "action": "multi_fir_started",
+    "details": {
+      "case_id": "CASE_DEMO_004",
+      "fir_count": 1,
+      "total_files": 3
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.312555",
+    "run_id": "run_20260926_011743",
+    "stage": "hypothesis",
+    "action": "hypothesis_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.315104",
+    "run_id": "run_20260926_011743",
+    "stage": "hypothesis",
+    "action": "hypothesis_completed",
+    "details": {
+      "run_id": "run_20260926_011743",
+      "hypotheses": 7,
+      "primary_hypotheses": 1,
+      "alternative_hypotheses": 5,
+      "null_hypothesis": 1,
+      "communities_seen": 1,
+      "type_counts": {
+        "causal": 1,
+        "entity": 1,
+        "event": 2,
+        "relationship": 2,
+        "source_error": 1
+      },
+      "output": "hypotheses.json"
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.315361",
+    "run_id": "run_20260926_011743",
+    "stage": "contradiction",
+    "action": "contradiction_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.316636",
+    "run_id": "run_20260926_011743",
+    "stage": "contradiction",
+    "action": "contradiction_completed",
+    "details": {
+      "run_id": "run_20260926_011743",
+      "contradictions": 0,
+      "resolved": 0,
+      "unresolved": 0,
+      "resolvable": 0,
+      "irreducible": 0,
+      "eliminated_values": 0,
+      "rules_fired": {},
+      "linked_hypotheses": 0,
+      "output": "contradictions.json"
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.316879",
+    "run_id": "run_20260926_011743",
+    "stage": "gap",
+    "action": "gap_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.317906",
+    "run_id": "run_20260926_011743",
+    "stage": "gap",
+    "action": "gap_completed",
+    "details": {
+      "run_id": "run_20260926_011743",
+      "gaps": 0,
+      "by_kind": {},
+      "feasible": 0,
+      "infeasible": 0,
+      "unscoped": 0,
+      "hypotheses_covered": 0,
+      "max_impact": 0.0,
+      "output": "evidence_gaps.json"
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:00.318255",
+    "run_id": "run_20260926_011743",
+    "stage": "critic",
+    "action": "critic_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:01.709653",
+    "run_id": "run_20260926_011743",
+    "stage": "critic",
+    "action": "critic_completed",
+    "details": {
+      "mode": "llm_assisted",
+      "llm_status": "success",
+      "findings": 4,
+      "structural_checks": 4
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:01.709889",
+    "run_id": "run_20260926_011743",
+    "stage": "global_push",
+    "action": "global_push_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-26T01:18:01.749215",
+    "run_id": "run_20260926_011743",
+    "stage": "global_push",
+    "action": "global_push_completed",
+    "details": {
+      "mode": "db",
+      "case_id": "CASE_DEMO_004",
+      "entities_pushed": 9,
+      "globals_created": 2,
+      "globals_matched": 7,
+      "globals_absorbed": 0,
+      "links": 9,
+      "matched_by": {
+        "phone_exact": 1,
+        "account_exact": 0,
+        "name_exact": 6,
+        "name_fuzzy": 0
+      },
+      "ambiguous_matches": 0,
+      "strengthened_links": 0,
+      "alerts_created": 0,
+      "total_globals": 148,
+      "files": [
+        "global_entities.json",
+        "global_entity_links.json",
+        "cross_case_alerts.json"
+      ]
+    },
+    "decision": ""
+  }
+]

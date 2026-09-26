@@ -1,0 +1,24 @@
+{
+  "total_nodes": 190,
+  "total_edges": 172,
+  "node_types": {
+    "Location": 35,
+    "Person": 17,
+    "Organization": 17,
+    "Phone": 17,
+    "Amount": 24,
+    "Date": 52,
+    "BankAccount": 11,
+    "Device": 3,
+    "Case": 14
+  },
+  "edge_types": {
+    "Transaction": 15,
+    "CoOccurrence": 10,
+    "PhysicalProximity": 33,
+    "Call": 15,
+    "Ownership": 8,
+    "Communication": 88,
+    "FamilyOrAssociate": 3
+  }
+}

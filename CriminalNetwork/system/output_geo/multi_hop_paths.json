@@ -1,0 +1,292 @@
+[
+  {
+    "source_id": "RES_f90015a9027df8e3",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "path": [
+      "RES_f90015a9027df8e3",
+      "RES_0a5f31f39f5d619c",
+      "RES_e41d5c9970d2fc45"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "MESSED",
+      "MESSED"
+    ],
+    "path_confidence": 0.6184,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_0a5f31f39f5d619c",
+    "path": [
+      "RES_6be157c3c6f87a4d",
+      "RES_06b3f3578a482b62",
+      "RES_3e438bacdb6bd7b1",
+      "RES_0a5f31f39f5d619c"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "path_confidence": 0.4584,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_f90015a9027df8e3",
+    "path": [
+      "RES_6be157c3c6f87a4d",
+      "RES_06b3f3578a482b62",
+      "RES_f90015a9027df8e3"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "path_confidence": 0.4164,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_e95c77c1e77f9515",
+    "target_id": "RES_f90015a9027df8e3",
+    "path": [
+      "RES_e95c77c1e77f9515",
+      "RES_2e6dcc0d467c0fff",
+      "RES_f90015a9027df8e3"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "ASSOCIATED_WITH",
+      "VISITED"
+    ],
+    "path_confidence": 0.4164,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_e95c77c1e77f9515",
+    "path": [
+      "RES_0a5f31f39f5d619c",
+      "RES_e41d5c9970d2fc45",
+      "RES_e95c77c1e77f9515"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "MESSED",
+      "SUSPECT_OF"
+    ],
+    "path_confidence": 0.3712,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_3085e19cabdc5b3d",
+    "path": [
+      "RES_0a5f31f39f5d619c",
+      "RES_e41d5c9970d2fc45",
+      "RES_3085e19cabdc5b3d"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "MESSED",
+      "SUSPECT_OF"
+    ],
+    "path_confidence": 0.3712,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_58d3eec5a549b5f5",
+    "path": [
+      "RES_3085e19cabdc5b3d",
+      "RES_e41d5c9970d2fc45",
+      "RES_58d3eec5a549b5f5"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "SUSPECT_OF",
+      "VICTIM_OF"
+    ],
+    "path_confidence": 0.3712,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "path": [
+      "RES_50fa850b2b1ec9e6",
+      "RES_58d3eec5a549b5f5",
+      "RES_e41d5c9970d2fc45"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "TRANSFERRED_TO",
+      "VICTIM_OF"
+    ],
+    "path_confidence": 0.3712,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "path": [
+      "RES_6be157c3c6f87a4d",
+      "RES_06b3f3578a482b62",
+      "RES_a43997b49dba49ba",
+      "RES_e41d5c9970d2fc45"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "OWNS_PHONE"
+    ],
+    "path_confidence": 0.3712,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_50fa850b2b1ec9e6",
+    "path": [
+      "RES_6be157c3c6f87a4d",
+      "RES_06b3f3578a482b62",
+      "RES_ce4c1813fe797d7d",
+      "RES_50fa850b2b1ec9e6"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "path_confidence": 0.368,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_e95c77c1e77f9515",
+    "path": [
+      "RES_6be157c3c6f87a4d",
+      "RES_06b3f3578a482b62",
+      "RES_9768897216059a61",
+      "RES_e95c77c1e77f9515"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "OWNS_PHONE"
+    ],
+    "path_confidence": 0.35,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_f90015a9027df8e3",
+    "target_id": "RES_3085e19cabdc5b3d",
+    "path": [
+      "RES_f90015a9027df8e3",
+      "RES_0a5f31f39f5d619c",
+      "RES_e41d5c9970d2fc45",
+      "RES_3085e19cabdc5b3d"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "MESSED",
+      "MESSED",
+      "SUSPECT_OF"
+    ],
+    "path_confidence": 0.3092,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_e95c77c1e77f9515",
+    "path": [
+      "RES_3085e19cabdc5b3d",
+      "RES_e41d5c9970d2fc45",
+      "RES_e95c77c1e77f9515"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "SUSPECT_OF",
+      "SUSPECT_OF"
+    ],
+    "path_confidence": 0.25,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e95c77c1e77f9515",
+    "path": [
+      "RES_50fa850b2b1ec9e6",
+      "RES_58d3eec5a549b5f5",
+      "RES_e95c77c1e77f9515"
+    ],
+    "hops": 2,
+    "relationship_types": [
+      "TRANSFERRED_TO",
+      "ASSOCIATED_WITH"
+    ],
+    "path_confidence": 0.25,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_58d3eec5a549b5f5",
+    "target_id": "RES_6be157c3c6f87a4d",
+    "path": [
+      "RES_58d3eec5a549b5f5",
+      "RES_2e6dcc0d467c0fff",
+      "RES_06b3f3578a482b62",
+      "RES_6be157c3c6f87a4d"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "VISITED",
+      "VISITED",
+      "CALLED"
+    ],
+    "path_confidence": 0.2232,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_50fa850b2b1ec9e6",
+    "path": [
+      "RES_3085e19cabdc5b3d",
+      "RES_e41d5c9970d2fc45",
+      "RES_58d3eec5a549b5f5",
+      "RES_50fa850b2b1ec9e6"
+    ],
+    "hops": 3,
+    "relationship_types": [
+      "SUSPECT_OF",
+      "VICTIM_OF",
+      "TRANSFERRED_TO"
+    ],
+    "path_confidence": 0.1856,
+    "epistemic_status": "inference"
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_6be157c3c6f87a4d",
+    "path": [
+      "RES_3085e19cabdc5b3d",
+      "RES_e41d5c9970d2fc45",
+      "RES_a43997b49dba49ba",
+      "RES_06b3f3578a482b62",
+      "RES_6be157c3c6f87a4d"
+    ],
+    "hops": 4,
+    "relationship_types": [
+      "SUSPECT_OF",
+      "OWNS_PHONE",
+      "CALLED",
+      "CALLED"
+    ],
+    "path_confidence": 0.1856,
+    "epistemic_status": "inference"
+  }
+]

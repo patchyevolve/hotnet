@@ -1,0 +1,6 @@
+SYNTHETIC WITNESS STATEMENT — MODEL VERIFICATION FIXTURE, NOT A REAL CASE RECORD.
+
+Example Witness states that Example Person called the fictional number 0000000000
+on 2025-01-01, then met Example Contact at Example Location. This made-up note
+exists only to check narrative extraction, entity validation, and the Stage 10
+critic path. It contains no real names, phone numbers, or investigative data.

@@ -1,0 +1,289 @@
+[
+  {
+    "hex_id": "GRID_28.566_77.243",
+    "latitude": 28.5660924,
+    "longitude": 77.2432851,
+    "location_names": [
+      "Amit Sharma",
+      "Lajpat Nagar Part II",
+      "Lajpat Nagar Part II, New Delhi",
+      "Rakesh Kumar"
+    ],
+    "evidence_count": 2,
+    "suspect_count": 2,
+    "risk_score": 0.8,
+    "risk_band": "RED",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.569_77.251",
+    "latitude": 28.5685108,
+    "longitude": 77.2513847,
+    "location_names": [
+      "Nehru Nagar",
+      "\u0928\u0947\u0939\u0930\u0942 \u0928\u0917\u0930"
+    ],
+    "evidence_count": 3,
+    "suspect_count": 0,
+    "risk_score": 0.6,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.653_77.189",
+    "latitude": 28.6529982,
+    "longitude": 77.1890227,
+    "location_names": [
+      "Karol Bagh",
+      "Karol Bagh, Delhi"
+    ],
+    "evidence_count": 3,
+    "suspect_count": 0,
+    "risk_score": 0.6,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.632_77.219",
+    "latitude": 28.6317695,
+    "longitude": 77.2193804,
+    "location_names": [
+      "Connaught Place",
+      "Connaught Place, Delhi"
+    ],
+    "evidence_count": 2,
+    "suspect_count": 0,
+    "risk_score": 0.4,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.617_77.281",
+    "latitude": 28.617251,
+    "longitude": 77.2805705,
+    "location_names": [
+      "Noida",
+      "Noida Sector 62 Gate"
+    ],
+    "evidence_count": 2,
+    "suspect_count": 0,
+    "risk_score": 0.4,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.644_77.189",
+    "latitude": 28.6441988,
+    "longitude": 77.188947,
+    "location_names": [
+      "Karol Bagh Metro station"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.617_77.374",
+    "latitude": 28.6169861,
+    "longitude": 77.3735885,
+    "location_names": [
+      "Noida Sector 62 residence"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.625_77.296",
+    "latitude": 28.6252148,
+    "longitude": 77.2960034,
+    "location_names": [
+      "East Delhi"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.71_77.131",
+    "latitude": 28.7096571,
+    "longitude": 77.1312954,
+    "location_names": [
+      "Rose Apartments"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.614_77.209",
+    "latitude": 28.6138954,
+    "longitude": 77.2090057,
+    "location_names": [
+      "New Delhi"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.592_77.041",
+    "latitude": 28.5922362,
+    "longitude": 77.0407315,
+    "location_names": [
+      "Dwarka Sector 12"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.603_77.057",
+    "latitude": 28.602812,
+    "longitude": 77.0574006,
+    "location_names": [
+      "Dwarka Sector 12 Main Gate"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_19.969_73.825",
+    "latitude": 19.9685224,
+    "longitude": 73.8253308,
+    "location_names": [
+      "Nehru Nagar Police Station"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.537_77.22",
+    "latitude": 28.5373428,
+    "longitude": 77.2203838,
+    "location_names": [
+      "Noida Phase 2"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.607_77.036",
+    "latitude": 28.6065593,
+    "longitude": 77.0361787,
+    "location_names": [
+      "Dwarka Sector 12 residence"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_14.467_78.85",
+    "latitude": 14.4671464,
+    "longitude": 78.8498348,
+    "location_names": [
+      "RK Telecom"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.666_77.217",
+    "latitude": 28.6664535,
+    "longitude": 77.2169781,
+    "location_names": [
+      "Delhi"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.542_77.129",
+    "latitude": 28.5420264,
+    "longitude": 77.1292668,
+    "location_names": [
+      "HDFC"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_19.116_72.854",
+    "latitude": 19.1158835,
+    "longitude": 72.854202,
+    "location_names": [
+      "Andheri East"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "hex_id": "GRID_28.598_77.052",
+    "latitude": 28.598311,
+    "longitude": 77.0523993,
+    "location_names": [
+      "Mansarovar Sector 5"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260926_164752"
+  }
+]

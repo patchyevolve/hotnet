@@ -1,0 +1,68 @@
+[
+  {
+    "id": "prov_EDGE_f1e54c3d4a9a2cc7",
+    "node_id": "EDGE_f1e54c3d4a9a2cc7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f1e54c3d4a9a2cc7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_35153718c05cf69d",
+    "node_id": "EDGE_35153718c05cf69d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_35153718c05cf69d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_40ad716478966b3c",
+    "node_id": "EDGE_40ad716478966b3c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_40ad716478966b3c"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  }
+]

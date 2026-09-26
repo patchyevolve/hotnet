@@ -1,0 +1,30 @@
+INVESTIGATION SUMMARY (DERIVED FROM FIR 123/2024)
+Prepared by: SI Vikram Rathore
+Date: 20/03/2024
+
+Summary of Investigation:
+Based on FIR 123/2024 filed by Meena Devi, the following facts have been established:
+
+1. On 12 March 2024, Meena Devi received a call from an unknown number claiming to be from SBI Customer Care
+2. On 13 March 2024, a second call was received and Meena Devi shared her account details and OTP
+3. On 14 March 2024, three bank transfers totaling Rs. 15,00,000 were made from her account
+4. The transfers were made to accounts ending in 1234, 7891, and 5678
+
+CDR Analysis:
+- Phone records show calls from Rakesh Kumar (9876543210) to Meena Devi (9876543213) on 12, 13, and 14 March
+- Calls were made from Karol Bagh Tower 1 and Nehru Nagar Tower 2
+- Duration of calls ranged from 5 to 10 minutes
+
+Bank Analysis:
+- Rs. 5,00,000 transferred to HDFC account ending 1234 (Suresh Kumar)
+- Rs. 5,00,000 transferred to PNB account ending 7891 (Suresh Kumar)
+- Rs. 5,00,000 transferred to BoB account ending 5678 (Amit Sharma)
+
+CCTV Analysis:
+- Male persons observed near Meena Devi's residence on 12, 13, and 14 March
+- Witness Rajesh Kumar corroborates CCTV observations
+
+Conclusion:
+Based on the evidence from FIR 123/2024, CDR analysis, bank records, and CCTV footage, the fraud appears to have been orchestrated by Rakesh Kumar with assistance from Suresh Kumar and Amit Sharma.
+
+Note: This summary is derived from the original FIR and should not be treated as independent evidence.

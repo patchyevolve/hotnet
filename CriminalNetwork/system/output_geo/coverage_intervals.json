@@ -1,0 +1,200 @@
+[
+  {
+    "entity_id": "DATE_6cbc919cac4341c3",
+    "source_type": "report",
+    "start": "2024-03-15",
+    "end": "2024-03-15",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "PERSON_23492e71991bc7b9",
+    "source_type": "mixed",
+    "start": "2024-03-12",
+    "end": "2024-03-12",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DEVICE_a1b575e0d3dabdc9",
+    "source_type": "device",
+    "start": "2024-03-23",
+    "end": "2024-03-23",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_9d2551e3464eafeb",
+    "source_type": "mixed",
+    "start": "2024-03-10",
+    "end": "2024-03-10",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_faae857a7eacc0b2",
+    "source_type": "mixed",
+    "start": "2024-03-12",
+    "end": "2024-03-12",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_1fb2ec07350f3220",
+    "source_type": "mixed",
+    "start": "2024-03-14",
+    "end": "2024-03-14",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_450ffb171a8178c2",
+    "source_type": "mixed",
+    "start": "2024-03-16",
+    "end": "2024-03-16",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "CASE_c1db9559568c7381",
+    "source_type": "mixed",
+    "start": "2022-01-01",
+    "end": "2022-08-15",
+    "status": "sparse",
+    "coverage_ratio": 0.01,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "CASE_668ff83b2fc766f5",
+    "source_type": "mixed",
+    "start": "2023-01-01",
+    "end": "2023-02-20",
+    "status": "sparse",
+    "coverage_ratio": 0.04,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "CASE_dea3a7e853e97f68",
+    "source_type": "mixed",
+    "start": "2023-01-01",
+    "end": "2023-06-10",
+    "status": "sparse",
+    "coverage_ratio": 0.01,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "CASE_2736af5de68ff0d8",
+    "source_type": "mixed",
+    "start": "2023-01-01",
+    "end": "2023-11-05",
+    "status": "sparse",
+    "coverage_ratio": 0.01,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DATE_46fbd27c612b07eb",
+    "source_type": "report",
+    "start": "2024-03-22",
+    "end": "2024-03-22",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DEVICE_5c27bcb2808812ad",
+    "source_type": "device",
+    "start": "2024-03-29",
+    "end": "2024-03-29",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_65837e28f46c7807",
+    "source_type": "mixed",
+    "start": "2024-03-08",
+    "end": "2024-03-08",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_32854768a91920ae",
+    "source_type": "mixed",
+    "start": "2024-03-12",
+    "end": "2024-03-12",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_59176d5a6c79817f",
+    "source_type": "mixed",
+    "start": "2024-03-15",
+    "end": "2026-09-26",
+    "status": "sparse",
+    "coverage_ratio": 0.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DATE_89a517bea81aaa1b",
+    "source_type": "report",
+    "start": "2024-03-25",
+    "end": "2024-03-25",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DATE_13677449972f3b01",
+    "source_type": "report",
+    "start": "2024-03-28",
+    "end": "2024-03-28",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "DATE_c2b111204ee5faf7",
+    "source_type": "report",
+    "start": "2024-03-20",
+    "end": "2024-03-20",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_ea8e9a63f5cf48c0",
+    "source_type": "mixed",
+    "start": "2024-03-10",
+    "end": "2026-09-26",
+    "status": "sparse",
+    "coverage_ratio": 0.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_491c8a5eed380526",
+    "source_type": "mixed",
+    "start": "2024-03-14",
+    "end": "2024-03-14",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "entity_id": "POST_087631b96cd7e0a5",
+    "source_type": "mixed",
+    "start": "2024-03-16",
+    "end": "2024-03-16",
+    "status": "observed",
+    "coverage_ratio": 1.0,
+    "run_id": "run_20260926_164752"
+  }
+]

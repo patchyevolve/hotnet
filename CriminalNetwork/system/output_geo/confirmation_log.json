@@ -1,0 +1,228 @@
+{
+  "pending": [
+    {
+      "query_entity_id": "ORGANIZATION_fce0b15c7c195529",
+      "query_name": "Bank of Baroda",
+      "candidates": [
+        {
+          "entity_id": "ORGANIZATION_fce0b15c7c195529",
+          "name": "Bank of Baroda",
+          "confidence": 0.76,
+          "evidence_count": 1,
+          "evidence_files": [
+            "01_FIR.txt"
+          ],
+          "signals": {
+            "name_similarity": 0.85,
+            "shared_attributes": 0.0,
+            "context_alignment": 0.0,
+            "contradictions": 1.0,
+            "cultural_knowledge": 0.0,
+            "method": "llm"
+          }
+        },
+        {
+          "entity_id": "ORG_058be09de37a18d4",
+          "name": "BoB",
+          "confidence": 0.76,
+          "evidence_count": 1,
+          "evidence_files": [
+            "29_Investigator_Summary.txt"
+          ],
+          "signals": {
+            "name_similarity": 0.85,
+            "shared_attributes": 0.0,
+            "context_alignment": 0.0,
+            "contradictions": 1.0,
+            "cultural_knowledge": 0.0,
+            "method": "llm"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832531"
+    },
+    {
+      "query_entity_id": "PERSON_b66694c77645402b",
+      "query_name": "Meena Devi",
+      "candidates": [
+        {
+          "entity_id": "PERSON_b66694c77645402b",
+          "name": "Meena Devi",
+          "confidence": 0.8995,
+          "evidence_count": 1,
+          "evidence_files": [
+            "01_FIR.txt"
+          ],
+          "signals": {
+            "rule_based": 0.8995,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_bdae71cfb51d493f",
+          "name": "Meena Ji",
+          "confidence": 0.8995,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "rule_based": 0.8995,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832629"
+    },
+    {
+      "query_entity_id": "PERSON_c63ac5eb1535a215",
+      "query_name": "Suresh Bhai",
+      "candidates": [
+        {
+          "entity_id": "PERSON_c63ac5eb1535a215",
+          "name": "Suresh Bhai",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "name_similarity": 0.9,
+            "shared_attributes": 0.5,
+            "context_alignment": 0.4,
+            "contradictions": 1.0,
+            "cultural_knowledge": 0.95,
+            "method": "llm"
+          }
+        },
+        {
+          "entity_id": "PERSON_5e95ee9f0386dda2",
+          "name": "suresh_kumar_01",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [],
+          "signals": {
+            "name_similarity": 0.9,
+            "shared_attributes": 0.5,
+            "context_alignment": 0.4,
+            "contradictions": 1.0,
+            "cultural_knowledge": 0.95,
+            "method": "llm"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832693"
+    },
+    {
+      "query_entity_id": "PERSON_bdae71cfb51d493f",
+      "query_name": "Meena Ji",
+      "candidates": [
+        {
+          "entity_id": "PERSON_bdae71cfb51d493f",
+          "name": "Meena Ji",
+          "confidence": 0.889,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "rule_based": 0.889,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "LOCATION_b66694c77645402b",
+          "name": "Meena Devi",
+          "confidence": 0.889,
+          "evidence_count": 1,
+          "evidence_files": [
+            "29_Investigator_Summary.txt"
+          ],
+          "signals": {
+            "rule_based": 0.889,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832705"
+    },
+    {
+      "query_entity_id": "PERSON_b66694c77645402b",
+      "query_name": "Meena Devi",
+      "candidates": [
+        {
+          "entity_id": "PERSON_b66694c77645402b",
+          "name": "Meena Devi",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [
+            "01_FIR.txt"
+          ],
+          "signals": {
+            "rule_based": 0.85,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_4d04f9016628213c",
+          "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [
+            "36_Hindi_Witness_Statement.txt"
+          ],
+          "signals": {
+            "rule_based": 0.85,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832963"
+    },
+    {
+      "query_entity_id": "PERSON_bdae71cfb51d493f",
+      "query_name": "Meena Ji",
+      "candidates": [
+        {
+          "entity_id": "PERSON_bdae71cfb51d493f",
+          "name": "Meena Ji",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [
+            "08_Device_Rakesh.json"
+          ],
+          "signals": {
+            "rule_based": 0.85,
+            "method": "rule_based"
+          }
+        },
+        {
+          "entity_id": "PERSON_4d04f9016628213c",
+          "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+          "confidence": 0.85,
+          "evidence_count": 1,
+          "evidence_files": [
+            "36_Hindi_Witness_Statement.txt"
+          ],
+          "signals": {
+            "rule_based": 0.85,
+            "method": "rule_based"
+          }
+        }
+      ],
+      "status": "review_required",
+      "created_at": "2026-09-26T16:50:31.832974"
+    }
+  ],
+  "confirmed": [],
+  "rejected": [],
+  "total_pending": 6,
+  "total_confirmed": 0,
+  "total_rejected": 0,
+  "saved_at": "2026-09-26T16:50:31.848393"
+}

@@ -1,0 +1,49 @@
+{
+  "platform": "Instagram",
+  "username": "meena_devi_2024",
+  "profile": {
+    "name": "Meena Devi",
+    "bio": "Home maker | Delhi",
+    "followers": 45,
+    "following": 120,
+    "posts_count": 12,
+    "account_created": "2024-03-01",
+    "verified": false
+  },
+  "posts": [
+    {
+      "post_id": "POST_M001",
+      "date": "2024-03-10",
+      "caption": "Beautiful morning at Lajpat Nagar #delhi #morning",
+      "location": "Lajpat Nagar, Delhi",
+      "likes": 8,
+      "comments": 2
+    },
+    {
+      "post_id": "POST_M002",
+      "date": "2024-03-14",
+      "caption": "Feeling stressed today #life",
+      "location": "",
+      "likes": 15,
+      "comments": 3
+    },
+    {
+      "post_id": "POST_M003",
+      "date": "2024-03-16",
+      "caption": "Thankful to my neighbors for their support #grateful",
+      "location": "Lajpat Nagar, Delhi",
+      "likes": 25,
+      "comments": 8
+    }
+  ],
+  "direct_messages": [
+    {
+      "contact": "unknown_user_2847",
+      "messages": [
+        {"from": "unknown_user_2847", "text": "Meena ji, aapka bank account safe hai kya?", "date": "2024-03-13"},
+        {"from": "meena_devi_2024", "text": "Haan, kyun kya hua?", "date": "2024-03-13"},
+        {"from": "unknown_user_2847", "text": "Kuch nahi, just checking", "date": "2024-03-13"}
+      ]
+    }
+  ]
+}

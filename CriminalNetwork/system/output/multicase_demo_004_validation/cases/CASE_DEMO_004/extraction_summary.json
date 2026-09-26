@@ -1,0 +1,224 @@
+{
+  "run_id": "run_20260926_011743",
+  "pipeline_run": {
+    "run_id": "run_20260926_011743",
+    "case_id": "CASE_DEMO_004",
+    "input_snapshot": [
+      "01_FIR.txt",
+      "02_WITNESS_EVIDENCE.txt",
+      "03_CDR.csv"
+    ],
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "pipeline_version": "v1.0",
+    "model_versions": {},
+    "policy_version": "policy_v1.0",
+    "start_time": "2026-09-26T01:17:43.988285",
+    "end_time": "2026-09-26T01:18:00.308839",
+    "parent_run_id": null,
+    "trigger": "multi_fir",
+    "status": "completed"
+  },
+  "extraction_summary": {
+    "total_entities": 10,
+    "total_relations": 4,
+    "entity_types": {
+      "PHONE": 2,
+      "PERSON": 1,
+      "AMOUNT": 1,
+      "DATE": 2,
+      "LOCATION": 2,
+      "DOCUMENT": 1,
+      "ORGANIZATION": 1
+    },
+    "relation_types": {
+      "VISITED": 2,
+      "CALLED": 2
+    },
+    "files_processed": 3
+  },
+  "ingestion_summary": {
+    "total_files": 3,
+    "total_records": 2,
+    "file_types": {
+      "text": 2,
+      "tabular": 1
+    },
+    "source_types": {
+      "fir": 1,
+      "text": 1,
+      "cdr": 1
+    },
+    "dependency_groups": 0,
+    "integrity_records": 3,
+    "data_quality": {
+      "avg_quality_score": 0.983,
+      "min_quality_score": 0.95,
+      "files_assessed": 3
+    },
+    "adversarial": {
+      "total_checked": 3,
+      "suspicious_count": 0,
+      "suspicious_files": []
+    },
+    "run_id": "run_20260926_011743",
+    "files": [
+      {
+        "name": "01_FIR.txt",
+        "type": "text",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "01_FIR.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 692B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_011743"
+        }
+      },
+      {
+        "name": "02_WITNESS_EVIDENCE.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "02_WITNESS_EVIDENCE.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_011743"
+        }
+      },
+      {
+        "name": "03_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 2,
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 0.95,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "03_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 255B < 500B for cdr"
+          ],
+          "run_id": "run_20260926_011743"
+        }
+      }
+    ]
+  },
+  "extraction_log": [
+    {
+      "file_name": "01_FIR.txt",
+      "entities_found": 9,
+      "relations_found": 0,
+      "new_entities_added": 6,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "02_WITNESS_EVIDENCE.txt",
+      "entities_found": 6,
+      "relations_found": 0,
+      "new_entities_added": 2,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "03_CDR.csv",
+      "entities_found": 3,
+      "relations_found": 4,
+      "new_entities_added": 2,
+      "new_relations_added": 4
+    }
+  ],
+  "export_time": "2026-09-26T01:18:00.309080",
+  "dependency_groups": [],
+  "evidence_integrity": [
+    {
+      "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+      "original_filename": "01_FIR.txt",
+      "ingestion_time": "2026-09-26T01:17:44.030659",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T01:17:44.030672",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+      "original_filename": "02_WITNESS_EVIDENCE.txt",
+      "ingestion_time": "2026-09-26T01:17:46.449522",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T01:17:46.449535",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "original_filename": "03_CDR.csv",
+      "ingestion_time": "2026-09-26T01:17:49.383655",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T01:17:49.383666",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    }
+  ]
+}

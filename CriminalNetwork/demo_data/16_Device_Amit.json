@@ -1,0 +1,45 @@
+{
+  "device_info": {
+    "brand": "Xiaomi",
+    "model": "Redmi Note 12",
+    "imei": "862345678901234",
+    "serial": "XM8901YYYYY",
+    "os_version": "Android 12",
+    "device_id": "AS_PHONE_01",
+    "extraction_date": "2024-03-29",
+    "extraction_tool": "Cellebrite UFED"
+  },
+  "contacts": [
+    {"name": "Rakesh Bhai", "phone": "9876543210", "relation": "associate"},
+    {"name": "Suresh", "phone": "9876543211", "relation": "friend"},
+    {"name": "Neeraj", "phone": "9876543215", "relation": "friend"},
+    {"name": "Pooja", "phone": "9876543216", "relation": "family"},
+    {"name": "Bhai", "phone": "9876543210", "relation": "alias"},
+    {"name": "Boss", "phone": "9876543220", "relation": "unknown"},
+    {"name": "Shop - Lajpat Nagar", "phone": "01129876543", "relation": "business"},
+    {"name": "Bank of Baroda", "phone": "18001021234", "relation": "bank"}
+  ],
+  "whatsapp_chats": [
+    {
+      "contact": "Rakesh Bhai",
+      "messages": [
+        {"from": "9876543212", "text": "Rakesh bhai, Suresh ka number do", "date": "2024-03-14", "time": "16:50:00"},
+        {"from": "9876543210", "text": "9876543211 hai uska", "date": "2024-03-14", "time": "16:52:15"},
+        {"from": "9876543212", "text": "Thanks bhai", "date": "2024-03-14", "time": "16:53:00"}
+      ]
+    },
+    {
+      "contact": "Suresh",
+      "messages": [
+        {"from": "9876543212", "text": "Suresh bhai, Rakesh ji ne bola hai", "date": "2024-03-14", "time": "17:00:00"},
+        {"from": "9876543211", "text": "Haan batao kya baat hai", "date": "2024-03-14", "time": "17:05:22"},
+        {"from": "9876543212", "text": "Kal milna hai Karol Bagh mein dopahar ko", "date": "2024-03-14", "time": "17:10:00"},
+        {"from": "9876543211", "text": "Theek hai, 2 baje aa jaunga", "date": "2024-03-14", "time": "17:15:33"}
+      ]
+    }
+  ],
+  "photos": [
+    {"filename": "IMG_20240316_101522.jpg", "exif_location": "Noida Sector 62"},
+    {"filename": "IMG_20240318_143055.jpg", "exif_location": "Karol Bagh, Delhi"}
+  ]
+}

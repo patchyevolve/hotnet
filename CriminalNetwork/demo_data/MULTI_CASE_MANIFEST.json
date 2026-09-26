@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "description": "Synthetic cross-jurisdiction demo: each case is processed in isolation; Stage 11 links shared identity signals.",
+  "cases": [
+    {
+      "case_id": "CASE_DEMO_001",
+      "manifest": "FIR_MANIFEST.json",
+      "description": "Original 2024 Delhi financial fraud investigation"
+    },
+    {
+      "case_id": "CASE_DEMO_002",
+      "manifest": "multicase/CASE_DEMO_002/FIR_MANIFEST.json",
+      "description": "Synthetic Mumbai report with independently collected identity signals"
+    },
+    {
+      "case_id": "CASE_DEMO_003",
+      "manifest": "multicase/CASE_DEMO_003/FIR_MANIFEST.json",
+      "description": "Synthetic Jaipur report with an identity signal shared with the Delhi case"
+    },
+    {
+      "case_id": "CASE_DEMO_004",
+      "manifest": "multicase/CASE_DEMO_004/FIR_MANIFEST.json",
+      "description": "Synthetic Hyderabad report for single-case execution and workspace-wide identity matching"
+    }
+  ]
+}

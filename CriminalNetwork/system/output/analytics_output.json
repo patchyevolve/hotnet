@@ -1,0 +1,6257 @@
+{
+  "run_id": "run_20260923_001317",
+  "timestamp": "2026-09-23T00:13:19.724233",
+  "graph_nodes_analyzed": 179,
+  "graph_edges_analyzed": 86,
+  "connected_components": 135,
+  "largest_component_size": 37,
+  "centrality_scores": [
+    {
+      "node_id": "RES_7619ee8cea49187f",
+      "node_type": "phone",
+      "name": "9876543210",
+      "degree_centrality": 0.073034,
+      "betweenness_centrality": 0.009923,
+      "closeness_centrality": 0.553846,
+      "eigenvector_centrality": 0.432082,
+      "pagerank": 0.083333,
+      "degree": 13,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_75110ab02c0160f9",
+      "node_type": "person",
+      "name": "Amit Sharma",
+      "degree_centrality": 0.061798,
+      "betweenness_centrality": 0.012128,
+      "closeness_centrality": 0.553846,
+      "eigenvector_centrality": 0.279221,
+      "pagerank": 0.070513,
+      "degree": 11,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_342bb7cffefbd624",
+      "node_type": "location",
+      "name": "Karol Bagh Main Market Camera 5",
+      "degree_centrality": 0.050562,
+      "betweenness_centrality": 0.007957,
+      "closeness_centrality": 0.493151,
+      "eigenvector_centrality": 0.297371,
+      "pagerank": 0.057692,
+      "degree": 9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a353fb4092c96d33",
+      "node_type": "phone",
+      "name": "9876543213",
+      "degree_centrality": 0.050562,
+      "betweenness_centrality": 0.002395,
+      "closeness_centrality": 0.461538,
+      "eigenvector_centrality": 0.345452,
+      "pagerank": 0.057692,
+      "degree": 9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_23492e71991bc7b9",
+      "node_type": "person",
+      "name": "Rakesh Kumar",
+      "degree_centrality": 0.050562,
+      "betweenness_centrality": 0.010995,
+      "closeness_centrality": 0.537313,
+      "eigenvector_centrality": 0.244242,
+      "pagerank": 0.057692,
+      "degree": 9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_2d27b53729507310",
+      "node_type": "location",
+      "name": "Lajpat Nagar Part II Camera 1",
+      "degree_centrality": 0.039326,
+      "betweenness_centrality": 0.00505,
+      "closeness_centrality": 0.467532,
+      "eigenvector_centrality": 0.231382,
+      "pagerank": 0.044872,
+      "degree": 7,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_5e95ee9f0386dda2",
+      "node_type": "person",
+      "name": "suresh_kumar_01",
+      "degree_centrality": 0.039326,
+      "betweenness_centrality": 0.006499,
+      "closeness_centrality": 0.48,
+      "eigenvector_centrality": 0.206192,
+      "pagerank": 0.044872,
+      "degree": 7,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e26019ce48adebef",
+      "node_type": "phone",
+      "name": "9876543211",
+      "degree_centrality": 0.039326,
+      "betweenness_centrality": 0.001357,
+      "closeness_centrality": 0.45,
+      "eigenvector_centrality": 0.298555,
+      "pagerank": 0.044872,
+      "degree": 7,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8a8023e9f7760676",
+      "node_type": "phone",
+      "name": "9876543212",
+      "degree_centrality": 0.039326,
+      "betweenness_centrality": 0.002804,
+      "closeness_centrality": 0.439024,
+      "eigenvector_centrality": 0.27162,
+      "pagerank": 0.044872,
+      "degree": 7,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6f827effaccad628",
+      "node_type": "location",
+      "name": "Dwarka Sector 12 Main Gate Camera",
+      "degree_centrality": 0.033708,
+      "betweenness_centrality": 0.00252,
+      "closeness_centrality": 0.433735,
+      "eigenvector_centrality": 0.252562,
+      "pagerank": 0.038462,
+      "degree": 6,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_727777a1420ee72a",
+      "node_type": "location",
+      "name": "Connaught Place Tower 2",
+      "degree_centrality": 0.022472,
+      "betweenness_centrality": 0.002421,
+      "closeness_centrality": 0.418605,
+      "eigenvector_centrality": 0.16405,
+      "pagerank": 0.025641,
+      "degree": 4,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a8d3463ec398ed33",
+      "node_type": "account",
+      "name": "Account 1234",
+      "degree_centrality": 0.022472,
+      "betweenness_centrality": 0.002792,
+      "closeness_centrality": 0.378947,
+      "eigenvector_centrality": 0.04879,
+      "pagerank": 0.025641,
+      "degree": 4,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8d4ea81fbbc86477",
+      "node_type": "phone",
+      "name": "01126543210",
+      "degree_centrality": 0.022472,
+      "betweenness_centrality": 0.002222,
+      "closeness_centrality": 0.409091,
+      "eigenvector_centrality": 0.166867,
+      "pagerank": 0.025641,
+      "degree": 4,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_236180e1a6a63d8a",
+      "node_type": "account",
+      "name": "Account 2345",
+      "degree_centrality": 0.022472,
+      "betweenness_centrality": 0.000381,
+      "closeness_centrality": 0.324324,
+      "eigenvector_centrality": 0.027192,
+      "pagerank": 0.025641,
+      "degree": 4,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_438561c65c9e4353",
+      "node_type": "location",
+      "name": "Nehru Nagar Tower 2",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.367347,
+      "eigenvector_centrality": 0.163207,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ef5fb01e7fd16dee",
+      "node_type": "phone",
+      "name": "9876543214",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 9.5e-05,
+      "closeness_centrality": 0.4,
+      "eigenvector_centrality": 0.141822,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6e50992230df4a2d",
+      "node_type": "account",
+      "name": "Account 9876",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 0.00059,
+      "closeness_centrality": 0.352941,
+      "eigenvector_centrality": 0.042803,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_94049de73f3d3a19",
+      "node_type": "event",
+      "name": "Post: New beginnings at Karol Bagh office #business #del",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.339623,
+      "eigenvector_centrality": 0.064742,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_502123dcbcdc704e",
+      "node_type": "event",
+      "name": "Post: New stock arrived at RK Telecom #mobile #shop",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.339623,
+      "eigenvector_centrality": 0.064742,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d88fe4c9fd7f93e5",
+      "node_type": "event",
+      "name": "Post: Busy day at the shop #business",
+      "degree_centrality": 0.016854,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.339623,
+      "eigenvector_centrality": 0.064742,
+      "pagerank": 0.019231,
+      "degree": 3,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ec4168bca6487484",
+      "node_type": "account",
+      "name": "Account 5678",
+      "degree_centrality": 0.011236,
+      "betweenness_centrality": 0.000847,
+      "closeness_centrality": 0.382979,
+      "eigenvector_centrality": 0.046477,
+      "pagerank": 0.012821,
+      "degree": 2,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3d649a61fbc63878",
+      "node_type": "phone",
+      "name": "9876543220",
+      "degree_centrality": 0.011236,
+      "betweenness_centrality": 6.3e-05,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.012821,
+      "degree": 2,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_bc4640447aeab94a",
+      "node_type": "account",
+      "name": "Account 4567",
+      "degree_centrality": 0.011236,
+      "betweenness_centrality": 0.000377,
+      "closeness_centrality": 0.367347,
+      "eigenvector_centrality": 0.041173,
+      "pagerank": 0.012821,
+      "degree": 2,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_83e0fa9f1e90d610",
+      "node_type": "event",
+      "name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+      "degree_centrality": 0.011236,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.324324,
+      "eigenvector_centrality": 0.041369,
+      "pagerank": 0.012821,
+      "degree": 2,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_5d395ea412ab918d",
+      "node_type": "event",
+      "name": "Post: Thankful to my neighbors for their support #gratef",
+      "degree_centrality": 0.011236,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.324324,
+      "eigenvector_centrality": 0.041369,
+      "pagerank": 0.012821,
+      "degree": 2,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_fce0b15c7c195529",
+      "node_type": "organization",
+      "name": "Bank of Baroda",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_475f3f364856ea70",
+      "node_type": "person",
+      "name": "Shop - Lajpat Nagar",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_485bdeb3c76752d4",
+      "node_type": "organization",
+      "name": "RK Telecom Office",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.292683,
+      "eigenvector_centrality": 0.025308,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_b7753960e19a6559",
+      "node_type": "account",
+      "name": "Account 1235",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.276923,
+      "eigenvector_centrality": 0.007402,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_105a112c81ce60e6",
+      "node_type": "person",
+      "name": "Amit",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.307692,
+      "eigenvector_centrality": 0.041195,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d71ab13e9efcf04e",
+      "node_type": "person",
+      "name": "Bhai Sahab",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.666667,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_9fbdb74aacb6f47f",
+      "node_type": "phone",
+      "name": "9812345678",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4b8a1601852a8525",
+      "node_type": "organization",
+      "name": "Rajesh Electronics",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a4e00d7e6aa82111",
+      "node_type": "phone",
+      "name": "198",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7fd1eb60e433a497",
+      "node_type": "organization",
+      "name": "Airtel Customer Care",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ab9b67613bd4a92c",
+      "node_type": "event",
+      "name": "Post: Meeting with partners #networking",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.297521,
+      "eigenvector_centrality": 0.024881,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_64b87341ada987df",
+      "node_type": "event",
+      "name": "Post: Noida office visit #work",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.305085,
+      "eigenvector_centrality": 0.038305,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7da381a50326b6ae",
+      "node_type": "event",
+      "name": "Case: FIR 456/2022",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.352941,
+      "eigenvector_centrality": 0.037047,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_edbf72dd9f41eaae",
+      "node_type": "event",
+      "name": "Case: FIR 789/2023",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.352941,
+      "eigenvector_centrality": 0.037047,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_255e03416fe4b55e",
+      "node_type": "event",
+      "name": "Case: FIR 234/2023",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.327273,
+      "eigenvector_centrality": 0.031275,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4941c77b57e48753",
+      "node_type": "event",
+      "name": "Case: FIR 567/2023",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.36,
+      "eigenvector_centrality": 0.042351,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d38a9a689c50b16e",
+      "node_type": "phone",
+      "name": "9876543215",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_bb515e95562574af",
+      "node_type": "person",
+      "name": "Neeraj",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7b74611f26dc07cd",
+      "node_type": "phone",
+      "name": "9876543216",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ff28988444e5efd4",
+      "node_type": "person",
+      "name": "Pooja",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d41c55bf957849d2",
+      "node_type": "person",
+      "name": "Bhai",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.36,
+      "eigenvector_centrality": 0.065533,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6a6ac8386005b00f",
+      "node_type": "person",
+      "name": "Boss",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.666667,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_42ed1a392df88b25",
+      "node_type": "phone",
+      "name": "01129876543",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_042dfc35916c097e",
+      "node_type": "phone",
+      "name": "18001021234",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 1.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e3b0c44298fc1c14",
+      "node_type": "person",
+      "name": "unknown_user_2847",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.36,
+      "eigenvector_centrality": 0.042351,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_916bcb46a8192bd7",
+      "node_type": "account",
+      "name": "Account 6789",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.327273,
+      "eigenvector_centrality": 0.031275,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_9f13c23483224d85",
+      "node_type": "account",
+      "name": "Account 8901",
+      "degree_centrality": 0.005618,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.36,
+      "eigenvector_centrality": 0.042351,
+      "pagerank": 0.00641,
+      "degree": 1,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7726af14f2d056b6",
+      "node_type": "location",
+      "name": "Meena Devi's",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c4911c8c30edd7de",
+      "node_type": "location",
+      "name": "East Delhi",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_48a6b33cea4845e8",
+      "node_type": "organization",
+      "name": "Rakesh Kumar (9876543210",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_87ad8c66656ae254",
+      "node_type": "person",
+      "name": "Karol Bagh Main Market",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e9bac7668eedb207",
+      "node_type": "date",
+      "name": "14 March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3741b703d2b73185",
+      "node_type": "person",
+      "name": "Shri Harish Chand",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d68b4c2cbb492ef6",
+      "node_type": "device",
+      "name": "Device: Xiaomi Redmi Note 12",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_b690da60b55af7ff",
+      "node_type": "date",
+      "name": "12 March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_155759e45298d60b",
+      "node_type": "amount",
+      "name": "Rs. 5,00,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3465c31c3f814940",
+      "node_type": "amount",
+      "name": "Rs. 15,00,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6cbc919cac4341c3",
+      "node_type": "date",
+      "name": "15/03/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_13c347396595bf8e",
+      "node_type": "amount",
+      "name": "123/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d38c3a66154452dd",
+      "node_type": "date",
+      "name": "34 years",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d4aab4888fb04694",
+      "node_type": "person",
+      "name": "Rose Apartments",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_66a129258179d731",
+      "node_type": "date",
+      "name": "12th March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_37ba7bdd1c491581",
+      "node_type": "organization",
+      "name": "SBI Customer Care",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_694023070e84bf5b",
+      "node_type": "date",
+      "name": "13th March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6c0e6acd35694622",
+      "node_type": "organization",
+      "name": "OTP",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d8eaba1575ee7da5",
+      "node_type": "date",
+      "name": "14th March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8b5b9db0c13db242",
+      "node_type": "amount",
+      "name": "three",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_caa510e9d5057a69",
+      "node_type": "organization",
+      "name": "SBI",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ef612b1b744a6f86",
+      "node_type": "amount",
+      "name": "15,00,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c463967e5708cab7",
+      "node_type": "amount",
+      "name": "fifteen",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_1a452dcf7be46063",
+      "node_type": "amount",
+      "name": "5,00,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a370d63d12846c1e",
+      "node_type": "organization",
+      "name": "HDFC Bank",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_eb64ebaee08e80b0",
+      "node_type": "organization",
+      "name": "Punjab National Bank",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_61ef8cb5c4f3d3ea",
+      "node_type": "amount",
+      "name": "FIR",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_5bbfaccefdf61322",
+      "node_type": "date",
+      "name": "14:30 hours",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ff1ed53b92f9e91a",
+      "node_type": "event",
+      "name": "Post: Successful day #business",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_46fbd27c612b07eb",
+      "node_type": "date",
+      "name": "22/03/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c2092663b84c9920",
+      "node_type": "amount",
+      "name": "456/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4b4d474a2198985d",
+      "node_type": "date",
+      "name": "42 years",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e98e9265a371cab6",
+      "node_type": "date",
+      "name": "approximately 9:15 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4b8328539299a89c",
+      "node_type": "date",
+      "name": "around 8:45 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_248c33f46819bd6c",
+      "node_type": "date",
+      "name": "approximately 9:00 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c457a36aabb4fb93",
+      "node_type": "date",
+      "name": "about 10 minutes",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_f78dd8e6016cfa74",
+      "node_type": "organization",
+      "name": "CCTV",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_78b9c9c3ec98cddd",
+      "node_type": "date",
+      "name": "11:15 hours",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_de6e178663d37852",
+      "node_type": "event",
+      "name": "Post: Good morning Delhi #morning",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_2fc0deec815dd4af",
+      "node_type": "amount",
+      "name": "Rs. 15",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d64a1fe2af191dae",
+      "node_type": "date",
+      "name": "11:30 hours",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_73728731a2aff159",
+      "node_type": "organization",
+      "name": "SI Vikram Rathore",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_5af6d945a47b0813",
+      "node_type": "date",
+      "name": "Age 42",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_01072043f9410721",
+      "node_type": "date",
+      "name": "the past 8 years",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3fc4ccfe745870e2",
+      "node_type": "amount",
+      "name": "two",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8e0ab004c7c23334",
+      "node_type": "date",
+      "name": "around 9:15 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_094dac57e909da57",
+      "node_type": "date",
+      "name": "approximately 8:45 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_683bc8b68cb318bb",
+      "node_type": "date",
+      "name": "9:00 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8b12507783d5beca",
+      "node_type": "amount",
+      "name": "One",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_63519cad309a18f7",
+      "node_type": "date",
+      "name": "the same day",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_739b9d664d77db3e",
+      "node_type": "location",
+      "name": "hai",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4ec2c65c11681fd4",
+      "node_type": "amount",
+      "name": "Rs. 67,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_59290a56d9bc313f",
+      "node_type": "amount",
+      "name": "Rs. 25,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_89a517bea81aaa1b",
+      "node_type": "date",
+      "name": "25/03/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_f6c31158ad84bbf3",
+      "node_type": "organization",
+      "name": "Confidential - For Investigation Purposes",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d90f6b7eaea6a9ac",
+      "node_type": "person",
+      "name": "Nehru Nagar",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_48ae3f036fa1ccc8",
+      "node_type": "date",
+      "name": "10:00 AM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4190a74434240bda",
+      "node_type": "date",
+      "name": "8:00 PM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_392728fce66c2681",
+      "node_type": "date",
+      "name": "16 March",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_6446f4f1020b9657",
+      "node_type": "date",
+      "name": "approximately 2:30 PM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_eefe57dbc0d6dd0d",
+      "node_type": "date",
+      "name": "18 March",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_bc5e446ac5061fef",
+      "node_type": "organization",
+      "name": "SIM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_79fd3a1ea2fde9e1",
+      "node_type": "amount",
+      "name": "67,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_cefc73bd6a84af1f",
+      "node_type": "date",
+      "name": "7:00 PM",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_dc30446d3ad4cde9",
+      "node_type": "date",
+      "name": "19 March",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c7e6673590d2426f",
+      "node_type": "amount",
+      "name": "25,000",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ff759e9fef48c739",
+      "node_type": "organization",
+      "name": "Noida",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a8d99942a9f615a5",
+      "node_type": "person",
+      "name": "Noida Phase 2",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e4a3bce0ee71b148",
+      "node_type": "date",
+      "name": "15 March",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_325ee79e29ef6dda",
+      "node_type": "amount",
+      "name": "Rs. 5",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_13677449972f3b01",
+      "node_type": "date",
+      "name": "28/03/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_371ce02ae5647e65",
+      "node_type": "person",
+      "name": "Priya Singh",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d1991fa73f492014",
+      "node_type": "person",
+      "name": "Delhi Herald",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_899f4725b13a40bc",
+      "node_type": "organization",
+      "name": "Delhi Police",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3f5694c3789e0e65",
+      "node_type": "organization",
+      "name": "CDR",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d03452a15cdbe2cd",
+      "node_type": "account",
+      "name": "Account 7890",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_11cb60bb38877109",
+      "node_type": "organization",
+      "name": "SUPPLEMENTARY",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_1105401fe9fd4817",
+      "node_type": "date",
+      "name": "25th March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_55de488df7c10afb",
+      "node_type": "amount",
+      "name": "at least three",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c2b111204ee5faf7",
+      "node_type": "date",
+      "name": "20/03/2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a7f40fe0eaf028f5",
+      "node_type": "date",
+      "name": "13 March 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_83732ed9ae9971ea",
+      "node_type": "date",
+      "name": "1234, 7891",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_86f5edfc5b6b944b",
+      "node_type": "date",
+      "name": "5 to 10 minutes",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_9890be5d55270591",
+      "node_type": "organization",
+      "name": "HDFC",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_f88d533a7a47a361",
+      "node_type": "organization",
+      "name": "PNB",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_058be09de37a18d4",
+      "node_type": "person",
+      "name": "BoB",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_0cf48ebdaa0c6d75",
+      "node_type": "event",
+      "name": "Post: Feeling stressed today #life",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_894500ae1c37aedc",
+      "node_type": "person",
+      "name": "\u0930\u094b\u091c",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_abd400c996d27e40",
+      "node_type": "amount",
+      "name": "\u0932\u093e\u091c\u092a\u0924",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_c9f671b8bde898d3",
+      "node_type": "amount",
+      "name": "\u092e\u0948\u0902",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d631322b147c29fd",
+      "node_type": "person",
+      "name": "\u0930\u0939\u0924\u093e \u0939\u0942\u0902",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ec914043a4e38f9d",
+      "node_type": "amount",
+      "name": "\u092e\u0948\u0902 \u092e\u0940\u0928\u093e",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_2c39ce7a750c190c",
+      "node_type": "organization",
+      "name": "\u0938\u0941\u092c\u0939",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8ea3ffc4409cc8b7",
+      "node_type": "date",
+      "name": "9:15 \u092c\u091c\u0947",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_36e583b1e18f01fd",
+      "node_type": "organization",
+      "name": "\u0905\u092a\u0928\u0947",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_8efa7fdf9317ff56",
+      "node_type": "person",
+      "name": "\u092e\u0948\u0902\u0928\u0947 \u0939\u092e\u093e\u0930\u0947",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_dc57d02ff74f9add",
+      "node_type": "amount",
+      "name": "\u092e\u094b\u092c\u093e\u0907\u0932 \u092b\u094b\u0928",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4c577a8fc78fbb06",
+      "node_type": "date",
+      "name": "\u092e\u093e\u0930\u094d\u091a 2024",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_f52052d9ca51064f",
+      "node_type": "amount",
+      "name": "\u0909\u0938\u0940",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ce6994ab41bdea73",
+      "node_type": "date",
+      "name": "8:45",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_2be7a76a17a53940",
+      "node_type": "date",
+      "name": "9:00",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_759aff14a5381040",
+      "node_type": "amount",
+      "name": "\u0926\u0947\u0935\u0940",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_d3d2543eb561b296",
+      "node_type": "person",
+      "name": "\u0909\u0928\u092e\u0947\u0902 \u0938\u0947 \u090f\u0915 \u0935\u0939\u0940",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_b3bc7aac8e22eb12",
+      "node_type": "date",
+      "name": "\u092a\u0939\u0932\u0947 \u0926\u0947\u0916\u093e \u0925\u093e",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_3198e149cba98ec3",
+      "node_type": "person",
+      "name": "\u0914\u0930 \u0909\u0938\u0915\u0947 \u0916\u093e\u0924\u0947 \u0938\u0947",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_47fa1dd3b94203d9",
+      "node_type": "amount",
+      "name": "15 \u0932\u093e\u0916",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_599f9daa94e15632",
+      "node_type": "person",
+      "name": "\u0939\u0948\u0902",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e95f9ef875989b3d",
+      "node_type": "organization",
+      "name": "\u092e\u0948\u0902\u0928\u0947",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_0c26fc694863c62b",
+      "node_type": "organization",
+      "name": "\u092b\u0941\u091f\u0947\u091c \u0926\u0947\u0916\u093e \u0939\u0948 \u091c\u094b \u092e\u0947\u0930\u0947 \u0905\u0935\u0932\u094b\u0915\u0928 \u0915\u0940 \u092a\u0941\u0937\u094d\u091f\u093f",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_864f775d084ae837",
+      "node_type": "person",
+      "name": "\u0928\u093e\u092e: \u0930\u093e\u091c",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_2bb7da7d6166688b",
+      "node_type": "person",
+      "name": "\u0947\u0936 \u0915\u0941\u092e\u093e\u0930",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_a38e285fd0966725",
+      "node_type": "person",
+      "name": "\u092e\u0948\u0902, \u0930\u093e\u091c",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_4d04f9016628213c",
+      "node_type": "person",
+      "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_71f57887d7b7abbd",
+      "node_type": "person",
+      "name": "\u0939\u0938\u094d\u0924\u093e\u0915\u094d\u0937\u0930: \u0930\u093e\u091c",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7e37d44888436470",
+      "node_type": "location",
+      "name": "\u0928\u0947\u0939\u0930\u0942 \u0928\u0917\u0930",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_585ebe962bfa6de1",
+      "node_type": "location",
+      "name": "\u092b\u094d\u0932\u0948\u091f 5\u090f",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_e629fa6598d73276",
+      "node_type": "amount",
+      "name": "15",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_63dceb8800b2dd4a",
+      "node_type": "organization",
+      "name": "Phone",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_7e1b0d5641f2640c",
+      "node_type": "organization",
+      "name": "Account",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_01de53a997d895df",
+      "node_type": "account",
+      "name": "Account 3456",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "RES_ecdf912f9ac31cc2",
+      "node_type": "device",
+      "name": "CCTV_Screenshot",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "UNK_900d769768187655",
+      "node_type": "person",
+      "name": "Unknown",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "PERSON_b66694c77645402b",
+      "node_type": "person",
+      "name": "Meena Devi",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "ORGANIZATION_61ef8cb5c4f3d3ea",
+      "node_type": "organization",
+      "name": "FIR",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "PERSON_bdae71cfb51d493f",
+      "node_type": "person",
+      "name": "Meena Ji",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "PERSON_7726af14f2d056b6",
+      "node_type": "person",
+      "name": "Meena Devi's",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "node_id": "PERSON_b764cdc0eab71374",
+      "node_type": "person",
+      "name": "Unknown",
+      "degree_centrality": 0.0,
+      "betweenness_centrality": 0.0,
+      "closeness_centrality": 0.0,
+      "eigenvector_centrality": 0.0,
+      "pagerank": 0.0,
+      "degree": 0,
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "communities": [
+    {
+      "community_id": "COMM_000",
+      "node_ids": [
+        "RES_23492e71991bc7b9",
+        "RES_236180e1a6a63d8a",
+        "RES_255e03416fe4b55e",
+        "RES_5e95ee9f0386dda2",
+        "RES_6e50992230df4a2d",
+        "RES_7da381a50326b6ae",
+        "RES_916bcb46a8192bd7",
+        "RES_a8d3463ec398ed33",
+        "RES_b7753960e19a6559",
+        "RES_bc4640447aeab94a",
+        "RES_ec4168bca6487484",
+        "RES_edbf72dd9f41eaae"
+      ],
+      "size": 12,
+      "modularity_contribution": 0.0142,
+      "internal_edge_count": 14,
+      "density": 0.2121,
+      "dominant_node_type": "account",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_001",
+      "node_ids": [
+        "RES_105a112c81ce60e6",
+        "RES_438561c65c9e4353",
+        "RES_64b87341ada987df",
+        "RES_6f827effaccad628",
+        "RES_7619ee8cea49187f",
+        "RES_8a8023e9f7760676",
+        "RES_a353fb4092c96d33",
+        "RES_d41c55bf957849d2",
+        "RES_e26019ce48adebef",
+        "RES_ef5fb01e7fd16dee"
+      ],
+      "size": 10,
+      "modularity_contribution": 0.0223,
+      "internal_edge_count": 18,
+      "density": 0.4,
+      "dominant_node_type": "phone",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_002",
+      "node_ids": [
+        "RES_342bb7cffefbd624",
+        "RES_485bdeb3c76752d4",
+        "RES_502123dcbcdc704e",
+        "RES_8d4ea81fbbc86477",
+        "RES_94049de73f3d3a19",
+        "RES_d88fe4c9fd7f93e5"
+      ],
+      "size": 6,
+      "modularity_contribution": 0.0179,
+      "internal_edge_count": 8,
+      "density": 0.5333,
+      "dominant_node_type": "event",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_003",
+      "node_ids": [
+        "RES_4941c77b57e48753",
+        "RES_727777a1420ee72a",
+        "RES_75110ab02c0160f9",
+        "RES_9f13c23483224d85",
+        "RES_ab9b67613bd4a92c",
+        "RES_e3b0c44298fc1c14"
+      ],
+      "size": 6,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 5,
+      "density": 0.3333,
+      "dominant_node_type": "event",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_004",
+      "node_ids": [
+        "RES_3d649a61fbc63878",
+        "RES_6a6ac8386005b00f",
+        "RES_d71ab13e9efcf04e"
+      ],
+      "size": 3,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 2,
+      "density": 0.6667,
+      "dominant_node_type": "person",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_005",
+      "node_ids": [
+        "RES_2d27b53729507310",
+        "RES_5d395ea412ab918d",
+        "RES_83e0fa9f1e90d610"
+      ],
+      "size": 3,
+      "modularity_contribution": 0.0168,
+      "internal_edge_count": 3,
+      "density": 1.0,
+      "dominant_node_type": "event",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_006",
+      "node_ids": [
+        "RES_042dfc35916c097e",
+        "RES_fce0b15c7c195529"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "phone",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_007",
+      "node_ids": [
+        "RES_42ed1a392df88b25",
+        "RES_475f3f364856ea70"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "phone",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_008",
+      "node_ids": [
+        "RES_4b8a1601852a8525",
+        "RES_9fbdb74aacb6f47f"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "phone",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_009",
+      "node_ids": [
+        "RES_7fd1eb60e433a497",
+        "RES_a4e00d7e6aa82111"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "organization",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_010",
+      "node_ids": [
+        "RES_bb515e95562574af",
+        "RES_d38a9a689c50b16e"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "phone",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "community_id": "COMM_011",
+      "node_ids": [
+        "RES_7b74611f26dc07cd",
+        "RES_ff28988444e5efd4"
+      ],
+      "size": 2,
+      "modularity_contribution": 0.0112,
+      "internal_edge_count": 1,
+      "density": 1.0,
+      "dominant_node_type": "person",
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "anomaly_signals": [
+    {
+      "signal_id": "SIG_d991e36fc0dfb8c5",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_ff1ed53b92f9e91a",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_d1aa47ad49d69c34",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_de6e178663d37852",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_993637ee2d11bb31",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_d03452a15cdbe2cd",
+      "entity_type": "account",
+      "description": "High confidence (1.00) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_fb016699ae35a29c",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_0cf48ebdaa0c6d75",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_df4fa6755c270ac9",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_01de53a997d895df",
+      "entity_type": "account",
+      "description": "High confidence (1.00) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_c9f2cbafa5779208",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "POST_59176d5a6c79817f",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.00 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_0ff3167e7282c797",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "POST_ea8e9a63f5cf48c0",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.00 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 1.0,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_733475c2c30fe580",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "CASE_c1db9559568c7381",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.01 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 0.99,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_a8b4c1bd7ddeccc9",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "CASE_dea3a7e853e97f68",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.01 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 0.99,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_3f8e7076ec7710a4",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "CASE_2736af5de68ff0d8",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.01 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 0.99,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_08a2c7ac2050b912",
+      "signal_type": "coverage_gap",
+      "severity": "high",
+      "entity_id": "CASE_668ff83b2fc766f5",
+      "entity_type": "unknown",
+      "description": "Coverage ratio 0.04 (status=sparse) \u2014 sparse temporal data",
+      "evidence_count": 0,
+      "score": 0.96,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_ceed13347990bf8a",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_d68b4c2cbb492ef6",
+      "entity_type": "device",
+      "description": "High confidence (0.95) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 2,
+      "score": 0.95,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_4c3d19345ac33943",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_6cbc919cac4341c3",
+      "entity_type": "date",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_49da83658181702e",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_b7753960e19a6559",
+      "entity_type": "account",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_4cf01ec67cdd2039",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_9fbdb74aacb6f47f",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_63caed810ed5541d",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_a4e00d7e6aa82111",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_4b70e5f2dc021163",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_ab9b67613bd4a92c",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_b353afd462c79a22",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_64b87341ada987df",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_a247e1b008a51504",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_7da381a50326b6ae",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_ddb65ffba87f244a",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_edbf72dd9f41eaae",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_c7a5ef1e7963a476",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_255e03416fe4b55e",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_d0c8f1d69330ab38",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_4941c77b57e48753",
+      "entity_type": "event",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_ccd748d86b65ede5",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_46fbd27c612b07eb",
+      "entity_type": "date",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_ff446b2cdffe0c7e",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_d38a9a689c50b16e",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_cb1431abb9a9ba59",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_7b74611f26dc07cd",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_31765d8643731321",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_42ed1a392df88b25",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_2b07170541c36bec",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_042dfc35916c097e",
+      "entity_type": "phone",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_bd4e40a13aebdadb",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_89a517bea81aaa1b",
+      "entity_type": "date",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_93c3e62cf9ac89dc",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_13677449972f3b01",
+      "entity_type": "date",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_d038aa36012d3805",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_c2b111204ee5faf7",
+      "entity_type": "date",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_667aca257ac85ed0",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_916bcb46a8192bd7",
+      "entity_type": "account",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_6214a704535bcf45",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_9f13c23483224d85",
+      "entity_type": "account",
+      "description": "High confidence (1.00) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_7741b542d1c32f08",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "PERSON_bdae71cfb51d493f",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.9,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_04ab2ff1e9b7918f",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_105a112c81ce60e6",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_d6a04dbe67883e04",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_d71ab13e9efcf04e",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_43a7df528f6c90be",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_4b8a1601852a8525",
+      "entity_type": "organization",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_daf0112cf5f19f63",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_7fd1eb60e433a497",
+      "entity_type": "organization",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_e14726f48aba0efb",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_bb515e95562574af",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_72f3d04325bdef7b",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_ff28988444e5efd4",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_4b2d8e6807503857",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_d41c55bf957849d2",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_0239d10ba9d9a3eb",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_6a6ac8386005b00f",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_696a26717fbce0ca",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_e3b0c44298fc1c14",
+      "entity_type": "person",
+      "description": "High confidence (0.90) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 1,
+      "score": 0.81,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_626828c347928d66",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_c4911c8c30edd7de",
+      "entity_type": "location",
+      "description": "High confidence (0.80) but only 0 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 3,
+      "score": 0.8,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_e0aa4f84033d2002",
+      "signal_type": "degree_outlier",
+      "severity": "high",
+      "entity_id": "RES_75110ab02c0160f9",
+      "entity_type": "person",
+      "description": "Degree 11 exceeds mean+4.0\u03c3 (mean=1.0, std=2.5)",
+      "evidence_count": 11,
+      "score": 0.7906,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_46c992aa669103ed",
+      "signal_type": "isolated_high_value",
+      "severity": "medium",
+      "entity_id": "RES_d68b4c2cbb492ef6",
+      "entity_type": "device",
+      "description": "Isolated node (degree=0) with high confidence (0.95) and 2 sources \u2014 connections may be missing",
+      "evidence_count": 2,
+      "score": 0.76,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_6e369e0784b897f9",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_fce0b15c7c195529",
+      "entity_type": "organization",
+      "description": "High confidence (0.83) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 2,
+      "score": 0.7481,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_d5eb0318b5320dad",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_475f3f364856ea70",
+      "entity_type": "person",
+      "description": "High confidence (0.83) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 2,
+      "score": 0.744,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_db00252eef943874",
+      "signal_type": "confidence_gap",
+      "severity": "medium",
+      "entity_id": "RES_485bdeb3c76752d4",
+      "entity_type": "organization",
+      "description": "High confidence (0.82) but only 1 connection(s) \u2014 possibly missing evidence",
+      "evidence_count": 2,
+      "score": 0.7425,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_97fccedc249a27be",
+      "signal_type": "isolated_high_value",
+      "severity": "medium",
+      "entity_id": "RES_c4911c8c30edd7de",
+      "entity_type": "location",
+      "description": "Isolated node (degree=0) with high confidence (0.80) and 3 sources \u2014 connections may be missing",
+      "evidence_count": 3,
+      "score": 0.64,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_5650058c52b3c077",
+      "signal_type": "isolated_high_value",
+      "severity": "medium",
+      "entity_id": "RES_e9bac7668eedb207",
+      "entity_type": "date",
+      "description": "Isolated node (degree=0) with high confidence (0.80) and 2 sources \u2014 connections may be missing",
+      "evidence_count": 2,
+      "score": 0.64,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_da9c87686ef8cd49",
+      "signal_type": "isolated_high_value",
+      "severity": "medium",
+      "entity_id": "RES_b690da60b55af7ff",
+      "entity_type": "date",
+      "description": "Isolated node (degree=0) with high confidence (0.80) and 2 sources \u2014 connections may be missing",
+      "evidence_count": 2,
+      "score": 0.64,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_fe0a6016f003404a",
+      "signal_type": "degree_outlier",
+      "severity": "high",
+      "entity_id": "RES_23492e71991bc7b9",
+      "entity_type": "person",
+      "description": "Degree 9 exceeds mean+3.2\u03c3 (mean=1.0, std=2.5)",
+      "evidence_count": 9,
+      "score": 0.6325,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_6ff5f7a0984659cb",
+      "signal_type": "isolated_high_value",
+      "severity": "medium",
+      "entity_id": "RES_3741b703d2b73185",
+      "entity_type": "person",
+      "description": "Isolated node (degree=0) with high confidence (0.72) and 2 sources \u2014 connections may be missing",
+      "evidence_count": 2,
+      "score": 0.5798,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "signal_id": "SIG_512c845e711370f7",
+      "signal_type": "degree_outlier",
+      "severity": "low",
+      "entity_id": "RES_5e95ee9f0386dda2",
+      "entity_type": "person",
+      "description": "Degree 7 exceeds mean+2.4\u03c3 (mean=1.0, std=2.5)",
+      "evidence_count": 7,
+      "score": 0.4743,
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "behavioral_baselines": [
+    {
+      "entity_type": "date",
+      "sample_size": 42,
+      "avg_degree": 0.0,
+      "median_degree": 0.0,
+      "std_degree": 0.0,
+      "avg_confidence": 0.7702,
+      "median_confidence": 0.75,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.0,
+      "avg_provenance_depth": 0.0476,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "person",
+      "sample_size": 35,
+      "avg_degree": 1.0,
+      "median_degree": 0.0,
+      "std_degree": 2.5298,
+      "avg_confidence": 0.7806,
+      "median_confidence": 0.75,
+      "avg_temporal_count": 0.0857,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.8667,
+      "avg_provenance_depth": 0.1429,
+      "temporal_coverage_fraction": 0.0286,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "ASSOCIATED_WITH",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "organization",
+      "sample_size": 27,
+      "avg_degree": 0.1481,
+      "median_degree": 0.0,
+      "std_degree": 0.3552,
+      "avg_confidence": 0.765,
+      "median_confidence": 0.75,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.8641,
+      "avg_provenance_depth": 0.1111,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "ASSOCIATED_WITH",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "amount",
+      "sample_size": 26,
+      "avg_degree": 0.0,
+      "median_degree": 0.0,
+      "std_degree": 0.0,
+      "avg_confidence": 0.7596,
+      "median_confidence": 0.75,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.0,
+      "avg_provenance_depth": 0.0,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "event",
+      "sample_size": 14,
+      "avg_degree": 1.3571,
+      "median_degree": 1.0,
+      "std_degree": 1.0425,
+      "avg_confidence": 1.0,
+      "median_confidence": 1.0,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.9411,
+      "avg_provenance_depth": 0.0,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "SHARED_LOCATION",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "phone",
+      "sample_size": 13,
+      "avg_degree": 3.9231,
+      "median_degree": 2.0,
+      "std_degree": 3.7511,
+      "avg_confidence": 0.9923,
+      "median_confidence": 1.0,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.846,
+      "avg_provenance_depth": 0.0,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "VISITED",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "location",
+      "sample_size": 10,
+      "avg_degree": 2.9,
+      "median_degree": 1.5,
+      "std_degree": 3.2696,
+      "avg_confidence": 0.7815,
+      "median_confidence": 0.8,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.7809,
+      "avg_provenance_depth": 0.5,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "VISITED",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "account",
+      "sample_size": 10,
+      "avg_degree": 1.8,
+      "median_degree": 1.5,
+      "std_degree": 1.4,
+      "avg_confidence": 1.0,
+      "median_confidence": 1.0,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.9619,
+      "avg_provenance_depth": 0.0,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "OWNS_ACCOUNT",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "entity_type": "device",
+      "sample_size": 2,
+      "avg_degree": 0.0,
+      "median_degree": 0.0,
+      "std_degree": 0.0,
+      "avg_confidence": 0.775,
+      "median_confidence": 0.775,
+      "avg_temporal_count": 0.0,
+      "avg_spatial_count": 0.0,
+      "avg_edge_confidence": 0.0,
+      "avg_provenance_depth": 0.5,
+      "temporal_coverage_fraction": 0.0,
+      "spatial_coverage_fraction": 0.0,
+      "dominant_relationship_type": "",
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "correlations": [
+    {
+      "variable_a": "degree",
+      "variable_b": "effective_confidence",
+      "correlation_type": "rank",
+      "coefficient": 0.6189,
+      "p_value": 0.001,
+      "is_significant": true,
+      "sample_size": 179,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "variable_a": "degree",
+      "variable_b": "temporal_count",
+      "correlation_type": "rank",
+      "coefficient": 0.1383,
+      "p_value": 0.5355,
+      "is_significant": false,
+      "sample_size": 179,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "variable_a": "degree",
+      "variable_b": "provenance_depth",
+      "correlation_type": "rank",
+      "coefficient": 0.1225,
+      "p_value": 0.5896,
+      "is_significant": false,
+      "sample_size": 179,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "variable_a": "has_temporal_data",
+      "variable_b": "effective_confidence",
+      "correlation_type": "point_biserial",
+      "coefficient": -0.0781,
+      "p_value": 0.5,
+      "is_significant": false,
+      "sample_size": 179,
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "variable_a": "entity_type",
+      "variable_b": "has_temporal_data",
+      "correlation_type": "cramers_v",
+      "coefficient": 0.152,
+      "p_value": 0.5,
+      "is_significant": false,
+      "sample_size": 179,
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "component_analyses": [
+    {
+      "component_id": 5,
+      "size": 37,
+      "edge_count": 70,
+      "density": 0.105105,
+      "node_types": {
+        "account": 8,
+        "event": 11,
+        "person": 6,
+        "organization": 1,
+        "location": 5,
+        "phone": 6
+      },
+      "has_person": true,
+      "has_financial": true,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": true,
+      "avg_confidence": 0.9625,
+      "path_length": 5,
+      "key_entities": [
+        "RES_7619ee8cea49187f",
+        "RES_75110ab02c0160f9",
+        "RES_23492e71991bc7b9"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 31,
+      "size": 3,
+      "edge_count": 2,
+      "density": 0.666667,
+      "node_types": {
+        "person": 2,
+        "phone": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": true,
+      "avg_confidence": 0.9333,
+      "path_length": 2,
+      "key_entities": [
+        "RES_3d649a61fbc63878",
+        "RES_6a6ac8386005b00f",
+        "RES_d71ab13e9efcf04e"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 1,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "phone": 1,
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9156,
+      "path_length": 1,
+      "key_entities": [
+        "RES_042dfc35916c097e",
+        "RES_fce0b15c7c195529"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 9,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "phone": 1,
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": true,
+      "avg_confidence": 0.9133,
+      "path_length": 1,
+      "key_entities": [
+        "RES_42ed1a392df88b25",
+        "RES_475f3f364856ea70"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 32,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "organization": 1,
+        "phone": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.95,
+      "path_length": 1,
+      "key_entities": [
+        "RES_4b8a1601852a8525",
+        "RES_9fbdb74aacb6f47f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 33,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "organization": 1,
+        "phone": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.95,
+      "path_length": 1,
+      "key_entities": [
+        "RES_7fd1eb60e433a497",
+        "RES_a4e00d7e6aa82111"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 44,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "person": 1,
+        "phone": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": true,
+      "avg_confidence": 0.95,
+      "path_length": 1,
+      "key_entities": [
+        "RES_bb515e95562574af",
+        "RES_d38a9a689c50b16e"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 45,
+      "size": 2,
+      "edge_count": 1,
+      "density": 1.0,
+      "node_types": {
+        "person": 1,
+        "phone": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": true,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": true,
+      "avg_confidence": 0.95,
+      "path_length": 1,
+      "key_entities": [
+        "RES_ff28988444e5efd4",
+        "RES_7b74611f26dc07cd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 0,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "location": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_7726af14f2d056b6"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 2,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "location": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_c4911c8c30edd7de"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 3,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7,
+      "path_length": null,
+      "key_entities": [
+        "RES_48a6b33cea4845e8"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 4,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.6985,
+      "path_length": null,
+      "key_entities": [
+        "RES_87ad8c66656ae254"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 6,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_e9bac7668eedb207"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 7,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7248,
+      "path_length": null,
+      "key_entities": [
+        "RES_3741b703d2b73185"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 8,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "device": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.95,
+      "path_length": null,
+      "key_entities": [
+        "RES_d68b4c2cbb492ef6"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 10,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_b690da60b55af7ff"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 11,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_155759e45298d60b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 12,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_3465c31c3f814940"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 13,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "RES_6cbc919cac4341c3"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 14,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_13c347396595bf8e"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 15,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d38c3a66154452dd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 16,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d4aab4888fb04694"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 17,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_66a129258179d731"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 18,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_37ba7bdd1c491581"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 19,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_694023070e84bf5b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 20,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_6c0e6acd35694622"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 21,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d8eaba1575ee7da5"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 22,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_8b5b9db0c13db242"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 23,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_caa510e9d5057a69"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 24,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_ef612b1b744a6f86"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 25,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_c463967e5708cab7"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 26,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_1a452dcf7be46063"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 27,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_a370d63d12846c1e"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 28,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_eb64ebaee08e80b0"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 29,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_61ef8cb5c4f3d3ea"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 30,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_5bbfaccefdf61322"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 34,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "event": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 1.0,
+      "path_length": null,
+      "key_entities": [
+        "RES_ff1ed53b92f9e91a"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 35,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "RES_46fbd27c612b07eb"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 36,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_c2092663b84c9920"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 37,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_4b4d474a2198985d"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 38,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_e98e9265a371cab6"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 39,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_4b8328539299a89c"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 40,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_248c33f46819bd6c"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 41,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_c457a36aabb4fb93"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 42,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_f78dd8e6016cfa74"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 43,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_78b9c9c3ec98cddd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 46,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "event": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 1.0,
+      "path_length": null,
+      "key_entities": [
+        "RES_de6e178663d37852"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 47,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_2fc0deec815dd4af"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 48,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d64a1fe2af191dae"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 49,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_73728731a2aff159"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 50,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_5af6d945a47b0813"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 51,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_01072043f9410721"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 52,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_3fc4ccfe745870e2"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 53,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_8e0ab004c7c23334"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 54,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_094dac57e909da57"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 55,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_683bc8b68cb318bb"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 56,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_8b12507783d5beca"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 57,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_63519cad309a18f7"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 58,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "location": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_739b9d664d77db3e"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 59,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_4ec2c65c11681fd4"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 60,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_59290a56d9bc313f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 61,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "RES_89a517bea81aaa1b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 62,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_f6c31158ad84bbf3"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 63,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d90f6b7eaea6a9ac"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 64,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_48ae3f036fa1ccc8"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 65,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_4190a74434240bda"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 66,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_392728fce66c2681"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 67,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_6446f4f1020b9657"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 68,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_eefe57dbc0d6dd0d"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 69,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_bc5e446ac5061fef"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 70,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_79fd3a1ea2fde9e1"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 71,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_cefc73bd6a84af1f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 72,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_dc30446d3ad4cde9"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 73,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_c7e6673590d2426f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 74,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_ff759e9fef48c739"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 75,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_a8d99942a9f615a5"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 76,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_e4a3bce0ee71b148"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 77,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.8,
+      "path_length": null,
+      "key_entities": [
+        "RES_325ee79e29ef6dda"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 78,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "RES_13677449972f3b01"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 79,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_371ce02ae5647e65"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 80,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d1991fa73f492014"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 81,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_899f4725b13a40bc"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 82,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_3f5694c3789e0e65"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 83,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "account": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 1.0,
+      "path_length": null,
+      "key_entities": [
+        "RES_d03452a15cdbe2cd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 84,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_11cb60bb38877109"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 85,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_1105401fe9fd4817"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 86,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_55de488df7c10afb"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 87,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "RES_c2b111204ee5faf7"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 88,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_a7f40fe0eaf028f5"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 89,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_83732ed9ae9971ea"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 90,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_86f5edfc5b6b944b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 91,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_9890be5d55270591"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 92,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_f88d533a7a47a361"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 93,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_058be09de37a18d4"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 94,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "event": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 1.0,
+      "path_length": null,
+      "key_entities": [
+        "RES_0cf48ebdaa0c6d75"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 95,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_894500ae1c37aedc"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 96,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_abd400c996d27e40"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 97,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_c9f671b8bde898d3"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 98,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d631322b147c29fd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 99,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_ec914043a4e38f9d"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 100,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_2c39ce7a750c190c"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 101,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_8ea3ffc4409cc8b7"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 102,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_36e583b1e18f01fd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 103,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_8efa7fdf9317ff56"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 104,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_dc57d02ff74f9add"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 105,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_4c577a8fc78fbb06"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 106,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_f52052d9ca51064f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 107,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_ce6994ab41bdea73"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 108,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_2be7a76a17a53940"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 109,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_759aff14a5381040"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 110,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_d3d2543eb561b296"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 111,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "date": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_b3bc7aac8e22eb12"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 112,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_3198e149cba98ec3"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 113,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_47fa1dd3b94203d9"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 114,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_599f9daa94e15632"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 115,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_e95f9ef875989b3d"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 116,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_0c26fc694863c62b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 117,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.65,
+      "path_length": null,
+      "key_entities": [
+        "RES_864f775d084ae837"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 118,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.65,
+      "path_length": null,
+      "key_entities": [
+        "RES_2bb7da7d6166688b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 119,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.65,
+      "path_length": null,
+      "key_entities": [
+        "RES_a38e285fd0966725"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 120,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.65,
+      "path_length": null,
+      "key_entities": [
+        "RES_4d04f9016628213c"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 121,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.65,
+      "path_length": null,
+      "key_entities": [
+        "RES_71f57887d7b7abbd"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 122,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "location": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.55,
+      "path_length": null,
+      "key_entities": [
+        "RES_7e37d44888436470"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 123,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "location": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.55,
+      "path_length": null,
+      "key_entities": [
+        "RES_585ebe962bfa6de1"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 124,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "amount": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7,
+      "path_length": null,
+      "key_entities": [
+        "RES_e629fa6598d73276"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 125,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_63dceb8800b2dd4a"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 126,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "RES_7e1b0d5641f2640c"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 127,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "account": 1
+      },
+      "has_person": false,
+      "has_financial": true,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 1.0,
+      "path_length": null,
+      "key_entities": [
+        "RES_01de53a997d895df"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 128,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "device": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.6,
+      "path_length": null,
+      "key_entities": [
+        "RES_ecdf912f9ac31cc2"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 129,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7,
+      "path_length": null,
+      "key_entities": [
+        "UNK_900d769768187655"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 130,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": true,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7,
+      "path_length": null,
+      "key_entities": [
+        "PERSON_b66694c77645402b"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 131,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "organization": 1
+      },
+      "has_person": false,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "ORGANIZATION_61ef8cb5c4f3d3ea"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 132,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.9,
+      "path_length": null,
+      "key_entities": [
+        "PERSON_bdae71cfb51d493f"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 133,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.75,
+      "path_length": null,
+      "key_entities": [
+        "PERSON_7726af14f2d056b6"
+      ],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "component_id": 134,
+      "size": 1,
+      "edge_count": 0,
+      "density": 0.0,
+      "node_types": {
+        "person": 1
+      },
+      "has_person": true,
+      "has_financial": false,
+      "has_communication": false,
+      "has_temporal_data": false,
+      "has_spatial_data": false,
+      "is_candidate_for_investigation": false,
+      "avg_confidence": 0.7,
+      "path_length": null,
+      "key_entities": [
+        "PERSON_b764cdc0eab71374"
+      ],
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "temporal_patterns": [
+    {
+      "pattern_id": "TPAT_6f68cb7ae26c2170",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_7619ee8cea49187f",
+      "entity_type": "unknown",
+      "description": "133 inter-event gap(s) under 1 hour across 145 events",
+      "event_count": 145,
+      "time_span_seconds": 438300.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_1d83af69b20d71f7",
+      "pattern_type": "temporal_anomaly",
+      "entity_id": "PHONE_7619ee8cea49187f",
+      "entity_type": "unknown",
+      "description": "Event at 2024-03-12 is 2.5\u03c3 from entity's mean timestamp",
+      "event_count": 145,
+      "time_span_seconds": 438300.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_6427f0c35a866e25",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_a353fb4092c96d33",
+      "entity_type": "unknown",
+      "description": "72 inter-event gap(s) under 1 hour across 85 events",
+      "event_count": 85,
+      "time_span_seconds": 577887.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_1e685c5ef7207781",
+      "pattern_type": "temporal_anomaly",
+      "entity_id": "PHONE_a353fb4092c96d33",
+      "entity_type": "unknown",
+      "description": "Event at 2024-03-17 is 2.2\u03c3 from entity's mean timestamp",
+      "event_count": 85,
+      "time_span_seconds": 577887.0,
+      "severity": "low",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_897f9334ffcdbca7",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_e26019ce48adebef",
+      "entity_type": "unknown",
+      "description": "42 inter-event gap(s) under 1 hour across 57 events",
+      "event_count": 57,
+      "time_span_seconds": 435318.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_1a59e323dea03ebd",
+      "pattern_type": "temporal_anomaly",
+      "entity_id": "PHONE_e26019ce48adebef",
+      "entity_type": "unknown",
+      "description": "Event at 2024-03-12 is 2.1\u03c3 from entity's mean timestamp",
+      "event_count": 57,
+      "time_span_seconds": 435318.0,
+      "severity": "low",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_e048990fbd5d29d4",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_8a8023e9f7760676",
+      "entity_type": "unknown",
+      "description": "25 inter-event gap(s) under 1 hour across 37 events",
+      "event_count": 37,
+      "time_span_seconds": 288895.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_9b7de50beac2ef04",
+      "pattern_type": "temporal_anomaly",
+      "entity_id": "PHONE_8a8023e9f7760676",
+      "entity_type": "unknown",
+      "description": "Event at 2024-03-17 is 2.1\u03c3 from entity's mean timestamp",
+      "event_count": 37,
+      "time_span_seconds": 288895.0,
+      "severity": "low",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_e2f817fb7a2a4451",
+      "pattern_type": "activity_burst",
+      "entity_id": "PERSON_23492e71991bc7b9",
+      "entity_type": "unknown",
+      "description": "1 inter-event gap(s) under 1 hour across 6 events",
+      "event_count": 6,
+      "time_span_seconds": 551400.0,
+      "severity": "low",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_abfb292f63510253",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_8d4ea81fbbc86477",
+      "entity_type": "unknown",
+      "description": "3 inter-event gap(s) under 1 hour across 4 events",
+      "event_count": 4,
+      "time_span_seconds": 277.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "pattern_id": "TPAT_72f4fd3e2565c5d7",
+      "pattern_type": "activity_burst",
+      "entity_id": "PHONE_ef5fb01e7fd16dee",
+      "entity_type": "unknown",
+      "description": "2 inter-event gap(s) under 1 hour across 4 events",
+      "event_count": 4,
+      "time_span_seconds": 7500.0,
+      "severity": "medium",
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "zone_scores": [
+    {
+      "hex_id": "GRID_28.57_77.243",
+      "latitude": 28.57,
+      "longitude": 77.243,
+      "location_names": [
+        "Amit Sharma",
+        "Lajpat Nagar Part II Camera 1",
+        "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+        "Rakesh Kumar",
+        "Shop - Lajpat Nagar"
+      ],
+      "evidence_count": 3,
+      "suspect_count": 2,
+      "risk_score": 1.0,
+      "risk_band": "RED",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.62_77.21",
+      "latitude": 28.62,
+      "longitude": 77.21,
+      "location_names": [
+        "Meena Devi",
+        "Meena Devi's"
+      ],
+      "evidence_count": 3,
+      "suspect_count": 0,
+      "risk_score": 0.6,
+      "risk_band": "AMBER",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.652_77.19",
+      "latitude": 28.6519,
+      "longitude": 77.1904,
+      "location_names": [
+        "Karol Bagh Main Market",
+        "Karol Bagh Main Market Camera 5",
+        "Post: New beginnings at Karol Bagh office #business #del"
+      ],
+      "evidence_count": 3,
+      "suspect_count": 0,
+      "risk_score": 0.6,
+      "risk_band": "AMBER",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.56_77.25",
+      "latitude": 28.56,
+      "longitude": 77.25,
+      "location_names": [
+        "Nehru Nagar",
+        "Nehru Nagar Tower 2"
+      ],
+      "evidence_count": 2,
+      "suspect_count": 0,
+      "risk_score": 0.4,
+      "risk_band": "AMBER",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.63_77.29",
+      "latitude": 28.63,
+      "longitude": 77.29,
+      "location_names": [
+        "East Delhi"
+      ],
+      "evidence_count": 1,
+      "suspect_count": 0,
+      "risk_score": 0.2,
+      "risk_band": "GREEN",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.592_77.046",
+      "latitude": 28.5921,
+      "longitude": 77.046,
+      "location_names": [
+        "Dwarka Sector 12 Main Gate Camera"
+      ],
+      "evidence_count": 1,
+      "suspect_count": 0,
+      "risk_score": 0.2,
+      "risk_band": "GREEN",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.631_77.217",
+      "latitude": 28.6315,
+      "longitude": 77.2167,
+      "location_names": [
+        "Connaught Place Tower 2"
+      ],
+      "evidence_count": 1,
+      "suspect_count": 0,
+      "risk_score": 0.2,
+      "risk_band": "GREEN",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    },
+    {
+      "hex_id": "GRID_28.628_77.364",
+      "latitude": 28.628,
+      "longitude": 77.364,
+      "location_names": [
+        "Noida"
+      ],
+      "evidence_count": 1,
+      "suspect_count": 0,
+      "risk_score": 0.2,
+      "risk_band": "GREEN",
+      "case_ids": [],
+      "run_id": "run_20260923_001317"
+    }
+  ],
+  "processing_time_seconds": 0.06,
+  "data_quality_notes": [
+    "Graph is very sparse (density=0.005398). Many algorithms produce trivial results for isolated nodes.",
+    "Graph has 135 connected components for 179 nodes. Most nodes are isolated. Graph algorithms limited to 8 components of size >= 2.",
+    "Spatial data: 24 records available but ALL have null latitude/longitude. Geospatial analysis is not possible."
+  ]
+}

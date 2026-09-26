@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_7a81a51b217a",
+  "task": "detect_data_type",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3c394c234e2b7332",
+  "input_hash": "b67ea34bea146bb9",
+  "response_text": "{\"data_type\":\"bank\",\"reasoning\":\"The columns include a Date, an Event describing a transfer to specific bank accounts (HDFC, PNB, BoB), and an Amount in rupees. This matches typical bank transaction records used in investigations.\",\"confidence\":0.95}",
+  "usage": {
+    "queue_time": 0.310277763,
+    "prompt_tokens": 648,
+    "prompt_time": 0.042401134,
+    "completion_tokens": 87,
+    "completion_time": 0.094502274,
+    "total_tokens": 735,
+    "total_time": 0.136903408,
+    "completion_tokens_details": {
+      "reasoning_tokens": 21
+    }
+  },
+  "latency_ms": 496,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:23.668048",
+  "source_file": "type_detector",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

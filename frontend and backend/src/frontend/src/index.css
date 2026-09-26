@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   CrimeNet — "Situation Room" design system
+   Dark-first navy/ink intelligence workstation.
+   All color tokens are raw OKLCH `L C H` triples (no oklch() wrapper)
+   so tailwind.config.js can wrap them with oklch(var(--token)).
+   ------------------------------------------------------------------ */
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/assets/fonts/SpaceGrotesk.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  /* Dark-first: :root carries the navy/ink palette directly. */
+  :root {
+    --font-display: "Space Grotesk";
+    --font-body: "Figtree";
+    --font-mono: "Geist Mono";
+    --radius: 0.5rem;
+
+    /* --- Surfaces: ink → panel → raised --- */
+    --background: 0.16 0.02 250;
+    --foreground: 0.95 0.008 250;
+    --card: 0.205 0.022 250;
+    --card-foreground: 0.95 0.008 250;
+    --popover: 0.235 0.024 250;
+    --popover-foreground: 0.95 0.008 250;
+
+    /* --- Primary: institutional blue (accent-blue family) --- */
+    --primary: 0.58 0.13 250;
+    --primary-foreground: 0.98 0.005 250;
+
+    --secondary: 0.26 0.022 250;
+    --secondary-foreground: 0.88 0.008 250;
+    --muted: 0.25 0.02 250;
+    --muted-foreground: 0.66 0.014 250;
+
+    --accent: 0.3 0.028 250;
+    --accent-foreground: 0.95 0.008 250;
+
+    --destructive: 0.62 0.19 42;
+    --destructive-foreground: 0.98 0.005 42;
+
+    --border: 0.29 0.016 250;
+    --input: 0.31 0.018 250;
+    --ring: 0.7 0.12 250;
+
+    /* --- Okabe-Ito colorblind-safe severity semantics --- */
+    --risk-critical: 0.6 0.181 43;
+    --risk-critical-foreground: 0.98 0.005 43;
+    --risk-high: 0.75 0.163 78;
+    --risk-high-foreground: 0.2 0.03 78;
+    --risk-medium: 0.9 0.16 100;
+    --risk-medium-foreground: 0.22 0.03 100;
+    --risk-low: 0.62 0.13 165;
+    --risk-low-foreground: 0.16 0.02 165;
+    --info: 0.76 0.105 235;
+    --info-foreground: 0.19 0.02 235;
+    --accent-blue: 0.55 0.14 250;
+    --accent-blue-foreground: 0.98 0.005 250;
+    --neutral-purple: 0.68 0.13 350;
+    --neutral-purple-foreground: 0.18 0.02 350;
+
+    /* --- Charts: Okabe-Ito subset, ordered for categorical series --- */
+    --chart-1: 0.55 0.14 250; /* accent-blue */
+    --chart-2: 0.62 0.13 165; /* bluish-green */
+    --chart-3: 0.75 0.163 78; /* orange */
+    --chart-4: 0.68 0.13 350; /* neutral-purple */
+    --chart-5: 0.76 0.105 235; /* sky blue */
+
+    /* --- Sidebar: one step darker than the app background --- */
+    --sidebar: 0.135 0.02 250;
+    --sidebar-foreground: 0.92 0.008 250;
+    --sidebar-primary: 0.58 0.13 250;
+    --sidebar-primary-foreground: 0.98 0.005 250;
+    --sidebar-accent: 0.22 0.024 250;
+    --sidebar-accent-foreground: 0.95 0.008 250;
+    --sidebar-border: 0.24 0.016 250;
+    --sidebar-ring: 0.7 0.12 250;
+
+    /* --- Non-color design tokens --- */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --gradient-panel: linear-gradient(
+      180deg,
+      oklch(0.22 0.024 250) 0%,
+      oklch(0.195 0.022 250) 100%
+    );
+    --gradient-subtle: linear-gradient(
+      180deg,
+      oklch(0.235 0.026 250) 0%,
+      oklch(0.205 0.022 250) 100%
+    );
+    --grid-line: oklch(0.95 0.008 250 / 0.028);
+  }
+
+  /* `dark` class resolves to the same navy/ink palette (dark-first app). */
+  .dark {
+    --background: 0.16 0.02 250;
+    --foreground: 0.95 0.008 250;
+    --card: 0.205 0.022 250;
+    --card-foreground: 0.95 0.008 250;
+    --popover: 0.235 0.024 250;
+    --popover-foreground: 0.95 0.008 250;
+
+    --primary: 0.58 0.13 250;
+    --primary-foreground: 0.98 0.005 250;
+
+    --secondary: 0.26 0.022 250;
+    --secondary-foreground: 0.88 0.008 250;
+    --muted: 0.25 0.02 250;
+    --muted-foreground: 0.66 0.014 250;
+
+    --accent: 0.3 0.028 250;
+    --accent-foreground: 0.95 0.008 250;
+
+    --destructive: 0.62 0.19 42;
+    --destructive-foreground: 0.98 0.005 42;
+
+    --border: 0.29 0.016 250;
+    --input: 0.31 0.018 250;
+    --ring: 0.7 0.12 250;
+
+    --risk-critical: 0.6 0.181 43;
+    --risk-critical-foreground: 0.98 0.005 43;
+    --risk-high: 0.75 0.163 78;
+    --risk-high-foreground: 0.2 0.03 78;
+    --risk-medium: 0.9 0.16 100;
+    --risk-medium-foreground: 0.22 0.03 100;
+    --risk-low: 0.62 0.13 165;
+    --risk-low-foreground: 0.16 0.02 165;
+    --info: 0.76 0.105 235;
+    --info-foreground: 0.19 0.02 235;
+    --accent-blue: 0.55 0.14 250;
+    --accent-blue-foreground: 0.98 0.005 250;
+    --neutral-purple: 0.68 0.13 350;
+    --neutral-purple-foreground: 0.18 0.02 350;
+
+    --chart-1: 0.55 0.14 250;
+    --chart-2: 0.62 0.13 165;
+    --chart-3: 0.75 0.163 78;
+    --chart-4: 0.68 0.13 350;
+    --chart-5: 0.76 0.105 235;
+
+    --sidebar: 0.135 0.02 250;
+    --sidebar-foreground: 0.92 0.008 250;
+    --sidebar-primary: 0.58 0.13 250;
+    --sidebar-primary-foreground: 0.98 0.005 250;
+    --sidebar-accent: 0.22 0.024 250;
+    --sidebar-accent-foreground: 0.95 0.008 250;
+    --sidebar-border: 0.24 0.016 250;
+    --sidebar-ring: 0.7 0.12 250;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Monospace data should never reflow on digit changes. */
+  code,
+  kbd,
+  samp,
+  pre {
+    @apply font-mono;
+  }
+
+  /* Clearly visible focus ring on navy surfaces. */
+  :focus-visible {
+    outline: 2px solid oklch(var(--ring));
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) - 4px);
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* ----------------------------------------------------------------
+     Typography utilities
+     ---------------------------------------------------------------- */
+  .font-mono-id {
+    font-family: var(--font-mono), ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .label-caps {
+    font-size: 0.6875rem;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: oklch(var(--muted-foreground));
+  }
+
+  /* ----------------------------------------------------------------
+     Surface + density utilities
+     ---------------------------------------------------------------- */
+  .panel {
+    background-color: oklch(var(--card));
+    border: 1px solid oklch(var(--border));
+    border-radius: var(--radius);
+    box-shadow: none;
+  }
+
+  .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.625rem 0.875rem;
+    border-bottom: 1px solid oklch(var(--border));
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: oklch(var(--foreground));
+  }
+
+  .metric-value {
+    font-family: var(--font-display), ui-sans-serif, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.75rem;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: oklch(var(--foreground));
+  }
+
+  .hairline {
+    height: 1px;
+    width: 100%;
+    background-color: oklch(var(--border));
+    border: 0;
+  }
+
+  /* Faint command-grid atmosphere (restrained, not neon). */
+  .bg-grid {
+    background-image: linear-gradient(
+        to right,
+        var(--grid-line) 1px,
+        transparent 1px
+      ), linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(0.4 0.02 250) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: oklch(0.36 0.02 250);
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: oklch(0.44 0.025 250);
+  }
+
+  /* ----------------------------------------------------------------
+     Restrained motion
+     ---------------------------------------------------------------- */
+  .animate-fade-in-up {
+    animation: fade-in-up 0.28s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+
+  .animate-pulse-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  .animate-dash-flow {
+    stroke-dasharray: 6 6;
+    animation: dash-flow 1.6s linear infinite;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.82);
+  }
+}
+
+@keyframes dash-flow {
+  to {
+    stroke-dashoffset: -12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up,
+  .animate-pulse-dot,
+  .animate-dash-flow,
+  .transition-smooth {
+    animation: none !important;
+    transition: none !important;
+  }
+}

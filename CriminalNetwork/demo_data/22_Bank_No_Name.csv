@@ -1,0 +1,6 @@
+transaction_id,account_number,account_holder,transaction_type,amount,currency,transaction_date,transaction_time,balance_after,description,counterparty_account,counterparty_name
+TXN401,78901234567890,,CREDIT,35000,INR,2024-03-10,11:22:33,35000,Unknown source transfer,ACC_UNKNOWN_10,
+TXN402,78901234567890,,DEBIT,15000,INR,2024-03-12,14:15:44,20000,ATM withdrawal,NA,NA
+TXN403,78901234567890,,CREDIT,5000,INR,2024-03-13,09:30:22,25000,Salary credit,,Pooja Enterprises
+TXN404,78901234567890,,DEBIT,10000,INR,2024-03-14,16:45:18,15000,Transfer to unknown,ACC_UNKNOWN_11,
+TXN405,78901234567890,,DEBIT,15000,INR,2024-03-15,10:22:55,0,Final transfer,ACC_UNKNOWN_12,

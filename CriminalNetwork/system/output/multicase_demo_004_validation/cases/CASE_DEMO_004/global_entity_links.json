@@ -1,0 +1,92 @@
+[
+  {
+    "id": "GLINK_13fdd6f2d3ba9274",
+    "global_entity_id": "GLOB_845bb038c7a4b9c0",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_eea76256ba5071e8",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723747"
+  },
+  {
+    "id": "GLINK_11e9194fa40ca1cd",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_06b3f3578a482b62",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T01:18:01.723776"
+  },
+  {
+    "id": "GLINK_231fb2881e674df7",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_8ca046c4d2b31eec",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723784"
+  },
+  {
+    "id": "GLINK_c880d4e5a9a1bef0",
+    "global_entity_id": "GLOB_109367ed445a3dbb",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_64c93e46d936b370",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723789"
+  },
+  {
+    "id": "GLINK_e061e281920ff3a2",
+    "global_entity_id": "GLOB_5763af4df94e1451",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_bef1fd491d32342d",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723794"
+  },
+  {
+    "id": "GLINK_50f7dd861031840f",
+    "global_entity_id": "GLOB_5a394b6bd5734224",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_7a026607d0550ea2",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723798"
+  },
+  {
+    "id": "GLINK_5806de2ee44d79b4",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_b99c97d8ee472310",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T01:18:01.723804"
+  },
+  {
+    "id": "GLINK_1a2eb6d2fa825f98",
+    "global_entity_id": "GLOB_c5de60302d6e475d",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_3120efd78d82e958",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "new_identity",
+    "created_at": "2026-09-26T01:18:01.723808"
+  },
+  {
+    "id": "GLINK_024552e087104f3a",
+    "global_entity_id": "GLOB_1100b33780b7d729",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_61aa74134565f94a",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "new_identity",
+    "created_at": "2026-09-26T01:18:01.723812"
+  }
+]

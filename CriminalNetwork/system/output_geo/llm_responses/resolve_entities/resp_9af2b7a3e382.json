@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_9af2b7a3e382",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "ccc96c4ce1486271",
+  "response_text": "{\"groups\":[]}",
+  "usage": {
+    "queue_time": 0.330467096,
+    "prompt_tokens": 664,
+    "prompt_time": 0.052149898,
+    "completion_tokens": 91,
+    "completion_time": 0.103103982,
+    "total_tokens": 755,
+    "total_time": 0.15525388,
+    "completion_tokens_details": {
+      "reasoning_tokens": 78
+    }
+  },
+  "latency_ms": 541,
+  "status": "success",
+  "timestamp": "2026-09-26T16:49:35.638399",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

@@ -1,0 +1,207 @@
+[
+  {
+    "community_id": "COMM_000",
+    "node_ids": [
+      "RES_0a5f31f39f5d619c",
+      "RES_243e24ad346d8280",
+      "RES_2598d38e2c05ebfd",
+      "RES_300f407a20afc186",
+      "RES_30e25080b729e116",
+      "RES_50fa850b2b1ec9e6",
+      "RES_5e7a311a822ca6a9",
+      "RES_63d499c2497b67bf",
+      "RES_79c68df2ef361a94",
+      "RES_8287839d361433db",
+      "RES_83ffbf03efb7a14f",
+      "RES_967e8c804eb0f501",
+      "RES_a528aca8e5baa10e",
+      "RES_a7c71cd9094d5472",
+      "RES_b5be59d98f8852ba",
+      "RES_bc78f86efbf0de2e",
+      "RES_c3030ec171146c2e",
+      "RES_e58f87794912ed5f",
+      "RES_e5b65c1392f80b7b",
+      "RES_f1c5114c09cb9b0a",
+      "RES_f4702ff00deb7d8c",
+      "RES_f90015a9027df8e3",
+      "RES_fdc38623b57854bf"
+    ],
+    "size": 23,
+    "modularity_contribution": 0.0137,
+    "internal_edge_count": 29,
+    "density": 0.1146,
+    "dominant_node_type": "location",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_001",
+    "node_ids": [
+      "RES_06b3f3578a482b62",
+      "RES_2ec87e12b0079f30",
+      "RES_3120efd78d82e958",
+      "RES_3e438bacdb6bd7b1",
+      "RES_4264eb17660c61ad",
+      "RES_48525c6a88fc3411",
+      "RES_61aa74134565f94a",
+      "RES_6434409a025c9670",
+      "RES_6be157c3c6f87a4d",
+      "RES_8e92ecfddbb47495",
+      "RES_91732012383563d5",
+      "RES_9eeb75085f3656ee",
+      "RES_a43997b49dba49ba",
+      "RES_a59f6dde2097f238",
+      "RES_b58f92dec7cf0b3e",
+      "RES_be6301fa2bf3102d",
+      "RES_c7be54dc05b347e3",
+      "RES_ce4c1813fe797d7d",
+      "RES_ce5f6b84e2e7bf94",
+      "RES_f25656819bff4177",
+      "RES_f68c81b6aea8398e"
+    ],
+    "size": 21,
+    "modularity_contribution": 0.0197,
+    "internal_edge_count": 38,
+    "density": 0.181,
+    "dominant_node_type": "location",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_002",
+    "node_ids": [
+      "RES_04842ef365a93d12",
+      "RES_2e6dcc0d467c0fff",
+      "RES_3085e19cabdc5b3d",
+      "RES_48a47ecc2482615b",
+      "RES_58d3eec5a549b5f5",
+      "RES_59fbce86ff5a044e",
+      "RES_7b5526f65914ca75",
+      "RES_7f39e2873da1ab8f",
+      "RES_9768897216059a61",
+      "RES_c63c5d4388974242",
+      "RES_c6a149cdedea93e6",
+      "RES_e41d5c9970d2fc45",
+      "RES_e95c77c1e77f9515"
+    ],
+    "size": 13,
+    "modularity_contribution": 0.0138,
+    "internal_edge_count": 16,
+    "density": 0.2051,
+    "dominant_node_type": "person",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_003",
+    "node_ids": [
+      "RES_38774b6f969f44fa",
+      "RES_80be8403238f9dfb",
+      "RES_9168a3cc71452b89",
+      "RES_9fa593049c69aa1c",
+      "RES_e140dc545c81ca52",
+      "RES_fe56813839bcc2b8"
+    ],
+    "size": 6,
+    "modularity_contribution": 0.0104,
+    "internal_edge_count": 5,
+    "density": 0.3333,
+    "dominant_node_type": "organization",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_004",
+    "node_ids": [
+      "RES_09763f4e98889fb1",
+      "RES_4dc64768eddf1f45",
+      "RES_747818a0b3537ee6",
+      "RES_ab1ee5b4616da76e",
+      "RES_b25c78b54eb46537",
+      "RES_e2dd7a4131e26bbb"
+    ],
+    "size": 6,
+    "modularity_contribution": 0.0124,
+    "internal_edge_count": 6,
+    "density": 0.4,
+    "dominant_node_type": "account",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_005",
+    "node_ids": [
+      "RES_0a7336429b2e52ab",
+      "RES_72095be007ab1aa4",
+      "RES_912712ac7d7f7bd7",
+      "RES_9f646a5f8a1d77f4"
+    ],
+    "size": 4,
+    "modularity_contribution": 0.0207,
+    "internal_edge_count": 6,
+    "density": 1.0,
+    "dominant_node_type": "event",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_006",
+    "node_ids": [
+      "RES_3ad4e416b5fcd0b1",
+      "RES_6197362326e7f20c",
+      "RES_d7b7a3807abd2258"
+    ],
+    "size": 3,
+    "modularity_contribution": 0.0155,
+    "internal_edge_count": 3,
+    "density": 1.0,
+    "dominant_node_type": "person",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_007",
+    "node_ids": [
+      "RES_01804c8fbc111dbd",
+      "RES_4abe7b8fe28c4e6f"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0104,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "organization",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_008",
+    "node_ids": [
+      "RES_2c89178b4963b445",
+      "RES_c078bc8d6d80314b"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0104,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "organization",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_009",
+    "node_ids": [
+      "RES_0a18a7b09bb945cb",
+      "RES_570cf91d41cd7a12"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0104,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "person",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "community_id": "COMM_010",
+    "node_ids": [
+      "RES_14039349d66ebf3c",
+      "RES_28a1528ee4c0119d"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0104,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260926_164752"
+  }
+]

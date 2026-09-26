@@ -1,0 +1,4604 @@
+{
+  "files": {
+    "00_CRIME_STORY.md": {
+      "file_name": "00_CRIME_STORY.md",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/00_CRIME_STORY.md",
+      "description": "Case narrative document. 0 entities extracted.",
+      "document_type": "case_narrative",
+      "entities_extracted": [],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.8,
+      "reliability_notes": "Investigative summary",
+      "ingestion_time": "2026-09-23T00:13:18.042115",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "01_FIR.txt": {
+      "file_name": "01_FIR.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/01_FIR.txt",
+      "description": "FIR document.   27 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "PHONE_a353fb4092c96d33",
+          "type": "PHONE",
+          "name": "9876543213"
+        },
+        {
+          "id": "AMOUNT_155759e45298d60b",
+          "type": "AMOUNT",
+          "name": "Rs. 5,00,000"
+        },
+        {
+          "id": "AMOUNT_3465c31c3f814940",
+          "type": "AMOUNT",
+          "name": "Rs. 15,00,000"
+        },
+        {
+          "id": "PERSON_b66694c77645402b",
+          "type": "PERSON",
+          "name": "Meena Devi"
+        },
+        {
+          "id": "PERSON_3741b703d2b73185",
+          "type": "PERSON",
+          "name": "Shri Harish Chand"
+        },
+        {
+          "id": "DATE_6cbc919cac4341c3",
+          "type": "DATE",
+          "name": "15/03/2024"
+        },
+        {
+          "id": "AMOUNT_13c347396595bf8e",
+          "type": "AMOUNT",
+          "name": "123/2024"
+        },
+        {
+          "id": "LOCATION_c4911c8c30edd7de",
+          "type": "LOCATION",
+          "name": "East Delhi"
+        },
+        {
+          "id": "DATE_d38c3a66154452dd",
+          "type": "DATE",
+          "name": "34 years"
+        },
+        {
+          "id": "PERSON_d4aab4888fb04694",
+          "type": "PERSON",
+          "name": "Rose Apartments"
+        },
+        {
+          "id": "PERSON_da3431ef66e742ca",
+          "type": "PERSON",
+          "name": "Lajpat Nagar"
+        },
+        {
+          "id": "LOCATION_9ed6d0e61816a424",
+          "type": "LOCATION",
+          "name": "New Delhi"
+        },
+        {
+          "id": "DATE_66a129258179d731",
+          "type": "DATE",
+          "name": "12th March 2024"
+        },
+        {
+          "id": "ORGANIZATION_37ba7bdd1c491581",
+          "type": "ORGANIZATION",
+          "name": "SBI Customer Care"
+        },
+        {
+          "id": "DATE_694023070e84bf5b",
+          "type": "DATE",
+          "name": "13th March 2024"
+        },
+        {
+          "id": "ORGANIZATION_6c0e6acd35694622",
+          "type": "ORGANIZATION",
+          "name": "OTP"
+        },
+        {
+          "id": "DATE_d8eaba1575ee7da5",
+          "type": "DATE",
+          "name": "14th March 2024"
+        },
+        {
+          "id": "AMOUNT_8b5b9db0c13db242",
+          "type": "AMOUNT",
+          "name": "three"
+        },
+        {
+          "id": "ORGANIZATION_caa510e9d5057a69",
+          "type": "ORGANIZATION",
+          "name": "SBI"
+        },
+        {
+          "id": "AMOUNT_ef612b1b744a6f86",
+          "type": "AMOUNT",
+          "name": "15,00,000"
+        },
+        {
+          "id": "AMOUNT_c463967e5708cab7",
+          "type": "AMOUNT",
+          "name": "fifteen"
+        },
+        {
+          "id": "AMOUNT_1a452dcf7be46063",
+          "type": "AMOUNT",
+          "name": "5,00,000"
+        },
+        {
+          "id": "ORGANIZATION_a370d63d12846c1e",
+          "type": "ORGANIZATION",
+          "name": "HDFC Bank"
+        },
+        {
+          "id": "ORGANIZATION_eb64ebaee08e80b0",
+          "type": "ORGANIZATION",
+          "name": "Punjab National Bank"
+        },
+        {
+          "id": "ORGANIZATION_fce0b15c7c195529",
+          "type": "ORGANIZATION",
+          "name": "Bank of Baroda"
+        },
+        {
+          "id": "ORGANIZATION_61ef8cb5c4f3d3ea",
+          "type": "ORGANIZATION",
+          "name": "FIR"
+        },
+        {
+          "id": "DATE_5bbfaccefdf61322",
+          "type": "DATE",
+          "name": "14:30 hours"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Phone number 9876543213 mentioned in FIR"
+      ],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-23T00:13:18.043120",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "02_CDR_Rakesh.csv": {
+      "file_name": "02_CDR_Rakesh.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/02_CDR_Rakesh.csv",
+      "description": "Call Detail Records. 9 entities extracted from 15 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [
+        {
+          "id": "PHONE_7619ee8cea49187f",
+          "type": "PHONE",
+          "name": "9876543210"
+        },
+        {
+          "id": "LOC_ddf5af9bcfac37ca",
+          "type": "LOCATION",
+          "name": "Karol Bagh Tower 1"
+        },
+        {
+          "id": "PHONE_e26019ce48adebef",
+          "type": "PHONE",
+          "name": "9876543211"
+        },
+        {
+          "id": "LOC_f456d82b59db5b73",
+          "type": "LOCATION",
+          "name": "Karol Bagh Tower 3"
+        },
+        {
+          "id": "LOC_438561c65c9e4353",
+          "type": "LOCATION",
+          "name": "Nehru Nagar Tower 2"
+        },
+        {
+          "id": "PHONE_8a8023e9f7760676",
+          "type": "PHONE",
+          "name": "9876543212"
+        },
+        {
+          "id": "LOC_64eaba9d08ceff1d",
+          "type": "LOCATION",
+          "name": "Dwarka Sector 12 Tower"
+        },
+        {
+          "id": "PHONE_ef5fb01e7fd16dee",
+          "type": "PHONE",
+          "name": "9876543214"
+        },
+        {
+          "id": "LOC_8de9f79573e30455",
+          "type": "LOCATION",
+          "name": "Lajpat Nagar Tower 1"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_13fec8b312f85ff0",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_bca989608f2e2586",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_6317449621efe53f",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_6b2b65f3672c3b62",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_2539906869c055c4",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_f456d82b59db5b73"
+        },
+        {
+          "id": "REL_d904901c394d558c",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_ee117f2c894cbdc4",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_6f1e6654eb54fd48",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_fad96f949f82a215",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_438561c65c9e4353"
+        },
+        {
+          "id": "REL_3d77da74b093987d",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_1c56839f4eece37c",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_69f9a53f1ad0a50c",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_63f9986fe826b6b8",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_5025a0a271734ba3",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_3a5029ccf6cee6c4",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_438561c65c9e4353"
+        },
+        {
+          "id": "REL_aade1a8e58b15d46",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_9c674ed8d3dd8d5a",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_dd966e119a01213f",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_498ca5038c24e32b",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_b14148ec78c64bc8",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_c8948231935e5e64",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_62b5c710fe3e9d05",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_7ae669a39910383c",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_f456d82b59db5b73"
+        },
+        {
+          "id": "REL_55018564f55e57d2",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_a82ded50296c655e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_dd7d19a83cd9aafa",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_4f0229772d587a02",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_e41cb299e82b326e",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_ef5fb01e7fd16dee"
+        },
+        {
+          "id": "REL_22fe5180c853d12c",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_f315fc8f218bdd88",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_a353fb4092c96d33 (7 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.043465",
+      "record_count": 15,
+      "raw_summary": ""
+    },
+    "03_CDR_Suresh.csv": {
+      "file_name": "03_CDR_Suresh.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/03_CDR_Suresh.csv",
+      "description": "Call Detail Records. 0 entities extracted from 11 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_4e84af635165e0ed",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_84ff00060c518288",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_dc3e3e9f920c60e4",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_0eac0493b3bcd4ce",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_15870f0a84f24681",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_d761f9faf5f92311",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_f480e884a36cc225",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_ffc33409d9fe28ec",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_10148670d6f64243",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_5e78e5667291f496",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_b677c886db94e2b2",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_da01a98c790620d9",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_ba45f33cdf28ea91",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_1ca30e1820cd51c3",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_601efa7755c22c64",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_635c08900ba86f72",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_a9345b114846e98d",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_c93e4562ba3d82da",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_945c037c07643b99",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_438561c65c9e4353"
+        },
+        {
+          "id": "REL_d7d655efa539536c",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_3f19f64e94585601",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_fe7abb94b0bc9aa1",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_a353fb4092c96d33"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (6 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.045598",
+      "record_count": 11,
+      "raw_summary": ""
+    },
+    "04_CDR_Amit.csv": {
+      "file_name": "04_CDR_Amit.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/04_CDR_Amit.csv",
+      "description": "Call Detail Records. 1 entities extracted from 8 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [
+        {
+          "id": "LOC_8f30741d308610e1",
+          "type": "LOCATION",
+          "name": "Noida Sector 62 Tower"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_8ddc8f4e1bd709f1",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_b55ea47c9c622259",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_767aee7848a8ca28",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_e0199470989c9d7c",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_fe0034acabd92d19",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_27546b53019e171d",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_020680c5637d0e5c",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_53d0a3381aa8a47e",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_8ec0f07980a9c893",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_4745ad7fed54da9f",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_0105f94d3eb58460",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_2cd4813b92f1cae5",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_ef5fb01e7fd16dee"
+        },
+        {
+          "id": "REL_5dc6c80315f9db59",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_0a028e8d04e67d44",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_8873d721db9c2f6d",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_9cfcb148f3590a5a",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_e26019ce48adebef"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (3 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.046647",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "05_Bank_Rakesh.csv": {
+      "file_name": "05_Bank_Rakesh.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/05_Bank_Rakesh.csv",
+      "description": "Bank transaction records. 3 entities extracted from 7 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "PERSON_23492e71991bc7b9",
+          "type": "PERSON",
+          "name": "Rakesh Kumar"
+        },
+        {
+          "id": "ACCT_c17c025fb9ed44ea",
+          "type": "ACCOUNT",
+          "name": "Account 1234"
+        },
+        {
+          "id": "ACCT_d85674cd46328697",
+          "type": "ACCOUNT",
+          "name": "Account 1235"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_208a9981b0972976",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "ACCT_c17c025fb9ed44ea"
+        },
+        {
+          "id": "REL_caab892fd6ec5b37",
+          "type": "TRANSFERRED_TO",
+          "source": "ACCT_c17c025fb9ed44ea",
+          "target": "ACCT_d85674cd46328697"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.047567",
+      "record_count": 7,
+      "raw_summary": ""
+    },
+    "06_Bank_Suresh.csv": {
+      "file_name": "06_Bank_Suresh.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/06_Bank_Suresh.csv",
+      "description": "Bank transaction records. 2 entities extracted from 6 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "PERSON_915ca1cfe5a261f0",
+          "type": "PERSON",
+          "name": "Suresh Kumar"
+        },
+        {
+          "id": "ACCT_5a1b78d720b151af",
+          "type": "ACCOUNT",
+          "name": "Account 9876"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_633c7944935c1fc7",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_915ca1cfe5a261f0",
+          "target": "ACCT_5a1b78d720b151af"
+        },
+        {
+          "id": "REL_0ce571dffaf51b45",
+          "type": "RECEIVED_FROM",
+          "source": "ACCT_5a1b78d720b151af",
+          "target": "ACCT_c17c025fb9ed44ea"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.051983",
+      "record_count": 6,
+      "raw_summary": ""
+    },
+    "07_Bank_Amit.csv": {
+      "file_name": "07_Bank_Amit.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/07_Bank_Amit.csv",
+      "description": "Bank transaction records. 2 entities extracted from 4 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "PERSON_75110ab02c0160f9",
+          "type": "PERSON",
+          "name": "Amit Sharma"
+        },
+        {
+          "id": "ACCT_aedd1b949f282279",
+          "type": "ACCOUNT",
+          "name": "Account 5678"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_d41b17979f167ecb",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "ACCT_aedd1b949f282279"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.053450",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "08_Device_Rakesh.json": {
+      "file_name": "08_Device_Rakesh.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/08_Device_Rakesh.json",
+      "description": "Mobile device extraction. 13 entities extracted (contacts, chats, photos, SMS).",
+      "document_type": "device_extraction",
+      "entities_extracted": [
+        {
+          "id": "DEVICE_a1b575e0d3dabdc9",
+          "type": "DEVICE",
+          "name": "Device: Samsung Galaxy S21"
+        },
+        {
+          "id": "PERSON_c63ac5eb1535a215",
+          "type": "PERSON",
+          "name": "Suresh Bhai"
+        },
+        {
+          "id": "PERSON_105a112c81ce60e6",
+          "type": "PERSON",
+          "name": "Amit"
+        },
+        {
+          "id": "PHONE_3d649a61fbc63878",
+          "type": "PHONE",
+          "name": "9876543220"
+        },
+        {
+          "id": "PERSON_d71ab13e9efcf04e",
+          "type": "PERSON",
+          "name": "Bhai Sahab"
+        },
+        {
+          "id": "PERSON_bdae71cfb51d493f",
+          "type": "PERSON",
+          "name": "Meena Ji"
+        },
+        {
+          "id": "PHONE_9fbdb74aacb6f47f",
+          "type": "PHONE",
+          "name": "9812345678"
+        },
+        {
+          "id": "ORG_4b8a1601852a8525",
+          "type": "ORGANIZATION",
+          "name": "Rajesh Electronics"
+        },
+        {
+          "id": "PHONE_8d4ea81fbbc86477",
+          "type": "PHONE",
+          "name": "01126543210"
+        },
+        {
+          "id": "ORG_485bdeb3c76752d4",
+          "type": "ORGANIZATION",
+          "name": "RK Telecom Office"
+        },
+        {
+          "id": "PHONE_a4e00d7e6aa82111",
+          "type": "PHONE",
+          "name": "198"
+        },
+        {
+          "id": "ORG_7fd1eb60e433a497",
+          "type": "ORGANIZATION",
+          "name": "Airtel Customer Care"
+        },
+        {
+          "id": "LOC_b45a7cc884cf53ee",
+          "type": "LOCATION",
+          "name": "Karol Bagh, Delhi"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_79ae00036e071ca5",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_c63ac5eb1535a215",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_e32cb5b32fd0dbe5",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_105a112c81ce60e6",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_528ced19ab0de59d",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_d71ab13e9efcf04e",
+          "target": "PHONE_3d649a61fbc63878"
+        },
+        {
+          "id": "REL_34d1d82ae3b949ec",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_bdae71cfb51d493f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_332cc90731bb7193",
+          "type": "ASSOCIATED_WITH",
+          "source": "ORG_4b8a1601852a8525",
+          "target": "PHONE_9fbdb74aacb6f47f"
+        },
+        {
+          "id": "REL_5b4537fa1e2e0d01",
+          "type": "ASSOCIATED_WITH",
+          "source": "ORG_485bdeb3c76752d4",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_cf9defd8199fd097",
+          "type": "ASSOCIATED_WITH",
+          "source": "ORG_7fd1eb60e433a497",
+          "target": "PHONE_a4e00d7e6aa82111"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Contains direct evidence of criminal planning",
+        "Chat messages may prove conspiracy"
+      ],
+      "missing": [
+        "Deleted messages may be missing",
+        "Encrypted chats not captured"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Forensic extraction",
+      "ingestion_time": "2026-09-23T00:13:18.054295",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "09_Social_Amit.json": {
+      "file_name": "09_Social_Amit.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/09_Social_Amit.json",
+      "description": "Social media data. 6 entities extracted (profile, posts, DMs).",
+      "document_type": "social_media",
+      "entities_extracted": [
+        {
+          "id": "POST_9d2551e3464eafeb",
+          "type": "EVENT",
+          "name": "Post: New beginnings at Karol Bagh office #business #del"
+        },
+        {
+          "id": "POST_faae857a7eacc0b2",
+          "type": "EVENT",
+          "name": "Post: Meeting with partners #networking"
+        },
+        {
+          "id": "LOC_519726048a82c0a5",
+          "type": "LOCATION",
+          "name": "Connaught Place, Delhi"
+        },
+        {
+          "id": "POST_1fb2ec07350f3220",
+          "type": "EVENT",
+          "name": "Post: Successful day #business"
+        },
+        {
+          "id": "POST_450ffb171a8178c2",
+          "type": "EVENT",
+          "name": "Post: Noida office visit #work"
+        },
+        {
+          "id": "LOC_e84caccb77e25aa2",
+          "type": "LOCATION",
+          "name": "Noida Sector 62"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_90d5628e84e060f5",
+          "type": "VISITED",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "LOC_b45a7cc884cf53ee"
+        },
+        {
+          "id": "REL_43e5d390dfd68d19",
+          "type": "VISITED",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "LOC_519726048a82c0a5"
+        },
+        {
+          "id": "REL_73b89a4e9a4de68c",
+          "type": "VISITED",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "LOC_e84caccb77e25aa2"
+        },
+        {
+          "id": "REL_ac5b9f0fa1a163f0",
+          "type": "MESSED",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "PERSON_23492e71991bc7b9"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows lifestyle and movements of suspect",
+        "DMs may contain evidence of coordination"
+      ],
+      "missing": [
+        "Only public/available data",
+        "Private accounts may be excluded"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.7,
+      "reliability_notes": "Platform data, may be incomplete",
+      "ingestion_time": "2026-09-23T00:13:18.054561",
+      "record_count": 5,
+      "raw_summary": ""
+    },
+    "10_CCTV_Log.csv": {
+      "file_name": "10_CCTV_Log.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/10_CCTV_Log.csv",
+      "description": "CCTV entry/exit log. 6 entities extracted from 11 records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [
+        {
+          "id": "LOC_0e74cea9438de0e4",
+          "type": "LOCATION",
+          "name": "Lajpat Nagar Part II Camera 3"
+        },
+        {
+          "id": "LOC_2d27b53729507310",
+          "type": "LOCATION",
+          "name": "Lajpat Nagar Part II Camera 1"
+        },
+        {
+          "id": "LOC_ac070b942a2426e8",
+          "type": "LOCATION",
+          "name": "Karol Bagh Main Market Camera 7"
+        },
+        {
+          "id": "LOC_6f827effaccad628",
+          "type": "LOCATION",
+          "name": "Dwarka Sector 12 Main Gate Camera"
+        },
+        {
+          "id": "LOC_342bb7cffefbd624",
+          "type": "LOCATION",
+          "name": "Karol Bagh Main Market Camera 5"
+        },
+        {
+          "id": "LOC_0b431dfb1b8603cd",
+          "type": "LOCATION",
+          "name": "Noida Sector 62 Gate Camera"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.054844",
+      "record_count": 11,
+      "raw_summary": ""
+    },
+    "11_Criminal_History.json": {
+      "file_name": "11_Criminal_History.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/11_Criminal_History.json",
+      "description": "Criminal history records. 4 entities extracted (prior cases, associations).",
+      "document_type": "criminal_history",
+      "entities_extracted": [
+        {
+          "id": "CASE_c1db9559568c7381",
+          "type": "EVENT",
+          "name": "Case: FIR 456/2022"
+        },
+        {
+          "id": "CASE_668ff83b2fc766f5",
+          "type": "EVENT",
+          "name": "Case: FIR 789/2023"
+        },
+        {
+          "id": "CASE_dea3a7e853e97f68",
+          "type": "EVENT",
+          "name": "Case: FIR 234/2023"
+        },
+        {
+          "id": "CASE_2736af5de68ff0d8",
+          "type": "EVENT",
+          "name": "Case: FIR 567/2023"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_5ac96b20e4d8c0fd",
+          "type": "SUSPECT_OF",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "CASE_c1db9559568c7381"
+        },
+        {
+          "id": "REL_15738dad3da03ddf",
+          "type": "SUSPECT_OF",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "CASE_668ff83b2fc766f5"
+        },
+        {
+          "id": "REL_1d9fda995047c47d",
+          "type": "SUSPECT_OF",
+          "source": "PERSON_915ca1cfe5a261f0",
+          "target": "CASE_dea3a7e853e97f68"
+        },
+        {
+          "id": "REL_5bd2b5d98d906afa",
+          "type": "SUSPECT_OF",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "CASE_2736af5de68ff0d8"
+        },
+        {
+          "id": "REL_53d005d13f736db8",
+          "type": "WORKS_WITH",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "PERSON_915ca1cfe5a261f0"
+        },
+        {
+          "id": "REL_1e02d20eb983d2d7",
+          "type": "ASSOCIATE_OF",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "PERSON_75110ab02c0160f9"
+        },
+        {
+          "id": "REL_cce4ad211fe2670b",
+          "type": "FRIEND_OF",
+          "source": "PERSON_915ca1cfe5a261f0",
+          "target": "PERSON_75110ab02c0160f9"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Establishes pattern of criminal behavior",
+        "Links suspect to prior cases"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police records",
+      "ingestion_time": "2026-09-23T00:13:18.055973",
+      "record_count": 2,
+      "raw_summary": ""
+    },
+    "12_WEIRD_CDR.csv": {
+      "file_name": "12_WEIRD_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/12_WEIRD_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 4 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_3ca5f38ab3136f2e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_51edad04e2d8e2bb",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_ccc36bfa89c5ea2e",
+          "type": "VISITED",
+          "source": "PHONE_8d4ea81fbbc86477",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_a91acfb215fc0dc7",
+          "type": "CALLED",
+          "source": "PHONE_8d4ea81fbbc86477",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_98dfaf24c977f0a1",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_4c3b77cfc1c93df6",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_56f42886658118bd",
+          "type": "VISITED",
+          "source": "PHONE_8d4ea81fbbc86477",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_78c6b697fbe867df",
+          "type": "CALLED",
+          "source": "PHONE_8d4ea81fbbc86477",
+          "target": "PHONE_a353fb4092c96d33"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_8d4ea81fbbc86477 (2 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.056268",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "13_FIR_Rajesh.txt": {
+      "file_name": "13_FIR_Rajesh.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/13_FIR_Rajesh.txt",
+      "description": "FIR document.   12 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "PERSON_430ff6a38fb745c3",
+          "type": "PERSON",
+          "name": "Shri Mahesh Chand"
+        },
+        {
+          "id": "PERSON_2d426be6a60758d5",
+          "type": "PERSON",
+          "name": "Rajesh Kumar"
+        },
+        {
+          "id": "DATE_46fbd27c612b07eb",
+          "type": "DATE",
+          "name": "22/03/2024"
+        },
+        {
+          "id": "AMOUNT_c2092663b84c9920",
+          "type": "AMOUNT",
+          "name": "456/2024"
+        },
+        {
+          "id": "DATE_4b4d474a2198985d",
+          "type": "DATE",
+          "name": "42 years"
+        },
+        {
+          "id": "DATE_e98e9265a371cab6",
+          "type": "DATE",
+          "name": "approximately 9:15 AM"
+        },
+        {
+          "id": "DATE_4b8328539299a89c",
+          "type": "DATE",
+          "name": "around 8:45 AM"
+        },
+        {
+          "id": "DATE_248c33f46819bd6c",
+          "type": "DATE",
+          "name": "approximately 9:00 AM"
+        },
+        {
+          "id": "PERSON_7726af14f2d056b6",
+          "type": "PERSON",
+          "name": "Meena Devi's"
+        },
+        {
+          "id": "DATE_c457a36aabb4fb93",
+          "type": "DATE",
+          "name": "about 10 minutes"
+        },
+        {
+          "id": "ORGANIZATION_f78dd8e6016cfa74",
+          "type": "ORGANIZATION",
+          "name": "CCTV"
+        },
+        {
+          "id": "DATE_78b9c9c3ec98cddd",
+          "type": "DATE",
+          "name": "11:15 hours"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-23T00:13:18.057100",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "14_CDR_Meena.csv": {
+      "file_name": "14_CDR_Meena.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/14_CDR_Meena.csv",
+      "description": "Call Detail Records. 0 entities extracted from 7 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_5e47870be38b1b88",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_3c484c3d88fafe97",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_3f1a01559f00a424",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_9688a5f2cc8bdd4d",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_1fd1248ac816604a",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_42490f40a4446eb5",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_e9f16002f8a6eeb1",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_850dfbb13ff93bc5",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_2e8d11025e2e3a3a",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_cd693b5309d86976",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_3d9341d8b2752165",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_0721f51f1e3c238b",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_8d4ea81fbbc86477"
+        },
+        {
+          "id": "REL_28b8979f31efc7d6",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_7b9b2056f8a1fcba",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (4 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.057464",
+      "record_count": 7,
+      "raw_summary": ""
+    },
+    "15_Bank_Meena.csv": {
+      "file_name": "15_Bank_Meena.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/15_Bank_Meena.csv",
+      "description": "Bank transaction records. 1 entities extracted from 3 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "ACCT_a6076b509f61275e",
+          "type": "ACCOUNT",
+          "name": "Account 2345"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_7a8bffff97d43dd1",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_b66694c77645402b",
+          "target": "ACCT_a6076b509f61275e"
+        },
+        {
+          "id": "REL_e43b5c58794b8075",
+          "type": "TRANSFERRED_TO",
+          "source": "ACCT_a6076b509f61275e",
+          "target": "ACCT_c17c025fb9ed44ea"
+        },
+        {
+          "id": "REL_810dc992147e58ff",
+          "type": "TRANSFERRED_TO",
+          "source": "ACCT_a6076b509f61275e",
+          "target": "ACCT_5a1b78d720b151af"
+        },
+        {
+          "id": "REL_be750962e31e4297",
+          "type": "TRANSFERRED_TO",
+          "source": "ACCT_a6076b509f61275e",
+          "target": "ACCT_aedd1b949f282279"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.058339",
+      "record_count": 3,
+      "raw_summary": ""
+    },
+    "16_Device_Amit.json": {
+      "file_name": "16_Device_Amit.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/16_Device_Amit.json",
+      "description": "Mobile device extraction. 13 entities extracted (contacts, chats, photos, SMS).",
+      "document_type": "device_extraction",
+      "entities_extracted": [
+        {
+          "id": "DEVICE_5c27bcb2808812ad",
+          "type": "DEVICE",
+          "name": "Device: Xiaomi Redmi Note 12"
+        },
+        {
+          "id": "PERSON_5cbac5323a616f86",
+          "type": "PERSON",
+          "name": "Rakesh Bhai"
+        },
+        {
+          "id": "PERSON_f73ad70629191b0d",
+          "type": "PERSON",
+          "name": "Suresh"
+        },
+        {
+          "id": "PHONE_d38a9a689c50b16e",
+          "type": "PHONE",
+          "name": "9876543215"
+        },
+        {
+          "id": "PERSON_bb515e95562574af",
+          "type": "PERSON",
+          "name": "Neeraj"
+        },
+        {
+          "id": "PHONE_7b74611f26dc07cd",
+          "type": "PHONE",
+          "name": "9876543216"
+        },
+        {
+          "id": "PERSON_ff28988444e5efd4",
+          "type": "PERSON",
+          "name": "Pooja"
+        },
+        {
+          "id": "PERSON_d41c55bf957849d2",
+          "type": "PERSON",
+          "name": "Bhai"
+        },
+        {
+          "id": "PERSON_6a6ac8386005b00f",
+          "type": "PERSON",
+          "name": "Boss"
+        },
+        {
+          "id": "PHONE_42ed1a392df88b25",
+          "type": "PHONE",
+          "name": "01129876543"
+        },
+        {
+          "id": "PERSON_475f3f364856ea70",
+          "type": "PERSON",
+          "name": "Shop - Lajpat Nagar"
+        },
+        {
+          "id": "PHONE_042dfc35916c097e",
+          "type": "PHONE",
+          "name": "18001021234"
+        },
+        {
+          "id": "ORG_fce0b15c7c195529",
+          "type": "ORGANIZATION",
+          "name": "Bank of Baroda"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_6c82818a9f926b35",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_5cbac5323a616f86",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_d9bc40e2ca175482",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_f73ad70629191b0d",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_60bfe2e206f5fb15",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_bb515e95562574af",
+          "target": "PHONE_d38a9a689c50b16e"
+        },
+        {
+          "id": "REL_2b4e597e3a4c8d62",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_ff28988444e5efd4",
+          "target": "PHONE_7b74611f26dc07cd"
+        },
+        {
+          "id": "REL_f8ee482be22e534d",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_d41c55bf957849d2",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_cda477c37dc833d3",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_6a6ac8386005b00f",
+          "target": "PHONE_3d649a61fbc63878"
+        },
+        {
+          "id": "REL_6806a8a46fb265ee",
+          "type": "ASSOCIATED_WITH",
+          "source": "PERSON_475f3f364856ea70",
+          "target": "PHONE_42ed1a392df88b25"
+        },
+        {
+          "id": "REL_db4bd9889cd4fd5b",
+          "type": "ASSOCIATED_WITH",
+          "source": "ORG_fce0b15c7c195529",
+          "target": "PHONE_042dfc35916c097e"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Contains direct evidence of criminal planning",
+        "Chat messages may prove conspiracy"
+      ],
+      "missing": [
+        "Deleted messages may be missing",
+        "Encrypted chats not captured"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Forensic extraction",
+      "ingestion_time": "2026-09-23T00:13:18.059183",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "17_Social_Rakesh.json": {
+      "file_name": "17_Social_Rakesh.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/17_Social_Rakesh.json",
+      "description": "Social media data. 3 entities extracted (profile, posts, DMs).",
+      "document_type": "social_media",
+      "entities_extracted": [
+        {
+          "id": "POST_65837e28f46c7807",
+          "type": "EVENT",
+          "name": "Post: New stock arrived at RK Telecom #mobile #shop"
+        },
+        {
+          "id": "POST_32854768a91920ae",
+          "type": "EVENT",
+          "name": "Post: Busy day at the shop #business"
+        },
+        {
+          "id": "POST_59176d5a6c79817f",
+          "type": "EVENT",
+          "name": "Post: Good morning Delhi #morning"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_e15d30c376d9e5c5",
+          "type": "VISITED",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "LOC_b45a7cc884cf53ee"
+        },
+        {
+          "id": "REL_e3f50c45a6dd5a12",
+          "type": "VISITED",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "LOC_b45a7cc884cf53ee"
+        },
+        {
+          "id": "REL_51c7791010365871",
+          "type": "MESSED",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "PERSON_75110ab02c0160f9"
+        },
+        {
+          "id": "REL_4ccabfba3f4a0011",
+          "type": "MESSED",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "PERSON_5e95ee9f0386dda2"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows lifestyle and movements of suspect",
+        "DMs may contain evidence of coordination"
+      ],
+      "missing": [
+        "Only public/available data",
+        "Private accounts may be excluded"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.7,
+      "reliability_notes": "Platform data, may be incomplete",
+      "ingestion_time": "2026-09-23T00:13:18.059385",
+      "record_count": 5,
+      "raw_summary": ""
+    },
+    "18_Witness_Statement.txt": {
+      "file_name": "18_Witness_Statement.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/18_Witness_Statement.txt",
+      "description": "Document. 13 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "AMOUNT_2fc0deec815dd4af",
+          "type": "AMOUNT",
+          "name": "Rs. 15"
+        },
+        {
+          "id": "DATE_d64a1fe2af191dae",
+          "type": "DATE",
+          "name": "11:30 hours"
+        },
+        {
+          "id": "ORGANIZATION_73728731a2aff159",
+          "type": "ORGANIZATION",
+          "name": "SI Vikram Rathore"
+        },
+        {
+          "id": "DATE_5af6d945a47b0813",
+          "type": "DATE",
+          "name": "Age 42"
+        },
+        {
+          "id": "DATE_01072043f9410721",
+          "type": "DATE",
+          "name": "the past 8 years"
+        },
+        {
+          "id": "AMOUNT_3fc4ccfe745870e2",
+          "type": "AMOUNT",
+          "name": "two"
+        },
+        {
+          "id": "DATE_8e0ab004c7c23334",
+          "type": "DATE",
+          "name": "around 9:15 AM"
+        },
+        {
+          "id": "DATE_094dac57e909da57",
+          "type": "DATE",
+          "name": "approximately 8:45 AM"
+        },
+        {
+          "id": "DATE_683bc8b68cb318bb",
+          "type": "DATE",
+          "name": "9:00 AM"
+        },
+        {
+          "id": "AMOUNT_8b12507783d5beca",
+          "type": "AMOUNT",
+          "name": "One"
+        },
+        {
+          "id": "DATE_63519cad309a18f7",
+          "type": "DATE",
+          "name": "the same day"
+        },
+        {
+          "id": "LOCATION_739b9d664d77db3e",
+          "type": "LOCATION",
+          "name": "hai"
+        },
+        {
+          "id": "AMOUNT_61ef8cb5c4f3d3ea",
+          "type": "AMOUNT",
+          "name": "FIR"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.059589",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "19_Surveillance_Report.txt": {
+      "file_name": "19_Surveillance_Report.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/19_Surveillance_Report.txt",
+      "description": "Document. 22 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "AMOUNT_4ec2c65c11681fd4",
+          "type": "AMOUNT",
+          "name": "Rs. 67,000"
+        },
+        {
+          "id": "AMOUNT_59290a56d9bc313f",
+          "type": "AMOUNT",
+          "name": "Rs. 25,000"
+        },
+        {
+          "id": "DATE_89a517bea81aaa1b",
+          "type": "DATE",
+          "name": "25/03/2024"
+        },
+        {
+          "id": "ORGANIZATION_f6c31158ad84bbf3",
+          "type": "ORGANIZATION",
+          "name": "Confidential - For Investigation Purposes"
+        },
+        {
+          "id": "PERSON_d90f6b7eaea6a9ac",
+          "type": "PERSON",
+          "name": "Nehru Nagar"
+        },
+        {
+          "id": "PERSON_87ad8c66656ae254",
+          "type": "PERSON",
+          "name": "Karol Bagh Main Market"
+        },
+        {
+          "id": "DATE_48ae3f036fa1ccc8",
+          "type": "DATE",
+          "name": "10:00 AM"
+        },
+        {
+          "id": "DATE_4190a74434240bda",
+          "type": "DATE",
+          "name": "8:00 PM"
+        },
+        {
+          "id": "DATE_392728fce66c2681",
+          "type": "DATE",
+          "name": "16 March"
+        },
+        {
+          "id": "DATE_6446f4f1020b9657",
+          "type": "DATE",
+          "name": "approximately 2:30 PM"
+        },
+        {
+          "id": "LOCATION_f4d9babc366dc531",
+          "type": "LOCATION",
+          "name": "Karol Bagh Metro"
+        },
+        {
+          "id": "DATE_eefe57dbc0d6dd0d",
+          "type": "DATE",
+          "name": "18 March"
+        },
+        {
+          "id": "ORGANIZATION_bc5e446ac5061fef",
+          "type": "ORGANIZATION",
+          "name": "SIM"
+        },
+        {
+          "id": "AMOUNT_79fd3a1ea2fde9e1",
+          "type": "AMOUNT",
+          "name": "67,000"
+        },
+        {
+          "id": "DATE_53f2f91b85a4986e",
+          "type": "DATE",
+          "name": "12 March"
+        },
+        {
+          "id": "DATE_cefc73bd6a84af1f",
+          "type": "DATE",
+          "name": "7:00 PM"
+        },
+        {
+          "id": "DATE_dc30446d3ad4cde9",
+          "type": "DATE",
+          "name": "19 March"
+        },
+        {
+          "id": "AMOUNT_c7e6673590d2426f",
+          "type": "AMOUNT",
+          "name": "25,000"
+        },
+        {
+          "id": "DATE_dd525bbf7d409e51",
+          "type": "DATE",
+          "name": "14 March"
+        },
+        {
+          "id": "ORGANIZATION_ff759e9fef48c739",
+          "type": "ORGANIZATION",
+          "name": "Noida"
+        },
+        {
+          "id": "PERSON_a8d99942a9f615a5",
+          "type": "PERSON",
+          "name": "Noida Phase 2"
+        },
+        {
+          "id": "DATE_e4a3bce0ee71b148",
+          "type": "DATE",
+          "name": "15 March"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.059833",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "20_Journalist_Note.txt": {
+      "file_name": "20_Journalist_Note.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/20_Journalist_Note.txt",
+      "description": "Document. 8 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "AMOUNT_325ee79e29ef6dda",
+          "type": "AMOUNT",
+          "name": "Rs. 5"
+        },
+        {
+          "id": "DATE_13677449972f3b01",
+          "type": "DATE",
+          "name": "28/03/2024"
+        },
+        {
+          "id": "PERSON_371ce02ae5647e65",
+          "type": "PERSON",
+          "name": "Priya Singh"
+        },
+        {
+          "id": "PERSON_d1991fa73f492014",
+          "type": "PERSON",
+          "name": "Delhi Herald"
+        },
+        {
+          "id": "ORGANIZATION_899f4725b13a40bc",
+          "type": "ORGANIZATION",
+          "name": "Delhi Police"
+        },
+        {
+          "id": "ORGANIZATION_57f7400db8c8d647",
+          "type": "ORGANIZATION",
+          "name": "RK Telecom"
+        },
+        {
+          "id": "PERSON_ac2255dabf2b2548",
+          "type": "PERSON",
+          "name": "Karol Bagh"
+        },
+        {
+          "id": "ORGANIZATION_3f5694c3789e0e65",
+          "type": "ORGANIZATION",
+          "name": "CDR"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.060091",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "21_Missing_Phone_CDR.csv": {
+      "file_name": "21_Missing_Phone_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/21_Missing_Phone_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 11 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_1d9a405476ef3178",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_36aed8b5316d2ddd",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_aa0084a8ccf98e30",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_e1766d913c04606c",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_7d25564e4dc0bc3e",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_46c763cb8c0a0532",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_3b869cd6e0dc1deb",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_918eb55561a72b8f",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_8bccf53770b70f20",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_be6f3076f403e840",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_0453d8a46fca2b10",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_a1720990110d33d9",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_f456d82b59db5b73"
+        },
+        {
+          "id": "REL_caa093f0015e893a",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_a681f7a0d32152fc",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_438561c65c9e4353"
+        },
+        {
+          "id": "REL_0b9fa10e25229f0c",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_e9f06742e76d2ba0",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (10 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.060311",
+      "record_count": 11,
+      "raw_summary": ""
+    },
+    "22_Bank_No_Name.csv": {
+      "file_name": "22_Bank_No_Name.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/22_Bank_No_Name.csv",
+      "description": "Bank transaction records. 1 entities extracted from 5 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "ACCT_51909bf47fc507df",
+          "type": "ACCOUNT",
+          "name": "Account 7890"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.061131",
+      "record_count": 5,
+      "raw_summary": ""
+    },
+    "23_FIR_No_Phone.txt": {
+      "file_name": "23_FIR_No_Phone.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/23_FIR_No_Phone.txt",
+      "description": "FIR document.   5 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "PERSON_b764cdc0eab71374",
+          "type": "PERSON",
+          "name": "Unknown"
+        },
+        {
+          "id": "ORGANIZATION_11cb60bb38877109",
+          "type": "ORGANIZATION",
+          "name": "SUPPLEMENTARY"
+        },
+        {
+          "id": "DATE_1105401fe9fd4817",
+          "type": "DATE",
+          "name": "25th March 2024"
+        },
+        {
+          "id": "AMOUNT_55de488df7c10afb",
+          "type": "AMOUNT",
+          "name": "at least three"
+        },
+        {
+          "id": "LOCATION_da3431ef66e742ca",
+          "type": "LOCATION",
+          "name": "Lajpat Nagar"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-23T00:13:18.061834",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "24_CCTV_Gap_Timestamps.csv": {
+      "file_name": "24_CCTV_Gap_Timestamps.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/24_CCTV_Gap_Timestamps.csv",
+      "description": "CCTV entry/exit log. 0 entities extracted from 10 records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.062059",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "25_Social_Partial.json": {
+      "file_name": "25_Social_Partial.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/25_Social_Partial.json",
+      "description": "Social media data. 1 entities extracted (profile, posts, DMs).",
+      "document_type": "social_media",
+      "entities_extracted": [
+        {
+          "id": "PERSON_e3b0c44298fc1c14",
+          "type": "PERSON",
+          "name": ""
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_73a89fe0fd3c7a5b",
+          "type": "MESSED",
+          "source": "PERSON_e3b0c44298fc1c14",
+          "target": "PERSON_75110ab02c0160f9"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows lifestyle and movements of suspect",
+        "DMs may contain evidence of coordination"
+      ],
+      "missing": [
+        "Only public/available data",
+        "Private accounts may be excluded"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.7,
+      "reliability_notes": "Platform data, may be incomplete",
+      "ingestion_time": "2026-09-23T00:13:18.062843",
+      "record_count": 5,
+      "raw_summary": ""
+    },
+    "26_Name_Variation_CDR.csv": {
+      "file_name": "26_Name_Variation_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/26_Name_Variation_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_945f58db8d76d5db",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_34c6cfa9e42757ba",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_05b3deed2c9734c8",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_770706dc85e0d1d8",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_ba06734a844b7ced",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_d02d671c0d136f8b",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_f963e9ab57adb05f",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_f456d82b59db5b73"
+        },
+        {
+          "id": "REL_25e6e537caf0da5e",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_1edfb52c89d201d4",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_e952f5964838ccf0",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_a87d289075c3811e",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_85d89befb983098f",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_dec407fc78443dc8",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_5c1b9b13129e261e",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_cf458cda8b27ba65",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_2d64ab4022a8d517",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_040b9b78c98522a1",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_1fbfc89b3de4e935",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_1ace7632b61c2f5e",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_a353fb4092c96d33 (6 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.063070",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "27_Temporal_Contradiction_CDR.csv": {
+      "file_name": "27_Temporal_Contradiction_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/27_Temporal_Contradiction_CDR.csv",
+      "description": "Call Detail Records. 1 entities extracted from 8 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [
+        {
+          "id": "LOC_727777a1420ee72a",
+          "type": "LOCATION",
+          "name": "Connaught Place Tower 2"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_4d889b15c44d7cc3",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_5ca728bc69c86eb1",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_3d399de847e9637f",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_2c749265165fa61d",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_27cb27c97244b5e3",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_727777a1420ee72a"
+        },
+        {
+          "id": "REL_35846d898a870711",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_575e683af24eac46",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_580f0cb2d04d0744",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_da600b3992dd2f2a",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_297cc49fc9129516",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_4ed221e12f8cc671",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_727777a1420ee72a"
+        },
+        {
+          "id": "REL_c0deda131fdc4e6d",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_5fb97d3a095f2768",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_7bae5be34074c5b8",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_1924a2cb04782062",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_9c5f71f422085467",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_a353fb4092c96d33 (4 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.063866",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "28_Source_Dependency_CDR.csv": {
+      "file_name": "28_Source_Dependency_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/28_Source_Dependency_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_c62f5883d46894b7",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_86cc442fcfba2f8a",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_1d821d73bee0e0a9",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_7f00efec4a04218f",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_118390e1c491ac2b",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_9b8ae432d85b5fa6",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_78c0c7e08881d525",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_679dcad9360cc98e",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_7eba651f60fbc941",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ff17cbd8b82bd4ff",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_3531b59364bff8e4",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_07454224fab5f4c4",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_185c8da9ee8a56bc",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ed19f27215a19db5",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_d3ce7452fce2281e",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_d895f5ea18d352b2",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_d65ffb6dae307b2f",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_11dc27f5f9de03b7",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_e972a41c8ee057db",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_f4b9845c4c4dcfd5",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.064576",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "29_Investigator_Summary.txt": {
+      "file_name": "29_Investigator_Summary.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/29_Investigator_Summary.txt",
+      "description": "Document. 13 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "DATE_c2b111204ee5faf7",
+          "type": "DATE",
+          "name": "20/03/2024"
+        },
+        {
+          "id": "DATE_b690da60b55af7ff",
+          "type": "DATE",
+          "name": "12 March 2024"
+        },
+        {
+          "id": "DATE_a7f40fe0eaf028f5",
+          "type": "DATE",
+          "name": "13 March 2024"
+        },
+        {
+          "id": "DATE_e9bac7668eedb207",
+          "type": "DATE",
+          "name": "14 March 2024"
+        },
+        {
+          "id": "DATE_83732ed9ae9971ea",
+          "type": "DATE",
+          "name": "1234, 7891"
+        },
+        {
+          "id": "ORGANIZATION_9f79d8d9056e4e29",
+          "type": "ORGANIZATION",
+          "name": "Rakesh Kumar ("
+        },
+        {
+          "id": "PERSON_ddf5af9bcfac37ca",
+          "type": "PERSON",
+          "name": "Karol Bagh Tower 1"
+        },
+        {
+          "id": "DATE_86f5edfc5b6b944b",
+          "type": "DATE",
+          "name": "5 to 10 minutes"
+        },
+        {
+          "id": "ORGANIZATION_9890be5d55270591",
+          "type": "ORGANIZATION",
+          "name": "HDFC"
+        },
+        {
+          "id": "ORGANIZATION_f88d533a7a47a361",
+          "type": "ORGANIZATION",
+          "name": "PNB"
+        },
+        {
+          "id": "PERSON_058be09de37a18d4",
+          "type": "PERSON",
+          "name": "BoB"
+        },
+        {
+          "id": "LOCATION_7726af14f2d056b6",
+          "type": "LOCATION",
+          "name": "Meena Devi's"
+        },
+        {
+          "id": "ORGANIZATION_915ca1cfe5a261f0",
+          "type": "ORGANIZATION",
+          "name": "Suresh Kumar"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.065342",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "30_Adversarial_CDR.csv": {
+      "file_name": "30_Adversarial_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/30_Adversarial_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_abf9621b19300ce2",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_937833a28ac4b802",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_ef5fb01e7fd16dee"
+        },
+        {
+          "id": "REL_837e3091950efd3f",
+          "type": "VISITED",
+          "source": "PHONE_ef5fb01e7fd16dee",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_4276034f5a640f5a",
+          "type": "CALLED",
+          "source": "PHONE_ef5fb01e7fd16dee",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_cc5ca3c5f08c1b83",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_fe01973274e425da",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_d8954a833ae24a49",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_cc8d7693b6c1dfdb",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_860102e1979b7464",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_9ef0f79d6eedf3e8",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_893c6e068bc27515",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_9e85a89b960ffa8a",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_dfec4914e27f1f9c",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_aebf43519bd19e1b",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_1125027683c4a7d4",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_df97c697552fc5d6",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_5751d44778de3499",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_fbde003dc7874083",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_ef5fb01e7fd16dee"
+        },
+        {
+          "id": "REL_05ad006af9360a0e",
+          "type": "VISITED",
+          "source": "PHONE_ef5fb01e7fd16dee",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_553c6833e3b68b57",
+          "type": "CALLED",
+          "source": "PHONE_ef5fb01e7fd16dee",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.065555",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "31_Adversarial_Bank.csv": {
+      "file_name": "31_Adversarial_Bank.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/31_Adversarial_Bank.csv",
+      "description": "Bank transaction records. 1 entities extracted from 4 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "ACCT_41128ff00aeb9cd0",
+          "type": "ACCOUNT",
+          "name": "Account 4567"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_551f8f36c4ad3817",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "ACCT_41128ff00aeb9cd0"
+        },
+        {
+          "id": "REL_436a5eab9b01ca08",
+          "type": "RECEIVED_FROM",
+          "source": "ACCT_41128ff00aeb9cd0",
+          "target": "ACCT_a6076b509f61275e"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.066294",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "32_Adversarial_Social.json": {
+      "file_name": "32_Adversarial_Social.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/32_Adversarial_Social.json",
+      "description": "Social media data. 4 entities extracted (profile, posts, DMs).",
+      "document_type": "social_media",
+      "entities_extracted": [
+        {
+          "id": "POST_ea8e9a63f5cf48c0",
+          "type": "EVENT",
+          "name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning"
+        },
+        {
+          "id": "LOC_ca5c595ef394f74f",
+          "type": "LOCATION",
+          "name": "Lajpat Nagar, Delhi"
+        },
+        {
+          "id": "POST_491c8a5eed380526",
+          "type": "EVENT",
+          "name": "Post: Feeling stressed today #life"
+        },
+        {
+          "id": "POST_087631b96cd7e0a5",
+          "type": "EVENT",
+          "name": "Post: Thankful to my neighbors for their support #gratef"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_d4af5587074d6e97",
+          "type": "VISITED",
+          "source": "PERSON_b66694c77645402b",
+          "target": "LOC_ca5c595ef394f74f"
+        },
+        {
+          "id": "REL_7cec30bf480e6478",
+          "type": "VISITED",
+          "source": "PERSON_b66694c77645402b",
+          "target": "LOC_ca5c595ef394f74f"
+        },
+        {
+          "id": "REL_b29993b7cec22fed",
+          "type": "MESSED",
+          "source": "PERSON_b66694c77645402b",
+          "target": "PERSON_e3b0c44298fc1c14"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows lifestyle and movements of suspect",
+        "DMs may contain evidence of coordination"
+      ],
+      "missing": [
+        "Only public/available data",
+        "Private accounts may be excluded"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.7,
+      "reliability_notes": "Platform data, may be incomplete",
+      "ingestion_time": "2026-09-23T00:13:18.066931",
+      "record_count": 5,
+      "raw_summary": ""
+    },
+    "33_Adversarial_CCTV.csv": {
+      "file_name": "33_Adversarial_CCTV.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/33_Adversarial_CCTV.csv",
+      "description": "CCTV entry/exit log. 0 entities extracted from 8 records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.067170",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "34_Feedback_Loop_Report.txt": {
+      "file_name": "34_Feedback_Loop_Report.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/34_Feedback_Loop_Report.txt",
+      "description": "Document. 1 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "ORGANIZATION_48a6b33cea4845e8",
+          "type": "ORGANIZATION",
+          "name": "Rakesh Kumar (9876543210"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.067946",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "35_Identity_Uncertainty_CCTV.csv": {
+      "file_name": "35_Identity_Uncertainty_CCTV.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/35_Identity_Uncertainty_CCTV.csv",
+      "description": "CCTV entry/exit log. 0 entities extracted from 8 records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_2c804417858e6599",
+          "type": "VISITED",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "LOC_0e74cea9438de0e4"
+        },
+        {
+          "id": "REL_9878cae8cd51527d",
+          "type": "VISITED",
+          "source": "PERSON_23492e71991bc7b9",
+          "target": "LOC_2d27b53729507310"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.068253",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "36_Hindi_Witness_Statement.txt": {
+      "file_name": "36_Hindi_Witness_Statement.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/36_Hindi_Witness_Statement.txt",
+      "description": "Document. 30 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "PERSON_894500ae1c37aedc",
+          "type": "PERSON",
+          "name": "\u0930\u094b\u091c"
+        },
+        {
+          "id": "AMOUNT_abd400c996d27e40",
+          "type": "AMOUNT",
+          "name": "\u0932\u093e\u091c\u092a\u0924"
+        },
+        {
+          "id": "AMOUNT_c9f671b8bde898d3",
+          "type": "AMOUNT",
+          "name": "\u092e\u0948\u0902"
+        },
+        {
+          "id": "PERSON_d631322b147c29fd",
+          "type": "PERSON",
+          "name": "\u0930\u0939\u0924\u093e \u0939\u0942\u0902"
+        },
+        {
+          "id": "AMOUNT_ec914043a4e38f9d",
+          "type": "AMOUNT",
+          "name": "\u092e\u0948\u0902 \u092e\u0940\u0928\u093e"
+        },
+        {
+          "id": "ORGANIZATION_2c39ce7a750c190c",
+          "type": "ORGANIZATION",
+          "name": "\u0938\u0941\u092c\u0939"
+        },
+        {
+          "id": "DATE_8ea3ffc4409cc8b7",
+          "type": "DATE",
+          "name": "9:15 \u092c\u091c\u0947"
+        },
+        {
+          "id": "ORGANIZATION_36e583b1e18f01fd",
+          "type": "ORGANIZATION",
+          "name": "\u0905\u092a\u0928\u0947"
+        },
+        {
+          "id": "PERSON_8efa7fdf9317ff56",
+          "type": "PERSON",
+          "name": "\u092e\u0948\u0902\u0928\u0947 \u0939\u092e\u093e\u0930\u0947"
+        },
+        {
+          "id": "AMOUNT_dc57d02ff74f9add",
+          "type": "AMOUNT",
+          "name": "\u092e\u094b\u092c\u093e\u0907\u0932 \u092b\u094b\u0928"
+        },
+        {
+          "id": "DATE_4c577a8fc78fbb06",
+          "type": "DATE",
+          "name": "\u092e\u093e\u0930\u094d\u091a 2024"
+        },
+        {
+          "id": "AMOUNT_f52052d9ca51064f",
+          "type": "AMOUNT",
+          "name": "\u0909\u0938\u0940"
+        },
+        {
+          "id": "DATE_ce6994ab41bdea73",
+          "type": "DATE",
+          "name": "8:45"
+        },
+        {
+          "id": "DATE_2be7a76a17a53940",
+          "type": "DATE",
+          "name": "9:00"
+        },
+        {
+          "id": "AMOUNT_759aff14a5381040",
+          "type": "AMOUNT",
+          "name": "\u0926\u0947\u0935\u0940"
+        },
+        {
+          "id": "PERSON_d3d2543eb561b296",
+          "type": "PERSON",
+          "name": "\u0909\u0928\u092e\u0947\u0902 \u0938\u0947 \u090f\u0915 \u0935\u0939\u0940"
+        },
+        {
+          "id": "DATE_b3bc7aac8e22eb12",
+          "type": "DATE",
+          "name": "\u092a\u0939\u0932\u0947 \u0926\u0947\u0916\u093e \u0925\u093e"
+        },
+        {
+          "id": "PERSON_3198e149cba98ec3",
+          "type": "PERSON",
+          "name": "\u0914\u0930 \u0909\u0938\u0915\u0947 \u0916\u093e\u0924\u0947 \u0938\u0947"
+        },
+        {
+          "id": "AMOUNT_47fa1dd3b94203d9",
+          "type": "AMOUNT",
+          "name": "15 \u0932\u093e\u0916"
+        },
+        {
+          "id": "PERSON_599f9daa94e15632",
+          "type": "PERSON",
+          "name": "\u0939\u0948\u0902"
+        },
+        {
+          "id": "ORGANIZATION_e95f9ef875989b3d",
+          "type": "ORGANIZATION",
+          "name": "\u092e\u0948\u0902\u0928\u0947"
+        },
+        {
+          "id": "ORGANIZATION_0c26fc694863c62b",
+          "type": "ORGANIZATION",
+          "name": "\u092b\u0941\u091f\u0947\u091c \u0926\u0947\u0916\u093e \u0939\u0948 \u091c\u094b \u092e\u0947\u0930\u0947 \u0905\u0935\u0932\u094b\u0915\u0928 \u0915\u0940 \u092a\u0941\u0937\u094d\u091f\u093f"
+        },
+        {
+          "id": "PERSON_864f775d084ae837",
+          "type": "PERSON",
+          "name": "\u0928\u093e\u092e: \u0930\u093e\u091c"
+        },
+        {
+          "id": "PERSON_2bb7da7d6166688b",
+          "type": "PERSON",
+          "name": "\u0947\u0936 \u0915\u0941\u092e\u093e\u0930"
+        },
+        {
+          "id": "PERSON_a38e285fd0966725",
+          "type": "PERSON",
+          "name": "\u092e\u0948\u0902, \u0930\u093e\u091c"
+        },
+        {
+          "id": "PERSON_4d04f9016628213c",
+          "type": "PERSON",
+          "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940"
+        },
+        {
+          "id": "PERSON_71f57887d7b7abbd",
+          "type": "PERSON",
+          "name": "\u0939\u0938\u094d\u0924\u093e\u0915\u094d\u0937\u0930: \u0930\u093e\u091c"
+        },
+        {
+          "id": "LOC_7e37d44888436470",
+          "type": "LOCATION",
+          "name": "\u0928\u0947\u0939\u0930\u0942 \u0928\u0917\u0930"
+        },
+        {
+          "id": "LOC_585ebe962bfa6de1",
+          "type": "LOCATION",
+          "name": "\u092b\u094d\u0932\u0948\u091f 5\u090f"
+        },
+        {
+          "id": "AMOUNT_e629fa6598d73276",
+          "type": "AMOUNT",
+          "name": "15"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.069125",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "37_Hypothesis_Competition_CDR.csv": {
+      "file_name": "37_Hypothesis_Competition_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/37_Hypothesis_Competition_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_bccefb2cb718cf18",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_77046e51e31805f3",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_0e4ffa2ac32420fb",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_34b41295359b5c4b",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_2f6e69cf8b3686c5",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_eb9abaf1ec370f35",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_3a0be724c6691e6b",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_a53d18633f2f53c0",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_9b6c936643a9c332",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e9eb1767ebc3f8ae",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_fd73a536fad64256",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_6a1b93e7401555f4",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_fff350b948ebbd45",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_a8bf2a1840b80610",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_99f857a20c470850",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_546b50bad0fce52c",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_39469bfb1041e3f5",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ad0ffcda8fbb32a6",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_fc4b198b00c9c6f6",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_1126a898214bf002",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.069429",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "38_Falsification_CDR.csv": {
+      "file_name": "38_Falsification_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/38_Falsification_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_1a4c9e08a27713b5",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_9c605ce0e6d07178",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_5ba7c65bc6760dfb",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_704b9c1725179b38",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_d34518543bce8322",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_c7ec08e0847b9975",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_1380c784763f3231",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_7c970e1c5a8f0437",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_c009e7ddff669ddf",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_37cdb32103e9a99b",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_f8a0b1cdb705a02f",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_8986f04f28d7e9c6",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_17d364eb31b67151",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_319036fcaecd08f8",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_704357694e39a8ea",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_65ba0be3e552d0a8",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_e6097d79b72099e3",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_fed5dce47ebf6e31",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_7c510dc3b88cf6de",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_6f746abf602b8ccd",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.070341",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "39_Feedback_Loop_CDR.csv": {
+      "file_name": "39_Feedback_Loop_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/39_Feedback_Loop_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_465701d13146a21d",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_2bfb544ff2229fb1",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_4e7256fc90008020",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_627eedf7fab129d2",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_7e80083b6ffd87ff",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_004f9394656b2a35",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_02530114c40e85d3",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_2cdc5f9bbe0765be",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_91ccf2c613f71b8b",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_46e992d0401df246",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_aa6d54b133feb8ae",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_b6c69860a988bead",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_3a40dae12fc42c1f",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_a2c6cf4603c95699",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_4c3db81339894abd",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_5720a47e0099a8d1",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_1544c1f318956af2",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ecd46e4c53a7f621",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_3cb424c355863d48",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_b78dd109894b0e7d",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.071202",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "40_Self_Loop_CCTV.csv": {
+      "file_name": "40_Self_Loop_CCTV.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/40_Self_Loop_CCTV.csv",
+      "description": "CCTV entry/exit log. 0 entities extracted from 8 records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.072225",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "41_Self_Loop_CDR.csv": {
+      "file_name": "41_Self_Loop_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/41_Self_Loop_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 8 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_fdafcba3d747c221",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_76ba209fca507520",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_2214e09845cc4cfb",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_3b12804e2a357ce0",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_2ee767d38afe8cbc",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_8f2d7bc895da4b13",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_26dd93b28e7dc356",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_c0d529d723f1cf6e",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_4a8d9395e2aa9193",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_ea5b31cefef2f512",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_5f609c38e828ac33",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_608f17f451469f89",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_8a8023e9f7760676"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_e26019ce48adebef (1 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.074081",
+      "record_count": 8,
+      "raw_summary": ""
+    },
+    "42_Complex_Resolution_CDR.csv": {
+      "file_name": "42_Complex_Resolution_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/42_Complex_Resolution_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_2209e6a8a9b10a6d",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e65e6a9d55bef987",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_44ad1bb32cee5389",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_ed26fb6385404fce",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_7edda07e84b2e67e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_91d043222671015b",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_f41321d84a602340",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_48314bc762f07286",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_5b170479018845bf",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_aa76f49b29000540",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_3120df831888868a",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_44e176f87f45002d",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_0ad106f99d9572dc",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_cefe40e73e4d608c",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_94ef27fcf35d3ea9",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_2c91f38f144c8fe0",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_540ba03c443a5dbe",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e2f3cb3b947832f1",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_1dc1cbad363fd698",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_5a85854ac3f551d2",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.074973",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "43_Adversarial_Identity_CDR.csv": {
+      "file_name": "43_Adversarial_Identity_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/43_Adversarial_Identity_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_bd3eca5281b0c2d5",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_023ca03a2d95446f",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_bf737ac270ca1f8d",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_a53de08b9450cd3c",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_6c5ad1cf8e8b776e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ccd3eac4d622d877",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_6f759cd6afa61e07",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_a2ccedf4acb2c6bd",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_b4bd086b820d21b1",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ca5948e966fc4eda",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_7d73e3b92262d35d",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_c316e6d62dff6bf2",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_2b08c940b78e8724",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_ed6dbe6cebf4b1d2",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_019493a34b07c38c",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_caeadd7c0c5bf906",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_958516251b2c2cd4",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_be26cc8ab4191fa0",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_1144c113c4eb2abc",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_18703046697ffa8b",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.075887",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "44_Circular_Reference_CDR.csv": {
+      "file_name": "44_Circular_Reference_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/44_Circular_Reference_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_e2aea9e22b0687b0",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_8fed7a18333df5bb",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_417e7444eb5eccf1",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_c6227e5347ba7ed7",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_5f459aa77732930e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e0be7e12102c3341",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_1cf7484fe2b22f5e",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_b0c7a44192e0b955",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_d83dd65f7c546e2f",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_eb7510036003f95c",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_a4a3d7d3ae3f3ab1",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_6cfd5fdc89a77823",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_189bff6aa00bebb8",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_8ac5e850dc4229d5",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_97ffbf3a46451789",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_f97daae0e16e3198",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_cacec2dfd6e4797c",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_854bc86c9d366054",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_f5ae8502881cfb6a",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_eb6cb419455ece14",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.076827",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "45_Confidence_Edge_Cases_CDR.csv": {
+      "file_name": "45_Confidence_Edge_Cases_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/45_Confidence_Edge_Cases_CDR.csv",
+      "description": "Call Detail Records. 0 entities extracted from 10 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [],
+      "relations_extracted": [
+        {
+          "id": "REL_574349a54d9412f8",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_6b3a7af5f92bb2de",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_3c8cc987ab20527a",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_68f8c2de1ed3dd9f",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_a9617f4e7d8e1c7a",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_86eb7b12912a4f92",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_c889277738ebb98c",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_77b6f175298966fc",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_e5ead58ca68e2bd5",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e22fe7baba244fb0",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_8a8023e9f7760676"
+        },
+        {
+          "id": "REL_cab0296dc1069721",
+          "type": "VISITED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "LOC_8f30741d308610e1"
+        },
+        {
+          "id": "REL_39a17abdc7c8ece8",
+          "type": "CALLED",
+          "source": "PHONE_8a8023e9f7760676",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_6c35616b9d452316",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_e666702657c5e1ff",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_a353fb4092c96d33"
+        },
+        {
+          "id": "REL_4070add3144e9dea",
+          "type": "VISITED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "LOC_8de9f79573e30455"
+        },
+        {
+          "id": "REL_6b07718ec3388375",
+          "type": "CALLED",
+          "source": "PHONE_a353fb4092c96d33",
+          "target": "PHONE_7619ee8cea49187f"
+        },
+        {
+          "id": "REL_a6a4497342f0f75e",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_ddf5af9bcfac37ca"
+        },
+        {
+          "id": "REL_0fe71b6a534c4d18",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_e26019ce48adebef"
+        },
+        {
+          "id": "REL_a97b1a2287f08698",
+          "type": "VISITED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "LOC_64eaba9d08ceff1d"
+        },
+        {
+          "id": "REL_42b9d7f6b63c66c7",
+          "type": "CALLED",
+          "source": "PHONE_e26019ce48adebef",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_7619ee8cea49187f (5 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-23T00:13:18.077946",
+      "record_count": 10,
+      "raw_summary": ""
+    },
+    "46_FIR_Supplement.pdf": {
+      "file_name": "46_FIR_Supplement.pdf",
+      "file_type": "pdf",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/46_FIR_Supplement.pdf",
+      "description": "FIR document.   2 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "ORGANIZATION_63dceb8800b2dd4a",
+          "type": "ORGANIZATION",
+          "name": "Phone"
+        },
+        {
+          "id": "ORGANIZATION_7e1b0d5641f2640c",
+          "type": "ORGANIZATION",
+          "name": "Account"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [
+        "No suspect identified in FIR"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-23T00:13:18.079483",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "47_FIR_Supplement.docx": {
+      "file_name": "47_FIR_Supplement.docx",
+      "file_type": "docx",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/47_FIR_Supplement.docx",
+      "description": "FIR document.   1 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "LOCATION_7d1550b844ff586a",
+          "type": "LOCATION",
+          "name": "Delhi"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [
+        "No suspect identified in FIR"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-23T00:13:18.158647",
+      "record_count": 3,
+      "raw_summary": ""
+    },
+    "48_Bank_Transactions.xlsx": {
+      "file_name": "48_Bank_Transactions.xlsx",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/48_Bank_Transactions.xlsx",
+      "description": "Bank transaction records. 3 entities extracted from 4 transactions.",
+      "document_type": "bank_record",
+      "entities_extracted": [
+        {
+          "id": "ACCT_1199083258ce4e53",
+          "type": "ACCOUNT",
+          "name": "Account 6789"
+        },
+        {
+          "id": "ACCT_1da15d9f9d3a46b5",
+          "type": "ACCOUNT",
+          "name": "Account 8901"
+        },
+        {
+          "id": "ACCT_5209b1df230295b3",
+          "type": "ACCOUNT",
+          "name": "Account 3456"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_9f70e44b02afa6e7",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_915ca1cfe5a261f0",
+          "target": "ACCT_1199083258ce4e53"
+        },
+        {
+          "id": "REL_4aef77c82fb0d91a",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_75110ab02c0160f9",
+          "target": "ACCT_1da15d9f9d3a46b5"
+        },
+        {
+          "id": "REL_739df95cae1e8758",
+          "type": "OWNS_ACCOUNT",
+          "source": "PERSON_b66694c77645402b",
+          "target": "ACCT_5209b1df230295b3"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Shows money flow patterns",
+        "Can trace funds between accounts"
+      ],
+      "missing": [
+        "Does not show cash transactions",
+        "Does not show hawala transfers"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct bank record",
+      "ingestion_time": "2026-09-23T00:13:18.233254",
+      "record_count": 4,
+      "raw_summary": ""
+    },
+    "49_CCTV_Screenshot.png": {
+      "file_name": "49_CCTV_Screenshot.png",
+      "file_type": "image",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/49_CCTV_Screenshot.png",
+      "description": "CCTV entry/exit log. 1 entities extracted from ? records.",
+      "document_type": "cctv_log",
+      "entities_extracted": [
+        {
+          "id": "CAM_ecdf912f9ac31cc2",
+          "type": "DEVICE",
+          "name": "CCTV_Screenshot"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [
+        "Provides physical presence verification",
+        "Can confirm/deny meetings between suspects"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.85,
+      "reliability_notes": "Automated sensor record",
+      "ingestion_time": "2026-09-23T00:13:18.344725",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "TEST_MANIFEST.json": {
+      "file_name": "TEST_MANIFEST.json",
+      "file_type": "json",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/system/../demo_data/TEST_MANIFEST.json",
+      "description": "Document. 0 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-23T00:13:18.601277",
+      "record_count": 4,
+      "raw_summary": ""
+    }
+  },
+  "summary": {
+    "total_files": 51,
+    "by_type": {},
+    "cross_references": 0
+  },
+  "generated_at": "2026-09-23T00:13:19.853378"
+}

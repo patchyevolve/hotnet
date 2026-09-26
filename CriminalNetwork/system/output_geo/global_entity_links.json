@@ -1,0 +1,1792 @@
+[
+  {
+    "id": "GLINK_4d3fa70822e435bc",
+    "global_entity_id": "GLOB_0c08e9ea689cf002",
+    "case_id": "",
+    "local_entity_id": "RES_2598d38e2c05ebfd",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204212"
+  },
+  {
+    "id": "GLINK_062420ddda01a8f5",
+    "global_entity_id": "GLOB_e85a989f16e235a1",
+    "case_id": "",
+    "local_entity_id": "RES_f25656819bff4177",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204241"
+  },
+  {
+    "id": "GLINK_96230b7ba6ac9a38",
+    "global_entity_id": "GLOB_4a3d741c65ce4441",
+    "case_id": "",
+    "local_entity_id": "RES_b5be59d98f8852ba",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204248"
+  },
+  {
+    "id": "GLINK_d566dad7888c02c4",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "",
+    "local_entity_id": "RES_f90015a9027df8e3",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204253"
+  },
+  {
+    "id": "GLINK_041ebc926cdcc2a0",
+    "global_entity_id": "GLOB_6123d3b0cc7c4370",
+    "case_id": "",
+    "local_entity_id": "RES_b58f92dec7cf0b3e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204259"
+  },
+  {
+    "id": "GLINK_73faf079c33e02f1",
+    "global_entity_id": "GLOB_5085dd5187fafdf5",
+    "case_id": "",
+    "local_entity_id": "RES_e41d5c9970d2fc45",
+    "jurisdiction_node_id": "",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204264"
+  },
+  {
+    "id": "GLINK_265bb640545ab69d",
+    "global_entity_id": "GLOB_600d43609c1ff21b",
+    "case_id": "",
+    "local_entity_id": "RES_50fa850b2b1ec9e6",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204269"
+  },
+  {
+    "id": "GLINK_320059f6641a1b11",
+    "global_entity_id": "GLOB_a7c01fd8e65c3d16",
+    "case_id": "",
+    "local_entity_id": "RES_9168a3cc71452b89",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204274"
+  },
+  {
+    "id": "GLINK_e559dc53cbe816e1",
+    "global_entity_id": "GLOB_68234e08e472a1d8",
+    "case_id": "",
+    "local_entity_id": "RES_2e6dcc0d467c0fff",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204280"
+  },
+  {
+    "id": "GLINK_969bf63390672d23",
+    "global_entity_id": "GLOB_5085dd5187fafdf5",
+    "case_id": "",
+    "local_entity_id": "RES_58d3eec5a549b5f5",
+    "jurisdiction_node_id": "",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204284"
+  },
+  {
+    "id": "GLINK_c51aa758342f1d85",
+    "global_entity_id": "GLOB_9a7f44772933c266",
+    "case_id": "",
+    "local_entity_id": "RES_99727d01554b1c12",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204290"
+  },
+  {
+    "id": "GLINK_bd8bcab1aa5931fa",
+    "global_entity_id": "GLOB_4e6438c558e61f60",
+    "case_id": "",
+    "local_entity_id": "RES_0a5f31f39f5d619c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204295"
+  },
+  {
+    "id": "GLINK_d47ac86a22894fe7",
+    "global_entity_id": "GLOB_64bf74d215b317c0",
+    "case_id": "",
+    "local_entity_id": "RES_fe56813839bcc2b8",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204301"
+  },
+  {
+    "id": "GLINK_171eac0b35ed3500",
+    "global_entity_id": "GLOB_40ec83cefe4afd91",
+    "case_id": "",
+    "local_entity_id": "RES_6434409a025c9670",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204306"
+  },
+  {
+    "id": "GLINK_49cf8ca92cb86fc9",
+    "global_entity_id": "GLOB_fecb65b9c26decdb",
+    "case_id": "",
+    "local_entity_id": "RES_a43997b49dba49ba",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204312"
+  },
+  {
+    "id": "GLINK_69a04fea7e3da067",
+    "global_entity_id": "GLOB_1c6577f0b6394db5",
+    "case_id": "",
+    "local_entity_id": "RES_063a6e4e5627df58",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204317"
+  },
+  {
+    "id": "GLINK_b4d09d56c4b91841",
+    "global_entity_id": "GLOB_c6d670240e1a7bbc",
+    "case_id": "",
+    "local_entity_id": "RES_14200bdb1df5eb79",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204323"
+  },
+  {
+    "id": "GLINK_9ba978c569ecc6cb",
+    "global_entity_id": "GLOB_2c4b8617800fa658",
+    "case_id": "",
+    "local_entity_id": "RES_00769fddaa22927b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204329"
+  },
+  {
+    "id": "GLINK_b1aa6214b9f595ae",
+    "global_entity_id": "GLOB_55c5ccf039d9107e",
+    "case_id": "",
+    "local_entity_id": "RES_1cca5dec56abbd07",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204335"
+  },
+  {
+    "id": "GLINK_25eda299c63455bf",
+    "global_entity_id": "GLOB_9ea9bb00484bcc17",
+    "case_id": "",
+    "local_entity_id": "RES_d968463e85506049",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204340"
+  },
+  {
+    "id": "GLINK_96a6f71a6bc1d16e",
+    "global_entity_id": "GLOB_cda629a2f775b0bb",
+    "case_id": "",
+    "local_entity_id": "RES_064b9d3dcc092d69",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204346"
+  },
+  {
+    "id": "GLINK_e740dc17828806f5",
+    "global_entity_id": "GLOB_823c07032e41272f",
+    "case_id": "",
+    "local_entity_id": "RES_56bc1c080d58add2",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204351"
+  },
+  {
+    "id": "GLINK_0b8d1ac6fd9abca7",
+    "global_entity_id": "GLOB_4fb61faa1fd07a2d",
+    "case_id": "",
+    "local_entity_id": "RES_7b5526f65914ca75",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204356"
+  },
+  {
+    "id": "GLINK_c81385d0f3f87c3a",
+    "global_entity_id": "GLOB_5cc6c0e6dc9892d2",
+    "case_id": "",
+    "local_entity_id": "RES_c6a149cdedea93e6",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204361"
+  },
+  {
+    "id": "GLINK_1a8ec00ed1229eeb",
+    "global_entity_id": "GLOB_ffe16525d037098c",
+    "case_id": "",
+    "local_entity_id": "RES_9dd6316b6fa7b0bb",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204367"
+  },
+  {
+    "id": "GLINK_09c2164543d4da05",
+    "global_entity_id": "GLOB_3a23046b7c493b3f",
+    "case_id": "",
+    "local_entity_id": "RES_65944958252ab0e1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204372"
+  },
+  {
+    "id": "GLINK_f96d1fb8ca53b3df",
+    "global_entity_id": "GLOB_65526cc20c05ded8",
+    "case_id": "",
+    "local_entity_id": "RES_c45db434bb877d4d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204377"
+  },
+  {
+    "id": "GLINK_01b3265eb3de825a",
+    "global_entity_id": "GLOB_2ac6925d1a61c3aa",
+    "case_id": "",
+    "local_entity_id": "RES_da30edbd69f80228",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204383"
+  },
+  {
+    "id": "GLINK_0bc92826de0f4acb",
+    "global_entity_id": "GLOB_fbf8f8ae079415f7",
+    "case_id": "",
+    "local_entity_id": "RES_0b7578f674a52b69",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204387"
+  },
+  {
+    "id": "GLINK_1f182567107acd42",
+    "global_entity_id": "GLOB_02a2b8dcafc9368c",
+    "case_id": "",
+    "local_entity_id": "RES_9fa593049c69aa1c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204393"
+  },
+  {
+    "id": "GLINK_a2bc40aae9923120",
+    "global_entity_id": "GLOB_b33af3dd7358ff89",
+    "case_id": "",
+    "local_entity_id": "RES_80be8403238f9dfb",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204398"
+  },
+  {
+    "id": "GLINK_fb7a9af6f3f3c396",
+    "global_entity_id": "GLOB_65304e31d12b3731",
+    "case_id": "",
+    "local_entity_id": "RES_c726a17e219c0e68",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204403"
+  },
+  {
+    "id": "GLINK_2ae2c98e979261e7",
+    "global_entity_id": "GLOB_501439dc50f789d8",
+    "case_id": "",
+    "local_entity_id": "RES_8e92ecfddbb47495",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204408"
+  },
+  {
+    "id": "GLINK_966af5b050c954d3",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "case_id": "",
+    "local_entity_id": "RES_06b3f3578a482b62",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204413"
+  },
+  {
+    "id": "GLINK_dbfa2de05d7b4502",
+    "global_entity_id": "GLOB_7858d45260123374",
+    "case_id": "",
+    "local_entity_id": "RES_ce4c1813fe797d7d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204418"
+  },
+  {
+    "id": "GLINK_a7fdc0403d21fb5d",
+    "global_entity_id": "GLOB_b99bdaa7008a2f13",
+    "case_id": "",
+    "local_entity_id": "RES_4264eb17660c61ad",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204424"
+  },
+  {
+    "id": "GLINK_574edf266c4ec5a8",
+    "global_entity_id": "GLOB_5060eae5cf2afb82",
+    "case_id": "",
+    "local_entity_id": "RES_3e438bacdb6bd7b1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204429"
+  },
+  {
+    "id": "GLINK_519236830b3d247a",
+    "global_entity_id": "GLOB_b8a27e72a6b608e4",
+    "case_id": "",
+    "local_entity_id": "RES_c7be54dc05b347e3",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204433"
+  },
+  {
+    "id": "GLINK_6996b45a03b1bad3",
+    "global_entity_id": "GLOB_c93142250a66e9fa",
+    "case_id": "",
+    "local_entity_id": "RES_9768897216059a61",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204438"
+  },
+  {
+    "id": "GLINK_a98bd25fdca44dac",
+    "global_entity_id": "GLOB_bfd8b8494d7e849d",
+    "case_id": "",
+    "local_entity_id": "RES_e2dd7a4131e26bbb",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204445"
+  },
+  {
+    "id": "GLINK_85a658fc647e2d30",
+    "global_entity_id": "GLOB_28f9ff2567603823",
+    "case_id": "",
+    "local_entity_id": "RES_09763f4e98889fb1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204450"
+  },
+  {
+    "id": "GLINK_45d24bca69d6802e",
+    "global_entity_id": "GLOB_7645127a50c337f6",
+    "case_id": "",
+    "local_entity_id": "RES_b25c78b54eb46537",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204456"
+  },
+  {
+    "id": "GLINK_168133d8b198b062",
+    "global_entity_id": "GLOB_681fc7f97d23e240",
+    "case_id": "",
+    "local_entity_id": "RES_ab1ee5b4616da76e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204461"
+  },
+  {
+    "id": "GLINK_c864a65044bb7c75",
+    "global_entity_id": "GLOB_c97840664744cc50",
+    "case_id": "",
+    "local_entity_id": "RES_44d6b90aa577f35b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204466"
+  },
+  {
+    "id": "GLINK_f1af984eb5375638",
+    "global_entity_id": "GLOB_7c716d4da0e6b5b7",
+    "case_id": "",
+    "local_entity_id": "RES_3ad4e416b5fcd0b1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204471"
+  },
+  {
+    "id": "GLINK_7dd3536bbd4c456d",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "",
+    "local_entity_id": "RES_d7b7a3807abd2258",
+    "jurisdiction_node_id": "",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204477"
+  },
+  {
+    "id": "GLINK_cf58922b51d89b36",
+    "global_entity_id": "GLOB_5205db4701e0781b",
+    "case_id": "",
+    "local_entity_id": "RES_01804c8fbc111dbd",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204482"
+  },
+  {
+    "id": "GLINK_7c110002cb9f8a52",
+    "global_entity_id": "GLOB_ce92eb68f5bf9fa1",
+    "case_id": "",
+    "local_entity_id": "RES_4abe7b8fe28c4e6f",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204487"
+  },
+  {
+    "id": "GLINK_72adb2e89611bb85",
+    "global_entity_id": "GLOB_bbaee983cb28a39e",
+    "case_id": "",
+    "local_entity_id": "RES_9eeb75085f3656ee",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204492"
+  },
+  {
+    "id": "GLINK_5fd4f782d690a848",
+    "global_entity_id": "GLOB_a1ca75cca2c48185",
+    "case_id": "",
+    "local_entity_id": "RES_ce5f6b84e2e7bf94",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204497"
+  },
+  {
+    "id": "GLINK_c665afb2b7bc249f",
+    "global_entity_id": "GLOB_a589d62d51d2c417",
+    "case_id": "",
+    "local_entity_id": "RES_2c89178b4963b445",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204502"
+  },
+  {
+    "id": "GLINK_3f681452e07f09bc",
+    "global_entity_id": "GLOB_0c38a65489475cfa",
+    "case_id": "",
+    "local_entity_id": "RES_c078bc8d6d80314b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204507"
+  },
+  {
+    "id": "GLINK_bc01860ce66402cd",
+    "global_entity_id": "GLOB_501341c8de322912",
+    "case_id": "",
+    "local_entity_id": "RES_9f646a5f8a1d77f4",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204512"
+  },
+  {
+    "id": "GLINK_fa76d40048d7c631",
+    "global_entity_id": "GLOB_28729863d422d15a",
+    "case_id": "",
+    "local_entity_id": "RES_912712ac7d7f7bd7",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204518"
+  },
+  {
+    "id": "GLINK_fc38c413c6495b12",
+    "global_entity_id": "GLOB_871493021d35211b",
+    "case_id": "",
+    "local_entity_id": "RES_f4702ff00deb7d8c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204522"
+  },
+  {
+    "id": "GLINK_149c6e6dd8d7661e",
+    "global_entity_id": "GLOB_5cd59caa0f76f018",
+    "case_id": "",
+    "local_entity_id": "RES_a7c71cd9094d5472",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204528"
+  },
+  {
+    "id": "GLINK_4e06a9a742f93443",
+    "global_entity_id": "GLOB_bda642ab06948ce2",
+    "case_id": "",
+    "local_entity_id": "RES_4cde822e1998499c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204533"
+  },
+  {
+    "id": "GLINK_d0fd44ef3fa2ed6f",
+    "global_entity_id": "GLOB_c82e49ef5d97904a",
+    "case_id": "",
+    "local_entity_id": "RES_91732012383563d5",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204539"
+  },
+  {
+    "id": "GLINK_014e990dba772e21",
+    "global_entity_id": "GLOB_ccd93b5779ad0cac",
+    "case_id": "",
+    "local_entity_id": "RES_f1c5114c09cb9b0a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204544"
+  },
+  {
+    "id": "GLINK_56756a92a08559cd",
+    "global_entity_id": "GLOB_09ed6835f9ade2d1",
+    "case_id": "",
+    "local_entity_id": "RES_209812801cc3bea3",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204549"
+  },
+  {
+    "id": "GLINK_999a5033dc76a6a9",
+    "global_entity_id": "GLOB_92a02de9a48951ad",
+    "case_id": "",
+    "local_entity_id": "RES_c519e4099721a2db",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204555"
+  },
+  {
+    "id": "GLINK_ee82e9f6ef3b0fc9",
+    "global_entity_id": "GLOB_28b42d069cc20737",
+    "case_id": "",
+    "local_entity_id": "RES_e265c478cc3dbbed",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204560"
+  },
+  {
+    "id": "GLINK_4beacc1d14ecbc41",
+    "global_entity_id": "GLOB_69ff8eec6cda43fb",
+    "case_id": "",
+    "local_entity_id": "RES_243e24ad346d8280",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204565"
+  },
+  {
+    "id": "GLINK_525a0d3f1b0d4a3b",
+    "global_entity_id": "GLOB_77d3ac674a22697a",
+    "case_id": "",
+    "local_entity_id": "RES_79c68df2ef361a94",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204570"
+  },
+  {
+    "id": "GLINK_31e7daf2673352fb",
+    "global_entity_id": "GLOB_e65048a06f3303c2",
+    "case_id": "",
+    "local_entity_id": "RES_63d499c2497b67bf",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204576"
+  },
+  {
+    "id": "GLINK_7fd73b8d9cfdf4d0",
+    "global_entity_id": "GLOB_873cbd46e640c03b",
+    "case_id": "",
+    "local_entity_id": "RES_fdc38623b57854bf",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204583"
+  },
+  {
+    "id": "GLINK_82e4541d3695cc39",
+    "global_entity_id": "GLOB_53c533353f88a6cb",
+    "case_id": "",
+    "local_entity_id": "RES_e95c77c1e77f9515",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204589"
+  },
+  {
+    "id": "GLINK_4a779ccf9cd7843c",
+    "global_entity_id": "GLOB_825c64c01d68edf6",
+    "case_id": "",
+    "local_entity_id": "RES_313ed2b4e624d92c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204594"
+  },
+  {
+    "id": "GLINK_0359a75413abfafa",
+    "global_entity_id": "GLOB_98f90e15cdd2a901",
+    "case_id": "",
+    "local_entity_id": "RES_77be511f0a7f3e38",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204599"
+  },
+  {
+    "id": "GLINK_a6f9c1d7d1ef5a1d",
+    "global_entity_id": "GLOB_2a7a45009af1e192",
+    "case_id": "",
+    "local_entity_id": "RES_fab273a513037643",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204605"
+  },
+  {
+    "id": "GLINK_9d8dd79d1fd1b0a3",
+    "global_entity_id": "GLOB_573c3eadae3e6b17",
+    "case_id": "",
+    "local_entity_id": "RES_a78b93c349b3101a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204611"
+  },
+  {
+    "id": "GLINK_2de548c042572016",
+    "global_entity_id": "GLOB_a45d82b5ace15803",
+    "case_id": "",
+    "local_entity_id": "RES_1d7b42d20f5adf03",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204616"
+  },
+  {
+    "id": "GLINK_cc51c3f6ceb712a5",
+    "global_entity_id": "GLOB_2ae840cc097da773",
+    "case_id": "",
+    "local_entity_id": "RES_2faa7f8cc724c522",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204622"
+  },
+  {
+    "id": "GLINK_ad5eeadbfdf4acd7",
+    "global_entity_id": "GLOB_5366b11651b3ede4",
+    "case_id": "",
+    "local_entity_id": "RES_a7e5d4caf6ad9213",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204627"
+  },
+  {
+    "id": "GLINK_f7a2b27bff4ef5cd",
+    "global_entity_id": "GLOB_348315a1e56cd345",
+    "case_id": "",
+    "local_entity_id": "RES_fe827f44a1bcb683",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204632"
+  },
+  {
+    "id": "GLINK_b8dee2621e631c98",
+    "global_entity_id": "GLOB_a7e9e8cccf62b69b",
+    "case_id": "",
+    "local_entity_id": "RES_6189c3acf69b26b0",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204637"
+  },
+  {
+    "id": "GLINK_203fce5dcb376493",
+    "global_entity_id": "GLOB_52041371352ca92c",
+    "case_id": "",
+    "local_entity_id": "RES_4dc64768eddf1f45",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204643"
+  },
+  {
+    "id": "GLINK_2ee8a0f438e199f1",
+    "global_entity_id": "GLOB_0211200d4860638f",
+    "case_id": "",
+    "local_entity_id": "RES_7c505120e5226a43",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204648"
+  },
+  {
+    "id": "GLINK_dd40a9820f823aa3",
+    "global_entity_id": "GLOB_706d39c177fca2f0",
+    "case_id": "",
+    "local_entity_id": "RES_570cf91d41cd7a12",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204654"
+  },
+  {
+    "id": "GLINK_94c7d070740e4f83",
+    "global_entity_id": "GLOB_d119875e13d2f9ac",
+    "case_id": "",
+    "local_entity_id": "RES_0a18a7b09bb945cb",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204658"
+  },
+  {
+    "id": "GLINK_ae65cfac4c859922",
+    "global_entity_id": "GLOB_8b198cbadaf353a8",
+    "case_id": "",
+    "local_entity_id": "RES_28a1528ee4c0119d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204664"
+  },
+  {
+    "id": "GLINK_874312d526d721a0",
+    "global_entity_id": "GLOB_7eecfbb2ac851498",
+    "case_id": "",
+    "local_entity_id": "RES_14039349d66ebf3c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204669"
+  },
+  {
+    "id": "GLINK_46502dd485e8fd66",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "",
+    "local_entity_id": "RES_6197362326e7f20c",
+    "jurisdiction_node_id": "",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204675"
+  },
+  {
+    "id": "GLINK_58b880a92d2fe841",
+    "global_entity_id": "GLOB_1207e7e7df5a62a1",
+    "case_id": "",
+    "local_entity_id": "RES_04842ef365a93d12",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204681"
+  },
+  {
+    "id": "GLINK_866e233dac81ddea",
+    "global_entity_id": "GLOB_e19fbca2c9704756",
+    "case_id": "",
+    "local_entity_id": "RES_38774b6f969f44fa",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.204686"
+  },
+  {
+    "id": "GLINK_e40c1a338c10068e",
+    "global_entity_id": "GLOB_a033405b3e90c48b",
+    "case_id": "",
+    "local_entity_id": "RES_72095be007ab1aa4",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204692"
+  },
+  {
+    "id": "GLINK_acd4f88eeb2f67b9",
+    "global_entity_id": "GLOB_e3c72935945925c6",
+    "case_id": "",
+    "local_entity_id": "RES_0a7336429b2e52ab",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204697"
+  },
+  {
+    "id": "GLINK_51640188643a6295",
+    "global_entity_id": "GLOB_afd195468c240a25",
+    "case_id": "",
+    "local_entity_id": "RES_cd6ded5f61964ce1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204702"
+  },
+  {
+    "id": "GLINK_54e868259119c991",
+    "global_entity_id": "GLOB_e8554c8c6db223c4",
+    "case_id": "",
+    "local_entity_id": "RES_b42ec3fbced431cb",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204707"
+  },
+  {
+    "id": "GLINK_aaea2f9841c2868f",
+    "global_entity_id": "GLOB_6a555ebbf77e4b73",
+    "case_id": "",
+    "local_entity_id": "RES_3b44aea810c3da6f",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204713"
+  },
+  {
+    "id": "GLINK_07accd89b8401c51",
+    "global_entity_id": "GLOB_5d480692bd116619",
+    "case_id": "",
+    "local_entity_id": "RES_256a6e840e4cb92b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204719"
+  },
+  {
+    "id": "GLINK_1e60cb4685eea195",
+    "global_entity_id": "GLOB_a90543bebadbcf64",
+    "case_id": "",
+    "local_entity_id": "RES_00fba48242e498cc",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204725"
+  },
+  {
+    "id": "GLINK_85bea0a7826eb0c1",
+    "global_entity_id": "GLOB_828858623b985854",
+    "case_id": "",
+    "local_entity_id": "RES_cbe9026f1c31d1c2",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204730"
+  },
+  {
+    "id": "GLINK_cfd2a70fae74e7c1",
+    "global_entity_id": "GLOB_1ded56b275a92d81",
+    "case_id": "",
+    "local_entity_id": "RES_9d470e6b1320e238",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204736"
+  },
+  {
+    "id": "GLINK_1ae8bb5d913453ab",
+    "global_entity_id": "GLOB_2aa84c4a02a7c572",
+    "case_id": "",
+    "local_entity_id": "RES_cc2544932d0fac27",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204741"
+  },
+  {
+    "id": "GLINK_f792d0fad9e26b80",
+    "global_entity_id": "GLOB_cd05d1dd31a94408",
+    "case_id": "",
+    "local_entity_id": "RES_247e09a6892963ef",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204747"
+  },
+  {
+    "id": "GLINK_b7eeaa0112822779",
+    "global_entity_id": "GLOB_9007488a611e7e2e",
+    "case_id": "",
+    "local_entity_id": "RES_59fbce86ff5a044e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9333,
+    "match_type": "name_fuzzy",
+    "created_at": "2026-09-26T20:06:36.204752"
+  },
+  {
+    "id": "GLINK_afd5397a476a0b91",
+    "global_entity_id": "GLOB_7a7ac0040dccece4",
+    "case_id": "",
+    "local_entity_id": "RES_8fbb3a2459d70bb4",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204758"
+  },
+  {
+    "id": "GLINK_5efac64b74c23c66",
+    "global_entity_id": "GLOB_1dffb2a9e7b8f01b",
+    "case_id": "",
+    "local_entity_id": "RES_79fcc1b869838e84",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204763"
+  },
+  {
+    "id": "GLINK_b8c9fcbbfe188ccd",
+    "global_entity_id": "GLOB_b604144eaaf54a39",
+    "case_id": "",
+    "local_entity_id": "RES_7912a8536f03b255",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204769"
+  },
+  {
+    "id": "GLINK_09b45c15b7e89d46",
+    "global_entity_id": "GLOB_c4fe8f93208b0b96",
+    "case_id": "",
+    "local_entity_id": "RES_94acaa9247e760c9",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204774"
+  },
+  {
+    "id": "GLINK_bca5a0480bd82344",
+    "global_entity_id": "GLOB_c3fc3018c63891f5",
+    "case_id": "",
+    "local_entity_id": "RES_a528aca8e5baa10e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204779"
+  },
+  {
+    "id": "GLINK_413b095f3ed1857e",
+    "global_entity_id": "GLOB_ed5eea947b025fc0",
+    "case_id": "",
+    "local_entity_id": "RES_33365db101610949",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204784"
+  },
+  {
+    "id": "GLINK_897ee93f32c0a8bf",
+    "global_entity_id": "GLOB_b01dbf04373279f3",
+    "case_id": "",
+    "local_entity_id": "RES_1f5b4c8caee6736c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204788"
+  },
+  {
+    "id": "GLINK_a72ed192981b6aa0",
+    "global_entity_id": "GLOB_96be2a234e11867e",
+    "case_id": "",
+    "local_entity_id": "RES_3ec04c849f61931b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204793"
+  },
+  {
+    "id": "GLINK_bd4405b68489fa57",
+    "global_entity_id": "GLOB_093c006a6e826bef",
+    "case_id": "",
+    "local_entity_id": "RES_9a1c5fcb60bce473",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204798"
+  },
+  {
+    "id": "GLINK_3035737009345893",
+    "global_entity_id": "GLOB_c40d0b3eeddf7654",
+    "case_id": "",
+    "local_entity_id": "RES_ea7733ed7ec7c4e3",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204803"
+  },
+  {
+    "id": "GLINK_da4fde1808fd81eb",
+    "global_entity_id": "GLOB_2430bdb5ecee1dad",
+    "case_id": "",
+    "local_entity_id": "RES_ac5fa2e34976d974",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204807"
+  },
+  {
+    "id": "GLINK_08b325a852617af3",
+    "global_entity_id": "GLOB_38ad6d25ab996cb9",
+    "case_id": "",
+    "local_entity_id": "RES_71c60256b7580134",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204813"
+  },
+  {
+    "id": "GLINK_b686e60ff116f9b3",
+    "global_entity_id": "GLOB_efee16b3b5b58d09",
+    "case_id": "",
+    "local_entity_id": "RES_3d9cef0b656816c1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204817"
+  },
+  {
+    "id": "GLINK_3cf3684dd1a54cd2",
+    "global_entity_id": "GLOB_911470ce1f35fdda",
+    "case_id": "",
+    "local_entity_id": "RES_4affe419c3f234da",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204823"
+  },
+  {
+    "id": "GLINK_696e3490e32e2599",
+    "global_entity_id": "GLOB_0eefa5cc6ef5c923",
+    "case_id": "",
+    "local_entity_id": "RES_7920b5d8c59b4891",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204828"
+  },
+  {
+    "id": "GLINK_3ab9cd266141e8b6",
+    "global_entity_id": "GLOB_0984d9738b709e94",
+    "case_id": "",
+    "local_entity_id": "RES_f8af2666acd43ff2",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204833"
+  },
+  {
+    "id": "GLINK_365bdc4ad1ee27e9",
+    "global_entity_id": "GLOB_0b5d75937f81317d",
+    "case_id": "",
+    "local_entity_id": "RES_491ece07a4d512cc",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204839"
+  },
+  {
+    "id": "GLINK_b6e282ff837bc522",
+    "global_entity_id": "GLOB_4d46a73ed1ec1c34",
+    "case_id": "",
+    "local_entity_id": "RES_03689172a84248b0",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204845"
+  },
+  {
+    "id": "GLINK_e3c0d18885e8a31e",
+    "global_entity_id": "GLOB_5d854fe5f0f02237",
+    "case_id": "",
+    "local_entity_id": "RES_5e17d723ce22bd87",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204850"
+  },
+  {
+    "id": "GLINK_157e83a7c2a0539b",
+    "global_entity_id": "GLOB_3298ffb602997ecb",
+    "case_id": "",
+    "local_entity_id": "RES_cae8c9af97ebec37",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204857"
+  },
+  {
+    "id": "GLINK_f944bcb1eb83c3f9",
+    "global_entity_id": "GLOB_1513959de1790c62",
+    "case_id": "",
+    "local_entity_id": "RES_b647abed059320c9",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204863"
+  },
+  {
+    "id": "GLINK_a7b44ebafa2e8282",
+    "global_entity_id": "GLOB_f5a2c93fa2e10e3e",
+    "case_id": "",
+    "local_entity_id": "RES_68fbd90d84e964ca",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204868"
+  },
+  {
+    "id": "GLINK_5382b1e98e4d973e",
+    "global_entity_id": "GLOB_6dcd3a3303ea418a",
+    "case_id": "",
+    "local_entity_id": "RES_e58f87794912ed5f",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204874"
+  },
+  {
+    "id": "GLINK_af0f4919d34aa381",
+    "global_entity_id": "GLOB_b6915c3844965a4b",
+    "case_id": "",
+    "local_entity_id": "RES_c3030ec171146c2e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204880"
+  },
+  {
+    "id": "GLINK_cf677d2bbe960b3a",
+    "global_entity_id": "GLOB_5aec69ee637d5050",
+    "case_id": "",
+    "local_entity_id": "RES_e5b65c1392f80b7b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204886"
+  },
+  {
+    "id": "GLINK_c4cff7818a0efd62",
+    "global_entity_id": "GLOB_9ed11ce7e5c5bfb5",
+    "case_id": "",
+    "local_entity_id": "RES_75dd1a03de20620b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204891"
+  },
+  {
+    "id": "GLINK_c8b9ab804d06aca7",
+    "global_entity_id": "GLOB_35bf68f08ebb5630",
+    "case_id": "",
+    "local_entity_id": "RES_5e7a311a822ca6a9",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204896"
+  },
+  {
+    "id": "GLINK_69b6b33cbabd0ba6",
+    "global_entity_id": "GLOB_62ba448538aa66f7",
+    "case_id": "",
+    "local_entity_id": "RES_967e8c804eb0f501",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204902"
+  },
+  {
+    "id": "GLINK_019c8793d34f0fe8",
+    "global_entity_id": "GLOB_d0f3c52163b49a3e",
+    "case_id": "",
+    "local_entity_id": "RES_b8cfd637b3a0986e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204907"
+  },
+  {
+    "id": "GLINK_231e700c89df3466",
+    "global_entity_id": "GLOB_d198bf01a3daa00f",
+    "case_id": "",
+    "local_entity_id": "RES_83be6c690f0f274d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204913"
+  },
+  {
+    "id": "GLINK_1e4a59a994a65bcb",
+    "global_entity_id": "GLOB_856c01d59b617ff9",
+    "case_id": "",
+    "local_entity_id": "RES_4e55bdb7169688b7",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204919"
+  },
+  {
+    "id": "GLINK_fa36e7e1073ab5fc",
+    "global_entity_id": "GLOB_8b38e29bce39f2ae",
+    "case_id": "",
+    "local_entity_id": "RES_8287839d361433db",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204925"
+  },
+  {
+    "id": "GLINK_25b9ad55c76e7d58",
+    "global_entity_id": "GLOB_496915fcafe2c650",
+    "case_id": "",
+    "local_entity_id": "RES_1830874bf5d2c26c",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204930"
+  },
+  {
+    "id": "GLINK_ff33e822893adec7",
+    "global_entity_id": "GLOB_5c4697ea2b4ace5f",
+    "case_id": "",
+    "local_entity_id": "RES_c5b9c977264fd185",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204936"
+  },
+  {
+    "id": "GLINK_2e7332aff457cdb3",
+    "global_entity_id": "GLOB_27da07df992e95b9",
+    "case_id": "",
+    "local_entity_id": "RES_300f407a20afc186",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204941"
+  },
+  {
+    "id": "GLINK_db8ddf432cf61c9c",
+    "global_entity_id": "GLOB_e93d4388e85c8c97",
+    "case_id": "",
+    "local_entity_id": "RES_a2c900d68649be70",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204946"
+  },
+  {
+    "id": "GLINK_d322f5e8ee81bc09",
+    "global_entity_id": "GLOB_8564fd95cd16c892",
+    "case_id": "",
+    "local_entity_id": "RES_323667b77f56975a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204951"
+  },
+  {
+    "id": "GLINK_f19f97b50f2642db",
+    "global_entity_id": "GLOB_be7bcaed11c41fad",
+    "case_id": "",
+    "local_entity_id": "RES_5c060bbd90c645cf",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204957"
+  },
+  {
+    "id": "GLINK_bae8c989fe186309",
+    "global_entity_id": "GLOB_b5fb17816322263b",
+    "case_id": "",
+    "local_entity_id": "RES_83ffbf03efb7a14f",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204962"
+  },
+  {
+    "id": "GLINK_84f930c521c6dd88",
+    "global_entity_id": "GLOB_b6d7fa4eed971f33",
+    "case_id": "",
+    "local_entity_id": "RES_435c73f0ec9ca438",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204967"
+  },
+  {
+    "id": "GLINK_9fcf36c0b6cd346b",
+    "global_entity_id": "GLOB_9007488a611e7e2e",
+    "case_id": "",
+    "local_entity_id": "RES_cd98f76385dd53c7",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204972"
+  },
+  {
+    "id": "GLINK_1c4d1d2ffe1b0b37",
+    "global_entity_id": "GLOB_27473c729302c428",
+    "case_id": "",
+    "local_entity_id": "RES_266a6bb947a8aaa9",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204978"
+  },
+  {
+    "id": "GLINK_2d0ac4211e37a899",
+    "global_entity_id": "GLOB_d98f4cb443e24056",
+    "case_id": "",
+    "local_entity_id": "RES_67bc5c8cceeaa048",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.204983"
+  },
+  {
+    "id": "GLINK_9b50758010158f37",
+    "global_entity_id": "GLOB_11eaf4a96729e012",
+    "case_id": "",
+    "local_entity_id": "RES_cfb538adec99257b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204987"
+  },
+  {
+    "id": "GLINK_5d8028b4ef90e70f",
+    "global_entity_id": "GLOB_17258a6a6d6f40fc",
+    "case_id": "",
+    "local_entity_id": "RES_3085e19cabdc5b3d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204992"
+  },
+  {
+    "id": "GLINK_f54a81fda730aa52",
+    "global_entity_id": "GLOB_fdedd027826787fb",
+    "case_id": "",
+    "local_entity_id": "RES_48525c6a88fc3411",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.204997"
+  },
+  {
+    "id": "GLINK_20c46d27ea0649eb",
+    "global_entity_id": "GLOB_71f4ada3dc9a1684",
+    "case_id": "",
+    "local_entity_id": "RES_8e870d2483318c81",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205001"
+  },
+  {
+    "id": "GLINK_c073d3b07182f8a8",
+    "global_entity_id": "GLOB_ffe16525d037098c",
+    "case_id": "",
+    "local_entity_id": "RES_0e54b067126a777e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9286,
+    "match_type": "name_fuzzy",
+    "created_at": "2026-09-26T20:06:36.205007"
+  },
+  {
+    "id": "GLINK_40daaae85e008c7d",
+    "global_entity_id": "GLOB_ece561a117ee89c5",
+    "case_id": "",
+    "local_entity_id": "RES_28a5131c9596db20",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205011"
+  },
+  {
+    "id": "GLINK_50e70df3d0416312",
+    "global_entity_id": "GLOB_2ac6925d1a61c3aa",
+    "case_id": "",
+    "local_entity_id": "RES_219d216689e3b685",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9286,
+    "match_type": "name_fuzzy",
+    "created_at": "2026-09-26T20:06:36.205017"
+  },
+  {
+    "id": "GLINK_df92bdb5627ecb53",
+    "global_entity_id": "GLOB_db88702933ccd599",
+    "case_id": "",
+    "local_entity_id": "RES_17d682c021b3a904",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205021"
+  },
+  {
+    "id": "GLINK_bf12d1564e8ea226",
+    "global_entity_id": "GLOB_bb8299a537ecb7d8",
+    "case_id": "",
+    "local_entity_id": "RES_c8eadf55cf5fe974",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205027"
+  },
+  {
+    "id": "GLINK_5442f963a238f90f",
+    "global_entity_id": "GLOB_51b66b2c8e5a5521",
+    "case_id": "",
+    "local_entity_id": "RES_e140dc545c81ca52",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205033"
+  },
+  {
+    "id": "GLINK_a661b80c66d0d155",
+    "global_entity_id": "GLOB_3b9158a8cb97822d",
+    "case_id": "",
+    "local_entity_id": "RES_747818a0b3537ee6",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.205038"
+  },
+  {
+    "id": "GLINK_2a8399386497be31",
+    "global_entity_id": "GLOB_19b78e7a54f90650",
+    "case_id": "",
+    "local_entity_id": "RES_c63c5d4388974242",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205043"
+  },
+  {
+    "id": "GLINK_395e52784d39bd52",
+    "global_entity_id": "GLOB_b68bbbe9cace58aa",
+    "case_id": "",
+    "local_entity_id": "RES_63c426a8d422b4b9",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205048"
+  },
+  {
+    "id": "GLINK_931e200fe1b5d601",
+    "global_entity_id": "GLOB_a96b263dedc0b4b0",
+    "case_id": "",
+    "local_entity_id": "RES_48a47ecc2482615b",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205053"
+  },
+  {
+    "id": "GLINK_e4f7ff5c54bdf329",
+    "global_entity_id": "GLOB_cb66a651608ba2c1",
+    "case_id": "",
+    "local_entity_id": "RES_4bfa2febfb3d585e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205059"
+  },
+  {
+    "id": "GLINK_ee8880649bfa5961",
+    "global_entity_id": "GLOB_b961fd4bbc22406a",
+    "case_id": "",
+    "local_entity_id": "RES_1bdd12d85df9c395",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205064"
+  },
+  {
+    "id": "GLINK_024196477dc16cff",
+    "global_entity_id": "GLOB_16edd93765e2d275",
+    "case_id": "",
+    "local_entity_id": "RES_fb38b20fbfe0cd63",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205070"
+  },
+  {
+    "id": "GLINK_e9f05cfb689f9ef5",
+    "global_entity_id": "GLOB_83530d3122214984",
+    "case_id": "",
+    "local_entity_id": "RES_3110139316204f5d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205075"
+  },
+  {
+    "id": "GLINK_57b01d44f71ab63d",
+    "global_entity_id": "GLOB_9007488a611e7e2e",
+    "case_id": "",
+    "local_entity_id": "RES_cedb7b2fa1e834a1",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205081"
+  },
+  {
+    "id": "GLINK_88832d3826e1d2d0",
+    "global_entity_id": "GLOB_cf1e3b139968bf42",
+    "case_id": "",
+    "local_entity_id": "RES_8abc104f237ac1d0",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205087"
+  },
+  {
+    "id": "GLINK_0fffab141e8076e3",
+    "global_entity_id": "GLOB_bff405d1d22ecd03",
+    "case_id": "",
+    "local_entity_id": "RES_74797a3d4b8e213a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205092"
+  },
+  {
+    "id": "GLINK_f5aa6b4ebf1dceea",
+    "global_entity_id": "GLOB_fdc5a53be87c3709",
+    "case_id": "",
+    "local_entity_id": "RES_5541a746121834c7",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205098"
+  },
+  {
+    "id": "GLINK_42df9ad45fd199d4",
+    "global_entity_id": "GLOB_d6339f339cfe2596",
+    "case_id": "",
+    "local_entity_id": "RES_bc78f86efbf0de2e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.205104"
+  },
+  {
+    "id": "GLINK_701390d200913a5c",
+    "global_entity_id": "GLOB_54a6228d060bddd9",
+    "case_id": "",
+    "local_entity_id": "RES_30e25080b729e116",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.205110"
+  },
+  {
+    "id": "GLINK_148c4f371851c2e4",
+    "global_entity_id": "GLOB_0cbbc509c02071e0",
+    "case_id": "",
+    "local_entity_id": "RES_7f39e2873da1ab8f",
+    "jurisdiction_node_id": "",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-26T20:06:36.205120"
+  },
+  {
+    "id": "GLINK_d4b105bd048d02cf",
+    "global_entity_id": "GLOB_b19aa6d8910602e7",
+    "case_id": "",
+    "local_entity_id": "RES_d9b6c75ace846c8a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205125"
+  },
+  {
+    "id": "GLINK_97a1f9d1d65bb004",
+    "global_entity_id": "GLOB_881aacc65b8512a6",
+    "case_id": "",
+    "local_entity_id": "RES_a59f6dde2097f238",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.205131"
+  },
+  {
+    "id": "GLINK_661a7810babf8851",
+    "global_entity_id": "GLOB_a50732fd19fc288c",
+    "case_id": "",
+    "local_entity_id": "RES_be6301fa2bf3102d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205175"
+  },
+  {
+    "id": "GLINK_eea9f4884aa7ed06",
+    "global_entity_id": "GLOB_aa7e0eb8a8c0f1f7",
+    "case_id": "",
+    "local_entity_id": "RES_f68c81b6aea8398e",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.205195"
+  },
+  {
+    "id": "GLINK_b4c361d04aa69cec",
+    "global_entity_id": "GLOB_2cb8abc7e383db67",
+    "case_id": "",
+    "local_entity_id": "RES_2ec87e12b0079f30",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205201"
+  },
+  {
+    "id": "GLINK_a45d0dd220c9eff9",
+    "global_entity_id": "GLOB_845bb038c7a4b9c0",
+    "case_id": "",
+    "local_entity_id": "RES_becb3bd6faa0f1e3",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205208"
+  },
+  {
+    "id": "GLINK_04f7b23d77dbb404",
+    "global_entity_id": "GLOB_109367ed445a3dbb",
+    "case_id": "",
+    "local_entity_id": "RES_64c93e46d936b370",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205212"
+  },
+  {
+    "id": "GLINK_563d1362d98d962a",
+    "global_entity_id": "GLOB_5a394b6bd5734224",
+    "case_id": "",
+    "local_entity_id": "RES_7a026607d0550ea2",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205218"
+  },
+  {
+    "id": "GLINK_88be66180b33d997",
+    "global_entity_id": "GLOB_c5de60302d6e475d",
+    "case_id": "",
+    "local_entity_id": "RES_3120efd78d82e958",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.205225"
+  },
+  {
+    "id": "GLINK_15c652628ee13dcd",
+    "global_entity_id": "GLOB_1100b33780b7d729",
+    "case_id": "",
+    "local_entity_id": "RES_61aa74134565f94a",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205230"
+  },
+  {
+    "id": "GLINK_fdc0c4d920fc364e",
+    "global_entity_id": "GLOB_6c61c35533b3e460",
+    "case_id": "",
+    "local_entity_id": "RES_b60cc5cbb9a5756d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-26T20:06:36.205235"
+  },
+  {
+    "id": "GLINK_efe1bc062246da89",
+    "global_entity_id": "GLOB_eb1db00118981070",
+    "case_id": "",
+    "local_entity_id": "RES_d90733d4eee0ab57",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205241"
+  },
+  {
+    "id": "GLINK_92dc196ef2658ae6",
+    "global_entity_id": "GLOB_f1af773a4d1c63bd",
+    "case_id": "",
+    "local_entity_id": "RES_713e74809ecf7f6d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205245"
+  },
+  {
+    "id": "GLINK_8ac229cf9da5657d",
+    "global_entity_id": "GLOB_a6b7669007906d87",
+    "case_id": "",
+    "local_entity_id": "RES_6be157c3c6f87a4d",
+    "jurisdiction_node_id": "",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-26T20:06:36.205251"
+  }
+]

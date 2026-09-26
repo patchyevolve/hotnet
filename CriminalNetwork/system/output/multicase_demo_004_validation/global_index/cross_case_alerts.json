@@ -1,0 +1,54 @@
+[
+  {
+    "id": "ALERT_74690f63b5577b84",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "severity": "MEDIUM",
+    "case_ids": [
+      "CASE_DEMO_001"
+    ],
+    "jurisdiction_node_ids": [
+      "JURISDICTION_DELHI_CYBERCRIME"
+    ],
+    "recommendation": "Resolved: synthetic smoke-test case was removed; retain CASE_DEMO_001 association for history.",
+    "created_at": "2026-09-25T19:15:06.077000",
+    "status": "RESOLVED",
+    "reviewed_by_id": null,
+    "reviewed_at": null
+  },
+  {
+    "id": "ALERT_11cf74fd1b69d9eb",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "severity": "MEDIUM",
+    "case_ids": [
+      "CASE_DEMO_001",
+      "CASE_DEMO_004"
+    ],
+    "jurisdiction_node_ids": [
+      "JURISDICTION_DELHI_CYBERCRIME",
+      "JURISDICTION_HYDERABAD_CYBERCRIME"
+    ],
+    "recommendation": "Entity '9876543210' appears in 2 cases across 2 jurisdictions — verify cross-case identity before merging investigations",
+    "created_at": "2026-09-25T19:43:23.876000",
+    "status": "ACTIVE",
+    "reviewed_by_id": null,
+    "reviewed_at": null
+  },
+  {
+    "id": "ALERT_cc54c2b871c00218",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "severity": "MEDIUM",
+    "case_ids": [
+      "CASE_DEMO_001",
+      "CASE_DEMO_004"
+    ],
+    "jurisdiction_node_ids": [
+      "JURISDICTION_DELHI_CYBERCRIME",
+      "JURISDICTION_HYDERABAD_CYBERCRIME"
+    ],
+    "recommendation": "Entity 'Rakesh Kumar' appears in 2 cases across 2 jurisdictions — verify cross-case identity before merging investigations",
+    "created_at": "2026-09-25T19:43:23.876000",
+    "status": "ACTIVE",
+    "reviewed_by_id": null,
+    "reviewed_at": null
+  }
+]

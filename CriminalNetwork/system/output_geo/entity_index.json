@@ -1,0 +1,2034 @@
+{
+  "PHONE_a353fb4092c96d33": {
+    "name": "9876543213",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_155759e45298d60b": {
+    "name": "Rs. 5,00,000",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_3465c31c3f814940": {
+    "name": "Rs. 15,00,000",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_3741b703d2b73185": {
+    "name": "Shri Harish Chand",
+    "type": "PERSON",
+    "aliases": [
+      "Shri Harish Chand"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_b66694c77645402b": {
+    "name": "Meena Devi",
+    "type": "PERSON",
+    "aliases": [
+      "Meena Devi",
+      "meena_devi_2024"
+    ],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_6cbc919cac4341c3": {
+    "name": "15/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_13c347396595bf8e": {
+    "name": "123/2024",
+    "type": "AMOUNT",
+    "aliases": [
+      "123/2024"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_c4911c8c30edd7de": {
+    "name": "East Delhi",
+    "type": "LOCATION",
+    "aliases": [
+      "East Delhi"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_d38c3a66154452dd": {
+    "name": "34 years",
+    "type": "DATE",
+    "aliases": [
+      "34 years"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_d4aab4888fb04694": {
+    "name": "Rose Apartments",
+    "type": "LOCATION",
+    "aliases": [
+      "Rose Apartments"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_da3431ef66e742ca": {
+    "name": "Lajpat Nagar",
+    "type": "LOCATION",
+    "aliases": [
+      "Lajpat Nagar"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_9ed6d0e61816a424": {
+    "name": "New Delhi",
+    "type": "LOCATION",
+    "aliases": [
+      "New Delhi"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_66a129258179d731": {
+    "name": "12th March 2024",
+    "type": "DATE",
+    "aliases": [
+      "12th March 2024"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_37ba7bdd1c491581": {
+    "name": "SBI Customer Care",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "SBI Customer Care"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_694023070e84bf5b": {
+    "name": "13th March 2024",
+    "type": "DATE",
+    "aliases": [
+      "13th March 2024"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_6c0e6acd35694622": {
+    "name": "OTP",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "OTP"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_d8eaba1575ee7da5": {
+    "name": "14th March 2024",
+    "type": "DATE",
+    "aliases": [
+      "14th March 2024"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_8b5b9db0c13db242": {
+    "name": "three",
+    "type": "AMOUNT",
+    "aliases": [
+      "three"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_caa510e9d5057a69": {
+    "name": "SBI",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "SBI"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_ef612b1b744a6f86": {
+    "name": "15,00,000",
+    "type": "AMOUNT",
+    "aliases": [
+      "15,00,000"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_c463967e5708cab7": {
+    "name": "fifteen",
+    "type": "AMOUNT",
+    "aliases": [
+      "fifteen"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_1a452dcf7be46063": {
+    "name": "5,00,000",
+    "type": "AMOUNT",
+    "aliases": [
+      "5,00,000"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_a370d63d12846c1e": {
+    "name": "HDFC Bank",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "HDFC Bank"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_eb64ebaee08e80b0": {
+    "name": "Punjab National Bank",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Punjab National Bank"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_fce0b15c7c195529": {
+    "name": "Bank of Baroda",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Bank of Baroda"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_61ef8cb5c4f3d3ea": {
+    "name": "FIR",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "FIR"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_5bbfaccefdf61322": {
+    "name": "14:30 hours",
+    "type": "DATE",
+    "aliases": [
+      "14:30 hours"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_490d7c887c8033c2": {
+    "name": "1500000",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_f1994fef91b5681f": {
+    "name": "Lajpat Nagar, New Delhi",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_b764cdc0eab71374": {
+    "name": "Unknown",
+    "type": "PERSON",
+    "aliases": [
+      "Unknown"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_7619ee8cea49187f": {
+    "name": "9876543210",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_ddf5af9bcfac37ca": {
+    "name": "Karol Bagh Tower 1",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_e26019ce48adebef": {
+    "name": "9876543211",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_f456d82b59db5b73": {
+    "name": "Karol Bagh Tower 3",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_438561c65c9e4353": {
+    "name": "Nehru Nagar Tower 2",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_8a8023e9f7760676": {
+    "name": "9876543212",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_64eaba9d08ceff1d": {
+    "name": "Dwarka Sector 12 Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_ef5fb01e7fd16dee": {
+    "name": "9876543214",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_8de9f79573e30455": {
+    "name": "Lajpat Nagar Tower 1",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_8f30741d308610e1": {
+    "name": "Noida Sector 62 Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "04_CDR_Amit.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_23492e71991bc7b9": {
+    "name": "Rakesh Kumar",
+    "type": "PERSON",
+    "aliases": [
+      "Rakesh Kumar",
+      "Bhai",
+      "rakesh_kumar_rk"
+    ],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_c17c025fb9ed44ea": {
+    "name": "Account 1234",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "05_Bank_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_d85674cd46328697": {
+    "name": "Account 1235",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "05_Bank_Rakesh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_915ca1cfe5a261f0": {
+    "name": "Suresh Kumar",
+    "type": "PERSON",
+    "aliases": [
+      "Suresh Kumar"
+    ],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_5a1b78d720b151af": {
+    "name": "Account 9876",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "06_Bank_Suresh.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_75110ab02c0160f9": {
+    "name": "Amit Sharma",
+    "type": "PERSON",
+    "aliases": [
+      "Amit Sharma",
+      "amit_sharma_official"
+    ],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_aedd1b949f282279": {
+    "name": "Account 5678",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "07_Bank_Amit.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DEVICE_a1b575e0d3dabdc9": {
+    "name": "Device: Samsung Galaxy S21",
+    "type": "DEVICE",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_c63ac5eb1535a215": {
+    "name": "Suresh Bhai",
+    "type": "PERSON",
+    "aliases": [
+      "Suresh Bhai"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_105a112c81ce60e6": {
+    "name": "Amit",
+    "type": "PERSON",
+    "aliases": [
+      "Amit"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_3d649a61fbc63878": {
+    "name": "9876543220",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_d71ab13e9efcf04e": {
+    "name": "Bhai Sahab",
+    "type": "PERSON",
+    "aliases": [
+      "Bhai Sahab"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_bdae71cfb51d493f": {
+    "name": "Meena Ji",
+    "type": "PERSON",
+    "aliases": [
+      "Meena Ji"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_9fbdb74aacb6f47f": {
+    "name": "9812345678",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORG_4b8a1601852a8525": {
+    "name": "Rajesh Electronics",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Rajesh Electronics"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_8d4ea81fbbc86477": {
+    "name": "01126543210",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_485bdeb3c76752d4": {
+    "name": "RK Telecom Office",
+    "type": "LOCATION",
+    "aliases": [
+      "RK Telecom Office"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_a4e00d7e6aa82111": {
+    "name": "198",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORG_7fd1eb60e433a497": {
+    "name": "Airtel Customer Care",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Airtel Customer Care"
+    ],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_b45a7cc884cf53ee": {
+    "name": "Karol Bagh, Delhi",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "08_Device_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_9d2551e3464eafeb": {
+    "name": "Post: New beginnings at Karol Bagh office #business #del",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_faae857a7eacc0b2": {
+    "name": "Post: Meeting with partners #networking",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_519726048a82c0a5": {
+    "name": "Connaught Place, Delhi",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_1fb2ec07350f3220": {
+    "name": "Post: Successful day #business",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_450ffb171a8178c2": {
+    "name": "Post: Noida office visit #work",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_e84caccb77e25aa2": {
+    "name": "Noida Sector 62",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "09_Social_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_0e74cea9438de0e4": {
+    "name": "Lajpat Nagar Part II Camera 3",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_2d27b53729507310": {
+    "name": "Lajpat Nagar Part II Camera 1",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_ac070b942a2426e8": {
+    "name": "Karol Bagh Main Market Camera 7",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_6f827effaccad628": {
+    "name": "Dwarka Sector 12 Main Gate Camera",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_342bb7cffefbd624": {
+    "name": "Karol Bagh Main Market Camera 5",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_0b431dfb1b8603cd": {
+    "name": "Noida Sector 62 Gate Camera",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "10_CCTV_Log.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "CASE_c1db9559568c7381": {
+    "name": "Case: FIR 456/2022",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "11_Criminal_History.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "CASE_668ff83b2fc766f5": {
+    "name": "Case: FIR 789/2023",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "11_Criminal_History.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "CASE_dea3a7e853e97f68": {
+    "name": "Case: FIR 234/2023",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "11_Criminal_History.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "CASE_2736af5de68ff0d8": {
+    "name": "Case: FIR 567/2023",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "11_Criminal_History.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_2d426be6a60758d5": {
+    "name": "Rajesh Kumar",
+    "type": "PERSON",
+    "aliases": [
+      "Rajesh Kumar"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_430ff6a38fb745c3": {
+    "name": "Shri Mahesh Chand",
+    "type": "PERSON",
+    "aliases": [
+      "Shri Mahesh Chand"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_46fbd27c612b07eb": {
+    "name": "22/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_c2092663b84c9920": {
+    "name": "456/2024",
+    "type": "AMOUNT",
+    "aliases": [
+      "456/2024"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_4b4d474a2198985d": {
+    "name": "42 years",
+    "type": "DATE",
+    "aliases": [
+      "42 years"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_e98e9265a371cab6": {
+    "name": "approximately 9:15 AM",
+    "type": "DATE",
+    "aliases": [
+      "approximately 9:15 AM"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_4b8328539299a89c": {
+    "name": "around 8:45 AM",
+    "type": "DATE",
+    "aliases": [
+      "around 8:45 AM"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_248c33f46819bd6c": {
+    "name": "approximately 9:00 AM",
+    "type": "DATE",
+    "aliases": [
+      "approximately 9:00 AM"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_c457a36aabb4fb93": {
+    "name": "about 10 minutes",
+    "type": "DATE",
+    "aliases": [
+      "about 10 minutes"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_f78dd8e6016cfa74": {
+    "name": "CCTV",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "CCTV"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_78b9c9c3ec98cddd": {
+    "name": "11:15 hours",
+    "type": "DATE",
+    "aliases": [
+      "11:15 hours"
+    ],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_40dd6303d825d86d": {
+    "name": "Lajpat Nagar Part II, New Delhi",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "13_FIR_Rajesh.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_a6076b509f61275e": {
+    "name": "Account 2345",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "15_Bank_Meena.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DEVICE_5c27bcb2808812ad": {
+    "name": "Device: Xiaomi Redmi Note 12",
+    "type": "DEVICE",
+    "aliases": [],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_5cbac5323a616f86": {
+    "name": "Rakesh Bhai",
+    "type": "PERSON",
+    "aliases": [
+      "Rakesh Bhai"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_f73ad70629191b0d": {
+    "name": "Suresh",
+    "type": "PERSON",
+    "aliases": [
+      "Suresh"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_d38a9a689c50b16e": {
+    "name": "9876543215",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_bb515e95562574af": {
+    "name": "Neeraj",
+    "type": "PERSON",
+    "aliases": [
+      "Neeraj"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_7b74611f26dc07cd": {
+    "name": "9876543216",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_ff28988444e5efd4": {
+    "name": "Pooja",
+    "type": "PERSON",
+    "aliases": [
+      "Pooja"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_6a6ac8386005b00f": {
+    "name": "Boss",
+    "type": "PERSON",
+    "aliases": [
+      "Boss"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_42ed1a392df88b25": {
+    "name": "01129876543",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_475f3f364856ea70": {
+    "name": "Shop - Lajpat Nagar",
+    "type": "LOCATION",
+    "aliases": [
+      "Shop - Lajpat Nagar"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_042dfc35916c097e": {
+    "name": "18001021234",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORG_fce0b15c7c195529": {
+    "name": "Bank of Baroda",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Bank of Baroda"
+    ],
+    "source_id": "16_Device_Amit.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_65837e28f46c7807": {
+    "name": "Post: New stock arrived at RK Telecom #mobile #shop",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "17_Social_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_32854768a91920ae": {
+    "name": "Post: Busy day at the shop #business",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "17_Social_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_59176d5a6c79817f": {
+    "name": "Post: Good morning Delhi #morning",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "17_Social_Rakesh.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_2fc0deec815dd4af": {
+    "name": "Rs. 15",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_73728731a2aff159": {
+    "name": "SI Vikram Rathore",
+    "type": "PERSON",
+    "aliases": [
+      "SI Vikram Rathore"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_d64a1fe2af191dae": {
+    "name": "11:30 hours",
+    "type": "DATE",
+    "aliases": [
+      "11:30 hours"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_73728731a2aff159": {
+    "name": "SI Vikram Rathore",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "SI Vikram Rathore"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_5af6d945a47b0813": {
+    "name": "Age 42",
+    "type": "DATE",
+    "aliases": [
+      "Age 42"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_01072043f9410721": {
+    "name": "the past 8 years",
+    "type": "DATE",
+    "aliases": [
+      "the past 8 years"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_3fc4ccfe745870e2": {
+    "name": "two",
+    "type": "AMOUNT",
+    "aliases": [
+      "two"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_8e0ab004c7c23334": {
+    "name": "around 9:15 AM",
+    "type": "DATE",
+    "aliases": [
+      "around 9:15 AM"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_094dac57e909da57": {
+    "name": "approximately 8:45 AM",
+    "type": "DATE",
+    "aliases": [
+      "approximately 8:45 AM"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_683bc8b68cb318bb": {
+    "name": "9:00 AM",
+    "type": "DATE",
+    "aliases": [
+      "9:00 AM"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_8b12507783d5beca": {
+    "name": "One",
+    "type": "AMOUNT",
+    "aliases": [
+      "One"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_63519cad309a18f7": {
+    "name": "the same day",
+    "type": "DATE",
+    "aliases": [
+      "the same day"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_61ef8cb5c4f3d3ea": {
+    "name": "FIR",
+    "type": "AMOUNT",
+    "aliases": [
+      "FIR"
+    ],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_c76b4f63f14a704f": {
+    "name": "15 lakhs",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_1c11d0505b2eb93d": {
+    "name": "12/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_8bac4c9a27438293": {
+    "name": "13/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_163964bc54f8177e": {
+    "name": "14/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_fe7322b9585cfc85": {
+    "name": "Nehru Nagar Police Station",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_02752649638768e2": {
+    "name": "Lajpat Nagar Part II",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "18_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_59290a56d9bc313f": {
+    "name": "Rs. 25,000",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_4ec2c65c11681fd4": {
+    "name": "Rs. 67,000",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_89a517bea81aaa1b": {
+    "name": "25/03/2024",
+    "type": "DATE",
+    "aliases": [
+      "25/03/2024"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_d90f6b7eaea6a9ac": {
+    "name": "Nehru Nagar",
+    "type": "LOCATION",
+    "aliases": [
+      "Nehru Nagar"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_87ad8c66656ae254": {
+    "name": "Karol Bagh Main Market",
+    "type": "LOCATION",
+    "aliases": [
+      "Karol Bagh Main Market"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_48ae3f036fa1ccc8": {
+    "name": "10:00 AM",
+    "type": "DATE",
+    "aliases": [
+      "10:00 AM"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_4190a74434240bda": {
+    "name": "8:00 PM",
+    "type": "DATE",
+    "aliases": [
+      "8:00 PM"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_392728fce66c2681": {
+    "name": "16 March",
+    "type": "DATE",
+    "aliases": [
+      "16 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_6446f4f1020b9657": {
+    "name": "approximately 2:30 PM",
+    "type": "DATE",
+    "aliases": [
+      "approximately 2:30 PM"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_f4d9babc366dc531": {
+    "name": "Karol Bagh Metro",
+    "type": "LOCATION",
+    "aliases": [
+      "Karol Bagh Metro"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_eefe57dbc0d6dd0d": {
+    "name": "18 March",
+    "type": "DATE",
+    "aliases": [
+      "18 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_bc5e446ac5061fef": {
+    "name": "SIM",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "SIM"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_79fd3a1ea2fde9e1": {
+    "name": "67,000",
+    "type": "AMOUNT",
+    "aliases": [
+      "67,000"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_53f2f91b85a4986e": {
+    "name": "12 March",
+    "type": "DATE",
+    "aliases": [
+      "12 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_cefc73bd6a84af1f": {
+    "name": "7:00 PM",
+    "type": "DATE",
+    "aliases": [
+      "7:00 PM"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_dc30446d3ad4cde9": {
+    "name": "19 March",
+    "type": "DATE",
+    "aliases": [
+      "19 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_c7e6673590d2426f": {
+    "name": "25,000",
+    "type": "AMOUNT",
+    "aliases": [
+      "25,000"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_dd525bbf7d409e51": {
+    "name": "14 March",
+    "type": "DATE",
+    "aliases": [
+      "14 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_ff759e9fef48c739": {
+    "name": "Noida",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Noida"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_a8d99942a9f615a5": {
+    "name": "Noida Phase 2",
+    "type": "LOCATION",
+    "aliases": [
+      "Noida Phase 2"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_e4a3bce0ee71b148": {
+    "name": "15 March",
+    "type": "DATE",
+    "aliases": [
+      "15 March"
+    ],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_83119e5c6b573785": {
+    "name": "Karol Bagh Metro station",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_4b35576ac828911c": {
+    "name": "Dwarka Sector 12 residence",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_e149c6c473c2cdf5": {
+    "name": "Noida Sector 62 residence",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_e2601014dfc5ada7": {
+    "name": "Noida Sector 62 office complex",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_ab38ad1df66ced77": {
+    "name": "Rose Apartments, Lajpat Nagar",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_fdec398076c16255": {
+    "name": "HDFC Bank, Dwarka branch",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCOUNT_8f7438c75a6512f3": {
+    "name": "Meena Devi's account",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ITEM_cc84f0c29a70cefa": {
+    "name": "50 mobile phone SIM cards",
+    "type": "UNKNOWN",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_8acf0dac0c10de4b": {
+    "name": "16/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_353f41f32d8e6a08": {
+    "name": "18/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_eff55bff2dbfc8e7": {
+    "name": "19/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DOCUMENT_c6c849a5dc0340c2": {
+    "name": "FIR 123/2024",
+    "type": "DOCUMENT",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DOCUMENT_2736af5de68ff0d8": {
+    "name": "FIR 567/2023",
+    "type": "DOCUMENT",
+    "aliases": [],
+    "source_id": "19_Surveillance_Report.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_325ee79e29ef6dda": {
+    "name": "Rs. 5",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_13677449972f3b01": {
+    "name": "28/03/2024",
+    "type": "DATE",
+    "aliases": [
+      "28/03/2024"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_371ce02ae5647e65": {
+    "name": "Priya Singh",
+    "type": "PERSON",
+    "aliases": [
+      "Priya Singh"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORG_d1991fa73f492014": {
+    "name": "Delhi Herald",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Delhi Herald"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_899f4725b13a40bc": {
+    "name": "Delhi Police",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Delhi Police"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_57f7400db8c8d647": {
+    "name": "RK Telecom",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "RK Telecom"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_ac2255dabf2b2548": {
+    "name": "Karol Bagh",
+    "type": "LOCATION",
+    "aliases": [
+      "Karol Bagh"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_3f5694c3789e0e65": {
+    "name": "CDR",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "CDR"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_89dc13c9913c5597": {
+    "name": "Vikram Rathore",
+    "type": "PERSON",
+    "aliases": [],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_7d1550b844ff586a": {
+    "name": "Delhi",
+    "type": "LOCATION",
+    "aliases": [
+      "Delhi"
+    ],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_411939c77bf36138": {
+    "name": "15 lakh",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_06cfac14128fa5f1": {
+    "name": "5 lakh",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "20_Journalist_Note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_51909bf47fc507df": {
+    "name": "Account 7890",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "22_Bank_No_Name.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_1105401fe9fd4817": {
+    "name": "25th March 2024",
+    "type": "DATE",
+    "aliases": [
+      "25th March 2024"
+    ],
+    "source_id": "23_FIR_No_Phone.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_55de488df7c10afb": {
+    "name": "at least three",
+    "type": "AMOUNT",
+    "aliases": [
+      "at least three"
+    ],
+    "source_id": "23_FIR_No_Phone.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_ba6aeb68b3c239a5": {
+    "name": "R. Kumar",
+    "type": "PERSON",
+    "aliases": [],
+    "source_id": "23_FIR_No_Phone.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_6243832d591f59a2": {
+    "name": "unknown_user_2847",
+    "type": "PERSON",
+    "aliases": [
+      "unknown_user_2847"
+    ],
+    "source_id": "25_Social_Partial.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_727777a1420ee72a": {
+    "name": "Connaught Place Tower 2",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "27_Temporal_Contradiction_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_c2b111204ee5faf7": {
+    "name": "20/03/2024",
+    "type": "DATE",
+    "aliases": [],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_b690da60b55af7ff": {
+    "name": "12 March 2024",
+    "type": "DATE",
+    "aliases": [
+      "12 March 2024"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_a7f40fe0eaf028f5": {
+    "name": "13 March 2024",
+    "type": "DATE",
+    "aliases": [
+      "13 March 2024"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_e9bac7668eedb207": {
+    "name": "14 March 2024",
+    "type": "DATE",
+    "aliases": [
+      "14 March 2024"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_83732ed9ae9971ea": {
+    "name": "1234, 7891",
+    "type": "DATE",
+    "aliases": [
+      "1234, 7891"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_23492e71991bc7b9": {
+    "name": "Rakesh Kumar",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Rakesh Kumar"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_ddf5af9bcfac37ca": {
+    "name": "Karol Bagh Tower 1",
+    "type": "LOCATION",
+    "aliases": [
+      "Karol Bagh Tower 1"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_86f5edfc5b6b944b": {
+    "name": "5 to 10 minutes",
+    "type": "DATE",
+    "aliases": [
+      "5 to 10 minutes"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_9890be5d55270591": {
+    "name": "HDFC",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "HDFC"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_f88d533a7a47a361": {
+    "name": "PNB",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "PNB"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORG_058be09de37a18d4": {
+    "name": "BoB",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "BoB"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_b66694c77645402b": {
+    "name": "Meena Devi",
+    "type": "LOCATION",
+    "aliases": [
+      "Meena Devi"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_915ca1cfe5a261f0": {
+    "name": "Suresh Kumar",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Suresh Kumar"
+    ],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOCATION_438561c65c9e4353": {
+    "name": "Nehru Nagar Tower 2",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_058be09de37a18d4": {
+    "name": "BoB",
+    "type": "ORGANIZATION",
+    "aliases": [],
+    "source_id": "29_Investigator_Summary.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_41128ff00aeb9cd0": {
+    "name": "Account 4567",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "31_Adversarial_Bank.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_ea8e9a63f5cf48c0": {
+    "name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "32_Adversarial_Social.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_ca5c595ef394f74f": {
+    "name": "Lajpat Nagar, Delhi",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "32_Adversarial_Social.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_491c8a5eed380526": {
+    "name": "Post: Feeling stressed today #life",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "32_Adversarial_Social.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "POST_087631b96cd7e0a5": {
+    "name": "Post: Thankful to my neighbors for their support #gratef",
+    "type": "EVENT",
+    "aliases": [],
+    "source_id": "32_Adversarial_Social.json",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_8ea3ffc4409cc8b7": {
+    "name": "9:15 \u092c\u091c\u0947",
+    "type": "DATE",
+    "aliases": [
+      "9:15 \u092c\u091c\u0947"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_4c577a8fc78fbb06": {
+    "name": "\u092e\u093e\u0930\u094d\u091a 2024",
+    "type": "DATE",
+    "aliases": [
+      "\u092e\u093e\u0930\u094d\u091a 2024"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_ce6994ab41bdea73": {
+    "name": "8:45",
+    "type": "DATE",
+    "aliases": [
+      "8:45"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_2be7a76a17a53940": {
+    "name": "9:00",
+    "type": "DATE",
+    "aliases": [
+      "9:00"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_47fa1dd3b94203d9": {
+    "name": "15 \u0932\u093e\u0916",
+    "type": "AMOUNT",
+    "aliases": [
+      "15 \u0932\u093e\u0916"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_4d04f9016628213c": {
+    "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+    "type": "PERSON",
+    "aliases": [
+      "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940"
+    ],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_7e37d44888436470": {
+    "name": "\u0928\u0947\u0939\u0930\u0942 \u0928\u0917\u0930",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_585ebe962bfa6de1": {
+    "name": "\u092b\u094d\u0932\u0948\u091f 5\u090f",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_e629fa6598d73276": {
+    "name": "15",
+    "type": "AMOUNT",
+    "aliases": [],
+    "source_id": "36_Hindi_Witness_Statement.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_63dceb8800b2dd4a": {
+    "name": "Phone",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Phone"
+    ],
+    "source_id": "46_FIR_Supplement.pdf",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ORGANIZATION_7e1b0d5641f2640c": {
+    "name": "Account",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Account"
+    ],
+    "source_id": "46_FIR_Supplement.pdf",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_1199083258ce4e53": {
+    "name": "Account 6789",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_1da15d9f9d3a46b5": {
+    "name": "Account 8901",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "ACCT_5209b1df230295b3": {
+    "name": "Account 3456",
+    "type": "ACCOUNT",
+    "aliases": [],
+    "source_id": "48_Bank_Transactions.xlsx",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "CAM_ecdf912f9ac31cc2": {
+    "name": "CCTV_Screenshot",
+    "type": "DEVICE",
+    "aliases": [],
+    "source_id": "49_CCTV_Screenshot.png",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_66a4ad40386311a0": {
+    "name": "9820000042",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_0ee0d097580929cc": {
+    "name": "Andheri East Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_dd88237450f0511a": {
+    "name": "9414000063",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "02_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_40ef34111a94b814": {
+    "name": "Mansarovar Sector 5 Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "02_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "AMOUNT_d0e65fe1e3fdd122": {
+    "name": "204/2025",
+    "type": "AMOUNT",
+    "aliases": [
+      "204/2025"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_82c7ca02a357e7fe": {
+    "name": "2025-04-12",
+    "type": "DATE",
+    "aliases": [
+      "2025-04-12"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_92ef31518fe977e0": {
+    "name": "2025-04-13",
+    "type": "DATE",
+    "aliases": [
+      "2025-04-13"
+    ],
+    "source_id": "02_WITNESS_EVIDENCE.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_085871bd6e504785": {
+    "name": "9861000001",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "LOC_2c6ca8121912cfab": {
+    "name": "Hyderabad Banjara Hills Demo Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PHONE_84d9c4b849506b6d": {
+    "name": "0000000000",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "01_synthetic_witness_note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_36a391e6f2542c58": {
+    "name": "Example Person",
+    "type": "PERSON",
+    "aliases": [
+      "Example Person"
+    ],
+    "source_id": "01_synthetic_witness_note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "DATE_14973c591b26d511": {
+    "name": "2025-01-01",
+    "type": "DATE",
+    "aliases": [
+      "2025-01-01"
+    ],
+    "source_id": "01_synthetic_witness_note.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_5e95ee9f0386dda2": {
+    "name": "suresh_kumar_01",
+    "type": "PERSON",
+    "aliases": [],
+    "source_id": "",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  },
+  "PERSON_05aad88368d2f36d": {
+    "name": "complainant",
+    "type": "PERSON",
+    "aliases": [],
+    "source_id": "",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_164752"
+  }
+}

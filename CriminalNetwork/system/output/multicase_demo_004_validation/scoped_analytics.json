@@ -1,0 +1,92 @@
+{
+  "stage": 12,
+  "scope_type": "declared_case_set",
+  "case_count": 1,
+  "case_metrics": {
+    "CASE_DEMO_004": {
+      "entities": 10,
+      "relations": 4,
+      "global_links": 9
+    }
+  },
+  "case_metric_totals": {
+    "entities": 10,
+    "relations": 4
+  },
+  "shared_global_entities": [
+    {
+      "global_entity_id": "GLOB_84a717c826d04bc2",
+      "canonical_name": "9876543210",
+      "case_ids": [
+        "CASE_DEMO_001",
+        "CASE_DEMO_004"
+      ]
+    },
+    {
+      "global_entity_id": "GLOB_fccdaff418f10e5b",
+      "canonical_name": "Rakesh Kumar",
+      "case_ids": [
+        "CASE_DEMO_001",
+        "CASE_DEMO_004"
+      ]
+    }
+  ],
+  "cross_case_alerts": [
+    {
+      "id": "ALERT_74690f63b5577b84",
+      "global_entity_id": "GLOB_84a717c826d04bc2",
+      "severity": "MEDIUM",
+      "case_ids": [
+        "CASE_DEMO_001"
+      ],
+      "jurisdiction_node_ids": [
+        "JURISDICTION_DELHI_CYBERCRIME"
+      ],
+      "recommendation": "Resolved: synthetic smoke-test case was removed; retain CASE_DEMO_001 association for history.",
+      "created_at": "2026-09-25T19:15:06.077000",
+      "status": "RESOLVED",
+      "reviewed_by_id": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "ALERT_11cf74fd1b69d9eb",
+      "global_entity_id": "GLOB_84a717c826d04bc2",
+      "severity": "MEDIUM",
+      "case_ids": [
+        "CASE_DEMO_001",
+        "CASE_DEMO_004"
+      ],
+      "jurisdiction_node_ids": [
+        "JURISDICTION_DELHI_CYBERCRIME",
+        "JURISDICTION_HYDERABAD_CYBERCRIME"
+      ],
+      "recommendation": "Entity '9876543210' appears in 2 cases across 2 jurisdictions — verify cross-case identity before merging investigations",
+      "created_at": "2026-09-25T19:43:23.876000",
+      "status": "ACTIVE",
+      "reviewed_by_id": null,
+      "reviewed_at": null
+    },
+    {
+      "id": "ALERT_cc54c2b871c00218",
+      "global_entity_id": "GLOB_fccdaff418f10e5b",
+      "severity": "MEDIUM",
+      "case_ids": [
+        "CASE_DEMO_001",
+        "CASE_DEMO_004"
+      ],
+      "jurisdiction_node_ids": [
+        "JURISDICTION_DELHI_CYBERCRIME",
+        "JURISDICTION_HYDERABAD_CYBERCRIME"
+      ],
+      "recommendation": "Entity 'Rakesh Kumar' appears in 2 cases across 2 jurisdictions — verify cross-case identity before merging investigations",
+      "created_at": "2026-09-25T19:43:23.876000",
+      "status": "ACTIVE",
+      "reviewed_by_id": null,
+      "reviewed_at": null
+    }
+  ],
+  "shared_global_entity_count": 2,
+  "cross_case_alert_count": 3,
+  "evidence_pooled": false,
+  "risk_scores_combined": false
+}

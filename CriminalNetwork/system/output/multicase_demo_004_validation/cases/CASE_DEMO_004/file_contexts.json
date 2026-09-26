@@ -1,0 +1,157 @@
+{
+  "files": {
+    "01_FIR.txt": {
+      "file_name": "01_FIR.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/demo_data/multicase/CASE_DEMO_004/01_FIR.txt",
+      "description": "FIR document.   6 entities extracted.",
+      "document_type": "fir",
+      "entities_extracted": [
+        {
+          "id": "PHONE_7619ee8cea49187f",
+          "type": "PHONE",
+          "name": "9876543210"
+        },
+        {
+          "id": "PERSON_23492e71991bc7b9",
+          "type": "PERSON",
+          "name": "Rakesh Kumar"
+        },
+        {
+          "id": "AMOUNT_d0e65fe1e3fdd122",
+          "type": "AMOUNT",
+          "name": "204/2025"
+        },
+        {
+          "id": "DATE_82c7ca02a357e7fe",
+          "type": "DATE",
+          "name": "2025-04-12"
+        },
+        {
+          "id": "LOCATION_4fa64bd55d5c0c1f",
+          "type": "LOCATION",
+          "name": "Hyderabad"
+        },
+        {
+          "id": "DOCUMENT_d0e65fe1e3fdd122",
+          "type": "DOCUMENT",
+          "name": "204/2025"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "both",
+      "key_evidence": [
+        "Phone number 9876543210 mentioned in FIR"
+      ],
+      "suggests": [
+        "Documents initial complaint and incident details",
+        "Establishes victim and alleged crime"
+      ],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.9,
+      "reliability_notes": "Official police document",
+      "ingestion_time": "2026-09-26T01:17:44.030696",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "02_WITNESS_EVIDENCE.txt": {
+      "file_name": "02_WITNESS_EVIDENCE.txt",
+      "file_type": "text",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/demo_data/multicase/CASE_DEMO_004/02_WITNESS_EVIDENCE.txt",
+      "description": "Document. 2 entities extracted.",
+      "document_type": "unknown",
+      "entities_extracted": [
+        {
+          "id": "DATE_92ef31518fe977e0",
+          "type": "DATE",
+          "name": "2025-04-13"
+        },
+        {
+          "id": "ORGANIZATION_23492e71991bc7b9",
+          "type": "ORGANIZATION",
+          "name": "Rakesh Kumar"
+        }
+      ],
+      "relations_extracted": [],
+      "extraction_method": "code",
+      "key_evidence": [],
+      "suggests": [],
+      "missing": [],
+      "linked_files": [],
+      "source_reliability": 0.5,
+      "reliability_notes": "Unknown source",
+      "ingestion_time": "2026-09-26T01:17:46.449554",
+      "record_count": 0,
+      "raw_summary": ""
+    },
+    "03_CDR.csv": {
+      "file_name": "03_CDR.csv",
+      "file_type": "tabular",
+      "file_path": "/home/daksh/working/codeworks2/automata/SIHidea/CriminalNetwork/demo_data/multicase/CASE_DEMO_004/03_CDR.csv",
+      "description": "Call Detail Records. 2 entities extracted from 2 call records.",
+      "document_type": "cdr",
+      "entities_extracted": [
+        {
+          "id": "PHONE_085871bd6e504785",
+          "type": "PHONE",
+          "name": "9861000001"
+        },
+        {
+          "id": "LOC_2c6ca8121912cfab",
+          "type": "LOCATION",
+          "name": "Hyderabad Banjara Hills Demo Tower"
+        }
+      ],
+      "relations_extracted": [
+        {
+          "id": "REL_714c75be1bb88480",
+          "type": "VISITED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "LOC_2c6ca8121912cfab"
+        },
+        {
+          "id": "REL_cc5ecf0352a3e195",
+          "type": "CALLED",
+          "source": "PHONE_7619ee8cea49187f",
+          "target": "PHONE_085871bd6e504785"
+        },
+        {
+          "id": "REL_74e283d2bc0e84b9",
+          "type": "VISITED",
+          "source": "PHONE_085871bd6e504785",
+          "target": "LOC_2c6ca8121912cfab"
+        },
+        {
+          "id": "REL_8276ba77e6b2ccd4",
+          "type": "CALLED",
+          "source": "PHONE_085871bd6e504785",
+          "target": "PHONE_7619ee8cea49187f"
+        }
+      ],
+      "extraction_method": "code",
+      "key_evidence": [
+        "Most frequent contact: PHONE_085871bd6e504785 (1 calls)"
+      ],
+      "suggests": [
+        "Reveals communication patterns between suspects",
+        "Provides timeline and location data"
+      ],
+      "missing": [
+        "Limited call history available"
+      ],
+      "linked_files": [],
+      "source_reliability": 0.95,
+      "reliability_notes": "Direct telecom provider record",
+      "ingestion_time": "2026-09-26T01:17:49.383681",
+      "record_count": 2,
+      "raw_summary": ""
+    }
+  },
+  "summary": {
+    "total_files": 3,
+    "by_type": {},
+    "cross_references": 0
+  },
+  "generated_at": "2026-09-26T01:18:00.311740"
+}

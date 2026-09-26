@@ -1,0 +1,7 @@
+transaction_id,account_number,account_holder,transaction_type,amount,currency,transaction_date,transaction_time,balance_after,description,counterparty_account,counterparty_name
+TXN101,98765432109876,Suresh Kumar,CREDIT,50000,INR,2024-03-05,10:20:00,50000,Transfer from Rakesh,12345678901234,Rakesh Kumar
+TXN102,98765432109876,Suresh Kumar,DEBIT,25000,INR,2024-03-06,14:30:11,25000,Cash deposit,NA,NA
+TXN103,98765432109876,Suresh Kumar,CREDIT,500000,INR,2024-03-14,16:50:33,525000,Fraud transfer received,98765432109876,Meena Devi
+TXN104,98765432109876,Suresh Kumar,DEBIT,200000,INR,2024-03-14,18:30:44,325000,Transfer to unknown account,ACC_UNKNOWN_02,
+TXN105,98765432109876,Suresh Kumar,DEBIT,150000,INR,2024-03-15,09:15:22,175000,Transfer to unknown account,ACC_UNKNOWN_03,
+TXN106,98765432109876,Suresh Kumar,DEBIT,175000,INR,2024-03-15,14:45:55,0,Final transfer out,ACC_UNKNOWN_04,

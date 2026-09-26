@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "case_id": "CASE_DEMO_004",
+  "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+  "description": "Synthetic Hyderabad report used to validate single-case processing and workspace-wide identity matching.",
+  "firs": [
+    {
+      "fir_id": "FIR_HYDERABAD_001",
+      "fir_number": "204/2025",
+      "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+      "description": "Synthetic online investment fraud with a phone signal also present in the existing demo workspace.",
+      "investigation_status": "UNDER_INVESTIGATION",
+      "files": ["01_FIR.txt", "02_WITNESS_EVIDENCE.txt", "03_CDR.csv"]
+    }
+  ],
+  "skip_files": []
+}

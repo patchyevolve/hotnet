@@ -1,0 +1,186 @@
+[
+  {
+    "community_id": "COMM_000",
+    "node_ids": [
+      "RES_23492e71991bc7b9",
+      "RES_236180e1a6a63d8a",
+      "RES_255e03416fe4b55e",
+      "RES_5e95ee9f0386dda2",
+      "RES_6e50992230df4a2d",
+      "RES_7da381a50326b6ae",
+      "RES_916bcb46a8192bd7",
+      "RES_a8d3463ec398ed33",
+      "RES_b7753960e19a6559",
+      "RES_bc4640447aeab94a",
+      "RES_ec4168bca6487484",
+      "RES_edbf72dd9f41eaae"
+    ],
+    "size": 12,
+    "modularity_contribution": 0.0142,
+    "internal_edge_count": 14,
+    "density": 0.2121,
+    "dominant_node_type": "account",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_001",
+    "node_ids": [
+      "RES_105a112c81ce60e6",
+      "RES_438561c65c9e4353",
+      "RES_64b87341ada987df",
+      "RES_6f827effaccad628",
+      "RES_7619ee8cea49187f",
+      "RES_8a8023e9f7760676",
+      "RES_a353fb4092c96d33",
+      "RES_d41c55bf957849d2",
+      "RES_e26019ce48adebef",
+      "RES_ef5fb01e7fd16dee"
+    ],
+    "size": 10,
+    "modularity_contribution": 0.0223,
+    "internal_edge_count": 18,
+    "density": 0.4,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_002",
+    "node_ids": [
+      "RES_342bb7cffefbd624",
+      "RES_485bdeb3c76752d4",
+      "RES_502123dcbcdc704e",
+      "RES_8d4ea81fbbc86477",
+      "RES_94049de73f3d3a19",
+      "RES_d88fe4c9fd7f93e5"
+    ],
+    "size": 6,
+    "modularity_contribution": 0.0179,
+    "internal_edge_count": 8,
+    "density": 0.5333,
+    "dominant_node_type": "event",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_003",
+    "node_ids": [
+      "RES_4941c77b57e48753",
+      "RES_727777a1420ee72a",
+      "RES_75110ab02c0160f9",
+      "RES_9f13c23483224d85",
+      "RES_ab9b67613bd4a92c",
+      "RES_e3b0c44298fc1c14"
+    ],
+    "size": 6,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 5,
+    "density": 0.3333,
+    "dominant_node_type": "event",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_004",
+    "node_ids": [
+      "RES_3d649a61fbc63878",
+      "RES_6a6ac8386005b00f",
+      "RES_d71ab13e9efcf04e"
+    ],
+    "size": 3,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 2,
+    "density": 0.6667,
+    "dominant_node_type": "person",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_005",
+    "node_ids": [
+      "RES_2d27b53729507310",
+      "RES_5d395ea412ab918d",
+      "RES_83e0fa9f1e90d610"
+    ],
+    "size": 3,
+    "modularity_contribution": 0.0168,
+    "internal_edge_count": 3,
+    "density": 1.0,
+    "dominant_node_type": "event",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_006",
+    "node_ids": [
+      "RES_042dfc35916c097e",
+      "RES_fce0b15c7c195529"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_007",
+    "node_ids": [
+      "RES_42ed1a392df88b25",
+      "RES_475f3f364856ea70"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_008",
+    "node_ids": [
+      "RES_4b8a1601852a8525",
+      "RES_9fbdb74aacb6f47f"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_009",
+    "node_ids": [
+      "RES_7fd1eb60e433a497",
+      "RES_a4e00d7e6aa82111"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "organization",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_010",
+    "node_ids": [
+      "RES_bb515e95562574af",
+      "RES_d38a9a689c50b16e"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "community_id": "COMM_011",
+    "node_ids": [
+      "RES_7b74611f26dc07cd",
+      "RES_ff28988444e5efd4"
+    ],
+    "size": 2,
+    "modularity_contribution": 0.0112,
+    "internal_edge_count": 1,
+    "density": 1.0,
+    "dominant_node_type": "person",
+    "run_id": "run_20260923_001317"
+  }
+]

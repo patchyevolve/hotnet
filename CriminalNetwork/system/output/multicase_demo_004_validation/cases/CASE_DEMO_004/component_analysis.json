@@ -1,0 +1,152 @@
+[
+  {
+    "component_id": 1,
+    "size": 3,
+    "edge_count": 3,
+    "density": 1.0,
+    "node_types": {
+      "location": 1,
+      "phone": 2
+    },
+    "has_person": false,
+    "has_financial": false,
+    "has_communication": true,
+    "has_temporal_data": true,
+    "has_spatial_data": true,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.9,
+    "path_length": 1,
+    "key_entities": [
+      "RES_61aa74134565f94a",
+      "RES_3120efd78d82e958",
+      "RES_06b3f3578a482b62"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 0,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "amount": 1
+    },
+    "has_person": false,
+    "has_financial": true,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.76,
+    "path_length": null,
+    "key_entities": [
+      "RES_eea76256ba5071e8"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 2,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "person": 1
+    },
+    "has_person": true,
+    "has_financial": false,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.7,
+    "path_length": null,
+    "key_entities": [
+      "RES_8ca046c4d2b31eec"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 3,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "date": 1
+    },
+    "has_person": false,
+    "has_financial": false,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.75,
+    "path_length": null,
+    "key_entities": [
+      "RES_64c93e46d936b370"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 4,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "location": 1
+    },
+    "has_person": false,
+    "has_financial": false,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.5,
+    "path_length": null,
+    "key_entities": [
+      "RES_bef1fd491d32342d"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 5,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "date": 1
+    },
+    "has_person": false,
+    "has_financial": false,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.75,
+    "path_length": null,
+    "key_entities": [
+      "RES_7a026607d0550ea2"
+    ],
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "component_id": 6,
+    "size": 1,
+    "edge_count": 0,
+    "density": 0.0,
+    "node_types": {
+      "person": 1
+    },
+    "has_person": true,
+    "has_financial": false,
+    "has_communication": false,
+    "has_temporal_data": false,
+    "has_spatial_data": false,
+    "is_candidate_for_investigation": false,
+    "avg_confidence": 0.75,
+    "path_length": null,
+    "key_entities": [
+      "RES_b99c97d8ee472310"
+    ],
+    "run_id": "run_20260926_011743"
+  }
+]

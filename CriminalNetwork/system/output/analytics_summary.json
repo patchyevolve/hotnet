@@ -1,0 +1,21 @@
+{
+  "run_id": "run_20260923_001317",
+  "timestamp": "2026-09-23T00:13:19.724233",
+  "graph_nodes_analyzed": 179,
+  "graph_edges_analyzed": 86,
+  "connected_components": 135,
+  "largest_component_size": 37,
+  "processing_time_seconds": 0.06,
+  "centrality_scores": 179,
+  "communities": 12,
+  "anomaly_signals": 54,
+  "behavioral_baselines": 9,
+  "correlations": 5,
+  "component_analyses": 135,
+  "temporal_patterns": 11,
+  "data_quality_notes": [
+    "Graph is very sparse (density=0.005398). Many algorithms produce trivial results for isolated nodes.",
+    "Graph has 135 connected components for 179 nodes. Most nodes are isolated. Graph algorithms limited to 8 components of size >= 2.",
+    "Spatial data: 24 records available but ALL have null latitude/longitude. Geospatial analysis is not possible."
+  ]
+}

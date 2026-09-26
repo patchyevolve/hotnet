@@ -1,0 +1,4 @@
+transaction_id,account_number,account_holder,transaction_type,amount,currency,transaction_date,transaction_time,balance_after,description,counterparty_account,counterparty_name
+TXN301,3456789012345,Meena Devi,DEBIT,500000,INR,2024-03-14,09:15:33,1200000,Online transfer to HDFC,12345678901234,Rakesh Kumar
+TXN302,3456789012345,Meena Devi,DEBIT,500000,INR,2024-03-14,09:16:44,700000,Online transfer to PNB,98765432109876,Suresh Kumar
+TXN303,3456789012345,Meena Devi,DEBIT,500000,INR,2024-03-14,09:18:00,200000,Online transfer to BoB,56789012345678,Amit Sharma

@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_52b770ca228f",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "a0abd1c08c2ff025",
+  "response_text": "{\"groups\":[{\"entity_ids\":[\"PERSON_915ca1cfe5a261f0\",\"PERSON_c63ac5eb1535a215\",\"PERSON_f73ad70629191b0d\"],\"merge\":true,\"confidence\":0.95,\"canonical_name\":\"Suresh Kumar\",\"reasoning\":\"All three share identical phone number and highly similar names; no contradictory attributes.\",\"signals\":{\"name_similarity\":0.9,\"shared_attributes\":1.0,\"context_alignment\":0.8,\"contradictions\":1.0,\"cultural_knowledge\":0.95},\"merge_type\":\"auto\"}]}",
+  "usage": {
+    "queue_time": 0.210396835,
+    "prompt_tokens": 786,
+    "prompt_time": 0.057176221,
+    "completion_tokens": 163,
+    "completion_time": 0.17866701,
+    "total_tokens": 949,
+    "total_time": 0.235843231,
+    "completion_tokens_details": {
+      "reasoning_tokens": 29
+    }
+  },
+  "latency_ms": 499,
+  "status": "success",
+  "timestamp": "2026-09-26T16:49:08.930843",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

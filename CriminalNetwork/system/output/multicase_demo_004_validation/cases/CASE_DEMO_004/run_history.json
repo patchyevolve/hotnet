@@ -1,0 +1,20 @@
+[
+  {
+    "run_id": "run_20260926_011743",
+    "case_id": "CASE_DEMO_004",
+    "input_snapshot": [
+      "01_FIR.txt",
+      "02_WITNESS_EVIDENCE.txt",
+      "03_CDR.csv"
+    ],
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "pipeline_version": "v1.0",
+    "model_versions": {},
+    "policy_version": "policy_v1.0",
+    "start_time": "2026-09-26T01:17:43.988285",
+    "end_time": "2026-09-26T01:18:00.308839",
+    "parent_run_id": null,
+    "trigger": "multi_fir",
+    "status": "completed"
+  }
+]

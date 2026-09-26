@@ -1,0 +1,215 @@
+[
+  {
+    "id": "EDGE_f1e54c3d4a9a2cc7",
+    "source_id": "RES_06b3f3578a482b62",
+    "target_id": "RES_61aa74134565f94a",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=0.90, target=0.80, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.3,
+          "description": "Source reliability: 0.95"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.80"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:12:00",
+      "source": "attributes"
+    },
+    "provenance_chain": [
+      "03_CDR.csv"
+    ],
+    "dependency_group": "src:03_CDR.csv",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.010000000000000009,
+    "created_at": "2026-09-26T01:17:55.003940",
+    "updated_at": "2026-09-26T01:17:55.003940",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Hyderabad Banjara Hills Demo Tower"
+  },
+  {
+    "id": "EDGE_35153718c05cf69d",
+    "source_id": "RES_06b3f3578a482b62",
+    "target_id": "RES_3120efd78d82e958",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.3,
+          "description": "Source reliability: 0.95"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:12:00",
+      "source": "attributes"
+    },
+    "provenance_chain": [
+      "03_CDR.csv"
+    ],
+    "dependency_group": "src:03_CDR.csv",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.010000000000000009,
+    "created_at": "2026-09-26T01:17:55.003940",
+    "updated_at": "2026-09-26T01:17:55.003940",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "9861000001"
+  },
+  {
+    "id": "EDGE_40ad716478966b3c",
+    "source_id": "RES_3120efd78d82e958",
+    "target_id": "RES_61aa74134565f94a",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.80, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.3,
+          "description": "Source reliability: 0.95"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.80"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:36:00",
+      "source": "attributes"
+    },
+    "provenance_chain": [
+      "03_CDR.csv"
+    ],
+    "dependency_group": "src:03_CDR.csv",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.010000000000000009,
+    "created_at": "2026-09-26T01:17:55.003940",
+    "updated_at": "2026-09-26T01:17:55.003940",
+    "run_id": "",
+    "source_name": "9861000001",
+    "target_name": "Hyderabad Banjara Hills Demo Tower"
+  }
+]

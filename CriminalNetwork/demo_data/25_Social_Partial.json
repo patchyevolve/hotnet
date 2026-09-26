@@ -1,0 +1,26 @@
+{
+  "platform": "Instagram",
+  "username": "unknown_user_2847",
+  "profile": {
+    "name": "",
+    "bio": "Private account",
+    "followers": 0,
+    "following": 0,
+    "posts_count": 0,
+    "account_created": "2024-03-01",
+    "verified": false
+  },
+  "posts": [],
+  "direct_messages": [
+    {
+      "contact": "amit_sharma_official",
+      "messages": [
+        {"from": "unknown_user_2847", "text": "Amit bhai, kya haal hai?", "date": "2024-03-13"},
+        {"from": "amit_sharma_official", "text": "Accha hun, tu bata", "date": "2024-03-13"},
+        {"from": "unknown_user_2847", "text": "Kal milna hai Karol Bagh mein", "date": "2024-03-13"},
+        {"from": "amit_sharma_official", "text": "Kaun hai tu?", "date": "2024-03-13"},
+        {"from": "unknown_user_2847", "text": "Rakesh bhai ne bheja hai", "date": "2024-03-13"}
+      ]
+    }
+  ]
+}

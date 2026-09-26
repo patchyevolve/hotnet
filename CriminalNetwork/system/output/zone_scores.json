@@ -1,0 +1,122 @@
+[
+  {
+    "hex_id": "GRID_28.57_77.243",
+    "latitude": 28.57,
+    "longitude": 77.243,
+    "location_names": [
+      "Amit Sharma",
+      "Lajpat Nagar Part II Camera 1",
+      "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+      "Rakesh Kumar",
+      "Shop - Lajpat Nagar"
+    ],
+    "evidence_count": 3,
+    "suspect_count": 2,
+    "risk_score": 1.0,
+    "risk_band": "RED",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.62_77.21",
+    "latitude": 28.62,
+    "longitude": 77.21,
+    "location_names": [
+      "Meena Devi",
+      "Meena Devi's"
+    ],
+    "evidence_count": 3,
+    "suspect_count": 0,
+    "risk_score": 0.6,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.652_77.19",
+    "latitude": 28.6519,
+    "longitude": 77.1904,
+    "location_names": [
+      "Karol Bagh Main Market",
+      "Karol Bagh Main Market Camera 5",
+      "Post: New beginnings at Karol Bagh office #business #del"
+    ],
+    "evidence_count": 3,
+    "suspect_count": 0,
+    "risk_score": 0.6,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.56_77.25",
+    "latitude": 28.56,
+    "longitude": 77.25,
+    "location_names": [
+      "Nehru Nagar",
+      "Nehru Nagar Tower 2"
+    ],
+    "evidence_count": 2,
+    "suspect_count": 0,
+    "risk_score": 0.4,
+    "risk_band": "AMBER",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.63_77.29",
+    "latitude": 28.63,
+    "longitude": 77.29,
+    "location_names": [
+      "East Delhi"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.592_77.046",
+    "latitude": 28.5921,
+    "longitude": 77.046,
+    "location_names": [
+      "Dwarka Sector 12 Main Gate Camera"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.631_77.217",
+    "latitude": 28.6315,
+    "longitude": 77.2167,
+    "location_names": [
+      "Connaught Place Tower 2"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "hex_id": "GRID_28.628_77.364",
+    "latitude": 28.628,
+    "longitude": 77.364,
+    "location_names": [
+      "Noida"
+    ],
+    "evidence_count": 1,
+    "suspect_count": 0,
+    "risk_score": 0.2,
+    "risk_band": "GREEN",
+    "case_ids": [],
+    "run_id": "run_20260923_001317"
+  }
+]

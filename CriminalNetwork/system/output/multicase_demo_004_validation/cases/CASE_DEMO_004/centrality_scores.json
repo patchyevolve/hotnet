@@ -1,0 +1,110 @@
+[
+  {
+    "node_id": "RES_06b3f3578a482b62",
+    "node_type": "phone",
+    "name": "9876543210",
+    "degree_centrality": 0.25,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 1.0,
+    "eigenvector_centrality": 0.57735,
+    "pagerank": 0.333333,
+    "degree": 2,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_3120efd78d82e958",
+    "node_type": "phone",
+    "name": "9861000001",
+    "degree_centrality": 0.25,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 1.0,
+    "eigenvector_centrality": 0.57735,
+    "pagerank": 0.333333,
+    "degree": 2,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_61aa74134565f94a",
+    "node_type": "location",
+    "name": "Hyderabad Banjara Hills Demo Tower",
+    "degree_centrality": 0.25,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 1.0,
+    "eigenvector_centrality": 0.57735,
+    "pagerank": 0.333333,
+    "degree": 2,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_eea76256ba5071e8",
+    "node_type": "amount",
+    "name": "204/2025",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_8ca046c4d2b31eec",
+    "node_type": "person",
+    "name": "Rakesh Kumar",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_64c93e46d936b370",
+    "node_type": "date",
+    "name": "2025-04-12",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_bef1fd491d32342d",
+    "node_type": "location",
+    "name": "Hyderabad",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_7a026607d0550ea2",
+    "node_type": "date",
+    "name": "2025-04-13",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "node_id": "RES_b99c97d8ee472310",
+    "node_type": "person",
+    "name": "Rakesh Kumar",
+    "degree_centrality": 0.0,
+    "betweenness_centrality": 0.0,
+    "closeness_centrality": 0.0,
+    "eigenvector_centrality": 0.0,
+    "pagerank": 0.0,
+    "degree": 0,
+    "run_id": "run_20260926_011743"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "total_nodes": 9,
+  "total_edges": 3,
+  "node_types": {
+    "Amount": 1,
+    "Phone": 2,
+    "Person": 2,
+    "Date": 2,
+    "Location": 2
+  },
+  "edge_types": {
+    "PhysicalProximity": 2,
+    "Call": 1
+  }
+}

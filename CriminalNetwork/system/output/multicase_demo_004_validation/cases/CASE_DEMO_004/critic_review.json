@@ -1,0 +1,72 @@
+{
+  "run_id": "run_20260926_011743",
+  "mode": "llm_assisted",
+  "llm_status": "success",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "llm_error": null,
+  "findings": [
+    {
+      "severity": "review",
+      "category": "missing_provenance",
+      "target_ids": [
+        "HYP_NULL"
+      ],
+      "evidence_ids": [],
+      "finding": "Hypothesis HYP_NULL lacks supporting evidence identifiers.",
+      "source": "llm_review"
+    },
+    {
+      "severity": "review",
+      "category": "missing_provenance",
+      "target_ids": [
+        "HYP_23af9258e7bf9499"
+      ],
+      "evidence_ids": [],
+      "finding": "Hypothesis HYP_23af9258e7bf9499 lacks supporting evidence identifiers.",
+      "source": "llm_review"
+    },
+    {
+      "severity": "review",
+      "category": "missing_provenance",
+      "target_ids": [
+        "HYP_3506820a24fb5887"
+      ],
+      "evidence_ids": [],
+      "finding": "Hypothesis HYP_3506820a24fb5887 lacks supporting evidence identifiers.",
+      "source": "llm_review"
+    },
+    {
+      "severity": "review",
+      "category": "missing_provenance",
+      "target_ids": [
+        "HYP_e396024b8d39a46e"
+      ],
+      "evidence_ids": [],
+      "finding": "Hypothesis HYP_e396024b8d39a46e lacks supporting evidence identifiers.",
+      "source": "llm_review"
+    }
+  ],
+  "structural_checks": [
+    {
+      "code": "hypothesis_without_cited_support",
+      "target_id": "HYP_NULL"
+    },
+    {
+      "code": "hypothesis_without_cited_support",
+      "target_id": "HYP_23af9258e7bf9499"
+    },
+    {
+      "code": "hypothesis_without_cited_support",
+      "target_id": "HYP_3506820a24fb5887"
+    },
+    {
+      "code": "hypothesis_without_cited_support",
+      "target_id": "HYP_e396024b8d39a46e"
+    }
+  ],
+  "target_count": 19,
+  "evidence_reference_count": 1,
+  "changes_applied": false,
+  "human_review_required": true
+}

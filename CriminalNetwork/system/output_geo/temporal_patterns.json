@@ -1,0 +1,123 @@
+[
+  {
+    "pattern_id": "TPAT_8f7c1337ad2ef3b7",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_06b3f3578a482b62",
+    "entity_type": "phone",
+    "description": "136 inter-event gap(s) under 1 hour across 151 events",
+    "event_count": 151,
+    "time_span_seconds": 34163798.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_7ba7413559ee4fd2",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "RES_06b3f3578a482b62",
+    "entity_type": "phone",
+    "description": "Event at 2025-01-10 is 4.3\u03c3 from entity's mean timestamp",
+    "event_count": 151,
+    "time_span_seconds": 34163798.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_fb3afef42538af96",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_a43997b49dba49ba",
+    "entity_type": "phone",
+    "description": "72 inter-event gap(s) under 1 hour across 85 events",
+    "event_count": 85,
+    "time_span_seconds": 577887.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_272408cc55e72720",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "RES_a43997b49dba49ba",
+    "entity_type": "phone",
+    "description": "Event at 2024-03-17 is 2.2\u03c3 from entity's mean timestamp",
+    "event_count": 85,
+    "time_span_seconds": 577887.0,
+    "severity": "low",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_98556b9f7d931480",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_ce4c1813fe797d7d",
+    "entity_type": "phone",
+    "description": "42 inter-event gap(s) under 1 hour across 57 events",
+    "event_count": 57,
+    "time_span_seconds": 435318.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_f96ca4139f00e983",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "RES_ce4c1813fe797d7d",
+    "entity_type": "phone",
+    "description": "Event at 2024-03-12 is 2.1\u03c3 from entity's mean timestamp",
+    "event_count": 57,
+    "time_span_seconds": 435318.0,
+    "severity": "low",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_4d5aec7ed5ae8504",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_3e438bacdb6bd7b1",
+    "entity_type": "phone",
+    "description": "25 inter-event gap(s) under 1 hour across 37 events",
+    "event_count": 37,
+    "time_span_seconds": 288895.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_c6f98da0f3d2c365",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "RES_3e438bacdb6bd7b1",
+    "entity_type": "phone",
+    "description": "Event at 2024-03-17 is 2.1\u03c3 from entity's mean timestamp",
+    "event_count": 37,
+    "time_span_seconds": 288895.0,
+    "severity": "low",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_bbe9d9254231be07",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_f90015a9027df8e3",
+    "entity_type": "person",
+    "description": "1 inter-event gap(s) under 1 hour across 6 events",
+    "event_count": 6,
+    "time_span_seconds": 551400.0,
+    "severity": "low",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_3966a6878d04c019",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_9eeb75085f3656ee",
+    "entity_type": "phone",
+    "description": "3 inter-event gap(s) under 1 hour across 4 events",
+    "event_count": 4,
+    "time_span_seconds": 277.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "pattern_id": "TPAT_41ec352db9a3e470",
+    "pattern_type": "activity_burst",
+    "entity_id": "RES_9768897216059a61",
+    "entity_type": "phone",
+    "description": "2 inter-event gap(s) under 1 hour across 4 events",
+    "event_count": 4,
+    "time_span_seconds": 7500.0,
+    "severity": "medium",
+    "run_id": "run_20260926_164752"
+  }
+]

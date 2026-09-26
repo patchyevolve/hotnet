@@ -1,0 +1,1552 @@
+[
+  {
+    "id": "GLINK_006abf8d35baa4ea",
+    "global_entity_id": "GLOB_2a7a45009af1e192",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_fab273a513037643",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_00cf6f4355e7913b",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_d7b7a3807abd2258",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T12:58:55.818000"
+  },
+  {
+    "id": "GLINK_024dec63075d2ea7",
+    "global_entity_id": "GLOB_e3c72935945925c6",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0a7336429b2e52ab",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_06943af96fa3e551",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_06b3f3578a482b62",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_08013b972c7b5b4a",
+    "global_entity_id": "GLOB_681fc7f97d23e240",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_ab1ee5b4616da76e",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_08cc39a1e4ec27b0",
+    "global_entity_id": "GLOB_1207e7e7df5a62a1",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_04842ef365a93d12",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_0a1d8d95d41aaf64",
+    "global_entity_id": "GLOB_7645127a50c337f6",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_b25c78b54eb46537",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_0b78282bd79b0a3d",
+    "global_entity_id": "GLOB_1513959de1790c62",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_b647abed059320c9",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_0cac2ec84668c65e",
+    "global_entity_id": "GLOB_ccd93b5779ad0cac",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_f1c5114c09cb9b0a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:26:01.216000"
+  },
+  {
+    "id": "GLINK_0f4a6a905a5ab5c5",
+    "global_entity_id": "GLOB_bff405d1d22ecd03",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_74797a3d4b8e213a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_122c08d65484e980",
+    "global_entity_id": "GLOB_b6d7fa4eed971f33",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_435c73f0ec9ca438",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_128bab6dbb03f156",
+    "global_entity_id": "GLOB_b68bbbe9cace58aa",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_63c426a8d422b4b9",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_14bae5bf34e3a28a",
+    "global_entity_id": "GLOB_96be2a234e11867e",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3ec04c849f61931b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_170e6defe042819c",
+    "global_entity_id": "GLOB_bbaee983cb28a39e",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9eeb75085f3656ee",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_19efbfc6969e446e",
+    "global_entity_id": "GLOB_fecb65b9c26decdb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a43997b49dba49ba",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_1c500b0b88af313b",
+    "global_entity_id": "GLOB_d98f4cb443e24056",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_67bc5c8cceeaa048",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_1c989ea7ccdfc4fd",
+    "global_entity_id": "GLOB_0b5d75937f81317d",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_491ece07a4d512cc",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_224366e0c0a6410c",
+    "global_entity_id": "GLOB_b961fd4bbc22406a",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_1bdd12d85df9c395",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_22b78fe2856bb863",
+    "global_entity_id": "GLOB_5d480692bd116619",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_256a6e840e4cb92b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_2a5f44fcd4a45174",
+    "global_entity_id": "GLOB_28b42d069cc20737",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_e265c478cc3dbbed",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_2a87873946ab8852",
+    "global_entity_id": "GLOB_6123d3b0cc7c4370",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_5199cecacaec6a7a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_2ae8c9cf5b7ef5de",
+    "global_entity_id": "GLOB_69ff8eec6cda43fb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_243e24ad346d8280",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_2bb39a1cd94da2e8",
+    "global_entity_id": "GLOB_c93142250a66e9fa",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9768897216059a61",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_2c6e8d1d3f376737",
+    "global_entity_id": "GLOB_bda642ab06948ce2",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4cde822e1998499c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_3002e0936ca78e38",
+    "global_entity_id": "GLOB_c82e49ef5d97904a",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_91732012383563d5",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_3181a0ec555f293a",
+    "global_entity_id": "GLOB_4e6438c558e61f60",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0a5f31f39f5d619c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_31d43ed8f18af59b",
+    "global_entity_id": "GLOB_5205db4701e0781b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_01804c8fbc111dbd",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_35275d8db5350a32",
+    "global_entity_id": "GLOB_b8a27e72a6b608e4",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c7be54dc05b347e3",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_369bee060a4f5a49",
+    "global_entity_id": "GLOB_5366b11651b3ede4",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a7e5d4caf6ad9213",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_3996b63bbded9103",
+    "global_entity_id": "GLOB_09ed6835f9ade2d1",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_209812801cc3bea3",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:31:43.473000"
+  },
+  {
+    "id": "GLINK_39f45cc53062f497",
+    "global_entity_id": "GLOB_2430bdb5ecee1dad",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_ac5fa2e34976d974",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_3f52c985b3232fc1",
+    "global_entity_id": "GLOB_d6339f339cfe2596",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_bc78f86efbf0de2e",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_40bd7c99b60f8260",
+    "global_entity_id": "GLOB_cf1e3b139968bf42",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_8abc104f237ac1d0",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_41f4ee10899b478c",
+    "global_entity_id": "GLOB_28f9ff2567603823",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_09763f4e98889fb1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_41f82342a5b0a6e9",
+    "global_entity_id": "GLOB_573c3eadae3e6b17",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a78b93c349b3101a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_42a0403acca9982b",
+    "global_entity_id": "GLOB_4a3d741c65ce4441",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_59768cf9b2b04819",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_453c7ecaa02fed2d",
+    "global_entity_id": "GLOB_0eefa5cc6ef5c923",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_7920b5d8c59b4891",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_470d108e5e55d656",
+    "global_entity_id": "GLOB_7eecfbb2ac851498",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_14039349d66ebf3c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_47d795a1b439c874",
+    "global_entity_id": "GLOB_9a7f44772933c266",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_561ce1fdec9a4b0a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T09:16:26.962000"
+  },
+  {
+    "id": "GLINK_4e7a42d4d5934fa6",
+    "global_entity_id": "GLOB_98f90e15cdd2a901",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_77be511f0a7f3e38",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_5141468a470f44ff",
+    "global_entity_id": "GLOB_ed5eea947b025fc0",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_33365db101610949",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_521f18fdff3cc8f9",
+    "global_entity_id": "GLOB_92a02de9a48951ad",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c519e4099721a2db",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_5386e248c076a64c",
+    "global_entity_id": "GLOB_efee16b3b5b58d09",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3d9cef0b656816c1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_54a537681a8e36fa",
+    "global_entity_id": "GLOB_fdc5a53be87c3709",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_5541a746121834c7",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_55a2df3b0f58bc8c",
+    "global_entity_id": "GLOB_5d854fe5f0f02237",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_5e17d723ce22bd87",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_575b9bfc0a4f2f84",
+    "global_entity_id": "GLOB_b99bdaa7008a2f13",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4264eb17660c61ad",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:26:01.216000"
+  },
+  {
+    "id": "GLINK_58f662178268f604",
+    "global_entity_id": "GLOB_afd195468c240a25",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cd6ded5f61964ce1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_5b7595450af551e6",
+    "global_entity_id": "GLOB_ece561a117ee89c5",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_28a5131c9596db20",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T09:16:26.962000"
+  },
+  {
+    "id": "GLINK_5c05573598f9c9f7",
+    "global_entity_id": "GLOB_871493021d35211b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_f4702ff00deb7d8c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_5d006376b1c8b2b6",
+    "global_entity_id": "GLOB_a1ca75cca2c48185",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_ce5f6b84e2e7bf94",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_604995972de9223d",
+    "global_entity_id": "GLOB_54a6228d060bddd9",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_30e25080b729e116",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_60ac1869b11de145",
+    "global_entity_id": "GLOB_348315a1e56cd345",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_fe827f44a1bcb683",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_60bf7c3d15450f0c",
+    "global_entity_id": "GLOB_53c533353f88a6cb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_e95c77c1e77f9515",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_61b37e8fef5da0b6",
+    "global_entity_id": "GLOB_28729863d422d15a",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_912712ac7d7f7bd7",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_649be040736d6a3f",
+    "global_entity_id": "GLOB_2ac6925d1a61c3aa",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_219d216689e3b685",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9286,
+    "match_type": "name_fuzzy",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_656b8cd998a00385",
+    "global_entity_id": "GLOB_16edd93765e2d275",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_fb38b20fbfe0cd63",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_65a954659268af2f",
+    "global_entity_id": "GLOB_3b9158a8cb97822d",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_747818a0b3537ee6",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_6702711f9e573b61",
+    "global_entity_id": "GLOB_fdedd027826787fb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_48525c6a88fc3411",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_69137760d7efae8c",
+    "global_entity_id": "GLOB_a96b263dedc0b4b0",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_48a47ecc2482615b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_695faaa4ae28009c",
+    "global_entity_id": "GLOB_3298ffb602997ecb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cae8c9af97ebec37",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_698e62d86e4b96cc",
+    "global_entity_id": "GLOB_19b78e7a54f90650",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c63c5d4388974242",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_6c9c92ab61b496c5",
+    "global_entity_id": "GLOB_ffe16525d037098c",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0e54b067126a777e",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9286,
+    "match_type": "name_fuzzy",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_6db37df4d261d5b7",
+    "global_entity_id": "GLOB_d119875e13d2f9ac",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0a18a7b09bb945cb",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_6e805254309a0816",
+    "global_entity_id": "GLOB_fbf8f8ae079415f7",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0b7578f674a52b69",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_71492b4563188762",
+    "global_entity_id": "GLOB_600d43609c1ff21b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_50fa850b2b1ec9e6",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T09:23:25.163000"
+  },
+  {
+    "id": "GLINK_725293fb597d4d80",
+    "global_entity_id": "GLOB_27da07df992e95b9",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_300f407a20afc186",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_74caff1348b4de37",
+    "global_entity_id": "GLOB_5cd59caa0f76f018",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a7c71cd9094d5472",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_793c5bb51621f36a",
+    "global_entity_id": "GLOB_a033405b3e90c48b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_72095be007ab1aa4",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_79768454ede6e521",
+    "global_entity_id": "GLOB_52041371352ca92c",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4dc64768eddf1f45",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_7c92b758c99c9497",
+    "global_entity_id": "GLOB_0211200d4860638f",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_7c505120e5226a43",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_7e30309c028b35ea",
+    "global_entity_id": "GLOB_b19aa6d8910602e7",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_d9b6c75ace846c8a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_7f504f955ff6d646",
+    "global_entity_id": "GLOB_823c07032e41272f",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_56bc1c080d58add2",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_7f9a2e48eebb08d2",
+    "global_entity_id": "GLOB_8564fd95cd16c892",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_323667b77f56975a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_81237554b80fa3d1",
+    "global_entity_id": "GLOB_825c64c01d68edf6",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_313ed2b4e624d92c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:31:43.473000"
+  },
+  {
+    "id": "GLINK_82572b97cee9b64a",
+    "global_entity_id": "GLOB_c6d670240e1a7bbc",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_14200bdb1df5eb79",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_82e106450a623298",
+    "global_entity_id": "GLOB_f5a2c93fa2e10e3e",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_68fbd90d84e964ca",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_84d6b4012ea6df4b",
+    "global_entity_id": "GLOB_65526cc20c05ded8",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c45db434bb877d4d",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_8784af139638298b",
+    "global_entity_id": "GLOB_9007488a611e7e2e",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cedb7b2fa1e834a1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_892dc6338cd68418",
+    "global_entity_id": "GLOB_093c006a6e826bef",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9a1c5fcb60bce473",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_8b5d5255bf85acd9",
+    "global_entity_id": "GLOB_77d3ac674a22697a",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_79c68df2ef361a94",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_8ca245bcae2416df",
+    "global_entity_id": "GLOB_0984d9738b709e94",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_f8af2666acd43ff2",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_8e64c8321ac3b3e1",
+    "global_entity_id": "GLOB_706d39c177fca2f0",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_570cf91d41cd7a12",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_8f7a8f78a2b7078f",
+    "global_entity_id": "GLOB_0c38a65489475cfa",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c078bc8d6d80314b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9031e29992429f62",
+    "global_entity_id": "GLOB_9ea9bb00484bcc17",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_d968463e85506049",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_91303f396c6deabc",
+    "global_entity_id": "GLOB_65304e31d12b3731",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c726a17e219c0e68",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_922bba2f1d286ae9",
+    "global_entity_id": "GLOB_bfd8b8494d7e849d",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_e2dd7a4131e26bbb",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9266fa404a78b8d3",
+    "global_entity_id": "GLOB_5085dd5187fafdf5",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_58d3eec5a549b5f5",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T09:16:26.962000"
+  },
+  {
+    "id": "GLINK_93363d479309ba15",
+    "global_entity_id": "GLOB_e85a989f16e235a1",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_29511402e53a7d67",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_93e6846e5c2df3e5",
+    "global_entity_id": "GLOB_4fb61faa1fd07a2d",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_7b5526f65914ca75",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9584a5fb308bef11",
+    "global_entity_id": "GLOB_2ac6925d1a61c3aa",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_da30edbd69f80228",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_979aaecbf8ad3323",
+    "global_entity_id": "GLOB_3a23046b7c493b3f",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_65944958252ab0e1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_981774479b5d1519",
+    "global_entity_id": "GLOB_40ec83cefe4afd91",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_6434409a025c9670",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:26:01.216000"
+  },
+  {
+    "id": "GLINK_985aa460a185339c",
+    "global_entity_id": "GLOB_c97840664744cc50",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_44d6b90aa577f35b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_991ed9c47fb7a5a0",
+    "global_entity_id": "GLOB_2aa84c4a02a7c572",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cc2544932d0fac27",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_99da4d4127f29d17",
+    "global_entity_id": "GLOB_a8c607be4d6e8367",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_b84a66abb0b87a13",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_9a17a4d0a6885d09",
+    "global_entity_id": "GLOB_55c5ccf039d9107e",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_1cca5dec56abbd07",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9ae1c4d104006c45",
+    "global_entity_id": "GLOB_c40d0b3eeddf7654",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_ea7733ed7ec7c4e3",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9e75d0fe5781146e",
+    "global_entity_id": "GLOB_7858d45260123374",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_ce4c1813fe797d7d",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_9eaabe5d67ab8252",
+    "global_entity_id": "GLOB_64bf74d215b317c0",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_fe56813839bcc2b8",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_a278c63b5597ae5e",
+    "global_entity_id": "GLOB_2c4b8617800fa658",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_00769fddaa22927b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:31:43.473000"
+  },
+  {
+    "id": "GLINK_a6fd7197bd57cea0",
+    "global_entity_id": "GLOB_501341c8de322912",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9f646a5f8a1d77f4",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_a71327df7ebdbe9f",
+    "global_entity_id": "GLOB_451a9d328d0a7b3f",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_29fcb8a1fd4a47c5",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_a9c3ada5e4b034d8",
+    "global_entity_id": "GLOB_cb66a651608ba2c1",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4bfa2febfb3d585e",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_abe2e53b44da3541",
+    "global_entity_id": "GLOB_7c716d4da0e6b5b7",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3ad4e416b5fcd0b1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ad54fd6eda102191",
+    "global_entity_id": "GLOB_db88702933ccd599",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_17d682c021b3a904",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ad8aad1b0c469ef1",
+    "global_entity_id": "GLOB_a45d82b5ace15803",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_1d7b42d20f5adf03",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ae13b39aba8a56f9",
+    "global_entity_id": "GLOB_a7e9e8cccf62b69b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_6189c3acf69b26b0",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_b0e33c205db241a0",
+    "global_entity_id": "GLOB_ce92eb68f5bf9fa1",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4abe7b8fe28c4e6f",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_b1e8181629d36b94",
+    "global_entity_id": "GLOB_5c4697ea2b4ace5f",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c5b9c977264fd185",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_b2a8c5f42efeaa62",
+    "global_entity_id": "GLOB_5cc6c0e6dc9892d2",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c6a149cdedea93e6",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_b76c42d8f93017f7",
+    "global_entity_id": "GLOB_c3fc3018c63891f5",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a528aca8e5baa10e",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ba53cda91821b6d9",
+    "global_entity_id": "GLOB_a589d62d51d2c417",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_2c89178b4963b445",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_be78705509bf91de",
+    "global_entity_id": "GLOB_e65048a06f3303c2",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_63d499c2497b67bf",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_be7db4fb5c94a983",
+    "global_entity_id": "GLOB_0cbbc509c02071e0",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_7f39e2873da1ab8f",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.97,
+    "match_type": "account_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_c197d4bad2eb1b84",
+    "global_entity_id": "GLOB_be7bcaed11c41fad",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_5c060bbd90c645cf",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_c3587c2f548bb4e0",
+    "global_entity_id": "GLOB_83530d3122214984",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3110139316204f5d",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_c89a5ab16b7e9b62",
+    "global_entity_id": "GLOB_bb8299a537ecb7d8",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_c8eadf55cf5fe974",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_cd0639309fd90b63",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_6197362326e7f20c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T12:58:55.818000"
+  },
+  {
+    "id": "GLINK_d421d669d1a78cc1",
+    "global_entity_id": "GLOB_ffe16525d037098c",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9dd6316b6fa7b0bb",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_d43172b23265b68f",
+    "global_entity_id": "GLOB_cd05d1dd31a94408",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_247e09a6892963ef",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_d51982d1941f8909",
+    "global_entity_id": "GLOB_0c08e9ea689cf002",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_2598d38e2c05ebfd",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:31:43.473000"
+  },
+  {
+    "id": "GLINK_d6de0cceb2b35b01",
+    "global_entity_id": "GLOB_4d46a73ed1ec1c34",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_03689172a84248b0",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_d94c71b44902b37d",
+    "global_entity_id": "GLOB_828858623b985854",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cbe9026f1c31d1c2",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_dad1006c5103492c",
+    "global_entity_id": "GLOB_b01dbf04373279f3",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_1f5b4c8caee6736c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_dcc920d8d36fc5c7",
+    "global_entity_id": "GLOB_873cbd46e640c03b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_fdc38623b57854bf",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_ddcfea1b2979d81b",
+    "global_entity_id": "GLOB_1ded56b275a92d81",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9d470e6b1320e238",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e0f8b689c5d67574",
+    "global_entity_id": "GLOB_e93d4388e85c8c97",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_a2c900d68649be70",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e4e566505ad2aacf",
+    "global_entity_id": "GLOB_6a555ebbf77e4b73",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3b44aea810c3da6f",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e6bc3818a0915bfd",
+    "global_entity_id": "GLOB_2ae840cc097da773",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_2faa7f8cc724c522",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e8feb5401b494aae",
+    "global_entity_id": "GLOB_e19fbca2c9704756",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_38774b6f969f44fa",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e9536a63d34bca2b",
+    "global_entity_id": "GLOB_38ad6d25ab996cb9",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_71c60256b7580134",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_e95a9ba1b1356220",
+    "global_entity_id": "GLOB_5060eae5cf2afb82",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_3e438bacdb6bd7b1",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ea92d258368432a5",
+    "global_entity_id": "GLOB_e8554c8c6db223c4",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_b42ec3fbced431cb",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_eb2e6281839548b8",
+    "global_entity_id": "GLOB_911470ce1f35fdda",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_4affe419c3f234da",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_eba757fcd99cad79",
+    "global_entity_id": "GLOB_68234e08e472a1d8",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_622c7521c45ccb2a",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ebb180bec56de79f",
+    "global_entity_id": "GLOB_8b198cbadaf353a8",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_28a1528ee4c0119d",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f0f4aaca16c0dc31",
+    "global_entity_id": "GLOB_a7c01fd8e65c3d16",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_71c2ac8f32f162ad",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T10:20:58.210000"
+  },
+  {
+    "id": "GLINK_f13747ccd07f1e63",
+    "global_entity_id": "GLOB_11eaf4a96729e012",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_cfb538adec99257b",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f3740428882e26d1",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_f90015a9027df8e3",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f389e0981e67d85d",
+    "global_entity_id": "GLOB_b5fb17816322263b",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_83ffbf03efb7a14f",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f53f2c20ae97ad25",
+    "global_entity_id": "GLOB_02a2b8dcafc9368c",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_9fa593049c69aa1c",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f5ab10826dee9b9c",
+    "global_entity_id": "GLOB_a90543bebadbcf64",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_00fba48242e498cc",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f6e9e99ba9de80ac",
+    "global_entity_id": "GLOB_cda629a2f775b0bb",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_064b9d3dcc092d69",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_f91dda38fd3ad37e",
+    "global_entity_id": "GLOB_3736e273813d7840",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_0053fb0b0b83b0b3",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T10:26:01.216000"
+  },
+  {
+    "id": "GLINK_fd2e0b267262e681",
+    "global_entity_id": "GLOB_71f4ada3dc9a1684",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_8e870d2483318c81",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_ff07eaf60b15171d",
+    "global_entity_id": "GLOB_1c6577f0b6394db5",
+    "case_id": "CASE_DEMO_001",
+    "local_entity_id": "RES_063a6e4e5627df58",
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-24T18:50:10.148000"
+  },
+  {
+    "id": "GLINK_024552e087104f3a",
+    "global_entity_id": "GLOB_1100b33780b7d729",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_61aa74134565f94a",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "new_identity",
+    "created_at": "2026-09-25T19:48:01.717000"
+  },
+  {
+    "id": "GLINK_11e9194fa40ca1cd",
+    "global_entity_id": "GLOB_84a717c826d04bc2",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_06b3f3578a482b62",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.99,
+    "match_type": "phone_exact",
+    "created_at": "2026-09-25T19:43:23.876000"
+  },
+  {
+    "id": "GLINK_13fdd6f2d3ba9274",
+    "global_entity_id": "GLOB_845bb038c7a4b9c0",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_eea76256ba5071e8",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:44:28.750000"
+  },
+  {
+    "id": "GLINK_1a2eb6d2fa825f98",
+    "global_entity_id": "GLOB_c5de60302d6e475d",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_3120efd78d82e958",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 1.0,
+    "match_type": "new_identity",
+    "created_at": "2026-09-25T19:48:01.717000"
+  },
+  {
+    "id": "GLINK_231fb2881e674df7",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_8ca046c4d2b31eec",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:43:23.876000"
+  },
+  {
+    "id": "GLINK_50f7dd861031840f",
+    "global_entity_id": "GLOB_5a394b6bd5734224",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_7a026607d0550ea2",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:43:23.876000"
+  },
+  {
+    "id": "GLINK_5806de2ee44d79b4",
+    "global_entity_id": "GLOB_fccdaff418f10e5b",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_b99c97d8ee472310",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:43:23.876000"
+  },
+  {
+    "id": "GLINK_c880d4e5a9a1bef0",
+    "global_entity_id": "GLOB_109367ed445a3dbb",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_64c93e46d936b370",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:43:23.876000"
+  },
+  {
+    "id": "GLINK_e061e281920ff3a2",
+    "global_entity_id": "GLOB_5763af4df94e1451",
+    "case_id": "CASE_DEMO_004",
+    "local_entity_id": "RES_bef1fd491d32342d",
+    "jurisdiction_node_id": "JURISDICTION_HYDERABAD_CYBERCRIME",
+    "confidence": 0.9,
+    "match_type": "name_exact",
+    "created_at": "2026-09-25T19:44:28.750000"
+  }
+]

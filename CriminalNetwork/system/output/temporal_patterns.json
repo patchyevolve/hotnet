@@ -1,0 +1,123 @@
+[
+  {
+    "pattern_id": "TPAT_6f68cb7ae26c2170",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_7619ee8cea49187f",
+    "entity_type": "unknown",
+    "description": "133 inter-event gap(s) under 1 hour across 145 events",
+    "event_count": 145,
+    "time_span_seconds": 438300.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_1d83af69b20d71f7",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "PHONE_7619ee8cea49187f",
+    "entity_type": "unknown",
+    "description": "Event at 2024-03-12 is 2.5\u03c3 from entity's mean timestamp",
+    "event_count": 145,
+    "time_span_seconds": 438300.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_6427f0c35a866e25",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_a353fb4092c96d33",
+    "entity_type": "unknown",
+    "description": "72 inter-event gap(s) under 1 hour across 85 events",
+    "event_count": 85,
+    "time_span_seconds": 577887.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_1e685c5ef7207781",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "PHONE_a353fb4092c96d33",
+    "entity_type": "unknown",
+    "description": "Event at 2024-03-17 is 2.2\u03c3 from entity's mean timestamp",
+    "event_count": 85,
+    "time_span_seconds": 577887.0,
+    "severity": "low",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_897f9334ffcdbca7",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_e26019ce48adebef",
+    "entity_type": "unknown",
+    "description": "42 inter-event gap(s) under 1 hour across 57 events",
+    "event_count": 57,
+    "time_span_seconds": 435318.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_1a59e323dea03ebd",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "PHONE_e26019ce48adebef",
+    "entity_type": "unknown",
+    "description": "Event at 2024-03-12 is 2.1\u03c3 from entity's mean timestamp",
+    "event_count": 57,
+    "time_span_seconds": 435318.0,
+    "severity": "low",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_e048990fbd5d29d4",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_8a8023e9f7760676",
+    "entity_type": "unknown",
+    "description": "25 inter-event gap(s) under 1 hour across 37 events",
+    "event_count": 37,
+    "time_span_seconds": 288895.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_9b7de50beac2ef04",
+    "pattern_type": "temporal_anomaly",
+    "entity_id": "PHONE_8a8023e9f7760676",
+    "entity_type": "unknown",
+    "description": "Event at 2024-03-17 is 2.1\u03c3 from entity's mean timestamp",
+    "event_count": 37,
+    "time_span_seconds": 288895.0,
+    "severity": "low",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_e2f817fb7a2a4451",
+    "pattern_type": "activity_burst",
+    "entity_id": "PERSON_23492e71991bc7b9",
+    "entity_type": "unknown",
+    "description": "1 inter-event gap(s) under 1 hour across 6 events",
+    "event_count": 6,
+    "time_span_seconds": 551400.0,
+    "severity": "low",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_abfb292f63510253",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_8d4ea81fbbc86477",
+    "entity_type": "unknown",
+    "description": "3 inter-event gap(s) under 1 hour across 4 events",
+    "event_count": 4,
+    "time_span_seconds": 277.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "pattern_id": "TPAT_72f4fd3e2565c5d7",
+    "pattern_type": "activity_burst",
+    "entity_id": "PHONE_ef5fb01e7fd16dee",
+    "entity_type": "unknown",
+    "description": "2 inter-event gap(s) under 1 hour across 4 events",
+    "event_count": 4,
+    "time_span_seconds": 7500.0,
+    "severity": "medium",
+    "run_id": "run_20260923_001317"
+  }
+]

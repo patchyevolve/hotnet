@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_50720212d95a",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "dc9fa7c69c142402",
+  "response_text": "{\"groups\":[{\"entity_ids\":[\"PERSON_73728731a2aff159\",\"ORGANIZATION_73728731a2aff159\"],\"merge\":true,\"confidence\":0.95,\"canonical_name\":\"SI Vikram Rathore\",\"reasoning\":\"identical name, same source, no conflicting attributes\",\"signals\":{\"name_similarity\":1.0,\"shared_attributes\":1.0,\"context_alignment\":1.0,\"contradictions\":1.0,\"cultural_knowledge\":0.9},\"merge_type\":\"auto\"}]}",
+  "usage": {
+    "queue_time": 0.309432224,
+    "prompt_tokens": 672,
+    "prompt_time": 0.035402539,
+    "completion_tokens": 156,
+    "completion_time": 0.167988665,
+    "total_tokens": 828,
+    "total_time": 0.203391204,
+    "completion_tokens_details": {
+      "reasoning_tokens": 38
+    }
+  },
+  "latency_ms": 565,
+  "status": "success",
+  "timestamp": "2026-09-26T16:49:42.702478",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

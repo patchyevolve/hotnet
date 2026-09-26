@@ -1,0 +1,5 @@
+transaction_id,account_number,account_holder,transaction_type,amount,currency,transaction_date,transaction_time,balance_after,description,counterparty_account,counterparty_name
+TXN501,45678901234567,Rakesh Kumar,CREDIT,500000,INR,2024-03-14,16:50:00,500000,Fraud transfer received,3456789012345,Meena Devi
+TXN502,45678901234567,Rakesh Kumar,DEBIT,200000,INR,2024-03-14,18:30:00,300000,Transfer to unknown,ACC_UNKNOWN_20,
+TXN503,45678901234567,Rakesh Kumar,DEBIT,150000,INR,2024-03-15,09:15:00,150000,Cash withdrawal,NA,NA
+TXN504,45678901234567,Rakesh Kumar,DEBIT,150000,INR,2024-03-15,14:45:00,0,Final withdrawal,NA,NA

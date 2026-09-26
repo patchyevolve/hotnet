@@ -1,0 +1,52 @@
+[
+  {
+    "variable_a": "degree",
+    "variable_b": "effective_confidence",
+    "correlation_type": "rank",
+    "coefficient": 0.5833,
+    "p_value": 0.1069,
+    "is_significant": false,
+    "sample_size": 9,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "variable_a": "degree",
+    "variable_b": "temporal_count",
+    "correlation_type": "rank",
+    "coefficient": 0.95,
+    "p_value": 0.0005,
+    "is_significant": true,
+    "sample_size": 9,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "variable_a": "degree",
+    "variable_b": "provenance_depth",
+    "correlation_type": "rank",
+    "coefficient": 0.15,
+    "p_value": 0.7041,
+    "is_significant": false,
+    "sample_size": 9,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "variable_a": "has_temporal_data",
+    "variable_b": "effective_confidence",
+    "correlation_type": "point_biserial",
+    "coefficient": 0.7119,
+    "p_value": 0.0325,
+    "is_significant": true,
+    "sample_size": 9,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "variable_a": "entity_type",
+    "variable_b": "has_temporal_data",
+    "correlation_type": "cramers_v",
+    "coefficient": 1.0,
+    "p_value": 1.0,
+    "is_significant": false,
+    "sample_size": 9,
+    "run_id": "run_20260926_011743"
+  }
+]

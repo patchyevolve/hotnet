@@ -1,0 +1,26 @@
+=== FINAL STATE AFTER FIXES ===
+
+CORE FIXES STATUS:
+  1. Phantom entity IDs in graph edges: 0 -> FIXED
+  2. Zero-confidence edges: 0 -> FIXED
+  3. Edges below 0.5: 0 -> FIXED
+  4. LLM entity validation active: removes Hindi filler, technical abbreviations, document references
+  5. Duplicate merging: type guard prevents cross-type merges
+  6. Source-origin epistemic contract: reliability fields set per source type
+
+KEY METRICS:
+  Graph edges: 89
+  Resolved entities: 87
+  Extracted entities: 96
+  Avg edge confidence: 0.66 (range: 0.50-1.00)
+  Confidence distribution: >=0.5: 89/89, >=0.7: 21/89, >=0.9: 12/89
+
+INVESTIGATION READINESS: 6/10
+  Graph fully readable - all edges have human-readable names
+  No false positive entities - zero confidence removed
+  Entity validation - LLM removes garbage consistently
+  Duplicate merging works with type guard
+  Temporal enrichment - Allen Interval Algebra functioning
+  Cross-file consistency: 12/12 checks pass
+  LLM validation non-determinism: Bhai Sahab sometimes persists
+  Cross-type merges with reclassified entities: known limitation

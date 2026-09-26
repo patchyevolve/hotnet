@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_d150dd14f0e8",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "371f8a86e2e2483c",
+  "response_text": "{\"groups\":[{\"entity_ids\":[\"PERSON_c63ac5eb1535a215\",\"PERSON_f73ad70629191b0d\"],\"merge\":true,\"confidence\":0.92,\"canonical_name\":\"Suresh Bhai\",\"reasoning\":\"Same phone number and highly similar name; cultural context treats 'Bhai' as honorific\",\"signals\":{\"name_similarity\":0.9,\"shared_attributes\":1.0,\"context_alignment\":0.8,\"contradictions\":1.0,\"cultural_knowledge\":0.95},\"merge_type\":\"auto\"}]}",
+  "usage": {
+    "queue_time": 0.049391281,
+    "prompt_tokens": 620,
+    "prompt_time": 0.043272427,
+    "completion_tokens": 193,
+    "completion_time": 0.206839061,
+    "total_tokens": 813,
+    "total_time": 0.250111488,
+    "completion_tokens_details": {
+      "reasoning_tokens": 67
+    }
+  },
+  "latency_ms": 348,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:39.553687",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "run_id": "run_20260926_011743",
+  "timestamp": "2026-09-26T01:18:00.306836",
+  "graph_nodes_analyzed": 9,
+  "graph_edges_analyzed": 3,
+  "connected_components": 7,
+  "largest_component_size": 3,
+  "processing_time_seconds": 5.3,
+  "centrality_scores": 9,
+  "communities": 1,
+  "anomaly_signals": 1,
+  "behavioral_baselines": 5,
+  "correlations": 5,
+  "component_analyses": 7,
+  "temporal_patterns": 0,
+  "zone_scores": 1,
+  "data_quality_notes": [
+    "Graph has 7 connected components for 9 nodes. Most nodes are isolated. Graph algorithms limited to 1 components of size >= 2.",
+    "Spatial data: 1 records available but ALL have null latitude/longitude. Extracted spatial text was geocoded separately for zone scoring.",
+    "Temporal coverage is uneven: 4 temporal_infos for 9 nodes. ~5 nodes have no temporal data."
+  ]
+}

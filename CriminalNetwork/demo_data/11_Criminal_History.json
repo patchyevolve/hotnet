@@ -1,0 +1,90 @@
+{
+  "criminal_history": [
+    {
+      "person_id": "PERSON_RAKESH_KUMAR",
+      "name": "Rakesh Kumar",
+      "phone": "9876543210",
+      "criminal_score": 7,
+      "previous_cases": [
+        {
+          "case_number": "FIR 456/2022",
+          "date": "2022-08-15",
+          "police_station": "Karol Bagh PS",
+          "charge": "Section 420 - Cheating",
+          "status": "Convicted",
+          "sentence": "2 years rigorous imprisonment",
+          "details": "Defrauded multiple customers through fake mobile recharge scheme"
+        },
+        {
+          "case_number": "FIR 789/2023",
+          "date": "2023-02-20",
+          "police_station": "Nehru Nagar PS",
+          "charge": "Section 468 - Forgery for cheating",
+          "status": "Under trial",
+          "sentence": "Pending",
+          "details": "Created fake bank documents for identity theft"
+        }
+      ],
+      "notes": "Known associate of Suresh Kumar. Operates from Karol Bagh. History of financial fraud."
+    },
+    {
+      "person_id": "PERSON_SURESH_KUMAR",
+      "name": "Suresh Kumar",
+      "phone": "9876543211",
+      "criminal_score": 6,
+      "previous_cases": [
+        {
+          "case_number": "FIR 234/2023",
+          "date": "2023-06-10",
+          "police_station": "Dwarka South PS",
+          "charge": "Section 420 - Cheating",
+          "status": "Acquitted",
+          "sentence": "Acquitted due to lack of evidence",
+          "details": "Accused of running fake investment scheme"
+        }
+      ],
+      "notes": "Business associate of Rakesh Kumar. Handles financial operations."
+    },
+    {
+      "person_id": "PERSON_AMIT_SHARMA",
+      "name": "Amit Sharma",
+      "phone": "9876543212",
+      "criminal_score": 4,
+      "previous_cases": [
+        {
+          "case_number": "FIR 567/2023",
+          "date": "2023-11-05",
+          "police_station": "Noida Phase 2 PS",
+          "charge": "Section 419 - Cheating by personation",
+          "status": "Under trial",
+          "sentence": "Pending",
+          "details": "Impersonated bank official to extract account details"
+        }
+      ],
+      "notes": "Known associate of Rakesh Kumar. Active on social media."
+    }
+  ],
+  "known_associations": [
+    {
+      "person1": "PERSON_RAKESH_KUMAR",
+      "person2": "PERSON_SURESH_KUMAR",
+      "relationship": "business associate",
+      "confidence": 0.95,
+      "evidence": ["Criminal history", "Phone records", "Financial transactions"]
+    },
+    {
+      "person1": "PERSON_RAKESH_KUMAR",
+      "person2": "PERSON_AMIT_SHARMA",
+      "relationship": "known associate",
+      "confidence": 0.85,
+      "evidence": ["Phone records", "Social media contact"]
+    },
+    {
+      "person1": "PERSON_SURESH_KUMAR",
+      "person2": "PERSON_AMIT_SHARMA",
+      "relationship": "friend",
+      "confidence": 0.7,
+      "evidence": ["Social media interaction", "Phone records"]
+    }
+  ]
+}

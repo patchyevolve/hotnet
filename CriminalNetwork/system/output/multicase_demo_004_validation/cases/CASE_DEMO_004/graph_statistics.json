@@ -1,0 +1,23 @@
+{
+  "total_nodes": 9,
+  "total_edges": 3,
+  "node_type_counts": {
+    "amount": 1,
+    "phone": 2,
+    "person": 2,
+    "date": 2,
+    "location": 2
+  },
+  "edge_type_counts": {
+    "associational": 3
+  },
+  "relationship_type_counts": {
+    "VISITED": 2,
+    "CALLED": 1
+  },
+  "multiplexity_ties_count": 0,
+  "avg_degree": 2.0,
+  "max_degree": 2,
+  "connected_components": 7,
+  "density": 0.083333
+}

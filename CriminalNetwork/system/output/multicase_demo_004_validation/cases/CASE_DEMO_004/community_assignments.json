@@ -1,0 +1,16 @@
+[
+  {
+    "community_id": "COMM_000",
+    "node_ids": [
+      "RES_06b3f3578a482b62",
+      "RES_3120efd78d82e958",
+      "RES_61aa74134565f94a"
+    ],
+    "size": 3,
+    "modularity_contribution": 0.3333,
+    "internal_edge_count": 3,
+    "density": 1.0,
+    "dominant_node_type": "phone",
+    "run_id": "run_20260926_011743"
+  }
+]

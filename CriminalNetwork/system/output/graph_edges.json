@@ -1,0 +1,5520 @@
+[
+  {
+    "id": "EDGE_333cd45ac5bfdc41",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7999999999999999,
+      "basis": [
+        "min(source=1.00, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 14,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9249999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "12_WEIRD_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "12_WEIRD_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_251b0f33a8b02559",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_a353fb4092c96d33",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=1.00)"
+      ],
+      "supporting_count": 12,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "9876543213"
+  },
+  {
+    "id": "EDGE_d332b9b3c2b796b3",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_e26019ce48adebef",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 11,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "03_CDR_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "03_CDR_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "9876543211"
+  },
+  {
+    "id": "EDGE_791ebc4cbff94776",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_438561c65c9e4353",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.80, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.80"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Nehru Nagar Tower 2"
+  },
+  {
+    "id": "EDGE_c24c4e08f86113ae",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_8a8023e9f7760676",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 10,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "04_CDR_Amit.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "04_CDR_Amit.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "9876543212"
+  },
+  {
+    "id": "EDGE_3e87bb70f508e580",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_6f827effaccad628",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.74,
+      "basis": [
+        "min(source=1.00, target=0.91, extraction=0.70)"
+      ],
+      "supporting_count": 3,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9099999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.91"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Dwarka Sector 12 Main Gate Camera"
+  },
+  {
+    "id": "EDGE_3a0ad542d875e213",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.72,
+      "basis": [
+        "min(source=1.00, target=0.88, extraction=0.70)"
+      ],
+      "supporting_count": 2,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8800000000000001,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.88"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Lajpat Nagar Part II Camera 1"
+  },
+  {
+    "id": "EDGE_1b81753310cd7e1f",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_ef5fb01e7fd16dee",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 2,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "02_CDR_Rakesh.csv",
+      "30_Adversarial_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv",
+      "30_Adversarial_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "9876543214"
+  },
+  {
+    "id": "EDGE_85327e06f06d5e7d",
+    "source_id": "RES_e26019ce48adebef",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9249999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "03_CDR_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543211",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_1352649b52e3d606",
+    "source_id": "RES_e26019ce48adebef",
+    "target_id": "RES_6f827effaccad628",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7999999999999999,
+      "basis": [
+        "min(source=1.00, target=0.91, extraction=0.70)"
+      ],
+      "supporting_count": 11,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9099999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.91"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR_Suresh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "03_CDR_Suresh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543211",
+    "target_name": "Dwarka Sector 12 Main Gate Camera"
+  },
+  {
+    "id": "EDGE_767ac298fed462f6",
+    "source_id": "RES_e26019ce48adebef",
+    "target_id": "RES_a353fb4092c96d33",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "03_CDR_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543211",
+    "target_name": "9876543213"
+  },
+  {
+    "id": "EDGE_f7dc617ae4753459",
+    "source_id": "RES_e26019ce48adebef",
+    "target_id": "RES_8a8023e9f7760676",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR_Suresh.csv",
+      "04_CDR_Amit.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "03_CDR_Suresh.csv",
+      "04_CDR_Amit.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543211",
+    "target_name": "9876543212"
+  },
+  {
+    "id": "EDGE_cd6dffca5069b0d8",
+    "source_id": "RES_e26019ce48adebef",
+    "target_id": "RES_438561c65c9e4353",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.80, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.80"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "03_CDR_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "03_CDR_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543211",
+    "target_name": "Nehru Nagar Tower 2"
+  },
+  {
+    "id": "EDGE_e34f2d0b47876cf7",
+    "source_id": "RES_8a8023e9f7760676",
+    "target_id": "RES_6f827effaccad628",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7999999999999999,
+      "basis": [
+        "min(source=1.00, target=0.91, extraction=0.70)"
+      ],
+      "supporting_count": 11,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9099999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.91"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "04_CDR_Amit.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "04_CDR_Amit.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543212",
+    "target_name": "Dwarka Sector 12 Main Gate Camera"
+  },
+  {
+    "id": "EDGE_ea86ab920bdd210d",
+    "source_id": "RES_8a8023e9f7760676",
+    "target_id": "RES_a353fb4092c96d33",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.92,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=1.00)"
+      ],
+      "supporting_count": 2,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "04_CDR_Amit.csv",
+      "41_Self_Loop_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "04_CDR_Amit.csv",
+      "41_Self_Loop_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543212",
+    "target_name": "9876543213"
+  },
+  {
+    "id": "EDGE_9703fe523eb9be8a",
+    "source_id": "RES_8a8023e9f7760676",
+    "target_id": "RES_ef5fb01e7fd16dee",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "04_CDR_Amit.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "04_CDR_Amit.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543212",
+    "target_name": "9876543214"
+  },
+  {
+    "id": "EDGE_0f1f7fbbc3fdc191",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_a8d3463ec398ed33",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Account 1234"
+  },
+  {
+    "id": "EDGE_37f6c0e445645d10",
+    "source_id": "RES_a8d3463ec398ed33",
+    "target_id": "RES_b7753960e19a6559",
+    "relationship_type": "TRANSFERRED_TO",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 1234",
+    "target_name": "Account 1235"
+  },
+  {
+    "id": "EDGE_648ea0a2bbc53209",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_6e50992230df4a2d",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "06_Bank_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "06_Bank_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "Account 9876"
+  },
+  {
+    "id": "EDGE_6b316ac620f15f86",
+    "source_id": "RES_6e50992230df4a2d",
+    "target_id": "RES_a8d3463ec398ed33",
+    "relationship_type": "RECEIVED_FROM",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "06_Bank_Suresh.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "06_Bank_Suresh.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 9876",
+    "target_name": "Account 1234"
+  },
+  {
+    "id": "EDGE_4d901bcd7ab952cf",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_ec4168bca6487484",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "07_Bank_Amit.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "07_Bank_Amit.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Account 5678"
+  },
+  {
+    "id": "EDGE_9e5a9ca17561080b",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_e26019ce48adebef",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7916666666666666,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 2,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json",
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json",
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "9876543211"
+  },
+  {
+    "id": "EDGE_356613113447f14f",
+    "source_id": "RES_105a112c81ce60e6",
+    "target_id": "RES_8a8023e9f7760676",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit",
+    "target_name": "9876543212"
+  },
+  {
+    "id": "EDGE_a1591e8b3d7c147c",
+    "source_id": "RES_d71ab13e9efcf04e",
+    "target_id": "RES_3d649a61fbc63878",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Bhai Sahab",
+    "target_name": "9876543220"
+  },
+  {
+    "id": "EDGE_cc7234f879305a74",
+    "source_id": "RES_4b8a1601852a8525",
+    "target_id": "RES_9fbdb74aacb6f47f",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rajesh Electronics",
+    "target_name": "9812345678"
+  },
+  {
+    "id": "EDGE_b82ef35b6dc70c90",
+    "source_id": "RES_485bdeb3c76752d4",
+    "target_id": "RES_8d4ea81fbbc86477",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.825,
+      "basis": [
+        "min(source=0.82, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.825,
+          "weight": 0.25,
+          "description": "Source entity: 0.82, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "RK Telecom Office",
+    "target_name": "01126543210"
+  },
+  {
+    "id": "EDGE_48dd4b9e6b5c4c2e",
+    "source_id": "RES_7fd1eb60e433a497",
+    "target_id": "RES_a4e00d7e6aa82111",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "08_Device_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Airtel Customer Care",
+    "target_name": "198"
+  },
+  {
+    "id": "EDGE_b2775c50a0d57874",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9249999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "09_Social_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_7150f8601464c979",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_727777a1420ee72a",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8999999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "09_Social_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Connaught Place Tower 2"
+  },
+  {
+    "id": "EDGE_2c6dae91234ed479",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_6f827effaccad628",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.91, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9099999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.91"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "09_Social_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Dwarka Sector 12 Main Gate Camera"
+  },
+  {
+    "id": "EDGE_ec940d21b030ae61",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_23492e71991bc7b9",
+    "relationship_type": "MESSED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "09_Social_Amit.json",
+      "17_Social_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "09_Social_Amit.json",
+      "17_Social_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.195,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Rakesh Kumar"
+  },
+  {
+    "id": "EDGE_db8499b8cf5e37e0",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_7da381a50326b6ae",
+    "relationship_type": "SUSPECT_OF",
+    "edge_type": "quasi-governmental",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Case: FIR 456/2022"
+  },
+  {
+    "id": "EDGE_346217a033fa3d6d",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_edbf72dd9f41eaae",
+    "relationship_type": "SUSPECT_OF",
+    "edge_type": "quasi-governmental",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Case: FIR 789/2023"
+  },
+  {
+    "id": "EDGE_afa8a48ad386b36e",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_255e03416fe4b55e",
+    "relationship_type": "SUSPECT_OF",
+    "edge_type": "quasi-governmental",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "Case: FIR 234/2023"
+  },
+  {
+    "id": "EDGE_9662777a4c4724ec",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_4941c77b57e48753",
+    "relationship_type": "SUSPECT_OF",
+    "edge_type": "quasi-governmental",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Case: FIR 567/2023"
+  },
+  {
+    "id": "EDGE_cf9f5036d42548cd",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_5e95ee9f0386dda2",
+    "relationship_type": "WORKS_WITH",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=1.00, target=0.77, extraction=0.95)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.77"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.95,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.95"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "suresh_kumar_01"
+  },
+  {
+    "id": "EDGE_be1b67f9f8fdac23",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_75110ab02c0160f9",
+    "relationship_type": "ASSOCIATE_OF",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.85,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=0.85)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.85,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.85"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Amit Sharma"
+  },
+  {
+    "id": "EDGE_a1ca2b3cb1a207e5",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_75110ab02c0160f9",
+    "relationship_type": "FRIEND_OF",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "11_Criminal_History.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "Amit Sharma"
+  },
+  {
+    "id": "EDGE_0290a3e99bafe133",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_8d4ea81fbbc86477",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "12_WEIRD_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "12_WEIRD_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "01126543210"
+  },
+  {
+    "id": "EDGE_717a40a8ceabf488",
+    "source_id": "RES_8d4ea81fbbc86477",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9249999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "12_WEIRD_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "12_WEIRD_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "01126543210",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_993b96e5b7f7a0bf",
+    "source_id": "RES_8d4ea81fbbc86477",
+    "target_id": "RES_a353fb4092c96d33",
+    "relationship_type": "CALLED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "12_WEIRD_CDR.csv",
+      "14_CDR_Meena.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "12_WEIRD_CDR.csv",
+      "14_CDR_Meena.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "01126543210",
+    "target_name": "9876543213"
+  },
+  {
+    "id": "EDGE_c785087f18510031",
+    "source_id": "RES_a353fb4092c96d33",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7999999999999999,
+      "basis": [
+        "min(source=0.90, target=0.88, extraction=0.70)"
+      ],
+      "supporting_count": 14,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8800000000000001,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.88"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543213",
+    "target_name": "Lajpat Nagar Part II Camera 1"
+  },
+  {
+    "id": "EDGE_f5fa825279170a14",
+    "source_id": "RES_236180e1a6a63d8a",
+    "target_id": "RES_a8d3463ec398ed33",
+    "relationship_type": "TRANSFERRED_TO",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "15_Bank_Meena.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "15_Bank_Meena.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 2345",
+    "target_name": "Account 1234"
+  },
+  {
+    "id": "EDGE_c534ab37b30a9c50",
+    "source_id": "RES_236180e1a6a63d8a",
+    "target_id": "RES_6e50992230df4a2d",
+    "relationship_type": "TRANSFERRED_TO",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "15_Bank_Meena.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "15_Bank_Meena.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 2345",
+    "target_name": "Account 9876"
+  },
+  {
+    "id": "EDGE_ebdb8a1e9586cd62",
+    "source_id": "RES_236180e1a6a63d8a",
+    "target_id": "RES_ec4168bca6487484",
+    "relationship_type": "TRANSFERRED_TO",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "15_Bank_Meena.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "15_Bank_Meena.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 2345",
+    "target_name": "Account 5678"
+  },
+  {
+    "id": "EDGE_8e9c24103b081976",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_7619ee8cea49187f",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "9876543210"
+  },
+  {
+    "id": "EDGE_961aea6d45b7b263",
+    "source_id": "RES_bb515e95562574af",
+    "target_id": "RES_d38a9a689c50b16e",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Neeraj",
+    "target_name": "9876543215"
+  },
+  {
+    "id": "EDGE_8d760c0df43b0267",
+    "source_id": "RES_ff28988444e5efd4",
+    "target_id": "RES_7b74611f26dc07cd",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Pooja",
+    "target_name": "9876543216"
+  },
+  {
+    "id": "EDGE_7b19cc9824037d4c",
+    "source_id": "RES_d41c55bf957849d2",
+    "target_id": "RES_7619ee8cea49187f",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Bhai",
+    "target_name": "9876543210"
+  },
+  {
+    "id": "EDGE_6224bc4359e31cc5",
+    "source_id": "RES_6a6ac8386005b00f",
+    "target_id": "RES_3d649a61fbc63878",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Boss",
+    "target_name": "9876543220"
+  },
+  {
+    "id": "EDGE_e872dad0d871841b",
+    "source_id": "RES_475f3f364856ea70",
+    "target_id": "RES_42ed1a392df88b25",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8266447368421053,
+      "basis": [
+        "min(source=0.83, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8266447368421053,
+          "weight": 0.25,
+          "description": "Source entity: 0.83, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Shop - Lajpat Nagar",
+    "target_name": "01129876543"
+  },
+  {
+    "id": "EDGE_304f015a78fbb454",
+    "source_id": "RES_fce0b15c7c195529",
+    "target_id": "RES_042dfc35916c097e",
+    "relationship_type": "ASSOCIATED_WITH",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8312499999999999,
+      "basis": [
+        "min(source=0.83, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8312499999999999,
+          "weight": 0.25,
+          "description": "Source entity: 0.83, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "16_Device_Amit.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Bank of Baroda",
+    "target_name": "18001021234"
+  },
+  {
+    "id": "EDGE_885afd7503ea9548",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9249999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "17_Social_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "17_Social_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_fee4de814ef91f31",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_5e95ee9f0386dda2",
+    "relationship_type": "MESSED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=1.00, target=0.77, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.77"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "17_Social_Rakesh.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "17_Social_Rakesh.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "suresh_kumar_01"
+  },
+  {
+    "id": "EDGE_506d421c48a27acf",
+    "source_id": "RES_a353fb4092c96d33",
+    "target_id": "RES_6f827effaccad628",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.74,
+      "basis": [
+        "min(source=0.90, target=0.91, extraction=0.70)"
+      ],
+      "supporting_count": 3,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.91"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543213",
+    "target_name": "Dwarka Sector 12 Main Gate Camera"
+  },
+  {
+    "id": "EDGE_c82490d8e944b89f",
+    "source_id": "RES_a353fb4092c96d33",
+    "target_id": "RES_342bb7cffefbd624",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7399999999999999,
+      "basis": [
+        "min(source=0.90, target=0.92, extraction=0.70)"
+      ],
+      "supporting_count": 3,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.92"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.6999999999999998,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543213",
+    "target_name": "Karol Bagh Main Market Camera 5"
+  },
+  {
+    "id": "EDGE_cd8905a59c942d4a",
+    "source_id": "RES_a353fb4092c96d33",
+    "target_id": "RES_438561c65c9e4353",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=0.90, target=0.80, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.80"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "21_Missing_Phone_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "21_Missing_Phone_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543213",
+    "target_name": "Nehru Nagar Tower 2"
+  },
+  {
+    "id": "EDGE_742c9f0f9c486911",
+    "source_id": "RES_e3b0c44298fc1c14",
+    "target_id": "RES_75110ab02c0160f9",
+    "relationship_type": "MESSED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9,
+      "basis": [
+        "min(source=0.90, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.9,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "25_Social_Partial.json"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "25_Social_Partial.json"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "RES_e3b0c44298fc1c14",
+    "target_name": "Amit Sharma"
+  },
+  {
+    "id": "EDGE_df82b3c462f77b3b",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_727777a1420ee72a",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.90, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8999999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543210",
+    "target_name": "Connaught Place Tower 2"
+  },
+  {
+    "id": "EDGE_606a54f2918b0d98",
+    "source_id": "RES_a353fb4092c96d33",
+    "target_id": "RES_727777a1420ee72a",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=0.90, target=0.90, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8999999999999999,
+          "weight": 0.25,
+          "description": "Source entity: 0.90, Target: 0.90"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543213",
+    "target_name": "Connaught Place Tower 2"
+  },
+  {
+    "id": "EDGE_fdb97e5b7802c034",
+    "source_id": "RES_ef5fb01e7fd16dee",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.88, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8800000000000001,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.88"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "30_Adversarial_CDR.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "30_Adversarial_CDR.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "9876543214",
+    "target_name": "Lajpat Nagar Part II Camera 1"
+  },
+  {
+    "id": "EDGE_d658b855e4ebed19",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_bc4640447aeab94a",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "31_Adversarial_Bank.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "31_Adversarial_Bank.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Account 4567"
+  },
+  {
+    "id": "EDGE_9b8fa262ad84c780",
+    "source_id": "RES_bc4640447aeab94a",
+    "target_id": "RES_236180e1a6a63d8a",
+    "relationship_type": "RECEIVED_FROM",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "31_Adversarial_Bank.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "31_Adversarial_Bank.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Account 4567",
+    "target_name": "Account 2345"
+  },
+  {
+    "id": "EDGE_64e284b797f8f2fa",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.88, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8800000000000001,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.88"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Lajpat Nagar Part II Camera 1"
+  },
+  {
+    "id": "EDGE_c62867a441962861",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_2d27b53729507310",
+    "relationship_type": "VISITED",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "min(source=1.00, target=0.88, extraction=0.70)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.8800000000000001,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 0.88"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 0.7,
+          "weight": 0.25,
+          "description": "Extraction confidence: 0.70"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Rakesh Kumar",
+    "target_name": "Lajpat Nagar Part II Camera 1"
+  },
+  {
+    "id": "EDGE_058b08249e57e8da",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_916bcb46a8192bd7",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "min(source=0.77, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 0.7716666666666666,
+          "weight": 0.25,
+          "description": "Source entity: 0.77, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "suresh_kumar_01",
+    "target_name": "Account 6789"
+  },
+  {
+    "id": "EDGE_6c23f91bfbf4e967",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_9f13c23483224d85",
+    "relationship_type": "OWNS_ACCOUNT",
+    "edge_type": "entrepreneurial",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "min(source=1.00, target=1.00, extraction=1.00)"
+      ],
+      "supporting_count": 1,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.5,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "inference",
+      "run_id": "",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.5,
+          "weight": 0.3,
+          "description": "Source reliability: 0.50"
+        },
+        {
+          "factor_type": "entity_resolution",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Source entity: 1.00, Target: 1.00"
+        },
+        {
+          "factor_type": "extraction_confidence",
+          "value": 1.0,
+          "weight": 0.25,
+          "description": "Extraction confidence: 1.00"
+        },
+        {
+          "factor_type": "coverage_adjustment",
+          "value": 1.0,
+          "weight": 0.2,
+          "description": "Coverage ratio: 1.00"
+        }
+      ]
+    },
+    "supporting_evidence": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": {
+      "precision": "unknown",
+      "confidence": 0.0
+    },
+    "provenance_chain": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.12,
+    "created_at": "2026-09-23T00:13:19.635227",
+    "updated_at": "2026-09-23T00:13:19.635227",
+    "run_id": "",
+    "source_name": "Amit Sharma",
+    "target_name": "Account 8901"
+  },
+  {
+    "id": "EDGE_2f6fe10a8e49db79",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_e26019ce48adebef",
+    "relationship_type": "OWNS_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "entity_attribute"
+      ],
+      "semantic_type": "observation"
+    },
+    "supporting_evidence": [
+      "PERSON_915ca1cfe5a261f0",
+      "PERSON_f73ad70629191b0d",
+      "PERSON_5e95ee9f0386dda2",
+      "PERSON_5cbac5323a616f86",
+      "PERSON_2d426be6a60758d5",
+      "PERSON_c63ac5eb1535a215"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.640593",
+    "updated_at": "2026-09-23T00:13:19.640593",
+    "run_id": "run_20260923_001317",
+    "source_name": "suresh_kumar_01",
+    "target_name": "9876543211"
+  },
+  {
+    "id": "EDGE_985181f90065c43b",
+    "source_id": "RES_23492e71991bc7b9",
+    "target_id": "RES_7619ee8cea49187f",
+    "relationship_type": "OWNS_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "entity_attribute"
+      ],
+      "semantic_type": "observation"
+    },
+    "supporting_evidence": [
+      "PERSON_23492e71991bc7b9"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.640593",
+    "updated_at": "2026-09-23T00:13:19.640593",
+    "run_id": "run_20260923_001317",
+    "source_name": "Rakesh Kumar",
+    "target_name": "9876543210"
+  },
+  {
+    "id": "EDGE_66fdd42742b52f9c",
+    "source_id": "RES_75110ab02c0160f9",
+    "target_id": "RES_8a8023e9f7760676",
+    "relationship_type": "OWNS_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "entity_attribute"
+      ],
+      "semantic_type": "observation"
+    },
+    "supporting_evidence": [
+      "PERSON_75110ab02c0160f9"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.640593",
+    "updated_at": "2026-09-23T00:13:19.640593",
+    "run_id": "run_20260923_001317",
+    "source_name": "Amit Sharma",
+    "target_name": "9876543212"
+  },
+  {
+    "id": "EDGE_543f1dda1a6e146d",
+    "source_id": "RES_5e95ee9f0386dda2",
+    "target_id": "RES_e26019ce48adebef",
+    "relationship_type": "SHARED_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.7716666666666666,
+      "basis": [
+        "shared_phone: 9876543211"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_phone:9876543211"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "suresh_kumar_01",
+    "target_name": "9876543211"
+  },
+  {
+    "id": "EDGE_17f80fd204db78ee",
+    "source_id": "RES_7619ee8cea49187f",
+    "target_id": "RES_23492e71991bc7b9",
+    "relationship_type": "SHARED_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_phone: 9876543210"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_phone:9876543210"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "9876543210",
+    "target_name": "Rakesh Kumar"
+  },
+  {
+    "id": "EDGE_e1fe0055c2fc6a2e",
+    "source_id": "RES_8a8023e9f7760676",
+    "target_id": "RES_75110ab02c0160f9",
+    "relationship_type": "SHARED_PHONE",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_phone: 9876543212"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_phone:9876543212"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "9876543212",
+    "target_name": "Amit Sharma"
+  },
+  {
+    "id": "EDGE_febaa9c7f89c88e2",
+    "source_id": "RES_6f827effaccad628",
+    "target_id": "RES_64b87341ada987df",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9099999999999999,
+      "basis": [
+        "shared_location: Noida Sector 62"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Noida Sector 62"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Dwarka Sector 12 Main Gate Camera",
+    "target_name": "Post: Noida office visit #work"
+  },
+  {
+    "id": "EDGE_84adf3478265cf38",
+    "source_id": "RES_727777a1420ee72a",
+    "target_id": "RES_ab9b67613bd4a92c",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8999999999999999,
+      "basis": [
+        "shared_location: Connaught Place, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Connaught Place, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Connaught Place Tower 2",
+    "target_name": "Post: Meeting with partners #networking"
+  },
+  {
+    "id": "EDGE_9a59346723f2434f",
+    "source_id": "RES_2d27b53729507310",
+    "target_id": "RES_83e0fa9f1e90d610",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8800000000000001,
+      "basis": [
+        "shared_location: Lajpat Nagar, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Lajpat Nagar Part II Camera 1",
+    "target_name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning"
+  },
+  {
+    "id": "EDGE_6eb4fe5eec5b2c06",
+    "source_id": "RES_2d27b53729507310",
+    "target_id": "RES_5d395ea412ab918d",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8800000000000001,
+      "basis": [
+        "shared_location: Lajpat Nagar, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Lajpat Nagar Part II Camera 1",
+    "target_name": "Post: Thankful to my neighbors for their support #gratef"
+  },
+  {
+    "id": "EDGE_03456c9198260d5a",
+    "source_id": "RES_83e0fa9f1e90d610",
+    "target_id": "RES_5d395ea412ab918d",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_location: Lajpat Nagar, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+    "target_name": "Post: Thankful to my neighbors for their support #gratef"
+  },
+  {
+    "id": "EDGE_2efd30cd29c43648",
+    "source_id": "RES_2d27b53729507310",
+    "target_id": "RES_23492e71991bc7b9",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8800000000000001,
+      "basis": [
+        "shared_location: Lajpat Nagar Part II Camera 1"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Lajpat Nagar Part II Camera 1"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Lajpat Nagar Part II Camera 1",
+    "target_name": "Rakesh Kumar"
+  },
+  {
+    "id": "EDGE_0baae77a3b369be3",
+    "source_id": "RES_2d27b53729507310",
+    "target_id": "RES_75110ab02c0160f9",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.8800000000000001,
+      "basis": [
+        "shared_location: Lajpat Nagar Part II Camera 3"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Lajpat Nagar Part II Camera 3"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Lajpat Nagar Part II Camera 1",
+    "target_name": "Amit Sharma"
+  },
+  {
+    "id": "EDGE_ebb259fcaf86708c",
+    "source_id": "RES_342bb7cffefbd624",
+    "target_id": "RES_94049de73f3d3a19",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9249999999999999,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Karol Bagh Main Market Camera 5",
+    "target_name": "Post: New beginnings at Karol Bagh office #business #del"
+  },
+  {
+    "id": "EDGE_cb958931c684b513",
+    "source_id": "RES_342bb7cffefbd624",
+    "target_id": "RES_502123dcbcdc704e",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9249999999999999,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Karol Bagh Main Market Camera 5",
+    "target_name": "Post: New stock arrived at RK Telecom #mobile #shop"
+  },
+  {
+    "id": "EDGE_6248f8b462529cee",
+    "source_id": "RES_342bb7cffefbd624",
+    "target_id": "RES_d88fe4c9fd7f93e5",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 0.9249999999999999,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Karol Bagh Main Market Camera 5",
+    "target_name": "Post: Busy day at the shop #business"
+  },
+  {
+    "id": "EDGE_64bf0b39ea7c149d",
+    "source_id": "RES_94049de73f3d3a19",
+    "target_id": "RES_502123dcbcdc704e",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Post: New beginnings at Karol Bagh office #business #del",
+    "target_name": "Post: New stock arrived at RK Telecom #mobile #shop"
+  },
+  {
+    "id": "EDGE_c3fa0d7c80ce0592",
+    "source_id": "RES_94049de73f3d3a19",
+    "target_id": "RES_d88fe4c9fd7f93e5",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Post: New beginnings at Karol Bagh office #business #del",
+    "target_name": "Post: Busy day at the shop #business"
+  },
+  {
+    "id": "EDGE_7fd4f6eaeded45e6",
+    "source_id": "RES_502123dcbcdc704e",
+    "target_id": "RES_d88fe4c9fd7f93e5",
+    "relationship_type": "SHARED_LOCATION",
+    "edge_type": "associational",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "shared_location: Karol Bagh, Delhi"
+      ],
+      "semantic_type": "inference"
+    },
+    "supporting_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ],
+    "contradicting_evidence": [],
+    "temporal_info": null,
+    "provenance_chain": [],
+    "dependency_group": "",
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "is_independent": true,
+    "adversarial_score": 0.0,
+    "created_at": "2026-09-23T00:13:19.641314",
+    "updated_at": "2026-09-23T00:13:19.641314",
+    "run_id": "run_20260923_001317",
+    "source_name": "Post: New stock arrived at RK Telecom #mobile #shop",
+    "target_name": "Post: Busy day at the shop #business"
+  }
+]

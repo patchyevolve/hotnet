@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "case_id": "CASE_DEMO_002",
+  "jurisdiction_node_id": "JURISDICTION_MUMBAI_CYBERCRIME",
+  "description": "Synthetic, unrelated Mumbai fraud report used to exercise cross-case isolation and identity linking.",
+  "firs": [
+    {
+      "fir_id": "FIR_MUMBAI_001",
+      "fir_number": "77/2025",
+      "jurisdiction_node_id": "JURISDICTION_MUMBAI_CYBERCRIME",
+      "description": "Synthetic CDR excerpt involving a recurring contact",
+      "investigation_status": "UNDER_INVESTIGATION",
+      "files": ["02_CDR.csv"]
+    }
+  ],
+  "skip_files": []
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "SPAT_9472b487e8f4588c",
+    "entity_id": "LOC_2c6ca8121912cfab",
+    "event_type": "location",
+    "latitude": null,
+    "longitude": null,
+    "radius_km": 2.0,
+    "address": "Hyderabad Banjara Hills Demo Tower",
+    "city": "",
+    "state": "",
+    "precision": "tower",
+    "source_id": "03_CDR.csv",
+    "confidence": 0.95,
+    "run_id": "run_20260926_011743"
+  }
+]

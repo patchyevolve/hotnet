@@ -1,0 +1,9 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location
+2024-03-14T07:35:12,9876543212,9876543210,85,incoming,Noida Sector 62 Tower
+2024-03-14T16:48:55,9876543212,9876543211,442,incoming,Noida Sector 62 Tower
+2024-03-15T10:33:44,9876543212,9876543210,195,incoming,Noida Sector 62 Tower
+2024-03-15T13:20:11,9876543212,9876543213,34,outgoing,Noida Sector 62 Tower
+2024-03-16T09:12:33,9876543212,9876543211,231,incoming,Noida Sector 62 Tower
+2024-03-16T15:45:22,9876543212,9876543214,78,outgoing,Noida Sector 62 Tower
+2024-03-17T08:30:44,9876543212,9876543210,156,outgoing,Noida Sector 62 Tower
+2024-03-17T14:15:55,9876543212,9876543211,289,incoming,Noida Sector 62 Tower

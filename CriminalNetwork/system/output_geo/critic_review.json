@@ -1,0 +1,75 @@
+{
+  "run_id": "run_20260926_164752",
+  "mode": "structural_checks_only",
+  "llm_status": "failed",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "llm_error": "HTTPError: HTTP 413: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-20b` in organization `org_01ka0nhp3kfwxa2wy1pgp8xvp3` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 13875, please reduce your message size and try again. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceed",
+  "findings": [],
+  "structural_checks": [
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_8f713fb645872840"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_114270ab16d0b3f1"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_276ada20b11a9ef9"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_4a2b0a5305393535"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_ee3e7b68bc1f87bd"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_9176982caaf04427"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_05e746113e4c6221"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_bf4d00697377fb28"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_ad694f447dedd736"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_305418bf60d81f8b"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_ea86e5adffa05166"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_f133eb6bd8e1cf72"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_17748b90dfe441f3"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_81e23dd6de736ed4"
+    },
+    {
+      "code": "gap_references_unknown_hypothesis",
+      "target_id": "GAP_58b2215c6eb82f7e"
+    }
+  ],
+  "target_count": 102,
+  "evidence_reference_count": 80,
+  "changes_applied": false,
+  "human_review_required": true
+}

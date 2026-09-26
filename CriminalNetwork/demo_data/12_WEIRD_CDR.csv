@@ -1,0 +1,5 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location,tower_id
+2024-03-14T09:05:15,9876543210,01126543210,45,outgoing,Karol Bagh Tower 1,TWR_KB_001
+2024-03-14T09:06:00,01126543210,9876543213,180,incoming,Karol Bagh Tower 1,TWR_KB_001
+2024-03-14T09:10:05,9876543210,01126543210,32,outgoing,Karol Bagh Tower 1,TWR_KB_001
+2024-03-14T09:10:37,01126543210,9876543213,245,incoming,Karol Bagh Tower 1,TWR_KB_001

@@ -1,0 +1,4048 @@
+[
+  {
+    "id": "prov_EDGE_5ed82612b7127c18",
+    "node_id": "EDGE_5ed82612b7127c18",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "01_FIR.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5ed82612b7127c18"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:01_FIR.txt",
+    "source_evidence": [
+      "01_FIR.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f6c5f859910a217d",
+    "node_id": "EDGE_f6c5f859910a217d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "01_FIR.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f6c5f859910a217d"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_9fa593049c69aa1c"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:01_FIR.txt",
+    "source_evidence": [
+      "01_FIR.txt",
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b446bbf57dc89079",
+    "node_id": "EDGE_b446bbf57dc89079",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "01_FIR.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b446bbf57dc89079"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_9fa593049c69aa1c"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:01_FIR.txt",
+    "source_evidence": [
+      "01_FIR.txt",
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a12d2c9df28e9fd5",
+    "node_id": "EDGE_a12d2c9df28e9fd5",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "01_FIR.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a12d2c9df28e9fd5"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:01_FIR.txt",
+    "source_evidence": [
+      "01_FIR.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a16ef052bcebd52b",
+    "node_id": "EDGE_a16ef052bcebd52b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "01_FIR.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a16ef052bcebd52b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:01_FIR.txt",
+    "source_evidence": [
+      "01_FIR.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_18cedb067da537be",
+    "node_id": "EDGE_18cedb067da537be",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_18cedb067da537be"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "12_WEIRD_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_c1d8b7831829a0ad",
+    "node_id": "EDGE_c1d8b7831829a0ad",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_c1d8b7831829a0ad"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_698804cf32ae5d62",
+    "node_id": "EDGE_698804cf32ae5d62",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_698804cf32ae5d62"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_fe25a5ed9db9968f",
+    "node_id": "EDGE_fe25a5ed9db9968f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_fe25a5ed9db9968f"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "03_CDR_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2d522368bab72a11",
+    "node_id": "EDGE_2d522368bab72a11",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2d522368bab72a11"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_9c7b01a824be2fdd",
+    "node_id": "EDGE_9c7b01a824be2fdd",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_9c7b01a824be2fdd"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "04_CDR_Amit.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_64fe8598bd359478",
+    "node_id": "EDGE_64fe8598bd359478",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_64fe8598bd359478"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7ec4948873d3e58d",
+    "node_id": "EDGE_7ec4948873d3e58d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7ec4948873d3e58d"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "26_Name_Variation_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d5b86f13c484fd14",
+    "node_id": "EDGE_d5b86f13c484fd14",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d5b86f13c484fd14"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_06b3f3578a482b62"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR_Rakesh.csv",
+    "source_evidence": [
+      "02_CDR_Rakesh.csv",
+      "30_Adversarial_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a385d3b251cb9b73",
+    "node_id": "EDGE_a385d3b251cb9b73",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a385d3b251cb9b73"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR_Suresh.csv",
+    "source_evidence": [
+      "03_CDR_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_27907756565a358c",
+    "node_id": "EDGE_27907756565a358c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_27907756565a358c"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_ce4c1813fe797d7d"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR_Suresh.csv",
+    "source_evidence": [
+      "03_CDR_Suresh.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_994b85e7ac954dae",
+    "node_id": "EDGE_994b85e7ac954dae",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_994b85e7ac954dae"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR_Suresh.csv",
+    "source_evidence": [
+      "03_CDR_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d04ada3ea7e82966",
+    "node_id": "EDGE_d04ada3ea7e82966",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d04ada3ea7e82966"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_ce4c1813fe797d7d"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR_Suresh.csv",
+    "source_evidence": [
+      "03_CDR_Suresh.csv",
+      "04_CDR_Amit.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_4469fab2e1a27e9f",
+    "node_id": "EDGE_4469fab2e1a27e9f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_4469fab2e1a27e9f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR_Suresh.csv",
+    "source_evidence": [
+      "03_CDR_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_35feb9bcff8e1c6f",
+    "node_id": "EDGE_35feb9bcff8e1c6f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "04_CDR_Amit.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_35feb9bcff8e1c6f"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_3e438bacdb6bd7b1"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:04_CDR_Amit.csv",
+    "source_evidence": [
+      "04_CDR_Amit.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0787669ae0184386",
+    "node_id": "EDGE_0787669ae0184386",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "04_CDR_Amit.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0787669ae0184386"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_3e438bacdb6bd7b1"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:04_CDR_Amit.csv",
+    "source_evidence": [
+      "04_CDR_Amit.csv",
+      "41_Self_Loop_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_4e06851c42dddb8f",
+    "node_id": "EDGE_4e06851c42dddb8f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "04_CDR_Amit.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_4e06851c42dddb8f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:04_CDR_Amit.csv",
+    "source_evidence": [
+      "04_CDR_Amit.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2eec3506afdfa6e7",
+    "node_id": "EDGE_2eec3506afdfa6e7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "05_Bank_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2eec3506afdfa6e7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:05_Bank_Rakesh.csv",
+    "source_evidence": [
+      "05_Bank_Rakesh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_541af9bc455841d4",
+    "node_id": "EDGE_541af9bc455841d4",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "05_Bank_Rakesh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_541af9bc455841d4"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:05_Bank_Rakesh.csv",
+    "source_evidence": [
+      "05_Bank_Rakesh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_cc088dbe3c570029",
+    "node_id": "EDGE_cc088dbe3c570029",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "06_Bank_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_cc088dbe3c570029"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:06_Bank_Suresh.csv",
+    "source_evidence": [
+      "06_Bank_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a7f34e2545aaab5d",
+    "node_id": "EDGE_a7f34e2545aaab5d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "06_Bank_Suresh.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a7f34e2545aaab5d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:06_Bank_Suresh.csv",
+    "source_evidence": [
+      "06_Bank_Suresh.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_702b466dee5ad245",
+    "node_id": "EDGE_702b466dee5ad245",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "07_Bank_Amit.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_702b466dee5ad245"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:07_Bank_Amit.csv",
+    "source_evidence": [
+      "07_Bank_Amit.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_323acbc63b974c21",
+    "node_id": "EDGE_323acbc63b974c21",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_323acbc63b974c21"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_50fa850b2b1ec9e6"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json",
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f614aab59d3098d7",
+    "node_id": "EDGE_f614aab59d3098d7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f614aab59d3098d7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_73e237526a0d0cbf",
+    "node_id": "EDGE_73e237526a0d0cbf",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_73e237526a0d0cbf"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0dc22e02b4d58788",
+    "node_id": "EDGE_0dc22e02b4d58788",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0dc22e02b4d58788"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b4f2df6d1270ed11",
+    "node_id": "EDGE_b4f2df6d1270ed11",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b4f2df6d1270ed11"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7f1bb621d168cb87",
+    "node_id": "EDGE_7f1bb621d168cb87",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7f1bb621d168cb87"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_8d02aa7eb1f2c337",
+    "node_id": "EDGE_8d02aa7eb1f2c337",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "08_Device_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_8d02aa7eb1f2c337"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:08_Device_Rakesh.json",
+    "source_evidence": [
+      "08_Device_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6424234805d8fe5c",
+    "node_id": "EDGE_6424234805d8fe5c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "09_Social_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6424234805d8fe5c"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:09_Social_Amit.json",
+    "source_evidence": [
+      "09_Social_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_8a196a57cf9d4116",
+    "node_id": "EDGE_8a196a57cf9d4116",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "09_Social_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_8a196a57cf9d4116"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:09_Social_Amit.json",
+    "source_evidence": [
+      "09_Social_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_807afa66ddef0722",
+    "node_id": "EDGE_807afa66ddef0722",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "09_Social_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_807afa66ddef0722"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:09_Social_Amit.json",
+    "source_evidence": [
+      "09_Social_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_5fad919fb1068f07",
+    "node_id": "EDGE_5fad919fb1068f07",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "09_Social_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5fad919fb1068f07"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_0a5f31f39f5d619c"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:09_Social_Amit.json",
+    "source_evidence": [
+      "09_Social_Amit.json",
+      "17_Social_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_99a250ab43247104",
+    "node_id": "EDGE_99a250ab43247104",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_99a250ab43247104"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_63f6a5085996cd58",
+    "node_id": "EDGE_63f6a5085996cd58",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_63f6a5085996cd58"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1d3245c8a31ea019",
+    "node_id": "EDGE_1d3245c8a31ea019",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1d3245c8a31ea019"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d7b37f8627d35235",
+    "node_id": "EDGE_d7b37f8627d35235",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d7b37f8627d35235"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_98c6ef0fb964e666",
+    "node_id": "EDGE_98c6ef0fb964e666",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_98c6ef0fb964e666"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e823dbee0ff8518b",
+    "node_id": "EDGE_e823dbee0ff8518b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e823dbee0ff8518b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_82beef867ce66dcb",
+    "node_id": "EDGE_82beef867ce66dcb",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "11_Criminal_History.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_82beef867ce66dcb"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:11_Criminal_History.json",
+    "source_evidence": [
+      "11_Criminal_History.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_251f9fda33ba9e17",
+    "node_id": "EDGE_251f9fda33ba9e17",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "12_WEIRD_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_251f9fda33ba9e17"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:12_WEIRD_CDR.csv",
+    "source_evidence": [
+      "12_WEIRD_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_13db76a5aa18b8a1",
+    "node_id": "EDGE_13db76a5aa18b8a1",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "12_WEIRD_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_13db76a5aa18b8a1"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:12_WEIRD_CDR.csv",
+    "source_evidence": [
+      "12_WEIRD_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_9fcd61163baa7ff0",
+    "node_id": "EDGE_9fcd61163baa7ff0",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "12_WEIRD_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_9fcd61163baa7ff0"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_9eeb75085f3656ee"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:12_WEIRD_CDR.csv",
+    "source_evidence": [
+      "12_WEIRD_CDR.csv",
+      "14_CDR_Meena.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e2c4e9c2dbe20799",
+    "node_id": "EDGE_e2c4e9c2dbe20799",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "13_FIR_Rajesh.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e2c4e9c2dbe20799"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:13_FIR_Rajesh.txt",
+    "source_evidence": [
+      "13_FIR_Rajesh.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_733185da3fdc7afe",
+    "node_id": "EDGE_733185da3fdc7afe",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "13_FIR_Rajesh.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_733185da3fdc7afe"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:13_FIR_Rajesh.txt",
+    "source_evidence": [
+      "13_FIR_Rajesh.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0e9a55b641785936",
+    "node_id": "EDGE_0e9a55b641785936",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "13_FIR_Rajesh.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0e9a55b641785936"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:13_FIR_Rajesh.txt",
+    "source_evidence": [
+      "13_FIR_Rajesh.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b93e87cff04d0a83",
+    "node_id": "EDGE_b93e87cff04d0a83",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "14_CDR_Meena.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b93e87cff04d0a83"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_a43997b49dba49ba"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:14_CDR_Meena.csv",
+    "source_evidence": [
+      "14_CDR_Meena.csv",
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "30_Adversarial_CDR.csv",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_9ce3b9ddb8650df0",
+    "node_id": "EDGE_9ce3b9ddb8650df0",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "15_Bank_Meena.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_9ce3b9ddb8650df0"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:15_Bank_Meena.csv",
+    "source_evidence": [
+      "15_Bank_Meena.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b34ad75b47e24121",
+    "node_id": "EDGE_b34ad75b47e24121",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "15_Bank_Meena.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b34ad75b47e24121"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:15_Bank_Meena.csv",
+    "source_evidence": [
+      "15_Bank_Meena.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d2751dc855c10e58",
+    "node_id": "EDGE_d2751dc855c10e58",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "15_Bank_Meena.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d2751dc855c10e58"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:15_Bank_Meena.csv",
+    "source_evidence": [
+      "15_Bank_Meena.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_24431f3987b4b6ba",
+    "node_id": "EDGE_24431f3987b4b6ba",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "15_Bank_Meena.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_24431f3987b4b6ba"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:15_Bank_Meena.csv",
+    "source_evidence": [
+      "15_Bank_Meena.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1fa350c66009e170",
+    "node_id": "EDGE_1fa350c66009e170",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1fa350c66009e170"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e3739a7cb0579a76",
+    "node_id": "EDGE_e3739a7cb0579a76",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e3739a7cb0579a76"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_21a4023ebf991092",
+    "node_id": "EDGE_21a4023ebf991092",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_21a4023ebf991092"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_259d32e048dd2c1e",
+    "node_id": "EDGE_259d32e048dd2c1e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_259d32e048dd2c1e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0eb59f1405db9612",
+    "node_id": "EDGE_0eb59f1405db9612",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0eb59f1405db9612"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a3a5092b920e85f7",
+    "node_id": "EDGE_a3a5092b920e85f7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "16_Device_Amit.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a3a5092b920e85f7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:16_Device_Amit.json",
+    "source_evidence": [
+      "16_Device_Amit.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_82a7d0498d3cbd8f",
+    "node_id": "EDGE_82a7d0498d3cbd8f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "17_Social_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_82a7d0498d3cbd8f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:17_Social_Rakesh.json",
+    "source_evidence": [
+      "17_Social_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_14e86eca59bce555",
+    "node_id": "EDGE_14e86eca59bce555",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "17_Social_Rakesh.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_14e86eca59bce555"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:17_Social_Rakesh.json",
+    "source_evidence": [
+      "17_Social_Rakesh.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_66fb8f66eb0d7f87",
+    "node_id": "EDGE_66fb8f66eb0d7f87",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "18_Witness_Statement.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_66fb8f66eb0d7f87"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:18_Witness_Statement.txt",
+    "source_evidence": [
+      "18_Witness_Statement.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e9146cbd327e57cf",
+    "node_id": "EDGE_e9146cbd327e57cf",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "18_Witness_Statement.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e9146cbd327e57cf"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:18_Witness_Statement.txt",
+    "source_evidence": [
+      "18_Witness_Statement.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_864bbc28b85c6e16",
+    "node_id": "EDGE_864bbc28b85c6e16",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "18_Witness_Statement.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_864bbc28b85c6e16"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:18_Witness_Statement.txt",
+    "source_evidence": [
+      "18_Witness_Statement.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_8142e46277bfc209",
+    "node_id": "EDGE_8142e46277bfc209",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "18_Witness_Statement.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_8142e46277bfc209"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:18_Witness_Statement.txt",
+    "source_evidence": [
+      "18_Witness_Statement.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_aa345fb0b471622e",
+    "node_id": "EDGE_aa345fb0b471622e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "18_Witness_Statement.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_aa345fb0b471622e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:18_Witness_Statement.txt",
+    "source_evidence": [
+      "18_Witness_Statement.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_4e3e7f823c5a7600",
+    "node_id": "EDGE_4e3e7f823c5a7600",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_4e3e7f823c5a7600"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_f90015a9027df8e3"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt",
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_8a2b386bdfb9827e",
+    "node_id": "EDGE_8a2b386bdfb9827e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_8a2b386bdfb9827e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_abeb1ea8ebd75058",
+    "node_id": "EDGE_abeb1ea8ebd75058",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_abeb1ea8ebd75058"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_62ee3f2d23cf9fda",
+    "node_id": "EDGE_62ee3f2d23cf9fda",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_62ee3f2d23cf9fda"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d1819c47cc03d402",
+    "node_id": "EDGE_d1819c47cc03d402",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d1819c47cc03d402"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2aa9c08c5171960b",
+    "node_id": "EDGE_2aa9c08c5171960b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2aa9c08c5171960b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_59f15009f1a352cc",
+    "node_id": "EDGE_59f15009f1a352cc",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_59f15009f1a352cc"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_f90015a9027df8e3"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt",
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7f50d45fcb525d74",
+    "node_id": "EDGE_7f50d45fcb525d74",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7f50d45fcb525d74"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2ab92d91d2f7a31d",
+    "node_id": "EDGE_2ab92d91d2f7a31d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2ab92d91d2f7a31d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_5b205e221637df7b",
+    "node_id": "EDGE_5b205e221637df7b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5b205e221637df7b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f73db1b181ae2c39",
+    "node_id": "EDGE_f73db1b181ae2c39",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f73db1b181ae2c39"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_034714581bfb333a",
+    "node_id": "EDGE_034714581bfb333a",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_034714581bfb333a"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6388b526e496e4dc",
+    "node_id": "EDGE_6388b526e496e4dc",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6388b526e496e4dc"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1d67632e2d6667d2",
+    "node_id": "EDGE_1d67632e2d6667d2",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1d67632e2d6667d2"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1219b9c80bd6964a",
+    "node_id": "EDGE_1219b9c80bd6964a",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "19_Surveillance_Report.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1219b9c80bd6964a"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:19_Surveillance_Report.txt",
+    "source_evidence": [
+      "19_Surveillance_Report.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a9b33d2a5a0e27cb",
+    "node_id": "EDGE_a9b33d2a5a0e27cb",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "20_Journalist_Note.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a9b33d2a5a0e27cb"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:20_Journalist_Note.txt",
+    "source_evidence": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d1ab55973337a1fa",
+    "node_id": "EDGE_d1ab55973337a1fa",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "20_Journalist_Note.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d1ab55973337a1fa"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:20_Journalist_Note.txt",
+    "source_evidence": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_83ededf98e841617",
+    "node_id": "EDGE_83ededf98e841617",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "20_Journalist_Note.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_83ededf98e841617"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:20_Journalist_Note.txt",
+    "source_evidence": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_cefe85725e54251b",
+    "node_id": "EDGE_cefe85725e54251b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "20_Journalist_Note.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_cefe85725e54251b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:20_Journalist_Note.txt",
+    "source_evidence": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1a3ce5c3e24d1570",
+    "node_id": "EDGE_1a3ce5c3e24d1570",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "20_Journalist_Note.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1a3ce5c3e24d1570"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:20_Journalist_Note.txt",
+    "source_evidence": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_fb8dba5e15e2d637",
+    "node_id": "EDGE_fb8dba5e15e2d637",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "21_Missing_Phone_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_fb8dba5e15e2d637"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_a43997b49dba49ba"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:21_Missing_Phone_CDR.csv",
+    "source_evidence": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_429f66a9cb1ace65",
+    "node_id": "EDGE_429f66a9cb1ace65",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "21_Missing_Phone_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_429f66a9cb1ace65"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_a43997b49dba49ba"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:21_Missing_Phone_CDR.csv",
+    "source_evidence": [
+      "21_Missing_Phone_CDR.csv",
+      "26_Name_Variation_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e3d3eabf350dae37",
+    "node_id": "EDGE_e3d3eabf350dae37",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "21_Missing_Phone_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e3d3eabf350dae37"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:21_Missing_Phone_CDR.csv",
+    "source_evidence": [
+      "21_Missing_Phone_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_abcdf2a92deea15d",
+    "node_id": "EDGE_abcdf2a92deea15d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "23_FIR_No_Phone.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_abcdf2a92deea15d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:23_FIR_No_Phone.txt",
+    "source_evidence": [
+      "23_FIR_No_Phone.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_3d2cde28e2d7ccbd",
+    "node_id": "EDGE_3d2cde28e2d7ccbd",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "25_Social_Partial.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_3d2cde28e2d7ccbd"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:25_Social_Partial.json",
+    "source_evidence": [
+      "25_Social_Partial.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2c7cda15a7cb0304",
+    "node_id": "EDGE_2c7cda15a7cb0304",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "26_Name_Variation_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2c7cda15a7cb0304"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:26_Name_Variation_CDR.csv",
+    "source_evidence": [
+      "26_Name_Variation_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7d23cc65a70d8985",
+    "node_id": "EDGE_7d23cc65a70d8985",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "26_Name_Variation_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7d23cc65a70d8985"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_a43997b49dba49ba"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:26_Name_Variation_CDR.csv",
+    "source_evidence": [
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_28ae3ec16caa4974",
+    "node_id": "EDGE_28ae3ec16caa4974",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "27_Temporal_Contradiction_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_28ae3ec16caa4974"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:27_Temporal_Contradiction_CDR.csv",
+    "source_evidence": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6f33680f3e528d0b",
+    "node_id": "EDGE_6f33680f3e528d0b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "27_Temporal_Contradiction_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6f33680f3e528d0b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:27_Temporal_Contradiction_CDR.csv",
+    "source_evidence": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_42d72ce94f7f0148",
+    "node_id": "EDGE_42d72ce94f7f0148",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "27_Temporal_Contradiction_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_42d72ce94f7f0148"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:27_Temporal_Contradiction_CDR.csv",
+    "source_evidence": [
+      "27_Temporal_Contradiction_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6435ff08d9562bac",
+    "node_id": "EDGE_6435ff08d9562bac",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6435ff08d9562bac"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_eebfddff9f01cb86",
+    "node_id": "EDGE_eebfddff9f01cb86",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_eebfddff9f01cb86"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_ef57e7ed3086e5da",
+    "node_id": "EDGE_ef57e7ed3086e5da",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_ef57e7ed3086e5da"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d7eacf66a70bcdb8",
+    "node_id": "EDGE_d7eacf66a70bcdb8",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d7eacf66a70bcdb8"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b16f4a96f64bec2e",
+    "node_id": "EDGE_b16f4a96f64bec2e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b16f4a96f64bec2e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_8b872699bbda43bc",
+    "node_id": "EDGE_8b872699bbda43bc",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_8b872699bbda43bc"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f4c1486c4a650b4f",
+    "node_id": "EDGE_f4c1486c4a650b4f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f4c1486c4a650b4f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f3455cab18360a74",
+    "node_id": "EDGE_f3455cab18360a74",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "29_Investigator_Summary.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f3455cab18360a74"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:29_Investigator_Summary.txt",
+    "source_evidence": [
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e83d4e10fffd0b66",
+    "node_id": "EDGE_e83d4e10fffd0b66",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "30_Adversarial_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e83d4e10fffd0b66"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:30_Adversarial_CDR.csv",
+    "source_evidence": [
+      "30_Adversarial_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_c0c6ac68f32b5a08",
+    "node_id": "EDGE_c0c6ac68f32b5a08",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "31_Adversarial_Bank.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_c0c6ac68f32b5a08"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:31_Adversarial_Bank.csv",
+    "source_evidence": [
+      "31_Adversarial_Bank.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_48121c682daf1540",
+    "node_id": "EDGE_48121c682daf1540",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "31_Adversarial_Bank.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_48121c682daf1540"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:31_Adversarial_Bank.csv",
+    "source_evidence": [
+      "31_Adversarial_Bank.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e0802cc225f1e660",
+    "node_id": "EDGE_e0802cc225f1e660",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "32_Adversarial_Social.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e0802cc225f1e660"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:32_Adversarial_Social.json",
+    "source_evidence": [
+      "32_Adversarial_Social.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_4dfb786dffa375a3",
+    "node_id": "EDGE_4dfb786dffa375a3",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "32_Adversarial_Social.json"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_4dfb786dffa375a3"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:32_Adversarial_Social.json",
+    "source_evidence": [
+      "32_Adversarial_Social.json"
+    ]
+  },
+  {
+    "id": "prov_EDGE_173ab1734d5971f8",
+    "node_id": "EDGE_173ab1734d5971f8",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "35_Identity_Uncertainty_CCTV.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_173ab1734d5971f8"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:35_Identity_Uncertainty_CCTV.csv",
+    "source_evidence": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f1355244c1d88617",
+    "node_id": "EDGE_f1355244c1d88617",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "35_Identity_Uncertainty_CCTV.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f1355244c1d88617"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:35_Identity_Uncertainty_CCTV.csv",
+    "source_evidence": [
+      "35_Identity_Uncertainty_CCTV.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_5adf94e71dd6c614",
+    "node_id": "EDGE_5adf94e71dd6c614",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "48_Bank_Transactions.xlsx"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5adf94e71dd6c614"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:48_Bank_Transactions.xlsx",
+    "source_evidence": [
+      "48_Bank_Transactions.xlsx"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7970802af29b930d",
+    "node_id": "EDGE_7970802af29b930d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "48_Bank_Transactions.xlsx"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7970802af29b930d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:48_Bank_Transactions.xlsx",
+    "source_evidence": [
+      "48_Bank_Transactions.xlsx"
+    ]
+  },
+  {
+    "id": "prov_EDGE_ca881f9885440656",
+    "node_id": "EDGE_ca881f9885440656",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "48_Bank_Transactions.xlsx"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_ca881f9885440656"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:48_Bank_Transactions.xlsx",
+    "source_evidence": [
+      "48_Bank_Transactions.xlsx"
+    ]
+  },
+  {
+    "id": "prov_EDGE_86d9b6cbd3bd1b17",
+    "node_id": "EDGE_86d9b6cbd3bd1b17",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_86d9b6cbd3bd1b17"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_c9ffb7fb09c97c06",
+    "node_id": "EDGE_c9ffb7fb09c97c06",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_c9ffb7fb09c97c06"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1a05d9dd3c61848b",
+    "node_id": "EDGE_1a05d9dd3c61848b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1a05d9dd3c61848b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f33599aaff0e7cef",
+    "node_id": "EDGE_f33599aaff0e7cef",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f33599aaff0e7cef"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_00e0dc85c5c9e1ca",
+    "node_id": "EDGE_00e0dc85c5c9e1ca",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_00e0dc85c5c9e1ca"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f73f5b2e2034cfeb",
+    "node_id": "EDGE_f73f5b2e2034cfeb",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f73f5b2e2034cfeb"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_CDR.csv",
+    "source_evidence": [
+      "02_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_9efdf1684577e10d",
+    "node_id": "EDGE_9efdf1684577e10d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "02_WITNESS_EVIDENCE.txt"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_9efdf1684577e10d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:02_WITNESS_EVIDENCE.txt",
+    "source_evidence": [
+      "02_WITNESS_EVIDENCE.txt"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f1e54c3d4a9a2cc7",
+    "node_id": "EDGE_f1e54c3d4a9a2cc7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f1e54c3d4a9a2cc7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_35153718c05cf69d",
+    "node_id": "EDGE_35153718c05cf69d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_35153718c05cf69d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_40ad716478966b3c",
+    "node_id": "EDGE_40ad716478966b3c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "03_CDR.csv"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_40ad716478966b3c"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:03_CDR.csv",
+    "source_evidence": [
+      "03_CDR.csv"
+    ]
+  },
+  {
+    "id": "prov_EDGE_5887e459c0f1c5c8",
+    "node_id": "EDGE_5887e459c0f1c5c8",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "ORGANIZATION_23492e71991bc7b9"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5887e459c0f1c5c8"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_f90015a9027df8e3"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:ORGANIZATION_23492e71991bc7b9",
+    "source_evidence": [
+      "ORGANIZATION_23492e71991bc7b9",
+      "PERSON_5cbac5323a616f86",
+      "PERSON_23492e71991bc7b9"
+    ]
+  },
+  {
+    "id": "prov_EDGE_46386d3cc202317f",
+    "node_id": "EDGE_46386d3cc202317f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_b764cdc0eab71374"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_46386d3cc202317f"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_e41d5c9970d2fc45"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_b764cdc0eab71374",
+    "source_evidence": [
+      "PERSON_b764cdc0eab71374",
+      "PERSON_6243832d591f59a2"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e1efb419ffffd178",
+    "node_id": "EDGE_e1efb419ffffd178",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_915ca1cfe5a261f0"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e1efb419ffffd178"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_50fa850b2b1ec9e6"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_915ca1cfe5a261f0",
+    "source_evidence": [
+      "PERSON_915ca1cfe5a261f0",
+      "ORGANIZATION_915ca1cfe5a261f0",
+      "PERSON_c63ac5eb1535a215",
+      "PERSON_f73ad70629191b0d",
+      "PERSON_5e95ee9f0386dda2"
+    ]
+  },
+  {
+    "id": "prov_EDGE_b64baee9df3ab66d",
+    "node_id": "EDGE_b64baee9df3ab66d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "ORG_058be09de37a18d4"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_b64baee9df3ab66d"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_9168a3cc71452b89"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:ORG_058be09de37a18d4",
+    "source_evidence": [
+      "ORG_058be09de37a18d4",
+      "ORG_fce0b15c7c195529",
+      "ORGANIZATION_058be09de37a18d4",
+      "ORGANIZATION_fce0b15c7c195529"
+    ]
+  },
+  {
+    "id": "prov_EDGE_88ef5e3bd305c62a",
+    "node_id": "EDGE_88ef5e3bd305c62a",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "LOCATION_f1994fef91b5681f"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_88ef5e3bd305c62a"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_2e6dcc0d467c0fff"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:LOCATION_f1994fef91b5681f",
+    "source_evidence": [
+      "LOCATION_f1994fef91b5681f",
+      "LOCATION_da3431ef66e742ca",
+      "LOCATION_40dd6303d825d86d",
+      "LOCATION_02752649638768e2",
+      "LOC_475f3f364856ea70",
+      "LOC_ca5c595ef394f74f",
+      "LOC_8de9f79573e30455",
+      "LOC_2d27b53729507310"
+    ]
+  },
+  {
+    "id": "prov_EDGE_22f11f2a5abdd733",
+    "node_id": "EDGE_22f11f2a5abdd733",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_bdae71cfb51d493f"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_22f11f2a5abdd733"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_58d3eec5a549b5f5"
+      }
+    ],
+    "depth": 2,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_bdae71cfb51d493f",
+    "source_evidence": [
+      "PERSON_bdae71cfb51d493f",
+      "LOCATION_b66694c77645402b",
+      "PERSON_b66694c77645402b",
+      "PERSON_4d04f9016628213c"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1c3d44d7c56c5bdd",
+    "node_id": "EDGE_1c3d44d7c56c5bdd",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_105a112c81ce60e6"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1c3d44d7c56c5bdd"
+      },
+      {
+        "step": 2,
+        "type": "ResolvedEntity",
+        "id": "RES_0a5f31f39f5d619c"
+      }
+    ],
+    "depth": 1,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_105a112c81ce60e6",
+    "source_evidence": [
+      "PERSON_105a112c81ce60e6",
+      "PERSON_75110ab02c0160f9"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f4cc45873aac826b",
+    "node_id": "EDGE_f4cc45873aac826b",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_d71ab13e9efcf04e"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f4cc45873aac826b"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_d71ab13e9efcf04e",
+    "source_evidence": [
+      "PERSON_d71ab13e9efcf04e"
+    ]
+  },
+  {
+    "id": "prov_EDGE_3ff14db67b5efcf1",
+    "node_id": "EDGE_3ff14db67b5efcf1",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "ORG_4b8a1601852a8525"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_3ff14db67b5efcf1"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:ORG_4b8a1601852a8525",
+    "source_evidence": [
+      "ORG_4b8a1601852a8525"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1c12f8ce2e0ab4b3",
+    "node_id": "EDGE_1c12f8ce2e0ab4b3",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "LOC_485bdeb3c76752d4"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1c12f8ce2e0ab4b3"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:LOC_485bdeb3c76752d4",
+    "source_evidence": [
+      "LOC_485bdeb3c76752d4"
+    ]
+  },
+  {
+    "id": "prov_EDGE_3347f8eb8bd0c8d1",
+    "node_id": "EDGE_3347f8eb8bd0c8d1",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "ORG_7fd1eb60e433a497"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_3347f8eb8bd0c8d1"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:ORG_7fd1eb60e433a497",
+    "source_evidence": [
+      "ORG_7fd1eb60e433a497"
+    ]
+  },
+  {
+    "id": "prov_EDGE_ae5ad7dfc1f47263",
+    "node_id": "EDGE_ae5ad7dfc1f47263",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_2d426be6a60758d5"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_ae5ad7dfc1f47263"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_2d426be6a60758d5",
+    "source_evidence": [
+      "PERSON_2d426be6a60758d5"
+    ]
+  },
+  {
+    "id": "prov_EDGE_acf3b86b2005749c",
+    "node_id": "EDGE_acf3b86b2005749c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_bb515e95562574af"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_acf3b86b2005749c"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_bb515e95562574af",
+    "source_evidence": [
+      "PERSON_bb515e95562574af"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e4e5522be516963a",
+    "node_id": "EDGE_e4e5522be516963a",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_ff28988444e5efd4"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e4e5522be516963a"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_ff28988444e5efd4",
+    "source_evidence": [
+      "PERSON_ff28988444e5efd4"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2fd652f6c3a2170e",
+    "node_id": "EDGE_2fd652f6c3a2170e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "PERSON_6a6ac8386005b00f"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2fd652f6c3a2170e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:PERSON_6a6ac8386005b00f",
+    "source_evidence": [
+      "PERSON_6a6ac8386005b00f"
+    ]
+  },
+  {
+    "id": "prov_EDGE_5542110df5c6559d",
+    "node_id": "EDGE_5542110df5c6559d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543210"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_5542110df5c6559d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543210",
+    "source_evidence": [
+      "shared_phone:9876543210"
+    ]
+  },
+  {
+    "id": "prov_EDGE_74c78a43b9e72c6f",
+    "node_id": "EDGE_74c78a43b9e72c6f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543213"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_74c78a43b9e72c6f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543213",
+    "source_evidence": [
+      "shared_phone:9876543213"
+    ]
+  },
+  {
+    "id": "prov_EDGE_da9c8a6febbbfb37",
+    "node_id": "EDGE_da9c8a6febbbfb37",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543213"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_da9c8a6febbbfb37"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543213",
+    "source_evidence": [
+      "shared_phone:9876543213"
+    ]
+  },
+  {
+    "id": "prov_EDGE_24b6348e69bc4574",
+    "node_id": "EDGE_24b6348e69bc4574",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543213"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_24b6348e69bc4574"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543213",
+    "source_evidence": [
+      "shared_phone:9876543213"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e526c62c98407f79",
+    "node_id": "EDGE_e526c62c98407f79",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543211"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e526c62c98407f79"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543211",
+    "source_evidence": [
+      "shared_phone:9876543211"
+    ]
+  },
+  {
+    "id": "prov_EDGE_189e6e860a3c95a6",
+    "node_id": "EDGE_189e6e860a3c95a6",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:18001021234"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_189e6e860a3c95a6"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:18001021234",
+    "source_evidence": [
+      "shared_phone:18001021234"
+    ]
+  },
+  {
+    "id": "prov_EDGE_4a4cac9ca56386ce",
+    "node_id": "EDGE_4a4cac9ca56386ce",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:01129876543"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_4a4cac9ca56386ce"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:01129876543",
+    "source_evidence": [
+      "shared_phone:01129876543"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d5b0b9b95c8e39ae",
+    "node_id": "EDGE_d5b0b9b95c8e39ae",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543212"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d5b0b9b95c8e39ae"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543212",
+    "source_evidence": [
+      "shared_phone:9876543212"
+    ]
+  },
+  {
+    "id": "prov_EDGE_66748722c50a82c5",
+    "node_id": "EDGE_66748722c50a82c5",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543214"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_66748722c50a82c5"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543214",
+    "source_evidence": [
+      "shared_phone:9876543214"
+    ]
+  },
+  {
+    "id": "prov_EDGE_093ce55380a98c39",
+    "node_id": "EDGE_093ce55380a98c39",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543220"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_093ce55380a98c39"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543220",
+    "source_evidence": [
+      "shared_phone:9876543220"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6998ca76efb133bf",
+    "node_id": "EDGE_6998ca76efb133bf",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543220"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6998ca76efb133bf"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543220",
+    "source_evidence": [
+      "shared_phone:9876543220"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d064933d15abcec5",
+    "node_id": "EDGE_d064933d15abcec5",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543220"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d064933d15abcec5"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543220",
+    "source_evidence": [
+      "shared_phone:9876543220"
+    ]
+  },
+  {
+    "id": "prov_EDGE_34ad45bdfd26a56f",
+    "node_id": "EDGE_34ad45bdfd26a56f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9812345678"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_34ad45bdfd26a56f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9812345678",
+    "source_evidence": [
+      "shared_phone:9812345678"
+    ]
+  },
+  {
+    "id": "prov_EDGE_2f33321dffca7dd5",
+    "node_id": "EDGE_2f33321dffca7dd5",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:01126543210"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_2f33321dffca7dd5"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:01126543210",
+    "source_evidence": [
+      "shared_phone:01126543210"
+    ]
+  },
+  {
+    "id": "prov_EDGE_60e2317334aeaede",
+    "node_id": "EDGE_60e2317334aeaede",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:198"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_60e2317334aeaede"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:198",
+    "source_evidence": [
+      "shared_phone:198"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d0c23ad91de9babb",
+    "node_id": "EDGE_d0c23ad91de9babb",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543215"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d0c23ad91de9babb"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543215",
+    "source_evidence": [
+      "shared_phone:9876543215"
+    ]
+  },
+  {
+    "id": "prov_EDGE_d5d451c7a994e6bc",
+    "node_id": "EDGE_d5d451c7a994e6bc",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_phone:9876543216"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_d5d451c7a994e6bc"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_phone:9876543216",
+    "source_evidence": [
+      "shared_phone:9876543216"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0df7b096cebacb41",
+    "node_id": "EDGE_0df7b096cebacb41",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Lajpat Nagar Part II Camera 1"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0df7b096cebacb41"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Lajpat Nagar Part II Camera 1",
+    "source_evidence": [
+      "shared_location:Lajpat Nagar Part II Camera 1"
+    ]
+  },
+  {
+    "id": "prov_EDGE_1f549c9cb908964f",
+    "node_id": "EDGE_1f549c9cb908964f",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Noida Sector 62"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_1f549c9cb908964f"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Noida Sector 62",
+    "source_evidence": [
+      "shared_location:Noida Sector 62"
+    ]
+  },
+  {
+    "id": "prov_EDGE_7646a2e6f3e89d94",
+    "node_id": "EDGE_7646a2e6f3e89d94",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Lajpat Nagar, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_7646a2e6f3e89d94"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Lajpat Nagar, Delhi",
+    "source_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_0d77d6238dea5d5c",
+    "node_id": "EDGE_0d77d6238dea5d5c",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Lajpat Nagar, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_0d77d6238dea5d5c"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Lajpat Nagar, Delhi",
+    "source_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6566f0706e3919f0",
+    "node_id": "EDGE_6566f0706e3919f0",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Lajpat Nagar, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6566f0706e3919f0"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Lajpat Nagar, Delhi",
+    "source_evidence": [
+      "shared_location:Lajpat Nagar, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f28c1bc436d45db7",
+    "node_id": "EDGE_f28c1bc436d45db7",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Lajpat Nagar Part II Camera 3"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f28c1bc436d45db7"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Lajpat Nagar Part II Camera 3",
+    "source_evidence": [
+      "shared_location:Lajpat Nagar Part II Camera 3"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e2899a833004568e",
+    "node_id": "EDGE_e2899a833004568e",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e2899a833004568e"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_ef86f59e4f856f18",
+    "node_id": "EDGE_ef86f59e4f856f18",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_ef86f59e4f856f18"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_e2657a546f040cda",
+    "node_id": "EDGE_e2657a546f040cda",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_e2657a546f040cda"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_a92fd02e6082458d",
+    "node_id": "EDGE_a92fd02e6082458d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_a92fd02e6082458d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_773b711c71b965bf",
+    "node_id": "EDGE_773b711c71b965bf",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_773b711c71b965bf"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_6a98b61cf7154a45",
+    "node_id": "EDGE_6a98b61cf7154a45",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Karol Bagh, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_6a98b61cf7154a45"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Karol Bagh, Delhi",
+    "source_evidence": [
+      "shared_location:Karol Bagh, Delhi"
+    ]
+  },
+  {
+    "id": "prov_EDGE_f7d93e8e719d4f1d",
+    "node_id": "EDGE_f7d93e8e719d4f1d",
+    "derivation": [
+      {
+        "step": 0,
+        "type": "RawEvidence",
+        "id": "shared_location:Connaught Place, Delhi"
+      },
+      {
+        "step": 1,
+        "type": "ExtractedEntity",
+        "id": "EDGE_f7d93e8e719d4f1d"
+      }
+    ],
+    "depth": 0,
+    "is_independent": true,
+    "dependency_group": "src:shared_location:Connaught Place, Delhi",
+    "source_evidence": [
+      "shared_location:Connaught Place, Delhi"
+    ]
+  }
+]

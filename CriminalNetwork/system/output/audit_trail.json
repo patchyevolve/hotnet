@@ -1,0 +1,131 @@
+[
+  {
+    "timestamp": "2026-09-23T00:13:18.022923",
+    "run_id": "run_20260923_001317",
+    "stage": "pipeline",
+    "action": "run_started",
+    "details": {
+      "input_dir": "../demo_data",
+      "run_id": "run_20260923_001317"
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:18.601668",
+    "run_id": "run_20260923_001317",
+    "stage": "ingestion",
+    "action": "files_ingested",
+    "details": {
+      "total": 51,
+      "evidence": 50
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:18.601681",
+    "run_id": "run_20260923_001317",
+    "stage": "extraction",
+    "action": "extraction_started",
+    "details": {
+      "files_to_process": 50
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:18.601753",
+    "run_id": "run_20260923_001317",
+    "stage": "extraction",
+    "action": "extraction_completed",
+    "details": {
+      "files_processed": 0,
+      "files_skipped": 50,
+      "total_entities": 210,
+      "total_relations": 383
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:18.707931",
+    "run_id": "run_20260923_001317",
+    "stage": "resolution",
+    "action": "resolution_started",
+    "details": {
+      "input_entities": 210,
+      "input_relations": 383
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.013352",
+    "run_id": "run_20260923_001317",
+    "stage": "resolution",
+    "action": "resolution_completed",
+    "details": {
+      "resolved_entities": 175,
+      "auto_merges": 49,
+      "llm_merges": 0,
+      "contradictions": 15
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.013373",
+    "run_id": "run_20260923_001317",
+    "stage": "temporal",
+    "action": "temporal_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.629217",
+    "run_id": "run_20260923_001317",
+    "stage": "temporal",
+    "action": "temporal_completed",
+    "details": {
+      "temporal_infos": 379,
+      "spatial_infos": 24,
+      "timeline_events": 26
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.667184",
+    "run_id": "run_20260923_001317",
+    "stage": "graph",
+    "action": "graph_completed",
+    "details": {
+      "nodes": 179,
+      "edges": 86,
+      "provenance_chains": 86,
+      "missing_edges": 0,
+      "rejected_edges": 5,
+      "adversarial_flagged": 0,
+      "multiplexity_ties": 7
+    },
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.667216",
+    "run_id": "run_20260923_001317",
+    "stage": "analytics",
+    "action": "analytics_started",
+    "details": {},
+    "decision": ""
+  },
+  {
+    "timestamp": "2026-09-23T00:13:19.744552",
+    "run_id": "run_20260923_001317",
+    "stage": "analytics",
+    "action": "analytics_completed",
+    "details": {
+      "centrality_scores": 179,
+      "communities": 12,
+      "anomaly_signals": 54,
+      "behavioral_baselines": 9,
+      "correlations": 5,
+      "component_analyses": 135,
+      "temporal_patterns": 11
+    },
+    "decision": ""
+  }
+]

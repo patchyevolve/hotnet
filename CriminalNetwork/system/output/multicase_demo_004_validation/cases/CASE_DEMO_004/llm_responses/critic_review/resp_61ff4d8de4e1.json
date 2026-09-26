@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_61ff4d8de4e1",
+  "task": "critic_review",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "4047a05411ce466d",
+  "input_hash": "e35ef7bd75b0e0fc",
+  "response_text": "{\"findings\":[{\"severity\":\"review\",\"category\":\"missing_provenance\",\"target_ids\":[\"HYP_NULL\"],\"evidence_ids\":[],\"finding\":\"Hypothesis HYP_NULL lacks supporting evidence identifiers.\"},{\"severity\":\"review\",\"category\":\"missing_provenance\",\"target_ids\":[\"HYP_23af9258e7bf9499\"],\"evidence_ids\":[],\"finding\":\"Hypothesis HYP_23af9258e7bf9499 lacks supporting evidence identifiers.\"},{\"severity\":\"review\",\"category\":\"missing_provenance\",\"target_ids\":[\"HYP_3506820a24fb5887\"],\"evidence_ids\":[],\"finding\":\"Hypothesis HYP_3506820a24fb5887 lacks supporting evidence identifiers.\"},{\"severity\":\"review\",\"category\":\"missing_provenance\",\"target_ids\":[\"HYP_e396024b8d39a46e\"],\"evidence_ids\":[],\"finding\":\"Hypothesis HYP_e396024b8d39a46e lacks supporting evidence identifiers.\"}]}",
+  "usage": {
+    "queue_time": 0.394473464,
+    "prompt_tokens": 1996,
+    "prompt_time": 0.099559731,
+    "completion_tokens": 324,
+    "completion_time": 0.437745444,
+    "total_tokens": 2320,
+    "total_time": 0.537305175,
+    "completion_tokens_details": {
+      "reasoning_tokens": 109
+    }
+  },
+  "latency_ms": 1390,
+  "status": "success",
+  "timestamp": "2026-09-26T01:18:01.708887",
+  "source_file": "pipeline_analytical_outputs",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 1800,
+    "error": null,
+    "fallback_from": null
+  }
+}

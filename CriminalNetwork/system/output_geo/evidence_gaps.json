@@ -1,0 +1,690 @@
+[
+  {
+    "id": "GAP_0907b5589905bd45",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_06b3f3578a482b62",
+      "RES_6be157c3c6f87a4d"
+    ],
+    "requirement": "CALLED",
+    "description": "Expected relation CALLED between 9876543210 and complainant is absent from the evidence graph (predicted confidence 0.2500). Candidate source class(es): ['cdr', 'text'].",
+    "affects_hypothesis": [
+      "HYP_2829e2d87e7a15c0",
+      "HYP_754ac8eba7f40dce",
+      "HYP_NULL",
+      "HYP_ba91ca0383ca9cd5",
+      "HYP_e9cbfeefcb4b64cf",
+      "HYP_ffce158027452654"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a CALLED record for 9876543210 and complainant from source class in {cdr, text}.",
+    "data_source": [
+      "cdr",
+      "text"
+    ],
+    "impact_on_hypothesis": -0.005867,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_bfba8bb7c8a4f15e",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_06b3f3578a482b62",
+      "RES_9eeb75085f3656ee"
+    ],
+    "requirement": "CALLED",
+    "description": "Expected relation CALLED between 9876543210 and 01126543210 is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['cdr', 'text'].",
+    "affects_hypothesis": [
+      "HYP_2829e2d87e7a15c0",
+      "HYP_754ac8eba7f40dce",
+      "HYP_NULL",
+      "HYP_ba91ca0383ca9cd5",
+      "HYP_e9cbfeefcb4b64cf",
+      "HYP_ffce158027452654"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a CALLED record for 9876543210 and 01126543210 from source class in {cdr, text}.",
+    "data_source": [
+      "cdr",
+      "text"
+    ],
+    "impact_on_hypothesis": -0.003428,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_ea86e5adffa05166",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_0a5f31f39f5d619c",
+      "RES_3085e19cabdc5b3d"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Amit Sharma and R. Kumar is absent from the evidence graph (predicted confidence 0.4000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Amit Sharma and R. Kumar from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 7
+  },
+  {
+    "id": "GAP_f133eb6bd8e1cf72",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_0a5f31f39f5d619c",
+      "RES_e95c77c1e77f9515"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Amit Sharma and Rajesh Kumar is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Amit Sharma and Rajesh Kumar from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 7
+  },
+  {
+    "id": "GAP_b02191ede4fd8184",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_3085e19cabdc5b3d",
+      "RES_58d3eec5a549b5f5"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between R. Kumar and Meena Devi is absent from the evidence graph (predicted confidence 0.4000). Candidate source class(es): ['bank', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_42e9cde9615abe4e",
+      "HYP_5405cc5353be736e",
+      "HYP_55e012ddbb98bef5",
+      "HYP_NULL",
+      "HYP_f4e4f678730cac57",
+      "HYP_f802b79fe10591fe"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for R. Kumar and Meena Devi from source class in {bank, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": -0.021367,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_65cdcd912ce0c9fa",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_3085e19cabdc5b3d",
+      "RES_e95c77c1e77f9515"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between R. Kumar and Rajesh Kumar is absent from the evidence graph (predicted confidence 0.4000). Candidate source class(es): ['fir', 'text'].",
+    "affects_hypothesis": [
+      "HYP_42e9cde9615abe4e",
+      "HYP_5405cc5353be736e",
+      "HYP_55e012ddbb98bef5",
+      "HYP_NULL",
+      "HYP_f4e4f678730cac57",
+      "HYP_f802b79fe10591fe"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for R. Kumar and Rajesh Kumar from source class in {fir, text}.",
+    "data_source": [
+      "fir",
+      "text"
+    ],
+    "impact_on_hypothesis": -0.023451,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_17748b90dfe441f3",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_3e438bacdb6bd7b1",
+      "RES_9768897216059a61"
+    ],
+    "requirement": "CALLED",
+    "description": "Expected relation CALLED between 9876543212 and 9876543214 is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['cdr', 'text'].",
+    "affects_hypothesis": [
+      "HYP_NULL"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a CALLED record for 9876543212 and 9876543214 from source class in {cdr, text}.",
+    "data_source": [
+      "cdr",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 1
+  },
+  {
+    "id": "GAP_81e23dd6de736ed4",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_50fa850b2b1ec9e6",
+      "RES_e41d5c9970d2fc45"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Suresh Kumar and Unknown is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Suresh Kumar and Unknown from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_58b2215c6eb82f7e",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_50fa850b2b1ec9e6",
+      "RES_e95c77c1e77f9515"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Suresh Kumar and Rajesh Kumar is absent from the evidence graph (predicted confidence 0.4000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Suresh Kumar and Rajesh Kumar from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_f73cc22b39a17e59",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_58d3eec5a549b5f5",
+      "RES_f90015a9027df8e3"
+    ],
+    "requirement": "CALLED",
+    "description": "Expected relation CALLED between Meena Devi and Rakesh Kumar is absent from the evidence graph (predicted confidence 0.4163). Candidate source class(es): ['cdr', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a CALLED record for Meena Devi and Rakesh Kumar from source class in {cdr, text}.",
+    "data_source": [
+      "cdr",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_0e96316881d3ff33",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_6be157c3c6f87a4d",
+      "RES_f90015a9027df8e3"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between complainant and Rakesh Kumar is absent from the evidence graph (predicted confidence 0.4000). Candidate source class(es): ['bank', 'cctv', 'device', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for complainant and Rakesh Kumar from source class in {bank, cctv, device, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_ad45d955bf860001",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_a43997b49dba49ba",
+      "RES_ce4c1813fe797d7d"
+    ],
+    "requirement": "CALLED",
+    "description": "Expected relation CALLED between 9876543213 and 9876543211 is absent from the evidence graph (predicted confidence 0.4500). Candidate source class(es): ['cdr', 'text'].",
+    "affects_hypothesis": [
+      "HYP_00e22b8f0e591253",
+      "HYP_2829e2d87e7a15c0",
+      "HYP_754ac8eba7f40dce",
+      "HYP_NULL",
+      "HYP_ba91ca0383ca9cd5",
+      "HYP_e9cbfeefcb4b64cf",
+      "HYP_ffce158027452654"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a CALLED record for 9876543213 and 9876543211 from source class in {cdr, text}.",
+    "data_source": [
+      "cdr",
+      "text"
+    ],
+    "impact_on_hypothesis": -0.003915,
+    "run_id": "run_20260926_164752",
+    "reach": 7
+  },
+  {
+    "id": "GAP_e15b635580a678c1",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_e41d5c9970d2fc45",
+      "RES_f90015a9027df8e3"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Unknown and Rakesh Kumar is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Unknown and Rakesh Kumar from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_e62725695a16e797",
+    "kind": "missing_relation",
+    "subject": [
+      "RES_e95c77c1e77f9515",
+      "RES_f90015a9027df8e3"
+    ],
+    "requirement": "SHARED_ASSOCIATE",
+    "description": "Expected relation SHARED_ASSOCIATE between Rajesh Kumar and Rakesh Kumar is absent from the evidence graph (predicted confidence 0.5000). Candidate source class(es): ['bank', 'cctv', 'device', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_NULL",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a SHARED_ASSOCIATE record for Rajesh Kumar and Rakesh Kumar from source class in {bank, cctv, device, fir, social, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "device",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.0,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_05e746113e4c6221",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_0a5f31f39f5d619c"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Amit Sharma carries 2 disputed value(s) asserted by 2 source(s) in class(es) ['bank', 'device']. Source class(es) never consulted for this key: ['cctv', 'cdr', 'fir', 'social', 'text'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Amit Sharma from source class in {cctv, cdr, fir, social, text}.",
+    "data_source": [
+      "cctv",
+      "cdr",
+      "fir",
+      "social",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.013043,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_276ada20b11a9ef9",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_2e6dcc0d467c0fff"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Lajpat Nagar Part II, New Delhi carries 7 disputed value(s) asserted by 6 source(s) in class(es) ['cctv', 'cdr', 'device', 'fir', 'text']. Source class(es) never consulted for this key: ['bank', 'social'].",
+    "affects_hypothesis": [
+      "HYP_42e9cde9615abe4e",
+      "HYP_5405cc5353be736e",
+      "HYP_55e012ddbb98bef5",
+      "HYP_f4e4f678730cac57",
+      "HYP_f730a44efa5378dc",
+      "HYP_f802b79fe10591fe"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Lajpat Nagar Part II, New Delhi from source class in {bank, social}.",
+    "data_source": [
+      "bank",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.023077,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_bf4d00697377fb28",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_50fa850b2b1ec9e6"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Suresh Kumar carries 3 disputed value(s) asserted by 4 source(s) in class(es) ['bank', 'device', 'text']. Source class(es) never consulted for this key: ['cctv', 'cdr', 'fir', 'social'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Suresh Kumar from source class in {cctv, cdr, fir, social}.",
+    "data_source": [
+      "cctv",
+      "cdr",
+      "fir",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.013043,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_4a2b0a5305393535",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_58d3eec5a549b5f5"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Meena Devi carries 3 disputed value(s) asserted by 4 source(s) in class(es) ['bank', 'device', 'text']. Source class(es) never consulted for this key: ['cctv', 'cdr', 'fir', 'social'].",
+    "affects_hypothesis": [
+      "HYP_42e9cde9615abe4e",
+      "HYP_5405cc5353be736e",
+      "HYP_55e012ddbb98bef5",
+      "HYP_f4e4f678730cac57",
+      "HYP_f730a44efa5378dc",
+      "HYP_f802b79fe10591fe"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Meena Devi from source class in {cctv, cdr, fir, social}.",
+    "data_source": [
+      "cctv",
+      "cdr",
+      "fir",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.023077,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_8f713fb645872840",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_9168a3cc71452b89"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Bank of Baroda carries 2 disputed value(s) asserted by 3 source(s) in class(es) ['device', 'fir', 'text']. Source class(es) never consulted for this key: ['bank', 'cctv', 'cdr', 'social'].",
+    "affects_hypothesis": [
+      "HYP_0e9b5e3048a06563",
+      "HYP_19f98415f2da51cc",
+      "HYP_5e47176a60732ba0",
+      "HYP_8b0f6053880adf2d",
+      "HYP_91139abec2cae7d8",
+      "HYP_ebcdeafc1ef4c5d9"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Bank of Baroda from source class in {bank, cctv, cdr, social}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "cdr",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.05,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_9176982caaf04427",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_b58f92dec7cf0b3e"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Noida Sector 62 residence carries 3 disputed value(s) asserted by 3 source(s) in class(es) ['cctv', 'cdr', 'social']. Source class(es) never consulted for this key: ['bank', 'device', 'fir', 'text'].",
+    "affects_hypothesis": [
+      "HYP_00e22b8f0e591253",
+      "HYP_2829e2d87e7a15c0",
+      "HYP_754ac8eba7f40dce",
+      "HYP_ba91ca0383ca9cd5",
+      "HYP_e9cbfeefcb4b64cf",
+      "HYP_ffce158027452654"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Noida Sector 62 residence from source class in {bank, device, fir, text}.",
+    "data_source": [
+      "bank",
+      "device",
+      "fir",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.014286,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_ad694f447dedd736",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_b5be59d98f8852ba"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Karol Bagh Metro station carries 3 disputed value(s) asserted by 2 source(s) in class(es) ['cctv', 'text']. Source class(es) never consulted for this key: ['bank', 'cdr', 'device', 'fir', 'social'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Karol Bagh Metro station from source class in {bank, cdr, device, fir, social}.",
+    "data_source": [
+      "bank",
+      "cdr",
+      "device",
+      "fir",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.013043,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_ee3e7b68bc1f87bd",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_e41d5c9970d2fc45"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Unknown carries 2 disputed value(s) asserted by 2 source(s) in class(es) ['fir', 'social']. Source class(es) never consulted for this key: ['bank', 'cctv', 'cdr', 'device', 'text'].",
+    "affects_hypothesis": [
+      "HYP_42e9cde9615abe4e",
+      "HYP_5405cc5353be736e",
+      "HYP_55e012ddbb98bef5",
+      "HYP_f4e4f678730cac57",
+      "HYP_f730a44efa5378dc",
+      "HYP_f802b79fe10591fe"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Unknown from source class in {bank, cctv, cdr, device, text}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "cdr",
+      "device",
+      "text"
+    ],
+    "impact_on_hypothesis": 0.023077,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_305418bf60d81f8b",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_f90015a9027df8e3"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Rakesh Kumar carries 2 disputed value(s) asserted by 3 source(s) in class(es) ['bank', 'device', 'text']. Source class(es) never consulted for this key: ['cctv', 'cdr', 'fir', 'social'].",
+    "affects_hypothesis": [
+      "HYP_137813ba7faaed8c",
+      "HYP_273271b5387e2877",
+      "HYP_377c1299235e67ab",
+      "HYP_8b9a0345fc62c313",
+      "HYP_a640741624a44eda",
+      "HYP_cc9be7e00ef2ea5d"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Rakesh Kumar from source class in {cctv, cdr, fir, social}.",
+    "data_source": [
+      "cctv",
+      "cdr",
+      "fir",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.013043,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  },
+  {
+    "id": "GAP_114270ab16d0b3f1",
+    "kind": "unresolved_attribute",
+    "subject": [
+      "RES_fe56813839bcc2b8"
+    ],
+    "requirement": "name",
+    "description": "Attribute 'name' of Punjab National Bank carries 2 disputed value(s) asserted by 2 source(s) in class(es) ['fir', 'text']. Source class(es) never consulted for this key: ['bank', 'cctv', 'cdr', 'device', 'social'].",
+    "affects_hypothesis": [
+      "HYP_0e9b5e3048a06563",
+      "HYP_19f98415f2da51cc",
+      "HYP_5e47176a60732ba0",
+      "HYP_8b0f6053880adf2d",
+      "HYP_91139abec2cae7d8",
+      "HYP_ebcdeafc1ef4c5d9"
+    ],
+    "feasible": true,
+    "suggested_action": "Acquire a name record for Punjab National Bank from source class in {bank, cctv, cdr, device, social}.",
+    "data_source": [
+      "bank",
+      "cctv",
+      "cdr",
+      "device",
+      "social"
+    ],
+    "impact_on_hypothesis": 0.05,
+    "run_id": "run_20260926_164752",
+    "reach": 6
+  }
+]

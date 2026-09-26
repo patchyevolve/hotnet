@@ -1,0 +1,19 @@
+{
+  "RES_eea76256ba5071e8": {
+    "entity_id": "RES_eea76256ba5071e8",
+    "resolution_type": "merge",
+    "merged_with": [
+      "DOCUMENT_d0e65fe1e3fdd122",
+      "AMOUNT_d0e65fe1e3fdd122"
+    ],
+    "confidence": 0.95,
+    "method": "rule_based",
+    "signals": {
+      "rule_based": 0.95,
+      "method": "rule_based"
+    },
+    "timestamp": "2026-09-26T01:17:54.990344",
+    "run_id": "run_20260926_011743",
+    "previous_state": "['DOCUMENT_d0e65fe1e3fdd122', 'AMOUNT_d0e65fe1e3fdd122']"
+  }
+}

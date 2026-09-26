@@ -1,0 +1,57 @@
+{
+  "platform": "Instagram",
+  "username": "amit_sharma_official",
+  "profile": {
+    "name": "Amit Sharma",
+    "bio": "Businessman | Entrepreneur | Delhi NCR",
+    "followers": 2340,
+    "following": 156,
+    "posts_count": 89,
+    "account_created": "2021-05-12",
+    "verified": false
+  },
+  "posts": [
+    {
+      "post_id": "POST_001",
+      "date": "2024-03-10",
+      "caption": "New beginnings at Karol Bagh office #business #delhi",
+      "location": "Karol Bagh, Delhi",
+      "likes": 45,
+      "comments": 3
+    },
+    {
+      "post_id": "POST_002",
+      "date": "2024-03-12",
+      "caption": "Meeting with partners #networking",
+      "location": "Connaught Place, Delhi",
+      "likes": 32,
+      "comments": 1
+    },
+    {
+      "post_id": "POST_003",
+      "date": "2024-03-14",
+      "caption": "Successful day #business",
+      "location": "",
+      "likes": 67,
+      "comments": 5
+    },
+    {
+      "post_id": "POST_004",
+      "date": "2024-03-16",
+      "caption": "Noida office visit #work",
+      "location": "Noida Sector 62",
+      "likes": 28,
+      "comments": 2
+    }
+  ],
+  "direct_messages": [
+    {
+      "contact": "rakesh_kumar_rk",
+      "messages": [
+        {"from": "amit_sharma_official", "text": "Rakesh bhai, kal milna hai", "date": "2024-03-11"},
+        {"from": "rakesh_kumar_rk", "text": "Haan batao kahan aana hai", "date": "2024-03-11"},
+        {"from": "amit_sharma_official", "text": "Karol Bagh office pe aa jao dopahar ko", "date": "2024-03-11"}
+      ]
+    }
+  ]
+}

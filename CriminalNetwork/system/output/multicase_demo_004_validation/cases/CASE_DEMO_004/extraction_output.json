@@ -1,0 +1,985 @@
+{
+  "entities": [
+    {
+      "id": "PHONE_7619ee8cea49187f",
+      "entity_type": "PHONE",
+      "name": "9876543210",
+      "case_id": "",
+      "aliases": [],
+      "attributes": {
+        "phone_number": "9876543210",
+        "observed_in": [
+          "01_FIR.txt",
+          "02_WITNESS_EVIDENCE.txt",
+          "03_CDR.csv"
+        ]
+      },
+      "confidence": {
+        "score": 0.9,
+        "basis": [
+          "Phone number found in text"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.9,
+            "weight": 0.6,
+            "description": "Phone number found in text"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "PERSON_23492e71991bc7b9",
+      "entity_type": "PERSON",
+      "name": "Rakesh Kumar",
+      "case_id": "",
+      "aliases": [
+        "Rakesh Kumar"
+      ],
+      "attributes": {
+        "extracted_from": "text",
+        "observed_in": [
+          "01_FIR.txt",
+          "02_WITNESS_EVIDENCE.txt"
+        ]
+      },
+      "confidence": {
+        "score": 0.7,
+        "basis": [
+          "Name extracted from text"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.7,
+            "weight": 0.6,
+            "description": "Name extracted from text"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "AMOUNT_d0e65fe1e3fdd122",
+      "entity_type": "AMOUNT",
+      "name": "204/2025",
+      "case_id": "",
+      "aliases": [
+        "204/2025"
+      ],
+      "attributes": {
+        "extracted_from": "spacy_ner",
+        "spacy_label": "CARDINAL",
+        "spacy_start": 91,
+        "spacy_end": 99
+      },
+      "confidence": {
+        "score": 0.75,
+        "basis": [
+          "spaCy NER extraction"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.75,
+            "weight": 0.6,
+            "description": "spaCy NER extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "DATE_82c7ca02a357e7fe",
+      "entity_type": "DATE",
+      "name": "2025-04-12",
+      "case_id": "",
+      "aliases": [
+        "2025-04-12"
+      ],
+      "attributes": {
+        "extracted_from": "spacy_ner",
+        "spacy_label": "DATE",
+        "spacy_start": 107,
+        "spacy_end": 117,
+        "observed_in": [
+          "01_FIR.txt"
+        ]
+      },
+      "confidence": {
+        "score": 0.75,
+        "basis": [
+          "spaCy NER extraction"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.75,
+            "weight": 0.6,
+            "description": "spaCy NER extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "LOCATION_4fa64bd55d5c0c1f",
+      "entity_type": "LOCATION",
+      "name": "Hyderabad",
+      "case_id": "",
+      "aliases": [],
+      "attributes": {},
+      "confidence": {
+        "score": 0.5,
+        "basis": [
+          "LLM extraction",
+          "provider:groq"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.5,
+            "weight": 0.6,
+            "description": "LLM extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "llm",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "DOCUMENT_d0e65fe1e3fdd122",
+      "entity_type": "DOCUMENT",
+      "name": "204/2025",
+      "case_id": "",
+      "aliases": [],
+      "attributes": {},
+      "confidence": {
+        "score": 0.5,
+        "basis": [
+          "LLM extraction",
+          "provider:groq"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.8,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.8,
+            "weight": 0.4,
+            "description": "Source reliability for fir"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.5,
+            "weight": 0.6,
+            "description": "LLM extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "fir",
+        "file_name": "01_FIR.txt",
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "ingestion_time": "2026-09-26T01:17:44.030885",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.8,
+        "reliability_identity": 0.7,
+        "reliability_intent": 0.6,
+        "reliability_location": 0.75,
+        "reliability_timing": 0.7,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "llm",
+      "source_id": "01_FIR.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "DATE_92ef31518fe977e0",
+      "entity_type": "DATE",
+      "name": "2025-04-13",
+      "case_id": "",
+      "aliases": [
+        "2025-04-13"
+      ],
+      "attributes": {
+        "extracted_from": "spacy_ner",
+        "spacy_label": "DATE",
+        "spacy_start": 49,
+        "spacy_end": 59,
+        "observed_in": [
+          "02_WITNESS_EVIDENCE.txt"
+        ]
+      },
+      "confidence": {
+        "score": 0.75,
+        "basis": [
+          "spaCy NER extraction"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.7,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.7,
+            "weight": 0.4,
+            "description": "Source reliability for text"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.75,
+            "weight": 0.6,
+            "description": "spaCy NER extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "text",
+        "file_name": "02_WITNESS_EVIDENCE.txt",
+        "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+        "ingestion_time": "2026-09-26T01:17:46.449708",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.7,
+        "reliability_identity": 0.65,
+        "reliability_intent": 0.5,
+        "reliability_location": 0.7,
+        "reliability_timing": 0.65,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "02_WITNESS_EVIDENCE.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "ORGANIZATION_23492e71991bc7b9",
+      "entity_type": "ORGANIZATION",
+      "name": "Rakesh Kumar",
+      "case_id": "",
+      "aliases": [
+        "Rakesh Kumar"
+      ],
+      "attributes": {
+        "extracted_from": "spacy_ner",
+        "spacy_label": "ORG",
+        "spacy_start": 422,
+        "spacy_end": 434
+      },
+      "confidence": {
+        "score": 0.75,
+        "basis": [
+          "spaCy NER extraction"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.7,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.7,
+            "weight": 0.4,
+            "description": "Source reliability for text"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.75,
+            "weight": 0.6,
+            "description": "spaCy NER extraction"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "text",
+        "file_name": "02_WITNESS_EVIDENCE.txt",
+        "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+        "ingestion_time": "2026-09-26T01:17:46.449708",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.7,
+        "reliability_identity": 0.65,
+        "reliability_intent": 0.5,
+        "reliability_location": 0.7,
+        "reliability_timing": 0.65,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "02_WITNESS_EVIDENCE.txt",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "PHONE_085871bd6e504785",
+      "entity_type": "PHONE",
+      "name": "9861000001",
+      "case_id": "",
+      "aliases": [],
+      "attributes": {
+        "phone_number": "9861000001"
+      },
+      "confidence": {
+        "score": 1.0,
+        "basis": [
+          "CDR direct record"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 1.0,
+            "weight": 0.6,
+            "description": "CDR direct record"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "LOC_2c6ca8121912cfab",
+      "entity_type": "LOCATION",
+      "name": "Hyderabad Banjara Hills Demo Tower",
+      "case_id": "",
+      "aliases": [],
+      "attributes": {
+        "tower_location": "Hyderabad Banjara Hills Demo Tower"
+      },
+      "confidence": {
+        "score": 0.8,
+        "basis": [
+          "CDR tower triangulation"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.8,
+            "weight": 0.6,
+            "description": "CDR tower triangulation"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "run_id": "run_20260926_011743"
+    }
+  ],
+  "relations": [
+    {
+      "id": "REL_714c75be1bb88480",
+      "source_entity_id": "PHONE_7619ee8cea49187f",
+      "target_entity_id": "LOC_2c6ca8121912cfab",
+      "relation_type": "VISITED",
+      "case_id": "",
+      "confidence": {
+        "score": 0.7,
+        "basis": [
+          "CDR tower location"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.7,
+            "weight": 0.6,
+            "description": "CDR tower location"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "attributes": {
+        "timestamp": "2025-04-11T19:12:00",
+        "phone": "9876543210",
+        "phone_2": "9861000001",
+        "duration": "74",
+        "direction": "outgoing",
+        "location": "Hyderabad Banjara Hills Demo Tower",
+        "source_name": "9876543210",
+        "target_name": "Hyderabad Banjara Hills Demo Tower"
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "semantic_edge_type": "associational",
+      "temporal_info": {
+        "timestamp": "2025-04-11T19:12:00",
+        "source": "attributes"
+      },
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "REL_cc5ecf0352a3e195",
+      "source_entity_id": "PHONE_7619ee8cea49187f",
+      "target_entity_id": "PHONE_085871bd6e504785",
+      "relation_type": "CALLED",
+      "case_id": "",
+      "confidence": {
+        "score": 1.0,
+        "basis": [
+          "CDR direct record"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 1.0,
+            "weight": 0.6,
+            "description": "CDR direct record"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "attributes": {
+        "timestamp": "2025-04-11T19:12:00",
+        "phone": "9876543210",
+        "phone_2": "9861000001",
+        "duration": "74",
+        "direction": "outgoing",
+        "location": "Hyderabad Banjara Hills Demo Tower",
+        "source_name": "9876543210",
+        "target_name": "9861000001"
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "semantic_edge_type": "associational",
+      "temporal_info": {
+        "timestamp": "2025-04-11T19:12:00",
+        "source": "attributes"
+      },
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "REL_74e283d2bc0e84b9",
+      "source_entity_id": "PHONE_085871bd6e504785",
+      "target_entity_id": "LOC_2c6ca8121912cfab",
+      "relation_type": "VISITED",
+      "case_id": "",
+      "confidence": {
+        "score": 0.7,
+        "basis": [
+          "CDR tower location"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 0.7,
+            "weight": 0.6,
+            "description": "CDR tower location"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "attributes": {
+        "timestamp": "2025-04-11T19:36:00",
+        "phone": "9861000001",
+        "phone_2": "9876543210",
+        "duration": "51",
+        "direction": "incoming",
+        "location": "Hyderabad Banjara Hills Demo Tower",
+        "source_name": "9861000001",
+        "target_name": "Hyderabad Banjara Hills Demo Tower"
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "semantic_edge_type": "associational",
+      "temporal_info": {
+        "timestamp": "2025-04-11T19:36:00",
+        "source": "attributes"
+      },
+      "run_id": "run_20260926_011743"
+    },
+    {
+      "id": "REL_8276ba77e6b2ccd4",
+      "source_entity_id": "PHONE_085871bd6e504785",
+      "target_entity_id": "PHONE_7619ee8cea49187f",
+      "relation_type": "CALLED",
+      "case_id": "",
+      "confidence": {
+        "score": 1.0,
+        "basis": [
+          "CDR direct record"
+        ],
+        "supporting_count": 0,
+        "contradicting_count": 0,
+        "unknown_count": 0,
+        "source_reliability": 0.95,
+        "derivation_depth": 0,
+        "is_independent": true,
+        "last_verified": null,
+        "staleness": "current",
+        "semantic_type": "observation",
+        "run_id": "run_20260926_011743",
+        "model_version": "",
+        "factors": [
+          {
+            "factor_type": "source_reliability",
+            "value": 0.95,
+            "weight": 0.4,
+            "description": "Source reliability for cdr"
+          },
+          {
+            "factor_type": "evidence_basis",
+            "value": 1.0,
+            "weight": 0.6,
+            "description": "CDR direct record"
+          }
+        ]
+      },
+      "source": {
+        "source_type": "cdr",
+        "file_name": "03_CDR.csv",
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "ingestion_time": "2026-09-26T01:17:49.384544",
+        "provenance": "OBSERVATIONAL",
+        "verification": "UNVERIFIED",
+        "reliability_occurrence": 0.95,
+        "reliability_identity": 0.6,
+        "reliability_intent": 0.3,
+        "reliability_location": 0.8,
+        "reliability_timing": 0.95,
+        "adversarial_suspicious": false
+      },
+      "attributes": {
+        "timestamp": "2025-04-11T19:36:00",
+        "phone": "9861000001",
+        "phone_2": "9876543210",
+        "duration": "51",
+        "direction": "incoming",
+        "location": "Hyderabad Banjara Hills Demo Tower",
+        "source_name": "9861000001",
+        "target_name": "9876543210"
+      },
+      "raw_text": null,
+      "extraction_method": "code",
+      "source_id": "03_CDR.csv",
+      "epistemic_category": "observation",
+      "derivation_depth": 0,
+      "semantic_edge_type": "associational",
+      "temporal_info": {
+        "timestamp": "2025-04-11T19:36:00",
+        "source": "attributes"
+      },
+      "run_id": "run_20260926_011743"
+    }
+  ],
+  "summary": {
+    "total_entities": 10,
+    "total_relations": 4,
+    "entity_types": {
+      "PHONE": 2,
+      "PERSON": 1,
+      "AMOUNT": 1,
+      "DATE": 2,
+      "LOCATION": 2,
+      "DOCUMENT": 1,
+      "ORGANIZATION": 1
+    },
+    "relation_types": {
+      "VISITED": 2,
+      "CALLED": 2
+    },
+    "files_processed": 3
+  },
+  "extraction_log": [
+    {
+      "file_name": "01_FIR.txt",
+      "entities_found": 9,
+      "relations_found": 0,
+      "new_entities_added": 6,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "02_WITNESS_EVIDENCE.txt",
+      "entities_found": 6,
+      "relations_found": 0,
+      "new_entities_added": 2,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "03_CDR.csv",
+      "entities_found": 3,
+      "relations_found": 4,
+      "new_entities_added": 2,
+      "new_relations_added": 4
+    }
+  ],
+  "export_time": "2026-09-26T01:18:00.309080"
+}

@@ -1,0 +1,36 @@
+{
+  "response_id": "resp_ec6a27ac7262",
+  "task": "resolve_entities",
+  "prompt_version": "1.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "fa0f67dfd16da091",
+  "input_hash": "92bda8f33da3c198",
+  "response_text": "{\"groups\":[{\"entity_ids\":[\"ORG_fce0b15c7c195529\",\"ORG_058be09de37a18d4\"],\"merge\":false,\"confidence\":0.65,\"canonical_name\":\"Bank of Baroda\",\"reasoning\":\"Both entities are organizations; no person attributes to merge.\",\"signals\":{\"name_similarity\":0.0,\"shared_attributes\":0.0,\"context_alignment\":0.0,\"contradictions\":1.0,\"cultural_knowledge\":0.0},\"merge_type\":\"reject\"}]}",
+  "usage": {
+    "queue_time": 0.346546923,
+    "prompt_tokens": 639,
+    "prompt_time": 0.021020771,
+    "completion_tokens": 143,
+    "completion_time": 0.145862595,
+    "total_tokens": 782,
+    "total_time": 0.166883366,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 24
+    }
+  },
+  "latency_ms": 562,
+  "status": "success",
+  "timestamp": "2026-09-26T16:49:02.329257",
+  "source_file": "entity_resolution",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

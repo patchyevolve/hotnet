@@ -1,0 +1,45 @@
+{
+  "device_info": {
+    "brand": "Samsung",
+    "model": "Galaxy S21",
+    "imei": "356938035643809",
+    "serial": "RF8N90XXXXX",
+    "os_version": "Android 13",
+    "device_id": "RK_PHONE_01",
+    "extraction_date": "2024-03-23",
+    "extraction_tool": "Cellebrite UFED"
+  },
+  "contacts": [
+    {"name": "Suresh Bhai", "phone": "9876543211", "relation": "associate"},
+    {"name": "Amit", "phone": "9876543212", "relation": "friend"},
+    {"name": "Bhai Sahab", "phone": "9876543220", "relation": "unknown"},
+    {"name": "Meena Ji", "phone": "9876543213", "relation": "customer"},
+    {"name": "Rajesh Electronics", "phone": "9812345678", "relation": "business"},
+    {"name": "RK Telecom Office", "phone": "01126543210", "relation": "office"},
+    {"name": "Airtel Customer Care", "phone": "198", "relation": "service"}
+  ],
+  "whatsapp_chats": [
+    {
+      "contact": "Suresh Bhai",
+      "messages": [
+        {"from": "9876543210", "text": "Theek hai bhai, kal tak ho jayega", "date": "2024-03-12", "time": "09:30:00"},
+        {"from": "9876543211", "text": "Haan bhai, Rakesh Kumar ka plan hai", "date": "2024-03-12", "time": "09:32:15"},
+        {"from": "9876543210", "text": "Call aaj raat ko karna hai usko", "date": "2024-03-12", "time": "09:35:00"},
+        {"from": "9876543211", "text": "Bilkul bhai, sab set hai", "date": "2024-03-12", "time": "09:38:22"}
+      ]
+    },
+    {
+      "contact": "Amit",
+      "messages": [
+        {"from": "9876543212", "text": "Rakesh ji, payment aa gaya kya?", "date": "2024-03-14", "time": "17:30:00"},
+        {"from": "9876543210", "text": "Haan aa gaya, Suresh ke account mein hai", "date": "2024-03-14", "time": "17:35:15"},
+        {"from": "9876543212", "text": "Acha, mujhe bhi chahiye thoda", "date": "2024-03-14", "time": "17:40:00"},
+        {"from": "9876543210", "text": "Theek hai, Kal milke baat karte hain Karol Bagh mein", "date": "2024-03-14", "time": "17:45:30"}
+      ]
+    }
+  ],
+  "photos": [
+    {"filename": "IMG_20240314_153022.jpg", "exif_location": "Karol Bagh, Delhi"},
+    {"filename": "IMG_20240316_101544.jpg", "exif_location": ""}
+  ]
+}

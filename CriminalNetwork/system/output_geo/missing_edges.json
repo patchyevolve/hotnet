@@ -1,0 +1,153 @@
+[
+  {
+    "source_id": "RES_a43997b49dba49ba",
+    "target_id": "RES_ce4c1813fe797d7d",
+    "expected_relation": "CALLED",
+    "confidence": 0.45,
+    "source_files": [
+      "03_CDR_Suresh.csv"
+    ]
+  },
+  {
+    "source_id": "RES_9768897216059a61",
+    "target_id": "RES_3e438bacdb6bd7b1",
+    "expected_relation": "CALLED",
+    "confidence": 0.5,
+    "source_files": [
+      "04_CDR_Amit.csv"
+    ]
+  },
+  {
+    "source_id": "RES_9eeb75085f3656ee",
+    "target_id": "RES_06b3f3578a482b62",
+    "expected_relation": "CALLED",
+    "confidence": 0.5,
+    "source_files": [
+      "12_WEIRD_CDR.csv"
+    ]
+  },
+  {
+    "source_id": "RES_58d3eec5a549b5f5",
+    "target_id": "RES_f90015a9027df8e3",
+    "expected_relation": "CALLED",
+    "confidence": 0.4163,
+    "source_files": [
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_06b3f3578a482b62",
+    "expected_relation": "CALLED",
+    "confidence": 0.25,
+    "source_files": [
+      "02_WITNESS_EVIDENCE.txt"
+    ]
+  },
+  {
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_3085e19cabdc5b3d",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.4,
+    "source_files": [
+      "23_FIR_No_Phone.txt",
+      "25_Social_Partial.json"
+    ]
+  },
+  {
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_e95c77c1e77f9515",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.5,
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "18_Witness_Statement.txt",
+      "25_Social_Partial.json",
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_58d3eec5a549b5f5",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.4,
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "23_FIR_No_Phone.txt",
+      "32_Adversarial_Social.json",
+      "shared_phone:9876543213"
+    ]
+  },
+  {
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_e95c77c1e77f9515",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.4,
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "23_FIR_No_Phone.txt"
+    ]
+  },
+  {
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.5,
+    "source_files": [
+      "11_Criminal_History.json",
+      "13_FIR_Rajesh.txt",
+      "25_Social_Partial.json",
+      "29_Investigator_Summary.txt",
+      "32_Adversarial_Social.json"
+    ]
+  },
+  {
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e95c77c1e77f9515",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.4,
+    "source_files": [
+      "18_Witness_Statement.txt",
+      "29_Investigator_Summary.txt"
+    ]
+  },
+  {
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_f90015a9027df8e3",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.4,
+    "source_files": [
+      "02_WITNESS_EVIDENCE.txt",
+      "16_Device_Amit.json",
+      "ORGANIZATION_23492e71991bc7b9",
+      "PERSON_23492e71991bc7b9",
+      "PERSON_5cbac5323a616f86"
+    ]
+  },
+  {
+    "source_id": "RES_e41d5c9970d2fc45",
+    "target_id": "RES_f90015a9027df8e3",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.5,
+    "source_files": [
+      "09_Social_Amit.json",
+      "11_Criminal_History.json",
+      "13_FIR_Rajesh.txt",
+      "17_Social_Rakesh.json",
+      "20_Journalist_Note.txt"
+    ]
+  },
+  {
+    "source_id": "RES_e95c77c1e77f9515",
+    "target_id": "RES_f90015a9027df8e3",
+    "expected_relation": "SHARED_ASSOCIATE",
+    "confidence": 0.5,
+    "source_files": [
+      "18_Witness_Statement.txt",
+      "20_Journalist_Note.txt",
+      "29_Investigator_Summary.txt",
+      "35_Identity_Uncertainty_CCTV.csv",
+      "shared_location:Lajpat Nagar Part II Camera 1"
+    ]
+  }
+]

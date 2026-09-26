@@ -1,0 +1,38 @@
+[
+  {
+    "id": "EDGE_f1e54c3d4a9a2cc7",
+    "source_id": "RES_06b3f3578a482b62",
+    "target_id": "RES_61aa74134565f94a",
+    "edge_type": "PhysicalProximity",
+    "timestamp": "2025-04-11T19:12:00",
+    "source_file": "03_CDR.csv",
+    "confidence": 0.7,
+    "attributes": {},
+    "epistemic_status": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "EDGE_35153718c05cf69d",
+    "source_id": "RES_06b3f3578a482b62",
+    "target_id": "RES_3120efd78d82e958",
+    "edge_type": "Call",
+    "timestamp": "2025-04-11T19:12:00",
+    "source_file": "03_CDR.csv",
+    "confidence": 0.9,
+    "attributes": {},
+    "epistemic_status": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "EDGE_40ad716478966b3c",
+    "source_id": "RES_3120efd78d82e958",
+    "target_id": "RES_61aa74134565f94a",
+    "edge_type": "PhysicalProximity",
+    "timestamp": "2025-04-11T19:36:00",
+    "source_file": "03_CDR.csv",
+    "confidence": 0.7,
+    "attributes": {},
+    "epistemic_status": "observation",
+    "run_id": "run_20260926_011743"
+  }
+]

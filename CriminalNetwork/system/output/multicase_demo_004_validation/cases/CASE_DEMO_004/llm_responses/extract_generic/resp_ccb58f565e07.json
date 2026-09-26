@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_ccb58f565e07",
+  "task": "extract_generic",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3b5071bfd94836f6",
+  "input_hash": "6912b250e044cf73",
+  "response_text": "{\"entities\":[{\"name\":\"Rakesh Kumar\",\"type\":\"PERSON\"},{\"name\":\"9876543210\",\"type\":\"PHONE\"},{\"name\":\"Hyderabad\",\"type\":\"LOCATION\"},{\"name\":\"204/2025\",\"type\":\"DOCUMENT\"},{\"name\":\"2025-04-12\",\"type\":\"DATE\"}],\"relations\":[]}",
+  "usage": {
+    "queue_time": 0.342317937,
+    "prompt_tokens": 569,
+    "prompt_time": 0.060420947,
+    "completion_tokens": 227,
+    "completion_time": 0.252412179,
+    "total_tokens": 796,
+    "total_time": 0.312833126,
+    "completion_tokens_details": {
+      "reasoning_tokens": 155
+    }
+  },
+  "latency_ms": 898,
+  "status": "success",
+  "timestamp": "2026-09-26T01:17:46.448786",
+  "source_file": "01_FIR.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

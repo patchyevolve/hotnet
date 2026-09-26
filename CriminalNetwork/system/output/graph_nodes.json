@@ -1,0 +1,4594 @@
+[
+  {
+    "id": "RES_7726af14f2d056b6",
+    "node_type": "location",
+    "name": "Meena Devi's",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "FAC",
+      "spacy_start": 1087,
+      "spacy_end": 1099,
+      "consolidated_role": "victim",
+      "role_source_count": 1
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "LOCATION_7726af14f2d056b6"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001139",
+    "updated_at": "2026-09-23T00:13:19.001139",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_fce0b15c7c195529",
+    "node_type": "organization",
+    "name": "Bank of Baroda",
+    "attributes": {
+      "contact_in_device": "AS_PHONE_01",
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1379,
+      "spacy_end": 1393
+    },
+    "confidence": 0.825,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "ORG_fce0b15c7c195529",
+      "ORGANIZATION_fce0b15c7c195529"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json",
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.8312499999999999,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.997807",
+    "updated_at": "2026-09-23T00:13:18.997807",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c4911c8c30edd7de",
+    "node_type": "location",
+    "name": "East Delhi",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "GPE",
+      "spacy_start": [
+        318,
+        419,
+        145
+      ],
+      "spacy_end": [
+        327,
+        424,
+        155
+      ]
+    },
+    "confidence": 0.75,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "LOCATION_9ed6d0e61816a424",
+      "LOCATION_7d1550b844ff586a",
+      "LOCATION_c4911c8c30edd7de"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt",
+      "47_FIR_Supplement.docx",
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.8000000000000002,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.997972",
+    "updated_at": "2026-09-23T00:13:18.997972",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_48a6b33cea4845e8",
+    "node_type": "organization",
+    "name": "Rakesh Kumar (9876543210",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": [
+        628,
+        1369,
+        303
+      ],
+      "spacy_end": [
+        642,
+        1381,
+        327
+      ]
+    },
+    "confidence": 0.75,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "ORGANIZATION_9f79d8d9056e4e29",
+      "ORGANIZATION_915ca1cfe5a261f0",
+      "ORGANIZATION_48a6b33cea4845e8"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt",
+      "29_Investigator_Summary.txt",
+      "34_Feedback_Loop_Report.txt"
+    ],
+    "effective_confidence": 0.6999999999999998,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998150",
+    "updated_at": "2026-09-23T00:13:18.998150",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_87ad8c66656ae254",
+    "node_type": "person",
+    "name": "Karol Bagh Main Market",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": [
+        728,
+        751,
+        362
+      ],
+      "spacy_end": [
+        746,
+        761,
+        384
+      ]
+    },
+    "confidence": 0.75,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "PERSON_ddf5af9bcfac37ca",
+      "PERSON_ac2255dabf2b2548",
+      "PERSON_87ad8c66656ae254"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt",
+      "20_Journalist_Note.txt",
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.6985185185185184,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998292",
+    "updated_at": "2026-09-23T00:13:18.998292",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6f827effaccad628",
+    "node_type": "location",
+    "name": "Dwarka Sector 12 Main Gate Camera",
+    "attributes": {
+      "tower_location": [
+        "Noida Sector 62 Tower",
+        "Dwarka Sector 12 Tower"
+      ],
+      "location_name": [
+        "Dwarka Sector 12 Main Gate Camera",
+        "Noida Sector 62",
+        "Noida Sector 62 Gate Camera"
+      ],
+      "source": "social_media",
+      "filename": "IMG_20240316_101522.jpg"
+    },
+    "confidence": 0.8400000000000001,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "LOC_8f30741d308610e1",
+      "LOC_6f827effaccad628",
+      "LOC_e84caccb77e25aa2",
+      "LOC_64eaba9d08ceff1d",
+      "LOC_0b431dfb1b8603cd"
+    ],
+    "provenance_chain": [
+      "04_CDR_Amit.csv",
+      "10_CCTV_Log.csv",
+      "09_Social_Amit.json",
+      "02_CDR_Rakesh.csv",
+      "10_CCTV_Log.csv"
+    ],
+    "effective_confidence": 0.9099999999999999,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998469",
+    "updated_at": "2026-09-23T00:13:18.998469",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e9bac7668eedb207",
+    "node_type": "date",
+    "name": "14 March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": [
+        1136,
+        425
+      ],
+      "spacy_end": [
+        1144,
+        438
+      ]
+    },
+    "confidence": 0.75,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "DATE_dd525bbf7d409e51",
+      "DATE_e9bac7668eedb207"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt",
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998596",
+    "updated_at": "2026-09-23T00:13:18.998596",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_727777a1420ee72a",
+    "node_type": "location",
+    "name": "Connaught Place Tower 2",
+    "attributes": {
+      "location_name": "Connaught Place, Delhi",
+      "source": "social_media",
+      "tower_location": "Connaught Place Tower 2"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "LOC_519726048a82c0a5",
+      "LOC_727777a1420ee72a"
+    ],
+    "provenance_chain": [
+      "09_Social_Amit.json",
+      "27_Temporal_Contradiction_CDR.csv"
+    ],
+    "effective_confidence": 0.8999999999999999,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998721",
+    "updated_at": "2026-09-23T00:13:18.998721",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_2d27b53729507310",
+    "node_type": "location",
+    "name": "Lajpat Nagar Part II Camera 1",
+    "attributes": {
+      "location_name": [
+        "Lajpat Nagar, Delhi",
+        "Lajpat Nagar Part II Camera 1",
+        "Lajpat Nagar Part II Camera 3"
+      ],
+      "source": "social_media",
+      "extracted_from": "spacy_ner",
+      "spacy_label": "GPE",
+      "spacy_start": 1222,
+      "spacy_end": 1234,
+      "tower_location": "Lajpat Nagar Tower 1"
+    },
+    "confidence": 0.8300000000000001,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "LOC_ca5c595ef394f74f",
+      "LOC_2d27b53729507310",
+      "LOCATION_da3431ef66e742ca",
+      "LOC_0e74cea9438de0e4",
+      "LOC_8de9f79573e30455"
+    ],
+    "provenance_chain": [
+      "32_Adversarial_Social.json",
+      "10_CCTV_Log.csv",
+      "23_FIR_No_Phone.txt",
+      "10_CCTV_Log.csv",
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 0.8800000000000001,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.998875",
+    "updated_at": "2026-09-23T00:13:18.998875",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3741b703d2b73185",
+    "node_type": "person",
+    "name": "Shri Harish Chand",
+    "attributes": {
+      "extracted_from": "text"
+    },
+    "confidence": 0.7,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "PERSON_3741b703d2b73185",
+      "PERSON_430ff6a38fb745c3"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt",
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.7247895424836601,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999001",
+    "updated_at": "2026-09-23T00:13:18.999001",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d68b4c2cbb492ef6",
+    "node_type": "device",
+    "name": "Device: Xiaomi Redmi Note 12",
+    "attributes": {
+      "brand": [
+        "Xiaomi",
+        "Samsung"
+      ],
+      "model": [
+        "Redmi Note 12",
+        "Galaxy S21"
+      ],
+      "imei": [
+        "862345678901234",
+        "356938035643809"
+      ],
+      "serial": [
+        "XM8901YYYYY",
+        "RF8N90XXXXX"
+      ],
+      "os_version": [
+        "Android 12",
+        "Android 13"
+      ],
+      "device_id": [
+        "AS_PHONE_01",
+        "RK_PHONE_01"
+      ],
+      "extraction_date": [
+        "2024-03-29",
+        "2024-03-23"
+      ],
+      "extraction_tool": "Cellebrite UFED"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "DEVICE_5c27bcb2808812ad",
+      "DEVICE_a1b575e0d3dabdc9"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json",
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.95,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999173",
+    "updated_at": "2026-09-23T00:13:18.999173",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_5e95ee9f0386dda2",
+    "node_type": "person",
+    "name": "suresh_kumar_01",
+    "attributes": {
+      "criminal_score": 6,
+      "phone": "9876543211",
+      "previous_cases": 1,
+      "notes": "Business associate of Rakesh Kumar. Handles financial operations.",
+      "extracted_from": [
+        "spacy_ner",
+        "text"
+      ],
+      "spacy_label": "PERSON",
+      "spacy_start": [
+        1855,
+        203
+      ],
+      "spacy_end": [
+        1867,
+        215
+      ],
+      "contact_in_device": [
+        "AS_PHONE_01",
+        "RK_PHONE_01"
+      ],
+      "stub": true,
+      "reason": "relation-referenced",
+      "role": "witness",
+      "consolidated_role": "witness",
+      "role_source_count": 1
+    },
+    "confidence": 0.8166666666666668,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "PERSON_915ca1cfe5a261f0",
+      "PERSON_f73ad70629191b0d",
+      "PERSON_5e95ee9f0386dda2",
+      "PERSON_5cbac5323a616f86",
+      "PERSON_2d426be6a60758d5",
+      "PERSON_c63ac5eb1535a215"
+    ],
+    "provenance_chain": [
+      "06_Bank_Suresh.csv",
+      "16_Device_Amit.json",
+      "16_Device_Amit.json",
+      "13_FIR_Rajesh.txt",
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.7716666666666666,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999328",
+    "updated_at": "2026-09-23T00:13:18.999328",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_475f3f364856ea70",
+    "node_type": "person",
+    "name": "Shop - Lajpat Nagar",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 296,
+      "spacy_end": 308,
+      "contact_in_device": "AS_PHONE_01"
+    },
+    "confidence": 0.825,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "PERSON_da3431ef66e742ca",
+      "PERSON_475f3f364856ea70"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt",
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 0.8266447368421053,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999451",
+    "updated_at": "2026-09-23T00:13:18.999451",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_485bdeb3c76752d4",
+    "node_type": "organization",
+    "name": "RK Telecom Office",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01",
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 737,
+      "spacy_end": 747
+    },
+    "confidence": 0.825,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "ORG_485bdeb3c76752d4",
+      "ORGANIZATION_57f7400db8c8d647"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json",
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.825,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999570",
+    "updated_at": "2026-09-23T00:13:18.999570",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_342bb7cffefbd624",
+    "node_type": "location",
+    "name": "Karol Bagh Main Market Camera 5",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "FAC",
+      "spacy_start": 524,
+      "spacy_end": 540,
+      "location_name": [
+        "Karol Bagh Main Market Camera 5",
+        "Karol Bagh Main Market Camera 7",
+        "Karol Bagh, Delhi"
+      ],
+      "tower_location": [
+        "Karol Bagh Tower 3",
+        "Karol Bagh Tower 1"
+      ],
+      "source": "photo_exif",
+      "filename": "IMG_20240314_153022.jpg"
+    },
+    "confidence": 0.7916666666666666,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "LOCATION_f4d9babc366dc531",
+      "LOC_342bb7cffefbd624",
+      "LOC_ac070b942a2426e8",
+      "LOC_f456d82b59db5b73",
+      "LOC_ddf5af9bcfac37ca",
+      "LOC_b45a7cc884cf53ee"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt",
+      "10_CCTV_Log.csv",
+      "10_CCTV_Log.csv",
+      "02_CDR_Rakesh.csv",
+      "02_CDR_Rakesh.csv",
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9249999999999999,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999747",
+    "updated_at": "2026-09-23T00:13:18.999747",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_b690da60b55af7ff",
+    "node_type": "date",
+    "name": "12 March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": [
+        218,
+        723
+      ],
+      "spacy_end": [
+        231,
+        731
+      ]
+    },
+    "confidence": 0.75,
+    "epistemic_status": "inference",
+    "derivation_depth": 1,
+    "source_entities": [
+      "DATE_b690da60b55af7ff",
+      "DATE_53f2f91b85a4986e"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt",
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999878",
+    "updated_at": "2026-09-23T00:13:18.999878",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a353fb4092c96d33",
+    "node_type": "phone",
+    "name": "9876543213",
+    "attributes": {
+      "phone_number": "9876543213",
+      "contact_name": "Meena Ji"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_a353fb4092c96d33"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:18.999995",
+    "updated_at": "2026-09-23T00:13:18.999995",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_155759e45298d60b",
+    "node_type": "amount",
+    "name": "Rs. 5,00,000",
+    "attributes": {
+      "amount": "Rs. 5,00,000",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_155759e45298d60b"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000014",
+    "updated_at": "2026-09-23T00:13:19.000014",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3465c31c3f814940",
+    "node_type": "amount",
+    "name": "Rs. 15,00,000",
+    "attributes": {
+      "amount": "Rs. 15,00,000",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_3465c31c3f814940"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000027",
+    "updated_at": "2026-09-23T00:13:19.000027",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6cbc919cac4341c3",
+    "node_type": "date",
+    "name": "15/03/2024",
+    "attributes": {
+      "date": "15/03/2024",
+      "type": "date_reference"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_6cbc919cac4341c3"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000053",
+    "updated_at": "2026-09-23T00:13:19.000053",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_13c347396595bf8e",
+    "node_type": "amount",
+    "name": "123/2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 92,
+      "spacy_end": 100
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_13c347396595bf8e"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000063",
+    "updated_at": "2026-09-23T00:13:19.000063",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d38c3a66154452dd",
+    "node_type": "date",
+    "name": "34 years",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 252,
+      "spacy_end": 260
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_d38c3a66154452dd"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000071",
+    "updated_at": "2026-09-23T00:13:19.000071",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d4aab4888fb04694",
+    "node_type": "person",
+    "name": "Rose Apartments",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 279,
+      "spacy_end": 294
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d4aab4888fb04694"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000081",
+    "updated_at": "2026-09-23T00:13:19.000081",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_66a129258179d731",
+    "node_type": "date",
+    "name": "12th March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 414,
+      "spacy_end": 429
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_66a129258179d731"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000091",
+    "updated_at": "2026-09-23T00:13:19.000091",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_37ba7bdd1c491581",
+    "node_type": "organization",
+    "name": "SBI Customer Care",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 555,
+      "spacy_end": 572
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_37ba7bdd1c491581"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000101",
+    "updated_at": "2026-09-23T00:13:19.000101",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_694023070e84bf5b",
+    "node_type": "date",
+    "name": "13th March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 710,
+      "spacy_end": 725
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_694023070e84bf5b"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000111",
+    "updated_at": "2026-09-23T00:13:19.000111",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6c0e6acd35694622",
+    "node_type": "organization",
+    "name": "OTP",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 816,
+      "spacy_end": 819
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_6c0e6acd35694622"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000120",
+    "updated_at": "2026-09-23T00:13:19.000120",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d8eaba1575ee7da5",
+    "node_type": "date",
+    "name": "14th March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 943,
+      "spacy_end": 958
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_d8eaba1575ee7da5"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000129",
+    "updated_at": "2026-09-23T00:13:19.000129",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8b5b9db0c13db242",
+    "node_type": "amount",
+    "name": "three",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 978,
+      "spacy_end": 983
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_8b5b9db0c13db242"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000139",
+    "updated_at": "2026-09-23T00:13:19.000139",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_caa510e9d5057a69",
+    "node_type": "organization",
+    "name": "SBI",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1019,
+      "spacy_end": 1022
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_caa510e9d5057a69"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000148",
+    "updated_at": "2026-09-23T00:13:19.000148",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ef612b1b744a6f86",
+    "node_type": "amount",
+    "name": "15,00,000",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 1098,
+      "spacy_end": 1107
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_ef612b1b744a6f86"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000157",
+    "updated_at": "2026-09-23T00:13:19.000157",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c463967e5708cab7",
+    "node_type": "amount",
+    "name": "fifteen",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 1109,
+      "spacy_end": 1116
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_c463967e5708cab7"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000164",
+    "updated_at": "2026-09-23T00:13:19.000164",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_1a452dcf7be46063",
+    "node_type": "amount",
+    "name": "5,00,000",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 1167,
+      "spacy_end": 1175
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_1a452dcf7be46063"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000173",
+    "updated_at": "2026-09-23T00:13:19.000173",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a370d63d12846c1e",
+    "node_type": "organization",
+    "name": "HDFC Bank",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1222,
+      "spacy_end": 1231
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_a370d63d12846c1e"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000182",
+    "updated_at": "2026-09-23T00:13:19.000182",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_eb64ebaee08e80b0",
+    "node_type": "organization",
+    "name": "Punjab National Bank",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1295,
+      "spacy_end": 1315
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_eb64ebaee08e80b0"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000191",
+    "updated_at": "2026-09-23T00:13:19.000191",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_61ef8cb5c4f3d3ea",
+    "node_type": "amount",
+    "name": "FIR",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 1846,
+      "spacy_end": 1849
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_61ef8cb5c4f3d3ea"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000783",
+    "updated_at": "2026-09-23T00:13:19.000783",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_5bbfaccefdf61322",
+    "node_type": "date",
+    "name": "14:30 hours",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 1672,
+      "spacy_end": 1683
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_5bbfaccefdf61322"
+    ],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000209",
+    "updated_at": "2026-09-23T00:13:19.000209",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7619ee8cea49187f",
+    "node_type": "phone",
+    "name": "9876543210",
+    "attributes": {
+      "phone_number": "9876543210",
+      "contact_name": "Rakesh Bhai"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_7619ee8cea49187f"
+    ],
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000217",
+    "updated_at": "2026-09-23T00:13:19.000217",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e26019ce48adebef",
+    "node_type": "phone",
+    "name": "9876543211",
+    "attributes": {
+      "phone_number": "9876543211",
+      "contact_name": "Suresh Bhai"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_e26019ce48adebef"
+    ],
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000227",
+    "updated_at": "2026-09-23T00:13:19.000227",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_438561c65c9e4353",
+    "node_type": "location",
+    "name": "Nehru Nagar Tower 2",
+    "attributes": {
+      "tower_location": "Nehru Nagar Tower 2"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "LOC_438561c65c9e4353"
+    ],
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000236",
+    "updated_at": "2026-09-23T00:13:19.000236",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8a8023e9f7760676",
+    "node_type": "phone",
+    "name": "9876543212",
+    "attributes": {
+      "phone_number": "9876543212",
+      "contact_name": "Amit"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_8a8023e9f7760676"
+    ],
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000244",
+    "updated_at": "2026-09-23T00:13:19.000244",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ef5fb01e7fd16dee",
+    "node_type": "phone",
+    "name": "9876543214",
+    "attributes": {
+      "phone_number": "9876543214"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_ef5fb01e7fd16dee"
+    ],
+    "provenance_chain": [
+      "02_CDR_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000252",
+    "updated_at": "2026-09-23T00:13:19.000252",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_23492e71991bc7b9",
+    "node_type": "person",
+    "name": "Rakesh Kumar",
+    "attributes": {
+      "mentioned_in_chat": "Suresh Bhai",
+      "date": "2024-03-12",
+      "criminal_score": 7,
+      "phone": "9876543210",
+      "previous_cases": 2,
+      "notes": "Known associate of Suresh Kumar. Operates from Karol Bagh. History of financial fraud.",
+      "social_username": "rakesh_kumar_rk",
+      "platform": "Instagram",
+      "bio": "RK Telecom | Karol Bagh | Delhi",
+      "followers": 567,
+      "posts_count": 45,
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 1841,
+      "spacy_end": 1853,
+      "description": "Male (possible match: Rakesh Kumar)",
+      "cctv_camera": "CAM_LN1",
+      "location": "Lajpat Nagar Part II Camera 1"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_23492e71991bc7b9"
+    ],
+    "provenance_chain": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000263",
+    "updated_at": "2026-09-23T00:13:19.000263",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a8d3463ec398ed33",
+    "node_type": "account",
+    "name": "Account 1234",
+    "attributes": {
+      "account_number": "12345678901234",
+      "account_holder": "Rakesh Kumar"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_c17c025fb9ed44ea"
+    ],
+    "provenance_chain": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000273",
+    "updated_at": "2026-09-23T00:13:19.000273",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_b7753960e19a6559",
+    "node_type": "account",
+    "name": "Account 1235",
+    "attributes": {
+      "account_number": "12345678901235",
+      "account_holder": ""
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_d85674cd46328697"
+    ],
+    "provenance_chain": [
+      "05_Bank_Rakesh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000282",
+    "updated_at": "2026-09-23T00:13:19.000282",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6e50992230df4a2d",
+    "node_type": "account",
+    "name": "Account 9876",
+    "attributes": {
+      "account_number": "98765432109876",
+      "account_holder": "Suresh Kumar"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_5a1b78d720b151af"
+    ],
+    "provenance_chain": [
+      "06_Bank_Suresh.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000334",
+    "updated_at": "2026-09-23T00:13:19.000334",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_75110ab02c0160f9",
+    "node_type": "person",
+    "name": "Amit Sharma",
+    "attributes": {
+      "social_username": "amit_sharma_official",
+      "platform": "Instagram",
+      "bio": "Businessman | Entrepreneur | Delhi NCR",
+      "followers": 2340,
+      "posts_count": 89,
+      "criminal_score": 4,
+      "phone": "9876543212",
+      "previous_cases": 1,
+      "notes": "Known associate of Rakesh Kumar. Active on social media.",
+      "description": "Male (possible match: Amit Sharma)",
+      "cctv_camera": "CAM_LN3",
+      "location": "Lajpat Nagar Part II Camera 3"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_75110ab02c0160f9"
+    ],
+    "provenance_chain": [
+      "07_Bank_Amit.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000345",
+    "updated_at": "2026-09-23T00:13:19.000345",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ec4168bca6487484",
+    "node_type": "account",
+    "name": "Account 5678",
+    "attributes": {
+      "account_number": "56789012345678",
+      "account_holder": "Amit Sharma"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_aedd1b949f282279"
+    ],
+    "provenance_chain": [
+      "07_Bank_Amit.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000354",
+    "updated_at": "2026-09-23T00:13:19.000354",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_105a112c81ce60e6",
+    "node_type": "person",
+    "name": "Amit",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_105a112c81ce60e6"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000364",
+    "updated_at": "2026-09-23T00:13:19.000364",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3d649a61fbc63878",
+    "node_type": "phone",
+    "name": "9876543220",
+    "attributes": {
+      "phone_number": "9876543220",
+      "contact_name": "Bhai Sahab"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_3d649a61fbc63878"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000372",
+    "updated_at": "2026-09-23T00:13:19.000372",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d71ab13e9efcf04e",
+    "node_type": "person",
+    "name": "Bhai Sahab",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d71ab13e9efcf04e"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000380",
+    "updated_at": "2026-09-23T00:13:19.000380",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_9fbdb74aacb6f47f",
+    "node_type": "phone",
+    "name": "9812345678",
+    "attributes": {
+      "phone_number": "9812345678",
+      "contact_name": "Rajesh Electronics"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_9fbdb74aacb6f47f"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000389",
+    "updated_at": "2026-09-23T00:13:19.000389",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4b8a1601852a8525",
+    "node_type": "organization",
+    "name": "Rajesh Electronics",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORG_4b8a1601852a8525"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000397",
+    "updated_at": "2026-09-23T00:13:19.000397",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8d4ea81fbbc86477",
+    "node_type": "phone",
+    "name": "01126543210",
+    "attributes": {
+      "phone_number": "01126543210",
+      "contact_name": "RK Telecom Office"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_8d4ea81fbbc86477"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000405",
+    "updated_at": "2026-09-23T00:13:19.000405",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a4e00d7e6aa82111",
+    "node_type": "phone",
+    "name": "198",
+    "attributes": {
+      "phone_number": "198",
+      "contact_name": "Airtel Customer Care"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_a4e00d7e6aa82111"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000414",
+    "updated_at": "2026-09-23T00:13:19.000414",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7fd1eb60e433a497",
+    "node_type": "organization",
+    "name": "Airtel Customer Care",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORG_7fd1eb60e433a497"
+    ],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000421",
+    "updated_at": "2026-09-23T00:13:19.000421",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_94049de73f3d3a19",
+    "node_type": "event",
+    "name": "Post: New beginnings at Karol Bagh office #business #del",
+    "attributes": {
+      "post_id": "POST_001",
+      "date": "2024-03-10",
+      "caption": "New beginnings at Karol Bagh office #business #delhi",
+      "location": "Karol Bagh, Delhi",
+      "likes": 45,
+      "comments": 3,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_9d2551e3464eafeb"
+    ],
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000429",
+    "updated_at": "2026-09-23T00:13:19.000429",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ab9b67613bd4a92c",
+    "node_type": "event",
+    "name": "Post: Meeting with partners #networking",
+    "attributes": {
+      "post_id": "POST_002",
+      "date": "2024-03-12",
+      "caption": "Meeting with partners #networking",
+      "location": "Connaught Place, Delhi",
+      "likes": 32,
+      "comments": 1,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_faae857a7eacc0b2"
+    ],
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000437",
+    "updated_at": "2026-09-23T00:13:19.000437",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ff1ed53b92f9e91a",
+    "node_type": "event",
+    "name": "Post: Successful day #business",
+    "attributes": {
+      "post_id": "POST_003",
+      "date": "2024-03-14",
+      "caption": "Successful day #business",
+      "location": "",
+      "likes": 67,
+      "comments": 5,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_1fb2ec07350f3220"
+    ],
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000445",
+    "updated_at": "2026-09-23T00:13:19.000445",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_64b87341ada987df",
+    "node_type": "event",
+    "name": "Post: Noida office visit #work",
+    "attributes": {
+      "post_id": "POST_004",
+      "date": "2024-03-16",
+      "caption": "Noida office visit #work",
+      "location": "Noida Sector 62",
+      "likes": 28,
+      "comments": 2,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_450ffb171a8178c2"
+    ],
+    "provenance_chain": [
+      "09_Social_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000454",
+    "updated_at": "2026-09-23T00:13:19.000454",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7da381a50326b6ae",
+    "node_type": "event",
+    "name": "Case: FIR 456/2022",
+    "attributes": {
+      "case_number": "FIR 456/2022",
+      "date": "2022-08-15",
+      "police_station": "Karol Bagh PS",
+      "charge": "Section 420 - Cheating",
+      "status": "Convicted",
+      "sentence": "2 years rigorous imprisonment",
+      "details": "Defrauded multiple customers through fake mobile recharge scheme"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "CASE_c1db9559568c7381"
+    ],
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000463",
+    "updated_at": "2026-09-23T00:13:19.000463",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_edbf72dd9f41eaae",
+    "node_type": "event",
+    "name": "Case: FIR 789/2023",
+    "attributes": {
+      "case_number": "FIR 789/2023",
+      "date": "2023-02-20",
+      "police_station": "Nehru Nagar PS",
+      "charge": "Section 468 - Forgery for cheating",
+      "status": "Under trial",
+      "sentence": "Pending",
+      "details": "Created fake bank documents for identity theft"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "CASE_668ff83b2fc766f5"
+    ],
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000471",
+    "updated_at": "2026-09-23T00:13:19.000471",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_255e03416fe4b55e",
+    "node_type": "event",
+    "name": "Case: FIR 234/2023",
+    "attributes": {
+      "case_number": "FIR 234/2023",
+      "date": "2023-06-10",
+      "police_station": "Dwarka South PS",
+      "charge": "Section 420 - Cheating",
+      "status": "Acquitted",
+      "sentence": "Acquitted due to lack of evidence",
+      "details": "Accused of running fake investment scheme"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "CASE_dea3a7e853e97f68"
+    ],
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000478",
+    "updated_at": "2026-09-23T00:13:19.000478",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4941c77b57e48753",
+    "node_type": "event",
+    "name": "Case: FIR 567/2023",
+    "attributes": {
+      "case_number": "FIR 567/2023",
+      "date": "2023-11-05",
+      "police_station": "Noida Phase 2 PS",
+      "charge": "Section 419 - Cheating by personation",
+      "status": "Under trial",
+      "sentence": "Pending",
+      "details": "Impersonated bank official to extract account details"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "CASE_2736af5de68ff0d8"
+    ],
+    "provenance_chain": [
+      "11_Criminal_History.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000487",
+    "updated_at": "2026-09-23T00:13:19.000487",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_46fbd27c612b07eb",
+    "node_type": "date",
+    "name": "22/03/2024",
+    "attributes": {
+      "date": "22/03/2024",
+      "type": "date_reference"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_46fbd27c612b07eb"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000495",
+    "updated_at": "2026-09-23T00:13:19.000495",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c2092663b84c9920",
+    "node_type": "amount",
+    "name": "456/2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 92,
+      "spacy_end": 100
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_c2092663b84c9920"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000504",
+    "updated_at": "2026-09-23T00:13:19.000504",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4b4d474a2198985d",
+    "node_type": "date",
+    "name": "42 years",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 254,
+      "spacy_end": 262
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_4b4d474a2198985d"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000512",
+    "updated_at": "2026-09-23T00:13:19.000512",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e98e9265a371cab6",
+    "node_type": "date",
+    "name": "approximately 9:15 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 537,
+      "spacy_end": 558
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_e98e9265a371cab6"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000521",
+    "updated_at": "2026-09-23T00:13:19.000521",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4b8328539299a89c",
+    "node_type": "date",
+    "name": "around 8:45 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 749,
+      "spacy_end": 763
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_4b8328539299a89c"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000530",
+    "updated_at": "2026-09-23T00:13:19.000530",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_248c33f46819bd6c",
+    "node_type": "date",
+    "name": "approximately 9:00 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 833,
+      "spacy_end": 854
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_248c33f46819bd6c"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000538",
+    "updated_at": "2026-09-23T00:13:19.000538",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c457a36aabb4fb93",
+    "node_type": "date",
+    "name": "about 10 minutes",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 933,
+      "spacy_end": 949
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_c457a36aabb4fb93"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000547",
+    "updated_at": "2026-09-23T00:13:19.000547",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_f78dd8e6016cfa74",
+    "node_type": "organization",
+    "name": "CCTV",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1084,
+      "spacy_end": 1088
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_f78dd8e6016cfa74"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000554",
+    "updated_at": "2026-09-23T00:13:19.000554",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_78b9c9c3ec98cddd",
+    "node_type": "date",
+    "name": "11:15 hours",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 1362,
+      "spacy_end": 1373
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_78b9c9c3ec98cddd"
+    ],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000563",
+    "updated_at": "2026-09-23T00:13:19.000563",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_236180e1a6a63d8a",
+    "node_type": "account",
+    "name": "Account 2345",
+    "attributes": {
+      "account_number": "3456789012345",
+      "account_holder": "Meena Devi",
+      "bank": "Online transfer to HDFC"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_a6076b509f61275e"
+    ],
+    "provenance_chain": [
+      "15_Bank_Meena.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000572",
+    "updated_at": "2026-09-23T00:13:19.000572",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d38a9a689c50b16e",
+    "node_type": "phone",
+    "name": "9876543215",
+    "attributes": {
+      "phone_number": "9876543215",
+      "contact_name": "Neeraj"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_d38a9a689c50b16e"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000580",
+    "updated_at": "2026-09-23T00:13:19.000580",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_bb515e95562574af",
+    "node_type": "person",
+    "name": "Neeraj",
+    "attributes": {
+      "contact_in_device": "AS_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_bb515e95562574af"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000588",
+    "updated_at": "2026-09-23T00:13:19.000588",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7b74611f26dc07cd",
+    "node_type": "phone",
+    "name": "9876543216",
+    "attributes": {
+      "phone_number": "9876543216",
+      "contact_name": "Pooja"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_7b74611f26dc07cd"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000596",
+    "updated_at": "2026-09-23T00:13:19.000596",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ff28988444e5efd4",
+    "node_type": "person",
+    "name": "Pooja",
+    "attributes": {
+      "contact_in_device": "AS_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_ff28988444e5efd4"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000605",
+    "updated_at": "2026-09-23T00:13:19.000605",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d41c55bf957849d2",
+    "node_type": "person",
+    "name": "Bhai",
+    "attributes": {
+      "contact_in_device": "AS_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d41c55bf957849d2"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000614",
+    "updated_at": "2026-09-23T00:13:19.000614",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6a6ac8386005b00f",
+    "node_type": "person",
+    "name": "Boss",
+    "attributes": {
+      "contact_in_device": "AS_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_6a6ac8386005b00f"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000622",
+    "updated_at": "2026-09-23T00:13:19.000622",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_42ed1a392df88b25",
+    "node_type": "phone",
+    "name": "01129876543",
+    "attributes": {
+      "phone_number": "01129876543",
+      "contact_name": "Shop - Lajpat Nagar"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_42ed1a392df88b25"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000630",
+    "updated_at": "2026-09-23T00:13:19.000630",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_042dfc35916c097e",
+    "node_type": "phone",
+    "name": "18001021234",
+    "attributes": {
+      "phone_number": "18001021234",
+      "contact_name": "Bank of Baroda"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PHONE_042dfc35916c097e"
+    ],
+    "provenance_chain": [
+      "16_Device_Amit.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000638",
+    "updated_at": "2026-09-23T00:13:19.000638",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_502123dcbcdc704e",
+    "node_type": "event",
+    "name": "Post: New stock arrived at RK Telecom #mobile #shop",
+    "attributes": {
+      "post_id": "POST_R001",
+      "date": "2024-03-08",
+      "caption": "New stock arrived at RK Telecom #mobile #shop",
+      "location": "Karol Bagh, Delhi",
+      "likes": 23,
+      "comments": 1,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_65837e28f46c7807"
+    ],
+    "provenance_chain": [
+      "17_Social_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000646",
+    "updated_at": "2026-09-23T00:13:19.000646",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d88fe4c9fd7f93e5",
+    "node_type": "event",
+    "name": "Post: Busy day at the shop #business",
+    "attributes": {
+      "post_id": "POST_R002",
+      "date": "2024-03-12",
+      "caption": "Busy day at the shop #business",
+      "location": "Karol Bagh, Delhi",
+      "likes": 15,
+      "comments": 0,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_32854768a91920ae"
+    ],
+    "provenance_chain": [
+      "17_Social_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000655",
+    "updated_at": "2026-09-23T00:13:19.000655",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_de6e178663d37852",
+    "node_type": "event",
+    "name": "Post: Good morning Delhi #morning",
+    "attributes": {
+      "post_id": "POST_R003",
+      "date": "2024-03-15",
+      "caption": "Good morning Delhi #morning",
+      "location": "",
+      "likes": 34,
+      "comments": 2,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_59176d5a6c79817f"
+    ],
+    "provenance_chain": [
+      "17_Social_Rakesh.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000663",
+    "updated_at": "2026-09-23T00:13:19.000663",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_2fc0deec815dd4af",
+    "node_type": "amount",
+    "name": "Rs. 15",
+    "attributes": {
+      "amount": "Rs. 15",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_2fc0deec815dd4af"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000671",
+    "updated_at": "2026-09-23T00:13:19.000671",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d64a1fe2af191dae",
+    "node_type": "date",
+    "name": "11:30 hours",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 81,
+      "spacy_end": 92
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_d64a1fe2af191dae"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000679",
+    "updated_at": "2026-09-23T00:13:19.000679",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_73728731a2aff159",
+    "node_type": "organization",
+    "name": "SI Vikram Rathore",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 116,
+      "spacy_end": 133
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_73728731a2aff159"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000687",
+    "updated_at": "2026-09-23T00:13:19.000687",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_5af6d945a47b0813",
+    "node_type": "date",
+    "name": "Age 42",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 158,
+      "spacy_end": 164
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_5af6d945a47b0813"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000695",
+    "updated_at": "2026-09-23T00:13:19.000695",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_01072043f9410721",
+    "node_type": "date",
+    "name": "the past 8 years",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 358,
+      "spacy_end": 374
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_01072043f9410721"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000704",
+    "updated_at": "2026-09-23T00:13:19.000704",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3fc4ccfe745870e2",
+    "node_type": "amount",
+    "name": "two",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 461,
+      "spacy_end": 464
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_3fc4ccfe745870e2"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000711",
+    "updated_at": "2026-09-23T00:13:19.000711",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8e0ab004c7c23334",
+    "node_type": "date",
+    "name": "around 9:15 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 499,
+      "spacy_end": 513
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_8e0ab004c7c23334"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000719",
+    "updated_at": "2026-09-23T00:13:19.000719",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_094dac57e909da57",
+    "node_type": "date",
+    "name": "approximately 8:45 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 789,
+      "spacy_end": 810
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_094dac57e909da57"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000728",
+    "updated_at": "2026-09-23T00:13:19.000728",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_683bc8b68cb318bb",
+    "node_type": "date",
+    "name": "9:00 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 913,
+      "spacy_end": 920
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_683bc8b68cb318bb"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000737",
+    "updated_at": "2026-09-23T00:13:19.000737",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8b12507783d5beca",
+    "node_type": "amount",
+    "name": "One",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 964,
+      "spacy_end": 967
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_8b12507783d5beca"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000746",
+    "updated_at": "2026-09-23T00:13:19.000746",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_63519cad309a18f7",
+    "node_type": "date",
+    "name": "the same day",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 1155,
+      "spacy_end": 1167
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_63519cad309a18f7"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000763",
+    "updated_at": "2026-09-23T00:13:19.000763",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_739b9d664d77db3e",
+    "node_type": "location",
+    "name": "hai",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "GPE",
+      "spacy_start": 1305,
+      "spacy_end": 1308
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "LOCATION_739b9d664d77db3e"
+    ],
+    "provenance_chain": [
+      "18_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000773",
+    "updated_at": "2026-09-23T00:13:19.000773",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4ec2c65c11681fd4",
+    "node_type": "amount",
+    "name": "Rs. 67,000",
+    "attributes": {
+      "amount": "Rs. 67,000",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_4ec2c65c11681fd4"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000792",
+    "updated_at": "2026-09-23T00:13:19.000792",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_59290a56d9bc313f",
+    "node_type": "amount",
+    "name": "Rs. 25,000",
+    "attributes": {
+      "amount": "Rs. 25,000",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_59290a56d9bc313f"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000801",
+    "updated_at": "2026-09-23T00:13:19.000801",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_89a517bea81aaa1b",
+    "node_type": "date",
+    "name": "25/03/2024",
+    "attributes": {
+      "date": "25/03/2024",
+      "type": "date_reference",
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 73,
+      "spacy_end": 83
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_89a517bea81aaa1b"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000810",
+    "updated_at": "2026-09-23T00:13:19.000810",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_f6c31158ad84bbf3",
+    "node_type": "organization",
+    "name": "Confidential - For Investigation Purposes",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 20,
+      "spacy_end": 61
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_f6c31158ad84bbf3"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000819",
+    "updated_at": "2026-09-23T00:13:19.000819",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d90f6b7eaea6a9ac",
+    "node_type": "person",
+    "name": "Nehru Nagar",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 151,
+      "spacy_end": 162
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d90f6b7eaea6a9ac"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000832",
+    "updated_at": "2026-09-23T00:13:19.000832",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_48ae3f036fa1ccc8",
+    "node_type": "date",
+    "name": "10:00 AM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 419,
+      "spacy_end": 427
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_48ae3f036fa1ccc8"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000841",
+    "updated_at": "2026-09-23T00:13:19.000841",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4190a74434240bda",
+    "node_type": "date",
+    "name": "8:00 PM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 439,
+      "spacy_end": 446
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_4190a74434240bda"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000850",
+    "updated_at": "2026-09-23T00:13:19.000850",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_392728fce66c2681",
+    "node_type": "date",
+    "name": "16 March",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 485,
+      "spacy_end": 493
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_392728fce66c2681"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000858",
+    "updated_at": "2026-09-23T00:13:19.000858",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_6446f4f1020b9657",
+    "node_type": "date",
+    "name": "approximately 2:30 PM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 497,
+      "spacy_end": 518
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_6446f4f1020b9657"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000867",
+    "updated_at": "2026-09-23T00:13:19.000867",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_eefe57dbc0d6dd0d",
+    "node_type": "date",
+    "name": "18 March",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 557,
+      "spacy_end": 565
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_eefe57dbc0d6dd0d"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000876",
+    "updated_at": "2026-09-23T00:13:19.000876",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_bc5e446ac5061fef",
+    "node_type": "organization",
+    "name": "SIM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 616,
+      "spacy_end": 619
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_bc5e446ac5061fef"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000885",
+    "updated_at": "2026-09-23T00:13:19.000885",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_79fd3a1ea2fde9e1",
+    "node_type": "amount",
+    "name": "67,000",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 713,
+      "spacy_end": 719
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_79fd3a1ea2fde9e1"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000897",
+    "updated_at": "2026-09-23T00:13:19.000897",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_cefc73bd6a84af1f",
+    "node_type": "date",
+    "name": "7:00 PM",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 884,
+      "spacy_end": 891
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_cefc73bd6a84af1f"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000906",
+    "updated_at": "2026-09-23T00:13:19.000906",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_dc30446d3ad4cde9",
+    "node_type": "date",
+    "name": "19 March",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 983,
+      "spacy_end": 991
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_dc30446d3ad4cde9"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000916",
+    "updated_at": "2026-09-23T00:13:19.000916",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c7e6673590d2426f",
+    "node_type": "amount",
+    "name": "25,000",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 1018,
+      "spacy_end": 1024
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_c7e6673590d2426f"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000925",
+    "updated_at": "2026-09-23T00:13:19.000925",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ff759e9fef48c739",
+    "node_type": "organization",
+    "name": "Noida",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1314,
+      "spacy_end": 1319
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_ff759e9fef48c739"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000934",
+    "updated_at": "2026-09-23T00:13:19.000934",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a8d99942a9f615a5",
+    "node_type": "person",
+    "name": "Noida Phase 2",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 1464,
+      "spacy_end": 1477
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_a8d99942a9f615a5"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000942",
+    "updated_at": "2026-09-23T00:13:19.000942",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e4a3bce0ee71b148",
+    "node_type": "date",
+    "name": "15 March",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 1760,
+      "spacy_end": 1768
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_e4a3bce0ee71b148"
+    ],
+    "provenance_chain": [
+      "19_Surveillance_Report.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000951",
+    "updated_at": "2026-09-23T00:13:19.000951",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_325ee79e29ef6dda",
+    "node_type": "amount",
+    "name": "Rs. 5",
+    "attributes": {
+      "amount": "Rs. 5",
+      "type": "financial_amount"
+    },
+    "confidence": 0.8,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_325ee79e29ef6dda"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.8,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000962",
+    "updated_at": "2026-09-23T00:13:19.000962",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_13677449972f3b01",
+    "node_type": "date",
+    "name": "28/03/2024",
+    "attributes": {
+      "date": "28/03/2024",
+      "type": "date_reference",
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 102,
+      "spacy_end": 112
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_13677449972f3b01"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000970",
+    "updated_at": "2026-09-23T00:13:19.000970",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_371ce02ae5647e65",
+    "node_type": "person",
+    "name": "Priya Singh",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 49,
+      "spacy_end": 60
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_371ce02ae5647e65"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000977",
+    "updated_at": "2026-09-23T00:13:19.000977",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d1991fa73f492014",
+    "node_type": "person",
+    "name": "Delhi Herald",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 83,
+      "spacy_end": 95
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d1991fa73f492014"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000986",
+    "updated_at": "2026-09-23T00:13:19.000986",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_899f4725b13a40bc",
+    "node_type": "organization",
+    "name": "Delhi Police",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 453,
+      "spacy_end": 465
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_899f4725b13a40bc"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.000995",
+    "updated_at": "2026-09-23T00:13:19.000995",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3f5694c3789e0e65",
+    "node_type": "organization",
+    "name": "CDR",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1213,
+      "spacy_end": 1216
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_3f5694c3789e0e65"
+    ],
+    "provenance_chain": [
+      "20_Journalist_Note.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001004",
+    "updated_at": "2026-09-23T00:13:19.001004",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d03452a15cdbe2cd",
+    "node_type": "account",
+    "name": "Account 7890",
+    "attributes": {
+      "account_number": "78901234567890",
+      "account_holder": ""
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_51909bf47fc507df"
+    ],
+    "provenance_chain": [
+      "22_Bank_No_Name.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001013",
+    "updated_at": "2026-09-23T00:13:19.001013",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_11cb60bb38877109",
+    "node_type": "organization",
+    "name": "SUPPLEMENTARY",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 26,
+      "spacy_end": 39
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_11cb60bb38877109"
+    ],
+    "provenance_chain": [
+      "23_FIR_No_Phone.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001025",
+    "updated_at": "2026-09-23T00:13:19.001025",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_1105401fe9fd4817",
+    "node_type": "date",
+    "name": "25th March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 336,
+      "spacy_end": 351
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_1105401fe9fd4817"
+    ],
+    "provenance_chain": [
+      "23_FIR_No_Phone.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001048",
+    "updated_at": "2026-09-23T00:13:19.001048",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_55de488df7c10afb",
+    "node_type": "amount",
+    "name": "at least three",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 734,
+      "spacy_end": 748
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_55de488df7c10afb"
+    ],
+    "provenance_chain": [
+      "23_FIR_No_Phone.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001057",
+    "updated_at": "2026-09-23T00:13:19.001057",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e3b0c44298fc1c14",
+    "node_type": "person",
+    "name": "unknown_user_2847",
+    "attributes": {
+      "social_username": "unknown_user_2847",
+      "platform": "Instagram",
+      "bio": "Private account",
+      "followers": 0,
+      "posts_count": 0
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_e3b0c44298fc1c14"
+    ],
+    "provenance_chain": [
+      "25_Social_Partial.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001066",
+    "updated_at": "2026-09-23T00:13:19.001066",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c2b111204ee5faf7",
+    "node_type": "date",
+    "name": "20/03/2024",
+    "attributes": {
+      "date": "20/03/2024",
+      "type": "date_reference"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_c2b111204ee5faf7"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001075",
+    "updated_at": "2026-09-23T00:13:19.001075",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a7f40fe0eaf028f5",
+    "node_type": "date",
+    "name": "13 March 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 327,
+      "spacy_end": 340
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_a7f40fe0eaf028f5"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001084",
+    "updated_at": "2026-09-23T00:13:19.001084",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_83732ed9ae9971ea",
+    "node_type": "date",
+    "name": "1234, 7891",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 560,
+      "spacy_end": 570
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_83732ed9ae9971ea"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001093",
+    "updated_at": "2026-09-23T00:13:19.001093",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_86f5edfc5b6b944b",
+    "node_type": "date",
+    "name": "5 to 10 minutes",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 803,
+      "spacy_end": 818
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_86f5edfc5b6b944b"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001105",
+    "updated_at": "2026-09-23T00:13:19.001105",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_9890be5d55270591",
+    "node_type": "organization",
+    "name": "HDFC",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 865,
+      "spacy_end": 869
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_9890be5d55270591"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001114",
+    "updated_at": "2026-09-23T00:13:19.001114",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_f88d533a7a47a361",
+    "node_type": "organization",
+    "name": "PNB",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 935,
+      "spacy_end": 938
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_f88d533a7a47a361"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001123",
+    "updated_at": "2026-09-23T00:13:19.001123",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_058be09de37a18d4",
+    "node_type": "person",
+    "name": "BoB",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 1004,
+      "spacy_end": 1007
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_058be09de37a18d4"
+    ],
+    "provenance_chain": [
+      "29_Investigator_Summary.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001131",
+    "updated_at": "2026-09-23T00:13:19.001131",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_bc4640447aeab94a",
+    "node_type": "account",
+    "name": "Account 4567",
+    "attributes": {
+      "account_number": "45678901234567",
+      "account_holder": "Rakesh Kumar"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_41128ff00aeb9cd0"
+    ],
+    "provenance_chain": [
+      "31_Adversarial_Bank.csv"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001147",
+    "updated_at": "2026-09-23T00:13:19.001147",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_83e0fa9f1e90d610",
+    "node_type": "event",
+    "name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+    "attributes": {
+      "post_id": "POST_M001",
+      "date": "2024-03-10",
+      "caption": "Beautiful morning at Lajpat Nagar #delhi #morning",
+      "location": "Lajpat Nagar, Delhi",
+      "likes": 8,
+      "comments": 2,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_ea8e9a63f5cf48c0"
+    ],
+    "provenance_chain": [
+      "32_Adversarial_Social.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001156",
+    "updated_at": "2026-09-23T00:13:19.001156",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_0cf48ebdaa0c6d75",
+    "node_type": "event",
+    "name": "Post: Feeling stressed today #life",
+    "attributes": {
+      "post_id": "POST_M002",
+      "date": "2024-03-14",
+      "caption": "Feeling stressed today #life",
+      "location": "",
+      "likes": 15,
+      "comments": 3,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_491c8a5eed380526"
+    ],
+    "provenance_chain": [
+      "32_Adversarial_Social.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001170",
+    "updated_at": "2026-09-23T00:13:19.001170",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_5d395ea412ab918d",
+    "node_type": "event",
+    "name": "Post: Thankful to my neighbors for their support #gratef",
+    "attributes": {
+      "post_id": "POST_M003",
+      "date": "2024-03-16",
+      "caption": "Thankful to my neighbors for their support #grateful",
+      "location": "Lajpat Nagar, Delhi",
+      "likes": 25,
+      "comments": 8,
+      "social_type": "post"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "POST_087631b96cd7e0a5"
+    ],
+    "provenance_chain": [
+      "32_Adversarial_Social.json"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001179",
+    "updated_at": "2026-09-23T00:13:19.001179",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_894500ae1c37aedc",
+    "node_type": "person",
+    "name": "\u0930\u094b\u091c",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 110,
+      "spacy_end": 113
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_894500ae1c37aedc"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001187",
+    "updated_at": "2026-09-23T00:13:19.001187",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_abd400c996d27e40",
+    "node_type": "amount",
+    "name": "\u0932\u093e\u091c\u092a\u0924",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 126,
+      "spacy_end": 131
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_abd400c996d27e40"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001197",
+    "updated_at": "2026-09-23T00:13:19.001197",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_c9f671b8bde898d3",
+    "node_type": "amount",
+    "name": "\u092e\u0948\u0902",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 152,
+      "spacy_end": 155
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_c9f671b8bde898d3"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001206",
+    "updated_at": "2026-09-23T00:13:19.001206",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d631322b147c29fd",
+    "node_type": "person",
+    "name": "\u0930\u0939\u0924\u093e \u0939\u0942\u0902",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 189,
+      "spacy_end": 197
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d631322b147c29fd"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001214",
+    "updated_at": "2026-09-23T00:13:19.001214",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ec914043a4e38f9d",
+    "node_type": "amount",
+    "name": "\u092e\u0948\u0902 \u092e\u0940\u0928\u093e",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 199,
+      "spacy_end": 207
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_ec914043a4e38f9d"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001222",
+    "updated_at": "2026-09-23T00:13:19.001222",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_2c39ce7a750c190c",
+    "node_type": "organization",
+    "name": "\u0938\u0941\u092c\u0939",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 281,
+      "spacy_end": 285
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_2c39ce7a750c190c"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001240",
+    "updated_at": "2026-09-23T00:13:19.001240",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8ea3ffc4409cc8b7",
+    "node_type": "date",
+    "name": "9:15 \u092c\u091c\u0947",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 291,
+      "spacy_end": 299
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_8ea3ffc4409cc8b7"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001255",
+    "updated_at": "2026-09-23T00:13:19.001255",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_36e583b1e18f01fd",
+    "node_type": "organization",
+    "name": "\u0905\u092a\u0928\u0947",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 305,
+      "spacy_end": 309
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_36e583b1e18f01fd"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001268",
+    "updated_at": "2026-09-23T00:13:19.001268",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_8efa7fdf9317ff56",
+    "node_type": "person",
+    "name": "\u092e\u0948\u0902\u0928\u0947 \u0939\u092e\u093e\u0930\u0947",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 341,
+      "spacy_end": 352
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_8efa7fdf9317ff56"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001280",
+    "updated_at": "2026-09-23T00:13:19.001280",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_dc57d02ff74f9add",
+    "node_type": "amount",
+    "name": "\u092e\u094b\u092c\u093e\u0907\u0932 \u092b\u094b\u0928",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 445,
+      "spacy_end": 455
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_dc57d02ff74f9add"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001292",
+    "updated_at": "2026-09-23T00:13:19.001292",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4c577a8fc78fbb06",
+    "node_type": "date",
+    "name": "\u092e\u093e\u0930\u094d\u091a 2024",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 478,
+      "spacy_end": 488
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_4c577a8fc78fbb06"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001310",
+    "updated_at": "2026-09-23T00:13:19.001310",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_f52052d9ca51064f",
+    "node_type": "amount",
+    "name": "\u0909\u0938\u0940",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 499,
+      "spacy_end": 502
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_f52052d9ca51064f"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001325",
+    "updated_at": "2026-09-23T00:13:19.001325",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ce6994ab41bdea73",
+    "node_type": "date",
+    "name": "8:45",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "TIME",
+      "spacy_start": 531,
+      "spacy_end": 535
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_ce6994ab41bdea73"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001339",
+    "updated_at": "2026-09-23T00:13:19.001339",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_2be7a76a17a53940",
+    "node_type": "date",
+    "name": "9:00",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 626,
+      "spacy_end": 630
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_2be7a76a17a53940"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001351",
+    "updated_at": "2026-09-23T00:13:19.001351",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_759aff14a5381040",
+    "node_type": "amount",
+    "name": "\u0926\u0947\u0935\u0940",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 664,
+      "spacy_end": 668
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_759aff14a5381040"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001360",
+    "updated_at": "2026-09-23T00:13:19.001360",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_d3d2543eb561b296",
+    "node_type": "person",
+    "name": "\u0909\u0928\u092e\u0947\u0902 \u0938\u0947 \u090f\u0915 \u0935\u0939\u0940",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 691,
+      "spacy_end": 706
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_d3d2543eb561b296"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001369",
+    "updated_at": "2026-09-23T00:13:19.001369",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_b3bc7aac8e22eb12",
+    "node_type": "date",
+    "name": "\u092a\u0939\u0932\u0947 \u0926\u0947\u0916\u093e \u0925\u093e",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "DATE",
+      "spacy_start": 729,
+      "spacy_end": 741
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "DATE_b3bc7aac8e22eb12"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001377",
+    "updated_at": "2026-09-23T00:13:19.001377",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_3198e149cba98ec3",
+    "node_type": "person",
+    "name": "\u0914\u0930 \u0909\u0938\u0915\u0947 \u0916\u093e\u0924\u0947 \u0938\u0947",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 840,
+      "spacy_end": 855
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_3198e149cba98ec3"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001389",
+    "updated_at": "2026-09-23T00:13:19.001389",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_47fa1dd3b94203d9",
+    "node_type": "amount",
+    "name": "15 \u0932\u093e\u0916",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "CARDINAL",
+      "spacy_start": 856,
+      "spacy_end": 862
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_47fa1dd3b94203d9"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001400",
+    "updated_at": "2026-09-23T00:13:19.001400",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_599f9daa94e15632",
+    "node_type": "person",
+    "name": "\u0939\u0948\u0902",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 879,
+      "spacy_end": 882
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_599f9daa94e15632"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001411",
+    "updated_at": "2026-09-23T00:13:19.001411",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e95f9ef875989b3d",
+    "node_type": "organization",
+    "name": "\u092e\u0948\u0902\u0928\u0947",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 884,
+      "spacy_end": 889
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_e95f9ef875989b3d"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001425",
+    "updated_at": "2026-09-23T00:13:19.001425",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_0c26fc694863c62b",
+    "node_type": "organization",
+    "name": "\u092b\u0941\u091f\u0947\u091c \u0926\u0947\u0916\u093e \u0939\u0948 \u091c\u094b \u092e\u0947\u0930\u0947 \u0905\u0935\u0932\u094b\u0915\u0928 \u0915\u0940 \u092a\u0941\u0937\u094d\u091f\u093f",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 899,
+      "spacy_end": 937
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_0c26fc694863c62b"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001444",
+    "updated_at": "2026-09-23T00:13:19.001444",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_864f775d084ae837",
+    "node_type": "person",
+    "name": "\u0928\u093e\u092e: \u0930\u093e\u091c",
+    "attributes": {
+      "extracted_from": "hindi_ner",
+      "script": "devanagari"
+    },
+    "confidence": 0.65,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_864f775d084ae837"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.65,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001456",
+    "updated_at": "2026-09-23T00:13:19.001456",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_2bb7da7d6166688b",
+    "node_type": "person",
+    "name": "\u0947\u0936 \u0915\u0941\u092e\u093e\u0930",
+    "attributes": {
+      "extracted_from": "hindi_ner",
+      "script": "devanagari"
+    },
+    "confidence": 0.65,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_2bb7da7d6166688b"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.65,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001465",
+    "updated_at": "2026-09-23T00:13:19.001465",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_a38e285fd0966725",
+    "node_type": "person",
+    "name": "\u092e\u0948\u0902, \u0930\u093e\u091c",
+    "attributes": {
+      "extracted_from": "hindi_ner",
+      "script": "devanagari"
+    },
+    "confidence": 0.65,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_a38e285fd0966725"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.65,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001473",
+    "updated_at": "2026-09-23T00:13:19.001473",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_4d04f9016628213c",
+    "node_type": "person",
+    "name": "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+    "attributes": {
+      "extracted_from": "hindi_ner",
+      "script": "devanagari"
+    },
+    "confidence": 0.65,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_4d04f9016628213c"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.65,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001481",
+    "updated_at": "2026-09-23T00:13:19.001481",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_71f57887d7b7abbd",
+    "node_type": "person",
+    "name": "\u0939\u0938\u094d\u0924\u093e\u0915\u094d\u0937\u0930: \u0930\u093e\u091c",
+    "attributes": {
+      "extracted_from": "hindi_ner",
+      "script": "devanagari"
+    },
+    "confidence": 0.65,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "PERSON_71f57887d7b7abbd"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.65,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001490",
+    "updated_at": "2026-09-23T00:13:19.001490",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7e37d44888436470",
+    "node_type": "location",
+    "name": "\u0928\u0947\u0939\u0930\u0942 \u0928\u0917\u0930",
+    "attributes": {
+      "extracted_from": "hindi_text",
+      "script": "devanagari"
+    },
+    "confidence": 0.55,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "LOC_7e37d44888436470"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.55,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001649",
+    "updated_at": "2026-09-23T00:13:19.001649",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_585ebe962bfa6de1",
+    "node_type": "location",
+    "name": "\u092b\u094d\u0932\u0948\u091f 5\u090f",
+    "attributes": {
+      "extracted_from": "hindi_text",
+      "script": "devanagari"
+    },
+    "confidence": 0.55,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "LOC_585ebe962bfa6de1"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.55,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001662",
+    "updated_at": "2026-09-23T00:13:19.001662",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_e629fa6598d73276",
+    "node_type": "amount",
+    "name": "15",
+    "attributes": {
+      "amount": "15",
+      "extracted_from": "hindi_text"
+    },
+    "confidence": 0.7,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "AMOUNT_e629fa6598d73276"
+    ],
+    "provenance_chain": [
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "effective_confidence": 0.7,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001671",
+    "updated_at": "2026-09-23T00:13:19.001671",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_63dceb8800b2dd4a",
+    "node_type": "organization",
+    "name": "Phone",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 176,
+      "spacy_end": 181
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_63dceb8800b2dd4a"
+    ],
+    "provenance_chain": [
+      "46_FIR_Supplement.pdf"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001680",
+    "updated_at": "2026-09-23T00:13:19.001680",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_7e1b0d5641f2640c",
+    "node_type": "organization",
+    "name": "Account",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 292,
+      "spacy_end": 299
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ORGANIZATION_7e1b0d5641f2640c"
+    ],
+    "provenance_chain": [
+      "46_FIR_Supplement.pdf"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001689",
+    "updated_at": "2026-09-23T00:13:19.001689",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_916bcb46a8192bd7",
+    "node_type": "account",
+    "name": "Account 6789",
+    "attributes": {
+      "account_number": "67890123456789",
+      "account_holder": "Suresh Kumar"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_1199083258ce4e53"
+    ],
+    "provenance_chain": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001698",
+    "updated_at": "2026-09-23T00:13:19.001698",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_9f13c23483224d85",
+    "node_type": "account",
+    "name": "Account 8901",
+    "attributes": {
+      "account_number": "89012345678901",
+      "account_holder": "Amit Sharma"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_1da15d9f9d3a46b5"
+    ],
+    "provenance_chain": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001707",
+    "updated_at": "2026-09-23T00:13:19.001707",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_01de53a997d895df",
+    "node_type": "account",
+    "name": "Account 3456",
+    "attributes": {
+      "account_number": "34567890123456",
+      "account_holder": "Meena Devi"
+    },
+    "confidence": 1.0,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "ACCT_5209b1df230295b3"
+    ],
+    "provenance_chain": [
+      "48_Bank_Transactions.xlsx"
+    ],
+    "effective_confidence": 1.0,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001719",
+    "updated_at": "2026-09-23T00:13:19.001719",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "RES_ecdf912f9ac31cc2",
+    "node_type": "device",
+    "name": "CCTV_Screenshot",
+    "attributes": {
+      "camera_id": "CCTV_Screenshot",
+      "source_image": "49_CCTV_Screenshot.png"
+    },
+    "confidence": 0.6,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [
+      "CAM_ecdf912f9ac31cc2"
+    ],
+    "provenance_chain": [
+      "49_CCTV_Screenshot.png"
+    ],
+    "effective_confidence": 0.6,
+    "resolution_status": "resolved",
+    "created_at": "2026-09-23T00:13:19.001728",
+    "updated_at": "2026-09-23T00:13:19.001728",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "UNK_900d769768187655",
+    "node_type": "person",
+    "name": "Unknown",
+    "attributes": {
+      "extracted_from": "text"
+    },
+    "confidence": 0.7,
+    "epistemic_status": "hypothesis",
+    "derivation_depth": 1,
+    "source_entities": [
+      "PERSON_b764cdc0eab71374"
+    ],
+    "provenance_chain": [],
+    "effective_confidence": 0.7,
+    "resolution_status": "unresolved",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "PERSON_b66694c77645402b",
+    "node_type": "person",
+    "name": "Meena Devi",
+    "attributes": {
+      "extracted_from": "text",
+      "spacy_label": "PERSON",
+      "spacy_start": 378,
+      "spacy_end": 388,
+      "social_username": "meena_devi_2024",
+      "platform": "Instagram",
+      "bio": "Home maker | Delhi",
+      "followers": 45,
+      "posts_count": 12,
+      "role": "victim"
+    },
+    "confidence": 0.7,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.7,
+    "resolution_status": "standalone",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "ORGANIZATION_61ef8cb5c4f3d3ea",
+    "node_type": "organization",
+    "name": "FIR",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "ORG",
+      "spacy_start": 1514,
+      "spacy_end": 1517
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [],
+    "provenance_chain": [
+      "01_FIR.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "standalone",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "PERSON_bdae71cfb51d493f",
+    "node_type": "person",
+    "name": "Meena Ji",
+    "attributes": {
+      "contact_in_device": "RK_PHONE_01"
+    },
+    "confidence": 0.9,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [],
+    "provenance_chain": [
+      "08_Device_Rakesh.json"
+    ],
+    "effective_confidence": 0.9,
+    "resolution_status": "standalone",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "PERSON_7726af14f2d056b6",
+    "node_type": "person",
+    "name": "Meena Devi's",
+    "attributes": {
+      "extracted_from": "spacy_ner",
+      "spacy_label": "PERSON",
+      "spacy_start": 860,
+      "spacy_end": 872
+    },
+    "confidence": 0.75,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [],
+    "provenance_chain": [
+      "13_FIR_Rajesh.txt"
+    ],
+    "effective_confidence": 0.75,
+    "resolution_status": "standalone",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  },
+  {
+    "id": "PERSON_b764cdc0eab71374",
+    "node_type": "person",
+    "name": "Unknown",
+    "attributes": {
+      "extracted_from": "text"
+    },
+    "confidence": 0.7,
+    "epistemic_status": "observation",
+    "derivation_depth": 0,
+    "source_entities": [],
+    "provenance_chain": [
+      "23_FIR_No_Phone.txt"
+    ],
+    "effective_confidence": 0.7,
+    "resolution_status": "standalone",
+    "created_at": "2026-09-23T00:13:19.633684",
+    "updated_at": "2026-09-23T00:13:19.633684",
+    "run_id": "run_20260923_001317"
+  }
+]

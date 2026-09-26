@@ -1,0 +1,21 @@
+{
+  "run_id": "run_20260926_164752",
+  "timestamp": "2026-09-26T16:50:54.623902",
+  "graph_nodes_analyzed": 193,
+  "graph_edges_analyzed": 172,
+  "connected_components": 116,
+  "largest_component_size": 67,
+  "processing_time_seconds": 22.15,
+  "centrality_scores": 193,
+  "communities": 11,
+  "anomaly_signals": 58,
+  "behavioral_baselines": 11,
+  "correlations": 5,
+  "component_analyses": 116,
+  "temporal_patterns": 11,
+  "zone_scores": 20,
+  "data_quality_notes": [
+    "Graph is very sparse (density=0.009283). Many algorithms produce trivial results for isolated nodes.",
+    "Graph has 116 connected components for 193 nodes. Most nodes are isolated. Graph algorithms limited to 7 components of size >= 2."
+  ]
+}

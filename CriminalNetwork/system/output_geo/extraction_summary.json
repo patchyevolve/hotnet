@@ -1,0 +1,3325 @@
+{
+  "run_id": "run_20260926_164752",
+  "pipeline_run": {
+    "run_id": "run_20260926_164752",
+    "case_id": "CASE_DEMO_001",
+    "input_snapshot": [
+      "00_CRIME_STORY.md",
+      "01_FIR.txt",
+      "02_CDR_Rakesh.csv",
+      "03_CDR_Suresh.csv",
+      "04_CDR_Amit.csv",
+      "05_Bank_Rakesh.csv",
+      "06_Bank_Suresh.csv",
+      "07_Bank_Amit.csv",
+      "08_Device_Rakesh.json",
+      "09_Social_Amit.json",
+      "10_CCTV_Log.csv",
+      "11_Criminal_History.json",
+      "12_WEIRD_CDR.csv",
+      "13_FIR_Rajesh.txt",
+      "14_CDR_Meena.csv",
+      "15_Bank_Meena.csv",
+      "16_Device_Amit.json",
+      "17_Social_Rakesh.json",
+      "18_Witness_Statement.txt",
+      "19_Surveillance_Report.txt",
+      "20_Journalist_Note.txt",
+      "21_Missing_Phone_CDR.csv",
+      "22_Bank_No_Name.csv",
+      "23_FIR_No_Phone.txt",
+      "24_CCTV_Gap_Timestamps.csv",
+      "25_Social_Partial.json",
+      "26_Name_Variation_CDR.csv",
+      "27_Temporal_Contradiction_CDR.csv",
+      "28_Source_Dependency_CDR.csv",
+      "29_Investigator_Summary.txt",
+      "30_Adversarial_CDR.csv",
+      "31_Adversarial_Bank.csv",
+      "32_Adversarial_Social.json",
+      "33_Adversarial_CCTV.csv",
+      "34_Feedback_Loop_Report.txt",
+      "35_Identity_Uncertainty_CCTV.csv",
+      "36_Hindi_Witness_Statement.txt",
+      "37_Hypothesis_Competition_CDR.csv",
+      "38_Falsification_CDR.csv",
+      "39_Feedback_Loop_CDR.csv",
+      "40_Self_Loop_CCTV.csv",
+      "41_Self_Loop_CDR.csv",
+      "42_Complex_Resolution_CDR.csv",
+      "43_Adversarial_Identity_CDR.csv",
+      "44_Circular_Reference_CDR.csv",
+      "45_Confidence_Edge_Cases_CDR.csv",
+      "46_FIR_Supplement.pdf",
+      "47_FIR_Supplement.docx",
+      "48_Bank_Transactions.xlsx",
+      "49_CCTV_Screenshot.png",
+      "FIR_MANIFEST.json",
+      "MULTI_CASE_DEMO_004_ONLY.json",
+      "MULTI_CASE_MANIFEST.json",
+      "TEST_MANIFEST.json",
+      "02_CDR.csv",
+      "FIR_MANIFEST.json",
+      "02_CDR.csv",
+      "FIR_MANIFEST.json",
+      "01_FIR.txt",
+      "02_WITNESS_EVIDENCE.txt",
+      "03_CDR.csv",
+      "FIR_MANIFEST.json",
+      "01_synthetic_witness_note.txt"
+    ],
+    "jurisdiction_node_id": "JURISDICTION_DELHI_CYBERCRIME",
+    "pipeline_version": "v1.0",
+    "model_versions": {},
+    "policy_version": "policy_v1.0",
+    "start_time": "2026-09-26T16:47:52.681347",
+    "end_time": "2026-09-26T16:50:54.637531",
+    "parent_run_id": null,
+    "trigger": "new_evidence",
+    "status": "completed"
+  },
+  "extraction_summary": {
+    "total_entities": 224,
+    "total_relations": 442,
+    "entity_types": {
+      "PHONE": 17,
+      "AMOUNT": 25,
+      "PERSON": 26,
+      "DATE": 52,
+      "LOCATION": 47,
+      "ORGANIZATION": 26,
+      "ACCOUNT": 11,
+      "DEVICE": 3,
+      "EVENT": 14,
+      "UNKNOWN": 1,
+      "DOCUMENT": 2
+    },
+    "relation_types": {
+      "TRANSFERRED_TO": 13,
+      "VICTIM_OF": 3,
+      "VISITED": 181,
+      "CALLED": 175,
+      "OWNS_ACCOUNT": 8,
+      "RECEIVED_FROM": 4,
+      "ASSOCIATED_WITH": 42,
+      "MESSED": 5,
+      "SUSPECT_OF": 7,
+      "WORKS_WITH": 1,
+      "ASSOCIATE_OF": 1,
+      "FRIEND_OF": 1,
+      "LIVES_AT": 1
+    },
+    "files_processed": 62
+  },
+  "ingestion_summary": {
+    "total_files": 63,
+    "total_records": 324,
+    "file_types": {
+      "text": 13,
+      "tabular": 33,
+      "json": 14,
+      "pdf": 1,
+      "docx": 1,
+      "image": 1
+    },
+    "source_types": {
+      "text": 12,
+      "fir": 10,
+      "cdr": 21,
+      "bank": 7,
+      "device": 2,
+      "social": 4,
+      "cctv": 7
+    },
+    "dependency_groups": 7,
+    "integrity_records": 58,
+    "data_quality": {
+      "avg_quality_score": 0.986,
+      "min_quality_score": 0.908,
+      "files_assessed": 58
+    },
+    "adversarial": {
+      "total_checked": 58,
+      "suspicious_count": 4,
+      "suspicious_files": [
+        "30_Adversarial_CDR.csv",
+        "31_Adversarial_Bank.csv",
+        "32_Adversarial_Social.json",
+        "33_Adversarial_CCTV.csv"
+      ]
+    },
+    "run_id": "run_20260926_164752",
+    "files": [
+      {
+        "name": "00_CRIME_STORY.md",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:14ccbf8d2615cf57cfed8741e4f4d9bf69d264e491944d064991f34634dc003b",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "00_CRIME_STORY.md",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "01_FIR.txt",
+        "type": "text",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:737fde3ea198f9760c0fd17c52244536df4be4d5a4677a17fb4e40f451e5133e",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "01_FIR.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 692B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "02_CDR_Rakesh.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 15,
+        "file_hash": "sha256:b685afdbc080e11f684810cee45f13e547e55a11af3df10fd1d588a5789909b9",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "02_CDR_Rakesh.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "hub_pattern: 9876543210 made 15/15 calls"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "03_CDR_Suresh.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 11,
+        "file_hash": "sha256:ea7afd95a79ea109e6ee5c7965a3f932bfc702843d1966e9a533d9e041734037",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "03_CDR_Suresh.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "hub_pattern: 9876543211 made 11/11 calls"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "04_CDR_Amit.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 8,
+        "file_hash": "sha256:0f67b8496dc96988e1e09235df513b4242ef79319f025fe157710f847a63ff9f",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "04_CDR_Amit.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "hub_pattern: 9876543212 made 8/8 calls"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "05_Bank_Rakesh.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 7,
+        "file_hash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 0.982,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "05_Bank_Rakesh.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "06_Bank_Suresh.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 6,
+        "file_hash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 0.965,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "06_Bank_Suresh.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "07_Bank_Amit.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 4,
+        "file_hash": "sha256:88c1f60ddffa6053f54c9904089a0fc6c33b004c1fe09d2dd36395b89835061c",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 0.948,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "07_Bank_Amit.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": true,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "future_date_detected: TXN203",
+            "future_date_detected: TXN204"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "08_Device_Rakesh.json",
+        "type": "json",
+        "source_type": "device",
+        "records": 4,
+        "file_hash": "sha256:3ea84bbfeb6a04c8bf18da2dc53037aebfb836a818c1cac6493cfd9e13468ea5",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.9,
+          "intent": 0.4,
+          "location": 0.85,
+          "timing": 0.9
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "08_Device_Rakesh.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "09_Social_Amit.json",
+        "type": "json",
+        "source_type": "social",
+        "records": 5,
+        "file_hash": "sha256:c64b36e3d037eb1344c96a89d7efcb3acdcd89739059231ac94913a816740b06",
+        "reliability": {
+          "occurrence": 0.85,
+          "identity": 0.6,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.8
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "09_Social_Amit.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "10_CCTV_Log.csv",
+        "type": "tabular",
+        "source_type": "cctv",
+        "records": 11,
+        "file_hash": "sha256:09d41d3e31fb794805558c71bee1d9b661796642a6c73249ef2ec0690281b356",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 0.935,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "10_CCTV_Log.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "11_Criminal_History.json",
+        "type": "json",
+        "source_type": "text",
+        "records": 2,
+        "file_hash": "sha256:6ca57f3f1fbf5e063cb8f2c1486a25c61d54a2669c0acb237a9371305945b977",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "11_Criminal_History.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "12_WEIRD_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 4,
+        "file_hash": "sha256:9285437450066052456e2cfa97308ce9378fb34b1df71f05ed7d395597ce4971",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "12_WEIRD_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 428B < 500B for cdr"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "13_FIR_Rajesh.txt",
+        "type": "text",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:a0fdb1f230d55604397182d1076e01139af8f380e7a0a15daee70f3bfe850aea",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "13_FIR_Rajesh.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "14_CDR_Meena.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 7,
+        "file_hash": "sha256:0dfe51bd7e4c5dd7fa4c51a6b9d12c9e4f5dbd49fb5caaf230a6a8cd92325df2",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "14_CDR_Meena.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "hub_pattern: 9876543213 made 7/7 calls"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "15_Bank_Meena.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 3,
+        "file_hash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "15_Bank_Meena.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": true,
+          "content_anomaly": true,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "round_amount_transactions: 3/3 are round numbers",
+            "rapid_transactions: 2 transactions within 1 hour"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "16_Device_Amit.json",
+        "type": "json",
+        "source_type": "device",
+        "records": 4,
+        "file_hash": "sha256:d80613db1195807f7a5151f9a98c0745844da385e69da3e54125306f02760bc9",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.9,
+          "intent": 0.4,
+          "location": 0.85,
+          "timing": 0.9
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "16_Device_Amit.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "17_Social_Rakesh.json",
+        "type": "json",
+        "source_type": "social",
+        "records": 5,
+        "file_hash": "sha256:609cba8ff689aed6f6bcf1bf5ca133c5ad3834ade3a11ff99fef23f25ad28aca",
+        "reliability": {
+          "occurrence": 0.85,
+          "identity": 0.6,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.8
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "17_Social_Rakesh.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "18_Witness_Statement.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:d35a87bf144d2e37eee945f51d502b2aee41aac3b68793b01ef03fba65adf5fe",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "18_Witness_Statement.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "19_Surveillance_Report.txt",
+        "type": "text",
+        "source_type": "cctv",
+        "records": 0,
+        "file_hash": "sha256:a5afaa3e93accbb58e4123fdca0c85deabffce8d9ee4761b829b2b23e12179fc",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "19_Surveillance_Report.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "20_Journalist_Note.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:2490f2daa5fddc5f8f203dd1d5541b0f160522a3d652f1d15cd97e74aa749394",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "20_Journalist_Note.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "21_Missing_Phone_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 11,
+        "file_hash": "sha256:726c2b3db50c6d3e8720ee805ca49ffba2eeee43d66421618a24945eaa02e8d5",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 0.939,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "21_Missing_Phone_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.3,
+          "reasons": [
+            "hub_pattern: 9876543213 made 10/11 calls"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "22_Bank_No_Name.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 5,
+        "file_hash": "sha256:acef455eccbc32e4149928918eb6a9defa1eefe1783a24d7be3707b2ef1f0dcc",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 0.908,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "22_Bank_No_Name.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "23_FIR_No_Phone.txt",
+        "type": "text",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:1750d74ba1c6a4f589cc85c4be3930ba56cb14b42c5e966393acc0c285449679",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "23_FIR_No_Phone.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "24_CCTV_Gap_Timestamps.csv",
+        "type": "tabular",
+        "source_type": "cctv",
+        "records": 10,
+        "file_hash": "sha256:bc0b8582516c7ee422832b928c3099a4f42d3c0e2fff351f8d75836321432dc9",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 0.914,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "24_CCTV_Gap_Timestamps.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "25_Social_Partial.json",
+        "type": "json",
+        "source_type": "social",
+        "records": 5,
+        "file_hash": "sha256:a123c4b3297b8a264eea7edadf9dc047e5379a2affb83a5a2e6ceb1f7e337603",
+        "reliability": {
+          "occurrence": 0.85,
+          "identity": 0.6,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.8
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "25_Social_Partial.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "26_Name_Variation_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:216dbd420d85da6a90af551e64cdb8d09acd8ca32d46870017294bb059205d62",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "26_Name_Variation_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "27_Temporal_Contradiction_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 8,
+        "file_hash": "sha256:8ee39e608cdc3f7f5831f1c2f7596dea94212dd7cd99d2cf027a25865d2a71d9",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "27_Temporal_Contradiction_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "28_Source_Dependency_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:beceb016af0927d040ea3b0f18e9c86d078a5a3b48eeee2191ef0e95c995519a",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "28_Source_Dependency_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "29_Investigator_Summary.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:9b334af1bce7ff28864df417803f1bf8bb8e758733eda1e759e55848bfb68ad0",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "29_Investigator_Summary.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "30_Adversarial_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:de9e66af438567252de8ba2c5d56a3be07362fdf3c290e6d6469d1a5763c16f8",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": true,
+        "adversarial_check": {
+          "file_name": "30_Adversarial_CDR.csv",
+          "is_suspicious": true,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.4,
+          "reasons": [
+            "echo_sweep_pattern: 10/10 calls are perfectly reciprocal within 90s and dominant number 9876543210 fans out to 4 partners \u2014 machine-generated call fabrications"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "31_Adversarial_Bank.csv",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 4,
+        "file_hash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 0.948,
+        "adversarial_suspicious": true,
+        "adversarial_check": {
+          "file_name": "31_Adversarial_Bank.csv",
+          "is_suspicious": true,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": true,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.4,
+          "reasons": [
+            "cross_file_timestamp_reconciliation: 1 credit(s) ['TXN501'] at timestamps funding accounts whose ledger balance (other sources, before credit time) is below the credited amount \u2014 funds could not have existed, fabricated ledger entry"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "32_Adversarial_Social.json",
+        "type": "json",
+        "source_type": "social",
+        "records": 5,
+        "file_hash": "sha256:2a6ee4c00233f959c36603ec3da9f5c61584c9e694e6616c6594afe52e5e2a77",
+        "reliability": {
+          "occurrence": 0.85,
+          "identity": 0.6,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.8
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": true,
+        "adversarial_check": {
+          "file_name": "32_Adversarial_Social.json",
+          "is_suspicious": true,
+          "behavioral_anomaly": true,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.4,
+          "reasons": [
+            "fake_interaction: DM contact 'unknown_user_2847' profile (from 25_Social_Partial.json) created 12 days before first message with 0 posts and 0 followers \u2014 fabricated interlocutor"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "33_Adversarial_CCTV.csv",
+        "type": "tabular",
+        "source_type": "cctv",
+        "records": 8,
+        "file_hash": "sha256:165ff4bbab11560a59c4ad2979b4182e3f72b7366b6e9ba63c47b4ea1095a035",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 0.911,
+        "adversarial_suspicious": true,
+        "adversarial_check": {
+          "file_name": "33_Adversarial_CCTV.csv",
+          "is_suspicious": true,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": true,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.4,
+          "reasons": [
+            "timestamp_manipulation: uniform cadence (0.86 equal intervals) with rows shifted-duplicated from 10_CCTV_Log.csv at different timestamps \u2014 fabricated CCTV timeline"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "34_Feedback_Loop_Report.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:84f6954c200fefc3f6331e257631b72a3958719fe8f96d7632cb4a3e7d982dae",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "34_Feedback_Loop_Report.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "35_Identity_Uncertainty_CCTV.csv",
+        "type": "tabular",
+        "source_type": "cctv",
+        "records": 8,
+        "file_hash": "sha256:4070d535c28a565d7d9b61fea8268068ac613fe7fed8500a7b9fa856867a8444",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 0.938,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "35_Identity_Uncertainty_CCTV.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "36_Hindi_Witness_Statement.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:22eb99057a69bfe79efef8abb6a59f1c15371243b31bbfaa78172cd06f72bb4c",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "36_Hindi_Witness_Statement.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "37_Hypothesis_Competition_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:bda05896cdf48a4323b4b669a5046d6a9c4d6ca0e2315c444f185dd316d4e1ce",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "37_Hypothesis_Competition_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "38_Falsification_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:5fcbbc298dc4c86f9bf3f8a96f002c395e85aae328d94b159cf843898865896c",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "38_Falsification_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "39_Feedback_Loop_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:afc7f0794d11bcd69da72bd1742cd5c3407b8a4b6cbe273725307ba24d27c871",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "39_Feedback_Loop_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "40_Self_Loop_CCTV.csv",
+        "type": "tabular",
+        "source_type": "cctv",
+        "records": 8,
+        "file_hash": "sha256:1c33fcb2aefd1c97ab1c0ebdc24526c53802496430ad4dcd82fa83ed9d472af9",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 0.984,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "40_Self_Loop_CCTV.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "41_Self_Loop_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 8,
+        "file_hash": "sha256:c8b6e27414367029d3cf6e41df0171d918b1cc30a334c849c213ee80d502e803",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "41_Self_Loop_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "42_Complex_Resolution_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:13aa961f1b0e12db58d43a2048ade258d0d031238eb396e9537cf24f2d1e592d",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "42_Complex_Resolution_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "43_Adversarial_Identity_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:16fcbbcea4925fbf7ae3966deff2a262b1228addd6d9a11078eed6a912a87231",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "43_Adversarial_Identity_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "44_Circular_Reference_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:41d8789a0a81c01ca2c6c7f26a2e09385ebec84318dbe46a5d70891bb7f4a899",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "44_Circular_Reference_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "45_Confidence_Edge_Cases_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 10,
+        "file_hash": "sha256:9d204eca96f76e8e0b7674df5e49c2eefeea43eaeaee76792b7f3cf32782783f",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "45_Confidence_Edge_Cases_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "46_FIR_Supplement.pdf",
+        "type": "pdf",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:37c04a0a78706af1d8924e0d3ce596209f0ed33785a26debc1de70ef3abf1589",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 0.93,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "46_FIR_Supplement.pdf",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "47_FIR_Supplement.docx",
+        "type": "docx",
+        "source_type": "fir",
+        "records": 3,
+        "file_hash": "sha256:2a870c50af6e2171e5e0397959b5fbe0f8969722c6cb349cf0717e01c6f15ffa",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "47_FIR_Supplement.docx",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "48_Bank_Transactions.xlsx",
+        "type": "tabular",
+        "source_type": "bank",
+        "records": 4,
+        "file_hash": "sha256:2bcf20c6723c64abbcf98969425c76912e2ee56395676c10629932289f8f1027",
+        "reliability": {
+          "occurrence": 0.98,
+          "identity": 0.85,
+          "intent": 0.5,
+          "location": 0.4,
+          "timing": 0.95
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "48_Bank_Transactions.xlsx",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": true,
+          "duplicate_suspect": false,
+          "score": 0.1,
+          "reasons": [
+            "round_amount_transactions: 3/4 are round numbers"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "49_CCTV_Screenshot.png",
+        "type": "image",
+        "source_type": "cctv",
+        "records": 0,
+        "file_hash": "sha256:6691776ef8e595ca478cabf819675c059c307efe64ec52620241f706cbc9633e",
+        "reliability": {
+          "occurrence": 0.9,
+          "identity": 0.5,
+          "intent": 0.2,
+          "location": 0.95,
+          "timing": 0.9
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "49_CCTV_Screenshot.png",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "FIR_MANIFEST.json",
+        "type": "json",
+        "source_type": "fir",
+        "records": 7,
+        "file_hash": "sha256:4099973061eff4db32637d9a7f3c50123f6381d7ba9845c105b28094c662d8c0",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "FIR_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 673B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "MULTI_CASE_DEMO_004_ONLY.json",
+        "type": "json",
+        "source_type": "text",
+        "records": 3,
+        "file_hash": "sha256:b258af1e088b0835f6c0fe194dad632ab2f5e5655c75f59f3777857acc43a8b4",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "MULTI_CASE_DEMO_004_ONLY.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "MULTI_CASE_MANIFEST.json",
+        "type": "json",
+        "source_type": "text",
+        "records": 3,
+        "file_hash": "sha256:3cba6bd0d87464d7b57f324e408807e3f61ec057f7ce5d7b784afc37cbe0b551",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "MULTI_CASE_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "TEST_MANIFEST.json",
+        "type": "json",
+        "source_type": "text",
+        "records": 4,
+        "file_hash": "sha256:316173c31a6392fb26e4695f051cdfa43b9e16bef34c67f9c79bca4ec2a08698",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "TEST_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "02_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 2,
+        "file_hash": "sha256:bdd30ad64ac0928abef7f233df5d43b275e5a6c10c3dfa2a7f944cf3e23ed970",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 0.95,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "02_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 237B < 500B for cdr"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "FIR_MANIFEST.json",
+        "type": "json",
+        "source_type": "fir",
+        "records": 6,
+        "file_hash": "sha256:9fd458d3fed3409c29262c4391d35fdd7dbd5769bf9f8b63a0fa6c58d822e326",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "FIR_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 673B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "02_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 2,
+        "file_hash": "sha256:ad72951187b2dd11270747bb9580e432b88bfaf338dca95b6c421c2372ac7f9b",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 0.95,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "02_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 237B < 500B for cdr"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "FIR_MANIFEST.json",
+        "type": "json",
+        "source_type": "fir",
+        "records": 6,
+        "file_hash": "sha256:4ef619619ad06c756c3206cb15887e0f7a0b8d94bdf9755562f78efde84d14e9",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "FIR_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 673B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "01_FIR.txt",
+        "type": "text",
+        "source_type": "fir",
+        "records": 0,
+        "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "01_FIR.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 692B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "02_WITNESS_EVIDENCE.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "02_WITNESS_EVIDENCE.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "03_CDR.csv",
+        "type": "tabular",
+        "source_type": "cdr",
+        "records": 2,
+        "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+        "reliability": {
+          "occurrence": 0.95,
+          "identity": 0.6,
+          "intent": 0.3,
+          "location": 0.8,
+          "timing": 0.95
+        },
+        "quality_score": 0.95,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "03_CDR.csv",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 255B < 500B for cdr"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "FIR_MANIFEST.json",
+        "type": "json",
+        "source_type": "fir",
+        "records": 6,
+        "file_hash": "sha256:e0bc189d33eef4c6713d5bcca72f343eabe0284c24b961ce48ee67b271983896",
+        "reliability": {
+          "occurrence": 0.8,
+          "identity": 0.7,
+          "intent": 0.6,
+          "location": 0.75,
+          "timing": 0.7
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "FIR_MANIFEST.json",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.2,
+          "reasons": [
+            "file_size_anomaly: 673B < 1000B for fir"
+          ],
+          "run_id": "run_20260926_164752"
+        }
+      },
+      {
+        "name": "01_synthetic_witness_note.txt",
+        "type": "text",
+        "source_type": "text",
+        "records": 0,
+        "file_hash": "sha256:8ac4ab0a4d3aeb064d53ed9ee0378c8991e326b3f3e801b22461d159fb31634f",
+        "reliability": {
+          "occurrence": 0.7,
+          "identity": 0.65,
+          "intent": 0.5,
+          "location": 0.7,
+          "timing": 0.65
+        },
+        "quality_score": 1.0,
+        "adversarial_suspicious": false,
+        "adversarial_check": {
+          "file_name": "01_synthetic_witness_note.txt",
+          "is_suspicious": false,
+          "behavioral_anomaly": false,
+          "temporal_anomaly": false,
+          "content_anomaly": false,
+          "duplicate_suspect": false,
+          "score": 0.0,
+          "reasons": [],
+          "run_id": "run_20260926_164752"
+        }
+      }
+    ]
+  },
+  "extraction_log": [
+    {
+      "file_name": "01_FIR.txt",
+      "entities_found": 33,
+      "relations_found": 5,
+      "new_entities_added": 30,
+      "new_relations_added": 5
+    },
+    {
+      "file_name": "02_CDR_Rakesh.csv",
+      "entities_found": 10,
+      "relations_found": 30,
+      "new_entities_added": 9,
+      "new_relations_added": 30
+    },
+    {
+      "file_name": "03_CDR_Suresh.csv",
+      "entities_found": 7,
+      "relations_found": 22,
+      "new_entities_added": 0,
+      "new_relations_added": 22
+    },
+    {
+      "file_name": "04_CDR_Amit.csv",
+      "entities_found": 6,
+      "relations_found": 16,
+      "new_entities_added": 1,
+      "new_relations_added": 16
+    },
+    {
+      "file_name": "05_Bank_Rakesh.csv",
+      "entities_found": 3,
+      "relations_found": 2,
+      "new_entities_added": 3,
+      "new_relations_added": 2
+    },
+    {
+      "file_name": "06_Bank_Suresh.csv",
+      "entities_found": 3,
+      "relations_found": 2,
+      "new_entities_added": 2,
+      "new_relations_added": 2
+    },
+    {
+      "file_name": "07_Bank_Amit.csv",
+      "entities_found": 2,
+      "relations_found": 1,
+      "new_entities_added": 2,
+      "new_relations_added": 1
+    },
+    {
+      "file_name": "08_Device_Rakesh.json",
+      "entities_found": 17,
+      "relations_found": 7,
+      "new_entities_added": 13,
+      "new_relations_added": 7
+    },
+    {
+      "file_name": "09_Social_Amit.json",
+      "entities_found": 8,
+      "relations_found": 4,
+      "new_entities_added": 6,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "10_CCTV_Log.csv",
+      "entities_found": 11,
+      "relations_found": 0,
+      "new_entities_added": 6,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "11_Criminal_History.json",
+      "entities_found": 7,
+      "relations_found": 7,
+      "new_entities_added": 4,
+      "new_relations_added": 7
+    },
+    {
+      "file_name": "12_WEIRD_CDR.csv",
+      "entities_found": 4,
+      "relations_found": 8,
+      "new_entities_added": 0,
+      "new_relations_added": 8
+    },
+    {
+      "file_name": "13_FIR_Rajesh.txt",
+      "entities_found": 26,
+      "relations_found": 3,
+      "new_entities_added": 12,
+      "new_relations_added": 3
+    },
+    {
+      "file_name": "14_CDR_Meena.csv",
+      "entities_found": 4,
+      "relations_found": 14,
+      "new_entities_added": 0,
+      "new_relations_added": 14
+    },
+    {
+      "file_name": "15_Bank_Meena.csv",
+      "entities_found": 5,
+      "relations_found": 4,
+      "new_entities_added": 1,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "16_Device_Amit.json",
+      "entities_found": 18,
+      "relations_found": 8,
+      "new_entities_added": 12,
+      "new_relations_added": 8
+    },
+    {
+      "file_name": "17_Social_Rakesh.json",
+      "entities_found": 6,
+      "relations_found": 4,
+      "new_entities_added": 3,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "18_Witness_Statement.txt",
+      "entities_found": 35,
+      "relations_found": 6,
+      "new_entities_added": 19,
+      "new_relations_added": 5
+    },
+    {
+      "file_name": "19_Surveillance_Report.txt",
+      "entities_found": 62,
+      "relations_found": 15,
+      "new_entities_added": 34,
+      "new_relations_added": 15
+    },
+    {
+      "file_name": "20_Journalist_Note.txt",
+      "entities_found": 30,
+      "relations_found": 6,
+      "new_entities_added": 12,
+      "new_relations_added": 6
+    },
+    {
+      "file_name": "21_Missing_Phone_CDR.csv",
+      "entities_found": 7,
+      "relations_found": 16,
+      "new_entities_added": 0,
+      "new_relations_added": 16
+    },
+    {
+      "file_name": "22_Bank_No_Name.csv",
+      "entities_found": 1,
+      "relations_found": 0,
+      "new_entities_added": 1,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "23_FIR_No_Phone.txt",
+      "entities_found": 12,
+      "relations_found": 1,
+      "new_entities_added": 3,
+      "new_relations_added": 1
+    },
+    {
+      "file_name": "24_CCTV_Gap_Timestamps.csv",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "25_Social_Partial.json",
+      "entities_found": 1,
+      "relations_found": 1,
+      "new_entities_added": 1,
+      "new_relations_added": 1
+    },
+    {
+      "file_name": "26_Name_Variation_CDR.csv",
+      "entities_found": 7,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 19
+    },
+    {
+      "file_name": "27_Temporal_Contradiction_CDR.csv",
+      "entities_found": 7,
+      "relations_found": 16,
+      "new_entities_added": 1,
+      "new_relations_added": 16
+    },
+    {
+      "file_name": "28_Source_Dependency_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "29_Investigator_Summary.txt",
+      "entities_found": 48,
+      "relations_found": 12,
+      "new_entities_added": 15,
+      "new_relations_added": 11
+    },
+    {
+      "file_name": "30_Adversarial_CDR.csv",
+      "entities_found": 9,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "31_Adversarial_Bank.csv",
+      "entities_found": 3,
+      "relations_found": 2,
+      "new_entities_added": 1,
+      "new_relations_added": 2
+    },
+    {
+      "file_name": "32_Adversarial_Social.json",
+      "entities_found": 6,
+      "relations_found": 3,
+      "new_entities_added": 4,
+      "new_relations_added": 3
+    },
+    {
+      "file_name": "33_Adversarial_CCTV.csv",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "34_Feedback_Loop_Report.txt",
+      "entities_found": 15,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "35_Identity_Uncertainty_CCTV.csv",
+      "entities_found": 2,
+      "relations_found": 2,
+      "new_entities_added": 0,
+      "new_relations_added": 2
+    },
+    {
+      "file_name": "36_Hindi_Witness_Statement.txt",
+      "entities_found": 10,
+      "relations_found": 0,
+      "new_entities_added": 9,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "37_Hypothesis_Competition_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "38_Falsification_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "39_Feedback_Loop_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "40_Self_Loop_CCTV.csv",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "41_Self_Loop_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 12,
+      "new_entities_added": 0,
+      "new_relations_added": 12
+    },
+    {
+      "file_name": "42_Complex_Resolution_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "43_Adversarial_Identity_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "44_Circular_Reference_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "45_Confidence_Edge_Cases_CDR.csv",
+      "entities_found": 8,
+      "relations_found": 20,
+      "new_entities_added": 0,
+      "new_relations_added": 20
+    },
+    {
+      "file_name": "46_FIR_Supplement.pdf",
+      "entities_found": 12,
+      "relations_found": 0,
+      "new_entities_added": 2,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "47_FIR_Supplement.docx",
+      "entities_found": 15,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "48_Bank_Transactions.xlsx",
+      "entities_found": 8,
+      "relations_found": 4,
+      "new_entities_added": 3,
+      "new_relations_added": 3
+    },
+    {
+      "file_name": "49_CCTV_Screenshot.png",
+      "entities_found": 1,
+      "relations_found": 0,
+      "new_entities_added": 1,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "FIR_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "MULTI_CASE_DEMO_004_ONLY.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "MULTI_CASE_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "TEST_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "02_CDR.csv",
+      "entities_found": 3,
+      "relations_found": 4,
+      "new_entities_added": 2,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "FIR_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "02_CDR.csv",
+      "entities_found": 3,
+      "relations_found": 4,
+      "new_entities_added": 2,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "FIR_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "01_FIR.txt",
+      "entities_found": 4,
+      "relations_found": 0,
+      "new_entities_added": 2,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "02_WITNESS_EVIDENCE.txt",
+      "entities_found": 6,
+      "relations_found": 1,
+      "new_entities_added": 1,
+      "new_relations_added": 1
+    },
+    {
+      "file_name": "03_CDR.csv",
+      "entities_found": 3,
+      "relations_found": 4,
+      "new_entities_added": 2,
+      "new_relations_added": 4
+    },
+    {
+      "file_name": "FIR_MANIFEST.json",
+      "entities_found": 0,
+      "relations_found": 0,
+      "new_entities_added": 0,
+      "new_relations_added": 0
+    },
+    {
+      "file_name": "01_synthetic_witness_note.txt",
+      "entities_found": 3,
+      "relations_found": 0,
+      "new_entities_added": 3,
+      "new_relations_added": 0
+    }
+  ],
+  "export_time": "2026-09-26T16:50:54.640192",
+  "dependency_groups": [
+    {
+      "group_id": "grp_text_0",
+      "sources": [
+        "00_CRIME_STORY.md",
+        "11_Criminal_History.json",
+        "18_Witness_Statement.txt",
+        "20_Journalist_Note.txt",
+        "29_Investigator_Summary.txt",
+        "34_Feedback_Loop_Report.txt",
+        "36_Hindi_Witness_Statement.txt",
+        "MULTI_CASE_DEMO_004_ONLY.json",
+        "MULTI_CASE_MANIFEST.json",
+        "TEST_MANIFEST.json",
+        "02_WITNESS_EVIDENCE.txt",
+        "01_synthetic_witness_note.txt"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple text files may share sub-sources"
+    },
+    {
+      "group_id": "grp_fir_1",
+      "sources": [
+        "01_FIR.txt",
+        "13_FIR_Rajesh.txt",
+        "23_FIR_No_Phone.txt",
+        "46_FIR_Supplement.pdf",
+        "47_FIR_Supplement.docx",
+        "FIR_MANIFEST.json",
+        "FIR_MANIFEST.json",
+        "FIR_MANIFEST.json",
+        "01_FIR.txt",
+        "FIR_MANIFEST.json"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple fir files may share sub-sources"
+    },
+    {
+      "group_id": "grp_cdr_2",
+      "sources": [
+        "02_CDR_Rakesh.csv",
+        "03_CDR_Suresh.csv",
+        "04_CDR_Amit.csv",
+        "12_WEIRD_CDR.csv",
+        "14_CDR_Meena.csv",
+        "21_Missing_Phone_CDR.csv",
+        "26_Name_Variation_CDR.csv",
+        "27_Temporal_Contradiction_CDR.csv",
+        "28_Source_Dependency_CDR.csv",
+        "30_Adversarial_CDR.csv",
+        "37_Hypothesis_Competition_CDR.csv",
+        "38_Falsification_CDR.csv",
+        "39_Feedback_Loop_CDR.csv",
+        "41_Self_Loop_CDR.csv",
+        "42_Complex_Resolution_CDR.csv",
+        "43_Adversarial_Identity_CDR.csv",
+        "44_Circular_Reference_CDR.csv",
+        "45_Confidence_Edge_Cases_CDR.csv",
+        "02_CDR.csv",
+        "02_CDR.csv",
+        "03_CDR.csv"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple cdr files may share sub-sources"
+    },
+    {
+      "group_id": "grp_bank_3",
+      "sources": [
+        "05_Bank_Rakesh.csv",
+        "06_Bank_Suresh.csv",
+        "07_Bank_Amit.csv",
+        "15_Bank_Meena.csv",
+        "22_Bank_No_Name.csv",
+        "31_Adversarial_Bank.csv",
+        "48_Bank_Transactions.xlsx"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple bank files may share sub-sources"
+    },
+    {
+      "group_id": "grp_device_4",
+      "sources": [
+        "08_Device_Rakesh.json",
+        "16_Device_Amit.json"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple device files may share sub-sources"
+    },
+    {
+      "group_id": "grp_social_5",
+      "sources": [
+        "09_Social_Amit.json",
+        "17_Social_Rakesh.json",
+        "25_Social_Partial.json",
+        "32_Adversarial_Social.json"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple social files may share sub-sources"
+    },
+    {
+      "group_id": "grp_cctv_6",
+      "sources": [
+        "10_CCTV_Log.csv",
+        "19_Surveillance_Report.txt",
+        "24_CCTV_Gap_Timestamps.csv",
+        "33_Adversarial_CCTV.csv",
+        "35_Identity_Uncertainty_CCTV.csv",
+        "40_Self_Loop_CCTV.csv",
+        "49_CCTV_Screenshot.png"
+      ],
+      "dependency_type": "same_source_type",
+      "description": "Multiple cctv files may share sub-sources"
+    }
+  ],
+  "evidence_integrity": [
+    {
+      "file_hash": "sha256:14ccbf8d2615cf57cfed8741e4f4d9bf69d264e491944d064991f34634dc003b",
+      "original_filename": "00_CRIME_STORY.md",
+      "ingestion_time": "2026-09-26T16:47:52.758663",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.758689",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:6912b250e044cf73974acd5539e7a6bacbbdc37bbcb7b52360c2ee7102cc14a4",
+      "original_filename": "01_FIR.txt",
+      "ingestion_time": "2026-09-26T16:47:53.401919",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.401928",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:b685afdbc080e11f684810cee45f13e547e55a11af3df10fd1d588a5789909b9",
+      "original_filename": "02_CDR_Rakesh.csv",
+      "ingestion_time": "2026-09-26T16:47:52.760346",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.760357",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:ea7afd95a79ea109e6ee5c7965a3f932bfc702843d1966e9a533d9e041734037",
+      "original_filename": "03_CDR_Suresh.csv",
+      "ingestion_time": "2026-09-26T16:47:52.761796",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.761807",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:0f67b8496dc96988e1e09235df513b4242ef79319f025fe157710f847a63ff9f",
+      "original_filename": "04_CDR_Amit.csv",
+      "ingestion_time": "2026-09-26T16:47:52.762528",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.762537",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+      "original_filename": "05_Bank_Rakesh.csv",
+      "ingestion_time": "2026-09-26T16:47:52.763168",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.763177",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+      "original_filename": "06_Bank_Suresh.csv",
+      "ingestion_time": "2026-09-26T16:47:52.765239",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.765249",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:88c1f60ddffa6053f54c9904089a0fc6c33b004c1fe09d2dd36395b89835061c",
+      "original_filename": "07_Bank_Amit.csv",
+      "ingestion_time": "2026-09-26T16:47:52.765942",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.765952",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:3ea84bbfeb6a04c8bf18da2dc53037aebfb836a818c1cac6493cfd9e13468ea5",
+      "original_filename": "08_Device_Rakesh.json",
+      "ingestion_time": "2026-09-26T16:47:52.766510",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.766518",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:c64b36e3d037eb1344c96a89d7efcb3acdcd89739059231ac94913a816740b06",
+      "original_filename": "09_Social_Amit.json",
+      "ingestion_time": "2026-09-26T16:47:52.766689",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.766697",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:09d41d3e31fb794805558c71bee1d9b661796642a6c73249ef2ec0690281b356",
+      "original_filename": "10_CCTV_Log.csv",
+      "ingestion_time": "2026-09-26T16:47:52.767006",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.767013",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:6ca57f3f1fbf5e063cb8f2c1486a25c61d54a2669c0acb237a9371305945b977",
+      "original_filename": "11_Criminal_History.json",
+      "ingestion_time": "2026-09-26T16:47:52.767775",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.767785",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:9285437450066052456e2cfa97308ce9378fb34b1df71f05ed7d395597ce4971",
+      "original_filename": "12_WEIRD_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.767971",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.767979",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:a0fdb1f230d55604397182d1076e01139af8f380e7a0a15daee70f3bfe850aea",
+      "original_filename": "13_FIR_Rajesh.txt",
+      "ingestion_time": "2026-09-26T16:47:52.768457",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.768466",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:0dfe51bd7e4c5dd7fa4c51a6b9d12c9e4f5dbd49fb5caaf230a6a8cd92325df2",
+      "original_filename": "14_CDR_Meena.csv",
+      "ingestion_time": "2026-09-26T16:47:52.768656",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.768664",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+      "original_filename": "15_Bank_Meena.csv",
+      "ingestion_time": "2026-09-26T16:47:52.769255",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.769264",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:d80613db1195807f7a5151f9a98c0745844da385e69da3e54125306f02760bc9",
+      "original_filename": "16_Device_Amit.json",
+      "ingestion_time": "2026-09-26T16:47:52.769818",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.769829",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:609cba8ff689aed6f6bcf1bf5ca133c5ad3834ade3a11ff99fef23f25ad28aca",
+      "original_filename": "17_Social_Rakesh.json",
+      "ingestion_time": "2026-09-26T16:47:52.770020",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.770028",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:d35a87bf144d2e37eee945f51d502b2aee41aac3b68793b01ef03fba65adf5fe",
+      "original_filename": "18_Witness_Statement.txt",
+      "ingestion_time": "2026-09-26T16:47:52.770334",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.770343",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:a5afaa3e93accbb58e4123fdca0c85deabffce8d9ee4761b829b2b23e12179fc",
+      "original_filename": "19_Surveillance_Report.txt",
+      "ingestion_time": "2026-09-26T16:47:52.770581",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.770590",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:2490f2daa5fddc5f8f203dd1d5541b0f160522a3d652f1d15cd97e74aa749394",
+      "original_filename": "20_Journalist_Note.txt",
+      "ingestion_time": "2026-09-26T16:47:52.770815",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.770825",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:726c2b3db50c6d3e8720ee805ca49ffba2eeee43d66421618a24945eaa02e8d5",
+      "original_filename": "21_Missing_Phone_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.771014",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.771024",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:acef455eccbc32e4149928918eb6a9defa1eefe1783a24d7be3707b2ef1f0dcc",
+      "original_filename": "22_Bank_No_Name.csv",
+      "ingestion_time": "2026-09-26T16:47:52.772645",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.772661",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:1750d74ba1c6a4f589cc85c4be3930ba56cb14b42c5e966393acc0c285449679",
+      "original_filename": "23_FIR_No_Phone.txt",
+      "ingestion_time": "2026-09-26T16:47:52.773629",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.773649",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:bc0b8582516c7ee422832b928c3099a4f42d3c0e2fff351f8d75836321432dc9",
+      "original_filename": "24_CCTV_Gap_Timestamps.csv",
+      "ingestion_time": "2026-09-26T16:47:52.774008",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.774021",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:a123c4b3297b8a264eea7edadf9dc047e5379a2affb83a5a2e6ceb1f7e337603",
+      "original_filename": "25_Social_Partial.json",
+      "ingestion_time": "2026-09-26T16:47:52.775397",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.775412",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:216dbd420d85da6a90af551e64cdb8d09acd8ca32d46870017294bb059205d62",
+      "original_filename": "26_Name_Variation_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.775738",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.775748",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:8ee39e608cdc3f7f5831f1c2f7596dea94212dd7cd99d2cf027a25865d2a71d9",
+      "original_filename": "27_Temporal_Contradiction_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.776590",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.776601",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:beceb016af0927d040ea3b0f18e9c86d078a5a3b48eeee2191ef0e95c995519a",
+      "original_filename": "28_Source_Dependency_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.777485",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.777502",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:9b334af1bce7ff28864df417803f1bf8bb8e758733eda1e759e55848bfb68ad0",
+      "original_filename": "29_Investigator_Summary.txt",
+      "ingestion_time": "2026-09-26T16:47:52.778542",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.778557",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:de9e66af438567252de8ba2c5d56a3be07362fdf3c290e6d6469d1a5763c16f8",
+      "original_filename": "30_Adversarial_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.778827",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.778838",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+      "original_filename": "31_Adversarial_Bank.csv",
+      "ingestion_time": "2026-09-26T16:47:52.779680",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.779691",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:2a6ee4c00233f959c36603ec3da9f5c61584c9e694e6616c6594afe52e5e2a77",
+      "original_filename": "32_Adversarial_Social.json",
+      "ingestion_time": "2026-09-26T16:47:52.780402",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.780411",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:165ff4bbab11560a59c4ad2979b4182e3f72b7366b6e9ba63c47b4ea1095a035",
+      "original_filename": "33_Adversarial_CCTV.csv",
+      "ingestion_time": "2026-09-26T16:47:52.780674",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.780682",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:84f6954c200fefc3f6331e257631b72a3958719fe8f96d7632cb4a3e7d982dae",
+      "original_filename": "34_Feedback_Loop_Report.txt",
+      "ingestion_time": "2026-09-26T16:47:52.781367",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.781376",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:4070d535c28a565d7d9b61fea8268068ac613fe7fed8500a7b9fa856867a8444",
+      "original_filename": "35_Identity_Uncertainty_CCTV.csv",
+      "ingestion_time": "2026-09-26T16:47:52.781597",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.781605",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:22eb99057a69bfe79efef8abb6a59f1c15371243b31bbfaa78172cd06f72bb4c",
+      "original_filename": "36_Hindi_Witness_Statement.txt",
+      "ingestion_time": "2026-09-26T16:47:52.782325",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.782334",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:bda05896cdf48a4323b4b669a5046d6a9c4d6ca0e2315c444f185dd316d4e1ce",
+      "original_filename": "37_Hypothesis_Competition_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.782549",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.782556",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:5fcbbc298dc4c86f9bf3f8a96f002c395e85aae328d94b159cf843898865896c",
+      "original_filename": "38_Falsification_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.783211",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.783220",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:afc7f0794d11bcd69da72bd1742cd5c3407b8a4b6cbe273725307ba24d27c871",
+      "original_filename": "39_Feedback_Loop_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.783851",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.783860",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:1c33fcb2aefd1c97ab1c0ebdc24526c53802496430ad4dcd82fa83ed9d472af9",
+      "original_filename": "40_Self_Loop_CCTV.csv",
+      "ingestion_time": "2026-09-26T16:47:52.784508",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.784516",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:c8b6e27414367029d3cf6e41df0171d918b1cc30a334c849c213ee80d502e803",
+      "original_filename": "41_Self_Loop_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.785238",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.785246",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:13aa961f1b0e12db58d43a2048ade258d0d031238eb396e9537cf24f2d1e592d",
+      "original_filename": "42_Complex_Resolution_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.785835",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.785844",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:16fcbbcea4925fbf7ae3966deff2a262b1228addd6d9a11078eed6a912a87231",
+      "original_filename": "43_Adversarial_Identity_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.786487",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.786497",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:41d8789a0a81c01ca2c6c7f26a2e09385ebec84318dbe46a5d70891bb7f4a899",
+      "original_filename": "44_Circular_Reference_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.787147",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.787158",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:9d204eca96f76e8e0b7674df5e49c2eefeea43eaeaee76792b7f3cf32782783f",
+      "original_filename": "45_Confidence_Edge_Cases_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:52.787966",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.787984",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:37c04a0a78706af1d8924e0d3ce596209f0ed33785a26debc1de70ef3abf1589",
+      "original_filename": "46_FIR_Supplement.pdf",
+      "ingestion_time": "2026-09-26T16:47:52.788899",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.788913",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:2a870c50af6e2171e5e0397959b5fbe0f8969722c6cb349cf0717e01c6f15ffa",
+      "original_filename": "47_FIR_Supplement.docx",
+      "ingestion_time": "2026-09-26T16:47:52.852229",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.852248",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:2bcf20c6723c64abbcf98969425c76912e2ee56395676c10629932289f8f1027",
+      "original_filename": "48_Bank_Transactions.xlsx",
+      "ingestion_time": "2026-09-26T16:47:52.938667",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:52.938716",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:6691776ef8e595ca478cabf819675c059c307efe64ec52620241f706cbc9633e",
+      "original_filename": "49_CCTV_Screenshot.png",
+      "ingestion_time": "2026-09-26T16:47:53.067965",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.067987",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:e0bc189d33eef4c6713d5bcca72f343eabe0284c24b961ce48ee67b271983896",
+      "original_filename": "FIR_MANIFEST.json",
+      "ingestion_time": "2026-09-26T16:47:53.402796",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.402806",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:b258af1e088b0835f6c0fe194dad632ab2f5e5655c75f59f3777857acc43a8b4",
+      "original_filename": "MULTI_CASE_DEMO_004_ONLY.json",
+      "ingestion_time": "2026-09-26T16:47:53.400000",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.400009",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:3cba6bd0d87464d7b57f324e408807e3f61ec057f7ce5d7b784afc37cbe0b551",
+      "original_filename": "MULTI_CASE_MANIFEST.json",
+      "ingestion_time": "2026-09-26T16:47:53.400184",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.400193",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:316173c31a6392fb26e4695f051cdfa43b9e16bef34c67f9c79bca4ec2a08698",
+      "original_filename": "TEST_MANIFEST.json",
+      "ingestion_time": "2026-09-26T16:47:53.400369",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.400377",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:ad72951187b2dd11270747bb9580e432b88bfaf338dca95b6c421c2372ac7f9b",
+      "original_filename": "02_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:53.401282",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.401290",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:a6d9d718eec7a143b57acd643c374b9a7d7e7bea3f49373350477be6943f52d5",
+      "original_filename": "02_WITNESS_EVIDENCE.txt",
+      "ingestion_time": "2026-09-26T16:47:53.402127",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.402149",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "original_filename": "03_CDR.csv",
+      "ingestion_time": "2026-09-26T16:47:53.402328",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.402338",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    },
+    {
+      "file_hash": "sha256:8ac4ab0a4d3aeb064d53ed9ee0378c8991e326b3f3e801b22461d159fb31634f",
+      "original_filename": "01_synthetic_witness_note.txt",
+      "ingestion_time": "2026-09-26T16:47:53.402992",
+      "chain_of_custody": [
+        {
+          "action": "ingested",
+          "timestamp": "2026-09-26T16:47:53.403002",
+          "by": "ingestion_engine",
+          "hash_before": "",
+          "hash_after": ""
+        }
+      ],
+      "transformations": []
+    }
+  ]
+}

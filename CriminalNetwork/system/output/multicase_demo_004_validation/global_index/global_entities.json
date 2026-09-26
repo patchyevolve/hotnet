@@ -1,0 +1,1851 @@
+{
+  "GLOB_0211200d4860638f": {
+    "canonical_id": "GLOB_0211200d4860638f",
+    "entity_type": "DEVICE",
+    "canonical_name": "Device: Xiaomi Redmi Note 12",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_02a2b8dcafc9368c": {
+    "canonical_id": "GLOB_02a2b8dcafc9368c",
+    "entity_type": "AMOUNT",
+    "canonical_name": "5,00,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_093c006a6e826bef": {
+    "canonical_id": "GLOB_093c006a6e826bef",
+    "entity_type": "DATE",
+    "canonical_name": "10:00 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0984d9738b709e94": {
+    "canonical_id": "GLOB_0984d9738b709e94",
+    "entity_type": "DATE",
+    "canonical_name": "7:00 PM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_09ed6835f9ade2d1": {
+    "canonical_id": "GLOB_09ed6835f9ade2d1",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh Main Market Camera 7",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0b5d75937f81317d": {
+    "canonical_id": "GLOB_0b5d75937f81317d",
+    "entity_type": "DATE",
+    "canonical_name": "19 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0c08e9ea689cf002": {
+    "canonical_id": "GLOB_0c08e9ea689cf002",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh Main Market Camera 5",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T10:31:43.473000",
+    "last_seen": "2026-09-25T22:50:35.785000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0c38a65489475cfa": {
+    "canonical_id": "GLOB_0c38a65489475cfa",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "Airtel Customer Care",
+    "phones": [
+      "198"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0cbbc509c02071e0": {
+    "canonical_id": "GLOB_0cbbc509c02071e0",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 3456",
+    "phones": [],
+    "accounts": [
+      "34567890123456"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_0eefa5cc6ef5c923": {
+    "canonical_id": "GLOB_0eefa5cc6ef5c923",
+    "entity_type": "DATE",
+    "canonical_name": "12 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_109367ed445a3dbb": {
+    "canonical_id": "GLOB_109367ed445a3dbb",
+    "entity_type": "DATE",
+    "canonical_name": "2025-04-12",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:43:23.876000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_1100b33780b7d729": {
+    "canonical_id": "GLOB_1100b33780b7d729",
+    "entity_type": "LOCATION",
+    "canonical_name": "Hyderabad Banjara Hills Demo Tower",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:48:01.717000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_11eaf4a96729e012": {
+    "canonical_id": "GLOB_11eaf4a96729e012",
+    "entity_type": "DATE",
+    "canonical_name": "25th March 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_1207e7e7df5a62a1": {
+    "canonical_id": "GLOB_1207e7e7df5a62a1",
+    "entity_type": "PHONE",
+    "canonical_name": "01129876543",
+    "phones": [
+      "01129876543"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_1513959de1790c62": {
+    "canonical_id": "GLOB_1513959de1790c62",
+    "entity_type": "LOCATION",
+    "canonical_name": "Noida Phase 2",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_16edd93765e2d275": {
+    "canonical_id": "GLOB_16edd93765e2d275",
+    "entity_type": "DATE",
+    "canonical_name": "8:45",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_19b78e7a54f90650": {
+    "canonical_id": "GLOB_19b78e7a54f90650",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Beautiful morning at Lajpat Nagar #delhi #morning",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_1c6577f0b6394db5": {
+    "canonical_id": "GLOB_1c6577f0b6394db5",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 5,00,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_1ded56b275a92d81": {
+    "canonical_id": "GLOB_1ded56b275a92d81",
+    "entity_type": "DATE",
+    "canonical_name": "approximately 8:45 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2430bdb5ecee1dad": {
+    "canonical_id": "GLOB_2430bdb5ecee1dad",
+    "entity_type": "DATE",
+    "canonical_name": "16 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_27da07df992e95b9": {
+    "canonical_id": "GLOB_27da07df992e95b9",
+    "entity_type": "DATE",
+    "canonical_name": "28/03/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_28729863d422d15a": {
+    "canonical_id": "GLOB_28729863d422d15a",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: New beginnings at Karol Bagh office #business #del",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_28b42d069cc20737": {
+    "canonical_id": "GLOB_28b42d069cc20737",
+    "entity_type": "LOCATION",
+    "canonical_name": "Noida Sector 62 Gate Camera",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_28f9ff2567603823": {
+    "canonical_id": "GLOB_28f9ff2567603823",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 1235",
+    "phones": [],
+    "accounts": [
+      "12345678901235"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2a7a45009af1e192": {
+    "canonical_id": "GLOB_2a7a45009af1e192",
+    "entity_type": "AMOUNT",
+    "canonical_name": "456/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2aa84c4a02a7c572": {
+    "canonical_id": "GLOB_2aa84c4a02a7c572",
+    "entity_type": "DATE",
+    "canonical_name": "9:00 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2ac6925d1a61c3aa": {
+    "canonical_id": "GLOB_2ac6925d1a61c3aa",
+    "entity_type": "DATE",
+    "canonical_name": "14th March 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2ae840cc097da773": {
+    "canonical_id": "GLOB_2ae840cc097da773",
+    "entity_type": "DATE",
+    "canonical_name": "around 8:45 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_2c4b8617800fa658": {
+    "canonical_id": "GLOB_2c4b8617800fa658",
+    "entity_type": "PERSON",
+    "canonical_name": "Shri Harish Chand",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_3298ffb602997ecb": {
+    "canonical_id": "GLOB_3298ffb602997ecb",
+    "entity_type": "LOCATION",
+    "canonical_name": "Noida",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_348315a1e56cd345": {
+    "canonical_id": "GLOB_348315a1e56cd345",
+    "entity_type": "DATE",
+    "canonical_name": "about 10 minutes",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_3736e273813d7840": {
+    "canonical_id": "GLOB_3736e273813d7840",
+    "entity_type": "LOCATION",
+    "canonical_name": "Lajpat Nagar Part II Camera 1",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T10:26:01.216000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_38ad6d25ab996cb9": {
+    "canonical_id": "GLOB_38ad6d25ab996cb9",
+    "entity_type": "DATE",
+    "canonical_name": "approximately 2:30 PM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_3a23046b7c493b3f": {
+    "canonical_id": "GLOB_3a23046b7c493b3f",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "SBI Customer Care",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_3b9158a8cb97822d": {
+    "canonical_id": "GLOB_3b9158a8cb97822d",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 4567",
+    "phones": [],
+    "accounts": [
+      "45678901234567"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_40ec83cefe4afd91": {
+    "canonical_id": "GLOB_40ec83cefe4afd91",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh Tower 1",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T10:26:01.216000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_451a9d328d0a7b3f": {
+    "canonical_id": "GLOB_451a9d328d0a7b3f",
+    "entity_type": "PERSON",
+    "canonical_name": "unknown_user_2847",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_4a3d741c65ce4441": {
+    "canonical_id": "GLOB_4a3d741c65ce4441",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh Metro",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.785000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_4d46a73ed1ec1c34": {
+    "canonical_id": "GLOB_4d46a73ed1ec1c34",
+    "entity_type": "AMOUNT",
+    "canonical_name": "25,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_4e6438c558e61f60": {
+    "canonical_id": "GLOB_4e6438c558e61f60",
+    "entity_type": "PERSON",
+    "canonical_name": "Amit Sharma",
+    "phones": [
+      "9876543212"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_4fb61faa1fd07a2d": {
+    "canonical_id": "GLOB_4fb61faa1fd07a2d",
+    "entity_type": "LOCATION",
+    "canonical_name": "Rose Apartments",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_501341c8de322912": {
+    "canonical_id": "GLOB_501341c8de322912",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh, Delhi",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5060eae5cf2afb82": {
+    "canonical_id": "GLOB_5060eae5cf2afb82",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543212",
+    "phones": [
+      "9876543212"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5085dd5187fafdf5": {
+    "canonical_id": "GLOB_5085dd5187fafdf5",
+    "entity_type": "PERSON",
+    "canonical_name": "मीना देवी",
+    "phones": [
+      "9876543213"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_52041371352ca92c": {
+    "canonical_id": "GLOB_52041371352ca92c",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 2345",
+    "phones": [],
+    "accounts": [
+      "3456789012345"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5205db4701e0781b": {
+    "canonical_id": "GLOB_5205db4701e0781b",
+    "entity_type": "PHONE",
+    "canonical_name": "9812345678",
+    "phones": [
+      "9812345678"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5366b11651b3ede4": {
+    "canonical_id": "GLOB_5366b11651b3ede4",
+    "entity_type": "DATE",
+    "canonical_name": "approximately 9:00 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_53c533353f88a6cb": {
+    "canonical_id": "GLOB_53c533353f88a6cb",
+    "entity_type": "PERSON",
+    "canonical_name": "Rajesh Kumar",
+    "phones": [
+      "9876543214"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_54a6228d060bddd9": {
+    "canonical_id": "GLOB_54a6228d060bddd9",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 8901",
+    "phones": [],
+    "accounts": [
+      "89012345678901"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_55c5ccf039d9107e": {
+    "canonical_id": "GLOB_55c5ccf039d9107e",
+    "entity_type": "DATE",
+    "canonical_name": "15/03/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_573c3eadae3e6b17": {
+    "canonical_id": "GLOB_573c3eadae3e6b17",
+    "entity_type": "DATE",
+    "canonical_name": "42 years",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5763af4df94e1451": {
+    "canonical_id": "GLOB_5763af4df94e1451",
+    "entity_type": "LOCATION",
+    "canonical_name": "Hyderabad",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:44:28.750000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5a394b6bd5734224": {
+    "canonical_id": "GLOB_5a394b6bd5734224",
+    "entity_type": "DATE",
+    "canonical_name": "2025-04-13",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:43:23.876000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5c4697ea2b4ace5f": {
+    "canonical_id": "GLOB_5c4697ea2b4ace5f",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 5",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5cc6c0e6dc9892d2": {
+    "canonical_id": "GLOB_5cc6c0e6dc9892d2",
+    "entity_type": "LOCATION",
+    "canonical_name": "New Delhi",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5cd59caa0f76f018": {
+    "canonical_id": "GLOB_5cd59caa0f76f018",
+    "entity_type": "LOCATION",
+    "canonical_name": "Connaught Place, Delhi",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5d480692bd116619": {
+    "canonical_id": "GLOB_5d480692bd116619",
+    "entity_type": "DATE",
+    "canonical_name": "Age 42",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_5d854fe5f0f02237": {
+    "canonical_id": "GLOB_5d854fe5f0f02237",
+    "entity_type": "DATE",
+    "canonical_name": "14 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_600d43609c1ff21b": {
+    "canonical_id": "GLOB_600d43609c1ff21b",
+    "entity_type": "PERSON",
+    "canonical_name": "Suresh Kumar",
+    "phones": [
+      "9876543211"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_6123d3b0cc7c4370": {
+    "canonical_id": "GLOB_6123d3b0cc7c4370",
+    "entity_type": "LOCATION",
+    "canonical_name": "Noida Sector 62 Tower",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.785000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_64bf74d215b317c0": {
+    "canonical_id": "GLOB_64bf74d215b317c0",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "PNB",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_65304e31d12b3731": {
+    "canonical_id": "GLOB_65304e31d12b3731",
+    "entity_type": "DATE",
+    "canonical_name": "14:30 hours",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_65526cc20c05ded8": {
+    "canonical_id": "GLOB_65526cc20c05ded8",
+    "entity_type": "DATE",
+    "canonical_name": "13th March 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_681fc7f97d23e240": {
+    "canonical_id": "GLOB_681fc7f97d23e240",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 5678",
+    "phones": [],
+    "accounts": [
+      "56789012345678"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_68234e08e472a1d8": {
+    "canonical_id": "GLOB_68234e08e472a1d8",
+    "entity_type": "LOCATION",
+    "canonical_name": "Lajpat Nagar Tower 1",
+    "phones": [
+      "01129876543"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_69ff8eec6cda43fb": {
+    "canonical_id": "GLOB_69ff8eec6cda43fb",
+    "entity_type": "EVENT",
+    "canonical_name": "Case: FIR 456/2022",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_6a555ebbf77e4b73": {
+    "canonical_id": "GLOB_6a555ebbf77e4b73",
+    "entity_type": "DATE",
+    "canonical_name": "11:30 hours",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_706d39c177fca2f0": {
+    "canonical_id": "GLOB_706d39c177fca2f0",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543215",
+    "phones": [
+      "9876543215"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_71f4ada3dc9a1684": {
+    "canonical_id": "GLOB_71f4ada3dc9a1684",
+    "entity_type": "DATE",
+    "canonical_name": "20/03/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_7645127a50c337f6": {
+    "canonical_id": "GLOB_7645127a50c337f6",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 9876",
+    "phones": [],
+    "accounts": [
+      "98765432109876"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_77d3ac674a22697a": {
+    "canonical_id": "GLOB_77d3ac674a22697a",
+    "entity_type": "EVENT",
+    "canonical_name": "Case: FIR 789/2023",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_7858d45260123374": {
+    "canonical_id": "GLOB_7858d45260123374",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543211",
+    "phones": [
+      "9876543211"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_7c716d4da0e6b5b7": {
+    "canonical_id": "GLOB_7c716d4da0e6b5b7",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543220",
+    "phones": [
+      "9876543220"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_7eecfbb2ac851498": {
+    "canonical_id": "GLOB_7eecfbb2ac851498",
+    "entity_type": "PERSON",
+    "canonical_name": "Pooja",
+    "phones": [
+      "9876543216"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_823c07032e41272f": {
+    "canonical_id": "GLOB_823c07032e41272f",
+    "entity_type": "DATE",
+    "canonical_name": "34 years",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_825c64c01d68edf6": {
+    "canonical_id": "GLOB_825c64c01d68edf6",
+    "entity_type": "PERSON",
+    "canonical_name": "Shri Mahesh Chand",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T10:31:43.473000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_828858623b985854": {
+    "canonical_id": "GLOB_828858623b985854",
+    "entity_type": "DATE",
+    "canonical_name": "around 9:15 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_83530d3122214984": {
+    "canonical_id": "GLOB_83530d3122214984",
+    "entity_type": "DATE",
+    "canonical_name": "9:00",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_845bb038c7a4b9c0": {
+    "canonical_id": "GLOB_845bb038c7a4b9c0",
+    "entity_type": "AMOUNT",
+    "canonical_name": "204/2025",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:43:23.876000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_84a717c826d04bc2": {
+    "canonical_id": "GLOB_84a717c826d04bc2",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543210",
+    "phones": [
+      "9876543210"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 2,
+    "total_jurisdictions": 2
+  },
+  "GLOB_8564fd95cd16c892": {
+    "canonical_id": "GLOB_8564fd95cd16c892",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "Delhi Herald",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_871493021d35211b": {
+    "canonical_id": "GLOB_871493021d35211b",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Meeting with partners #networking",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_873cbd46e640c03b": {
+    "canonical_id": "GLOB_873cbd46e640c03b",
+    "entity_type": "EVENT",
+    "canonical_name": "Case: FIR 567/2023",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_8b198cbadaf353a8": {
+    "canonical_id": "GLOB_8b198cbadaf353a8",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543216",
+    "phones": [
+      "9876543216"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_9007488a611e7e2e": {
+    "canonical_id": "GLOB_9007488a611e7e2e",
+    "entity_type": "AMOUNT",
+    "canonical_name": "15 लाख",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_911470ce1f35fdda": {
+    "canonical_id": "GLOB_911470ce1f35fdda",
+    "entity_type": "AMOUNT",
+    "canonical_name": "67,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_92a02de9a48951ad": {
+    "canonical_id": "GLOB_92a02de9a48951ad",
+    "entity_type": "LOCATION",
+    "canonical_name": "Dwarka Sector 12 Main Gate Camera",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_96be2a234e11867e": {
+    "canonical_id": "GLOB_96be2a234e11867e",
+    "entity_type": "LOCATION",
+    "canonical_name": "Nehru Nagar",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_98f90e15cdd2a901": {
+    "canonical_id": "GLOB_98f90e15cdd2a901",
+    "entity_type": "DATE",
+    "canonical_name": "22/03/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_9a7f44772933c266": {
+    "canonical_id": "GLOB_9a7f44772933c266",
+    "entity_type": "PERSON",
+    "canonical_name": "SI Vikram Rathore",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T09:16:26.962000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_9ea9bb00484bcc17": {
+    "canonical_id": "GLOB_9ea9bb00484bcc17",
+    "entity_type": "AMOUNT",
+    "canonical_name": "123/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a033405b3e90c48b": {
+    "canonical_id": "GLOB_a033405b3e90c48b",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: New stock arrived at RK Telecom #mobile #shop",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a1ca75cca2c48185": {
+    "canonical_id": "GLOB_a1ca75cca2c48185",
+    "entity_type": "LOCATION",
+    "canonical_name": "RK Telecom Office",
+    "phones": [
+      "01126543210"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a45d82b5ace15803": {
+    "canonical_id": "GLOB_a45d82b5ace15803",
+    "entity_type": "DATE",
+    "canonical_name": "approximately 9:15 AM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a589d62d51d2c417": {
+    "canonical_id": "GLOB_a589d62d51d2c417",
+    "entity_type": "PHONE",
+    "canonical_name": "198",
+    "phones": [
+      "198"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a7c01fd8e65c3d16": {
+    "canonical_id": "GLOB_a7c01fd8e65c3d16",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "Bank of Baroda",
+    "phones": [
+      "18001021234"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.786000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a7e9e8cccf62b69b": {
+    "canonical_id": "GLOB_a7e9e8cccf62b69b",
+    "entity_type": "DATE",
+    "canonical_name": "11:15 hours",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a8c607be4d6e8367": {
+    "canonical_id": "GLOB_a8c607be4d6e8367",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "HDFC",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a90543bebadbcf64": {
+    "canonical_id": "GLOB_a90543bebadbcf64",
+    "entity_type": "DATE",
+    "canonical_name": "the past 8 years",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_a96b263dedc0b4b0": {
+    "canonical_id": "GLOB_a96b263dedc0b4b0",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Thankful to my neighbors for their support #gratef",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_afd195468c240a25": {
+    "canonical_id": "GLOB_afd195468c240a25",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Good morning Delhi #morning",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b01dbf04373279f3": {
+    "canonical_id": "GLOB_b01dbf04373279f3",
+    "entity_type": "DATE",
+    "canonical_name": "25/03/2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b19aa6d8910602e7": {
+    "canonical_id": "GLOB_b19aa6d8910602e7",
+    "entity_type": "DEVICE",
+    "canonical_name": "CCTV_Screenshot",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b5fb17816322263b": {
+    "canonical_id": "GLOB_b5fb17816322263b",
+    "entity_type": "LOCATION",
+    "canonical_name": "RK Telecom",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b68bbbe9cace58aa": {
+    "canonical_id": "GLOB_b68bbbe9cace58aa",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Feeling stressed today #life",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b6d7fa4eed971f33": {
+    "canonical_id": "GLOB_b6d7fa4eed971f33",
+    "entity_type": "LOCATION",
+    "canonical_name": "Delhi",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b8a27e72a6b608e4": {
+    "canonical_id": "GLOB_b8a27e72a6b608e4",
+    "entity_type": "LOCATION",
+    "canonical_name": "Dwarka Sector 12 Tower",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b961fd4bbc22406a": {
+    "canonical_id": "GLOB_b961fd4bbc22406a",
+    "entity_type": "DATE",
+    "canonical_name": "मार्च 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_b99bdaa7008a2f13": {
+    "canonical_id": "GLOB_b99bdaa7008a2f13",
+    "entity_type": "LOCATION",
+    "canonical_name": "Karol Bagh Tower 3",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_bb8299a537ecb7d8": {
+    "canonical_id": "GLOB_bb8299a537ecb7d8",
+    "entity_type": "DATE",
+    "canonical_name": "5 to 10 minutes",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_bbaee983cb28a39e": {
+    "canonical_id": "GLOB_bbaee983cb28a39e",
+    "entity_type": "PHONE",
+    "canonical_name": "01126543210",
+    "phones": [
+      "01126543210"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_bda642ab06948ce2": {
+    "canonical_id": "GLOB_bda642ab06948ce2",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Successful day #business",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_be7bcaed11c41fad": {
+    "canonical_id": "GLOB_be7bcaed11c41fad",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "Delhi Police",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_bfd8b8494d7e849d": {
+    "canonical_id": "GLOB_bfd8b8494d7e849d",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 1234",
+    "phones": [],
+    "accounts": [
+      "12345678901234"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_bff405d1d22ecd03": {
+    "canonical_id": "GLOB_bff405d1d22ecd03",
+    "entity_type": "LOCATION",
+    "canonical_name": "फ्लैट 5ए",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c3fc3018c63891f5": {
+    "canonical_id": "GLOB_c3fc3018c63891f5",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 25,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c40d0b3eeddf7654": {
+    "canonical_id": "GLOB_c40d0b3eeddf7654",
+    "entity_type": "DATE",
+    "canonical_name": "8:00 PM",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c5de60302d6e475d": {
+    "canonical_id": "GLOB_c5de60302d6e475d",
+    "entity_type": "PHONE",
+    "canonical_name": "9861000001",
+    "phones": [
+      "9861000001"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T19:48:01.717000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c6d670240e1a7bbc": {
+    "canonical_id": "GLOB_c6d670240e1a7bbc",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 15,00,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c82e49ef5d97904a": {
+    "canonical_id": "GLOB_c82e49ef5d97904a",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Noida office visit #work",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c93142250a66e9fa": {
+    "canonical_id": "GLOB_c93142250a66e9fa",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543214",
+    "phones": [
+      "9876543214"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_c97840664744cc50": {
+    "canonical_id": "GLOB_c97840664744cc50",
+    "entity_type": "DEVICE",
+    "canonical_name": "Device: Samsung Galaxy S21",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_cb66a651608ba2c1": {
+    "canonical_id": "GLOB_cb66a651608ba2c1",
+    "entity_type": "DATE",
+    "canonical_name": "9:15 बजे",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_ccd93b5779ad0cac": {
+    "canonical_id": "GLOB_ccd93b5779ad0cac",
+    "entity_type": "LOCATION",
+    "canonical_name": "Lajpat Nagar Part II Camera 3",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_cd05d1dd31a94408": {
+    "canonical_id": "GLOB_cd05d1dd31a94408",
+    "entity_type": "DATE",
+    "canonical_name": "the same day",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_cda629a2f775b0bb": {
+    "canonical_id": "GLOB_cda629a2f775b0bb",
+    "entity_type": "LOCATION",
+    "canonical_name": "East Delhi",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_ce92eb68f5bf9fa1": {
+    "canonical_id": "GLOB_ce92eb68f5bf9fa1",
+    "entity_type": "ORGANIZATION",
+    "canonical_name": "Rajesh Electronics",
+    "phones": [
+      "9812345678"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_cf1e3b139968bf42": {
+    "canonical_id": "GLOB_cf1e3b139968bf42",
+    "entity_type": "LOCATION",
+    "canonical_name": "नेहरू नगर",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_d119875e13d2f9ac": {
+    "canonical_id": "GLOB_d119875e13d2f9ac",
+    "entity_type": "PERSON",
+    "canonical_name": "Neeraj",
+    "phones": [
+      "9876543215"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_d6339f339cfe2596": {
+    "canonical_id": "GLOB_d6339f339cfe2596",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 6789",
+    "phones": [],
+    "accounts": [
+      "67890123456789"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_d98f4cb443e24056": {
+    "canonical_id": "GLOB_d98f4cb443e24056",
+    "entity_type": "ACCOUNT",
+    "canonical_name": "Account 7890",
+    "phones": [],
+    "accounts": [
+      "78901234567890"
+    ],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_db88702933ccd599": {
+    "canonical_id": "GLOB_db88702933ccd599",
+    "entity_type": "DATE",
+    "canonical_name": "1234, 7891",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e19fbca2c9704756": {
+    "canonical_id": "GLOB_e19fbca2c9704756",
+    "entity_type": "PHONE",
+    "canonical_name": "18001021234",
+    "phones": [
+      "18001021234"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e3c72935945925c6": {
+    "canonical_id": "GLOB_e3c72935945925c6",
+    "entity_type": "EVENT",
+    "canonical_name": "Post: Busy day at the shop #business",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e65048a06f3303c2": {
+    "canonical_id": "GLOB_e65048a06f3303c2",
+    "entity_type": "EVENT",
+    "canonical_name": "Case: FIR 234/2023",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e8554c8c6db223c4": {
+    "canonical_id": "GLOB_e8554c8c6db223c4",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 15",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e85a989f16e235a1": {
+    "canonical_id": "GLOB_e85a989f16e235a1",
+    "entity_type": "LOCATION",
+    "canonical_name": "Nehru Nagar Tower 2",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_e93d4388e85c8c97": {
+    "canonical_id": "GLOB_e93d4388e85c8c97",
+    "entity_type": "PERSON",
+    "canonical_name": "Priya Singh",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_ece561a117ee89c5": {
+    "canonical_id": "GLOB_ece561a117ee89c5",
+    "entity_type": "DATE",
+    "canonical_name": "13 March 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-25T09:16:26.962000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_ed5eea947b025fc0": {
+    "canonical_id": "GLOB_ed5eea947b025fc0",
+    "entity_type": "AMOUNT",
+    "canonical_name": "Rs. 67,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_efee16b3b5b58d09": {
+    "canonical_id": "GLOB_efee16b3b5b58d09",
+    "entity_type": "DATE",
+    "canonical_name": "18 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_f5a2c93fa2e10e3e": {
+    "canonical_id": "GLOB_f5a2c93fa2e10e3e",
+    "entity_type": "DATE",
+    "canonical_name": "15 March",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_fbf8f8ae079415f7": {
+    "canonical_id": "GLOB_fbf8f8ae079415f7",
+    "entity_type": "AMOUNT",
+    "canonical_name": "15,00,000",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_fccdaff418f10e5b": {
+    "canonical_id": "GLOB_fccdaff418f10e5b",
+    "entity_type": "PERSON",
+    "canonical_name": "Rakesh Kumar",
+    "phones": [
+      "9876543210",
+      "9876543220"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-26T01:17:54.990000",
+    "total_cases": 2,
+    "total_jurisdictions": 2
+  },
+  "GLOB_fdc5a53be87c3709": {
+    "canonical_id": "GLOB_fdc5a53be87c3709",
+    "entity_type": "AMOUNT",
+    "canonical_name": "15",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_fdedd027826787fb": {
+    "canonical_id": "GLOB_fdedd027826787fb",
+    "entity_type": "LOCATION",
+    "canonical_name": "Connaught Place Tower 2",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_fecb65b9c26decdb": {
+    "canonical_id": "GLOB_fecb65b9c26decdb",
+    "entity_type": "PHONE",
+    "canonical_name": "9876543213",
+    "phones": [
+      "9876543213"
+    ],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.787000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  },
+  "GLOB_ffe16525d037098c": {
+    "canonical_id": "GLOB_ffe16525d037098c",
+    "entity_type": "DATE",
+    "canonical_name": "12th March 2024",
+    "phones": [],
+    "accounts": [],
+    "addresses": [],
+    "first_seen": "2026-09-24T18:50:10.148000",
+    "last_seen": "2026-09-25T22:50:35.788000",
+    "total_cases": 1,
+    "total_jurisdictions": 1
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "total_nodes": 179,
+  "total_edges": 86,
+  "node_type_counts": {
+    "location": 10,
+    "organization": 27,
+    "person": 35,
+    "date": 42,
+    "device": 2,
+    "phone": 13,
+    "amount": 26,
+    "account": 10,
+    "event": 14
+  },
+  "edge_type_counts": {
+    "associational": 69,
+    "entrepreneurial": 13,
+    "quasi-governmental": 4
+  },
+  "relationship_type_counts": {
+    "VISITED": 22,
+    "CALLED": 10,
+    "OWNS_ACCOUNT": 6,
+    "TRANSFERRED_TO": 4,
+    "RECEIVED_FROM": 2,
+    "ASSOCIATED_WITH": 13,
+    "MESSED": 3,
+    "SUSPECT_OF": 4,
+    "WORKS_WITH": 1,
+    "ASSOCIATE_OF": 1,
+    "FRIEND_OF": 1,
+    "OWNS_PHONE": 3,
+    "SHARED_PHONE": 3,
+    "SHARED_LOCATION": 13
+  },
+  "multiplexity_ties_count": 7,
+  "avg_degree": 3.31,
+  "max_degree": 14,
+  "connected_components": 135,
+  "density": 0.005398
+}

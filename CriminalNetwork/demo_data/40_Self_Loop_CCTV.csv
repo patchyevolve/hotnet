@@ -1,0 +1,9 @@
+timestamp,location,camera_id,person_description,action,duration_minutes,vehicle_description
+2024-03-14T09:00:00,Lajpat Nagar Part II Camera 3,CAM_LN3,Male (height 5'8", medium build),Subject observed near building,8,
+2024-03-14T09:10:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male (height 5'10", slim build),Subject talking to another person outside building,5,
+2024-03-14T09:15:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male (height 5'8", medium build),Male enters building,,
+2024-03-14T09:20:00,Lajpat Nagar Part II Camera 1,CAM_LN1,Male (height 5'8", medium build),Male exits building,3,
+2024-03-14T09:25:00,Lajpat Nagar Part II Camera 3,CAM_LN3,Male (height 5'10", slim build),Subject walks away,2,
+2024-03-14T09:30:00,Karol Bagh Main Market Camera 7,CAM_KB7,Male (blue shirt, height 5'8"),Subject walking near RK Telecom shop,3,
+2024-03-14T09:35:00,Karol Bagh Main Market Camera 7,CAM_KB7,Male (blue shirt, height 5'10"),Subject enters shop,,
+2024-03-14T09:40:00,Karol Bagh Main Market Camera 7,CAM_KB7,Male (blue shirt, height 5'8"),Subject exits shop,2,

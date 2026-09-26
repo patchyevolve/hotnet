@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_fd67385769d5",
+  "task": "extract_generic",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3b5071bfd94836f6",
+  "input_hash": "d35a87bf144d2e37",
+  "response_text": "{\"entities\":[{\"name\":\"Rajesh Kumar\",\"type\":\"PERSON\"},{\"name\":\"Meena Devi\",\"type\":\"PERSON\"},{\"name\":\"15 lakhs\",\"type\":\"AMOUNT\"},{\"name\":\"22/03/2024\",\"type\":\"DATE\"},{\"name\":\"12/03/2024\",\"type\":\"DATE\"},{\"name\":\"13/03/2024\",\"type\":\"DATE\"},{\"name\":\"14/03/2024\",\"type\":\"DATE\"},{\"name\":\"Nehru Nagar Police Station\",\"type\":\"LOCATION\"},{\"name\":\"Rose Apartments\",\"type\":\"LOCATION\"},{\"name\":\"Lajpat Nagar Part II\",\"type\":\"LOCATION\"},{\"name\":\"New Delhi\",\"type\":\"LOCATION\"}],\"relations\":[{\"source\":\"Rajesh Kumar\",\"target\":\"Meena Devi\",\"type\":\"KNOWS\"},{\"source\":\"Meena Devi\",\"target\":\"15 lakhs\",\"type\":\"CHEATED_OF\"},{\"source\":\"Rajesh Kumar\",\"target\":\"Rose Apartments\",\"type\":\"LOCATED_AT\"},{\"source\":\"Rajesh Kumar\",\"target\":\"Lajpat Nagar Part II\",\"type\":\"LOCATED_AT\"},{\"source\":\"Rajesh Kumar\",\"target\":\"New Delhi\",\"type\":\"LOCATED_AT\"}]}",
+  "usage": {
+    "queue_time": 0.310467854,
+    "prompt_tokens": 904,
+    "prompt_time": 0.049834814,
+    "completion_tokens": 554,
+    "completion_time": 0.625132147,
+    "total_tokens": 1458,
+    "total_time": 0.674966961,
+    "completion_tokens_details": {
+      "reasoning_tokens": 318
+    }
+  },
+  "latency_ms": 1038,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:02.503363",
+  "source_file": "18_Witness_Statement.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

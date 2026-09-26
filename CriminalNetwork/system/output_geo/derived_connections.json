@@ -1,0 +1,325 @@
+[
+  {
+    "id": "DMH_4d0bb6e66971250c",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_f90015a9027df8e3",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "shared_context": "path=RES_f90015a9027df8e3\u2192RES_0a5f31f39f5d619c\u2192RES_e41d5c9970d2fc45",
+    "confidence": 0.6184,
+    "epistemic_status": "inference",
+    "basis": "2-hop path via intermediate entities",
+    "relationship_types": [
+      "MESSED",
+      "MESSED"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DCOL_716b422a8de6413d",
+    "connection_type": "person_colocation",
+    "source_id": "RES_e95c77c1e77f9515",
+    "target_id": "RES_f90015a9027df8e3",
+    "shared_context": "RES_2e6dcc0d467c0fff",
+    "confidence": 0.55,
+    "epistemic_status": "inference",
+    "basis": "persons observed at same location",
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_31f89efa1ac5c50b",
+    "connection_type": "CALLED",
+    "source_id": "RES_9768897216059a61",
+    "target_id": "RES_3e438bacdb6bd7b1",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.5,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "04_CDR_Amit.csv"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_db0bc563ffa2c55f",
+    "connection_type": "CALLED",
+    "source_id": "RES_9eeb75085f3656ee",
+    "target_id": "RES_06b3f3578a482b62",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.5,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "12_WEIRD_CDR.csv"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_435fbeeeeafecc36",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_e95c77c1e77f9515",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.5,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "18_Witness_Statement.txt",
+      "25_Social_Partial.json",
+      "29_Investigator_Summary.txt"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_3073c90539016a34",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.5,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "11_Criminal_History.json",
+      "13_FIR_Rajesh.txt",
+      "25_Social_Partial.json",
+      "29_Investigator_Summary.txt",
+      "32_Adversarial_Social.json"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_97f33f4a35e5585b",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_0a5f31f39f5d619c",
+    "shared_context": "path=RES_6be157c3c6f87a4d\u2192RES_06b3f3578a482b62\u2192RES_3e438bacdb6bd7b1\u2192RES_0a5f31f39f5d619c",
+    "confidence": 0.4584,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_e473d621112cd743",
+    "connection_type": "CALLED",
+    "source_id": "RES_a43997b49dba49ba",
+    "target_id": "RES_ce4c1813fe797d7d",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.45,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "03_CDR_Suresh.csv"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_265a4b33abef85cc",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_f90015a9027df8e3",
+    "shared_context": "path=RES_6be157c3c6f87a4d\u2192RES_06b3f3578a482b62\u2192RES_f90015a9027df8e3",
+    "confidence": 0.4164,
+    "epistemic_status": "inference",
+    "basis": "2-hop path via intermediate entities",
+    "relationship_types": [
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_c249d8f04a3dd393",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_0a5f31f39f5d619c",
+    "target_id": "RES_3085e19cabdc5b3d",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.4,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "23_FIR_No_Phone.txt",
+      "25_Social_Partial.json"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_383672fe2b84b1a5",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_58d3eec5a549b5f5",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.4,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "23_FIR_No_Phone.txt",
+      "32_Adversarial_Social.json",
+      "shared_phone:9876543213"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_9ad1abbd2611232f",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_e95c77c1e77f9515",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.4,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "13_FIR_Rajesh.txt",
+      "23_FIR_No_Phone.txt"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_198f9a769dd587e6",
+    "connection_type": "SHARED_ASSOCIATE",
+    "source_id": "RES_50fa850b2b1ec9e6",
+    "target_id": "RES_e95c77c1e77f9515",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.4,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "18_Witness_Statement.txt",
+      "29_Investigator_Summary.txt"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_9faa42dbabe750ea",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_e41d5c9970d2fc45",
+    "shared_context": "path=RES_6be157c3c6f87a4d\u2192RES_06b3f3578a482b62\u2192RES_a43997b49dba49ba\u2192RES_e41d5c9970d2fc45",
+    "confidence": 0.3712,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "OWNS_PHONE"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_812bca7a7a6894ed",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_50fa850b2b1ec9e6",
+    "shared_context": "path=RES_6be157c3c6f87a4d\u2192RES_06b3f3578a482b62\u2192RES_ce4c1813fe797d7d\u2192RES_50fa850b2b1ec9e6",
+    "confidence": 0.368,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "ASSOCIATED_WITH"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_71906d669e697d98",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_e95c77c1e77f9515",
+    "shared_context": "path=RES_6be157c3c6f87a4d\u2192RES_06b3f3578a482b62\u2192RES_9768897216059a61\u2192RES_e95c77c1e77f9515",
+    "confidence": 0.35,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "CALLED",
+      "CALLED",
+      "OWNS_PHONE"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_31b6cb7350c540ee",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_f90015a9027df8e3",
+    "target_id": "RES_3085e19cabdc5b3d",
+    "shared_context": "path=RES_f90015a9027df8e3\u2192RES_0a5f31f39f5d619c\u2192RES_e41d5c9970d2fc45\u2192RES_3085e19cabdc5b3d",
+    "confidence": 0.3092,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "MESSED",
+      "MESSED",
+      "SUSPECT_OF"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMIS_51e359bd4ec861a1",
+    "connection_type": "CALLED",
+    "source_id": "RES_6be157c3c6f87a4d",
+    "target_id": "RES_06b3f3578a482b62",
+    "shared_context": "shared_associate_or_expected_link",
+    "confidence": 0.25,
+    "epistemic_status": "inference",
+    "basis": "expected connection absent from graph",
+    "source_files": [
+      "02_WITNESS_EVIDENCE.txt"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_b0090f4201050a9f",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_58d3eec5a549b5f5",
+    "target_id": "RES_6be157c3c6f87a4d",
+    "shared_context": "path=RES_58d3eec5a549b5f5\u2192RES_2e6dcc0d467c0fff\u2192RES_06b3f3578a482b62\u2192RES_6be157c3c6f87a4d",
+    "confidence": 0.2232,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "VISITED",
+      "VISITED",
+      "CALLED"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_d902de748591ef6a",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_50fa850b2b1ec9e6",
+    "shared_context": "path=RES_3085e19cabdc5b3d\u2192RES_e41d5c9970d2fc45\u2192RES_58d3eec5a549b5f5\u2192RES_50fa850b2b1ec9e6",
+    "confidence": 0.1856,
+    "epistemic_status": "inference",
+    "basis": "3-hop path via intermediate entities",
+    "relationship_types": [
+      "SUSPECT_OF",
+      "VICTIM_OF",
+      "TRANSFERRED_TO"
+    ],
+    "run_id": "run_20260926_164752"
+  },
+  {
+    "id": "DMH_e9051509b2df90bf",
+    "connection_type": "multi_hop_path",
+    "source_id": "RES_3085e19cabdc5b3d",
+    "target_id": "RES_6be157c3c6f87a4d",
+    "shared_context": "path=RES_3085e19cabdc5b3d\u2192RES_e41d5c9970d2fc45\u2192RES_a43997b49dba49ba\u2192RES_06b3f3578a482b62\u2192RES_6be157c3c6f87a4d",
+    "confidence": 0.1856,
+    "epistemic_status": "inference",
+    "basis": "4-hop path via intermediate entities",
+    "relationship_types": [
+      "SUSPECT_OF",
+      "OWNS_PHONE",
+      "CALLED",
+      "CALLED"
+    ],
+    "run_id": "run_20260926_164752"
+  }
+]

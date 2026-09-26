@@ -1,0 +1,294 @@
+[
+  {
+    "id": "REL_714c75be1bb88480",
+    "source_entity_id": "PHONE_7619ee8cea49187f",
+    "target_entity_id": "LOC_2c6ca8121912cfab",
+    "relation_type": "VISITED",
+    "case_id": "",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "CDR tower location"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "observation",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.4,
+          "description": "Source reliability for cdr"
+        },
+        {
+          "factor_type": "evidence_basis",
+          "value": 0.7,
+          "weight": 0.6,
+          "description": "CDR tower location"
+        }
+      ]
+    },
+    "source": {
+      "source_type": "cdr",
+      "file_name": "03_CDR.csv",
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "ingestion_time": "2026-09-26T01:17:49.384544",
+      "provenance": "OBSERVATIONAL",
+      "verification": "UNVERIFIED",
+      "reliability_occurrence": 0.95,
+      "reliability_identity": 0.6,
+      "reliability_intent": 0.3,
+      "reliability_location": 0.8,
+      "reliability_timing": 0.95,
+      "adversarial_suspicious": false
+    },
+    "attributes": {
+      "timestamp": "2025-04-11T19:12:00",
+      "phone": "9876543210",
+      "phone_2": "9861000001",
+      "duration": "74",
+      "direction": "outgoing",
+      "location": "Hyderabad Banjara Hills Demo Tower",
+      "source_name": "9876543210",
+      "target_name": "Hyderabad Banjara Hills Demo Tower"
+    },
+    "raw_text": null,
+    "extraction_method": "code",
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "derivation_depth": 0,
+    "semantic_edge_type": "associational",
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:12:00",
+      "source": "attributes"
+    },
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "REL_cc5ecf0352a3e195",
+    "source_entity_id": "PHONE_7619ee8cea49187f",
+    "target_entity_id": "PHONE_085871bd6e504785",
+    "relation_type": "CALLED",
+    "case_id": "",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "CDR direct record"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "observation",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.4,
+          "description": "Source reliability for cdr"
+        },
+        {
+          "factor_type": "evidence_basis",
+          "value": 1.0,
+          "weight": 0.6,
+          "description": "CDR direct record"
+        }
+      ]
+    },
+    "source": {
+      "source_type": "cdr",
+      "file_name": "03_CDR.csv",
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "ingestion_time": "2026-09-26T01:17:49.384544",
+      "provenance": "OBSERVATIONAL",
+      "verification": "UNVERIFIED",
+      "reliability_occurrence": 0.95,
+      "reliability_identity": 0.6,
+      "reliability_intent": 0.3,
+      "reliability_location": 0.8,
+      "reliability_timing": 0.95,
+      "adversarial_suspicious": false
+    },
+    "attributes": {
+      "timestamp": "2025-04-11T19:12:00",
+      "phone": "9876543210",
+      "phone_2": "9861000001",
+      "duration": "74",
+      "direction": "outgoing",
+      "location": "Hyderabad Banjara Hills Demo Tower",
+      "source_name": "9876543210",
+      "target_name": "9861000001"
+    },
+    "raw_text": null,
+    "extraction_method": "code",
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "derivation_depth": 0,
+    "semantic_edge_type": "associational",
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:12:00",
+      "source": "attributes"
+    },
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "REL_74e283d2bc0e84b9",
+    "source_entity_id": "PHONE_085871bd6e504785",
+    "target_entity_id": "LOC_2c6ca8121912cfab",
+    "relation_type": "VISITED",
+    "case_id": "",
+    "confidence": {
+      "score": 0.7,
+      "basis": [
+        "CDR tower location"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "observation",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.4,
+          "description": "Source reliability for cdr"
+        },
+        {
+          "factor_type": "evidence_basis",
+          "value": 0.7,
+          "weight": 0.6,
+          "description": "CDR tower location"
+        }
+      ]
+    },
+    "source": {
+      "source_type": "cdr",
+      "file_name": "03_CDR.csv",
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "ingestion_time": "2026-09-26T01:17:49.384544",
+      "provenance": "OBSERVATIONAL",
+      "verification": "UNVERIFIED",
+      "reliability_occurrence": 0.95,
+      "reliability_identity": 0.6,
+      "reliability_intent": 0.3,
+      "reliability_location": 0.8,
+      "reliability_timing": 0.95,
+      "adversarial_suspicious": false
+    },
+    "attributes": {
+      "timestamp": "2025-04-11T19:36:00",
+      "phone": "9861000001",
+      "phone_2": "9876543210",
+      "duration": "51",
+      "direction": "incoming",
+      "location": "Hyderabad Banjara Hills Demo Tower",
+      "source_name": "9861000001",
+      "target_name": "Hyderabad Banjara Hills Demo Tower"
+    },
+    "raw_text": null,
+    "extraction_method": "code",
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "derivation_depth": 0,
+    "semantic_edge_type": "associational",
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:36:00",
+      "source": "attributes"
+    },
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "REL_8276ba77e6b2ccd4",
+    "source_entity_id": "PHONE_085871bd6e504785",
+    "target_entity_id": "PHONE_7619ee8cea49187f",
+    "relation_type": "CALLED",
+    "case_id": "",
+    "confidence": {
+      "score": 1.0,
+      "basis": [
+        "CDR direct record"
+      ],
+      "supporting_count": 0,
+      "contradicting_count": 0,
+      "unknown_count": 0,
+      "source_reliability": 0.95,
+      "derivation_depth": 0,
+      "is_independent": true,
+      "last_verified": null,
+      "staleness": "current",
+      "semantic_type": "observation",
+      "run_id": "run_20260926_011743",
+      "model_version": "",
+      "factors": [
+        {
+          "factor_type": "source_reliability",
+          "value": 0.95,
+          "weight": 0.4,
+          "description": "Source reliability for cdr"
+        },
+        {
+          "factor_type": "evidence_basis",
+          "value": 1.0,
+          "weight": 0.6,
+          "description": "CDR direct record"
+        }
+      ]
+    },
+    "source": {
+      "source_type": "cdr",
+      "file_name": "03_CDR.csv",
+      "file_hash": "sha256:17f79d4b8ab90952cf9504600a7271e6a288efccc081dae0ebd0a6725c215a04",
+      "ingestion_time": "2026-09-26T01:17:49.384544",
+      "provenance": "OBSERVATIONAL",
+      "verification": "UNVERIFIED",
+      "reliability_occurrence": 0.95,
+      "reliability_identity": 0.6,
+      "reliability_intent": 0.3,
+      "reliability_location": 0.8,
+      "reliability_timing": 0.95,
+      "adversarial_suspicious": false
+    },
+    "attributes": {
+      "timestamp": "2025-04-11T19:36:00",
+      "phone": "9861000001",
+      "phone_2": "9876543210",
+      "duration": "51",
+      "direction": "incoming",
+      "location": "Hyderabad Banjara Hills Demo Tower",
+      "source_name": "9861000001",
+      "target_name": "9876543210"
+    },
+    "raw_text": null,
+    "extraction_method": "code",
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "derivation_depth": 0,
+    "semantic_edge_type": "associational",
+    "temporal_info": {
+      "timestamp": "2025-04-11T19:36:00",
+      "source": "attributes"
+    },
+    "run_id": "run_20260926_011743"
+  }
+]

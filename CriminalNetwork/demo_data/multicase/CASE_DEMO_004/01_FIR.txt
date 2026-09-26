@@ -1,0 +1,5 @@
+SYNTHETIC DEMO FIR — CASE_DEMO_004
+Jurisdiction: Hyderabad Cyber Crime Police Station
+FIR: 204/2025, filed 2025-04-12
+
+The complainant reports that a person using the name Rakesh Kumar offered a guaranteed investment return through a messaging group. The complainant transferred demo funds to a test account after receiving repeated calls from 9876543210. The number is included only as synthetic demo data and is shared with an identity signal in another demo case so the pipeline can exercise cross-case linking. Investigators have not confirmed that the caller and the named person are the same individual. Preserve that uncertainty and treat the report as an allegation, not a finding.

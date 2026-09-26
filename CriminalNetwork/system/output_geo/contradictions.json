@@ -1,0 +1,619 @@
+{
+  "CON_75ab313c59d68242": {
+    "id": "CON_75ab313c59d68242",
+    "type": "identity",
+    "entity_ids": [
+      "LOC_342bb7cffefbd624",
+      "LOCATION_87ad8c66656ae254"
+    ],
+    "attribute": "name",
+    "values": [
+      "Karol Bagh Main Market Camera 5",
+      "Karol Bagh Main Market"
+    ],
+    "sources": [
+      "10_CCTV_Log.csv",
+      "19_Surveillance_Report.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": false,
+    "resolution_suggestion": "Surviving values {Karol Bagh Main Market Camera 5, Karol Bagh Main Market} all originate from source class 'cctv', which contradicts itself. Further records of that class can only outnumber, never decide; settling 'name' requires evidence from outside this corpus.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Karol Bagh Main Market Camera 5",
+        "Karol Bagh Main Market"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "10_CCTV_Log.csv",
+        "19_Surveillance_Report.txt"
+      ],
+      "standing_source_classes": [
+        "cctv"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_a640741624a44eda",
+    "impact_on_hypothesis": 0.013043,
+    "description": "2 source-backed value(s) for 'name' of Karol Bagh Main Market Camera 5 remain in dispute: 'Karol Bagh Main Market Camera 5', 'Karol Bagh Main Market'."
+  },
+  "CON_6c73db66467e41fe": {
+    "id": "CON_6c73db66467e41fe",
+    "type": "identity",
+    "entity_ids": [
+      "LOCATION_ac2255dabf2b2548",
+      "LOCATION_f4d9babc366dc531",
+      "LOCATION_83119e5c6b573785"
+    ],
+    "attribute": "name",
+    "values": [
+      "Karol Bagh Metro",
+      "Karol Bagh Metro station",
+      "Karol Bagh"
+    ],
+    "sources": [
+      "20_Journalist_Note.txt",
+      "19_Surveillance_Report.txt",
+      "19_Surveillance_Report.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {cctv, text}. Surviving values {Karol Bagh Metro, Karol Bagh Metro station, Karol Bagh} are asserted by {19_Surveillance_Report.txt, 20_Journalist_Note.txt}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Karol Bagh Metro",
+        "Karol Bagh Metro station",
+        "Karol Bagh"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "19_Surveillance_Report.txt",
+        "20_Journalist_Note.txt"
+      ],
+      "standing_source_classes": [
+        "cctv",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_a640741624a44eda",
+    "impact_on_hypothesis": 0.013043,
+    "description": "3 source-backed value(s) for 'name' of Karol Bagh Metro station remain in dispute: 'Karol Bagh Metro', 'Karol Bagh Metro station', 'Karol Bagh'."
+  },
+  "CON_d256071f0b0caa02": {
+    "id": "CON_d256071f0b0caa02",
+    "type": "identity",
+    "entity_ids": [
+      "ORGANIZATION_23492e71991bc7b9",
+      "PERSON_5cbac5323a616f86",
+      "PERSON_23492e71991bc7b9"
+    ],
+    "attribute": "name",
+    "values": [
+      "Rakesh Kumar",
+      "Rakesh Bhai"
+    ],
+    "sources": [
+      "29_Investigator_Summary.txt",
+      "16_Device_Amit.json",
+      "05_Bank_Rakesh.csv"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {bank, device, text}. Surviving values {Rakesh Kumar, Rakesh Bhai} are asserted by {16_Device_Amit.json, 29_Investigator_Summary.txt, 48_Bank_Transactions.xlsx}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Rakesh Kumar",
+        "Rakesh Bhai"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "16_Device_Amit.json",
+        "29_Investigator_Summary.txt",
+        "48_Bank_Transactions.xlsx"
+      ],
+      "standing_source_classes": [
+        "bank",
+        "device",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_a640741624a44eda",
+    "impact_on_hypothesis": 0.013043,
+    "description": "2 source-backed value(s) for 'name' of Rakesh Kumar remain in dispute: 'Rakesh Kumar', 'Rakesh Bhai'."
+  },
+  "CON_012096eaa9cd5813": {
+    "id": "CON_012096eaa9cd5813",
+    "type": "identity",
+    "entity_ids": [
+      "LOC_8f30741d308610e1",
+      "LOC_e84caccb77e25aa2",
+      "LOCATION_e149c6c473c2cdf5"
+    ],
+    "attribute": "name",
+    "values": [
+      "Noida Sector 62",
+      "Noida Sector 62 residence",
+      "Noida Sector 62 Tower"
+    ],
+    "sources": [
+      "04_CDR_Amit.csv",
+      "09_Social_Amit.json",
+      "19_Surveillance_Report.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {cctv, cdr, social}. Surviving values {Noida Sector 62, Noida Sector 62 residence, Noida Sector 62 Tower} are asserted by {04_CDR_Amit.csv, 09_Social_Amit.json, 19_Surveillance_Report.txt}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Noida Sector 62",
+        "Noida Sector 62 residence",
+        "Noida Sector 62 Tower"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "04_CDR_Amit.csv",
+        "09_Social_Amit.json",
+        "19_Surveillance_Report.txt"
+      ],
+      "standing_source_classes": [
+        "cctv",
+        "cdr",
+        "social"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_ffce158027452654",
+    "impact_on_hypothesis": 0.014286,
+    "description": "3 source-backed value(s) for 'name' of Noida Sector 62 residence remain in dispute: 'Noida Sector 62', 'Noida Sector 62 residence', 'Noida Sector 62 Tower'."
+  },
+  "CON_72959ec4809d613a": {
+    "id": "CON_72959ec4809d613a",
+    "type": "identity",
+    "entity_ids": [
+      "PERSON_b764cdc0eab71374",
+      "PERSON_6243832d591f59a2"
+    ],
+    "attribute": "name",
+    "values": [
+      "unknown_user_2847",
+      "Unknown"
+    ],
+    "sources": [
+      "01_FIR.txt",
+      "25_Social_Partial.json"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {fir, social}. Surviving values {unknown_user_2847, Unknown} are asserted by {01_FIR.txt, 25_Social_Partial.json}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "unknown_user_2847",
+        "Unknown"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "01_FIR.txt",
+        "25_Social_Partial.json"
+      ],
+      "standing_source_classes": [
+        "fir",
+        "social"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_42e9cde9615abe4e",
+    "impact_on_hypothesis": 0.023077,
+    "description": "2 source-backed value(s) for 'name' of Unknown remain in dispute: 'unknown_user_2847', 'Unknown'."
+  },
+  "CON_cef8c7a0feff5790": {
+    "id": "CON_cef8c7a0feff5790",
+    "type": "identity",
+    "entity_ids": [
+      "PERSON_915ca1cfe5a261f0",
+      "ORGANIZATION_915ca1cfe5a261f0",
+      "PERSON_c63ac5eb1535a215",
+      "PERSON_f73ad70629191b0d",
+      "PERSON_5e95ee9f0386dda2"
+    ],
+    "attribute": "name",
+    "values": [
+      "Suresh Kumar",
+      "Suresh Bhai",
+      "Suresh",
+      "suresh_kumar_01"
+    ],
+    "sources": [
+      "06_Bank_Suresh.csv",
+      "29_Investigator_Summary.txt",
+      "08_Device_Rakesh.json",
+      "16_Device_Amit.json",
+      ""
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {bank, device, text}. Surviving values {Suresh Kumar, Suresh Bhai, Suresh} are asserted by {08_Device_Rakesh.json, 16_Device_Amit.json, 29_Investigator_Summary.txt, 48_Bank_Transactions.xlsx}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [
+        "provenance_absence"
+      ],
+      "standing_values": [
+        "Suresh Kumar",
+        "Suresh Bhai",
+        "Suresh"
+      ],
+      "eliminated_values": [
+        {
+          "value": "suresh_kumar_01",
+          "rule": "provenance_absence",
+          "evidence": []
+        }
+      ],
+      "standing_sources": [
+        "08_Device_Rakesh.json",
+        "16_Device_Amit.json",
+        "29_Investigator_Summary.txt",
+        "48_Bank_Transactions.xlsx"
+      ],
+      "standing_source_classes": [
+        "bank",
+        "device",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_a640741624a44eda",
+    "impact_on_hypothesis": 0.013043,
+    "description": "3 source-backed value(s) for 'name' of Suresh Kumar remain in dispute: 'Suresh Kumar', 'Suresh Bhai', 'Suresh'. 1 value(s) eliminated by admissible evidence: suresh_kumar_01 (provenance_absence)."
+  },
+  "CON_cffc80d85a1b3e0f": {
+    "id": "CON_cffc80d85a1b3e0f",
+    "type": "identity",
+    "entity_ids": [
+      "ORG_058be09de37a18d4",
+      "ORG_fce0b15c7c195529",
+      "ORGANIZATION_058be09de37a18d4",
+      "ORGANIZATION_fce0b15c7c195529"
+    ],
+    "attribute": "name",
+    "values": [
+      "Bank of Baroda",
+      "BoB"
+    ],
+    "sources": [
+      "29_Investigator_Summary.txt",
+      "16_Device_Amit.json",
+      "29_Investigator_Summary.txt",
+      "01_FIR.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {device, fir, text}. Surviving values {Bank of Baroda, BoB} are asserted by {01_FIR.txt, 16_Device_Amit.json, 29_Investigator_Summary.txt}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Bank of Baroda",
+        "BoB"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "01_FIR.txt",
+        "16_Device_Amit.json",
+        "29_Investigator_Summary.txt"
+      ],
+      "standing_source_classes": [
+        "device",
+        "fir",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_5e47176a60732ba0",
+    "impact_on_hypothesis": 0.05,
+    "description": "2 source-backed value(s) for 'name' of Bank of Baroda remain in dispute: 'Bank of Baroda', 'BoB'."
+  },
+  "CON_eb7702f62799280a": {
+    "id": "CON_eb7702f62799280a",
+    "type": "identity",
+    "entity_ids": [
+      "LOCATION_f1994fef91b5681f",
+      "LOCATION_da3431ef66e742ca",
+      "LOCATION_40dd6303d825d86d",
+      "LOCATION_02752649638768e2",
+      "LOC_475f3f364856ea70",
+      "LOC_ca5c595ef394f74f",
+      "LOC_8de9f79573e30455",
+      "LOC_2d27b53729507310"
+    ],
+    "attribute": "name",
+    "values": [
+      "Lajpat Nagar Part II",
+      "Lajpat Nagar, Delhi",
+      "Lajpat Nagar Part II Camera 1",
+      "Lajpat Nagar, New Delhi",
+      "Lajpat Nagar Part II, New Delhi",
+      "Shop - Lajpat Nagar",
+      "Lajpat Nagar Tower 1",
+      "Lajpat Nagar"
+    ],
+    "sources": [
+      "01_FIR.txt",
+      "01_FIR.txt",
+      "13_FIR_Rajesh.txt",
+      "18_Witness_Statement.txt",
+      "16_Device_Amit.json",
+      "32_Adversarial_Social.json",
+      "02_CDR_Rakesh.csv",
+      "10_CCTV_Log.csv"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {cctv, cdr, device, fir, text}. Surviving values {Lajpat Nagar Part II, Lajpat Nagar Part II Camera 1, Lajpat Nagar, New Delhi, Lajpat Nagar Part II, New Delhi, Shop - Lajpat Nagar, Lajpat Nagar Tower 1, Lajpat Nagar} are asserted by {01_FIR.txt, 02_CDR_Rakesh.csv, 10_CCTV_Log.csv, 13_FIR_Rajesh.txt, 16_Device_Amit.json, 18_Witness_Statement.txt}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [
+        "source_disqualification"
+      ],
+      "standing_values": [
+        "Lajpat Nagar Part II",
+        "Lajpat Nagar Part II Camera 1",
+        "Lajpat Nagar, New Delhi",
+        "Lajpat Nagar Part II, New Delhi",
+        "Shop - Lajpat Nagar",
+        "Lajpat Nagar Tower 1",
+        "Lajpat Nagar"
+      ],
+      "eliminated_values": [
+        {
+          "value": "Lajpat Nagar, Delhi",
+          "rule": "source_disqualification",
+          "evidence": [
+            "32_Adversarial_Social.json"
+          ]
+        }
+      ],
+      "standing_sources": [
+        "01_FIR.txt",
+        "02_CDR_Rakesh.csv",
+        "10_CCTV_Log.csv",
+        "13_FIR_Rajesh.txt",
+        "16_Device_Amit.json",
+        "18_Witness_Statement.txt"
+      ],
+      "standing_source_classes": [
+        "cctv",
+        "cdr",
+        "device",
+        "fir",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_42e9cde9615abe4e",
+    "impact_on_hypothesis": 0.023077,
+    "description": "7 source-backed value(s) for 'name' of Lajpat Nagar Part II, New Delhi remain in dispute: 'Lajpat Nagar Part II', 'Lajpat Nagar Part II Camera 1', 'Lajpat Nagar, New Delhi', 'Lajpat Nagar Part II, New Delhi', 'Shop - Lajpat Nagar', 'Lajpat Nagar Tower 1', 'Lajpat Nagar'. 1 value(s) eliminated by admissible evidence: Lajpat Nagar, Delhi (source_disqualification)."
+  },
+  "CON_0ecb789cc3f97a36": {
+    "id": "CON_0ecb789cc3f97a36",
+    "type": "identity",
+    "entity_ids": [
+      "PERSON_bdae71cfb51d493f",
+      "LOCATION_b66694c77645402b",
+      "PERSON_b66694c77645402b",
+      "PERSON_4d04f9016628213c"
+    ],
+    "attribute": "name",
+    "values": [
+      "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+      "Meena Devi",
+      "Meena Ji"
+    ],
+    "sources": [
+      "08_Device_Rakesh.json",
+      "29_Investigator_Summary.txt",
+      "01_FIR.txt",
+      "36_Hindi_Witness_Statement.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {bank, device, text}. Surviving values {\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940, Meena Devi, Meena Ji} are asserted by {08_Device_Rakesh.json, 29_Investigator_Summary.txt, 36_Hindi_Witness_Statement.txt, 48_Bank_Transactions.xlsx}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940",
+        "Meena Devi",
+        "Meena Ji"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "08_Device_Rakesh.json",
+        "29_Investigator_Summary.txt",
+        "36_Hindi_Witness_Statement.txt",
+        "48_Bank_Transactions.xlsx"
+      ],
+      "standing_source_classes": [
+        "bank",
+        "device",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_42e9cde9615abe4e",
+    "impact_on_hypothesis": 0.023077,
+    "description": "3 source-backed value(s) for 'name' of Meena Devi remain in dispute: '\u092e\u0940\u0928\u093e \u0926\u0947\u0935\u0940', 'Meena Devi', 'Meena Ji'."
+  },
+  "CON_d2683389824a1800": {
+    "id": "CON_d2683389824a1800",
+    "type": "identity",
+    "entity_ids": [
+      "ORGANIZATION_73728731a2aff159",
+      "PERSON_73728731a2aff159",
+      "PERSON_89dc13c9913c5597"
+    ],
+    "attribute": "name",
+    "values": [
+      "SI Vikram Rathore",
+      "Vikram Rathore"
+    ],
+    "sources": [
+      "18_Witness_Statement.txt",
+      "18_Witness_Statement.txt",
+      "20_Journalist_Note.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": false,
+    "resolution_suggestion": "Surviving values {SI Vikram Rathore, Vikram Rathore} all originate from source class 'text', which contradicts itself. Further records of that class can only outnumber, never decide; settling 'name' requires evidence from outside this corpus.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "SI Vikram Rathore",
+        "Vikram Rathore"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "18_Witness_Statement.txt",
+        "20_Journalist_Note.txt"
+      ],
+      "standing_source_classes": [
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "",
+    "impact_on_hypothesis": 0.0,
+    "description": "2 source-backed value(s) for 'name' of SI Vikram Rathore remain in dispute: 'SI Vikram Rathore', 'Vikram Rathore'."
+  },
+  "CON_be50b9ea3618274c": {
+    "id": "CON_be50b9ea3618274c",
+    "type": "identity",
+    "entity_ids": [
+      "PERSON_105a112c81ce60e6",
+      "PERSON_75110ab02c0160f9"
+    ],
+    "attribute": "name",
+    "values": [
+      "Amit Sharma",
+      "Amit"
+    ],
+    "sources": [
+      "08_Device_Rakesh.json",
+      "07_Bank_Amit.csv"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {bank, device}. Surviving values {Amit Sharma, Amit} are asserted by {08_Device_Rakesh.json, 48_Bank_Transactions.xlsx}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "Amit Sharma",
+        "Amit"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "08_Device_Rakesh.json",
+        "48_Bank_Transactions.xlsx"
+      ],
+      "standing_source_classes": [
+        "bank",
+        "device"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_a640741624a44eda",
+    "impact_on_hypothesis": 0.013043,
+    "description": "2 source-backed value(s) for 'name' of Amit Sharma remain in dispute: 'Amit Sharma', 'Amit'."
+  },
+  "CON_1325125528fe857a": {
+    "id": "CON_1325125528fe857a",
+    "type": "identity",
+    "entity_ids": [
+      "ORGANIZATION_f88d533a7a47a361",
+      "ORGANIZATION_eb64ebaee08e80b0"
+    ],
+    "attribute": "name",
+    "values": [
+      "PNB",
+      "Punjab National Bank"
+    ],
+    "sources": [
+      "29_Investigator_Summary.txt",
+      "01_FIR.txt"
+    ],
+    "severity": "medium",
+    "resolved": false,
+    "resolution_note": "",
+    "run_id": "run_20260926_164752",
+    "resolved_by": "",
+    "resolvable": true,
+    "resolution_suggestion": "Obtain a record stating 'name' for this entity from a source class outside {fir, text}. Surviving values {PNB, Punjab National Bank} are asserted by {01_FIR.txt, 29_Investigator_Summary.txt}; the conflict spans record classes, so an independent class can decide it.",
+    "resolution_evidence": {
+      "admissible_rules": [],
+      "standing_values": [
+        "PNB",
+        "Punjab National Bank"
+      ],
+      "eliminated_values": [],
+      "standing_sources": [
+        "01_FIR.txt",
+        "29_Investigator_Summary.txt"
+      ],
+      "standing_source_classes": [
+        "fir",
+        "text"
+      ],
+      "provenance_available": true
+    },
+    "hypothesis_id": "HYP_5e47176a60732ba0",
+    "impact_on_hypothesis": 0.05,
+    "description": "2 source-backed value(s) for 'name' of Punjab National Bank remain in dispute: 'PNB', 'Punjab National Bank'."
+  }
+}

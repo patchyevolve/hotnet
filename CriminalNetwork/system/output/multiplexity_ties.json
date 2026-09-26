@@ -1,0 +1,125 @@
+[
+  {
+    "id": "MT_0316e38381df8f23",
+    "entity_a": "RES_5e95ee9f0386dda2",
+    "entity_b": "RES_e26019ce48adebef",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 3,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "ASSOCIATED_WITH",
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_3c59c17d0052c545",
+    "entity_a": "RES_23492e71991bc7b9",
+    "entity_b": "RES_75110ab02c0160f9",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "MESSED",
+        "ASSOCIATE_OF"
+      ]
+    }
+  },
+  {
+    "id": "MT_1cab08bcd25960d5",
+    "entity_a": "RES_23492e71991bc7b9",
+    "entity_b": "RES_5e95ee9f0386dda2",
+    "tie_types": [
+      "associational",
+      "entrepreneurial"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.5,
+    "is_cross_domain": true,
+    "domain_mapping": {
+      "legitimate": [
+        "WORKS_WITH"
+      ],
+      "personal": [
+        "MESSED"
+      ]
+    }
+  },
+  {
+    "id": "MT_262c144978bebc2f",
+    "entity_a": "RES_2d27b53729507310",
+    "entity_b": "RES_75110ab02c0160f9",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "VISITED",
+        "SHARED_LOCATION"
+      ]
+    }
+  },
+  {
+    "id": "MT_5ead35d1299aabb9",
+    "entity_a": "RES_23492e71991bc7b9",
+    "entity_b": "RES_2d27b53729507310",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "VISITED",
+        "SHARED_LOCATION"
+      ]
+    }
+  },
+  {
+    "id": "MT_d61e766c4bf0eed5",
+    "entity_a": "RES_23492e71991bc7b9",
+    "entity_b": "RES_7619ee8cea49187f",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  },
+  {
+    "id": "MT_bb2e3794dee2ad3d",
+    "entity_a": "RES_75110ab02c0160f9",
+    "entity_b": "RES_8a8023e9f7760676",
+    "tie_types": [
+      "associational"
+    ],
+    "tie_count": 2,
+    "tie_strength": 0.25,
+    "is_cross_domain": false,
+    "domain_mapping": {
+      "personal": [
+        "OWNS_PHONE",
+        "SHARED_PHONE"
+      ]
+    }
+  }
+]

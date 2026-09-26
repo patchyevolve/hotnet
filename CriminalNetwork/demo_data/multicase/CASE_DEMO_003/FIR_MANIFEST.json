@@ -1,0 +1,17 @@
+{
+  "version": "1.0",
+  "case_id": "CASE_DEMO_003",
+  "jurisdiction_node_id": "JURISDICTION_JAIPUR_CYBERCRIME",
+  "description": "Synthetic, separate Jaipur report used to exercise cross-jurisdiction identity alerts.",
+  "firs": [
+    {
+      "fir_id": "FIR_JAIPUR_001",
+      "fir_number": "18/2025",
+      "jurisdiction_node_id": "JURISDICTION_JAIPUR_CYBERCRIME",
+      "description": "Synthetic CDR excerpt involving the same recurring phone signal",
+      "investigation_status": "UNDER_INVESTIGATION",
+      "files": ["02_CDR.csv"]
+    }
+  ],
+  "skip_files": []
+}

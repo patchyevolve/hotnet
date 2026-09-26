@@ -1,0 +1,24 @@
+{
+  "overview": "CrimeNet is an AI-powered criminal network analysis workstation that unifies FIRs, call records, financial transactions, entities and evidence into one investigative workspace for Indian law enforcement.",
+  "features": [
+    "Command Center with live intelligence feed and case metrics",
+    "Interactive criminal network graph with entity intelligence drawer",
+    "Case workbench with evidence, network, CDR, money trail and timeline tabs",
+    "Financial money trail visualization tracing ₹2.84 Cr across accounts",
+    "Command map with movement trails, risk areas and time slider",
+    "AI Investigator returning structured findings, evidence and actions",
+    "Evidence vault with hash integrity and chain of custody",
+    "Security and audit trail with integrity chain",
+    "Role-aware dashboards for inspector, supervisor, admin and audit logger"
+  ],
+  "category": "data-visualization",
+  "tags": [
+    "law-enforcement",
+    "intelligence",
+    "network-analysis",
+    "data-visualization",
+    "dashboard",
+    "investigation"
+  ],
+  "last_updated": "2026-09-26T09:00:01.589Z"
+}

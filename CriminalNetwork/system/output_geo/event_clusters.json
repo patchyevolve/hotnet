@@ -1,0 +1,53 @@
+[
+  {
+    "cluster_id": "CLUSTER_690ebb63a4caf971",
+    "events": [
+      "TLEVT_2ba2cb90c710485c",
+      "TLEVT_f8f0f557eb1c0312",
+      "TLEVT_813775f7f16e83eb"
+    ],
+    "event_type": "incident",
+    "time_span_seconds": 0.0,
+    "confidence": 0.38000000000000006
+  },
+  {
+    "cluster_id": "CLUSTER_8e03fa3fcb2b2424",
+    "events": [
+      "TLEVT_81c196c7138f4667",
+      "TLEVT_cda0b9b7f44ec514"
+    ],
+    "event_type": "social_post",
+    "time_span_seconds": 0.0,
+    "confidence": 0.8
+  },
+  {
+    "cluster_id": "CLUSTER_932dec1272f4c2d5",
+    "events": [
+      "TLEVT_31c08f7bf0ba009c",
+      "TLEVT_01ba576e5ca065aa"
+    ],
+    "event_type": "social_post",
+    "time_span_seconds": 0.0,
+    "confidence": 0.8
+  },
+  {
+    "cluster_id": "CLUSTER_688f9fc97a8ec17d",
+    "events": [
+      "TLEVT_c53bb3df476dfdc1",
+      "TLEVT_2add50ac67769224"
+    ],
+    "event_type": "social_post",
+    "time_span_seconds": 0.0,
+    "confidence": 0.8
+  },
+  {
+    "cluster_id": "CLUSTER_793d6e48d102b40d",
+    "events": [
+      "TLEVT_a74cb77b3a8d72ec",
+      "TLEVT_8452a510a7abcf08"
+    ],
+    "event_type": "social_post",
+    "time_span_seconds": 0.0,
+    "confidence": 0.8
+  }
+]

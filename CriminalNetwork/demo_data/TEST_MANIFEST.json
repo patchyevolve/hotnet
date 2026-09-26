@@ -1,0 +1,269 @@
+{
+  "version": "2.0",
+  "description": "Ground-truth test manifest for Phase 2-6 validation",
+  "created": "2024-03-30",
+  "scenarios": [
+    {
+      "id": "BASELINE_001",
+      "category": "baseline",
+      "description": "Complete investigation with all file types",
+      "files": ["01_FIR.txt", "02_CDR_Rakesh.csv", "03_CDR_Suresh.csv", "04_CDR_Amit.csv", "05_Bank_Rakesh.csv", "06_Bank_Suresh.csv", "07_Bank_Amit.csv", "08_Device_Rakesh.json", "09_Social_Amit.json", "10_CCTV_Log.csv", "11_Criminal_History.json"],
+      "expected": {
+        "entities_extracted": "allPersonsAccountsPhones",
+        "relations_extracted": "callBankSocialCCTV",
+        "confidence_above_0.5": true
+      }
+    },
+    {
+      "id": "PHASE2_MISSING_001",
+      "category": "missing_data",
+      "description": "CDR with missing phone numbers and tower locations",
+      "file": "21_Missing_Phone_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "missing_values_preserved": true,
+        "no_fabricated_entities": true,
+        "confidence_reflects_incompleteness": true
+      }
+    },
+    {
+      "id": "PHASE2_MISSING_002",
+      "category": "missing_data",
+      "description": "Bank records with missing account holder names",
+      "file": "22_Bank_No_Name.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "account_entities_created": true,
+        "holder_names_missing": true,
+        "no_fabricated_names": true
+      }
+    },
+    {
+      "id": "PHASE2_MISSING_003",
+      "category": "missing_data",
+      "description": "FIR with missing phone number and unknown complainant",
+      "file": "23_FIR_No_Phone.txt",
+      "expected": {
+        "pipeline_completes": true,
+        "text_extracted": true,
+        "missing_phone_not_fabricated": true
+      }
+    },
+    {
+      "id": "PHASE2_MISSING_004",
+      "category": "missing_data",
+      "description": "CCTV log with gap timestamps and missing descriptions",
+      "file": "24_CCTV_Gap_Timestamps.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "gap_timestamps_handled": true,
+        "missing_descriptions_preserved": true
+      }
+    },
+    {
+      "id": "PHASE2_MISSING_005",
+      "category": "missing_data",
+      "description": "Social media with partial profile data",
+      "file": "25_Social_Partial.json",
+      "expected": {
+        "pipeline_completes": true,
+        "partial_profile_handled": true,
+        "unknown_user_not_merged": true
+      }
+    },
+    {
+      "id": "PHASE3_NAME_VARIATION_001",
+      "category": "entity_resolution",
+      "description": "Name variations for Rakesh Kumar (Rakesh K, R. Kumar, Rakesh Kumar Singh)",
+      "file": "26_Name_Variation_CDR.csv",
+      "expected": {
+        "resolution": "same_entity",
+        "confidence": "high",
+        "review_required": false
+      }
+    },
+    {
+      "id": "PHASE4_TEMPORAL_001",
+      "category": "temporal",
+      "description": "Temporal contradiction - same person at different locations at same time",
+      "file": "27_Temporal_Contradiction_CDR.csv",
+      "expected": {
+        "contradiction_detected": true,
+        "confidence_inflation": false
+      }
+    },
+    {
+      "id": "PHASE5_SOURCE_DEP_001",
+      "category": "provenance",
+      "description": "Source dependency chain - FIR → Investigator Summary → Report",
+      "files": ["28_Source_Dependency_CDR.csv", "29_Investigator_Summary.txt"],
+      "expected": {
+        "independent_sources": 1,
+        "derived_sources": 2,
+        "confidence_inflation": false
+      }
+    },
+    {
+      "id": "PHASE6_ADVERSARIAL_001",
+      "category": "adversarial",
+      "description": "Adversarial CDR with fabricated call patterns",
+      "file": "30_Adversarial_CDR.csv",
+      "expected": {
+        "evidence_should_not_override_stronger_sources": true,
+        "suspicious_pattern_flagged": true
+      }
+    },
+    {
+      "id": "PHASE6_ADVERSARIAL_002",
+      "category": "adversarial",
+      "description": "Adversarial bank record with manipulated timestamps",
+      "file": "31_Adversarial_Bank.csv",
+      "expected": {
+        "evidence_should_not_override_stronger_sources": true,
+        "timestamp_anomaly_detected": true
+      }
+    },
+    {
+      "id": "PHASE6_ADVERSARIAL_003",
+      "category": "adversarial",
+      "description": "Adversarial social media with fake interactions",
+      "file": "32_Adversarial_Social.json",
+      "expected": {
+        "evidence_should_not_override_stronger_sources": true,
+        "fake_interaction_flagged": true
+      }
+    },
+    {
+      "id": "PHASE6_ADVERSARIAL_004",
+      "category": "adversarial",
+      "description": "Adversarial CCTV with manipulated timestamps",
+      "file": "33_Adversarial_CCTV.csv",
+      "expected": {
+        "evidence_should_not_override_stronger_sources": true,
+        "timestamp_manipulation_detected": true
+      }
+    },
+    {
+      "id": "PHASE6_FEEDBACK_001",
+      "category": "feedback_loop",
+      "description": "Feedback loop - inference repeated as observation in later report",
+      "file": "34_Feedback_Loop_Report.txt",
+      "expected": {
+        "epistemic_distinction_preserved": true,
+        "inference_not_treated_as_observation": true
+      }
+    },
+    {
+      "id": "PHASE6_IDENTITY_001",
+      "category": "identity_uncertainty",
+      "description": "Identity uncertainty - CCTV with possible matches",
+      "file": "35_Identity_Uncertainty_CCTV.csv",
+      "expected": {
+        "uncertainty_propagated": true,
+        "confidence_not_inflated": true,
+        "multiple_candidates_tracked": true
+      }
+    },
+    {
+      "id": "HINDI_NER_001",
+      "category": "hindi_text",
+      "description": "Hindi witness statement with Devanagari script",
+      "file": "36_Hindi_Witness_Statement.txt",
+      "expected": {
+        "pipeline_completes": true,
+        "hindi_text_extracted": true,
+        "hindi_ner_entities_found": true
+      }
+    },
+    {
+      "id": "HYPOTHESIS_COMP_001",
+      "category": "hypothesis",
+      "description": "Multiple suspects with competing hypotheses",
+      "file": "37_Hypothesis_Competition_CDR.csv",
+      "expected": {
+        "multiple_suspects_identified": true,
+        "evidence_distributed": true
+      }
+    },
+    {
+      "id": "FALSIFICATION_001",
+      "category": "falsification",
+      "description": "Evidence contradicting primary hypothesis",
+      "file": "38_Falsification_CDR.csv",
+      "expected": {
+        "contradiction_detected": true,
+        "confidence_decreases": true
+      }
+    },
+    {
+      "id": "FEEDBACK_LOOP_001",
+      "category": "feedback_loop",
+      "description": "CDR showing circular communication patterns",
+      "file": "39_Feedback_Loop_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "circular_patterns_detected": true
+      }
+    },
+    {
+      "id": "SELF_LOOP_001",
+      "category": "edge_case",
+      "description": "Self-calls in CDR data",
+      "file": "41_Self_Loop_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "self_loops_filtered": true
+      }
+    },
+    {
+      "id": "COMPLEX_RESOLUTION_001",
+      "category": "entity_resolution",
+      "description": "Complex entity resolution with multiple similar names",
+      "file": "42_Complex_Resolution_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "entities_correctly_resolved": true
+      }
+    },
+    {
+      "id": "ADVERSARIAL_IDENTITY_001",
+      "category": "adversarial",
+      "description": "Adversarial identity manipulation in CDR",
+      "file": "43_Adversarial_Identity_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "identity_manipulation_detected": true
+      }
+    },
+    {
+      "id": "CIRCULAR_REFERENCE_001",
+      "category": "edge_case",
+      "description": "Circular reference patterns in CDR",
+      "file": "44_Circular_Reference_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "circular_references_handled": true
+      }
+    },
+    {
+      "id": "CONFIDENCE_EDGE_001",
+      "category": "edge_case",
+      "description": "Confidence edge cases with very short calls",
+      "file": "45_Confidence_Edge_Cases_CDR.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "low_confidence_handled": true
+      }
+    },
+    {
+      "id": "SELF_LOOP_CCTV_001",
+      "category": "edge_case",
+      "description": "CCTV with self-loop patterns",
+      "file": "40_Self_Loop_CCTV.csv",
+      "expected": {
+        "pipeline_completes": true,
+        "self_loops_filtered": true
+      }
+    }
+  ]
+}

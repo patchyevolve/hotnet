@@ -1,0 +1,13 @@
+[
+  {
+    "signal_id": "SIG_1c95c4ec6580b665",
+    "signal_type": "confidence_gap",
+    "severity": "medium",
+    "entity_id": "RES_eea76256ba5071e8",
+    "entity_type": "amount",
+    "description": "High confidence (0.76) but zero connections \u2014 possibly missing evidence",
+    "evidence_count": 1,
+    "score": 0.532,
+    "run_id": "run_20260926_011743"
+  }
+]

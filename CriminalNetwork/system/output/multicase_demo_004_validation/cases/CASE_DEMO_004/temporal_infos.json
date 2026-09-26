@@ -1,0 +1,46 @@
+[
+  {
+    "id": "TEMP_7ffcbd76afb4eb23",
+    "entity_id": "PHONE_7619ee8cea49187f",
+    "event_type": "relation_visited",
+    "start_time": "2025-04-11T19:12:00",
+    "end_time": "2025-04-11T19:12:00",
+    "precision": "exact",
+    "source_id": "03_CDR.csv",
+    "confidence": 0.95,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "TEMP_8e205d2b1fc40e00",
+    "entity_id": "PHONE_7619ee8cea49187f",
+    "event_type": "relation_called",
+    "start_time": "2025-04-11T19:12:00",
+    "end_time": "2025-04-11T19:12:00",
+    "precision": "exact",
+    "source_id": "03_CDR.csv",
+    "confidence": 0.95,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "TEMP_344aa0eb965fddc2",
+    "entity_id": "PHONE_085871bd6e504785",
+    "event_type": "relation_visited",
+    "start_time": "2025-04-11T19:36:00",
+    "end_time": "2025-04-11T19:36:00",
+    "precision": "exact",
+    "source_id": "03_CDR.csv",
+    "confidence": 0.95,
+    "run_id": "run_20260926_011743"
+  },
+  {
+    "id": "TEMP_9cf43ef6e06e1c08",
+    "entity_id": "PHONE_085871bd6e504785",
+    "event_type": "relation_called",
+    "start_time": "2025-04-11T19:36:00",
+    "end_time": "2025-04-11T19:36:00",
+    "precision": "exact",
+    "source_id": "03_CDR.csv",
+    "confidence": 0.95,
+    "run_id": "run_20260926_011743"
+  }
+]

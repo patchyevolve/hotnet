@@ -1,0 +1,92 @@
+{
+  "PHONE_7619ee8cea49187f": {
+    "name": "9876543210",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "PERSON_23492e71991bc7b9": {
+    "name": "Rakesh Kumar",
+    "type": "PERSON",
+    "aliases": [
+      "Rakesh Kumar"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "AMOUNT_d0e65fe1e3fdd122": {
+    "name": "204/2025",
+    "type": "AMOUNT",
+    "aliases": [
+      "204/2025"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "DATE_82c7ca02a357e7fe": {
+    "name": "2025-04-12",
+    "type": "DATE",
+    "aliases": [
+      "2025-04-12"
+    ],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "LOCATION_4fa64bd55d5c0c1f": {
+    "name": "Hyderabad",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "DOCUMENT_d0e65fe1e3fdd122": {
+    "name": "204/2025",
+    "type": "DOCUMENT",
+    "aliases": [],
+    "source_id": "01_FIR.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "DATE_92ef31518fe977e0": {
+    "name": "2025-04-13",
+    "type": "DATE",
+    "aliases": [
+      "2025-04-13"
+    ],
+    "source_id": "02_WITNESS_EVIDENCE.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "ORGANIZATION_23492e71991bc7b9": {
+    "name": "Rakesh Kumar",
+    "type": "ORGANIZATION",
+    "aliases": [
+      "Rakesh Kumar"
+    ],
+    "source_id": "02_WITNESS_EVIDENCE.txt",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "PHONE_085871bd6e504785": {
+    "name": "9861000001",
+    "type": "PHONE",
+    "aliases": [],
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  },
+  "LOC_2c6ca8121912cfab": {
+    "name": "Hyderabad Banjara Hills Demo Tower",
+    "type": "LOCATION",
+    "aliases": [],
+    "source_id": "03_CDR.csv",
+    "epistemic_category": "observation",
+    "run_id": "run_20260926_011743"
+  }
+}

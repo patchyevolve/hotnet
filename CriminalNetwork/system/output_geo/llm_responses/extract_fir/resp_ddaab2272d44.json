@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_ddaab2272d44",
+  "task": "extract_fir",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "6a91c4fb3cac91c4",
+  "input_hash": "737fde3ea198f976",
+  "response_text": "{\"fir_number\":\"123/2024\",\"date\":\"15/03/2024\",\"police_station\":\"Nehru Nagar\",\"complainant\":{\"name\":\"Meena Devi\",\"age\":34,\"phone\":\"9876543213\"},\"accused\":[{\"name\":\"Unknown\",\"phone\":\"9876543213\"}],\"incident\":{\"type\":\"cheating\",\"location\":\"Lajpat Nagar, New Delhi\",\"amount\":1500000,\"modus\":\"fake bank call asking for OTP\"},\"sections\":[\"420\",\"468\",\"471\"],\"entities\":[{\"name\":\"Meena Devi\",\"type\":\"PERSON\"},{\"name\":\"9876543213\",\"type\":\"PHONE\"},{\"name\":\"1500000\",\"type\":\"AMOUNT\"},{\"name\":\"Lajpat Nagar, New Delhi\",\"type\":\"LOCATION\"}],\"relations\":[{\"source\":\"Meena Devi\",\"target\":\"9876543213\",\"type\":\"VICTIM_OF\"},{\"source\":\"9876543213\",\"target\":\"1500000\",\"type\":\"TRANSFERRED_TO\"}]}",
+  "usage": {
+    "queue_time": 0.344271043,
+    "prompt_tokens": 934,
+    "prompt_time": 0.052325661,
+    "completion_tokens": 220,
+    "completion_time": 0.225834156,
+    "total_tokens": 1154,
+    "total_time": 0.278159817,
+    "completion_tokens_details": {
+      "reasoning_tokens": 11
+    }
+  },
+  "latency_ms": 686,
+  "status": "success",
+  "timestamp": "2026-09-26T16:47:56.771070",
+  "source_file": "01_FIR.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

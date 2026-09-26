@@ -1,0 +1,33 @@
+{
+  "response_id": "resp_74de84d0a31b",
+  "task": "extract_generic",
+  "prompt_version": "2.0",
+  "provider": "groq",
+  "model": "openai/gpt-oss-20b",
+  "system_prompt_hash": "3b5071bfd94836f6",
+  "input_hash": "a5afaa3e93accbb5",
+  "response_text": "{\"entities\":[{\"name\":\"Rakesh Kumar\",\"type\":\"PERSON\"},{\"name\":\"9876543210\",\"type\":\"PHONE\"},{\"name\":\"Suresh Kumar\",\"type\":\"PERSON\"},{\"name\":\"9876543211\",\"type\":\"PHONE\"},{\"name\":\"Amit Sharma\",\"type\":\"PERSON\"},{\"name\":\"9876543212\",\"type\":\"PHONE\"},{\"name\":\"Karol Bagh Main Market\",\"type\":\"LOCATION\"},{\"name\":\"Karol Bagh Metro station\",\"type\":\"LOCATION\"},{\"name\":\"Dwarka Sector 12 residence\",\"type\":\"LOCATION\"},{\"name\":\"Noida Sector 62 residence\",\"type\":\"LOCATION\"},{\"name\":\"Noida Sector 62 office complex\",\"type\":\"LOCATION\"},{\"name\":\"Rose Apartments, Lajpat Nagar\",\"type\":\"LOCATION\"},{\"name\":\"HDFC Bank, Dwarka branch\",\"type\":\"LOCATION\"},{\"name\":\"Meena Devi's account\",\"type\":\"ACCOUNT\"},{\"name\":\"Rs. 67,000\",\"type\":\"AMOUNT\"},{\"name\":\"Rs. 25,000\",\"type\":\"AMOUNT\"},{\"name\":\"Rs. 5,00,000\",\"type\":\"AMOUNT\"},{\"name\":\"50 mobile phone SIM cards\",\"type\":\"ITEM\"},{\"name\":\"25/03/2024\",\"type\":\"DATE\"},{\"name\":\"16/03/2024\",\"type\":\"DATE\"},{\"name\":\"18/03/2024\",\"type\":\"DATE\"},{\"name\":\"12/03/2024\",\"type\":\"DATE\"},{\"name\":\"14/03/2024\",\"type\":\"DATE\"},{\"name\":\"19/03/2024\",\"type\":\"DATE\"},{\"name\":\"FIR 123/2024\",\"type\":\"DOCUMENT\"},{\"name\":\"FIR 567/2023\",\"type\":\"DOCUMENT\"}],\"relations\":[{\"source\":\"Rakesh Kumar\",\"target\":\"Suresh Kumar\",\"type\":\"OBSERVED_MEETING\"},{\"source\":\"Rakesh Kumar\",\"target\":\"50 mobile phone SIM cards\",\"type\":\"OBSERVED_RECEIVING\"},{\"source\":\"Suresh Kumar\",\"target\":\"Rs. 25,000\",\"type\":\"OBSERVED_WITHDRAWING\"},{\"source\":\"Suresh Kumar\",\"target\":\"Meena Devi's account\",\"type\":\"RECEIVED_FROM\"},{\"source\":\"Amit Sharma\",\"target\":\"Meena Devi's account\",\"type\":\"RECEIVED_FROM\"},{\"source\":\"Rakesh Kumar\",\"target\":\"Karol Bagh Main Market\",\"type\":\"LOCATED_AT\"},{\"source\":\"Rakesh Kumar\",\"target\":\"Karol Bagh Metro station\",\"type\":\"LOCATED_AT\"},{\"source\":\"Suresh Kumar\",\"target\":\"Dwarka Sector 12 residence\",\"type\":\"LOCATED_AT\"},{\"source\":\"Amit Sharma\",\"target\":\"Noida Sector 62 residence\",\"type\":\"LOCATED_AT\"},{\"source\":\"Amit Sharma\",\"target\":\"Noida Sector 62 office complex\",\"type\":\"LOCATED_AT\"},{\"source\":\"Rakesh Kumar\",\"target\":\"Rose Apartments, Lajpat Nagar\",\"type\":\"OBSERVED_AT\"},{\"source\":\"Suresh Kumar\",\"target\":\"Rose Apartments, Lajpat Nagar\",\"type\":\"OBSERVED_AT\"},{\"source\":\"Rakesh Kumar\",\"target\":\"FIR 123/2024\",\"type\":\"ASSOCIATED_WITH\"},{\"source\":\"Suresh Kumar\",\"target\":\"FIR 123/2024\",\"type\":\"ASSOCIATED_WITH\"},{\"source\":\"Amit Sharma\",\"target\":\"FIR 123/2024\",\"type\":\"ASSOCIATED_WITH\"}]}",
+  "usage": {
+    "queue_time": 0.316850888,
+    "prompt_tokens": 988,
+    "prompt_time": 0.049758228,
+    "completion_tokens": 814,
+    "completion_time": 0.859702091,
+    "total_tokens": 1802,
+    "total_time": 0.909460319,
+    "completion_tokens_details": {
+      "reasoning_tokens": 127
+    }
+  },
+  "latency_ms": 1278,
+  "status": "success",
+  "timestamp": "2026-09-26T16:48:05.782705",
+  "source_file": "19_Surveillance_Report.txt",
+  "extraction_id": null,
+  "metadata": {
+    "temperature": 0.1,
+    "max_tokens": 0,
+    "error": null,
+    "fallback_from": null
+  }
+}

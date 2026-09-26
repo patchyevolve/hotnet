@@ -1,0 +1,56 @@
+{
+  "platform": "Instagram",
+  "username": "rakesh_kumar_rk",
+  "profile": {
+    "name": "Rakesh Kumar",
+    "bio": "RK Telecom | Karol Bagh | Delhi",
+    "followers": 567,
+    "following": 234,
+    "posts_count": 45,
+    "account_created": "2020-01-15",
+    "verified": false
+  },
+  "posts": [
+    {
+      "post_id": "POST_R001",
+      "date": "2024-03-08",
+      "caption": "New stock arrived at RK Telecom #mobile #shop",
+      "location": "Karol Bagh, Delhi",
+      "likes": 23,
+      "comments": 1
+    },
+    {
+      "post_id": "POST_R002",
+      "date": "2024-03-12",
+      "caption": "Busy day at the shop #business",
+      "location": "Karol Bagh, Delhi",
+      "likes": 15,
+      "comments": 0
+    },
+    {
+      "post_id": "POST_R003",
+      "date": "2024-03-15",
+      "caption": "Good morning Delhi #morning",
+      "location": "",
+      "likes": 34,
+      "comments": 2
+    }
+  ],
+  "direct_messages": [
+    {
+      "contact": "amit_sharma_official",
+      "messages": [
+        {"from": "rakesh_kumar_rk", "text": "Amit bhai, kal ka plan hai kya?", "date": "2024-03-11"},
+        {"from": "amit_sharma_official", "text": "Haan Rakesh bhai, office pe aaunga", "date": "2024-03-11"},
+        {"from": "rakesh_kumar_rk", "text": "Theek hai, 2 baje tak aa jana", "date": "2024-03-11"}
+      ]
+    },
+    {
+      "contact": "suresh_kumar_01",
+      "messages": [
+        {"from": "rakesh_kumar_rk", "text": "Suresh, Amit ko bula lena kal ke liye", "date": "2024-03-13"},
+        {"from": "suresh_kumar_01", "text": "Bula liya hai, aa jayega", "date": "2024-03-13"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+timestamp,caller_number,callee_number,call_duration,call_type,tower_location
+2024-03-14T06:00:00,9876543210,9876543210,30,outgoing,Karol Bagh Tower 1
+2024-03-14T06:00:30,9876543211,9876543211,20,outgoing,Dwarka Sector 12 Tower
+2024-03-14T06:01:00,9876543212,9876543212,15,outgoing,Noida Sector 62 Tower
+2024-03-14T06:01:30,9876543213,9876543213,10,incoming,Lajpat Nagar Tower 1
+2024-03-14T06:02:00,9876543210,9876543211,60,outgoing,Karol Bagh Tower 1
+2024-03-14T06:02:30,9876543211,9876543210,45,incoming,Dwarka Sector 12 Tower
+2024-03-14T06:03:00,9876543212,9876543213,30,outgoing,Noida Sector 62 Tower
+2024-03-14T06:03:15,9876543213,9876543212,20,incoming,Lajpat Nagar Tower 1

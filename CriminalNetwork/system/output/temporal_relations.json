@@ -1,0 +1,26 @@
+[
+  {
+    "event_a": "TLEVT_811a4e75df31ae80",
+    "event_b": "TLEVT_7643c8550d17d116",
+    "relation": "before",
+    "confidence": 0.565
+  },
+  {
+    "event_a": "TLEVT_2ba2cb90c710485c",
+    "event_b": "TLEVT_87cd9c5d0e9d4006",
+    "relation": "before",
+    "confidence": 0.565
+  },
+  {
+    "event_a": "TLEVT_f8f0f557eb1c0312",
+    "event_b": "TLEVT_dfe0efac19b9aa9b",
+    "relation": "before",
+    "confidence": 0.565
+  },
+  {
+    "event_a": "TLEVT_813775f7f16e83eb",
+    "event_b": "TLEVT_de2ffe16d639f18a",
+    "relation": "before",
+    "confidence": 0.565
+  }
+]
