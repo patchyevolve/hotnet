@@ -14,11 +14,11 @@ const toneText: Record<MetricTone, string> = {
 };
 
 const toneStroke: Record<MetricTone, string> = {
-  critical: "var(--risk-critical)",
-  high: "var(--risk-high)",
-  medium: "var(--risk-medium)",
-  low: "var(--risk-low)",
-  info: "var(--info)",
+  critical: "oklch(var(--risk-critical))",
+  high: "oklch(var(--risk-high))",
+  medium: "oklch(var(--risk-medium))",
+  low: "oklch(var(--risk-low))",
+  info: "oklch(var(--info))",
 };
 
 interface MetricCardProps {

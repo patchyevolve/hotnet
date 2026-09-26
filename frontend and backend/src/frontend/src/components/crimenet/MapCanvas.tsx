@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils";
 import { useMemo, useState } from "react";
 
 const riskColor: Record<RiskLevel, string> = {
-  critical: "var(--risk-critical)",
-  high: "var(--risk-high)",
-  medium: "var(--risk-medium)",
-  low: "var(--risk-low)",
+  critical: "oklch(var(--risk-critical))",
+  high: "oklch(var(--risk-high))",
+  medium: "oklch(var(--risk-medium))",
+  low: "oklch(var(--risk-low))",
 };
 
 interface MapCanvasProps {
@@ -41,7 +41,7 @@ export function MapCanvas({
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
+            "linear-gradient(oklch(var(--border)) 1px, transparent 1px), linear-gradient(90deg, oklch(var(--border)) 1px, transparent 1px)",
           backgroundSize: "48px 48px",
           opacity: 0.4,
         }}
@@ -51,7 +51,7 @@ export function MapCanvas({
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 45%, color-mix(in oklch, var(--info) 8%, transparent), transparent 62%)",
+            "radial-gradient(ellipse at 50% 45%, color-mix(in oklch, oklch(var(--info)) 8%, transparent), transparent 62%)",
         }}
         aria-hidden
       />
@@ -74,7 +74,7 @@ export function MapCanvas({
               y1={from.y}
               x2={to.x}
               y2={to.y}
-              stroke="var(--info)"
+              stroke="oklch(var(--info))"
               strokeWidth={isActive ? 0.6 : 0.3}
               strokeOpacity={isActive ? 0.85 : 0.3}
               strokeDasharray="2 2"
@@ -104,9 +104,9 @@ export function MapCanvas({
               )}
               style={{
                 borderColor: riskColor[marker.risk],
-                backgroundColor: "var(--card)",
+                backgroundColor: "oklch(var(--card))",
                 boxShadow: isActive
-                  ? `0 0 0 5px ${riskColor[marker.risk]}22`
+                  ? `0 0 0 5px color-mix(in oklab, ${riskColor[marker.risk]} 13%, transparent)`
                   : undefined,
               }}
             />

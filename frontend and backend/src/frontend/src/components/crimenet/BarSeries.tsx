@@ -11,7 +11,7 @@ interface BarSeriesProps {
 export function BarSeries({
   data,
   className,
-  tone = "var(--info)",
+  tone = "oklch(var(--info))",
   height = 160,
   valueFormatter,
 }: BarSeriesProps) {

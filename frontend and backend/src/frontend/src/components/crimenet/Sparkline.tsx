@@ -9,7 +9,7 @@ interface SparklineProps {
 
 export function Sparkline({
   data,
-  stroke = "var(--info)",
+  stroke = "oklch(var(--info))",
   className,
   fill = true,
 }: SparklineProps) {

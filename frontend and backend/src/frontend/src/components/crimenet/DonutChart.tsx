@@ -8,10 +8,10 @@ interface DonutSlice {
 }
 
 const toneColor: Record<RiskLevel, string> = {
-  critical: "var(--risk-critical)",
-  high: "var(--risk-high)",
-  medium: "var(--risk-medium)",
-  low: "var(--risk-low)",
+  critical: "oklch(var(--risk-critical))",
+  high: "oklch(var(--risk-high))",
+  medium: "oklch(var(--risk-medium))",
+  low: "oklch(var(--risk-low))",
 };
 
 interface DonutChartProps {
@@ -52,7 +52,7 @@ export function DonutChart({
             cy={size / 2}
             r={radius}
             fill="none"
-            stroke="var(--border)"
+            stroke="oklch(var(--border))"
             strokeWidth={thickness}
           />
           {data.map((slice) => {

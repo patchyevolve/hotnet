@@ -51,7 +51,7 @@ export function EvidenceIntegrity({
               cy="18"
               r="15.5"
               fill="none"
-              stroke="var(--border)"
+              stroke="oklch(var(--border))"
               strokeWidth="3"
             />
             <circle
@@ -59,7 +59,7 @@ export function EvidenceIntegrity({
               cy="18"
               r="15.5"
               fill="none"
-              stroke="var(--risk-low)"
+              stroke="oklch(var(--risk-low))"
               strokeWidth="3"
               strokeLinecap="round"
               strokeDasharray={`${(percent / 100) * 97.4} 97.4`}

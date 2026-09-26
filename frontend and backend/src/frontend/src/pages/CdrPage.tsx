@@ -228,7 +228,7 @@ export function CdrPage() {
                     value: item.count,
                   }))}
                   height={170}
-                  tone="var(--accent-blue)"
+                  tone="oklch(var(--accent-blue))"
                 />
               </div>
             </div>
@@ -336,7 +336,7 @@ export function CdrPage() {
               data-ocid="cdr.flagged_checkbox"
               checked={flaggedOnly}
               onChange={(event) => setFlaggedOnly(event.target.checked)}
-              className="size-3.5 accent-[var(--risk-high)]"
+              className="size-3.5 accent-[oklch(var(--risk-high))]"
             />
             {strings.flaggedOnly}
           </label>

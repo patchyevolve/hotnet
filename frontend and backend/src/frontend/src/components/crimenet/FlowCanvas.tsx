@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 import { useMemo, useState } from "react";
 
 const riskColor: Record<RiskLevel, string> = {
-  critical: "var(--risk-critical)",
-  high: "var(--risk-high)",
-  medium: "var(--risk-medium)",
-  low: "var(--risk-low)",
+  critical: "oklch(var(--risk-critical))",
+  high: "oklch(var(--risk-high))",
+  medium: "oklch(var(--risk-medium))",
+  low: "oklch(var(--risk-low))",
 };
 
 interface FlowCanvasProps {
@@ -53,7 +53,7 @@ export function FlowCanvas({
         className="absolute inset-0 opacity-30"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 1px 1px, var(--border) 1px, transparent 0)",
+            "radial-gradient(circle at 1px 1px, oklch(var(--border)) 1px, transparent 0)",
           backgroundSize: "24px 24px",
         }}
         aria-hidden
@@ -110,10 +110,10 @@ export function FlowCanvas({
               )}
               style={{
                 borderColor: riskColor[account.risk],
-                backgroundColor: "var(--card)",
+                backgroundColor: "oklch(var(--card))",
                 color: riskColor[account.risk],
                 boxShadow: isActive
-                  ? `0 0 0 4px ${riskColor[account.risk]}22`
+                  ? `0 0 0 4px color-mix(in oklab, ${riskColor[account.risk]} 13%, transparent)`
                   : undefined,
               }}
             >

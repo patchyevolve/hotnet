@@ -3,12 +3,12 @@ import type { RiskLevel, TimelineEvent } from "@/lib/crimenet/types";
 import { cn } from "@/lib/utils";
 
 const kindColor: Record<TimelineEvent["kind"], string> = {
-  case: "var(--info)",
-  cdr: "var(--accent-blue)",
-  money: "var(--risk-medium)",
-  evidence: "var(--neutral-purple)",
-  network: "var(--risk-high)",
-  face: "var(--risk-critical)",
+  case: "oklch(var(--info))",
+  cdr: "oklch(var(--accent-blue))",
+  money: "oklch(var(--risk-medium))",
+  evidence: "oklch(var(--neutral-purple))",
+  network: "oklch(var(--risk-high))",
+  face: "oklch(var(--risk-critical))",
 };
 
 const riskRing: Record<RiskLevel, string> = {
