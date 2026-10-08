@@ -420,7 +420,10 @@ class Pipeline:
                 cur.close()
                 conn.close()
             except Exception as e:
-                print(f"[PIPELINE] WARNING: Could not finalize unscoped run record: {e}")
+                print(f"[PIPELINE] ERROR: Could not finalize unscoped run record: {e}")
+                import traceback
+                traceback.print_exc()
+                raise RuntimeError(f"Database persistence failed: {e}") from e
             return
 
         print(f"[PIPELINE] Persisting results to database (run: {self.db_run_id})...")
@@ -840,9 +843,10 @@ class Pipeline:
             print(f"[PIPELINE] Database persistence complete")
 
         except Exception as e:
-            print(f"[PIPELINE] WARNING: Database persistence failed: {e}")
+            print(f"[PIPELINE] ERROR: Database persistence failed: {e}")
             import traceback
             traceback.print_exc()
+            raise RuntimeError(f"Database persistence failed: {e}") from e
 
     def run_batch(self, input_dir: str) -> dict:
         """Process all files in a directory. Skips already-processed files."""
