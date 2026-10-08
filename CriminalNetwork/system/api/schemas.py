@@ -132,3 +132,8 @@ class FaceDecision(BaseModel):
     decision: Literal["confirm", "reject"]
     reviewer: str = Field(default="", max_length=80)
     note: str = Field(default="", max_length=500)
+    # Optional target case. Omitted (None) keeps today's behaviour — the
+    # decision lands in the active case — so existing callers are unaffected;
+    # supplying it pins the write to that case instead of whichever one the
+    # global active-case pointer happens to be on.
+    caseId: str | None = Field(default=None, max_length=120)

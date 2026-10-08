@@ -196,6 +196,36 @@ def current_identity(
         raise HTTPException(401, str(exc)) from exc
 
 
+def require_roles(*allowed_roles: str):
+    """Authorise a route by ``Identity.role``.
+
+    Wraps :func:`current_identity`, so authentication still runs first: a
+    missing or unverifiable token answers 401, and only a *validated*
+    identity that carries the wrong role is refused with 403. The division
+    of duty follows the system spec:
+
+    * ``ADMIN`` / ``SUPERVISOR`` — full mutation (open root cases, …).
+    * ``INSPECTOR`` — operational mutation (FIRs, evidence, runs, face
+      decisions); cannot open a root case.
+    * ``AUDIT_LOGGER`` — read-only audit oversight: it appears on no
+      mutating route, so every POST it attempts is a 403.
+
+    Routes stay honest by naming their allowed roles at the call site rather
+    than in a central table — a new endpoint cannot accidentally default to
+    open.
+    """
+
+    def _role_checker(identity: Identity = Depends(current_identity)) -> Identity:
+        if identity.role not in allowed_roles:
+            raise HTTPException(
+                403,
+                f"Role {identity.role!r} is not authorized for this operation. Required: {allowed_roles}",
+            )
+        return identity
+
+    return _role_checker
+
+
 def _identity_view(identity: Identity) -> dict[str, str]:
     """camelCase over the wire, matching every other response."""
     return {
@@ -279,6 +309,17 @@ def _projection(case_id: str | None) -> RunProjection:
         tampered=tampered,
         case_id=target,
     )
+
+
+def _active_case_or_none() -> str | None:
+    """The active case, or ``None`` when the API state has not started.
+
+    ``get_state()`` answers 503 there, and a plain-function call into a
+    handler (as the projection unit tests do) has no state at all. Both fall
+    through to ``_projection(None)``, which is what raises the 503 on a live
+    server — deciding "no active case" is only possible once state exists.
+    """
+    return _state.active_case() if _state is not None else None
 
 
 def _job_view(job: Job) -> dict[str, Any]:
@@ -365,7 +406,8 @@ def get_case(case_id: str) -> dict[str, Any]:
 
 @app.post("/api/cases", status_code=201)
 def create_case(
-    body: CaseCreate, identity: Identity = Depends(current_identity)
+    body: CaseCreate,
+    identity: Identity = Depends(require_roles("ADMIN", "SUPERVISOR")),
 ) -> dict[str, Any]:
     registry = get_registry()
     jurisdiction = body.jurisdictionId or identity.jurisdiction_id
@@ -387,7 +429,9 @@ def create_case(
 def create_fir(
     case_id: str,
     body: FirCreate,
-    identity: Identity = Depends(current_identity),
+    identity: Identity = Depends(
+        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+    ),
 ) -> dict[str, Any]:
     registry = get_registry()
     _registry_case(case_id)
@@ -435,7 +479,9 @@ async def upload_evidence(
     case_id: str,
     fir_id: str,
     files: list[UploadFile] = File(...),
-    identity: Identity = Depends(current_identity),
+    identity: Identity = Depends(
+        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+    ),
 ) -> dict[str, Any]:
     """Append evidence to a FIR.
 
@@ -506,7 +552,9 @@ def list_case_evidence(case_id: str) -> list[dict[str, Any]]:
 def run_case(
     case_id: str,
     body: RunRequest,
-    identity: Identity = Depends(current_identity),
+    identity: Identity = Depends(
+        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+    ),
 ) -> dict[str, Any]:
     state = get_state()
     registry = state.registry
@@ -625,21 +673,38 @@ def face_status() -> dict[str, Any]:
 
 
 @app.post("/api/faces/decision")
-def record_face_decision(body: FaceDecision) -> dict[str, Any]:
+def record_face_decision(
+    body: FaceDecision,
+    caseId: str | None = None,
+    identity: Identity = Depends(
+        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+    ),
+) -> dict[str, Any]:
     """Investigator confirm/reject of a proposed face match.
 
-    Persists to ``face_decisions.json`` beside the active case's run outputs,
-    so every later projection of the same run still shows who decided what;
-    re-running the pipeline never clears a decision.
+    Persists to ``face_decisions.json`` beside the targeted case's run
+    outputs, so every later projection of the same run still shows who
+    decided what; re-running the pipeline never clears a decision.
+
+    The case is ``body.caseId`` when the caller supplies one (the screen may
+    be reviewing a case other than the global active one), else the
+    ``caseId`` query param, else the active case. Without that, a decision
+    made while another case was active would silently be filed against the
+    wrong case.
     """
-    projection = _projection(None)
+    target_case = body.caseId or caseId or _active_case_or_none()
+    if not target_case and _state is not None:
+        raise HTTPException(404, "No active or specified case")
+
+    projection = _projection(target_case)
     current = next(
         (row for row in projection.face_records() if row["id"] == body.faceId),
         None,
     )
     if current is None:
+        where = f"case {target_case}" if target_case else "the active case"
         raise HTTPException(
-            404, f"Face record {body.faceId} not found in the active case"
+            404, f"Face record {body.faceId} not found in {where}"
         )
 
     path = projection.output_dir / "face_decisions.json"
@@ -651,9 +716,10 @@ def record_face_decision(body: FaceDecision) -> dict[str, Any]:
                 payload = {"decisions": loaded["decisions"]}
         except (OSError, ValueError):
             pass
+    reviewer = body.reviewer.strip() or identity.display_name or identity.user_id
     payload["decisions"][body.faceId] = {
         "decision": body.decision,
-        "reviewer": body.reviewer,
+        "reviewer": reviewer,
         "note": body.note,
         "decidedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
