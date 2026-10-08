@@ -1096,11 +1096,13 @@ class Pipeline:
         # Final export with completed run info
         output = self._export_results()
 
-        # Stage 7: Hypothesis Engine (falsifiable hypotheses)
-        self._run_hypothesis(output)
-
-        # Stage 8: Contradiction Adjudication (resolve or route)
+        # Stage 8: Contradiction Adjudication (must run before Hypotheses so
+        # standing/resolved status is known when they are scored)
         self._run_contradiction(output)
+
+        # Stage 7: Hypothesis Engine (falsifiable hypotheses scored against
+        # the adjudicated contradictions)
+        self._run_hypothesis(output)
 
         # Stage 9: Gap Detection (missing evidence requirements)
         self._run_gap(output)
@@ -1308,11 +1310,13 @@ class Pipeline:
         # Final export with completed run info
         output = self._export_results()
 
-        # Stage 7: Hypothesis Engine (falsifiable hypotheses)
-        self._run_hypothesis(output)
-
-        # Stage 8: Contradiction Adjudication (resolve or route)
+        # Stage 8: Contradiction Adjudication (must run before Hypotheses so
+        # standing/resolved status is known when they are scored)
         self._run_contradiction(output)
+
+        # Stage 7: Hypothesis Engine (falsifiable hypotheses scored against
+        # the adjudicated contradictions)
+        self._run_hypothesis(output)
 
         # Stage 9: Gap Detection (missing evidence requirements)
         self._run_gap(output)
@@ -1550,11 +1554,13 @@ class Pipeline:
         self._end_run(status="completed")
         output = self._export_results()
 
-        # Stage 7: Hypothesis Engine (falsifiable hypotheses)
-        self._run_hypothesis(output)
-
-        # Stage 8: Contradiction Adjudication (resolve or route)
+        # Stage 8: Contradiction Adjudication (must run before Hypotheses so
+        # standing/resolved status is known when they are scored)
         self._run_contradiction(output)
+
+        # Stage 7: Hypothesis Engine (falsifiable hypotheses scored against
+        # the adjudicated contradictions)
+        self._run_hypothesis(output)
 
         # Stage 9: Gap Detection (missing evidence requirements)
         self._run_gap(output)

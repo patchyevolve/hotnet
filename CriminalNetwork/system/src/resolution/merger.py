@@ -13,45 +13,62 @@ from ..models.schema import (
 )
 
 
+def _names_conflicting(names: List[str]) -> List[str]:
+    """Subset of ``names`` that cannot be reconciled with every other name.
+
+    Two names reconcile when they are aliases of each other: exact
+    normalized match, containment subset ("Rakesh" ⊂ "Rakesh Kumar"),
+    nickname/short form, or a fuzzy match clearing the name-matching rules
+    (``person_names_compatible`` + Jaro-Winkler gate in ``fuzzy_name_match``).
+
+    Returns ``[]`` when the whole set reconciles, otherwise the names that
+    took part in at least one irreconcilable pair (order preserved, unique).
+    """
+    from .rule_pass import fuzzy_name_match, person_names_compatible
+
+    conflicting = []
+    for i, a in enumerate(names):
+        for b in names[i + 1:]:
+            if person_names_compatible(a, b):
+                continue
+            if fuzzy_name_match(a, b)[0]:
+                continue
+            for name in (a, b):
+                if name not in conflicting:
+                    conflicting.append(name)
+    return conflicting
+
+
 def detect_contradictions(entities: List[dict], run_id: str = "") -> List[Contradiction]:
     """Detect all 8 contradiction types — per SYSTEM_STRUCTURE.md taxonomy."""
     contradictions = []
     entity_ids = [e["id"] for e in entities]
 
     # 1. IDENTITY: Same person, different identity
-    phones = set()
-    for e in entities:
-        phone = e.get("attributes", {}).get("phone_number", "")
-        if phone:
-            phones.add(phone)
-        phone = e.get("attributes", {}).get("phone", "")
-        if phone:
-            phones.add(phone)
-    if len(phones) > 1:
-        contradictions.append(Contradiction(
-            id=generate_id("CON", f"phone_{'_'.join(entity_ids)}"),
-            type=ContradictionType.IDENTITY.value,
-            entity_ids=entity_ids,
-            attribute="phone",
-            values=list(phones),
-            sources=[e.get("source", {}).get("file_name", "?") for e in entities],
-            severity="high",
-            run_id=run_id,
-        ))
+    #
+    # Phones are deliberately NOT checked. A person holding several numbers
+    # (personal/work/handset swapped out) is ordinary attribute aggregation —
+    # flagging len(phones) > 1 produced a false IDENTITY contradiction on
+    # virtually every multi-source merge.
 
-    # Name conflicts (identity)
-    names = set(e.get("name", "") for e in entities)
+    # Name conflicts (identity) — only when the names are irreconcilable.
+    # Legitimate alias merges ("Rakesh" + "Rakesh Kumar") must not emit an
+    # IDENTITY contradiction: Stage 8 would have to adjudicate it and
+    # Stage 7 scored hypothesis confidence against it while unadjudicated.
+    names = sorted({e.get("name", "") for e in entities if (e.get("name") or "").strip()})
     if len(names) > 1:
-        contradictions.append(Contradiction(
-            id=generate_id("CON", f"name_{'_'.join(entity_ids)}"),
-            type=ContradictionType.IDENTITY.value,
-            entity_ids=entity_ids,
-            attribute="name",
-            values=list(names),
-            sources=[e.get("source", {}).get("file_name", "?") for e in entities],
-            severity="medium",
-            run_id=run_id,
-        ))
+        conflicting = _names_conflicting(names)
+        if conflicting:
+            contradictions.append(Contradiction(
+                id=generate_id("CON", f"name_{'_'.join(entity_ids)}"),
+                type=ContradictionType.IDENTITY.value,
+                entity_ids=entity_ids,
+                attribute="name",
+                values=conflicting,
+                sources=[e.get("source", {}).get("file_name", "?") for e in entities],
+                severity="medium",
+                run_id=run_id,
+            ))
 
     # DOB conflicts (identity)
     dobs = set()
@@ -723,20 +740,33 @@ def merge_entities(
             ))
             merged_ids.add(eid)
 
-    # Remaining unmerged entities become resolved entities themselves (ALL types, not just PERSON)
+    # Remaining unmerged entities become resolved entities themselves (ALL types, not just PERSON).
+    # Standalone singletons MUST be emitted: without them the canonical store
+    # has no record of a never-merged entity and Stage 5 has to synthesize an
+    # ad-hoc node from the raw extraction id.
     for eid, entity in entities_by_id.items():
         if eid in merged_ids:
             continue
         now = datetime.now().isoformat()
-        # Include entity_type + source ID so standalone RES IDs never collide
+        canonical_name = entity.get("name", "") or ""
+        # Include entity_type + canonical name + source ID so standalone RES
+        # IDs never collide with a merge of the same name or type.
         stype = (entity.get("entity_type") or "UNKNOWN").upper()
-        res_id = generate_id("RES", f"{stype}:{entity.get('name', eid)}:{eid}")
+        res_id = generate_id("RES", f"{stype}:{canonical_name or eid}:{eid}")
 
-        effective_confidence = entity.get("confidence", {}).get("score", 1.0) if isinstance(entity.get("confidence"), dict) else 1.0
+        # Relations touching this entity belong to the singleton too — they
+        # are its only edges in the graph.
+        source_relation_ids = [
+            rel.get("id", "") for rel in relations
+            if rel.get("source_entity_id") == eid or rel.get("target_entity_id") == eid
+        ]
+
+        conf = entity.get("confidence", {})
+        effective_confidence = conf.get("score", 0.5) if isinstance(conf, dict) else 0.5
 
         resolved.append(ResolvedEntity(
             id=res_id,
-            canonical_name=entity.get("name", ""),
+            canonical_name=canonical_name,
             entity_type=entity.get("entity_type", "PERSON"),
             aliases=entity.get("aliases", []),
             phones=collect_phones([entity]),
@@ -745,7 +775,7 @@ def merge_entities(
             merge_confidence=1.0,
             merge_type="single",
             source_entities=[eid],
-            source_relations=[],
+            source_relations=source_relation_ids,
             llm_reasoning="No merge candidates — standalone entity",
             signals={},
             created_at=now,
