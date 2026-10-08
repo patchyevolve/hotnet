@@ -15,7 +15,7 @@ global_entity_links.json, cross_case_alerts.json.
 import json
 import os
 import re
-from datetime import datetime
+from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import List, Optional, Tuple
@@ -147,11 +147,20 @@ def _new_global_id(sig: dict) -> str:
 
 
 def _parse_ts(value: str) -> Optional[datetime]:
+    """Parse an ISO timestamp to a *naive UTC* datetime (None on failure).
+
+    JSON payloads carry naive datetimes while Postgres returns offset-aware
+    ones; returning naive UTC for both makes min()/max() comparisons in
+    ``_absorb_signals`` total instead of raising TypeError.
+    """
     if not value:
         return None
     try:
-        return datetime.fromisoformat(value)
-    except ValueError:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if dt.tzinfo is not None:
+            dt = dt.astimezone(timezone.utc).replace(tzinfo=None)
+        return dt
+    except (ValueError, TypeError):
         return None
 
 

@@ -7,7 +7,7 @@ import json
 import time
 from typing import List, Dict, Optional, Set, Tuple
 from pathlib import Path
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from ..models.schema import ExtractedEntity, ExtractedRelation, generate_id
 from ..resolution.merger import ResolvedEntity
@@ -21,45 +21,74 @@ from .timestamp import normalize_timestamp, get_time_range, parse_timestamp, det
 from .spatial import normalize_location, get_coordinates, assess_spatial_precision
 
 
+def _to_utc(value: str) -> datetime:
+    """Coerce an ISO 8601 string to an aware UTC datetime.
+
+    Naive strings are assumed UTC; aware strings are converted. Mixing the
+    two is what used to raise TypeError in ``allen_relation``.
+    """
+    dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    if dt.tzinfo is None:
+        return dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
+def _to_utc_lenient(value) -> datetime:
+    """``_to_utc`` with the legacy truncated-ISO fallback.
+
+    Raw CDR/CCTV timestamps can carry decorations after the seconds
+    ("...14:30:00 IST"); the previous implementation truncated to the first
+    19 characters before parsing, so keep that as a fallback — otherwise
+    those pairs would silently stop being compared.
+    """
+    try:
+        return _to_utc(value)
+    except (ValueError, TypeError):
+        return _to_utc(str(value)[:19])
+
+
 def allen_relation(start_a: str, end_a: str, start_b: str, end_b: str) -> AllenRelation:
     """
     Compute Allen's Interval Algebra relation between two intervals.
     All times should be ISO 8601 strings.
+
+    Naive and offset-aware inputs are normalized to UTC first, so mixed
+    comparisons never raise TypeError; unparsable input degrades to EQUALS.
     """
     try:
-        a_start = datetime.fromisoformat(start_a.replace("Z", "+00:00"))
-        a_end = datetime.fromisoformat(end_a.replace("Z", "+00:00"))
-        b_start = datetime.fromisoformat(start_b.replace("Z", "+00:00"))
-        b_end = datetime.fromisoformat(end_b.replace("Z", "+00:00"))
+        a_start = _to_utc(start_a)
+        a_end = _to_utc(end_a)
+        b_start = _to_utc(start_b)
+        b_end = _to_utc(end_b)
+
+        if a_end < b_start:
+            return AllenRelation.BEFORE
+        elif a_start > b_end:
+            return AllenRelation.AFTER
+        elif a_end == b_start:
+            return AllenRelation.MEETS
+        elif a_start == b_end:
+            return AllenRelation.MET_BY
+        elif a_start < b_start and a_end > b_start and a_end < b_end:
+            return AllenRelation.OVERLAPS
+        elif a_start > b_start and a_start < b_end and a_end > b_end:
+            return AllenRelation.OVERLAPPED_BY
+        elif a_start >= b_start and a_end <= b_end:
+            return AllenRelation.DURING if a_start > b_start or a_end < b_end else AllenRelation.EQUALS
+        elif a_start <= b_start and a_end >= b_end:
+            return AllenRelation.CONTAINS if a_start < b_start or a_end > b_end else AllenRelation.EQUALS
+        elif a_start == b_start and a_end < b_end:
+            return AllenRelation.STARTS
+        elif a_start == b_start and a_end > b_end:
+            return AllenRelation.STARTED_BY
+        elif a_end == b_end and a_start > b_start:
+            return AllenRelation.FINISHES
+        elif a_end == b_end and a_start < b_start:
+            return AllenRelation.FINISHED_BY
+        else:
+            return AllenRelation.EQUALS
     except (ValueError, TypeError):
         return AllenRelation.EQUALS  # Cannot determine — treat as same time
-
-    if a_end < b_start:
-        return AllenRelation.BEFORE
-    elif a_start > b_end:
-        return AllenRelation.AFTER
-    elif a_end == b_start:
-        return AllenRelation.MEETS
-    elif a_start == b_end:
-        return AllenRelation.MET_BY
-    elif a_start < b_start and a_end > b_start and a_end < b_end:
-        return AllenRelation.OVERLAPS
-    elif a_start > b_start and a_start < b_end and a_end > b_end:
-        return AllenRelation.OVERLAPPED_BY
-    elif a_start >= b_start and a_end <= b_end:
-        return AllenRelation.DURING if a_start > b_start or a_end < b_end else AllenRelation.EQUALS
-    elif a_start <= b_start and a_end >= b_end:
-        return AllenRelation.CONTAINS if a_start < b_start or a_end > b_end else AllenRelation.EQUALS
-    elif a_start == b_start and a_end < b_end:
-        return AllenRelation.STARTS
-    elif a_start == b_start and a_end > b_end:
-        return AllenRelation.STARTED_BY
-    elif a_end == b_end and a_start > b_start:
-        return AllenRelation.FINISHES
-    elif a_end == b_end and a_start < b_start:
-        return AllenRelation.FINISHED_BY
-    else:
-        return AllenRelation.EQUALS
 
 
 def compute_temporal_relations(events: List[TimelineEvent]) -> List[dict]:
@@ -120,8 +149,18 @@ def cluster_events(events: List[TimelineEvent], max_gap_seconds: float = 600) ->
     if not events:
         return []
 
-    # Sort by timestamp
-    sorted_events = sorted(events, key=lambda e: e.timestamp)
+    # Sort by UTC instant, not by string. A plain string sort puts
+    # "…T14:30:00+05:30" (= 09:00 UTC) after "…T09:00:30", which reverses
+    # neighbouring pairs and yields a negative time_span on mixed
+    # naive/aware input. Unparsable timestamps keep their relative order at
+    # the end instead of crashing the sort.
+    def _sort_key(ev: TimelineEvent):
+        try:
+            return (0, _to_utc(ev.timestamp))
+        except (ValueError, TypeError):
+            return (1, datetime.max.replace(tzinfo=timezone.utc))
+
+    sorted_events = sorted(events, key=_sort_key)
 
     clusters = []
     current_cluster_events = [sorted_events[0]]
@@ -130,8 +169,10 @@ def cluster_events(events: List[TimelineEvent], max_gap_seconds: float = 600) ->
     for ev in sorted_events[1:]:
         # Check if this event belongs to the current cluster
         try:
-            last_time = datetime.fromisoformat(current_cluster_events[-1].timestamp.replace("Z", "+00:00"))
-            this_time = datetime.fromisoformat(ev.timestamp.replace("Z", "+00:00"))
+            # _to_utc: mixed naive/aware inputs would otherwise raise
+            # TypeError on subtraction, degrading gap to float('inf').
+            last_time = _to_utc(current_cluster_events[-1].timestamp)
+            this_time = _to_utc(ev.timestamp)
             gap = abs((this_time - last_time).total_seconds())
         except (ValueError, TypeError):
             gap = float('inf')
@@ -143,8 +184,8 @@ def cluster_events(events: List[TimelineEvent], max_gap_seconds: float = 600) ->
             if len(current_cluster_events) > 1:
                 cluster_id = generate_id("CLUSTER", f"{current_cluster_events[0].id}_{current_cluster_events[-1].id}")
                 try:
-                    start_dt = datetime.fromisoformat(current_cluster_events[0].timestamp.replace("Z", "+00:00"))
-                    end_dt = datetime.fromisoformat(current_cluster_events[-1].timestamp.replace("Z", "+00:00"))
+                    start_dt = _to_utc(current_cluster_events[0].timestamp)
+                    end_dt = _to_utc(current_cluster_events[-1].timestamp)
                     time_span = (end_dt - start_dt).total_seconds()
                 except (ValueError, TypeError):
                     time_span = 0
@@ -166,8 +207,8 @@ def cluster_events(events: List[TimelineEvent], max_gap_seconds: float = 600) ->
     if len(current_cluster_events) > 1:
         cluster_id = generate_id("CLUSTER", f"{current_cluster_events[0].id}_{current_cluster_events[-1].id}")
         try:
-            start_dt = datetime.fromisoformat(current_cluster_events[0].timestamp.replace("Z", "+00:00"))
-            end_dt = datetime.fromisoformat(current_cluster_events[-1].timestamp.replace("Z", "+00:00"))
+            start_dt = _to_utc(current_cluster_events[0].timestamp)
+            end_dt = _to_utc(current_cluster_events[-1].timestamp)
             time_span = (end_dt - start_dt).total_seconds()
         except (ValueError, TypeError):
             time_span = 0
@@ -615,8 +656,8 @@ class TemporalEngine:
             for i, ts1 in enumerate(timestamps):
                 for ts2 in timestamps[i+1:]:
                     try:
-                        t1 = datetime.fromisoformat(ts1["timestamp"].replace("Z", "+00:00"))
-                        t2 = datetime.fromisoformat(ts2["timestamp"].replace("Z", "+00:00"))
+                        t1 = _to_utc(ts1["timestamp"])
+                        t2 = _to_utc(ts2["timestamp"])
                         time_diff = abs((t1 - t2).total_seconds())
                         
                         if time_diff <= 300:  # 5 minutes
@@ -673,22 +714,12 @@ class TemporalEngine:
                         if not ts1_str or not ts2_str:
                             continue
                         
-                        # Try to parse timestamp
-                        t1 = None
-                        t2 = None
-                        for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"]:
-                            try:
-                                t1 = datetime.strptime(ts1_str[:19], fmt[:len(ts1_str[:19])+2])
-                                break
-                            except ValueError:
-                                continue
-                        for fmt in ["%Y-%m-%dT%H:%M:%S", "%Y-%m-%d %H:%M:%S", "%Y-%m-%dT%H:%M:%S.%f"]:
-                            try:
-                                t2 = datetime.strptime(ts2_str[:19], fmt[:len(ts2_str[:19])+2])
-                                break
-                            except ValueError:
-                                continue
-                        
+                        # Parse both timestamps to aware UTC so mixed
+                        # naive/aware values subtract cleanly (a TypeError
+                        # here used to discard the pair).
+                        t1 = _to_utc_lenient(ts1_str)
+                        t2 = _to_utc_lenient(ts2_str)
+
                         if t1 and t2:
                             time_diff = abs((t1 - t2).total_seconds())
                             loc1 = call1.get("location", "")
