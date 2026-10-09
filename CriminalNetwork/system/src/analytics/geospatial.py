@@ -284,8 +284,12 @@ def _latlng_to_h3(lat: float, lng: float) -> str:
     """Convert lat/lng to H3 hex index. Fallback to simple grid if h3 not installed."""
     try:
         import h3
-        return h3.latlng_to_cell(lat, lng, H3_RESOLUTION)
-    except ImportError:
+        if hasattr(h3, "latlng_to_cell"):
+            return str(h3.latlng_to_cell(lat, lng, H3_RESOLUTION))
+        if hasattr(h3, "geo_to_h3"):
+            return str(h3.geo_to_h3(lat, lng, H3_RESOLUTION))
+        return f"GRID_{round(lat, 3)}_{round(lng, 3)}"
+    except Exception:  # noqa: BLE001 - any h3 failure degrades to the grid
         return f"GRID_{round(lat, 3)}_{round(lng, 3)}"
 
 

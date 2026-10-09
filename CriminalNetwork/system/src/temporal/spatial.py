@@ -42,6 +42,9 @@ KNOWN_LOCATIONS: Dict[str, Tuple[float, float]] = {
     "rajouri garden": (28.6486, 77.1219),
     "rohini": (28.7495, 77.0654),
     "dwarka": (28.5921, 77.0460),
+    "rajendra nagar, delhi": (28.6415, 77.1792),
+    "old rajendra nagar": (28.6415, 77.1792),
+    "new rajendra nagar": (28.6385, 77.1812),
 
     # Maharashtra
     "mumbai": (19.0760, 72.8777),
@@ -261,12 +264,18 @@ def get_coordinates(location: str) -> Optional[Tuple[float, float]]:
             return KNOWN_LOCATIONS[part]
 
     # Try tower ID pattern: "DEL_TWR_042" -> "DEL" -> Delhi
-    tower_match = re.match(r'([A-Z]{2,3})_TWR_', location, re.IGNORECASE)
+    tower_match = re.match(r'([A-Z]{2,3})_TWR_(\d+)', location, re.IGNORECASE)
     if tower_match:
         prefix = tower_match.group(1).upper()
+        tower_num = int(tower_match.group(2))
         if prefix in TOWER_CITY_MAP:
-            city, state = TOWER_CITY_MAP[prefix]
-            return KNOWN_LOCATIONS.get(city.lower())
+            city, _ = TOWER_CITY_MAP[prefix]
+            base_coords = KNOWN_LOCATIONS.get(city.lower())
+            if base_coords:
+                # Deterministic pseudo-offset within ~3-5km of city center
+                offset_lat = ((tower_num * 17) % 60 - 30) * 0.001
+                offset_lng = ((tower_num * 31) % 60 - 30) * 0.001
+                return (round(base_coords[0] + offset_lat, 4), round(base_coords[1] + offset_lng, 4))
 
     # Try GPS coordinates
     coords = re.search(r'(\d+\.?\d*)\s*,\s*(\d+\.?\d*)', location)

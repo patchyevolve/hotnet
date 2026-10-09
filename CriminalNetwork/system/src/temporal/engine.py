@@ -269,12 +269,19 @@ class TemporalEngine:
             "generic": 0.70,
         }
 
-        # Process entities
+        # Process entities — accepts either raw ExtractedEntity dicts (the
+        # pre-resolution shape) or canonical ResolvedEntity dicts, so Stage 4
+        # can bind timestamps and coordinates to RES_ ids.
         for entity in entities:
             eid = entity.get("id", "")
-            attrs = entity.get("attributes", {})
-            source = entity.get("source", {})
-            source_file = source.get("file_name", "")
+            name = entity.get("canonical_name", "") or entity.get("name", "")
+            attrs = entity.get("attributes", {}) or {}
+            source = entity.get("source", {}) or {}
+            source_file = (
+                source.get("file_name", "")
+                or (entity.get("provenance_chain") or [""])[0]
+                or (attrs.get("observed_in") or [""])[0]
+            )
             source_type = source.get("source_type", "generic")
             base_confidence = source_confidence.get(source_type, 0.70)
 
@@ -317,7 +324,7 @@ class TemporalEngine:
                             event_type=event_type,
                             timestamp=ts,
                             source_id=source_file,
-                            description=f"{event_type} from {source_file}",
+                            description=f"{event_type} from {source_file or name}",
                             confidence=round(confidence, 2),
                             run_id=run_id,
                         ))

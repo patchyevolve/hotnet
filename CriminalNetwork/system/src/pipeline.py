@@ -975,8 +975,25 @@ class Pipeline:
         # Step 5: Temporal Enrichment
         print("[PIPELINE] Step 5/8: Temporal enrichment (Stage 4)...")
         self.audit_trail.log("temporal", "temporal_started", {})
+        # Stage 4 consumes Stage 3's canonical output when it exists, so
+        # temporal_infos/spatial_infos bind to RES_ ids rather than the raw
+        # extraction ids.
+        resolved_entities_file = self.output_dir / "resolved_entities.json"
+        temporal_input_entities = entities
+        if resolved_entities_file.exists():
+            try:
+                with open(resolved_entities_file, encoding="utf-8") as f:
+                    resolved_data = json.load(f)
+                    temporal_input_entities = (
+                        list(resolved_data.values())
+                        if isinstance(resolved_data, dict)
+                        else resolved_data
+                    )
+            except Exception:  # noqa: BLE001 - corrupt state must not abort the run
+                temporal_input_entities = entities
+
         temporal_summary = self.temporal.enrich(
-            entities=entities,
+            entities=temporal_input_entities,
             relations=relations,
             output_dir=str(self.output_dir),
             run_id=run.run_id,
@@ -1250,8 +1267,22 @@ class Pipeline:
 
         # Temporal Enrichment
         self.audit_trail.log("temporal", "temporal_started", {})
+        resolved_entities_file = self.output_dir / "resolved_entities.json"
+        temporal_input_entities = entities
+        if resolved_entities_file.exists():
+            try:
+                with open(resolved_entities_file, encoding="utf-8") as f:
+                    resolved_data = json.load(f)
+                    temporal_input_entities = (
+                        list(resolved_data.values())
+                        if isinstance(resolved_data, dict)
+                        else resolved_data
+                    )
+            except Exception:  # noqa: BLE001 - corrupt state must not abort the run
+                temporal_input_entities = entities
+
         temporal_summary = self.temporal.enrich(
-            entities=entities,
+            entities=temporal_input_entities,
             relations=relations,
             output_dir=str(self.output_dir),
             run_id=run.run_id,
@@ -1465,8 +1496,22 @@ class Pipeline:
 
         # Step 4: Temporal Enrichment
         print("[PIPELINE] Step 5/8: Temporal enrichment (Stage 4)...")
+        resolved_entities_file = self.output_dir / "resolved_entities.json"
+        temporal_input_entities = entities
+        if resolved_entities_file.exists():
+            try:
+                with open(resolved_entities_file, encoding="utf-8") as f:
+                    resolved_data = json.load(f)
+                    temporal_input_entities = (
+                        list(resolved_data.values())
+                        if isinstance(resolved_data, dict)
+                        else resolved_data
+                    )
+            except Exception:  # noqa: BLE001 - corrupt state must not abort the run
+                temporal_input_entities = entities
+
         temporal_summary = self.temporal.enrich(
-            entities=entities,
+            entities=temporal_input_entities,
             relations=relations,
             output_dir=str(self.output_dir),
             run_id=run.run_id,
