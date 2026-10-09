@@ -153,11 +153,17 @@ def load_signing_secret() -> bytes:
     state_dir.mkdir(parents=True, exist_ok=True)
     secret_path = state_dir / "session.secret"
     if secret_path.exists():
-        existing = secret_path.read_bytes().strip()
+        # Only line endings: a full strip() would drop whitespace bytes that
+        # random binary keys legitimately start or end with, so the bytes read
+        # back would differ from the bytes handed to the first provider and
+        # every later token would fail its signature check.
+        existing = secret_path.read_bytes().rstrip(b"\r\n")
         if existing:
             return existing
 
-    generated = secrets.token_bytes(48)
+    # Hex is ASCII, so the key can never begin or end with a whitespace byte:
+    # what is written is exactly what the next boot reads.
+    generated = secrets.token_hex(32).encode("ascii")
     # 0600: only the service account may read the signing key.
     fd = os.open(secret_path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)
     try:

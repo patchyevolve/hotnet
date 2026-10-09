@@ -13,7 +13,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Optional
 
-from .ingestion.engine import IngestionEngine
+from .ingestion.engine import IngestionEngine, compute_file_hash
 from .extraction.engine import ExtractionEngine
 from .resolution.engine import ResolutionEngine
 from .temporal.engine import TemporalEngine
@@ -178,9 +178,11 @@ class Pipeline:
         self.fir_entities: Dict[str, List[str]] = {}
         self.fir_relations: Dict[str, List[str]] = {}
 
-        # Track processed files for incremental ingestion
+        # Track processed files for incremental ingestion: path -> content
+        # hash, so a file rewritten in place is re-extracted rather than
+        # skipped as "already processed".
         self.processed_files_path = self.output_dir / "_processed_files.json"
-        self.processed_files = self._load_processed_files()
+        self.processed_files: dict[str, str] = self._load_processed_files()
 
         # Pipeline run tracking
         self.current_run: Optional[PipelineRun] = None
@@ -899,9 +901,10 @@ class Pipeline:
         for i, file_info in enumerate(evidence_files, 1):
             file_name = file_info.get("file_name", "unknown")
             file_path = file_info.get("file_path", "")
+            file_hash = file_info.get("file_hash", "")
 
-            # Skip already processed files
-            if self._is_processed(file_path):
+            # Skip already processed files — unless their content changed
+            if self._is_processed(file_path, file_hash):
                 print(f"[PIPELINE]   -> [{i}/{len(evidence_files)}] SKIP (already processed): {file_name}")
                 skipped_count += 1
                 continue
@@ -912,7 +915,7 @@ class Pipeline:
             result = self.extraction.extract_from_file(file_info, run_id=run.run_id)
 
             # Mark as processed
-            self._mark_processed(file_path)
+            self._mark_processed(file_path, file_hash)
             processed_count += 1
 
         # Step 2.5: Face processing (Stage 2.5 — RESEARCH_FACE_RECOGNITION doc 08 §7)
@@ -1189,7 +1192,7 @@ class Pipeline:
                     continue
                 # Normalize to absolute path for consistent processed tracking
                 file_str = str(file_path.absolute())
-                if not self._is_processed(file_str):
+                if not self._is_processed(file_str, self._known_hash(file_str)):
                     all_files.append(file_str)
 
         new_file_infos: List[dict] = []
@@ -1206,9 +1209,10 @@ class Pipeline:
                 if isinstance(file_info, dict) and "error" in file_info:
                     print(f"[PIPELINE]   -> SKIP (error): {file_path} — {file_info['error']}")
                     continue
+                file_hash = file_info.get("file_hash", "")
                 self.ingestion.finalize_adversarial_checks(run_id=run.run_id)
                 result = self.extraction.extract_from_file(file_info, run_id=run.run_id)
-                self._mark_processed(file_path)
+                self._mark_processed(file_path, file_hash)
                 new_file_infos.append(file_info)
 
                 file_name = Path(file_path).name
@@ -1389,7 +1393,7 @@ class Pipeline:
             for i, fpath in enumerate(fir_ctx.file_paths, 1):
                 fname = Path(fpath).name
 
-                if self._is_processed(fpath):
+                if self._is_processed(fpath, self._known_hash(fpath)):
                     print(f"[PIPELINE]   -> [{i}/{len(fir_ctx.file_paths)}] SKIP: {fname}")
                     continue
 
@@ -1428,7 +1432,7 @@ class Pipeline:
                         rid = r.get("id", "") if isinstance(r, dict) else getattr(r, "id", "")
                         self.fir_relations[fir_ctx.fir_id].append(rid)
 
-                self._mark_processed(fpath)
+                self._mark_processed(fpath, file_info.get("file_hash", ""))
 
             print(f"[PIPELINE]   FIR {fir_ctx.fir_id}: {len(self.fir_entities.get(fir_ctx.fir_id, []))} entities, {len(self.fir_relations.get(fir_ctx.fir_id, []))} relations")
 
@@ -1909,29 +1913,71 @@ class Pipeline:
         relation_count = len(self.extraction.relations)
         print(f"[PIPELINE]   -> Loaded {entity_count} entities, {relation_count} relations from previous run")
 
-    def _load_processed_files(self) -> set:
-        """Load set of previously processed files."""
+    def _load_processed_files(self) -> dict[str, str]:
+        """Load previously processed files as ``{file_path: file_hash}``.
+
+        Older state was a bare list of paths; those entries carry no hash and
+        are kept as ``{path: ""}`` so they still count as processed (see
+        :meth:`_is_processed`) instead of forcing a full re-extraction.
+        """
         if self.processed_files_path.exists():
             try:
                 with open(self.processed_files_path) as f:
-                    return set(json.load(f))
+                    data = json.load(f)
             except (json.JSONDecodeError, ValueError):
                 print(f"[PIPELINE] WARNING: Corrupted processed_files.json, starting fresh")
-                return set()
-        return set()
+                return {}
+            if isinstance(data, dict):
+                return {str(path): str(fhash) for path, fhash in data.items()}
+            if isinstance(data, list):
+                return {str(path): "" for path in data}
+            print("[PIPELINE] WARNING: Unexpected processed_files.json shape, starting fresh")
+            return {}
+        return {}
 
     def _save_processed_files(self):
-        """Save set of processed files."""
+        """Save processed files as a ``{file_path: file_hash}`` dict."""
         with open(self.processed_files_path, "w") as f:
-            json.dump(list(self.processed_files), f)
+            json.dump(self.processed_files, f, indent=2)
 
-    def _mark_processed(self, file_path: str):
-        """Mark a file as processed."""
-        self.processed_files.add(file_path)
+    def _mark_processed(self, file_path: str, file_hash: str = ""):
+        """Mark a file as processed, remembering its content hash."""
+        self.processed_files[file_path] = file_hash
 
-    def _is_processed(self, file_path: str) -> bool:
-        """Check if a file has been processed."""
-        return file_path in self.processed_files
+    def _is_processed(self, file_path: str, file_hash: str = "") -> bool:
+        """Check if a file has been processed — unchanged, if we know its hash.
+
+        An unknown path is never processed. When both the stored and the
+        supplied hash are present they must match, so content rewritten at
+        the same path falls through and is extracted again; a stored ``""``
+        (legacy list entry, or a mark taken without a hash) cannot be
+        compared and keeps the old skip behaviour.
+        """
+        if file_path not in self.processed_files:
+            return False
+        stored_hash = self.processed_files.get(file_path, "")
+        if file_hash and stored_hash:
+            return stored_hash == file_hash
+        return True
+
+    @staticmethod
+    def _hash_file(file_path: str) -> str:
+        """SHA-256 of a file, or ``""`` when it cannot be read."""
+        try:
+            return compute_file_hash(file_path)
+        except OSError:
+            return ""
+
+    def _known_hash(self, file_path: str) -> str:
+        """Content hash to compare a skip decision against.
+
+        Only tracked paths are read: an unknown path is unprocessed by
+        definition, and a legacy ``""`` entry has nothing to compare
+        against, so neither is worth the IO.
+        """
+        if not self.processed_files.get(file_path, ""):
+            return ""
+        return self._hash_file(file_path)
 
 
 def run_pipeline(
