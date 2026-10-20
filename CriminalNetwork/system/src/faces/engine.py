@@ -82,6 +82,50 @@ def model_available() -> bool:
     return (_MODEL_ROOT / "models" / "buffalo_l").is_dir()
 
 
+def _patch_face_align_estimate() -> None:
+    """Modernize insightface's ``estimate_norm`` for scikit-image >= 0.26.
+
+    Upstream ``insightface.utils.face_align.estimate_norm`` resolves its
+    transform via ``SimilarityTransform.estimate()``, deprecated in
+    scikit-image 0.26 (``FutureWarning``) in favor of the
+    ``SimilarityTransform.from_estimate()`` constructor. Swap in an equivalent
+    implementation so pipeline runs and tests stay FutureWarning-free while
+    preserving the exact landmark scaling, ratio math, and ``arcface_dst``
+    destination coordinates. No-op when either optional dependency is missing.
+    """
+    try:
+        import numpy as np
+        from insightface.utils import face_align
+        from skimage import transform as trans
+        from skimage.transform import SimilarityTransform
+    except Exception:  # noqa: BLE001 — optional stack absent; keep upstream code
+        return
+
+    from_estimate = getattr(SimilarityTransform, "from_estimate", None)
+
+    def _estimate_norm(lmk, image_size=112, mode="arcface"):
+        assert lmk.shape == (5, 2)
+        assert image_size % 112 == 0 or image_size % 128 == 0
+        if image_size % 112 == 0:
+            ratio = float(image_size) / 112.0
+            diff_x = 0
+        else:
+            ratio = float(image_size) / 128.0
+            diff_x = 8.0 * ratio
+        dst = face_align.arcface_dst * ratio
+        dst[:, 0] += diff_x
+        if from_estimate is not None:
+            tform = SimilarityTransform.from_estimate(lmk, dst)
+            if bool(tform):
+                return tform.params[0:2, :]
+            return np.full((2, 3), np.nan)
+        tform = trans.SimilarityTransform()
+        tform.estimate(lmk, dst)
+        return tform.params[0:2, :]
+
+    face_align.estimate_norm = _estimate_norm
+
+
 def _get_face_app():
     """Lazy FaceAnalysis singleton; None (once) when the stack is unavailable."""
     global _APP, _APP_FAILED
@@ -92,6 +136,8 @@ def _get_face_app():
             return _APP
         try:
             from insightface.app import FaceAnalysis
+
+            _patch_face_align_estimate()
 
             app = FaceAnalysis(
                 name="buffalo_l",

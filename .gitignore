@@ -269,3 +269,16 @@ certificates/
 *.bak
 *.backup
 *.old
+
+# ============================================================
+# LOCAL DEMO ASSETS
+# ============================================================
+
+# Face-seeding photos and demo-run screenshots that only exist on the machine
+# that copied or captured them — SETUP.md lists the photos as untracked, and
+# the tracked demo inputs are the CSV/TXT/JSON files beside them.
+CriminalNetwork/demo_data/amit.jpeg
+CriminalNetwork/demo_data/rakesh.jpeg
+CriminalNetwork/demo_data/atmcctv.jpeg
+CriminalNetwork/demo_data/confectionaryCCTV.jpeg
+CriminalNetwork/demo_data/Multimodal Detection*.png
