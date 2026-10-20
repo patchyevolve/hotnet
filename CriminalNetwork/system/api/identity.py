@@ -1,24 +1,31 @@
 """Pluggable identity layer.
 
 The product ships with a *session identity picker* (no credentials), but the
-caller must be able to swap in real credential auth later without touching any
+caller must be able to swap in real credential auth without touching any
 route. That is the whole point of this module: every route depends only on
 :class:`IdentityProvider`, never on a concrete implementation.
 
-Swap-in plan for credential auth
---------------------------------
-1. Implement :class:`CredentialIdentityProvider` (same two methods).
-2. Set ``CRIMENET_AUTH_PROVIDER=credential`` and supply a user store.
-3. Nothing else changes: tokens are issued and verified identically, and
+Swapping to credential auth
+---------------------------
+:class:`CredentialIdentityProvider` is implemented against the persistent
+user store (``api/user_store.py``) behind ``POST /api/auth/*``. Turning the
+picker off is configuration only:
+
+1. Set ``CRIMENET_AUTH_PROVIDER=credential``.
+2. Nothing else changes: tokens are issued and verified identically, and
    ``filed_by_id`` / ``jurisdiction_node_id`` keep flowing into the manifest.
+
+Until that flag is set the picker stays the active provider, so the demo
+workflow keeps working while ``/api/auth/*`` already issues real credentials.
 
 Why tokens are server-signed
 ----------------------------
 A picker means the user *chooses* their own role, so the client is untrusted
 by construction. Signing keeps identity server-issued: the client stores a
 token it cannot forge, so a hand-edited ``X-Role: ADMIN`` header is rejected
-rather than silently escalated. When credential auth lands, the same signature
-check keeps meaning "the server vouches for this identity".
+rather than silently escalated. With credential auth the same signature check
+keeps meaning "the server vouches for this identity" — now vouching for an
+account out of the user store rather than for a picker selection.
 """
 
 from __future__ import annotations
@@ -33,6 +40,8 @@ from abc import ABC, abstractmethod
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Final
+
+from api.user_store import UserRecord, UserStore, UserStoreError
 
 # Mirrors `Role` in frontend types.ts. Adding a role is a frontend + backend
 # change together; keeping them as data here avoids a second hardcoded list.
@@ -304,30 +313,88 @@ class SessionIdentityProvider(_SignedTokenMixin, IdentityProvider):
 
 
 class CredentialIdentityProvider(_SignedTokenMixin, IdentityProvider):
-    """Reserved seam for real credential auth.
+    """Real credential auth: identity is read back from the user store.
 
-    Token handling is fully implemented and shared; only credential checking
-    is missing, because there is no user store yet. Raising here (rather than
-    silently accepting) keeps this provider unusable until it is finished.
+    Same two methods as the picker, same signed tokens — the only difference
+    is *where* the identity comes from. ``start`` exchanges an email (or badge
+    id) plus password for a :class:`api.user_store.UserRecord`, and the record
+    supplies the user id, role and jurisdiction that every route and manifest
+    downstream already reads off :class:`Identity`.
+
+    The store is optional at construction so the class can be imported (and
+    its tokens *verified*) without a state directory; using ``start`` without
+    one is a configuration error, not a silent accept.
     """
 
     name = "credential"
 
-    def __init__(self, secret: bytes | None = None) -> None:
+    def __init__(
+        self,
+        user_store: UserStore | None = None,
+        secret: bytes | None = None,
+    ) -> None:
+        self.user_store = user_store
         self._secret = secret if secret is not None else load_signing_secret()
 
-    def start(self, payload: dict[str, Any]) -> tuple[Identity, str]:
-        raise NotImplementedError(
-            "Credential auth is not implemented yet; "
-            "set CRIMENET_AUTH_PROVIDER=session"
+    def _identity_for(self, user: UserRecord) -> Identity:
+        return Identity(
+            user_id=user.id,
+            display_name=user.name,
+            role=user.role,
+            jurisdiction_id=user.jurisdiction_node_id,
+            provider=self.name,
         )
 
+    def issue(self, user: UserRecord) -> tuple[Identity, str]:
+        """Mint a token for an account that has already been authenticated.
 
-def get_provider() -> IdentityProvider:
-    """Select the active provider from configuration."""
+        Kept separate from :meth:`start` so callers that verified the password
+        themselves (``POST /api/auth/login``) do not pay for a second PBKDF2
+        round just to get a token.
+        """
+        identity = self._identity_for(user)
+        return identity, self._mint(identity)
+
+    def start(self, payload: dict[str, Any]) -> tuple[Identity, str]:
+        if self.user_store is None:
+            raise IdentityError(
+                "Credential auth has no user store; "
+                "set CRIMENET_AUTH_PROVIDER=credential"
+            )
+        email_or_badge = str(
+            payload.get("email_or_badge")
+            or payload.get("emailOrBadge")
+            or payload.get("email")
+            or ""
+        ).strip()
+        password = str(payload.get("password") or "")
+        if not email_or_badge or not password:
+            raise IdentityError("email_or_badge and password are required")
+        try:
+            user = self.user_store.authenticate(email_or_badge, password)
+        except UserStoreError as exc:
+            raise IdentityError(str(exc)) from exc
+        return self.issue(user)
+
+
+def _resolve_state_dir(state_dir: Path | str | None) -> Path:
+    if state_dir is not None:
+        return Path(state_dir)
+    return Path(os.environ.get("CRIMENET_STATE_DIR") or _default_state_dir())
+
+
+def get_provider(state_dir: Path | str | None = None) -> IdentityProvider:
+    """Select the active provider from configuration.
+
+    ``state_dir`` is where the credential provider reads ``users.json`` from;
+    the app passes its own so provider and ``ApiState`` can never disagree
+    about which store is the real one.
+    """
     choice = os.environ.get("CRIMENET_AUTH_PROVIDER", "session").strip().lower()
     if choice == "session":
         return SessionIdentityProvider()
     if choice == "credential":
-        return CredentialIdentityProvider()
+        return CredentialIdentityProvider(
+            user_store=UserStore(_resolve_state_dir(state_dir))
+        )
     raise IdentityError(f"Unknown CRIMENET_AUTH_PROVIDER: {choice!r}")

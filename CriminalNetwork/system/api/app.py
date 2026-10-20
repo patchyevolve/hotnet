@@ -1,7 +1,10 @@
 """FastAPI surface for the CrimeNet frontend.
 
-Serves two distinct kinds of data:
+Serves three distinct kinds of data:
 
+* **Accounts** — register, log in, read the caller, change a password. These
+  read and write the persistent user store; the token they mint is verified
+  by the same identity layer every other route already depends on.
 * **Submissions** — session, case, FIR, evidence upload, run trigger. These
   write to the case registry and enqueue a pipeline job.
 * **Findings** — the read-only endpoints. Everything here is projected from
@@ -30,14 +33,26 @@ from fastapi.responses import FileResponse
 from api.identity import (
     JURISDICTIONS,
     ROLES,
+    CredentialIdentityProvider,
     Identity,
     IdentityError,
+    IdentityProvider,
     get_provider,
 )
 from api.jobs import Job, JobStore, PipelineRunner, build_argv
 from api.projection import RunProjection
 from api.registry import CaseRegistry, RegistryError
-from api.schemas import CaseCreate, FaceDecision, FirCreate, RunRequest, SessionStart
+from api.schemas import (
+    AuthChangePasswordRequest,
+    AuthLoginRequest,
+    AuthRegisterRequest,
+    CaseCreate,
+    FaceDecision,
+    FirCreate,
+    RunRequest,
+    SessionStart,
+)
+from api.user_store import UserStore, UserStoreError
 
 _SYSTEM_DIR = Path(__file__).resolve().parent.parent
 
@@ -60,6 +75,7 @@ class ApiState:
         state_dir.mkdir(parents=True, exist_ok=True)
         self.registry = CaseRegistry(state_dir)
         self.jobs = JobStore(state_dir)
+        self.users = UserStore(state_dir)
         self.runner = PipelineRunner(_SYSTEM_DIR, self.jobs)
         self._active_path = state_dir / "active_case.json"
 
@@ -149,6 +165,21 @@ def get_registry() -> CaseRegistry:
     return get_state().registry
 
 
+def get_user_store() -> UserStore:
+    """The live account store, shared by every ``/api/auth/*`` route."""
+    return get_state().users
+
+
+def get_credential_provider() -> CredentialIdentityProvider:
+    """Credential provider bound to this app's own store and state dir.
+
+    ``/api/auth/login`` mints through this rather than through
+    :func:`get_provider` so a login always produces a credential token —
+    even while the demo picker is still the active provider.
+    """
+    return CredentialIdentityProvider(user_store=get_user_store())
+
+
 @asynccontextmanager
 async def _lifespan(app: FastAPI) -> AsyncIterator[None]:
     global _state
@@ -185,13 +216,49 @@ app.add_middleware(
 # ---------------------------------------------------------------------------
 # Auth
 # ---------------------------------------------------------------------------
+def _verifying_providers() -> tuple[IdentityProvider, ...]:
+    """Who may vouch for a bearer token on this request.
+
+    The active provider always decides, so ``CRIMENET_AUTH_PROVIDER=credential``
+    keeps refusing picker tokens — that refusal is the whole point of the
+    swap. The one extra allowance runs the other way: while the picker is
+    still active, credential tokens minted by ``/api/auth/login`` must verify
+    too, or the account endpoints would only work on deployments that had
+    already flipped the flag. Both token kinds are signed with the same server
+    secret, so accepting either never lets a client forge an identity.
+    """
+    active = get_provider(_state_dir())
+    if active.name == CredentialIdentityProvider.name:
+        return (active,)
+    return (active, CredentialIdentityProvider())
+
+
+def _verify_token(token: str) -> Identity:
+    """Verify against every acceptable provider; keep the first diagnosis.
+
+    The active provider runs first, so its error ("expired", "picker token
+    refused in credential mode") is what the caller sees when nothing
+    accepts the token.
+    """
+    first_error: IdentityError | None = None
+    for provider in _verifying_providers():
+        try:
+            return provider.verify(token)
+        except IdentityError as exc:
+            if first_error is None:
+                first_error = exc
+    if first_error is None:
+        raise IdentityError("Token was rejected")
+    raise first_error
+
+
 def current_identity(
     authorization: str | None = Header(default=None),
 ) -> Identity:
     if not authorization or not authorization.lower().startswith("bearer "):
         raise HTTPException(401, "Missing bearer token")
     try:
-        return get_provider().verify(authorization.split(" ", 1)[1].strip())
+        return _verify_token(authorization.split(" ", 1)[1].strip())
     except IdentityError as exc:
         raise HTTPException(401, str(exc)) from exc
 
@@ -377,7 +444,7 @@ def start_session(body: SessionStart) -> dict[str, Any]:
     if body.credentials:
         payload.update(body.credentials)
     try:
-        identity, token = get_provider().start(payload)
+        identity, token = get_provider(_state_dir()).start(payload)
     except IdentityError as exc:
         raise HTTPException(400, str(exc)) from exc
     except NotImplementedError as exc:
@@ -388,6 +455,93 @@ def start_session(body: SessionStart) -> dict[str, Any]:
 @app.get("/api/me")
 def me(identity: Identity = Depends(current_identity)) -> dict[str, Any]:
     return _identity_view(identity)
+
+
+# ---------------------------------------------------------------------------
+# Credential accounts (/api/auth/*)
+# ---------------------------------------------------------------------------
+def _login_error_status(message: str) -> int:
+    """Map a store refusal to HTTP: 403 for the lifecycle, 401 otherwise.
+
+    A pending or inactive *account* is an authorisation problem, while a
+    wrong password must answer exactly like an unknown account (401) so
+    probing cannot enumerate registered addresses.
+    """
+    if "pending approval" in message or "inactive" in message:
+        return 403
+    return 401
+
+
+@app.post("/api/auth/register", status_code=201)
+def register_account(body: AuthRegisterRequest) -> dict[str, Any]:
+    """Self-signup. Nobody grants themselves a role: the account lands
+    ``PENDING_APPROVAL`` with ``INSPECTOR`` and cannot authenticate until an
+    ADMIN or SUPERVISOR approves it in the user store."""
+    try:
+        user = get_user_store().register(
+            email=body.email,
+            name=body.name,
+            password=body.password,
+            jurisdiction_node_id=body.jurisdictionId,
+            badge_id=body.badgeId,
+        )
+    except UserStoreError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {
+        "user": user.to_public_dict(),
+        "message": "Registration submitted for supervisor approval",
+    }
+
+
+@app.post("/api/auth/login")
+def login(body: AuthLoginRequest) -> dict[str, Any]:
+    """Exchange credentials for a signed bearer token.
+
+    Minted by the credential provider bound to this app's store, so the token
+    verifies on a stock (picker) deployment too — see :func:`_verifying_providers`.
+    """
+    try:
+        user = get_user_store().authenticate(body.emailOrBadge, body.password)
+    except UserStoreError as exc:
+        raise HTTPException(_login_error_status(str(exc)), str(exc)) from exc
+    _identity, token = get_credential_provider().issue(user)
+    return {"token": token, "user": user.to_public_dict()}
+
+
+@app.get("/api/auth/me")
+def auth_me(identity: Identity = Depends(current_identity)) -> dict[str, Any]:
+    """The caller's identity plus the account behind it, when there is one.
+
+    A picker identity has no row in the user store, so ``user`` comes back
+    null rather than the route refusing a token it has just accepted."""
+    user = get_user_store().get_by_id(identity.user_id)
+    return {
+        "identity": _identity_view(identity),
+        "user": user.to_public_dict() if user else None,
+    }
+
+
+@app.post("/api/auth/change-password")
+def change_password(
+    body: AuthChangePasswordRequest,
+    identity: Identity = Depends(current_identity),
+) -> dict[str, Any]:
+    """Rotate the caller's own password.
+
+    The user id is read from the verified token, never from the body: an
+    investigator can only change the password of the account they are signed
+    in as. Completing a forced change (the bootstrap admin) also promotes the
+    account to ACTIVE, which is what lets it approve anyone afterwards."""
+    try:
+        user = get_user_store().change_password(
+            identity.user_id, body.oldPassword, body.newPassword
+        )
+    except UserStoreError as exc:
+        raise HTTPException(400, str(exc)) from exc
+    return {
+        "user": user.to_public_dict(),
+        "message": "Password updated successfully",
+    }
 
 
 # ---------------------------------------------------------------------------

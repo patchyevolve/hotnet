@@ -47,6 +47,35 @@ class SessionStart(BaseModel):
         return value
 
 
+class AuthRegisterRequest(BaseModel):
+    """Self-registration for a credential account.
+
+    The store decides the outcome: every signup lands ``PENDING_APPROVAL``
+    with the ``INSPECTOR`` role, and only an ADMIN/SUPERVISOR approval turns
+    it into a login.
+    """
+
+    email: str
+    name: str
+    password: str
+    jurisdictionId: str
+    badgeId: str = ""
+
+
+class AuthLoginRequest(BaseModel):
+    """Sign in with an email address or the badge id bound to the account."""
+
+    emailOrBadge: str
+    password: str
+
+
+class AuthChangePasswordRequest(BaseModel):
+    """Rotate the caller's own credential; ``oldPassword`` must still verify."""
+
+    oldPassword: str
+    newPassword: str
+
+
 class CaseCreate(BaseModel):
     """Register a new case and its first FIR.
 
