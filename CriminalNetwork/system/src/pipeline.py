@@ -1723,7 +1723,12 @@ class Pipeline:
             {
                 "id": e.id,
                 "name": e.name,
-                "source_id": getattr(e, "source_id", ""),
+                # filename-minted persons carry their source image in attributes;
+                # source_id is empty (or points at a merge-survivor file) on some
+                # entity paths, so the face stage gets both keys.
+                "source_id": getattr(e, "source_id", "")
+                or (getattr(e, "attributes", None) or {}).get("source_image", ""),
+                "source_image": (getattr(e, "attributes", None) or {}).get("source_image", ""),
                 "minted_from": (getattr(e, "attributes", None) or {}).get("minted_from", ""),
             }
             for e in self.extraction.entities

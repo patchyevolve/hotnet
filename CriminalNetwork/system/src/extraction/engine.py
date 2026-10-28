@@ -18,7 +18,7 @@ from ..models.schema import (
 )
 from ..ai.caller import AICaller
 from ..ingestion.column_mapper import ColumnMapper
-from ..faces.context import filename_name
+from ..faces.context import classify_image_evidence, filename_name, is_junk_person_name, should_mint_filename_person
 
 
 def make_confidence(
@@ -944,18 +944,38 @@ OUTPUT (JSON):
         return entities, relations
 
     def _extract_image(self, content: dict, source: SourceMetadata) -> Tuple[List, List]:
-        """Extract from image — uses OCR text if available, otherwise marks for vision model."""
+        """Extract from image — uses OCR text if available, otherwise marks for vision model.
+
+        Image-class gate: slides/diagrams and text reports rendered as images
+        produce NO entities (their OCR text mints junk persons like 'GPU' and
+        'Subject Moe'); only photographic evidence OCRs into the entity stream.
+        """
         entities = []
         relations = []
         file_path = content.get("file_path", "")
         file_name = os.path.basename(file_path) if file_path else "unknown"
+        ocr_text = content.get("ocr_text", "")
+
+        image_class = content.get("image_class", "")
+        if not image_class:
+            image_class, _, _ = classify_image_evidence(file_name, ocr_text, file_path=file_path or None)
+
+        # Slides/diagrams are not evidence text at all — their OCR ('Entity
+        # Tracker', 'Kalman Filter', 'GPU') mints dozens of fake persons.
+        if image_class == "SLIDE_OR_DIAGRAM":
+            return entities, relations
 
         # If OCR produced useful text, extract from it (same as text extraction)
-        ocr_text = content.get("ocr_text", "")
         if ocr_text and not content.get("requires_vision_model", True):
             # Treat OCR text like any other text content
             text_content = {"content": ocr_text}
             text_entities, text_relations = self._extract_text(text_content, source)
+            # OCR of text reports/screenshots mints junk persons ('Subject Moe'
+            # from 'Subject Male', 'CAM_KE7' from an overlay camera id).
+            text_entities = [
+                e for e in text_entities
+                if e.entity_type != EntityType.PERSON or not is_junk_person_name(e.name)
+            ]
             entities.extend(text_entities)
             relations.extend(text_relations)
 
@@ -987,10 +1007,10 @@ OUTPUT (JSON):
 
         # Filename-derived subject (doc 11 §5 Priority 5): a name-shaped image
         # filename ('suresh.jpg') mints a weak PERSON the face stage can link
-        # its detected face to — only when the file's own text named nobody,
-        # and only when the name is name-shaped (surveillance words, digits
-        # and ID-document files never mint).
-        person_name = filename_name(file_name)
+        # its detected face to — only on photographic evidence, only when the
+        # file's own text named nobody, and only when the name is name-shaped
+        # (surveillance words, digits and ID-document files never mint).
+        person_name = filename_name(file_name) if should_mint_filename_person(image_class) else ""
         person_from_content = any(
             e.entity_type == EntityType.PERSON for e in entities
         )

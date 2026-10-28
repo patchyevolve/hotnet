@@ -24,11 +24,15 @@ from src.faces.stage import FaceProcessingStage
 # ---------------------------------------------------------------------------
 
 def test_similarity_to_confidence_breakpoints():
-    assert similarity_to_confidence(0.35) == 0.0
-    assert similarity_to_confidence(0.5) == pytest.approx(0.15)
-    assert similarity_to_confidence(0.7) == pytest.approx(0.6)
-    assert similarity_to_confidence(0.8) == pytest.approx(0.9)
-    assert similarity_to_confidence(0.9) == pytest.approx(0.95)
+    # CCTV-domain calibration: genuine pairs ≥0.46, impostors ≤0.11 (see
+    # engine.py). 0.25 (impostor band) → 0; 0.35 → 0.10; 0.5 → ~0.392;
+    # 0.7 → ~0.758; 0.8 → 0.88; 0.9 → 0.94; perfect → 1.0.
+    assert similarity_to_confidence(0.25) == 0.0
+    assert similarity_to_confidence(0.35) == pytest.approx(0.10)
+    assert similarity_to_confidence(0.5) == pytest.approx(0.3916666, abs=1e-5)
+    assert similarity_to_confidence(0.7) == pytest.approx(0.7583333, abs=1e-5)
+    assert similarity_to_confidence(0.8) == pytest.approx(0.88)
+    assert similarity_to_confidence(0.9) == pytest.approx(0.94)
     assert similarity_to_confidence(1.0) == pytest.approx(1.0)
 
 
@@ -606,16 +610,18 @@ def test_identity_candidate_boosted_by_query_overlay_timestamp():
     identity = [c for c in result["candidates"] if c["kind"] == "identity"]
     assert len(identity) == 1
     assert identity[0]["candidate_person_name"] == "Suresh"
-    # similarity 0.7 → confidence 0.6, CCTV timestamp boost ×1.1 → 0.66
-    assert identity[0]["confidence"] == pytest.approx(0.66, abs=1e-3)
+    # similarity 0.7 → confidence ≈0.7583, CCTV timestamp boost ×1.1 ≈0.8342
+    assert identity[0]["confidence"] == pytest.approx(0.8341666, abs=1e-3)
     by_id = {f["id"]: f for f in result["faces"]}
     assert by_id["f_q"]["capture_time_source"] == "overlay"
     assert by_id["f_q"]["captured_at"] == "2024-03-14T09:30:00"
 
 
 # ---------------------------------------------------------------------------
-# Real demo pair: suresh.jpeg ↔ liftCCTV.jpeg (similarity ~0.53, below the
-# 0.60 merge tier but above the doc 08 §3.2 candidate floor of 0.40)
+# Real demo pair: suresh.jpeg ↔ liftCCTV.jpeg (similarity ~0.53 — a genuine
+# CCTV↔mugshot pair, above the domain-calibrated candidate floor 0.30 and the
+# merge tier 0.45; must reach the investigator, floored at doc 11 §5.1
+# OVERLAID_TEXT 0.65)
 # ---------------------------------------------------------------------------
 
 def test_liftcctv_filename_is_neither_person_nor_filename_context():
@@ -639,10 +645,11 @@ def test_cctv_overlay_extracts_camera_and_iso_timestamp():
     assert timestamp_from_text(text) == "2024-06-25T14:32:01"
 
 
-def test_identity_candidate_forms_between_040_and_060():
-    """Doc 08 §3.2: candidates form at threshold 0.40 — 0.60 is the merge
-    review tier, not the candidate gate. A 0.53 CCTV match must still reach
-    the investigator, floored at the doc 11 §5.1 OVERLAID_TEXT 0.65."""
+def test_identity_candidate_forms_for_genuine_cctv_pair():
+    """A genuine CCTV↔mugshot pair (similarity 0.53) forms an identity
+    candidate — the domain-calibrated floor is 0.30, the merge review tier
+    0.45; a 0.53 CCTV match must still reach the investigator, floored at the
+    doc 11 §5.1 OVERLAID_TEXT 0.65."""
     partner = _face("f_suresh", "suresh.jpeg", [1.0, 0.0])
     query = _face("f_cctv", "liftCCTV.jpeg", [0.53, 0.848])
     persons = [
@@ -663,7 +670,7 @@ def test_identity_candidate_forms_between_040_and_060():
     assert identity[0]["source_entity_id"] == "f_cctv"
     assert identity[0]["candidate_person_name"] == "Suresh"
     assert identity[0]["signals"]["face_similarity"] == pytest.approx(0.53, abs=1e-3)
-    # similarity 0.53 → mapped confidence 0.195 (×1.1 overlay ≈ 0.215) — the
+    # similarity 0.53 → mapped confidence ≈0.4467 (×1.1 overlay ≈0.4913) — the
     # OVERLAID_TEXT floor of 0.65 carries the claim into the review queue
     assert identity[0]["confidence"] == pytest.approx(0.65, abs=1e-3)
 
@@ -728,3 +735,167 @@ def test_overlay_parsers_survive_ocr_mangling():
     assert timestamp_from_text("Frame 2024/06/25-14:32:01") == "2024-06-25T14:32:01"
     assert timestamp_from_text("2024-13-45 14:32:01") == ""  # invalid date
     assert timestamp_from_text("captured 14/03/2024") == "2024-03-14"
+
+
+# ---------------------------------------------------------------------------
+# Image-evidence classification — slides/text-reports vs photo evidence
+# ---------------------------------------------------------------------------
+
+def test_classify_image_evidence_photo_and_slide(tmp_path):
+    import cv2
+    import numpy as np
+
+    slide = tmp_path / "slide.png"
+    cv2.imwrite(str(slide), np.full((120, 160, 3), 255, dtype=np.uint8))
+    photo = tmp_path / "scene.jpg"
+    cv2.imwrite(str(photo), np.random.randint(0, 80, (120, 160, 3), dtype=np.uint8))
+
+    cls, eligible, _ = fctx.classify_image_evidence(
+        "Multimodal_Detection_and-2026-09-17.png", "", str(slide)
+    )
+    assert cls == "SLIDE_OR_DIAGRAM"
+    assert eligible is False
+
+    cls, eligible, _ = fctx.classify_image_evidence("suresh.jpeg", "", str(photo))
+    assert cls == "PHOTO_OF_PERSON"
+    assert eligible is True
+
+
+def test_classify_image_evidence_text_report(tmp_path):
+    import cv2
+    import numpy as np
+
+    report = tmp_path / "report.png"
+    cv2.imwrite(str(report), np.full((200, 300, 3), 250, dtype=np.uint8))
+    cls, eligible, _ = fctx.classify_image_evidence(
+        "49_CCTV_Screenshot.png",
+        "Subject Male Blue Shirt\nCamera ID: CAM_07\nTimestamp: 2024-10-27 23:45:01",
+        str(report),
+    )
+    assert cls == "DOCUMENT_REPORT"
+    assert eligible is False
+
+
+def test_classify_image_evidence_cctv_still(tmp_path):
+    import cv2
+    import numpy as np
+
+    scene = tmp_path / "cctv.jpg"
+    cv2.imwrite(str(scene), np.random.randint(0, 90, (120, 160, 3), dtype=np.uint8))
+    cls, eligible, _ = fctx.classify_image_evidence(
+        "liftCCTV.jpeg", "REC 2024-06-25 14:32:01 CAM 4", str(scene)
+    )
+    assert cls == "CCTV_STILL"
+    assert eligible is True
+
+
+def test_filename_name_splits_camel_case():
+    # 'sureshKumar.jpeg' must mint 'Suresh Kumar' (two tokens the face stage
+    # can match), not the unmatchable single token 'Sureshkumar'.
+    assert fctx.filename_name("sureshKumar.jpeg") == "Suresh Kumar"
+    assert fctx.filename_tokens("sureshKumar.jpeg") == {"suresh", "kumar"}
+    # slide-deck vocabulary never mints a person; location words ('liftCCTV',
+    # 'confectionaryCCTV') are scene descriptors, not names
+    assert fctx.filename_name("Multimodal_Detection_and-2026-09-17-113442.png") == ""
+    assert fctx.filename_name("liftCCTV.jpeg") == ""
+    assert fctx.filename_name("confectionaryCCTV.jpeg") == ""
+    assert fctx.filename_name("atmcctv.jpeg") == ""
+
+
+def test_is_junk_person_name():
+    assert fctx.is_junk_person_name("Subject Moe")
+    assert fctx.is_junk_person_name("Subject Male")
+    assert fctx.is_junk_person_name("CAM_KE7")
+    assert fctx.is_junk_person_name("v v v v v")
+    assert fctx.is_junk_person_name("")
+    assert not fctx.is_junk_person_name("Suresh Kumar")
+
+
+def test_extract_image_slide_produces_no_entities():
+    from src.extraction.engine import ExtractionEngine
+    from src.models.schema import SourceMetadata
+
+    source = SourceMetadata(
+        source_type="image",
+        file_name="Multimodal_Detection_and-2026-09-17.png",
+        file_hash="deadbeef",
+        ingestion_time="2024-03-14T09:30:00",
+    )
+    engine = ExtractionEngine()
+    entities, relations = engine._extract_image(
+        {
+            "file_path": "/ev/Multimodal_Detection_and-2026-09-17.png",
+            "ocr_text": "Entity Tracker Kalman Filter Queue Mgmt GPU Distrib",
+            "image_class": "SLIDE_OR_DIAGRAM",
+            "requires_vision_model": False,
+        },
+        source,
+    )
+    assert entities == []
+    assert relations == []
+
+
+def test_extract_image_filters_junk_ocr_persons(monkeypatch):
+    from src.extraction.engine import ExtractionEngine
+    from src.models.schema import ExtractedEntity, EntityType, SourceMetadata
+
+    source = SourceMetadata(
+        source_type="image",
+        file_name="49_CCTV_Screenshot.png",
+        file_hash="deadbeef",
+        ingestion_time="2024-03-14T09:30:00",
+    )
+    engine = ExtractionEngine()
+
+    # OCR NER is noisy — pin the text-extraction output so this tests the
+    # junk filter itself, not spacy's whims on a two-line sentence.
+    def _fake_text(content, _source):
+        names = ["Subject Moe", "CAM_KE7", "Suresh Kumar"]
+        entities = [
+            ExtractedEntity(
+                id=f"PER_{i}", entity_type=EntityType.PERSON, name=name,
+                confidence=None, source=_source, extraction_method="code",
+            )
+            for i, name in enumerate(names)
+        ]
+        return entities, []
+
+    monkeypatch.setattr(engine, "_extract_text", _fake_text)
+    entities, _ = engine._extract_image(
+        {
+            "file_path": "/ev/49_CCTV_Screenshot.png",
+            "ocr_text": "Subject Moe CAM_KE7 Suresh Kumar",
+            "image_class": "DOCUMENT_REPORT",
+            "requires_vision_model": False,
+        },
+        source,
+    )
+    person_names = {e.name for e in entities if e.entity_type.value == "PERSON"}
+    assert person_names == {"Suresh Kumar"}
+
+
+def test_should_mint_filename_person_gate():
+    assert fctx.should_mint_filename_person("PHOTO_OF_PERSON")
+    assert fctx.should_mint_filename_person("CCTV_STILL")
+    assert not fctx.should_mint_filename_person("SLIDE_OR_DIAGRAM")
+    assert not fctx.should_mint_filename_person("DOCUMENT_REPORT")
+
+
+def test_classify_label_board_slide_vs_report():
+    # Diagram slides OCR as stacks of 1–2 word labels; report prose keeps
+    # multi-word lines. Both render on white canvases.
+    slide_ocr = "LAYER 10 INFRASTRUCTURE\nEntity Tracker\nRing Buffer 30\npu alloc\nLatency 0.1ms\nWorld state\nLifecycle Manager"
+    report_ocr = (
+        "CCTV Screenshot-Camera CAM_KE7\n"
+        "Location Karol Bagh Main Market\n"
+        "Date: 14/08/2024 Time: 08:30:00\n"
+        "Person: Rakesh Kumar (Phone: 9876543210)\n"
+        "Person: Suresh Kumar (Phone: 9876543211)"
+    )
+    cls, eligible, _ = fctx.classify_image_evidence("Multimodal_slide.png", slide_ocr)
+    assert cls == "SLIDE_OR_DIAGRAM"
+    assert eligible is False
+
+    cls, eligible, _ = fctx.classify_image_evidence("49_CCTV_Screenshot.png", report_ocr)
+    assert cls == "DOCUMENT_REPORT"
+    assert eligible is False

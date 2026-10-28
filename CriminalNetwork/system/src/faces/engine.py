@@ -6,8 +6,8 @@ a missing optional dependency. Weights live in ``<system>/.insightface`` which
 the API container bind-mounts at ``/app/.insightface`` — host runs and container
 runs share the same models.
 
-Scoring follows RESEARCH_FACE_RECOGNITION/07_SCORING.md:
-  * similarity_to_confidence — §2 breakpoint mapping (verbatim)
+Scoring follows RESEARCH_FACE_RECOGNITION/07_SCORING.md shape:
+  * similarity_to_confidence — §2 breakpoint shape, CCTV-domain calibrated values
   * QUALITY_WEIGHTS — §3.1 factor weights (blur/resolution/angle/lighting/occlusion)
 Cutoffs follow doc 08 §3.2 (quality < 0.3 rejected, no embedding stored).
 """
@@ -36,24 +36,39 @@ QUALITY_WEIGHTS = {
     "occlusion": 0.20,
 }
 
-# Doc 08 §4.2/§4.3 — candidate floor 0.40, review floor 0.60, suggest floor 0.85.
-CANDIDATE_SIMILARITY = 0.40
-MATCH_SIMILARITY = 0.60
-HIGH_SIMILARITY = 0.85
+# Match cutoffs — calibrated on the real evidence domain (buffalo_l embeddings
+# over the case's mugshots + CCTV stills): genuine same-person pairs score
+# 0.46–0.84 (mugshot↔CCTV across lighting/compression lands 0.46–0.53; clean
+# photo↔photo 0.83), while impostor pairs all score ≤ 0.11. The doc-08 §4.2
+# breakers (0.40/0.60/0.85) were tuned for studio-quality photos and pushed
+# every genuine CCTV↔mugshot pair into the 'candidate' bucket (UI showed 0
+# matches, ~0.10 confidence) — a false-negative disaster for surveillance
+# evidence. Domain floors: candidate 0.30 (mid-gap of impostor≤0.11 vs
+# genuine≥0.46), match 0.45 (just under the weakest genuine pair), high 0.75
+# (strong photo-grade identity). Doc 07 §2 breakpoint SHAPE preserved; values
+# domain-calibrated.
+CANDIDATE_SIMILARITY = 0.30
+MATCH_SIMILARITY = 0.45
+HIGH_SIMILARITY = 0.75
 # Doc 08 §3.2 — quality below 0.3 → no embedding record; detector below 0.5 → rejected.
 QUALITY_CUTOFF = 0.30
 DET_CUTOFF = 0.50
 
 
 def similarity_to_confidence(similarity: float) -> float:
-    """Cosine similarity → base confidence (doc 07 §2, breakpoints verbatim)."""
-    if similarity < 0.4:
+    """Cosine similarity → base confidence (doc 07 §2 shape, CCTV-domain values).
+
+    Ramp: <0.30 → 0; 0.30–0.45 → 0–0.30; 0.45–0.75 → 0.30–0.85; ≥0.75 → 0.85+.
+    A genuine CCTV↔mugshot pair (0.46–0.53) lands 0.32–0.43 base, reaching
+    'medium' after context boosts; impostors (≤0.11) stay at 0.
+    """
+    if similarity < 0.30:
         return 0.0
-    if similarity < 0.6:
-        return (similarity - 0.4) * 1.5
-    if similarity < 0.8:
-        return 0.3 + (similarity - 0.6) * 3.0
-    return 0.9 + (similarity - 0.8) * 0.5
+    if similarity < 0.45:
+        return (similarity - 0.30) * 2.0
+    if similarity < 0.75:
+        return 0.30 + (similarity - 0.45) * (0.55 / 0.30)
+    return min(1.0, 0.85 + (similarity - 0.75) * 0.6)
 
 
 def weighted_quality(scores: dict) -> float:

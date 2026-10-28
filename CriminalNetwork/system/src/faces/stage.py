@@ -125,9 +125,18 @@ class FaceProcessingStage:
                 face["identity_document"] = id_type
 
         # -- identity linkage (doc 11: same-file extraction, then filename) ----
+        # Index persons by BOTH source_id and source_image: extraction merges
+        # entities by deterministic id, so a filename-minted 'Amit' can survive
+        # with source_id pointing at a text file while attributes.source_image
+        # still names the photo the face came from.
         persons_by_file: dict[str, list[dict]] = {}
         for person in persons:
-            persons_by_file.setdefault(str(person.get("source_id", "")), []).append(person)
+            keys = {
+                str(person.get("source_id") or ""),
+                str(person.get("source_image") or ""),
+            } - {""}
+            for key in keys:
+                persons_by_file.setdefault(key, []).append(person)
         for face in faces:
             if face.get("person_id"):
                 continue
@@ -184,9 +193,10 @@ class FaceProcessingStage:
             sim = best_sim.get(face.get("id"))
             face["best_similarity"] = round(sim, 4) if sim is not None else None
 
-        # -- identity candidates (doc 08 §3.2: face search threshold 0.40) ----
+        # -- identity candidates (doc 08 §3.2 shape; candidate gate = engine's
+        # CANDIDATE_SIMILARITY, domain-calibrated) —
         # An unlinked face that matches a linked face yields an identity
-        # candidate for the investigator; 0.60/0.85 are merge-action tiers
+        # candidate for the investigator; MATCH/HIGH are merge-action tiers
         # (§4.3), not candidate gates.
         candidates: list[dict] = []
         identity_candidates = 0
@@ -272,7 +282,7 @@ class FaceProcessingStage:
             })
 
         # -- MATCHED when a person claim exists (doc 08 §3.2: "MATCHED if
-        # candidates") — any match at the 0.40 candidate floor counts. ---------
+        # candidates") — any match at the engine's candidate floor counts. -----
         identity_faces = {
             c["source_entity_id"] for c in candidates if c.get("kind") == "identity"
         }

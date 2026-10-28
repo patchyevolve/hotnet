@@ -199,14 +199,29 @@ class IngestionEngine:
         # Stage 1 (face): detect faces in images — RESEARCH_FACE_RECOGNITION
         # doc 08 §2. One RetinaFace+ArcFace pass; records stay PENDING until
         # Stage 2 finalizes them. Degrades to zero faces without the model.
+        # Only PHOTOGRAPHIC evidence runs detection: slides/diagrams and text
+        # reports rendered as PNGs contain no faces to extract.
         if file_type == "image":
+            from ..faces.context import classify_image_evidence
             from ..faces.engine import analyze_image
 
-            face_crops = analyze_image(file_path, file_name=path.name)
-            file_info["face_crops"] = face_crops
-            file_info["face_count"] = len(face_crops)
-            if face_crops:
-                print(f"[FACES]   -> {path.name}: {len(face_crops)} face(s) detected")
+            ocr_text = str((content or {}).get("ocr_text") or (content or {}).get("content") or "")
+            image_class, face_eligible, class_reason = classify_image_evidence(
+                path.name, ocr_text, file_path=str(path)
+            )
+            content["image_class"] = image_class
+            file_info["image_class"] = image_class
+            if face_eligible:
+                face_crops = analyze_image(file_path, file_name=path.name)
+                file_info["face_crops"] = face_crops
+                file_info["face_count"] = len(face_crops)
+                if face_crops:
+                    print(f"[FACES]   -> {path.name}: {len(face_crops)} face(s) detected")
+            else:
+                file_info["face_crops"] = []
+                file_info["face_count"] = 0
+                file_info["face_skip_reason"] = class_reason
+                print(f"[FACES]   -> {path.name}: skipped ({image_class}: {class_reason})")
 
         # Track in current run
         if self.current_run:
