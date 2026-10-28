@@ -7,6 +7,7 @@ session, a case, a FIR, an evidence file, a run request.
 
 from __future__ import annotations
 
+from datetime import datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
@@ -123,6 +124,19 @@ class RunRequest(BaseModel):
 
     append: bool = False
     noDatabase: bool = False
+
+
+class CaseAccessGrantRequest(BaseModel):
+    """Grant a user access to a case (``POST /api/cases/{id}/access``).
+
+    Mirrors the ``CaseAccess`` Prisma model: a (userId, caseId) pair at one
+    of READ / WRITE / ADMIN, with an optional expiry. Upsert semantics —
+    re-granting replaces the previous level for the same pair.
+    """
+
+    userId: str = Field(min_length=1, max_length=120)
+    accessLevel: Literal["READ", "WRITE", "ADMIN"]
+    expiresAt: datetime | None = None
 
 
 class JobView(BaseModel):

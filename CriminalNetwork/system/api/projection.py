@@ -395,7 +395,26 @@ class RunProjection:
         if not opened_at and audit:
             opened_at = str(audit[0].get("timestamp") or "")
 
-        entity_ids = [node["id"] for node in nodes if node.get("id")][:200]
+        # Case linkage is a count of *entities*, so the graph's non-entity
+        # nodes (amounts, unresolved organizations, junk persons) never show
+        # up as "Entities" on a case row.
+        resolved = self.read("resolved_entities.json")
+        if isinstance(resolved, dict):
+            resolved_items: Iterable[Any] = list(resolved.values())
+        elif isinstance(resolved, list):
+            resolved_items = resolved
+        else:
+            resolved_items = []
+        resolved_ids = {
+            str(item.get("id"))
+            for item in resolved_items
+            if isinstance(item, dict) and item.get("id")
+        }
+        entity_ids = [
+            str(node["id"])
+            for node in nodes
+            if node.get("id") and str(node["id"]) in resolved_ids
+        ][:200]
 
         # progress = share of pipeline stages that produced output this run.
         stage_markers = (
@@ -464,6 +483,46 @@ class RunProjection:
             kind = self._kind(node.get("node_type"))
             by_kind[kind] = by_kind.get(kind, 0) + 1
             by_risk[self._risk_for_node(str(node.get("id", "")))] += 1
+        if not by_kind:
+            return json.loads(json.dumps(_EMPTY_COUNTS))
+        return {
+            "total": sum(by_kind.values()),
+            "byKind": by_kind,
+            "byRisk": by_risk,
+        }
+
+    def resolved_entity_counts(self) -> dict[str, Any]:
+        """Counts over *resolved entities* — the exact population
+        ``/api/entities`` serves.
+
+        Overview metrics and the Entity Intelligence roster read this one so
+        "Entities Identified" can never disagree with the entity list. Node
+        counts (``entity_counts``) stay node-based: the graph legitimately
+        carries a handful of nodes that are not resolved entities, and the
+        case row's "worst node" risk must still see them.
+        """
+        by_kind: dict[str, int] = {}
+        by_risk = {"critical": 0, "high": 0, "medium": 0, "low": 0}
+        resolved = self.read("resolved_entities.json")
+        if isinstance(resolved, dict):
+            items: Iterable[Any] = list(resolved.values())
+        elif isinstance(resolved, list):
+            items = resolved
+        else:
+            items = []
+        graph_by_id = {
+            str(node.get("id")): node for node in self._list("graph_nodes.json")
+        }
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            entity_id = str(item.get("id") or "")
+            if not entity_id:
+                continue
+            node = graph_by_id.get(entity_id, {})
+            kind = self._kind(item.get("entity_type") or node.get("node_type"))
+            by_kind[kind] = by_kind.get(kind, 0) + 1
+            by_risk[self._risk_for_node(entity_id)] += 1
         if not by_kind:
             return json.loads(json.dumps(_EMPTY_COUNTS))
         return {
@@ -1108,6 +1167,13 @@ class RunProjection:
             str(node.get("id")): str(node.get("name") or "")
             for node in self._list("graph_nodes.json")
         }
+        # Per-file integrity verdicts (verified/tampered) so every transfer can
+        # name the file it came from and whether that file passed the screen.
+        evidence_integrity = {
+            str(row.get("label") or ""): str(row.get("integrity") or "")
+            for row in self.evidence_records()
+            if row.get("label")
+        }
         transfers: list[dict[str, Any]] = []
         accounts: dict[str, dict[str, Any]] = {}
         total = 0.0
@@ -1171,6 +1237,18 @@ class RunProjection:
                         "risk": self._risk_for_node(account_id),
                     }
 
+            # Provenance: which source file produced this relation, under what
+            # hash, and the extraction verdict the pipeline recorded. The
+            # judges-facing claim "this rupee comes from this file" is only
+            # honest when the row carries it.
+            raw_source = relation.get("source")
+            source_meta = raw_source if isinstance(raw_source, dict) else {}
+            raw_confidence = relation.get("confidence")
+            confidence_meta = (
+                raw_confidence if isinstance(raw_confidence, dict) else {}
+            )
+            source_file = str(source_meta.get("file_name") or "") or None
+
             transfers.append(
                 {
                     "id": str(relation.get("id")),
@@ -1193,6 +1271,16 @@ class RunProjection:
                     "flagged": suspicious,
                     "risk": "critical" if suspicious else "medium",
                     "note": attributes.get("note") or None,
+                    "description": attributes.get("description") or None,
+                    "sourceFile": source_file,
+                    "sourceHash": str(source_meta.get("file_hash") or "") or None,
+                    "sourceIntegrity": (
+                        evidence_integrity.get(source_file)
+                        if source_file
+                        else None
+                    ),
+                    "extractionConfidence": confidence_meta.get("score"),
+                    "extractionBasis": confidence_meta.get("basis") or None,
                 }
             )
 
@@ -1212,6 +1300,86 @@ class RunProjection:
             }
             for row in transfers
         ]
+
+        # Source coverage: every bank file the run ingested, its rows, hash
+        # and integrity verdict, plus how much of the traced total each one
+        # contributed. This is the audit trail behind "₹X traced".
+        summary = self.read("extraction_summary.json")
+        if not isinstance(summary, dict):
+            summary = {}
+        ingestion = summary.get("ingestion_summary")
+        if not isinstance(ingestion, dict):
+            ingestion = {}
+        ingestion_files = [
+            row
+            for row in ingestion.get("files") or []
+            if isinstance(row, dict) and row.get("name")
+        ]
+        bank_files = [
+            row for row in ingestion_files if row.get("source_type") == "bank"
+        ]
+
+        per_file: dict[str, dict[str, float]] = {}
+        for row in transfers:
+            name = row.get("sourceFile")
+            if not name:
+                continue
+            slot = per_file.setdefault(name, {"count": 0.0, "volume": 0.0})
+            slot["count"] += 1
+            slot["volume"] += float(row.get("amount") or 0.0)
+
+        source_files: list[dict[str, Any]] = []
+        listed: set[str] = set()
+        for meta in bank_files:
+            name = str(meta.get("name"))
+            listed.add(name)
+            slot = per_file.get(name, {"count": 0.0, "volume": 0.0})
+            source_files.append(
+                _present(
+                    {
+                        "file": name,
+                        "records": meta.get("records"),
+                        "hash": meta.get("file_hash"),
+                        "qualityScore": meta.get("quality_score"),
+                        "adversarialSuspicious": meta.get(
+                            "adversarial_suspicious"
+                        ),
+                        "integrity": evidence_integrity.get(name),
+                        "transferCount": int(slot["count"]),
+                        "volume": round(slot["volume"], 2),
+                    }
+                )
+            )
+        # A transfer whose source file is not in the ingestion list still
+        # belongs on the panel — hiding it would break the sum.
+        for name, slot in per_file.items():
+            if name in listed:
+                continue
+            source_files.append(
+                _present(
+                    {
+                        "file": name,
+                        "hash": next(
+                            (
+                                row.get("sourceHash")
+                                for row in transfers
+                                if row.get("sourceFile") == name
+                            ),
+                            None,
+                        ),
+                        "integrity": evidence_integrity.get(name),
+                        "transferCount": int(slot["count"]),
+                        "volume": round(slot["volume"], 2),
+                    }
+                )
+            )
+        source_files.sort(
+            key=lambda row: (-(row.get("volume") or 0.0), str(row.get("file")))
+        )
+
+        bank_records = sum(int(row.get("records") or 0) for row in bank_files)
+        run_id = summary.get("run_id") or ingestion.get("run_id")
+
         return {
             "caseId": case_id,
             "totalVolume": round(total, 2),
@@ -1224,6 +1392,16 @@ class RunProjection:
                 {"channel": channel, "amount": round(amount, 2)}
                 for channel, amount in sorted(by_channel.items(), key=lambda kv: -kv[1])
             ],
+            "sourceFiles": source_files,
+            "ingestion": _present(
+                {
+                    "files": ingestion.get("total_files"),
+                    "records": ingestion.get("total_records"),
+                    "bankFiles": len(bank_files),
+                    "bankRecords": bank_records,
+                    "runId": run_id,
+                }
+            ),
         }
 
     @staticmethod
@@ -1285,6 +1463,12 @@ class RunProjection:
                     "riskBand": band,
                     "riskScore": zone.get("risk_score"),
                     "evidenceCount": zone.get("evidence_count"),
+                    # Full, untruncated names: the label above caps at 60
+                    # chars, so district matching and the zone detail need
+                    # the raw list the run recorded.
+                    "locationNames": [
+                        str(n) for n in (zone.get("location_names") or [])
+                    ],
                 }
             )
 
@@ -1320,7 +1504,13 @@ class RunProjection:
             marker["y"] = y
 
         links = _spatial_zone_links(spatial_rows, zone_rows)
-        return {"markers": [_present(marker) for marker in markers], "links": links}
+        # The response names its case so the map page never shows an
+        # unattributed risk-zone list: every marker on it belongs to this run.
+        return {
+            "caseId": self.case_id,
+            "markers": [_present(marker) for marker in markers],
+            "links": links,
+        }
 
     # ------------------------------------------------------------------
     # Evidence / audit / timeline
@@ -1633,10 +1823,22 @@ class RunProjection:
     # Reasoning layer (hypotheses / contradictions / gaps / critic)
     # ------------------------------------------------------------------
     def insights(self) -> list[dict[str, Any]]:
+        """Hypotheses with *how they were developed*, not just what they say.
+
+        Each row carries the Stage-7 confidence basis (the corroboration /
+        independence / contradiction math), the unit it was generated from,
+        its competing alternatives and the run that produced it — the
+        provenance an investigator needs to judge an inference, which the
+        old projection stripped down to a bare score.
+        """
         rows: list[dict[str, Any]] = []
         for hypothesis in self._list("hypotheses.json"):
             confidence = self._confidence(hypothesis.get("confidence"))
             supporting = hypothesis.get("supporting") or []
+            contradicting = hypothesis.get("contradicting") or []
+            conf = hypothesis.get("confidence")
+            if not isinstance(conf, dict):
+                conf = {}
             rows.append(
                 {
                     "id": str(hypothesis.get("id") or ""),
@@ -1645,6 +1847,27 @@ class RunProjection:
                     "confidence": confidence,
                     "risk": self._risk_from_confidence(confidence),
                     "citations": [str(s) for s in supporting][:6],
+                    "type": str(hypothesis.get("type") or ""),
+                    "basis": [str(b) for b in conf.get("basis") or []][:8],
+                    "generation": " ".join(
+                        part
+                        for part in (
+                            str(hypothesis.get("generation_basis") or ""),
+                            str(hypothesis.get("community_id") or ""),
+                        )
+                        if part
+                    ),
+                    "alternatives": [
+                        str(a) for a in hypothesis.get("alternatives") or []
+                    ][:6],
+                    "nullHypothesis": str(hypothesis.get("null_hypothesis") or ""),
+                    "supportingCount": int(
+                        conf.get("supporting_count") or len(supporting)
+                    ),
+                    "contradictingCount": int(
+                        conf.get("contradicting_count") or len(contradicting)
+                    ),
+                    "runId": str(conf.get("run_id") or ""),
                 }
             )
         rows.sort(key=lambda row: row["confidence"], reverse=True)
@@ -1699,6 +1922,7 @@ class RunProjection:
                     "severity": "medium",
                     "route": "/ai-investigator",
                     "actionLabel": "Inspect",
+                    "insightId": str(hypothesis.get("id") or ""),
                 }
             )
         feed.sort(key=lambda row: row["at"], reverse=True)
@@ -1904,7 +2128,11 @@ class RunProjection:
             if status == "LOW_QUALITY":
                 notes_parts.append("below quality cutoff — embedding not stored")
             if similarity is None and not entity_id:
-                notes_parts.append("no face match at or above 0.40 similarity")
+                from src.faces.engine import CANDIDATE_SIMILARITY
+
+                notes_parts.append(
+                    f"no face match at or above {CANDIDATE_SIMILARITY:.2f} similarity"
+                )
             if face.get("captured_at"):
                 if face.get("capture_time_source") == "overlay":
                     notes_parts.append("capture time from image overlay")
@@ -2074,7 +2302,7 @@ class RunProjection:
     # Dashboard / metrics
     # ------------------------------------------------------------------
     def metrics(self) -> list[dict[str, Any]]:
-        counts = self.entity_counts()
+        counts = self.resolved_entity_counts()
         stats = self.graph_statistics()
         feed = self.intelligence_feed()
         insight_count = len(self._list("hypotheses.json"))
@@ -2139,6 +2367,9 @@ class RunProjection:
 
     def dashboard(self, role: str) -> dict[str, Any]:
         counts = self.entity_counts()
+        # The donut is "Entities by derived risk band" — resolved entities,
+        # the same population the Entity Intelligence page lists.
+        entity_band = self.resolved_entity_counts()
         recent = self.recent_activity()
         alerts = [
             {
@@ -2173,7 +2404,7 @@ class RunProjection:
                 },
             ],
             "riskBreakdown": [
-                {"label": level.title(), "value": counts["byRisk"][level], "tone": level}
+                {"label": level.title(), "value": entity_band["byRisk"][level], "tone": level}
                 for level in ("critical", "high", "medium", "low")
             ],
             "caseTrend": self.case_activity_trend(),
@@ -2194,9 +2425,10 @@ class RunProjection:
                 "id": "seed-1",
                 "author": "ai",
                 "text": (
-                    "Upload an FIR with its evidence files to begin. "
-                    "I run the extraction, resolution, graph, hypothesis and "
-                    "critic stages over whatever you submit."
+                    "Ask about this case file. No language model is connected "
+                    "to this workstation: answers are assembled only from "
+                    "indexed case records — entities, hypotheses and "
+                    "contradictions — and cite the records they came from."
                 ),
                 "at": "",
             }

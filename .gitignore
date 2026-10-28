@@ -271,6 +271,16 @@ certificates/
 *.old
 
 # ============================================================
+# API RUNTIME STATE
+# ============================================================
+
+# The API writes live state here (seeded user accounts with password
+# hashes, case registry, per-case outputs, job records, session secret).
+# Only the active-case pointer is versioned.
+CriminalNetwork/system/.state/*
+!CriminalNetwork/system/.state/active_case.json
+
+# ============================================================
 # LOCAL DEMO ASSETS
 # ============================================================
 

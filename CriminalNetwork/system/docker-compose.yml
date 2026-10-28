@@ -81,6 +81,10 @@ services:
     environment:
       CRIMENET_API_PORT: "8000"
       CRIMENET_STATE_DIR: /app/.state
+      # Demo sign-in accounts (admin@crimenet.local … auditor@crimenet.local,
+      # shared password Cr1menet!Demo) are seeded at startup when this is "1".
+      # Off everywhere else — set CRIMENET_DEMO_PASSWORD to override it.
+      CRIMENET_SEED_DEMO_USERS: "1"
       PYTHONUNBUFFERED: "1"
       DATABASE_URL: postgresql://criminal:criminal_secret@postgres:5432/criminal_network_db?schema=public
       NEO4J_URI: bolt://neo4j:7687

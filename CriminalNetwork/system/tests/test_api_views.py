@@ -9,11 +9,20 @@ may only read), and which case a face decision is filed against.
 """
 
 import json
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
 
-from api.app import app, get_state, resolve_face_image
+from api.app import (
+    app,
+    get_state,
+    require_roles,
+    requires_roles,
+    resolve_face_image,
+    CaseAccessGuard,
+)
+from api.identity import Identity
 from api.projection import RunProjection
 from api.registry import CaseRegistry, RegistryError
 
@@ -258,14 +267,14 @@ def client(tmp_path, monkeypatch):
         yield test_client
 
 
-def _headers_for(client, role, display_name="Test Officer"):
+def _headers_for(client, role, display_name="Test Officer", jurisdiction="JURISDICTION_DEFAULT"):
     """Sign in through the real session route and return the bearer header."""
     response = client.post(
         "/api/session",
         json={
             "displayName": display_name,
             "role": role,
-            "jurisdictionId": "JURISDICTION_DEFAULT",
+            "jurisdictionId": jurisdiction,
         },
     )
     assert response.status_code == 200, response.text
@@ -533,3 +542,416 @@ def test_inspector_can_register_fir_and_upload_evidence(client):
     )
     assert upload.status_code == 201, upload.text
     assert upload.json()["files"][0]["originalName"] == "call_log.csv"
+
+
+# ---------------------------------------------------------------------------
+# CaseAccessGuard — case-scoped authorization on top of the role gate
+# ---------------------------------------------------------------------------
+def _identity(role="INSPECTOR", jurisdiction="JURISDICTION_DEFAULT", user_id="USER_TEST"):
+    return Identity(
+        user_id=user_id,
+        display_name="Test Officer",
+        role=role,
+        jurisdiction_id=jurisdiction,
+        provider="session",
+    )
+
+
+class _FakeCase:
+    def __init__(self, jurisdiction_node_id="JURISDICTION_DEFAULT", opened_by="USER_ADMIN"):
+        self.jurisdiction_node_id = jurisdiction_node_id
+        self.opened_by = opened_by
+
+
+def test_requires_roles_alias_is_the_same_decorator():
+    """The plural form is canonical; the old name keeps working unchanged."""
+    assert require_roles is requires_roles
+
+
+def test_case_access_guard_levels():
+    """ADMIN is global and the creator outranks jurisdiction; station peers
+    get their role's baseline (SUPERVISOR ADMIN, INSPECTOR WRITE); a
+    foreign identity gets nothing without a CaseAccess grant."""
+    guard = CaseAccessGuard()
+    case = _FakeCase(jurisdiction_node_id="JURISDICTION_DELHI_CYBERCRIME")
+
+    assert guard.effective_level(_identity("ADMIN"), case) == "ADMIN"
+    assert guard.effective_level(_identity("SUPERVISOR"), case) == "NONE"
+    assert (
+        guard.effective_level(
+            _identity(
+                "SUPERVISOR", jurisdiction="JURISDICTION_DELHI_CYBERCRIME"
+            ),
+            case,
+        )
+        == "ADMIN"
+    )
+    assert (
+        guard.effective_level(
+            _identity("INSPECTOR", user_id="USER_ADMIN"), case
+        )
+        == "ADMIN"
+    )
+    assert (
+        guard.effective_level(
+            _identity("INSPECTOR", jurisdiction="JURISDICTION_DELHI_CYBERCRIME"),
+            case,
+        )
+        == "WRITE"
+    )
+    assert (
+        guard.effective_level(
+            _identity("INSPECTOR", jurisdiction="JURISDICTION_MUMBAI_CYBERCRIME"),
+            case,
+        )
+        == "NONE"
+    )
+
+
+def test_cross_jurisdiction_inspector_is_403_on_every_case_write(client):
+    """Role is right, jurisdiction is wrong: every case-scoped mutation the
+    inspector could previously reach now answers 403 — FIRs, evidence, runs
+    and face decisions — while the case stays visible to same-jurisdiction
+    peers."""
+    admin = _headers_for(client, "ADMIN", "Admin Rao")
+    case_id = _new_case(client, admin, "Delhi case")
+    fir_id = client.get(f"/api/cases/{case_id}/firs").json()[0]["firId"]
+
+    registry = get_state().registry
+    out_dir = registry.output_dir(case_id)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "face_embeddings.json").write_text(
+        json.dumps(
+            {
+                "faces": [_face("face_x_0", "face_x_0.jpeg")],
+                "matches": [],
+                "candidates": [],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    foreigner = _headers_for(
+        client,
+        "INSPECTOR",
+        "Insp. Mumbai",
+        jurisdiction="JURISDICTION_MUMBAI_CYBERCRIME",
+    )
+
+    blocked = [
+        client.post(
+            f"/api/cases/{case_id}/firs",
+            headers=foreigner,
+            json={"firNumber": "FIR/2024/500", "description": ""},
+        ),
+        client.post(
+            f"/api/cases/{case_id}/firs/{fir_id}/evidence",
+            headers=foreigner,
+            files={"files": ("note.txt", b"note", "text/plain")},
+        ),
+        client.post(
+            f"/api/cases/{case_id}/run",
+            headers=foreigner,
+            json={"append": False, "noDatabase": True},
+        ),
+        client.post(
+            "/api/faces/decision",
+            headers=foreigner,
+            json={"faceId": "face_x_0", "decision": "confirm", "caseId": case_id},
+        ),
+    ]
+    for response in blocked:
+        assert response.status_code == 403, (
+            f"{response.request.method} {response.request.url} "
+            f"-> {response.status_code}: {response.text}"
+        )
+
+    # ...and nothing leaked into the case.
+    assert len(client.get(f"/api/cases/{case_id}/firs").json()) == 1
+    assert client.get(f"/api/cases/{case_id}/jobs").json() == []
+
+
+def test_cross_jurisdiction_admin_retains_full_case_access(client):
+    """ADMIN authority is global: an admin from another jurisdiction still
+    writes to the case. SUPERVISOR is station-scoped, so the same cross-
+    station attempt answers 403."""
+    admin = _headers_for(client, "ADMIN", "Admin Rao")
+    case_id = _new_case(client, admin, "Default-jurisdiction case")
+    global_admin = _headers_for(
+        client,
+        "ADMIN",
+        "Admin Mumbai",
+        jurisdiction="JURISDICTION_MUMBAI_CYBERCRIME",
+    )
+    response = client.post(
+        f"/api/cases/{case_id}/firs",
+        headers=global_admin,
+        json={"firNumber": "FIR/2024/501", "description": "Cross-jurisdiction"},
+    )
+    assert response.status_code == 201, response.text
+
+    supervisor = _headers_for(
+        client,
+        "SUPERVISOR",
+        "Sup. Mumbai",
+        jurisdiction="JURISDICTION_MUMBAI_CYBERCRIME",
+    )
+    denied = client.post(
+        f"/api/cases/{case_id}/firs",
+        headers=supervisor,
+        json={"firNumber": "FIR/2024/510", "description": "Out of station"},
+    )
+    assert denied.status_code == 403
+
+
+def test_unknown_case_still_404_for_an_authorized_identity(client):
+    """The guard must not turn the registry's 404 into a 403: an
+    ADMIN hitting a case id that does not exist gets the same diagnosis
+    as before the guard existed."""
+    headers = _headers_for(client, "ADMIN", "Admin Rao")
+
+    response = client.post(
+        "/api/cases/CASE_999999/firs",
+        headers=headers,
+        json={"firNumber": "FIR/2024/502", "description": ""},
+    )
+    assert response.status_code == 404
+
+
+def test_same_jurisdiction_inspector_writes_still_pass_the_guard(client):
+    """Preservation half: the ordinary single-jurisdiction flow is byte-for
+    byte what it was — FIR registration and evidence upload land 201."""
+    admin = _headers_for(client, "ADMIN", "Admin Rao")
+    case_id = _new_case(client, admin, "Same-jurisdiction case")
+    inspector = _headers_for(client, "INSPECTOR", "Insp. Sharma")
+
+    fir = client.post(
+        f"/api/cases/{case_id}/firs",
+        headers=inspector,
+        json={"firNumber": "FIR/2024/503", "description": ""},
+    )
+    assert fir.status_code == 201, fir.text
+    upload = client.post(
+        f"/api/cases/{case_id}/firs/{fir.json()['firId']}/evidence",
+        headers=inspector,
+        files={"files": ("ok.txt", b"ok", "text/plain")},
+    )
+    assert upload.status_code == 201, upload.text
+
+
+def _money_run(tmp_path: Path) -> None:
+    """A minimal run: one dated bank transfer plus its ingestion summary."""
+    (tmp_path / "relations.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "REL_bank_1",
+                    "source_entity_id": "ACCT_A",
+                    "target_entity_id": "ACCT_B",
+                    "relation_type": "TRANSFERRED_TO",
+                    "confidence": {
+                        "score": 1.0,
+                        "basis": ["Bank record direct"],
+                    },
+                    "source": {
+                        "source_type": "bank",
+                        "file_name": "05_Bank_Rakesh.csv",
+                        "file_hash": "sha256:deadbeef",
+                        "verification": "UNVERIFIED",
+                    },
+                    "attributes": {
+                        "amount": "15000",
+                        "currency": "INR",
+                        "date": "2024-03-05",
+                        "description": "Transfer to Suresh",
+                        "source_name": "Account 1234",
+                        "target_name": "Account 1235",
+                    },
+                },
+                {
+                    "id": "REL_narrative_1",
+                    "source_entity_id": "AMOUNT_x",
+                    "target_entity_id": "ORG_y",
+                    "relation_type": "TRANSFERRED_TO",
+                    "attributes": {"narrative_pattern": True, "verb": "transferred"},
+                },
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "graph_nodes.json").write_text(
+        json.dumps(
+            [
+                {"id": "ACCT_A", "name": "Account 1234"},
+                {"id": "ACCT_B", "name": "Account 1235"},
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "extraction_summary.json").write_text(
+        json.dumps(
+            {
+                "run_id": "run_test",
+                "ingestion_summary": {
+                    "total_files": 63,
+                    "total_records": 300,
+                    "files": [
+                        {
+                            "name": "05_Bank_Rakesh.csv",
+                            "source_type": "bank",
+                            "records": 7,
+                            "file_hash": "sha256:deadbeef",
+                            "quality_score": 0.982,
+                            "adversarial_suspicious": False,
+                        },
+                        {
+                            "name": "07_Bank_Amit.csv",
+                            "source_type": "bank",
+                            "records": 4,
+                            "file_hash": "sha256:cafe",
+                            "quality_score": 0.948,
+                            "adversarial_suspicious": False,
+                        },
+                        {
+                            "name": "02_CDR_Rakesh.csv",
+                            "source_type": "cdr",
+                            "records": 15,
+                            "file_hash": "sha256:cdr",
+                        },
+                    ],
+                    "adversarial": {
+                        "suspicious_files": ["31_Adversarial_Bank.csv"],
+                    },
+                },
+                "evidence_integrity": [
+                    {
+                        "original_filename": "05_Bank_Rakesh.csv",
+                        "file_hash": "sha256:deadbeef",
+                        "ingestion_time": "2026-10-26T18:53:20",
+                    }
+                ],
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
+def test_money_flow_names_the_source_file_behind_every_transfer(tmp_path):
+    """Each transfer must carry file, hash, integrity, row narration and the
+    extraction verdict — the backing a judge asks for when shown a total."""
+    _money_run(tmp_path)
+    flow = RunProjection(tmp_path, case_id="CASE_000001").money_flow(
+        "CASE_000001"
+    )
+
+    assert flow["totalVolume"] == 15000.0
+    assert flow["tracedLabel"] == "1 traced transfers"
+    assert len(flow["transactions"]) == 1
+
+    tx = flow["transactions"][0]
+    assert tx["sourceFile"] == "05_Bank_Rakesh.csv"
+    assert tx["sourceHash"] == "sha256:deadbeef"
+    assert tx["sourceIntegrity"] == "verified"
+    assert tx["description"] == "Transfer to Suresh"
+    assert tx["extractionConfidence"] == 1.0
+    assert tx["extractionBasis"] == ["Bank record direct"]
+
+
+def test_money_flow_source_coverage_lists_every_bank_file(tmp_path):
+    """Coverage panel data: all bank files (even 0-transfer ones), rows,
+    hashes and per-file volumes that add up to the traced total."""
+    _money_run(tmp_path)
+    flow = RunProjection(tmp_path).money_flow("CASE_000001")
+
+    by_file = {row["file"]: row for row in flow["sourceFiles"]}
+    assert set(by_file) == {"05_Bank_Rakesh.csv", "07_Bank_Amit.csv"}
+    assert by_file["05_Bank_Rakesh.csv"]["records"] == 7
+    assert by_file["05_Bank_Rakesh.csv"]["transferCount"] == 1
+    assert by_file["05_Bank_Rakesh.csv"]["volume"] == 15000.0
+    assert by_file["05_Bank_Rakesh.csv"]["qualityScore"] == 0.982
+    # A bank file that contributed nothing still appears, with an honest 0.
+    assert by_file["07_Bank_Amit.csv"]["records"] == 4
+    assert by_file["07_Bank_Amit.csv"]["transferCount"] == 0
+    assert by_file["07_Bank_Amit.csv"]["volume"] == 0.0
+    # CDR files are not money sources.
+    assert "02_CDR_Rakesh.csv" not in by_file
+
+    # The sum of per-file volumes equals the headline total.
+    assert round(sum(row["volume"] for row in flow["sourceFiles"]), 2) == (
+        flow["totalVolume"]
+    )
+
+    ingestion = flow["ingestion"]
+    assert ingestion["bankFiles"] == 2
+    assert ingestion["bankRecords"] == 11
+    assert ingestion["files"] == 63
+    assert ingestion["records"] == 300
+    assert ingestion["runId"] == "run_test"
+
+
+def test_money_flow_narrative_relations_stay_out_of_the_sum(tmp_path):
+    """A narrative 'transferred …' with no amount and no date cannot enter
+    the trail or the coverage rollup."""
+    _money_run(tmp_path)
+    flow = RunProjection(tmp_path).money_flow()
+
+    ids = [row["id"] for row in flow["transactions"]]
+    assert "REL_narrative_1" not in ids
+    assert flow["totalVolume"] == 15000.0
+
+
+def test_map_response_names_the_case_and_carries_zone_location_names(tmp_path):
+    """The map must say which case it maps, and zone markers must carry the
+    full recorded location names — the label caps at 60 chars, so district
+    matching and the zone detail cannot rely on it."""
+    (tmp_path / "zone_scores.json").write_text(
+        json.dumps(
+            [
+                {
+                    "hex_id": "893da115e3bffff",
+                    "latitude": 28.5660924,
+                    "longitude": 77.2432851,
+                    "location_names": [
+                        "Amit Sharma",
+                        "Rose Apartments, Lajpat Nagar Part II, New Delhi",
+                    ],
+                    "risk_band": "RED",
+                    "risk_score": 1.0,
+                    "evidence_count": 3,
+                    "suspect_count": 2,
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+    (tmp_path / "spatial_infos.json").write_text(
+        json.dumps(
+            [
+                {
+                    "id": "SPAT_1",
+                    "latitude": 28.6,
+                    "longitude": 77.2,
+                    "address": "Lajpat Nagar, New Delhi",
+                    "city": "Delhi",
+                    "precision": "city",
+                    "entity_id": "RES_1",
+                }
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    data = RunProjection(tmp_path, case_id="CASE_000001").map_data()
+
+    assert data["caseId"] == "CASE_000001"
+    zone = next(m for m in data["markers"] if m["kind"] == "incident")
+    # Full names survive even though the display label stops at 60 chars.
+    assert zone["locationNames"] == [
+        "Amit Sharma",
+        "Rose Apartments, Lajpat Nagar Part II, New Delhi",
+    ]
+    assert len(zone["label"]) <= 60
+    # District attribution exists only on spatial rows; zones match via
+    # their recorded location names.
+    spatial = next(m for m in data["markers"] if m["kind"] != "incident")
+    assert spatial["district"] == "Delhi"

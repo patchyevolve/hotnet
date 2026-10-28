@@ -20,6 +20,7 @@ from __future__ import annotations
 
 import json
 import os
+import time
 from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
 from datetime import datetime, timezone
@@ -30,6 +31,7 @@ from fastapi import Depends, FastAPI, File, Header, HTTPException, Query, Upload
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
+from api.activity import CaseActivityStore
 from api.identity import (
     JURISDICTIONS,
     ROLES,
@@ -46,13 +48,14 @@ from api.schemas import (
     AuthChangePasswordRequest,
     AuthLoginRequest,
     AuthRegisterRequest,
+    CaseAccessGrantRequest,
     CaseCreate,
     FaceDecision,
     FirCreate,
     RunRequest,
     SessionStart,
 )
-from api.user_store import UserStore, UserStoreError
+from api.user_store import UserStore, UserStoreError, seed_demo_accounts_from_env
 
 _SYSTEM_DIR = Path(__file__).resolve().parent.parent
 
@@ -76,7 +79,12 @@ class ApiState:
         self.registry = CaseRegistry(state_dir)
         self.jobs = JobStore(state_dir)
         self.users = UserStore(state_dir)
+        # ``CaseAccess`` rows (Prisma model). Defaults to the file store;
+        # ``CRIMENET_CASE_ACCESS_STORE=prisma`` swaps in the Prisma client.
+        self.case_access = build_case_access_store(state_dir)
         self.runner = PipelineRunner(_SYSTEM_DIR, self.jobs)
+        # Hash-chained per-case activity: who did what, when, on this case.
+        self.activity = CaseActivityStore(state_dir / "cases")
         self._active_path = state_dir / "active_case.json"
 
     def close(self) -> None:
@@ -184,6 +192,10 @@ def get_credential_provider() -> CredentialIdentityProvider:
 async def _lifespan(app: FastAPI) -> AsyncIterator[None]:
     global _state
     _state = ApiState(_state_dir())
+    # Demo sign-ins exist only where CRIMENET_SEED_DEMO_USERS says so —
+    # docker-compose turns it on for the demo stack, everything else keeps
+    # the gate closed (see seed_demo_accounts_from_env).
+    seed_demo_accounts_from_env(_state.users)
     try:
         yield
     finally:
@@ -263,34 +275,28 @@ def current_identity(
         raise HTTPException(401, str(exc)) from exc
 
 
-def require_roles(*allowed_roles: str):
-    """Authorise a route by ``Identity.role``.
+# ---------------------------------------------------------------------------
+# RBAC — role hierarchy + CaseAccess (api/rbac.py)
+# ---------------------------------------------------------------------------
+# Re-exported here so route files and tests keep importing from ``api.app``;
+# the implementations live in ``api/rbac.py``.
+from api.rbac import (  # noqa: E402 - after current_identity (lazy DI target)
+    AUDIT_ROLES,
+    CASE_ACCESS_LEVELS,
+    CaseAccessGuard,
+    CaseAccessGrant,
+    CaseAccessStore,
+    JsonCaseAccessStore,
+    build_case_access_store,
+    requires_case_access,
+    requires_roles,
+    station_baseline,
+)
 
-    Wraps :func:`current_identity`, so authentication still runs first: a
-    missing or unverifiable token answers 401, and only a *validated*
-    identity that carries the wrong role is refused with 403. The division
-    of duty follows the system spec:
-
-    * ``ADMIN`` / ``SUPERVISOR`` — full mutation (open root cases, …).
-    * ``INSPECTOR`` — operational mutation (FIRs, evidence, runs, face
-      decisions); cannot open a root case.
-    * ``AUDIT_LOGGER`` — read-only audit oversight: it appears on no
-      mutating route, so every POST it attempts is a 403.
-
-    Routes stay honest by naming their allowed roles at the call site rather
-    than in a central table — a new endpoint cannot accidentally default to
-    open.
-    """
-
-    def _role_checker(identity: Identity = Depends(current_identity)) -> Identity:
-        if identity.role not in allowed_roles:
-            raise HTTPException(
-                403,
-                f"Role {identity.role!r} is not authorized for this operation. Required: {allowed_roles}",
-            )
-        return identity
-
-    return _role_checker
+#: Backwards-compatible alias: the decorator was named ``require_roles``
+#: before the plural form became canonical. Nothing in the API contract
+#: depends on the Python name, so both keep working.
+require_roles = requires_roles
 
 
 def _identity_view(identity: Identity) -> dict[str, str]:
@@ -387,6 +393,83 @@ def _active_case_or_none() -> str | None:
     server — deciding "no active case" is only possible once state exists.
     """
     return _state.active_case() if _state is not None else None
+
+
+def _log_activity(
+    case_id: str,
+    identity: Identity,
+    action: str,
+    target: str = "",
+    detail: str = "",
+) -> None:
+    """Append an investigator action to the case's hash-chained ledger.
+
+    The ledger *is* the case's activity history (the overview's Case Activity
+    panel and any supervisor review read it), so a mutation that cannot record
+    who did it fails loudly rather than leaving a silent hole. Direct
+    handler calls with no live state (unit tests) have nothing to record.
+    """
+    if _state is None or not case_id:
+        return
+    _state.activity.append(
+        case_id,
+        actor_id=identity.user_id,
+        actor_name=identity.display_name,
+        actor_role=identity.role,
+        action=action,
+        target=target,
+        detail=detail,
+    )
+
+
+def _activity_payload(case_id: str) -> dict[str, Any]:
+    """One case's merged activity: chained user actions + pipeline trail.
+
+    ``entries`` is newest-first. ``chainValid`` is recomputed over the user
+    chain on every read — the report of who did what is only trustworthy
+    together with the verification of its chain.
+    """
+    state = get_state()
+    rows = state.activity.list(case_id)
+    chain_ok = state.activity.verify(case_id)
+    pipeline = _projection(case_id).audit_events()
+    entries: list[dict[str, Any]] = [
+        {
+            "source": "activity",
+            "caseId": case_id,
+            "id": f"ACT_{int(row.get('seq') or 0):04d}",
+            **row,
+        }
+        for row in rows
+    ]
+    entries.extend(
+        {
+            "source": "pipeline",
+            "caseId": case_id,
+            "hash": "",
+            "prevHash": "",
+            "actorId": "",
+            "actorName": "",
+            "actorRole": "",
+            **event,
+        }
+        for event in pipeline
+    )
+    entries.sort(
+        key=lambda row: (
+            str(row.get("at") or ""),
+            int(row.get("seq") or 0),
+        ),
+        reverse=True,
+    )
+    return {
+        "caseId": case_id,
+        "entries": entries,
+        "chainValid": chain_ok,
+        "chainLength": len(rows),
+        "pipelineEvents": len(pipeline),
+        "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
 
 
 def _job_view(job: Job) -> dict[str, Any]:
@@ -521,6 +604,39 @@ def auth_me(identity: Identity = Depends(current_identity)) -> dict[str, Any]:
     }
 
 
+@app.get("/api/auth/effective-level")
+def effective_level(
+    caseId: str | None = Query(default=None),
+    identity: Identity = Depends(current_identity),
+) -> dict[str, Any]:
+    """The caller's effective ``CaseAccess`` level — the one lookup the
+    frontend makes before rendering a guarded surface.
+
+    * ``caseId`` given — the level on that case: station baseline, creator
+      grant and explicit ``CaseAccess`` rows, the maximum of the three
+      (``NONE`` when none apply). An unknown case is 404, exactly like
+      ``GET /api/cases/{caseId}``.
+    * omitted — the caller's own-station baseline (``STATION_BASELINE``), so
+      the client can scope navigation before any case is chosen. ADMIN is
+      global, so its baseline is ADMIN wherever it signs in from.
+
+    Authentication runs first: no token, no answer (401). The level never
+    exceeds what :class:`CaseAccessGuard` would decide for the same case.
+    """
+    if not caseId:
+        return {
+            "level": station_baseline(identity.role),
+            "caseId": None,
+            "role": identity.role,
+        }
+    try:
+        case = get_registry().get_case(caseId)
+    except RegistryError as exc:
+        raise HTTPException(404, str(exc)) from exc
+    level = CaseAccessGuard().effective_level(identity, case)
+    return {"level": level, "caseId": caseId, "role": identity.role}
+
+
 @app.post("/api/auth/change-password")
 def change_password(
     body: AuthChangePasswordRequest,
@@ -553,7 +669,17 @@ def list_cases() -> list[dict[str, Any]]:
 
 
 @app.get("/api/cases/{case_id}")
-def get_case(case_id: str) -> dict[str, Any]:
+def get_case(
+    case_id: str,
+    identity: Identity = Depends(
+        requires_case_access(
+            "ADMIN", "SUPERVISOR", "INSPECTOR", "AUDIT_LOGGER", level="READ"
+        )
+    ),
+) -> dict[str, Any]:
+    """Case detail. Every role may *attempt* a read, but the CaseAccess
+    guard decides which cases: station baseline (ADMIN global,
+    SUPERVISOR/INSPECTOR/AUDIT_LOGGER own-station) plus explicit grants."""
     get_state().set_active(case_id)
     return _case_record(case_id)
 
@@ -561,10 +687,20 @@ def get_case(case_id: str) -> dict[str, Any]:
 @app.post("/api/cases", status_code=201)
 def create_case(
     body: CaseCreate,
-    identity: Identity = Depends(require_roles("ADMIN", "SUPERVISOR")),
+    identity: Identity = Depends(requires_roles("ADMIN", "SUPERVISOR")),
 ) -> dict[str, Any]:
+    """Open a root case. ADMIN may register it at any station; SUPERVISOR is
+    station-scoped to its own jurisdiction. The creator is granted ADMIN
+    access to the new case (the ``CaseAccess`` design: "when a Case is
+    created, the creator gets ADMIN access")."""
     registry = get_registry()
     jurisdiction = body.jurisdictionId or identity.jurisdiction_id
+    if identity.role != "ADMIN" and jurisdiction != identity.jurisdiction_id:
+        raise HTTPException(
+            403,
+            f"Role {identity.role!r} may only open cases in its own station "
+            f"({identity.jurisdiction_id!r})",
+        )
     try:
         case, _fir = registry.create_case(
             fir_number=body.firNumber,
@@ -575,8 +711,59 @@ def create_case(
         )
     except RegistryError as exc:
         raise HTTPException(400, str(exc)) from exc
+    get_state().case_access.grant(
+        user_id=identity.user_id,
+        case_id=case.case_id,
+        access_level="ADMIN",
+        granted_by=identity.user_id,
+    )
     get_state().set_active(case.case_id)
+    _log_activity(
+        case.case_id,
+        identity,
+        "case_opened",
+        target=case.case_id,
+        detail=body.title,
+    )
     return _case_record(case.case_id)
+
+
+@app.post("/api/cases/{case_id}/access", status_code=201)
+def grant_case_access(
+    case_id: str,
+    body: CaseAccessGrantRequest,
+    identity: Identity = Depends(requires_roles("ADMIN", "SUPERVISOR")),
+) -> dict[str, Any]:
+    """Grant (or update) a ``CaseAccess`` row for one user on one case.
+
+    ADMIN may grant on any case; SUPERVISOR only within its own station.
+    The row is the design's authorization layer: READ/WRITE/ADMIN, optional
+    expiry, upserted on (userId, caseId) exactly like the Prisma model's
+    unique constraint.
+    """
+    case = _registry_case(case_id)
+    if identity.role != "ADMIN" and case.jurisdiction_node_id != identity.jurisdiction_id:
+        raise HTTPException(
+            403,
+            f"Role {identity.role!r} may only grant access within its own "
+            f"station ({identity.jurisdiction_id!r})",
+        )
+    expires_at = body.expiresAt.isoformat() if body.expiresAt else None
+    grant = get_state().case_access.grant(
+        user_id=body.userId,
+        case_id=case_id,
+        access_level=body.accessLevel,
+        granted_by=identity.user_id,
+        expires_at=expires_at,
+    )
+    _log_activity(
+        case_id,
+        identity,
+        "access_granted",
+        target=body.userId,
+        detail=f"{body.accessLevel} access",
+    )
+    return grant.to_dict()
 
 
 @app.post("/api/cases/{case_id}/firs", status_code=201)
@@ -584,7 +771,7 @@ def create_fir(
     case_id: str,
     body: FirCreate,
     identity: Identity = Depends(
-        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+        requires_case_access("ADMIN", "SUPERVISOR", "INSPECTOR")
     ),
 ) -> dict[str, Any]:
     registry = get_registry()
@@ -600,6 +787,13 @@ def create_fir(
         )
     except RegistryError as exc:
         raise HTTPException(400, str(exc)) from exc
+    _log_activity(
+        case_id,
+        identity,
+        "fir_added",
+        target=fir.fir_id,
+        detail=fir.fir_number,
+    )
     return {
         "firId": fir.fir_id,
         "firNumber": fir.fir_number,
@@ -634,7 +828,7 @@ async def upload_evidence(
     fir_id: str,
     files: list[UploadFile] = File(...),
     identity: Identity = Depends(
-        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+        requires_case_access("ADMIN", "SUPERVISOR", "INSPECTOR")
     ),
 ) -> dict[str, Any]:
     """Append evidence to a FIR.
@@ -663,6 +857,17 @@ async def upload_evidence(
         stored = registry.attach_files(fir_id, rows, uploaded_by=identity.user_id)
     except RegistryError as exc:
         raise HTTPException(400, str(exc)) from exc
+
+    names = ", ".join(row.original_name for row in stored[:5])
+    if len(stored) > 5:
+        names += ", …"
+    _log_activity(
+        case_id,
+        identity,
+        "evidence_uploaded",
+        target=fir_id,
+        detail=names,
+    )
 
     return {
         "files": [
@@ -707,7 +912,7 @@ def run_case(
     case_id: str,
     body: RunRequest,
     identity: Identity = Depends(
-        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+        requires_case_access("ADMIN", "SUPERVISOR", "INSPECTOR")
     ),
 ) -> dict[str, Any]:
     state = get_state()
@@ -743,6 +948,13 @@ def run_case(
     )
     state.runner.submit(job, argv)
     state.set_active(case_id)
+    _log_activity(
+        case_id,
+        identity,
+        "run_started",
+        target=job.job_id,
+        detail="incremental" if incremental else "full",
+    )
     return _job_view(job)
 
 
@@ -831,7 +1043,7 @@ def record_face_decision(
     body: FaceDecision,
     caseId: str | None = None,
     identity: Identity = Depends(
-        require_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
+        requires_roles("ADMIN", "SUPERVISOR", "INSPECTOR")
     ),
 ) -> dict[str, Any]:
     """Investigator confirm/reject of a proposed face match.
@@ -845,10 +1057,21 @@ def record_face_decision(
     ``caseId`` query param, else the active case. Without that, a decision
     made while another case was active would silently be filed against the
     wrong case.
+
+    The target is resolved first, then run through :class:`CaseAccessGuard`
+    — the case id is not a path parameter here, so the guard cannot be a
+    route dependency. An unknown face keeps its 404; a foreign-jurisdiction
+    identity is refused with 403 before it learns whether the face exists.
     """
     target_case = body.caseId or caseId or _active_case_or_none()
     if not target_case and _state is not None:
         raise HTTPException(404, "No active or specified case")
+
+    # Guard only on a live server, mirroring `_active_case_or_none`: a
+    # plain-function call into this handler (the stage-12 unit tests) has
+    # neither state nor a real identity to check.
+    if target_case is not None and _state is not None:
+        CaseAccessGuard().authorize(identity, target_case, "WRITE")
 
     projection = _projection(target_case)
     current = next(
@@ -878,6 +1101,14 @@ def record_face_decision(
         "decidedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+    _log_activity(
+        target_case or "",
+        identity,
+        "face_decision",
+        target=body.faceId,
+        detail=str(body.decision),
+    )
 
     return next(
         row for row in projection.face_records() if row["id"] == body.faceId
@@ -947,8 +1178,90 @@ def get_custody(caseId: str | None = None) -> list[dict[str, Any]]:
 
 
 @app.get("/api/audit")
-def get_audit(caseId: str | None = None) -> list[dict[str, Any]]:
-    return _projection(caseId).audit_events()
+def get_audit(
+    caseId: str | None = None,
+    identity: Identity = Depends(requires_roles(*AUDIT_ROLES)),
+) -> list[dict[str, Any]]:
+    """Audit trail, scoped by role: ADMIN global, SUPERVISOR station,
+    AUDIT_LOGGER read-only (station, like SUPERVISOR). INSPECTOR is refused
+    with 403 — audit oversight is not operational work.
+
+    * ``caseId`` given — the caller needs READ on that case (guard).
+    * ``caseId`` omitted and role is ADMIN — the active case's trail, as
+      before; ADMIN may additionally name any case (global authority).
+    * ``caseId`` omitted and role is SUPERVISOR/AUDIT_LOGGER — every case in
+      the caller's own station, each row tagged with its ``caseId``.
+    """
+    if caseId:
+        CaseAccessGuard().authorize(identity, caseId, "READ")
+        return _projection(caseId).audit_events()
+    if identity.role == "ADMIN":
+        return _projection(None).audit_events()
+    rows: list[dict[str, Any]] = []
+    for case in get_registry().list_cases():
+        if case.jurisdiction_node_id != identity.jurisdiction_id:
+            continue
+        for event in _projection(case.case_id).audit_events():
+            rows.append({**event, "caseId": case.case_id})
+    return rows
+
+
+@app.get("/api/activity")
+def get_activity(
+    caseId: str | None = Query(default=None),
+    identity: Identity = Depends(current_identity),
+) -> dict[str, Any]:
+    """Merged case activity: hash-chained user actions + pipeline trail.
+
+    This is the history behind the overview's Case Activity panel — every
+    investigator action on a case, chained so the record of *who did what*
+    is tamper-evident, merged with the pipeline's own append-only stage log.
+
+    Scoping answers to case access, so every assigned user reads the whole
+    history of their case (including what their colleagues did on it), and a
+    supervisor or ADMIN sees the same record for the cases in their
+    authority:
+
+    * ``caseId`` — READ on that case.
+    * omitted — every case the caller may READ; each row is tagged with its
+      ``caseId``.
+    """
+    if caseId:
+        CaseAccessGuard().authorize(identity, caseId, "READ")
+        return _activity_payload(caseId)
+
+    entries: list[dict[str, Any]] = []
+    chain_valid = True
+    chain_length = 0
+    pipeline_events = 0
+    case_ids: list[str] = []
+    for case in get_registry().list_cases():
+        try:
+            CaseAccessGuard().authorize(identity, case.case_id, "READ")
+        except HTTPException:
+            continue
+        payload = _activity_payload(case.case_id)
+        entries.extend(payload["entries"])
+        chain_valid = chain_valid and bool(payload["chainValid"])
+        chain_length += int(payload["chainLength"])
+        pipeline_events += int(payload["pipelineEvents"])
+        case_ids.append(case.case_id)
+    entries.sort(
+        key=lambda row: (
+            str(row.get("at") or ""),
+            int(row.get("seq") or 0),
+        ),
+        reverse=True,
+    )
+    return {
+        "caseId": "",
+        "entries": entries,
+        "chainValid": chain_valid,
+        "chainLength": chain_length,
+        "pipelineEvents": pipeline_events,
+        "caseIds": case_ids,
+        "checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    }
 
 
 @app.get("/api/timeline")
@@ -988,6 +1301,99 @@ def get_dashboard(
 @app.get("/api/metrics")
 def get_metrics(caseId: str | None = None) -> list[dict[str, Any]]:
     return _projection(caseId).metrics()
+
+
+@app.get("/api/health")
+def system_health(identity: Identity = Depends(current_identity)) -> dict[str, Any]:
+    """Live subsystem checks — the System Status panel's source, with proof.
+
+    Every row is measured on this request: what was checked, what it found
+    (case/run/chain/evidence counts, a recomputed chain verification) and how
+    long the probe took. ``operational`` is earned per check, never assumed:
+    one failed probe degrades the whole report instead of painting every
+    service green.
+    """
+    checked_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    if _state is None:
+        return {"status": "degraded", "services": [], "checkedAt": checked_at}
+
+    services: list[dict[str, Any]] = []
+
+    def probe(service_id: str, label: str, check: Any) -> None:
+        mark = time.perf_counter()
+        status = "operational"
+        try:
+            detail = str(check())
+        except Exception:  # noqa: BLE001 - a failed probe reports degraded
+            status, detail = "degraded", "check failed"
+        elapsed_ms = (time.perf_counter() - mark) * 1000
+        services.append(
+            {
+                "id": service_id,
+                "label": label,
+                "status": status,
+                "detail": f"{detail} · {elapsed_ms:.1f} ms",
+            }
+        )
+
+    def api_check() -> str:
+        return "FastAPI route responding"
+
+    def registry_check() -> str:
+        cases = get_registry().list_cases()
+        active = _state.active_case()
+        return f"{len(cases)} case(s) registered · active {active or 'none'}"
+
+    def pipeline_check() -> str:
+        cases = get_registry().list_cases()
+        active = _state.active_case()
+        if not cases:
+            return "no cases registered yet"
+        if not active:
+            raise RuntimeError("cases exist but no active case")
+        nodes_path = _state.registry.output_dir(active) / "graph_nodes.json"
+        if not nodes_path.is_file():
+            raise RuntimeError(f"active case {active} has not run")
+        nodes = json.loads(nodes_path.read_text(encoding="utf-8"))
+        return f"run output present · {len(nodes)} graph nodes · {active}"
+
+    def chain_check() -> str:
+        active = _state.active_case() or ""
+        rows = _state.activity.list(active) if active else []
+        if not _state.activity.verify(active):
+            raise RuntimeError("activity chain verification failed")
+        pipeline_events = (
+            len(_projection(None).audit_events()) if active else 0
+        )
+        return (
+            f"{len(rows)} chained user entries verified · "
+            f"{pipeline_events} pipeline events append-only"
+        )
+
+    def vault_check() -> str:
+        active = _state.active_case()
+        if not active:
+            if not get_registry().list_cases():
+                return "no cases registered yet"
+            raise RuntimeError("no active case to inventory")
+        return f"{len(get_registry().list_evidence(active))} evidence files registered"
+
+    def faces_check() -> str:
+        return f"{len(_projection(None).face_records())} face records indexed"
+
+    probe("api", "API Service", api_check)
+    probe("registry", "Case Registry", registry_check)
+    probe("pipeline", "Pipeline Output", pipeline_check)
+    probe("chain", "Activity Chain", chain_check)
+    probe("vault", "Evidence Vault", vault_check)
+    probe("faces", "Face Engine", faces_check)
+
+    overall = (
+        "ok"
+        if all(row["status"] == "operational" for row in services)
+        else "degraded"
+    )
+    return {"status": overall, "services": services, "checkedAt": checked_at}
 
 
 @app.get("/api/analytics")

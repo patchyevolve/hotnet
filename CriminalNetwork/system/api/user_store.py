@@ -32,6 +32,7 @@ import re
 import secrets
 import tempfile
 import threading
+from collections.abc import Mapping
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -59,10 +60,60 @@ STATUSES: Final[tuple[str, ...]] = (
 )
 
 #: Roles allowed to approve a pending account into ACTIVE.
-#: Mirrors ``require_roles("ADMIN", "SUPERVISOR")`` in ``api/app.py``.
+#: Mirrors ``requires_roles("ADMIN", "SUPERVISOR")`` in ``api/app.py``.
 APPROVER_ROLES: Final[frozenset[str]] = frozenset({"ADMIN", "SUPERVISOR"})
 
 DEFAULT_JURISDICTION: Final[str] = "JURISDICTION_DEFAULT"
+
+# ---------------------------------------------------------------------------
+# Demo accounts (opt-in seeding — see seed_demo_accounts_from_env)
+# ---------------------------------------------------------------------------
+#: The five documented demo sign-ins (README / SETUP). Emails are the login
+#: handles the frontend documents, roles/stations match the RBAC matrix the
+#: UI enforces, and display names are what the top bar shows after login.
+#: ``(email, name, role, jurisdiction)``.
+DEMO_ACCOUNTS: Final[tuple[tuple[str, str, str, str], ...]] = (
+    (
+        "admin@crimenet.local",
+        "Dy. Comm. Sharma",
+        "ADMIN",
+        "JURISDICTION_DELHI_CYBERCRIME",
+    ),
+    (
+        "supervisor@crimenet.local",
+        "Supt. Verma",
+        "SUPERVISOR",
+        "JURISDICTION_DELHI_CYBERCRIME",
+    ),
+    (
+        "supervisor.mumbai@crimenet.local",
+        "Supt. Kulkarni",
+        "SUPERVISOR",
+        "JURISDICTION_MUMBAI_CYBERCRIME",
+    ),
+    (
+        "inspector@crimenet.local",
+        "Insp. Rao",
+        "INSPECTOR",
+        "JURISDICTION_DELHI_CYBERCRIME",
+    ),
+    (
+        "auditor@crimenet.local",
+        "Aud. Iyer",
+        "AUDIT_LOGGER",
+        "JURISDICTION_DELHI_CYBERCRIME",
+    ),
+)
+
+#: Shared demo password. Documented in README/SETUP — it guards sample data,
+#: not a real deployment; override with ``CRIMENET_DEMO_PASSWORD``.
+DEFAULT_DEMO_PASSWORD: Final[str] = "Cr1menet!Demo"
+
+#: Env gate. Off by default: a stock deployment (including the very first
+#: ``bootstrap_admin``) must never gain demo logins by surprise.
+SEED_DEMO_ENV: Final[str] = "CRIMENET_SEED_DEMO_USERS"
+DEMO_PASSWORD_ENV: Final[str] = "CRIMENET_DEMO_PASSWORD"
+_SEED_TRUTHY: Final[frozenset[str]] = frozenset({"1", "true", "yes", "on"})
 
 # The encoded prefix doubles as a version tag: the iteration count is baked
 # into the string so a future cost bump can verify old hashes without a
@@ -483,6 +534,41 @@ class UserStore:
                 for row in self._data["users"].values()
             )
 
+    def seed_demo_accounts(
+        self, *, password: str = DEFAULT_DEMO_PASSWORD
+    ) -> list[UserRecord]:
+        """Create :data:`DEMO_ACCOUNTS` as ACTIVE accounts on ``password``.
+
+        Idempotent by email: an address that already exists is left exactly
+        as it is, so restarting a seeded deployment never resets a password
+        or a role someone has since changed. Returns only the accounts this
+        call actually created.
+        """
+        self._validate_password(password)
+        # Hash once, outside the lock: 600k PBKDF2 iterations must not block
+        # readers of an already-running store.
+        password_hash = self.hash_password(password)
+        created: list[UserRecord] = []
+        with self._lock:
+            for email, name, role, jurisdiction in DEMO_ACCOUNTS:
+                email_folded = self._validate_email(email)
+                if self._find_by_email(email_folded) is not None:
+                    continue
+                created.append(
+                    self._create(
+                        email=email_folded,
+                        name=self._validate_name(name),
+                        password_hash=password_hash,
+                        role=self._validate_role(role),
+                        status=STATUS_ACTIVE,
+                        jurisdiction_node_id=self._validate_jurisdiction(
+                            jurisdiction
+                        ),
+                        badge_id="",
+                    )
+                )
+        return created
+
     def list_users(
         self,
         status: str | None = None,
@@ -580,3 +666,24 @@ class UserStore:
             raw["updated_at"] = _now()
             self._save()
             return UserRecord(**raw)
+
+
+def seed_demo_accounts_from_env(
+    store: UserStore, environ: Mapping[str, str] | None = None
+) -> list[UserRecord]:
+    """Seed :data:`DEMO_ACCOUNTS` when ``CRIMENET_SEED_DEMO_USERS`` is truthy.
+
+    The gate defaults **off**: a stock deployment — including the very first
+    ``bootstrap_admin`` — must never gain demo logins by surprise, so only a
+    deployment that opts in (``docker-compose.yml`` sets ``"1"`` for the demo
+    stack) gets them. ``CRIMENET_DEMO_PASSWORD`` overrides the shared password
+    for setups that expose the stack beyond localhost.
+
+    Returns the accounts created (empty when the gate is off or nothing was
+    missing); never modifies an account that already exists.
+    """
+    env = os.environ if environ is None else environ
+    if env.get(SEED_DEMO_ENV, "").strip().lower() not in _SEED_TRUTHY:
+        return []
+    password = env.get(DEMO_PASSWORD_ENV, "").strip() or DEFAULT_DEMO_PASSWORD
+    return store.seed_demo_accounts(password=password)
