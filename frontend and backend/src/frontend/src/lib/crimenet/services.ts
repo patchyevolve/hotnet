@@ -14,11 +14,21 @@
  *    run must surface the server's reason to the investigator, so those throw.
  */
 
+import {
+  ApiError,
+  apiClient,
+  getToken,
+  setToken,
+  setUnauthorizedHandler,
+} from "./api-client";
+import { getIdentity } from "./identity";
+import { type AccessLevel, localEffectiveLevel } from "./rbac";
 import type {
   AiInsight,
   AiMessage,
   AnalyticsData,
   AuditEvent,
+  CaseActivityBundle,
   CaseRecord,
   CdrRecord,
   CdrSummary,
@@ -35,9 +45,12 @@ import type {
   NotificationItem,
   Role,
   SearchResultGroup,
-  SessionIdentity,
+  SystemStatus,
   TimelineEvent,
 } from "./types";
+
+export { ApiError, getToken, setToken, setUnauthorizedHandler };
+export type { AccessLevel };
 
 export interface JobView {
   jobId: string;
@@ -81,80 +94,11 @@ export interface StoredFile {
   uploadedAt: string;
 }
 
-export interface SessionStart {
-  displayName: string;
-  role: Role;
-  jurisdictionId: string;
-}
-
-const TOKEN_KEY = "crimenet.token";
-
-export class ApiError extends Error {
-  readonly status: number;
-  constructor(status: number, message: string) {
-    super(message);
-    this.name = "ApiError";
-    this.status = status;
-  }
-}
-
-export function getToken(): string | null {
-  try {
-    return localStorage.getItem(TOKEN_KEY);
-  } catch {
-    return null;
-  }
-}
-
-export function setToken(token: string | null): void {
-  try {
-    if (token) localStorage.setItem(TOKEN_KEY, token);
-    else localStorage.removeItem(TOKEN_KEY);
-  } catch {
-    /* storage unavailable — the session simply will not persist */
-  }
-}
-
-let unauthorizedHandler: (() => void) | null = null;
-
 /**
- * Registered once by the app shell. Called when the stored token no longer
- * verifies (the signing secret rotated, or the token expired) so the shell can
- * send the investigator to sign-in instead of leaving them on a page whose
- * writes keep failing.
+ * Every service call goes through `apiClient`, which attaches the
+ * `Authorization: Bearer` header on all requests (see `api-client.ts`).
  */
-export function setUnauthorizedHandler(handler: (() => void) | null): void {
-  unauthorizedHandler = handler;
-}
-
-async function request<T>(path: string, init?: RequestInit): Promise<T> {
-  const token = getToken();
-  const headers = new Headers(init?.headers);
-  if (token) headers.set("Authorization", `Bearer ${token}`);
-  if (init?.body && !(init.body instanceof FormData)) {
-    headers.set("Content-Type", "application/json");
-  }
-  const response = await fetch(path, { ...init, headers });
-  if (response.status === 401 && token) {
-    // A rejected signature means the token this client holds is unusable.
-    // Drop it and hand back a message an investigator can act on; the
-    // registered handler navigates to sign-in.
-    setToken(null);
-    unauthorizedHandler?.();
-    throw new ApiError(401, "Session expired. Please sign in again.");
-  }
-  if (!response.ok) {
-    let detail = `${response.status} ${response.statusText}`;
-    try {
-      const body = (await response.json()) as { detail?: unknown };
-      if (typeof body.detail === "string") detail = body.detail;
-    } catch {
-      /* non-JSON error body */
-    }
-    throw new ApiError(response.status, detail);
-  }
-  return (await response.json()) as T;
-}
+const request = apiClient.request;
 
 /** Read helpers swallow failures so pages land on the empty state, not a hang. */
 async function read<T>(path: string, fallback: T): Promise<T> {
@@ -178,7 +122,7 @@ function qs(params: Record<string, string | undefined>): string {
 const withCase = (caseId?: string) => qs({ caseId });
 
 // ---------------------------------------------------------------------------
-// Session
+// Authentication
 // ---------------------------------------------------------------------------
 export async function getMeta(): Promise<{
   roles: Role[];
@@ -187,17 +131,71 @@ export async function getMeta(): Promise<{
   return read("/api/meta", { roles: [], jurisdictions: [] });
 }
 
-export async function startSession(
-  input: SessionStart,
-): Promise<{ identity: SessionIdentity; token: string }> {
-  const result = await request<{ identity: SessionIdentity; token: string }>(
-    "/api/session",
-    { method: "POST", body: JSON.stringify(input) },
+export interface LoginRequest {
+  emailOrBadge: string;
+  password: string;
+}
+
+export interface LoginUser {
+  id: string;
+  email: string;
+  name: string;
+  role: Role;
+  status?: string;
+  jurisdictionNodeId?: string;
+}
+
+/**
+ * Exchange credentials for a signed bearer token (`POST /api/auth/login`).
+ *
+ * On success the token is stored immediately — the role, station and display
+ * name the UI shows are then read back out of it (`useIdentity`), never from
+ * anything the form could submit.
+ */
+export async function login(
+  input: LoginRequest,
+): Promise<{ token: string; user: LoginUser }> {
+  const result = await apiClient.post<{ token: string; user: LoginUser }>(
+    "/api/auth/login",
+    input,
   );
   setToken(result.token);
   return result;
 }
 
+/**
+ * Effective `CaseAccessLevel` for the signed-in identity.
+ *
+ * Asks the server (`GET /api/auth/effective-level`) so explicit `CaseAccess`
+ * grants are honoured; when the endpoint cannot answer (older deployment,
+ * offline) the answer is derived from the signed token instead, which keeps
+ * the UI failing closed rather than open.
+ */
+export async function getEffectiveLevel(
+  options: {
+    caseId?: string;
+    station?: string;
+    createdBy?: string;
+  } = {},
+): Promise<AccessLevel> {
+  try {
+    const result = await apiClient.get<{ level: AccessLevel }>(
+      `/api/auth/effective-level${qs({ caseId: options.caseId })}`,
+    );
+    return normalizeLevel(result.level);
+  } catch (error) {
+    console.error("[crimenet] GET /api/auth/effective-level failed:", error);
+    return localEffectiveLevel(getIdentity(), options);
+  }
+}
+
+function normalizeLevel(value: unknown): AccessLevel {
+  return value === "READ" || value === "WRITE" || value === "ADMIN"
+    ? value
+    : "NONE";
+}
+
+/** Drop the stored token. Routing back to sign-in is the caller's job. */
 export function signOut(): void {
   setToken(null);
 }
@@ -344,11 +342,15 @@ export async function getMoneyFlow(caseId?: string): Promise<MoneyFlow> {
     accounts: [],
     transactions: [],
     byChannel: [],
+    sourceFiles: [],
   });
 }
 
-export async function getMapData(): Promise<MapData> {
-  return read<MapData>("/api/map", { markers: [], links: [] });
+export async function getMapData(caseId?: string): Promise<MapData> {
+  return read<MapData>(`/api/map${withCase(caseId)}`, {
+    markers: [],
+    links: [],
+  });
 }
 
 export async function getFaceRecords(): Promise<FaceRecord[]> {
@@ -379,8 +381,8 @@ export async function postFaceDecision(input: {
   });
 }
 
-export async function getEvidence(): Promise<EvidenceRecord[]> {
-  return read<EvidenceRecord[]>("/api/evidence", []);
+export async function getEvidence(caseId?: string): Promise<EvidenceRecord[]> {
+  return read<EvidenceRecord[]>(`/api/evidence${withCase(caseId)}`, []);
 }
 
 export async function getCustodyEvents(): Promise<CustodyEvent[]> {
@@ -391,12 +393,36 @@ export async function getAuditEvents(): Promise<AuditEvent[]> {
   return read<AuditEvent[]>("/api/audit", []);
 }
 
-export async function getTimeline(): Promise<TimelineEvent[]> {
-  return read<TimelineEvent[]>("/api/timeline", []);
+export async function getTimeline(caseId?: string): Promise<TimelineEvent[]> {
+  return read<TimelineEvent[]>(`/api/timeline${withCase(caseId)}`, []);
 }
 
-export async function getDashboard(role: Role): Promise<DashboardData> {
-  return read<DashboardData>(`/api/dashboard${qs({ role })}`, {
+export async function getActivity(
+  caseId?: string,
+): Promise<CaseActivityBundle> {
+  return read<CaseActivityBundle>(`/api/activity${withCase(caseId)}`, {
+    caseId: caseId ?? "",
+    entries: [],
+    chainValid: true,
+    chainLength: 0,
+    pipelineEvents: 0,
+    checkedAt: "",
+  });
+}
+
+export async function getSystemStatus(): Promise<SystemStatus> {
+  return read<SystemStatus>("/api/health", {
+    status: "degraded",
+    services: [],
+    checkedAt: "",
+  });
+}
+
+export async function getDashboard(
+  role: Role,
+  caseId?: string,
+): Promise<DashboardData> {
+  return read<DashboardData>(`/api/dashboard${qs({ role, caseId })}`, {
     metrics: [],
     widgets: [],
     riskBreakdown: [],
@@ -407,12 +433,16 @@ export async function getDashboard(role: Role): Promise<DashboardData> {
   });
 }
 
-export async function getCommandCenterMetrics(): Promise<DashboardMetric[]> {
-  return read<DashboardMetric[]>("/api/metrics", []);
+export async function getCommandCenterMetrics(
+  caseId?: string,
+): Promise<DashboardMetric[]> {
+  return read<DashboardMetric[]>(`/api/metrics${withCase(caseId)}`, []);
 }
 
-export async function getIntelligenceFeed(): Promise<IntelligenceFeedEvent[]> {
-  return read<IntelligenceFeedEvent[]>("/api/feed", []);
+export async function getIntelligenceFeed(
+  caseId?: string,
+): Promise<IntelligenceFeedEvent[]> {
+  return read<IntelligenceFeedEvent[]>(`/api/feed${withCase(caseId)}`, []);
 }
 
 export async function getAiInsights(): Promise<AiInsight[]> {

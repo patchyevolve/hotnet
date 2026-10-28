@@ -5,13 +5,16 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { getStrings } from "@/lib/crimenet/i18n";
+import { canCreateCase, levelAtLeast } from "@/lib/crimenet/rbac";
 import { useRole } from "@/lib/crimenet/role-context";
 import {
+  type AccessLevel,
   type FirView,
   type JobView,
   type StoredFile,
   createCase,
   createFir,
+  getEffectiveLevel,
   getJob,
   listFirs,
   runCase,
@@ -44,11 +47,12 @@ function formatBytes(size: number): string {
  * upload must not block on it.
  */
 export function UploadPage() {
-  const { language } = useRole();
+  const { language, role } = useRole();
   const strings = getStrings(language);
   const navigate = useNavigate();
 
   const [caseRecord, setCaseRecord] = useState<CaseRecord | null>(null);
+  const [caseLevel, setCaseLevel] = useState<AccessLevel>("NONE");
   const [firs, setFirs] = useState<FirView[]>([]);
   const [uploaded, setUploaded] = useState<StoredFile[]>([]);
 
@@ -94,6 +98,15 @@ export function UploadPage() {
         description: description.trim(),
       });
       setCaseRecord(created);
+      // Re-check with the server now that the case exists: uploads and runs
+      // below are enabled only if it comes back at WRITE or higher.
+      setCaseLevel(
+        await getEffectiveLevel({
+          caseId: created.id,
+          station: created.station,
+          createdBy: created.leadOfficerId,
+        }),
+      );
       refreshFirs(created.id);
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : String(cause));
@@ -147,6 +160,8 @@ export function UploadPage() {
   }
 
   const canRegister = firNumber.trim().length > 0 && title.trim().length >= 3;
+  const mayCreateCase = canCreateCase(role);
+  const canWrite = levelAtLeast(caseLevel, "WRITE");
 
   return (
     <div data-ocid="intake.page" className="flex flex-col gap-6">
@@ -155,7 +170,7 @@ export function UploadPage() {
         title={strings.caseIntake}
         description={strings.caseIntakeHint}
         actions={
-          caseRecord ? (
+          caseRecord && canWrite ? (
             <Button
               type="button"
               variant="outline"
@@ -223,7 +238,7 @@ export function UploadPage() {
                   </dd>
                 </div>
               </dl>
-            ) : (
+            ) : mayCreateCase ? (
               <form
                 className="space-y-4"
                 onSubmit={(event) => void handleRegister(event)}
@@ -273,7 +288,22 @@ export function UploadPage() {
                   <FolderPlus className="size-4" aria-hidden />
                   {busy ? strings.loading : strings.registerCase}
                 </Button>
+                {role !== "ADMIN" ? (
+                  <p
+                    data-ocid="intake.station_note"
+                    className="text-xs text-muted-foreground"
+                  >
+                    {strings.stationLockedNote}
+                  </p>
+                ) : null}
               </form>
+            ) : (
+              <p
+                data-ocid="intake.create_restricted"
+                className="rounded-md border border-border bg-card/60 px-3 py-2 text-sm text-muted-foreground"
+              >
+                {strings.createCaseRestricted}
+              </p>
             )}
           </CardContent>
         </Card>
@@ -288,6 +318,13 @@ export function UploadPage() {
             {!caseRecord ? (
               <p className="text-sm text-muted-foreground">
                 {strings.caseIntakeHint}
+              </p>
+            ) : !canWrite ? (
+              <p
+                data-ocid="intake.write_restricted"
+                className="rounded-md border border-border bg-card/60 px-3 py-2 text-sm text-muted-foreground"
+              >
+                {strings.writeRestricted}
               </p>
             ) : (
               <>

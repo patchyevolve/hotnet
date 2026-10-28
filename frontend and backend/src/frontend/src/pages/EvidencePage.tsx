@@ -13,11 +13,13 @@ import {
 } from "@/components/crimenet";
 import { formatDateTime } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
+import { useIdentity } from "@/lib/crimenet/identity";
 import { useRole } from "@/lib/crimenet/role-context";
 import { getCustodyEvents, getEvidence } from "@/lib/crimenet/services";
 import type { CustodyEvent, EvidenceRecord } from "@/lib/crimenet/types";
 import { BadgeCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { ForbiddenPage } from "./ForbiddenPage";
 
 const integrityTone: Record<
   EvidenceRecord["integrity"],
@@ -36,6 +38,7 @@ const integrityLabel: Record<EvidenceRecord["integrity"], string> = {
 
 export function EvidencePage() {
   const { language } = useRole();
+  const identity = useIdentity();
   const strings = getStrings(language);
   const [records, setRecords] = useState<EvidenceRecord[]>([]);
   const [custody, setCustody] = useState<CustodyEvent[]>([]);
@@ -89,9 +92,6 @@ export function EvidencePage() {
       render: (row) => (
         <div className="min-w-0 max-w-sm">
           <p className="truncate text-sm text-foreground">{row.label}</p>
-          <p className="font-mono-id text-[11px] text-muted-foreground">
-            {row.caseId}
-          </p>
         </div>
       ),
     },
@@ -102,13 +102,6 @@ export function EvidencePage() {
         <span className="text-xs uppercase text-muted-foreground">
           {row.kind}
         </span>
-      ),
-    },
-    {
-      key: "case",
-      header: strings.caseLabel,
-      render: (row) => (
-        <span className="font-mono-id text-xs text-info">{row.caseId}</span>
       ),
     },
     {
@@ -158,12 +151,24 @@ export function EvidencePage() {
     },
   ];
 
+  // The vault has no write controls; it is strictly a read surface, so a
+  // signed-in identity is the only requirement and the state is stated up
+  // front. Server-side custody endpoints still enforce per-request access.
+  if (!identity) {
+    return <ForbiddenPage body={strings.forbiddenBody} />;
+  }
+
   return (
     <div data-ocid="evidence.page" className="flex flex-col">
       <PageHeader
         eyebrow={strings.evidenceManagement}
         title={strings.evidenceVault}
         description={strings.evidenceDescription}
+        actions={
+          <span data-ocid="evidence.read_only_pill">
+            <StatusPill label={strings.readOnlyAccess} tone="neutral" />
+          </span>
+        }
       />
 
       {loading ? (
@@ -293,7 +298,7 @@ export function EvidencePage() {
             <>
               <DetailField
                 label={strings.caseLabel}
-                value={selected.caseId}
+                value={selected.caseId ?? "\u2014"}
                 mono
               />
               <DetailField

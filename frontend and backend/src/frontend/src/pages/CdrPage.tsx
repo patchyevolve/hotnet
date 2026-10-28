@@ -25,7 +25,6 @@ export function CdrPage() {
   const [summary, setSummary] = useState<CdrSummary | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [type, setType] = useState("all");
-  const [district, setDistrict] = useState("all");
   const [flaggedOnly, setFlaggedOnly] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -45,23 +44,14 @@ export function CdrPage() {
     };
   }, []);
 
-  const districts = useMemo(
-    () =>
-      [...new Set(records.map((row) => row.district))]
-        .filter((item): item is string => Boolean(item))
-        .sort(),
-    [records],
-  );
-
   const filtered = useMemo(
     () =>
       records.filter(
         (row) =>
           (type === "all" || row.type === type) &&
-          (district === "all" || row.district === district) &&
           (!flaggedOnly || row.flagged),
       ),
-    [records, type, district, flaggedOnly],
+    [records, type, flaggedOnly],
   );
 
   const selected = records.find((row) => row.id === selectedId) ?? null;
@@ -122,7 +112,7 @@ export function CdrPage() {
       header: strings.cellTower,
       render: (row) => (
         <span className="font-mono-id text-xs text-muted-foreground">
-          {row.cellTower}
+          {row.cellTower || "\u2014"}
         </span>
       ),
     },
@@ -176,37 +166,37 @@ export function CdrPage() {
             <MetricCard
               label={strings.totalCallsLabel}
               value={summary.totalCalls.toLocaleString("en-IN")}
-              delta="+12 this week"
-              trend="up"
+              delta=""
+              trend="flat"
               tone="info"
-              series={[6, 7, 8, 9, 10, 11, 12]}
+              series={summary.hourly.map((item) => item.count)}
               index={0}
             />
             <MetricCard
               label={strings.uniqueNumbersLabel}
               value={summary.uniqueNumbers.toLocaleString("en-IN")}
-              delta="stable"
+              delta=""
               trend="flat"
               tone="low"
-              series={[5, 5, 6, 6, 6, 6, 6]}
+              series={[summary.uniqueNumbers]}
               index={1}
             />
             <MetricCard
               label={strings.commonNumbers}
               value={String(summary.commonNumbers)}
-              delta="+3 today"
-              trend="up"
+              delta=""
+              trend="flat"
               tone="high"
-              series={[3, 4, 4, 5, 6, 6, 7]}
+              series={summary.topContacts.map((item) => item.count)}
               index={2}
             />
             <MetricCard
               label={strings.anomalies}
               value={String(summary.anomalies)}
-              delta="+2 today"
-              trend="up"
+              delta=""
+              trend="flat"
               tone="critical"
-              series={[2, 3, 3, 4, 4, 5, 6]}
+              series={[summary.anomalies]}
               index={3}
             />
           </section>
@@ -311,20 +301,9 @@ export function CdrPage() {
                 { value: "data", label: strings.typeData },
               ],
             },
-            {
-              id: "district",
-              label: strings.district,
-              value: district,
-              onChange: setDistrict,
-              options: [
-                { value: "all", label: strings.all },
-                ...districts.map((item) => ({ value: item, label: item })),
-              ],
-            },
           ]}
           onReset={() => {
             setType("all");
-            setDistrict("all");
             setFlaggedOnly(false);
           }}
           resultCount={filtered.length}
@@ -395,7 +374,10 @@ export function CdrPage() {
                 value={selected.cellTower}
                 mono
               />
-              <DetailField label={strings.district} value={selected.district} />
+              <DetailField
+                label={strings.district}
+                value={selected.district || "\u2014"}
+              />
               <DetailField
                 label={strings.type}
                 value={selected.type.toUpperCase()}

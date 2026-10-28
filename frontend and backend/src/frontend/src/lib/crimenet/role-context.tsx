@@ -1,10 +1,10 @@
 /**
- * CrimeNet — demo role + language context.
+ * CrimeNet — signed role + language context.
  *
- * This is a frontend-only demonstration of role switching. It is explicitly
- * NOT authentication or access control: no credentials are checked and no
- * backend enforcement exists. Switching role only changes which dashboard
- * widgets are shown.
+ * `role` is not user-selectable: it is read from the bearer token issued at
+ * sign-in (`useIdentity`) and re-read whenever that token changes, so the
+ * whole shell reflects the JWT's claims. The context only owns the UI
+ * language; everything access-control related comes from the signed identity.
  */
 
 import {
@@ -15,6 +15,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { useIdentity } from "./identity";
 import type { Language, Role } from "./types";
 
 export const roles: Role[] = [
@@ -39,8 +40,8 @@ export const roleDescriptions: Record<Role, string> = {
 };
 
 interface RoleContextValue {
+  /** Effective role, decoded from the stored token (INSPECTOR if absent). */
   role: Role;
-  setRole: (role: Role) => void;
   language: Language;
   setLanguage: (language: Language) => void;
   toggleLanguage: () => void;
@@ -49,15 +50,16 @@ interface RoleContextValue {
 const RoleContext = createContext<RoleContextValue | null>(null);
 
 export function RoleProvider({ children }: { children: ReactNode }) {
-  const [role, setRole] = useState<Role>("INSPECTOR");
+  const identity = useIdentity();
   const [language, setLanguage] = useState<Language>("en");
+  const role: Role = identity?.role ?? "INSPECTOR";
 
   const toggleLanguage = useCallback(() => {
     setLanguage((current) => (current === "en" ? "hi" : "en"));
   }, []);
 
   const value = useMemo<RoleContextValue>(
-    () => ({ role, setRole, language, setLanguage, toggleLanguage }),
+    () => ({ role, language, setLanguage, toggleLanguage }),
     [role, language, toggleLanguage],
   );
 

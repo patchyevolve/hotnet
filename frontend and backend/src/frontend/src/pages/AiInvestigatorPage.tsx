@@ -3,106 +3,171 @@ import { Button } from "@/components/ui/button";
 import { formatDateTime } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
 import { useRole } from "@/lib/crimenet/role-context";
-import { getAiInsights, getAiMessages } from "@/lib/crimenet/services";
-import type { AiInsight, AiMessage } from "@/lib/crimenet/types";
-import { useNavigate } from "@tanstack/react-router";
+import {
+  getAiInsights,
+  getAiMessages,
+  getEntities,
+  getEvidence,
+} from "@/lib/crimenet/services";
+import type {
+  AiInsight,
+  AiMessage,
+  EntityRecord,
+  EvidenceRecord,
+} from "@/lib/crimenet/types";
+import { cn } from "@/lib/utils";
+import { useSearch } from "@tanstack/react-router";
 import { BrainCircuit, Send, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-interface AiAction {
-  label: string;
-  route: string;
+interface RetrievalReply {
+  text: string;
+  citations: string[];
 }
 
-interface AiStructuredReply {
-  finding: string;
-  evidence: string[];
-  actions: AiAction[];
+function tokenize(query: string): string[] {
+  return query
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length > 2);
 }
 
-const suggestedPrompts = [
-  "Show connections between Case CR-2026-01482 and E-10482",
-  "Find common phone numbers across these cases",
-  "Trace transactions linked to E-10482",
-  "Which entities connect these cases?",
-];
+function hits(haystack: string, tokens: string[]): number {
+  const text = haystack.toLowerCase();
+  return tokens.reduce(
+    (sum, token) => (text.includes(token) ? sum + 1 : sum),
+    0,
+  );
+}
 
-const structuredReplies: Record<string, AiStructuredReply> = {
-  "Show connections between Case CR-2026-01482 and E-10482": {
-    finding:
-      "E-10482 is connected to 4 cases through 3 phone numbers and 2 financial accounts.",
-    evidence: ["CR-2026-01482", "Phone +91 XXXXXXX421", "Account XX4582"],
-    actions: [
-      { label: "View on Network", route: "/network" },
-      { label: "View Money Trail", route: "/money-trail" },
-      { label: "View Case", route: "/cases/CR-2026-01482" },
-    ],
+/**
+ * Retrieval-only assistant: assemble an answer from the records already
+ * loaded on this page (indexed hypotheses, resolved entities, evidence). No
+ * model call is made — the honest no-model reply is returned when nothing
+ * matches.
+ */
+function retrieve(
+  query: string,
+  insights: AiInsight[],
+  entities: EntityRecord[],
+  evidence: EvidenceRecord[],
+  templates: {
+    insights: string;
+    entities: string;
+    evidence: string;
+    noModel: string;
   },
-  "Find common phone numbers across these cases": {
-    finding:
-      "3 phone numbers recur across CR-2026-01482 and CR-2026-01390, indicating a shared coordination layer.",
-    evidence: [
-      "+91 XXXXXXX421 (Burner-01)",
-      "+91 XXXXXXX210 (F. Qureshi)",
-      "+91 XXXXXXX031 (S. Kulkarni)",
-    ],
-    actions: [
-      { label: "View on Network", route: "/network" },
-      { label: "View Case", route: "/cases/CR-2026-01482" },
-    ],
-  },
-  "Trace transactions linked to E-10482": {
-    finding:
-      "₹2.84 Cr traced from victim accounts through UPI, shell accounts and a crypto off-ramp wallet linked to E-10482.",
-    evidence: ["TX-5003", "TX-5005", "Account XX4582", "Wallet 0x7f••a91"],
-    actions: [
-      { label: "View Money Trail", route: "/money-trail" },
-      { label: "View on Network", route: "/network" },
-      { label: "View Case", route: "/cases/CR-2026-01482" },
-    ],
-  },
-  "Which entities connect these cases?": {
-    finding:
-      "E-10484 (Meridian Trade Links) and E-10482 are the shared entities bridging CR-2026-01482 and CR-2026-01390.",
-    evidence: ["E-10484", "E-10482", "CR-2026-01390", "CR-2026-01482"],
-    actions: [
-      { label: "View on Network", route: "/network" },
-      { label: "View Case", route: "/cases/CR-2026-01482" },
-    ],
-  },
-};
+): RetrievalReply {
+  const q = query.toLowerCase();
+  const tokens = tokenize(query);
+  const wantsHypotheses = /hypothes|strongest|confidence|explain/.test(q);
+  const wantsRisk = /high[- ]?\brisk|risk|critical/.test(q);
+  const wantsEvidence = /evidence|file|document|proof/.test(q);
 
-const fallbackReply: AiStructuredReply = {
-  finding:
-    "E-10482 is connected to 4 cases through 3 phone numbers and 2 financial accounts.",
-  evidence: ["CR-2026-01482", "Phone +91 XXXXXXX421", "Account XX4582"],
-  actions: [
-    { label: "View on Network", route: "/network" },
-    { label: "View Money Trail", route: "/money-trail" },
-    { label: "View Case", route: "/cases/CR-2026-01482" },
-  ],
-};
+  const lines: string[] = [];
+  const citations: string[] = [];
+
+  const rankedInsights = wantsHypotheses
+    ? [...insights].sort((a, b) => b.confidence - a.confidence).slice(0, 3)
+    : insights
+        .map((insight) => ({
+          insight,
+          score: hits(
+            `${insight.title} ${insight.detail} ${(insight.basis ?? []).join(" ")}`,
+            tokens,
+          ),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 3)
+        .map((entry) => entry.insight);
+
+  if (rankedInsights.length > 0) {
+    lines.push(templates.insights);
+    for (const insight of rankedInsights) {
+      lines.push(
+        `· ${insight.id} — ${insight.title} (${Math.round(insight.confidence * 100)}%)`,
+      );
+      citations.push(insight.id);
+    }
+  }
+
+  const rankedEntities = wantsRisk
+    ? entities
+        .filter(
+          (entity) => entity.risk === "critical" || entity.risk === "high",
+        )
+        .slice(0, 4)
+    : entities
+        .map((entity) => ({
+          entity,
+          score: hits(`${entity.id} ${entity.name} ${entity.kind}`, tokens),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 4)
+        .map((entry) => entry.entity);
+
+  if (rankedEntities.length > 0) {
+    lines.push(templates.entities);
+    for (const entity of rankedEntities) {
+      lines.push(`· ${entity.id} — ${entity.name} (${entity.kind})`);
+      citations.push(entity.id);
+    }
+  }
+
+  const rankedEvidence = wantsEvidence
+    ? evidence.slice(0, 4)
+    : evidence
+        .map((record) => ({
+          record,
+          score: hits(`${record.id} ${record.label} ${record.kind}`, tokens),
+        }))
+        .filter((entry) => entry.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 4)
+        .map((entry) => entry.record);
+
+  if (rankedEvidence.length > 0) {
+    lines.push(templates.evidence);
+    for (const record of rankedEvidence) {
+      lines.push(`· ${record.id} — ${record.label}`);
+      citations.push(record.id);
+    }
+  }
+
+  if (lines.length === 0) return { text: templates.noModel, citations: [] };
+  return { text: lines.join("\n"), citations };
+}
 
 export function AiInvestigatorPage() {
   const { language } = useRole();
   const strings = getStrings(language);
-  const navigate = useNavigate();
+  const search = useSearch({ from: "/ai-investigator" });
+  const focusInsightId = search.insight;
   const [messages, setMessages] = useState<AiMessage[]>([]);
   const [insights, setInsights] = useState<AiInsight[]>([]);
+  const [entities, setEntities] = useState<EntityRecord[]>([]);
+  const [evidence, setEvidence] = useState<EvidenceRecord[]>([]);
   const [draft, setDraft] = useState("");
   const [loading, setLoading] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let cancelled = false;
-    void Promise.all([getAiMessages(), getAiInsights()]).then(
-      ([messageResult, insightResult]) => {
-        if (cancelled) return;
-        setMessages(messageResult);
-        setInsights(insightResult);
-        setLoading(false);
-      },
-    );
+    void Promise.all([
+      getAiMessages(),
+      getAiInsights(),
+      getEntities(),
+      getEvidence(),
+    ]).then(([messageResult, insightResult, entityResult, evidenceResult]) => {
+      if (cancelled) return;
+      setMessages(messageResult);
+      setInsights(insightResult);
+      setEntities(entityResult);
+      setEvidence(evidenceResult);
+      setLoading(false);
+    });
     return () => {
       cancelled = true;
     };
@@ -118,6 +183,16 @@ export function AiInvestigatorPage() {
     });
   }, [messages]);
 
+  // Deep link from the intelligence feed: `?insight=HYP_…` scrolls the
+  // matching hypothesis into view and rings it.
+  useEffect(() => {
+    if (!focusInsightId || loading) return;
+    const node = document.querySelector(
+      `[data-selected-insight="${focusInsightId}"]`,
+    );
+    node?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }, [focusInsightId, loading]);
+
   const send = (text: string) => {
     const trimmed = text.trim();
     if (!trimmed) return;
@@ -131,17 +206,27 @@ export function AiInvestigatorPage() {
     setMessages((current) => [...current, analystMessage]);
     setDraft("");
 
-    const reply = structuredReplies[trimmed] ?? fallbackReply;
+    const reply = retrieve(trimmed, insights, entities, evidence, {
+      insights: strings.replyInsights,
+      entities: strings.replyEntities,
+      evidence: strings.replyEvidence,
+      noModel: strings.noModelAnswer,
+    });
     const aiMessage: AiMessage = {
       id: `MSG-${Date.now() + 1}`,
       author: "ai",
-      text: reply.finding,
+      text: reply.text,
       at: new Date().toISOString(),
-      citations: reply.evidence,
-      confidence: 0.86,
+      citations: reply.citations,
     };
     setMessages((current) => [...current, aiMessage]);
   };
+
+  const suggestedPrompts = [
+    strings.askPromptHypotheses,
+    strings.askPromptHighRisk,
+    strings.askPromptEvidence,
+  ];
 
   return (
     <div data-ocid="ai_investigator.page" className="flex flex-col">
@@ -173,95 +258,52 @@ export function AiInvestigatorPage() {
                 {strings.loading}…
               </p>
             ) : (
-              messages.map((message, index) => {
-                const reply =
-                  message.author === "ai"
-                    ? (structuredReplies[message.text] ?? {
-                        finding: message.text,
-                        evidence: message.citations ?? [],
-                        actions: fallbackReply.actions,
-                      })
-                    : null;
-                return (
-                  <div
-                    key={message.id}
-                    data-ocid={`ai_investigator.message.${index + 1}`}
-                    className={
-                      message.author === "analyst"
-                        ? "ml-auto max-w-[85%] rounded-lg border border-info/30 bg-info/10 p-3"
-                        : "mr-auto max-w-[90%] rounded-lg border border-border bg-muted/30 p-3"
-                    }
-                  >
-                    <div className="mb-1 flex items-center justify-between gap-3">
-                      <span className="label-caps text-muted-foreground">
-                        {message.author === "analyst"
-                          ? strings.analyst
-                          : strings.aiInvestigatorName}
-                      </span>
-                      <time className="font-mono-id text-[10px] text-muted-foreground">
-                        {formatDateTime(message.at)}
-                      </time>
-                    </div>
-
-                    {reply ? (
-                      <div className="flex flex-col gap-2.5">
-                        <div>
-                          <p className="label-caps text-info">
-                            {strings.finding}
-                          </p>
-                          <p className="mt-0.5 text-sm text-foreground">
-                            {reply.finding}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="label-caps text-muted-foreground">
-                            {strings.evidenceLabel}
-                          </p>
-                          <div className="mt-1 flex flex-wrap gap-1.5">
-                            {reply.evidence.map((item) => (
-                              <span
-                                key={item}
-                                className="rounded border border-border bg-card px-1.5 py-0.5 font-mono-id text-[10px] text-info"
-                              >
-                                {item}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        <div>
-                          <p className="label-caps text-muted-foreground">
-                            {strings.actions}
-                          </p>
-                          <div className="mt-1 flex flex-wrap gap-1.5">
-                            {reply.actions.map((action) => (
-                              <button
-                                key={action.label}
-                                type="button"
-                                data-ocid={`ai_investigator.action.${action.label}`}
-                                onClick={() =>
-                                  void navigate({ to: action.route })
-                                }
-                                className="rounded-md border border-info/40 bg-info/12 px-2.5 py-1 text-[11px] font-medium text-info transition-smooth hover:bg-info/20"
-                              >
-                                {action.label}
-                              </button>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    ) : (
-                      <p className="text-sm text-foreground">{message.text}</p>
-                    )}
-
-                    {typeof message.confidence === "number" ? (
-                      <p className="mt-2 font-mono-id text-[10px] text-muted-foreground">
-                        {Math.round(message.confidence * 100)}%{" "}
-                        {strings.confidence}
-                      </p>
-                    ) : null}
+              messages.map((message, index) => (
+                <div
+                  key={message.id}
+                  data-ocid={`ai_investigator.message.${index + 1}`}
+                  className={
+                    message.author === "analyst"
+                      ? "ml-auto max-w-[85%] rounded-lg border border-info/30 bg-info/10 p-3"
+                      : "mr-auto max-w-[90%] rounded-lg border border-border bg-muted/30 p-3"
+                  }
+                >
+                  <div className="mb-1 flex items-center justify-between gap-3">
+                    <span className="label-caps text-muted-foreground">
+                      {message.author === "analyst"
+                        ? strings.analyst
+                        : strings.aiInvestigatorName}
+                    </span>
+                    <time className="font-mono-id text-[10px] text-muted-foreground">
+                      {formatDateTime(message.at)}
+                    </time>
                   </div>
-                );
-              })
+
+                  <p className="text-sm whitespace-pre-line text-foreground">
+                    {message.text}
+                  </p>
+
+                  {message.citations && message.citations.length > 0 ? (
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {message.citations.map((citation) => (
+                        <span
+                          key={citation}
+                          className="rounded border border-border bg-card px-1.5 py-0.5 font-mono-id text-[10px] text-info"
+                        >
+                          {citation}
+                        </span>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  {typeof message.confidence === "number" ? (
+                    <p className="mt-2 font-mono-id text-[10px] text-muted-foreground">
+                      {Math.round(message.confidence * 100)}%{" "}
+                      {strings.confidence}
+                    </p>
+                  ) : null}
+                </div>
+              ))
             )}
           </div>
 
@@ -322,36 +364,109 @@ export function AiInvestigatorPage() {
             </h2>
           </div>
           <div className="scrollbar-thin min-h-0 flex-1 space-y-3 overflow-y-auto p-4">
-            {insights.map((insight, index) => (
-              <article
-                key={insight.id}
-                data-ocid={`ai_investigator.insight.${index + 1}`}
-                className="rounded-lg border border-border bg-card/60 p-3"
-              >
-                <div className="flex items-start justify-between gap-2">
-                  <h3 className="text-sm font-medium text-foreground">
-                    {insight.title}
-                  </h3>
-                  <RiskBadge risk={insight.risk} showDot={false} />
-                </div>
-                <p className="mt-1.5 text-xs text-muted-foreground">
-                  {insight.detail}
-                </p>
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                  <span className="font-mono-id text-[10px] text-muted-foreground">
-                    {Math.round(insight.confidence * 100)}% {strings.confidence}
-                  </span>
-                  {insight.citations.map((citation) => (
-                    <span
-                      key={citation}
-                      className="rounded border border-border bg-muted/40 px-1.5 py-0.5 font-mono-id text-[10px] text-info"
-                    >
-                      {citation}
+            {insights.map((insight, index) => {
+              const selected =
+                Boolean(focusInsightId) && focusInsightId === insight.id;
+              const hasProvenance = Boolean(
+                insight.basis?.length ||
+                  insight.generation ||
+                  insight.runId ||
+                  insight.alternatives?.length,
+              );
+              return (
+                <article
+                  key={insight.id}
+                  data-ocid={`ai_investigator.insight.${index + 1}`}
+                  data-selected-insight={selected ? insight.id : undefined}
+                  className={cn(
+                    "rounded-lg border p-3",
+                    selected
+                      ? "border-info/60 bg-info/8 ring-2 ring-info/30"
+                      : "border-border bg-card/60",
+                  )}
+                >
+                  <div className="flex items-start justify-between gap-2">
+                    <h3 className="text-sm font-medium text-foreground">
+                      {insight.title}
+                    </h3>
+                    <RiskBadge risk={insight.risk} showDot={false} />
+                  </div>
+                  <p className="mt-1.5 text-xs text-muted-foreground">
+                    {insight.detail}
+                  </p>
+                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                    <span className="font-mono-id text-[10px] text-muted-foreground">
+                      {Math.round(insight.confidence * 100)}%{" "}
+                      {strings.confidence}
                     </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+                    {insight.citations.map((citation) => (
+                      <span
+                        key={citation}
+                        className="rounded border border-border bg-muted/40 px-1.5 py-0.5 font-mono-id text-[10px] text-info"
+                      >
+                        {citation}
+                      </span>
+                    ))}
+                  </div>
+
+                  {hasProvenance ? (
+                    <div className="mt-2 border-t border-border/60 pt-2">
+                      <p className="label-caps text-muted-foreground">
+                        {strings.howDerived}
+                      </p>
+                      {insight.generation ? (
+                        <p className="mt-1 text-[11px] text-muted-foreground">
+                          {`${strings.generationLabel}: ${insight.generation}`}
+                        </p>
+                      ) : null}
+                      {insight.runId ? (
+                        <p className="font-mono-id text-[10px] text-muted-foreground">
+                          {`${strings.runLabel}: ${insight.runId}`}
+                        </p>
+                      ) : null}
+                      {insight.basis && insight.basis.length > 0 ? (
+                        <ul className="mt-1 flex flex-col gap-0.5">
+                          {insight.basis.map((item) => (
+                            <li
+                              key={item}
+                              className="text-[11px] text-muted-foreground"
+                            >
+                              {`· ${item}`}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                      <div className="mt-1.5 flex flex-wrap gap-1.5">
+                        {typeof insight.supportingCount === "number" ? (
+                          <span className="rounded border border-border bg-muted/40 px-1.5 py-0.5 font-mono-id text-[10px] text-muted-foreground">
+                            {`${insight.supportingCount} ${strings.supportingLabel}`}
+                          </span>
+                        ) : null}
+                        {typeof insight.contradictingCount === "number" ? (
+                          <span className="rounded border border-border bg-muted/40 px-1.5 py-0.5 font-mono-id text-[10px] text-muted-foreground">
+                            {`${insight.contradictingCount} ${strings.contradictingLabel}`}
+                          </span>
+                        ) : null}
+                        {insight.alternatives &&
+                        insight.alternatives.length > 0 ? (
+                          <span
+                            title={insight.alternatives.join(" · ")}
+                            className="rounded border border-border bg-muted/40 px-1.5 py-0.5 font-mono-id text-[10px] text-muted-foreground"
+                          >
+                            {`${insight.alternatives.length} ${strings.alternativesLabel}`}
+                          </span>
+                        ) : null}
+                      </div>
+                      {insight.nullHypothesis ? (
+                        <p className="mt-1.5 text-[11px] italic text-muted-foreground">
+                          {`${strings.nullHypothesisLabel}: ${insight.nullHypothesis}`}
+                        </p>
+                      ) : null}
+                    </div>
+                  ) : null}
+                </article>
+              );
+            })}
           </div>
         </div>
       </div>

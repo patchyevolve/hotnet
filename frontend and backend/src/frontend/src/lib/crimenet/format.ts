@@ -34,6 +34,15 @@ export function formatDate(iso: string): string {
   return dateFormatter.format(date);
 }
 
+/** ``case_opened`` → ``Case opened`` — for activity/audit action keys. */
+export function humanizeAction(action: string): string {
+  if (!action) return "";
+  return action
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 export function formatRelative(iso: string): string {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "—";
@@ -129,4 +138,37 @@ export function initials(name: string): string {
 export function truncateMiddle(value: string, head = 6, tail = 4): string {
   if (value.length <= head + tail + 1) return value;
   return `${value.slice(0, head)}…${value.slice(-tail)}`;
+}
+
+export const caseStatusTones: Record<
+  CaseStatus,
+  "info" | "warning" | "success" | "neutral" | "danger"
+> = {
+  open: "info",
+  active: "danger",
+  under_review: "warning",
+  charge_sheet: "neutral",
+  closed: "success",
+};
+
+/** Trigger a client-side CSV download of the given rows. */
+export function downloadCsv(
+  filename: string,
+  headers: string[],
+  rows: (string | number)[][],
+): void {
+  const escapeCsv = (value: string | number): string => {
+    const text = String(value ?? "");
+    return /[",\n\r]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+  };
+  const csv = [headers, ...rows]
+    .map((row) => row.map(escapeCsv).join(","))
+    .join("\r\n");
+  const blob = new Blob(["﻿", csv], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const anchor = document.createElement("a");
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.click();
+  URL.revokeObjectURL(url);
 }

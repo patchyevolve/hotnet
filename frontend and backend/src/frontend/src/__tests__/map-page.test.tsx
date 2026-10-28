@@ -142,3 +142,108 @@ describe("command map India basemap", () => {
     ).toBeInTheDocument();
   });
 });
+
+/**
+ * The map must be case-attributed: a judge looking at a risk-zone list has
+ * to see which case's run produced it, the scope must be switchable, and
+ * "All" must mean every calculated zone — not a top-six teaser. The district
+ * filter also must not silently drop every zone (zone markers carry no
+ * district column; they match through their recorded location names).
+ */
+describe("case-scoped command map", () => {
+  it("names the case behind the map in a scope strip and a case filter", async () => {
+    renderApp("/map");
+    const chip = await screen.findByTestId("map.case_chip.CASE_000001");
+    expect(chip).toHaveTextContent("CASE_000001");
+    expect(chip).toHaveTextContent("DF/2026/4561");
+    expect(chip).toHaveTextContent("UPI fraud ring");
+    const strip = screen.getByTestId("map.case_scope");
+    expect(strip).toHaveTextContent("Case scope");
+
+    const select = screen.getByTestId("filter_bar.select.case");
+    expect(
+      within(select).getByRole("option", {
+        name: /CASE_000001 · DF\/2026\/4561/,
+      }),
+    ).toBeInTheDocument();
+    expect(
+      within(select).getByRole("option", { name: "All Cases" }),
+    ).toBeInTheDocument();
+  });
+
+  it("lists every risk zone under an All scope, not a top-six slice", async () => {
+    renderApp("/map");
+    await screen.findByTestId("map_canvas");
+    const panel = await screen.findByTestId("map.risk_zones_panel");
+
+    const scope = within(panel);
+    expect(scope.getByText("All Cases")).toBeInTheDocument();
+    // Fixture holds 18 zone markers; the old panel rendered 6 of them.
+    expect(scope.getAllByRole("listitem")).toHaveLength(18);
+    expect(scope.getByText("18")).toBeInTheDocument();
+    // Rows carry the pipeline's band and score.
+    expect(scope.getAllByText("RED").length).toBeGreaterThan(0);
+    expect(scope.getAllByText(/\d\.\d\d/).length).toBeGreaterThan(0);
+  });
+
+  it("switching the case scope re-scopes the zones panel", async () => {
+    const user = userEvent.setup();
+    renderApp("/map");
+    const panel = await screen.findByTestId("map.risk_zones_panel");
+    await screen.findByTestId("map.case_chip.CASE_000001");
+
+    await user.selectOptions(
+      screen.getByTestId("filter_bar.select.case"),
+      "CASE_000001",
+    );
+
+    await waitFor(() => {
+      expect(within(panel).getByText("CASE_000001")).toBeInTheDocument();
+    });
+    expect(within(panel).queryByText("All Cases")).not.toBeInTheDocument();
+    // The scoped fetch still resolves to the fixture-backed projection.
+    expect(screen.getByTestId("map_canvas")).toBeInTheDocument();
+    expect(screen.getByTestId("map.case_chip.CASE_000001")).toBeInTheDocument();
+  });
+
+  it("district filter narrows zones to the ones whose data names Delhi", async () => {
+    const user = userEvent.setup();
+    renderApp("/map");
+    await screen.findByTestId("map_canvas");
+    const panel = await screen.findByTestId("map.risk_zones_panel");
+    expect(within(panel).getAllByRole("listitem")).toHaveLength(18);
+
+    await user.selectOptions(
+      screen.getByTestId("filter_bar.select.district"),
+      "Delhi",
+    );
+
+    // Six fixture zones record a Delhi location name; the old code hid all
+    // 18 zones the moment a district was picked.
+    await waitFor(() => {
+      expect(within(panel).getAllByRole("listitem")).toHaveLength(6);
+    });
+    // 6 zones + 6 Delhi positions remain on the map.
+    expect(screen.getByText("12 Markers")).toBeInTheDocument();
+    expect(screen.getByTestId("map_canvas")).toBeInTheDocument();
+  });
+
+  it("risk filter narrows zones and markers together", async () => {
+    const user = userEvent.setup();
+    renderApp("/map");
+    await screen.findByTestId("map_canvas");
+    const panel = await screen.findByTestId("map.risk_zones_panel");
+
+    await user.selectOptions(
+      screen.getByTestId("filter_bar.select.risk"),
+      "high",
+    );
+
+    // Fixture: five high zones; spatial positions are medium, so five markers.
+    await waitFor(() => {
+      expect(within(panel).getAllByRole("listitem")).toHaveLength(5);
+    });
+    expect(screen.getByText("5 Markers")).toBeInTheDocument();
+    expect(within(panel).getByText("5")).toBeInTheDocument();
+  });
+});

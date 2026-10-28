@@ -1,4 +1,5 @@
 import { apiMock } from "@/test/api-mock";
+import { SUPERVISOR_DELHI, seedToken } from "@/test/identity";
 import { renderApp } from "@/test/render-app";
 import { configure, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -8,13 +9,16 @@ configure({ testIdAttribute: "data-ocid" });
 
 /**
  * The intake flow is the demo's entry point: register an FIR, attach evidence,
- * run the pipeline, then open the case the run produced. The run is
- * asynchronous, so this test polls the job card until it reaches a terminal
+ * run the pipeline, then open the case the run produced. Registration is a
+ * supervisor/administrator action, so these tests sign in as a supervisor —
+ * the same reason `POST /api/cases` refuses an inspector. The run is
+ * asynchronous, so the test polls the job card until it reaches a terminal
  * state rather than asserting against the first (still-running) frame.
  */
 describe("case intake", () => {
   it("registers an FIR, uploads evidence and runs the pipeline", async () => {
     const user = userEvent.setup();
+    seedToken(SUPERVISOR_DELHI);
     renderApp("/intake");
     await screen.findByTestId("intake.page");
 
@@ -79,6 +83,7 @@ describe("case intake", () => {
 
   it("reports a failed registration instead of failing silently", async () => {
     const user = userEvent.setup();
+    seedToken(SUPERVISOR_DELHI);
     renderApp("/intake");
     await screen.findByTestId("intake.page");
 

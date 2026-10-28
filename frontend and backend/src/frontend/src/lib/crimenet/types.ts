@@ -252,6 +252,37 @@ export interface MoneyTransaction {
   flagged: boolean;
   risk: RiskLevel;
   note?: string;
+  /** Row narration from the source file ("Transfer to Suresh"). */
+  description?: string;
+  /** Source file this transfer was extracted from, with its hash verdict. */
+  sourceFile?: string;
+  sourceHash?: string;
+  /** "verified" | "tampered" — the run's integrity screen on that file. */
+  sourceIntegrity?: string;
+  extractionConfidence?: number;
+  extractionBasis?: string[];
+}
+
+/** One ingested bank file and its contribution to the traced total. */
+export interface MoneySourceFile {
+  file: string;
+  /** Data rows the pipeline read from the file. */
+  records?: number;
+  hash?: string;
+  qualityScore?: number;
+  adversarialSuspicious?: boolean;
+  integrity?: string;
+  transferCount?: number;
+  volume?: number;
+}
+
+/** Run-level ingestion counts behind the coverage panel. */
+export interface MoneyIngestion {
+  files?: number;
+  records?: number;
+  bankFiles?: number;
+  bankRecords?: number;
+  runId?: string;
 }
 
 export interface MoneyFlowStage {
@@ -281,6 +312,9 @@ export interface MoneyFlow {
   }[];
   transactions: MoneyTransaction[];
   byChannel: { channel: string; amount: number }[];
+  /** Bank files the run read, with rows, hashes and per-file volume. */
+  sourceFiles: MoneySourceFile[];
+  ingestion?: MoneyIngestion;
 }
 
 export interface MapMarker {
@@ -300,6 +334,10 @@ export interface MapMarker {
   latitude?: number;
   longitude?: number;
   precision?: string;
+  /** Zone markers only — full recorded names (label caps at 60 chars). */
+  locationNames?: string[];
+  /** Case the marker's run belongs to (stamped when the scope is merged). */
+  caseId?: string;
 }
 
 export interface MapLink {
@@ -312,6 +350,8 @@ export interface MapLink {
 export interface MapData {
   markers: MapMarker[];
   links: MapLink[];
+  /** Case this projection was served for (per-request when scoped). */
+  caseId?: string;
 }
 
 /** Pixel box of a face inside its source image (pipeline `face_bbox`). */
@@ -459,6 +499,15 @@ export interface AiInsight {
   confidence: number;
   risk: RiskLevel;
   citations: string[];
+  /** Hypothesis provenance — how the inference was developed (Stage 7). */
+  type?: string;
+  basis?: string[];
+  generation?: string;
+  alternatives?: string[];
+  nullHypothesis?: string;
+  supportingCount?: number;
+  contradictingCount?: number;
+  runId?: string;
 }
 
 export interface SearchResultGroup {
@@ -492,6 +541,60 @@ export interface IntelligenceFeedEvent {
   severity: RiskLevel;
   route: string;
   actionLabel: string;
+  /** Hypothesis rows: the insight to open on the AI Investigator. */
+  insightId?: string;
+}
+
+/**
+ * One row of a case's activity history — either an investigator action from
+ * the hash-chained ledger (``source: "activity"``, carries actor + hashes) or
+ * a pipeline stage event from the run's append-only audit trail.
+ */
+export interface CaseActivityEvent {
+  id: string;
+  source: "activity" | "pipeline";
+  caseId: string;
+  at: string;
+  action: string;
+  target: string;
+  detail: string;
+  severity?: RiskLevel;
+  /** Pipeline rows only — the stage log has no human actor. */
+  actor?: string;
+  actorId?: string;
+  actorName?: string;
+  actorRole?: string;
+  seq?: number;
+  prevHash?: string;
+  hash?: string;
+}
+
+/** ``GET /api/activity`` payload — merged, newest first. */
+export interface CaseActivityBundle {
+  caseId: string;
+  entries: CaseActivityEvent[];
+  /** Recomputed on every read; false means the chain no longer verifies. */
+  chainValid: boolean;
+  chainLength: number;
+  pipelineEvents: number;
+  caseIds?: string[];
+  checkedAt: string;
+}
+
+/** One measured subsystem probe from ``GET /api/health``. */
+export interface HealthService {
+  id: string;
+  label: string;
+  status: "operational" | "degraded";
+  /** Proof: what the probe found plus how long it took. */
+  detail: string;
+}
+
+/** ``GET /api/health`` — the System Status panel's source. */
+export interface SystemStatus {
+  status: "ok" | "degraded";
+  services: HealthService[];
+  checkedAt: string;
 }
 
 // =============================================================================

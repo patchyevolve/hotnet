@@ -1,9 +1,12 @@
 import { getStrings } from "@/lib/crimenet/i18n";
-import { navItems } from "@/lib/crimenet/navigation";
+import { navItemsForRole } from "@/lib/crimenet/rbac";
 import { useRole } from "@/lib/crimenet/role-context";
+import { getSystemStatus } from "@/lib/crimenet/services";
+import type { SystemStatus } from "@/lib/crimenet/types";
 import { cn } from "@/lib/utils";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { ChevronLeft, ChevronRight, ShieldHalf } from "lucide-react";
+import { useEffect, useState } from "react";
 import { StatusPill } from "./StatusPill";
 
 interface SidebarProps {
@@ -13,11 +16,24 @@ interface SidebarProps {
 }
 
 export function Sidebar({ collapsed, onToggle, onNavigate }: SidebarProps) {
-  const { language } = useRole();
+  const { language, role } = useRole();
   const strings = getStrings(language);
+  const items = navItemsForRole(role);
   const pathname = useRouterState({
     select: (state) => state.location.pathname,
   });
+  const [health, setHealth] = useState<SystemStatus | null>(null);
+
+  useEffect(() => {
+    void getSystemStatus().then(setHealth);
+  }, []);
+
+  const healthy = health?.status === "ok";
+  const statusLabel = health
+    ? healthy
+      ? strings.operational
+      : strings.degraded
+    : strings.systemStatus;
 
   const isActive = (path: string) =>
     path === "/" ? pathname === "/" : pathname.startsWith(path);
@@ -48,7 +64,7 @@ export function Sidebar({ collapsed, onToggle, onNavigate }: SidebarProps) {
       </div>
 
       <ul className="scrollbar-thin flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto p-2">
-        {navItems.map((item) => {
+        {items.map((item) => {
           const active = isActive(item.path);
           return (
             <li key={item.id}>
@@ -93,21 +109,25 @@ export function Sidebar({ collapsed, onToggle, onNavigate }: SidebarProps) {
             <p className="label-caps text-muted-foreground">
               {strings.systemStatus}
             </p>
-            <div className="mt-1.5">
+            <div className="mt-1.5" data-ocid="sidebar.system_status">
               <StatusPill
-                label={strings.systemStatusDetail}
-                tone="success"
-                pulse
+                label={statusLabel}
+                tone={health ? (healthy ? "success" : "warning") : "neutral"}
+                pulse={healthy}
               />
             </div>
           </div>
         ) : (
-          <div
-            className="mb-2 flex justify-center"
-            title={strings.systemStatusDetail}
-          >
+          <div className="mb-2 flex justify-center" title={statusLabel}>
             <span
-              className="size-2 animate-pulse-dot rounded-full bg-risk-low"
+              className={cn(
+                "size-2 rounded-full",
+                health
+                  ? healthy
+                    ? "animate-pulse-dot bg-risk-low"
+                    : "bg-risk-medium"
+                  : "bg-muted-foreground",
+              )}
               aria-hidden
             />
           </div>

@@ -1,6 +1,21 @@
-import type { FirView, StoredFile } from "@/lib/crimenet/services";
+import { decodeToken } from "@/lib/crimenet/identity";
+import {
+  AUDIT_ROLES,
+  CASE_AUTHOR_ROLES,
+  FACE_DECISION_ROLES,
+  STATION_BASELINE,
+} from "@/lib/crimenet/rbac";
+import type { AccessLevel, FirView, StoredFile } from "@/lib/crimenet/services";
 import type { CaseRecord, SessionIdentity } from "@/lib/crimenet/types";
 import rawFixtures from "./fixtures/api-fixtures.json?raw";
+import {
+  ADMIN_DELHI,
+  AUDIT_LOGGER_DELHI,
+  INSPECTOR_DELHI,
+  SUPERVISOR_DELHI,
+  SUPERVISOR_MUMBAI,
+  makeToken,
+} from "./identity";
 
 /**
  * Fetch-level stand-in for the FastAPI server.
@@ -9,7 +24,45 @@ import rawFixtures from "./fixtures/api-fixtures.json?raw";
  * a real pipeline run — no value in this file (or in any test) is hand-written
  * mock data. Write endpoints keep their own state so the upload → run → poll
  * flow can be exercised end to end.
+ *
+ * The auth endpoints behave like `api/app.py`: credentials are checked, the
+ * issued token is the real signed shape, and every role-gated route re-checks
+ * the bearer's claims so a 403 can be asserted from the UI.
  */
+
+/** Shared demo credential — documented in README/SETUP and seeded by the
+ *  backend when `CRIMENET_SEED_DEMO_USERS=1`. */
+export const DEMO_PASSWORD = "Cr1menet!Demo";
+
+interface DemoAccount {
+  password: string;
+  claims: {
+    userId: string;
+    displayName: string;
+    role: SessionIdentity["role"];
+    jurisdictionId: string;
+  };
+}
+
+const DEMO_ACCOUNTS: Record<string, DemoAccount> = {
+  "admin@crimenet.local": { password: DEMO_PASSWORD, claims: ADMIN_DELHI },
+  "supervisor@crimenet.local": {
+    password: DEMO_PASSWORD,
+    claims: SUPERVISOR_DELHI,
+  },
+  "supervisor.mumbai@crimenet.local": {
+    password: DEMO_PASSWORD,
+    claims: SUPERVISOR_MUMBAI,
+  },
+  "inspector@crimenet.local": {
+    password: DEMO_PASSWORD,
+    claims: INSPECTOR_DELHI,
+  },
+  "auditor@crimenet.local": {
+    password: DEMO_PASSWORD,
+    claims: AUDIT_LOGGER_DELHI,
+  },
+};
 
 export interface JobView {
   jobId: string;
@@ -56,6 +109,14 @@ function json(body: unknown, status = 200): Response {
 
 function notFound(path: string): Response {
   return json({ detail: `No fixture for ${path}` }, 404);
+}
+
+/** Decode the bearer a request carries, exactly as the server's guards do. */
+function identityFromHeaders(headers?: HeadersInit): SessionIdentity | null {
+  if (!headers) return null;
+  const auth = new Headers(headers).get("Authorization");
+  if (!auth || !auth.startsWith("Bearer ")) return null;
+  return decodeToken(auth.slice("Bearer ".length));
 }
 
 /** Filter params that cannot change the answer for a one-case state: the
@@ -157,20 +218,62 @@ async function handleWrite(path: string, init: RequestInit): Promise<Response> {
   const state = apiMock.state;
   const method = (init.method ?? "GET").toUpperCase();
 
-  if (method === "POST" && path === "/api/session") {
-    const body = JSON.parse(String(init.body)) as Partial<SessionIdentity>;
-    const base = (fixtures._session ?? {}) as SessionIdentity;
+  if (method === "POST" && path === "/api/auth/login") {
+    const body = JSON.parse(String(init.body ?? "{}")) as {
+      emailOrBadge?: string;
+      password?: string;
+    };
+    const key = (body.emailOrBadge ?? "").trim().toLowerCase();
+    const account = DEMO_ACCOUNTS[key];
+    if (!account || account.password !== body.password) {
+      return json({ detail: "Invalid badge/email or password." }, 401);
+    }
+    const { claims } = account;
     return json({
-      identity: { ...base, ...body } satisfies SessionIdentity,
-      token: "test-token",
+      token: makeToken(claims),
+      user: {
+        id: claims.userId,
+        email: key,
+        name: claims.displayName,
+        role: claims.role,
+        status: "ACTIVE",
+        jurisdictionNodeId: claims.jurisdictionId,
+      },
+    });
+  }
+
+  if (method === "POST" && path === "/api/session") {
+    const body = JSON.parse(
+      String(init.body ?? "{}"),
+    ) as Partial<SessionIdentity>;
+    const base = (fixtures._session ?? {}) as SessionIdentity;
+    const identity = { ...base, ...body } satisfies SessionIdentity;
+    return json({
+      identity,
+      token: makeToken({
+        userId: identity.userId,
+        displayName: identity.displayName,
+        role: identity.role,
+        jurisdictionId: identity.jurisdictionId,
+      }),
     });
   }
 
   if (method === "POST" && path === "/api/cases") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    if (!CASE_AUTHOR_ROLES.includes(identity.role)) {
+      // `POST /api/cases` is limited to supervisors and administrators.
+      return json(
+        { detail: "Case registration requires SUPERVISOR or ADMIN." },
+        403,
+      );
+    }
     const body = JSON.parse(String(init.body)) as {
       firNumber: string;
       title: string;
       description?: string;
+      jurisdictionId?: string;
     };
     const base = (fixtures[`/api/cases/${fixtureCaseId}`] ?? {}) as CaseRecord;
     const id = `CASE_${String(state.cases.size + 2).padStart(6, "0")}`;
@@ -181,6 +284,8 @@ async function handleWrite(path: string, init: RequestInit): Promise<Response> {
       firNumber: body.firNumber,
       title: body.title,
       summary: body.description ?? "",
+      station: body.jurisdictionId ?? identity.jurisdictionId,
+      leadOfficerId: identity.userId,
       openedAt: now,
       updatedAt: now,
       entityIds: [],
@@ -203,6 +308,14 @@ async function handleWrite(path: string, init: RequestInit): Promise<Response> {
   }
 
   if (method === "POST" && path === "/api/faces/decision") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    if (!FACE_DECISION_ROLES.includes(identity.role)) {
+      return json(
+        { detail: "Face decisions require ADMIN, SUPERVISOR or INSPECTOR." },
+        403,
+      );
+    }
     const body = JSON.parse(String(init.body)) as {
       faceId: string;
       decision: "confirm" | "reject";
@@ -306,9 +419,46 @@ async function handleWrite(path: string, init: RequestInit): Promise<Response> {
   return notFound(path);
 }
 
-function handleRead(path: string): Response {
+function handleRead(path: string, init: RequestInit = {}): Response {
   const state = apiMock.state;
-  const methodless = path.split("?")[0];
+  const [methodless, query = ""] = path.split("?");
+
+  if (methodless === "/api/auth/effective-level") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    const caseId = new URLSearchParams(query).get("caseId");
+    if (!caseId) {
+      // No case in scope: the role's station baseline (ADMIN is global).
+      const level: AccessLevel =
+        identity.role === "ADMIN" ? "ADMIN" : STATION_BASELINE[identity.role];
+      return json({ level });
+    }
+    const record =
+      state.cases.get(caseId) ??
+      (fixtures[`/api/cases/${caseId}`] as CaseRecord | undefined);
+    if (!record) return json({ detail: `Unknown case ${caseId}` }, 404);
+    if (identity.role === "ADMIN") return json({ level: "ADMIN" });
+    // The creator of a case may always work on it.
+    if (record.leadOfficerId && record.leadOfficerId === identity.userId) {
+      return json({ level: "ADMIN" });
+    }
+    const level: AccessLevel =
+      record.station && record.station === identity.jurisdictionId
+        ? STATION_BASELINE[identity.role]
+        : "NONE";
+    return json({ level });
+  }
+
+  if (methodless === "/api/audit") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    if (!AUDIT_ROLES.includes(identity.role)) {
+      return json(
+        { detail: "Audit access requires ADMIN, SUPERVISOR or AUDIT_LOGGER." },
+        403,
+      );
+    }
+  }
 
   if (methodless === "/api/me") return json(fixtures._session);
   if (methodless === "/api/cases") {
@@ -363,6 +513,90 @@ function handleRead(path: string): Response {
     return json(entry.view);
   }
 
+  if (methodless === "/api/health") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    const caseRows = (fixtures["/api/cases"] as CaseRecord[] | undefined) ?? [];
+    const evidenceRows = (fixtures["/api/evidence"] as unknown[]) ?? [];
+    const faceRows = (fixtures["/api/faces"] as unknown[]) ?? [];
+    const auditRows = (fixtures["/api/audit"] as unknown[]) ?? [];
+    const network = fixtures["/api/network"] as
+      | { nodes?: unknown[] }
+      | undefined;
+    return json({
+      status: "ok",
+      services: [
+        {
+          id: "api",
+          label: "API Service",
+          status: "operational",
+          detail: "fixture server responding · test scope",
+        },
+        {
+          id: "registry",
+          label: "Case Registry",
+          status: "operational",
+          detail: `${caseRows.length} case(s) registered · active ${fixtureCaseId}`,
+        },
+        {
+          id: "pipeline",
+          label: "Pipeline Output",
+          status: "operational",
+          detail: `run output present · ${network?.nodes?.length ?? 0} graph nodes · ${fixtureCaseId}`,
+        },
+        {
+          id: "chain",
+          label: "Activity Chain",
+          status: "operational",
+          detail: `0 chained user entries verified · ${auditRows.length} pipeline events append-only`,
+        },
+        {
+          id: "vault",
+          label: "Evidence Vault",
+          status: "operational",
+          detail: `${evidenceRows.length} evidence files registered`,
+        },
+        {
+          id: "faces",
+          label: "Face Engine",
+          status: "operational",
+          detail: `${faceRows.length} face records indexed`,
+        },
+      ],
+      checkedAt: new Date().toISOString(),
+    });
+  }
+
+  if (methodless === "/api/activity") {
+    const identity = identityFromHeaders(init.headers);
+    if (!identity) return json({ detail: "Not authenticated" }, 401);
+    const caseId = new URLSearchParams(query).get("caseId") ?? "";
+    const auditRows =
+      (fixtures["/api/audit"] as Record<string, string>[]) ?? [];
+    const entries = auditRows
+      .slice()
+      .reverse()
+      .map((row) => ({
+        source: "pipeline",
+        caseId: fixtureCaseId,
+        hash: "",
+        prevHash: "",
+        actorId: "",
+        actorName: "",
+        actorRole: "",
+        ...row,
+      }));
+    return json({
+      caseId,
+      entries,
+      chainValid: true,
+      chainLength: 0,
+      pipelineEvents: entries.length,
+      caseIds: [fixtureCaseId],
+      checkedAt: new Date().toISOString(),
+    });
+  }
+
   return readFixture(path);
 }
 
@@ -388,7 +622,7 @@ export function installApiMock(): void {
       : raw;
     const method = (init?.method ?? "GET").toUpperCase();
     if (method !== "GET") return handleWrite(path, init ?? {});
-    return handleRead(path);
+    return handleRead(path, init ?? {});
   }) as typeof fetch;
   // Kept so a test can restore the environment if it needs a real rejection.
   (globalThis.fetch as unknown as { __restore?: () => void }).__restore =

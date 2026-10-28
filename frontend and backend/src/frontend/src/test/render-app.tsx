@@ -1,6 +1,8 @@
 import { AppShell } from "@/components/crimenet/AppShell";
+import { getIdentity } from "@/lib/crimenet/identity";
+import { canViewAudit } from "@/lib/crimenet/rbac";
 import { RoleProvider } from "@/lib/crimenet/role-context";
-import { getToken } from "@/lib/crimenet/services";
+import { getToken, setToken } from "@/lib/crimenet/services";
 import { AiInvestigatorPage } from "@/pages/AiInvestigatorPage";
 import { AnalyticsPage } from "@/pages/AnalyticsPage";
 import { CaseWorkbenchPage } from "@/pages/CaseWorkbenchPage";
@@ -11,6 +13,7 @@ import { EntityListPage } from "@/pages/EntityListPage";
 import { EntityPage } from "@/pages/EntityPage";
 import { EvidencePage } from "@/pages/EvidencePage";
 import { FacePage } from "@/pages/FacePage";
+import { ForbiddenPage } from "@/pages/ForbiddenPage";
 import { MapPage } from "@/pages/MapPage";
 import { MoneyTrailPage } from "@/pages/MoneyTrailPage";
 import { NetworkPage } from "@/pages/NetworkPage";
@@ -30,6 +33,7 @@ import {
 } from "@tanstack/react-router";
 import { render } from "@testing-library/react";
 import type { ReactElement } from "react";
+import { seedToken } from "./identity";
 
 /**
  * Test-only router harness.
@@ -41,9 +45,8 @@ import type { ReactElement } from "react";
  * test starts at a deterministic route without touching production code.
  */
 /**
- * Mirrors `RootLayout` in `src/App.tsx`, including the detail that the sign-in
- * branch still needs the role provider: `SignInPage` reads `language` and
- * writes `role`, so it must not render outside the context.
+ * Mirrors `RootLayout` in `src/App.tsx`: the bare sign-in branch still needs
+ * the role provider, and authenticated routes require a token that decodes.
  */
 function RootLayout() {
   const pathname = useRouterState({
@@ -66,7 +69,13 @@ function RootLayout() {
 function buildRouter(initialPath: string) {
   const rootRoute = createRootRoute({
     beforeLoad: ({ location }) => {
-      if (location.pathname !== "/signin" && !getToken()) {
+      if (location.pathname === "/signin") return;
+      const token = getToken();
+      if (!token) {
+        throw redirect({ to: "/signin" });
+      }
+      if (!getIdentity()) {
+        setToken(null);
         throw redirect({ to: "/signin" });
       }
     },
@@ -123,6 +132,14 @@ function buildRouter(initialPath: string) {
     createRoute({
       getParentRoute: () => rootRoute,
       path: "/ai-investigator",
+      validateSearch: (
+        search: Record<string, unknown>,
+      ): {
+        insight?: string;
+      } => ({
+        insight:
+          typeof search.insight === "string" ? search.insight : undefined,
+      }),
       component: AiInvestigatorPage,
     }),
     createRoute({
@@ -133,6 +150,12 @@ function buildRouter(initialPath: string) {
     createRoute({
       getParentRoute: () => rootRoute,
       path: "/security",
+      beforeLoad: () => {
+        const identity = getIdentity();
+        if (!identity || !canViewAudit(identity.role)) {
+          throw redirect({ to: "/403" });
+        }
+      },
       component: SecurityPage,
     }),
     createRoute({
@@ -155,6 +178,11 @@ function buildRouter(initialPath: string) {
       path: "/analytics",
       component: AnalyticsPage,
     }),
+    createRoute({
+      getParentRoute: () => rootRoute,
+      path: "/403",
+      component: ForbiddenPage,
+    }),
   ];
 
   const router = createRouter({
@@ -168,7 +196,9 @@ function buildRouter(initialPath: string) {
 /** Render the full app shell at `initialPath` and return the router. */
 export function renderApp(initialPath = "/") {
   if (initialPath !== "/signin" && !localStorage.getItem("crimenet.token")) {
-    localStorage.setItem("crimenet.token", "test-token");
+    // A decodable default token (INSPECTOR @ Delhi): tests that need another
+    // identity call `seedToken(...)` first and it is left untouched.
+    seedToken();
   }
   const router = buildRouter(initialPath);
   const result = render(<RouterProvider router={router} />);

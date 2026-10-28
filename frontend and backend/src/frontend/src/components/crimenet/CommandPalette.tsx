@@ -1,4 +1,5 @@
-import { navItems } from "@/lib/crimenet/navigation";
+import { navItemsForRole } from "@/lib/crimenet/rbac";
+import { useRole } from "@/lib/crimenet/role-context";
 import { search } from "@/lib/crimenet/services";
 import type { SearchResultGroup } from "@/lib/crimenet/types";
 import { cn } from "@/lib/utils";
@@ -15,6 +16,8 @@ interface CommandPaletteProps {
 
 export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
   const navigate = useNavigate();
+  const { role } = useRole();
+  const sections = navItemsForRole(role);
   const [query, setQuery] = useState("");
   const [groups, setGroups] = useState<SearchResultGroup[]>([]);
 
@@ -41,13 +44,13 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
 
   const matchingNav = useMemo(() => {
     const term = query.trim().toLowerCase();
-    if (!term) return navItems;
-    return navItems.filter(
+    if (!term) return sections;
+    return sections.filter(
       (item) =>
         item.label.toLowerCase().includes(term) ||
         item.description.toLowerCase().includes(term),
     );
-  }, [query]);
+  }, [query, sections]);
 
   if (!open) return null;
 

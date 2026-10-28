@@ -1,3 +1,4 @@
+import { ADMIN_DELHI, AUDIT_LOGGER_DELHI, seedToken } from "@/test/identity";
 import { renderApp } from "@/test/render-app";
 import { configure, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -5,24 +6,10 @@ import { describe, expect, it } from "vitest";
 
 configure({ testIdAttribute: "data-ocid" });
 
-/** Switch the demo role via the top-bar role switcher. */
-async function switchRole(
-  user: ReturnType<typeof userEvent.setup>,
-  role: "inspector" | "supervisor" | "admin" | "audit_logger",
-) {
-  await user.click(screen.getByTestId("role_switcher.trigger"));
-  const option = await screen.findByTestId(`role_switcher.option.${role}`);
-  await user.click(option);
-}
-
 describe("Command Center", () => {
   it("shows the global metric cards with the values the run produced", async () => {
-    const user = userEvent.setup();
+    seedToken(ADMIN_DELHI);
     renderApp("/");
-    await screen.findByTestId("command_center.metrics_section");
-
-    await switchRole(user, "admin");
-
     const metrics = await screen.findByTestId("command_center.metrics_section");
     await waitFor(() => {
       expect(
@@ -85,26 +72,26 @@ describe("Command Center", () => {
     });
   });
 
-  it("changes the demo role without breaking the shell", async () => {
-    const user = userEvent.setup();
+  it("reports the role carried by the signed token", async () => {
+    seedToken(ADMIN_DELHI);
     renderApp("/");
     await screen.findByTestId("command_center.metrics_section");
 
-    // INSPECTOR default.
-    expect(screen.getByText("Demo Role: Inspector")).toBeInTheDocument();
-
-    await switchRole(user, "admin");
-    await waitFor(() => {
-      expect(screen.getByText("Demo Role: Administrator")).toBeInTheDocument();
-    });
-    // The shell persists across the role change.
+    expect(screen.getByText("Role: Administrator")).toBeInTheDocument();
+    // The shell persists for the whole session, not per view.
     expect(screen.getByTestId("sidebar")).toBeInTheDocument();
     expect(screen.getByTestId("top_bar")).toBeInTheDocument();
+    expect(screen.getByTestId("top_bar.identity")).toHaveTextContent(
+      "Dy. Comm. Sharma",
+    );
+  });
 
-    await switchRole(user, "audit_logger");
-    await waitFor(() => {
-      expect(screen.getByText("Demo Role: Audit Logger")).toBeInTheDocument();
-    });
+  it("renders an audit-logger session as itself", async () => {
+    seedToken(AUDIT_LOGGER_DELHI);
+    renderApp("/");
+    await screen.findByTestId("command_center.metrics_section");
+
+    expect(screen.getByText("Role: Audit Logger")).toBeInTheDocument();
     expect(screen.getByTestId("sidebar")).toBeInTheDocument();
   });
 });

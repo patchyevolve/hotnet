@@ -74,9 +74,20 @@ describe("Case Workbench", () => {
     await user.click(within(tabs).getByRole("tab", { name: "Timeline" }));
     expect(screen.getByTestId("case_workbench.page")).toBeInTheDocument();
 
-    // Reports tab is intentionally unavailable in this prototype.
+    // Reports tab is a real export centre with CSV downloads.
     await user.click(within(tabs).getByRole("tab", { name: "Reports" }));
-    expect(await screen.findByText("Reports unavailable")).toBeInTheDocument();
+    expect(
+      await screen.findByTestId("case_workbench.export_summary"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByTestId("case_workbench.export_entities"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByTestId("case_workbench.export_evidence"),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByTestId("case_workbench.export_timeline"),
+    ).toBeInTheDocument();
   });
 
   it("opens the entity quick view drawer from an entity row", async () => {

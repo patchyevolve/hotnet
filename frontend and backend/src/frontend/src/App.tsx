@@ -1,6 +1,12 @@
 import { AppShell } from "@/components/crimenet/AppShell";
+import { getIdentity } from "@/lib/crimenet/identity";
+import { canViewAudit } from "@/lib/crimenet/rbac";
 import { RoleProvider } from "@/lib/crimenet/role-context";
-import { getToken, setUnauthorizedHandler } from "@/lib/crimenet/services";
+import {
+  getToken,
+  setToken,
+  setUnauthorizedHandler,
+} from "@/lib/crimenet/services";
 import { AiInvestigatorPage } from "@/pages/AiInvestigatorPage";
 import { AnalyticsPage } from "@/pages/AnalyticsPage";
 import { CaseWorkbenchPage } from "@/pages/CaseWorkbenchPage";
@@ -11,6 +17,7 @@ import { EntityListPage } from "@/pages/EntityListPage";
 import { EntityPage } from "@/pages/EntityPage";
 import { EvidencePage } from "@/pages/EvidencePage";
 import { FacePage } from "@/pages/FacePage";
+import { ForbiddenPage } from "@/pages/ForbiddenPage";
 import { MapPage } from "@/pages/MapPage";
 import { MoneyTrailPage } from "@/pages/MoneyTrailPage";
 import { NetworkPage } from "@/pages/NetworkPage";
@@ -29,14 +36,13 @@ import {
 } from "@tanstack/react-router";
 
 /**
- * The sign-in route renders bare; everything else needs a session and gets the
- * shell. A missing token redirects before any page mounts, so no screen ever
- * fetches without an identity attached.
+ * The sign-in route renders bare; everything else needs a *valid* session and
+ * gets the shell. Before any page mounts, the stored token must exist **and**
+ * decode into the signed claims — an unusable or forged token is dropped and
+ * sent back to sign-in, so no screen ever fetches without a verified identity
+ * attached.
  *
- * `RoleProvider` wraps both branches. The sign-in page reads `language` and
- * writes `role` back after the session is issued, and the provider has to be
- * the *same instance* across that navigation so the chosen role survives the
- * redirect — hence it sits above the bare/shell split rather than inside it.
+ * `RoleProvider` wraps both branches and reads the role from that same token.
  */
 function RootLayout() {
   const pathname = useRouterState({
@@ -58,7 +64,15 @@ function RootLayout() {
 
 const rootRoute = createRootRoute({
   beforeLoad: ({ location }) => {
-    if (location.pathname !== "/signin" && !getToken()) {
+    if (location.pathname === "/signin") return;
+    const token = getToken();
+    if (!token) {
+      throw redirect({ to: "/signin" });
+    }
+    if (!getIdentity()) {
+      // Present but undecodable (rotated secret, truncated storage, forgeries):
+      // treat it as no session at all rather than defaulting to a role.
+      setToken(null);
       throw redirect({ to: "/signin" });
     }
   },
@@ -123,6 +137,9 @@ const mapRoute = createRoute({
 const aiInvestigatorRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/ai-investigator",
+  validateSearch: (search: Record<string, unknown>): { insight?: string } => ({
+    insight: typeof search.insight === "string" ? search.insight : undefined,
+  }),
   component: AiInvestigatorPage,
 });
 
@@ -135,6 +152,15 @@ const evidenceRoute = createRoute({
 const securityRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/security",
+  // Audit oversight is restricted to ADMIN, SUPERVISOR and AUDIT_LOGGER on the
+  // server too (`GET /api/audit`); anyone else lands on the 403 page instead
+  // of a dashboard that would answer with a refusal.
+  beforeLoad: () => {
+    const identity = getIdentity();
+    if (!identity || !canViewAudit(identity.role)) {
+      throw redirect({ to: "/403" });
+    }
+  },
   component: SecurityPage,
 });
 
@@ -154,6 +180,12 @@ const intakeRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/intake",
   component: UploadPage,
+});
+
+const forbiddenRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/403",
+  component: ForbiddenPage,
 });
 
 const analyticsRoute = createRoute({
@@ -179,6 +211,7 @@ const routeTree = rootRoute.addChildren([
   signInRoute,
   intakeRoute,
   analyticsRoute,
+  forbiddenRoute,
 ]);
 
 const router = createRouter({ routeTree });

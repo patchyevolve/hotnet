@@ -17,7 +17,9 @@ export function AuditChain({ events, className }: AuditChainProps) {
     >
       <div className="flex items-center gap-2 rounded-md border border-risk-low/30 bg-risk-low/8 px-3 py-2 text-xs text-risk-low">
         <ShieldCheck className="size-4 shrink-0" aria-hidden />
-        Hash chain verified across {events.length} entries
+        {events.some((event) => event.hash)
+          ? `Hash chain verified across ${events.length} entries`
+          : `Sequence verified across ${events.length} entries`}
       </div>
       <ol className="flex flex-col gap-2">
         {events.map((event, index) => (

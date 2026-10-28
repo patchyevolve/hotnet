@@ -11,29 +11,24 @@ import { Button } from "@/components/ui/button";
 import {
   casePriorityLabels,
   caseStatusLabels,
+  caseStatusTones,
+  downloadCsv,
   formatDate,
 } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
+import { useIdentity } from "@/lib/crimenet/identity";
 import { useRole } from "@/lib/crimenet/role-context";
 import { getCases } from "@/lib/crimenet/services";
-import type { CaseRecord, CaseStatus } from "@/lib/crimenet/types";
+import type { CaseRecord } from "@/lib/crimenet/types";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, FolderOpen } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-const statusTone: Record<
-  CaseStatus,
-  "info" | "warning" | "success" | "neutral" | "danger"
-> = {
-  open: "info",
-  active: "danger",
-  under_review: "warning",
-  charge_sheet: "neutral",
-  closed: "success",
-};
+const statusTone = caseStatusTones;
 
 export function CasesPage() {
-  const { language } = useRole();
+  const { language, role } = useRole();
+  const identity = useIdentity();
   const strings = getStrings(language);
   const [cases, setCases] = useState<CaseRecord[]>([]);
   const [loading, setLoading] = useState(true);
@@ -53,24 +48,58 @@ export function CasesPage() {
     };
   }, []);
 
+  // Station scope: the API already narrows this server-side, and the UI keeps
+  // the same rule so a cross-station row never renders even if a response
+  // slips through. Only ADMIN sees every station's registry.
+  const scoped = useMemo(() => {
+    if (role === "ADMIN") return cases;
+    return cases.filter(
+      (item) => !item.station || item.station === identity?.jurisdictionId,
+    );
+  }, [cases, role, identity]);
+
   const districts = useMemo(
     () =>
-      [...new Set(cases.map((item) => item.district))]
+      [...new Set(scoped.map((item) => item.district))]
         .filter((item): item is string => Boolean(item))
         .sort(),
-    [cases],
+    [scoped],
   );
 
   const filtered = useMemo(
     () =>
-      cases.filter(
+      scoped.filter(
         (item) =>
           (status === "all" || item.status === status) &&
           (risk === "all" || item.risk === risk) &&
           (district === "all" || item.district === district),
       ),
-    [cases, status, risk, district],
+    [scoped, status, risk, district],
   );
+
+  const exportRegister = () => {
+    const headers = [
+      strings.caseIdHeader,
+      strings.titleHeader,
+      strings.status,
+      strings.priority,
+      strings.risk,
+      strings.district,
+      strings.leadOfficer,
+      strings.updated,
+    ];
+    const rows = filtered.map((item) => [
+      item.id,
+      item.title,
+      caseStatusLabels[item.status],
+      item.priority ? casePriorityLabels[item.priority] : "",
+      item.risk,
+      item.district ?? "",
+      item.leadOfficer,
+      item.updatedAt,
+    ]);
+    downloadCsv("case-register.csv", headers, rows);
+  };
 
   const columns: Column<CaseRecord>[] = [
     {
@@ -165,15 +194,28 @@ export function CasesPage() {
         title={strings.casesTitle}
         description={strings.casesDescription}
         actions={
-          <Button
-            type="button"
-            variant="outline"
-            size="sm"
-            data-ocid="cases.export_button"
-            disabled
-          >
-            {strings.exportRegister}
-          </Button>
+          <div className="flex items-center gap-2">
+            {role !== "ADMIN" ? (
+              <span
+                data-ocid="cases.station_scope"
+                className="hidden rounded-md border border-border bg-card/60 px-2.5 py-1.5 text-xs text-muted-foreground sm:block"
+              >
+                {strings.station}:{" "}
+                {(identity?.jurisdictionId || "")
+                  .replace("JURISDICTION_", "")
+                  .replace(/_/g, " ")}
+              </span>
+            ) : null}
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              data-ocid="cases.export_button"
+              onClick={exportRegister}
+            >
+              {strings.exportRegister}
+            </Button>
+          </div>
         }
       />
 

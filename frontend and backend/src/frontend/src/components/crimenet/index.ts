@@ -2,7 +2,6 @@ export { AppShell, openEntityDrawer } from "./AppShell";
 export { Sidebar } from "./Sidebar";
 export { TopBar } from "./TopBar";
 export { GlobalSearch } from "./GlobalSearch";
-export { RoleSwitcher } from "./RoleSwitcher";
 export { PageHeader } from "./PageHeader";
 export { MetricCard } from "./MetricCard";
 export { RiskBadge } from "./RiskBadge";

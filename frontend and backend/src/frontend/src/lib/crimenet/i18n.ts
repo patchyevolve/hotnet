@@ -13,11 +13,8 @@ export interface UiStrings {
   notifications: string;
   profile: string;
   signOut: string;
-  demoRole: string;
-  demoRoleNote: string;
   language: string;
   systemStatus: string;
-  systemStatusDetail: string;
   collapseSidebar: string;
   expandSidebar: string;
   commandPalette: string;
@@ -108,7 +105,6 @@ export interface UiStrings {
   previous: string;
   next: string;
   demoDataNotice: string;
-  builtWith: string;
   commandCenter: string;
   commandCenterSubtitle: string;
   activeCases: string;
@@ -120,6 +116,14 @@ export interface UiStrings {
   caseActivity: string;
   networkActivity: string;
   riskDistribution: string;
+  scopeLabel: string;
+  scopeAllCases: string;
+  entitiesCenterLabel: string;
+  caseActivityEmpty: string;
+  networkActivityEmpty: string;
+  liveLabel: string;
+  checkedLabel: string;
+  degraded: string;
   caseWorkbench: string;
   cdr: string;
   moneyTrail: string;
@@ -193,6 +197,7 @@ export interface UiStrings {
   networkDescription: string;
   geospatialIntelligence: string;
   mapDescription: string;
+  caseScope: string;
   telecomAnalysis: string;
   cdrDescription: string;
   financialIntelligence: string;
@@ -227,12 +232,27 @@ export interface UiStrings {
   chainVerified: string;
   chainVerifiedDetail: string;
   demoModeNoModel: string;
+  howDerived: string;
+  generationLabel: string;
+  runLabel: string;
+  supportingLabel: string;
+  contradictingLabel: string;
+  alternativesLabel: string;
+  noModelAnswer: string;
+  replyInsights: string;
+  replyEntities: string;
+  replyEvidence: string;
+  nullHypothesisLabel: string;
+  askPromptHypotheses: string;
+  askPromptHighRisk: string;
+  askPromptEvidence: string;
   analyst: string;
   aiInvestigatorName: string;
   refresh: string;
   operational: string;
   noLinkedEntities: string;
   noLinkedEntitiesBody: string;
+  noLinkedCases: string;
   noCustodyEvents: string;
   selectRecord: string;
   selectTransaction: string;
@@ -255,6 +275,7 @@ export interface UiStrings {
   flaggedEvents: string;
   chainIntegrity: string;
   volumeByChannel: string;
+  noChannelData: string;
   accountFlowGraph: string;
   lineThicknessNote: string;
   callsGroupedNote: string;
@@ -269,6 +290,20 @@ export interface UiStrings {
   suspiciousIndicators: string;
   flowStages: string;
   selectStage: string;
+  sourceCoverage: string;
+  sourceCoverageNote: string;
+  coverageZeroNote: string;
+  noMatchedTransfers: string;
+  sourceFile: string;
+  sourceFiles: string;
+  volumeByFile: string;
+  rowsUnit: string;
+  filesUnit: string;
+  transfersUnit: string;
+  extraction: string;
+  quality: string;
+  description: string;
+  rowsAnalysed: string;
   block: string;
   auditChainTitle: string;
   auditChainNote: string;
@@ -367,8 +402,11 @@ export interface UiStrings {
   moneyTrailTab: string;
   timelineTab: string;
   reportsTab: string;
-  reportsUnavailable: string;
-  reportsUnavailableBody: string;
+  exportCaseSummary: string;
+  exportEntities: string;
+  exportEvidence: string;
+  exportTimeline: string;
+  exportCenterDescription: string;
   caseNotFound: string;
   backToCases: string;
   searchCases: string;
@@ -400,7 +438,6 @@ export interface UiStrings {
   read: string;
   closeNotifications: string;
   profileMenu: string;
-  switchRole: string;
   languageToggle: string;
   english: string;
   hindi: string;
@@ -416,8 +453,6 @@ export interface UiStrings {
   collapse: string;
   expandSidebarLabel: string;
   systemStatusOperational: string;
-  demoRoleSwitcher: string;
-  demoRoleSwitcherNote: string;
   roleInspector: string;
   roleSupervisor: string;
   roleAdmin: string;
@@ -448,7 +483,6 @@ export interface UiStrings {
   profileRole: string;
   profileStation: string;
   profileBadge: string;
-  signOutDemo: string;
   languageEnglish: string;
   languageHindi: string;
   switchToHindi: string;
@@ -578,11 +612,22 @@ export interface UiStrings {
   exportRegister: string;
   keyEvents: string;
   displayName: string;
+  emailOrBadge: string;
+  password: string;
   signInTitle: string;
   signInSubtitle: string;
   jurisdiction: string;
   signInCta: string;
   sessionNotice: string;
+  forbiddenTitle: string;
+  forbiddenBody: string;
+  forbiddenCaseBody: string;
+  backToDashboard: string;
+  readOnlyAccess: string;
+  writeRestricted: string;
+  createCaseRestricted: string;
+  newCase: string;
+  stationLockedNote: string;
   caseIntake: string;
   caseIntakeHint: string;
   firNumber: string;
@@ -604,16 +649,34 @@ export interface UiStrings {
   graphAnalytics: string;
   analyticsHint: string;
   centrality: string;
+  centralityHelp: string;
   communities: string;
   componentsLabel: string;
   multiHop: string;
+  pathsHelp: string;
   riskZones: string;
+  riskBand: string;
   betweenness: string;
   closeness: string;
   degree: string;
   eigenvector: string;
   nodeCount: string;
   edgeCount: string;
+  rankedByBetweenness: string;
+  rankedByConfidence: string;
+  rankedByRisk: string;
+  hops: string;
+  inferred: string;
+  mostly: string;
+  density: string;
+  internalLinks: string;
+  nodesUnit: string;
+  mainCluster: string;
+  smallClusters: string;
+  isolated: string;
+  investigation: string;
+  candidate: string;
+  suspectsLabel: string;
 }
 
 const en: UiStrings = {
@@ -622,11 +685,8 @@ const en: UiStrings = {
   notifications: "Notifications",
   profile: "Profile",
   signOut: "Sign out",
-  demoRole: "Demo Role",
-  demoRoleNote: "Frontend demonstration only — no authentication is performed.",
   language: "Language",
   systemStatus: "System Status",
-  systemStatusDetail: "All Intelligence Services Operational",
   collapseSidebar: "Collapse sidebar",
   expandSidebar: "Expand sidebar",
   commandPalette: "Command palette",
@@ -719,7 +779,6 @@ const en: UiStrings = {
   next: "Next",
   demoDataNotice:
     "All identities and records are fictional demonstration data.",
-  builtWith: "Built with love using caffeine.ai",
   commandCenter: "Command Center",
   commandCenterSubtitle:
     "Unified criminal intelligence and investigation overview",
@@ -732,6 +791,14 @@ const en: UiStrings = {
   caseActivity: "Case Activity",
   networkActivity: "Network Activity",
   riskDistribution: "Risk Distribution",
+  scopeLabel: "Scope",
+  scopeAllCases: "All cases",
+  entitiesCenterLabel: "entities",
+  caseActivityEmpty: "No activity recorded on this case yet.",
+  networkActivityEmpty: "No recorded network events for this case.",
+  liveLabel: "Live",
+  checkedLabel: "Checked",
+  degraded: "Degraded",
   caseWorkbench: "Case Workbench",
   cdr: "CDR",
   moneyTrail: "Money Trail",
@@ -805,13 +872,14 @@ const en: UiStrings = {
     "Entity relationship graph for the Nightfall network. Select a node to inspect the linked profile.",
   geospatialIntelligence: "Geospatial Intelligence",
   mapDescription:
-    "Incident, entity and cell-tower positions across the operational area. Select a marker to inspect its context.",
+    "Pipeline risk zones, incidents and geocoded entity positions for the case scope selected below. Select a marker to inspect its context.",
+  caseScope: "Case scope",
   telecomAnalysis: "Telecom Analysis",
   cdrDescription:
     "Call detail records for the Nightfall network, with night-window and flagged-call detection.",
   financialIntelligence: "Financial Intelligence",
   moneyTrailDescription:
-    "Account-to-account flow for the Nightfall network, highlighting structured deposits and crypto off-ramp layering.",
+    "Account-to-account transfers where every rupee names its source bank file, row narration and SHA-256 — the traced total is exactly the sum of the transfers listed below.",
   integrityAccess: "Integrity & Access",
   securityDescription:
     "Hash-chained audit log of every access and action, with severity classification and chain verification.",
@@ -848,14 +916,31 @@ const en: UiStrings = {
     "Positions are schematic placeholders for demonstration; no live geospatial tiles are used.",
   vaultIntegrityOverview: "Vault Integrity Overview",
   chainVerified: "Chain verified",
-  chainVerifiedDetail: "Each entry commits to the hash of the previous entry",
-  demoModeNoModel: "Demo mode — no live model",
+  chainVerifiedDetail:
+    "Each entry follows the previous one in a stable, append-only sequence",
+  demoModeNoModel: "Retrieval only — no language model",
+  howDerived: "How this was developed",
+  generationLabel: "Generated from",
+  runLabel: "Run",
+  supportingLabel: "supporting",
+  contradictingLabel: "contradicting",
+  alternativesLabel: "alternatives",
+  noModelAnswer:
+    "No language model is connected to this workstation. Answers come only from indexed case records — try an entity name, a case id, or “hypotheses”.",
+  replyInsights: "Matched hypotheses in the indexed record:",
+  replyEntities: "Matched entities:",
+  replyEvidence: "Matched evidence records:",
+  nullHypothesisLabel: "Null hypothesis",
+  askPromptHypotheses: "Show the strongest hypotheses",
+  askPromptHighRisk: "List high-risk entities",
+  askPromptEvidence: "What evidence does this case hold?",
   analyst: "Analyst",
   aiInvestigatorName: "AI Investigator",
   refresh: "Refresh",
   operational: "Operational",
   noLinkedEntities: "No linked entities",
   noLinkedEntitiesBody: "This entity has no recorded connections.",
+  noLinkedCases: "No linked cases",
   noCustodyEvents: "No custody events recorded for this item.",
   selectRecord: "Select a record to inspect its details.",
   selectTransaction: "Select a transaction to inspect it.",
@@ -878,6 +963,7 @@ const en: UiStrings = {
   flaggedEvents: "Flagged Events",
   chainIntegrity: "Chain Integrity",
   volumeByChannel: "Volume by Channel",
+  noChannelData: "No payment channel recorded for these rows.",
   accountFlowGraph: "Account Flow Graph",
   lineThicknessNote: "Line thickness reflects transaction amount",
   callsGroupedNote: "Calls grouped into 3-hour windows",
@@ -893,6 +979,22 @@ const en: UiStrings = {
   suspiciousIndicators: "Suspicious Indicators",
   flowStages: "Flow Stages",
   selectStage: "Select a stage to inspect the transaction.",
+  sourceCoverage: "Source coverage",
+  sourceCoverageNote:
+    "Every rupee in the traced total is the sum of the transfers below — each tied to a hashed bank source file, its rows and its integrity verdict.",
+  coverageZeroNote:
+    "Files showing 0 transfers were read and quality-screened in full — their rows contain no resolved account-to-account transfer (cash withdrawals, unknown counterparties, one-sided entries), so they contribute rows but no rupees.",
+  noMatchedTransfers: "No matched transfers",
+  sourceFile: "Source file",
+  sourceFiles: "Source files",
+  volumeByFile: "Volume by Source File",
+  rowsUnit: "rows",
+  filesUnit: "files",
+  transfersUnit: "transfers",
+  extraction: "Extraction",
+  quality: "Quality",
+  description: "Description",
+  rowsAnalysed: "Rows analysed",
   block: "Block",
   auditChainTitle: "Audit Chain",
   auditChainNote: "Each entry commits to the hash of the previous entry",
@@ -993,9 +1095,12 @@ const en: UiStrings = {
   moneyTrailTab: "Money Trail",
   timelineTab: "Timeline",
   reportsTab: "Reports",
-  reportsUnavailable: "Reports unavailable",
-  reportsUnavailableBody:
-    "Report generation and export are not part of this prototype.",
+  exportCaseSummary: "Case summary",
+  exportEntities: "Entities",
+  exportEvidence: "Evidence",
+  exportTimeline: "Timeline",
+  exportCenterDescription:
+    "Download this case's records as CSV. Each export contains only the data shown on this page.",
   caseNotFound: "Case not found",
   backToCases: "Back to cases",
   searchCases: "Search cases...",
@@ -1027,7 +1132,6 @@ const en: UiStrings = {
   read: "Read",
   closeNotifications: "Close notifications",
   profileMenu: "Profile menu",
-  switchRole: "Switch role",
   languageToggle: "Language",
   english: "English",
   hindi: "Hindi",
@@ -1043,9 +1147,6 @@ const en: UiStrings = {
   collapse: "Collapse",
   expandSidebarLabel: "Expand sidebar",
   systemStatusOperational: "All Intelligence Services Operational",
-  demoRoleSwitcher: "Demo Role",
-  demoRoleSwitcherNote:
-    "Frontend demonstration only — no authentication is performed.",
   roleInspector: "Inspector",
   roleSupervisor: "Supervisor",
   roleAdmin: "Administrator",
@@ -1076,7 +1177,6 @@ const en: UiStrings = {
   profileRole: "Role",
   profileStation: "Station",
   profileBadge: "Badge",
-  signOutDemo: "Sign out (demo)",
   languageEnglish: "English",
   languageHindi: "Hindi",
   switchToHindi: "हिन्दी",
@@ -1181,9 +1281,9 @@ const en: UiStrings = {
   cdrDescriptionText:
     "Call detail records for the Nightfall network, with night-window and flagged-call detection.",
   faceDescriptionText:
-    "Camera match review queue. Confidence scores and match statuses are demonstration values; no biometric matching is performed.",
+    "Camera match review queue. Confidence and similarity scores come from the pipeline's face embeddings; confirm or reject a candidate to record the investigator decision.",
   securityDescriptionText:
-    "Hash-chained audit log of every access and action, with severity classification and chain verification.",
+    "Append-only audit log of every access and action, with severity classification and sequence verification.",
   riskCritical: "Critical",
   riskHigh: "High",
   riskMedium: "Medium",
@@ -1211,13 +1311,28 @@ const en: UiStrings = {
   exportRegister: "Export register",
   keyEvents: "key events",
   displayName: "Display Name",
+  emailOrBadge: "Email or badge ID",
+  password: "Password",
   signInTitle: "Sign in to CrimeNet",
   signInSubtitle:
-    "Choose who is working this session. The picker issues a signed session token; a credential provider can replace it without changing the API.",
+    "Sign in with your CrimeNet account. Your role and station are read from the signed access token — there is no role picker.",
   jurisdiction: "Jurisdiction",
-  signInCta: "Start session",
+  signInCta: "Sign in",
   sessionNotice:
-    "The session identifies who uploaded evidence and requested each run.",
+    "Your access level and station come from the token issued after authentication.",
+  forbiddenTitle: "403 — Access restricted",
+  forbiddenBody:
+    "Your account's role does not have permission to open this section. Ask an administrator if you need access.",
+  forbiddenCaseBody:
+    "Your access level on this case is too low to open it. Ask a supervisor or administrator for case access.",
+  backToDashboard: "Back to Command Center",
+  readOnlyAccess: "Read-only access",
+  writeRestricted:
+    "Your access level does not allow evidence uploads or pipeline runs.",
+  createCaseRestricted:
+    "Case registration is limited to supervisors and administrators.",
+  newCase: "New case",
+  stationLockedNote: "Supervisors register cases only in their own station.",
   caseIntake: "Case Intake",
   caseIntakeHint:
     "Register an FIR, attach its evidence, then run the pipeline over it.",
@@ -1240,18 +1355,38 @@ const en: UiStrings = {
   filesQueued: "files queued",
   graphAnalytics: "Graph Analytics",
   analyticsHint:
-    "Centrality, communities and structure of the resolved network.",
+    "Who bridges the network, which clusters formed, and where risk concentrates — straight from the pipeline run.",
   centrality: "Centrality",
+  centralityHelp:
+    "Degree counts direct links. Betweenness is the share of shortest paths crossing this node — high values are bridges. Closeness is how near it sits to every other node. Eigenvector rewards links to other well-linked nodes.",
   communities: "Communities",
   componentsLabel: "Components",
   multiHop: "Multi-hop paths",
+  pathsHelp:
+    "Inferred routes through intermediate nodes. Confidence multiplies the edge confidences along the route — treat low values as leads to verify, not facts.",
   riskZones: "Risk zones",
+  riskBand: "Risk band",
   betweenness: "Betweenness",
   closeness: "Closeness",
   degree: "Degree",
   eigenvector: "Eigenvector",
   nodeCount: "Nodes",
   edgeCount: "Edges",
+  rankedByBetweenness: "ranked by betweenness",
+  rankedByConfidence: "ranked by confidence",
+  rankedByRisk: "ranked by risk score",
+  hops: "hops",
+  inferred: "Inferred",
+  mostly: "mostly",
+  density: "Density",
+  internalLinks: "internal links",
+  nodesUnit: "nodes",
+  mainCluster: "Main cluster",
+  smallClusters: "small clusters",
+  isolated: "isolated",
+  investigation: "Investigation",
+  candidate: "Candidate",
+  suspectsLabel: "Suspects",
 };
 
 const hi: UiStrings = {
@@ -1260,11 +1395,8 @@ const hi: UiStrings = {
   notifications: "सूचनाएँ",
   profile: "प्रोफ़ाइल",
   signOut: "साइन आउट",
-  demoRole: "डेमो भूमिका",
-  demoRoleNote: "केवल फ्रंटएंड प्रदर्शन — कोई प्रमाणीकरण नहीं।",
   language: "भाषा",
   systemStatus: "सिस्टम स्थिति",
-  systemStatusDetail: "सभी इंटेलिजेंस सेवाएँ सक्रिय",
   collapseSidebar: "साइडबार छोटा करें",
   expandSidebar: "साइडबार बड़ा करें",
   commandPalette: "कमांड पैलेट",
@@ -1356,7 +1488,6 @@ const hi: UiStrings = {
   previous: "पिछला",
   next: "अगला",
   demoDataNotice: "सभी पहचान और रिकॉर्ड काल्पनिक प्रदर्शन डेटा हैं।",
-  builtWith: "caffeine.ai के साथ प्यार से बनाया गया",
   commandCenter: "कमांड सेंटर",
   commandCenterSubtitle: "एकीकृत आपराधिक खुफिया और जाँच अवलोकन",
   activeCases: "सक्रिय मामले",
@@ -1368,6 +1499,14 @@ const hi: UiStrings = {
   caseActivity: "मामला गतिविधि",
   networkActivity: "नेटवर्क गतिविधि",
   riskDistribution: "जोखिम वितरण",
+  scopeLabel: "दायरा",
+  scopeAllCases: "सभी मामले",
+  entitiesCenterLabel: "इकाइयाँ",
+  caseActivityEmpty: "इस मामले में अभी कोई गतिविधि दर्ज नहीं है।",
+  networkActivityEmpty: "इस मामले के लिए कोई नेटवर्क घटना दर्ज नहीं है।",
+  liveLabel: "लाइव",
+  checkedLabel: "जाँच",
+  degraded: "क्षतिग्रस्त",
   caseWorkbench: "केस वर्कबेंच",
   cdr: "सीडीआर",
   moneyTrail: "धन मार्ग",
@@ -1441,13 +1580,14 @@ const hi: UiStrings = {
     "नाइटफ़ॉल नेटवर्क का इकाई संबंध ग्राफ़। जुड़ी प्रोफ़ाइल देखने के लिए नोड चुनें।",
   geospatialIntelligence: "भू-स्थानिक इंटेलिजेंस",
   mapDescription:
-    "परिचालन क्षेत्र में घटना, इकाई और सेल-टावर स्थान। संदर्भ देखने के लिए मार्कर चुनें।",
+    "नीचे चुने गए केस स्कोप के पाइपलाइन जोखिम क्षेत्र, घटनाएँ और भू-स्थानित इकाई स्थान। संदर्भ देखने के लिए मार्कर चुनें।",
+  caseScope: "केस स्कोप",
   telecomAnalysis: "टेलीकॉम विश्लेषण",
   cdrDescription:
     "नाइटफ़ॉल नेटवर्क के कॉल विवरण रिकॉर्ड, रात्रि-विंडो और चिह्नित कॉल पहचान के साथ।",
   financialIntelligence: "वित्तीय इंटेलिजेंस",
   moneyTrailDescription:
-    "नाइटफ़ॉल नेटवर्क का खाता-से-खाता प्रवाह, संरचित जमा और क्रिप्टो ऑफ़-रैंप लेयरिंग को दर्शाता है।",
+    "खाते से खाते में अंतरण जिनमें हर रुपया अपना स्रोत बैंक फ़ाइल, पंक्ति विवरण और SHA-256 बताता है — निगली गई कुल राशि ठीक नीचे सूचीबद्ध अंतरणों का योग है।",
   integrityAccess: "अखंडता और पहुँच",
   securityDescription:
     "प्रत्येक पहुँच और क्रिया का हैश-श्रृंखलित ऑडिट लॉग, गंभीरता वर्गीकरण और श्रृंखला सत्यापन के साथ।",
@@ -1484,14 +1624,30 @@ const hi: UiStrings = {
     "स्थान प्रदर्शन के लिए योजनाबद्ध प्लेसहोल्डर हैं; कोई लाइव भू-स्थानिक टाइल उपयोग नहीं होती।",
   vaultIntegrityOverview: "तिजोरी अखंडता अवलोकन",
   chainVerified: "श्रृंखला सत्यापित",
-  chainVerifiedDetail: "प्रत्येक प्रविष्टि पिछली प्रविष्टि के हैश से जुड़ती है",
-  demoModeNoModel: "डेमो मोड — कोई लाइव मॉडल नहीं",
+  chainVerifiedDetail: "प्रत्येक प्रविष्टि स्थिर, केवल-जोड़ अनुक्रम में पिछली के बाद आती है",
+  demoModeNoModel: "रिट्रीवल मोड — कोई भाषा मॉडल नहीं",
+  howDerived: "यह कैसे विकसित हुआ",
+  generationLabel: "स्रोत",
+  runLabel: "रन",
+  supportingLabel: "समर्थन",
+  contradictingLabel: "विरोध",
+  alternativesLabel: "विकल्प",
+  noModelAnswer:
+    "इस वर्कस्टेशन से कोई भाषा मॉडल नहीं जुड़ा है। उत्तर केवल अनुक्रमित मामला रिकॉर्ड से आते हैं — किसी इकाई का नाम, केस आईडी, या “hypotheses” आज़माएँ।",
+  replyInsights: "अनुक्रमित रिकॉर्ड में मिली परिकल्पनाएँ:",
+  replyEntities: "मिली इकाइयाँ:",
+  replyEvidence: "मिले साक्ष्य रिकॉर्ड:",
+  nullHypothesisLabel: "शून्य परिकल्पना",
+  askPromptHypotheses: "सबसे मज़बूत परिकल्पनाएँ दिखाएँ",
+  askPromptHighRisk: "उच्च जोखिम वाली इकाइयाँ सूचीबद्ध करें",
+  askPromptEvidence: "इस मामले में क्या साक्ष्य है?",
   analyst: "विश्लेषक",
   aiInvestigatorName: "एआई अन्वेषक",
   refresh: "ताज़ा करें",
   operational: "सक्रिय",
   noLinkedEntities: "कोई जुड़ी इकाई नहीं",
   noLinkedEntitiesBody: "इस इकाई का कोई दर्ज संबंध नहीं है।",
+  noLinkedCases: "कोई जुड़ा मामला नहीं",
   noCustodyEvents: "इस आइटम के लिए कोई अभिरक्षा घटना दर्ज नहीं है।",
   selectRecord: "विवरण देखने के लिए रिकॉर्ड चुनें।",
   selectTransaction: "निरीक्षण के लिए लेनदेन चुनें।",
@@ -1514,6 +1670,7 @@ const hi: UiStrings = {
   flaggedEvents: "चिह्नित घटनाएँ",
   chainIntegrity: "श्रृंखला अखंडता",
   volumeByChannel: "माध्यम अनुसार मात्रा",
+  noChannelData: "इन पंक्तियों के लिए कोई भुगतान चैनल दर्ज नहीं है।",
   accountFlowGraph: "खाता प्रवाह ग्राफ़",
   lineThicknessNote: "रेखा की मोटाई लेनदेन राशि दर्शाती है",
   callsGroupedNote: "कॉल 3-घंटे विंडो में समूहित",
@@ -1529,6 +1686,22 @@ const hi: UiStrings = {
   suspiciousIndicators: "संदिग्ध संकेतक",
   flowStages: "प्रवाह चरण",
   selectStage: "लेनदेन देखने के लिए चरण चुनें।",
+  sourceCoverage: "स्रोत कवरेज",
+  sourceCoverageNote:
+    "निगली गई कुल राशि का हर रुपया नीचे के अंतरणों का योग है — हर अंतरण एक हैश-युक्त बैंक स्रोत फ़ाइल, उसकी पंक्तियों और अखंडता परिणाम से जुड़ा है।",
+  coverageZeroNote:
+    "जिन फ़ाइलों में 0 अंतरण हैं, उन्हें पूरी तरह पढ़ा और गुणवत्ता-जाँचा गया — उनकी पंक्तियों में कोई सुलझा हुआ खाते-से-खाता अंतरण नहीं है (नकद निकासी, अज्ञात प्रतिपक्षी, एकतरफ़ा प्रविष्टियाँ), इसलिए वे पंक्तियाँ जोड़ती हैं पर रुपया नहीं।",
+  noMatchedTransfers: "कोई मिलान अंतरण नहीं",
+  sourceFile: "स्रोत फ़ाइल",
+  sourceFiles: "स्रोत फ़ाइलें",
+  volumeByFile: "स्रोत फ़ाइल के अनुसार मात्रा",
+  rowsUnit: "पंक्तियाँ",
+  filesUnit: "फ़ाइलें",
+  transfersUnit: "अंतरण",
+  extraction: "निष्कर्षण",
+  quality: "गुणवत्ता",
+  description: "विवरण",
+  rowsAnalysed: "विश्लेषित पंक्तियाँ",
   block: "ब्लॉक",
   auditChainTitle: "ऑडिट श्रृंखला",
   auditChainNote: "प्रत्येक प्रविष्टि पिछली प्रविष्टि के हैश से जुड़ती है",
@@ -1629,9 +1802,12 @@ const hi: UiStrings = {
   moneyTrailTab: "धन मार्ग",
   timelineTab: "समयरेखा",
   reportsTab: "रिपोर्ट",
-  reportsUnavailable: "रिपोर्ट अनुपलब्ध",
-  reportsUnavailableBody:
-    "रिपोर्ट निर्माण और निर्यात इस प्रोटोटाइप का हिस्सा नहीं हैं।",
+  exportCaseSummary: "केस सारांश",
+  exportEntities: "इकाइयाँ",
+  exportEvidence: "साक्ष्य",
+  exportTimeline: "समयरेखा",
+  exportCenterDescription:
+    "इस केस के रिकॉर्ड CSV के रूप में डाउनलोड करें। प्रत्येक निर्यात में केवल इस पेज पर दिखने वाला डेटा शामिल है।",
   caseNotFound: "केस नहीं मिला",
   backToCases: "मामलों पर वापस",
   searchCases: "मामले खोजें...",
@@ -1663,7 +1839,6 @@ const hi: UiStrings = {
   read: "पढ़ी हुई",
   closeNotifications: "सूचनाएँ बंद करें",
   profileMenu: "प्रोफ़ाइल मेनू",
-  switchRole: "भूमिका बदलें",
   languageToggle: "भाषा",
   english: "अंग्रेज़ी",
   hindi: "हिन्दी",
@@ -1679,8 +1854,6 @@ const hi: UiStrings = {
   collapse: "छोटा करें",
   expandSidebarLabel: "साइडबार बड़ा करें",
   systemStatusOperational: "सभी इंटेलिजेंस सेवाएँ सक्रिय",
-  demoRoleSwitcher: "डेमो भूमिका",
-  demoRoleSwitcherNote: "केवल फ्रंटएंड प्रदर्शन — कोई प्रमाणीकरण नहीं।",
   roleInspector: "निरीक्षक",
   roleSupervisor: "पर्यवेक्षक",
   roleAdmin: "प्रशासक",
@@ -1711,7 +1884,6 @@ const hi: UiStrings = {
   profileRole: "भूमिका",
   profileStation: "थाना",
   profileBadge: "बैज",
-  signOutDemo: "साइन आउट (डेमो)",
   languageEnglish: "अंग्रेज़ी",
   languageHindi: "हिन्दी",
   switchToHindi: "हिन्दी",
@@ -1815,9 +1987,9 @@ const hi: UiStrings = {
   cdrDescriptionText:
     "नाइटफ़ॉल नेटवर्क के कॉल विवरण रिकॉर्ड, रात्रि-विंडो और चिह्नित कॉल पहचान के साथ।",
   faceDescriptionText:
-    "कैमरा मिलान समीक्षा कतार। विश्वास स्कोर और मिलान स्थितियाँ प्रदर्शन मान हैं; कोई बायोमेट्रिक मिलान नहीं किया जाता।",
+    "कैमरा मिलान समीक्षा कतार। विश्वास और समानता स्कोर पाइपलाइन के फेस एम्बेडिंग से आते हैं; अनुरक्षक निर्णय दर्ज करने के लिए उम्मीदवार की पुष्टि या अस्वीकृति करें।",
   securityDescriptionText:
-    "प्रत्येक पहुँच और क्रिया का हैश-श्रृंखलित ऑडिट लॉग, गंभीरता वर्गीकरण और श्रृंखला सत्यापन के साथ।",
+    "प्रत्येक पहुँच और क्रिया का केवल-जोड़ ऑडिट लॉग, गंभीरता वर्गीकरण और अनुक्रम सत्यापन के साथ।",
   riskCritical: "गंभीर",
   riskHigh: "उच्च",
   riskMedium: "मध्यम",
@@ -1845,13 +2017,25 @@ const hi: UiStrings = {
   exportRegister: "रजिस्टर निर्यात करें",
   keyEvents: "प्रमुख घटनाएँ",
   displayName: "प्रदर्शन नाम",
+  emailOrBadge: "ईमेल या बैज आईडी",
+  password: "पासवर्ड",
   signInTitle: "CrimeNet में साइन इन करें",
   signInSubtitle:
-    "इस सत्र में कौन काम कर रहा है चुनें। पिकर एक साइन किया गया सत्र टोकन जारी करता है; क्रेडेंशियल प्रोवाइडर इसे बिना API बदले प्रतिस्थापित कर सकता है।",
+    "अपने CrimeNet खाते से साइन इन करें। भूमिका और स्टेशन साइन किए गए एक्सेस टोकन से पढ़ी जाती है — कोई भूमिका चयनकर्ता नहीं है।",
   jurisdiction: "क्षेत्राधिकार",
-  signInCta: "सत्र शुरू करें",
-  sessionNotice:
-    "सत्र यह पहचानता है कि साक्ष्य किसने अपलोड किया और प्रत्येक रन किसने अनुरोध किया।",
+  signInCta: "साइन इन",
+  sessionNotice: "आपका एक्सेस स्तर और स्टेशन प्रमाणीकरण के बाद जारी टोकन से आता है।",
+  forbiddenTitle: "403 — पहुँच प्रतिबंधित",
+  forbiddenBody:
+    "आपके खाते की भूमिका को इस अनुभाग को खोलने की अनुमति नहीं है। आवश्यकता हो तो व्यवस्थापक से संपर्क करें।",
+  forbiddenCaseBody:
+    "इस मामले पर आपका एक्सेस स्तर इसे खोलने के लिए पर्याप्त नहीं है। मामले तक पहुँच के लिए पर्यवेक्षक या व्यवस्थापक से कहें।",
+  backToDashboard: "कमांड सेंटर पर वापस",
+  readOnlyAccess: "केवल पठन-योग्य पहुँच",
+  writeRestricted: "आपके एक्सेस स्तर से साक्ष्य अपलोड या पाइपलाइन रन की अनुमति नहीं है।",
+  createCaseRestricted: "केस पंजीकरण केवल पर्यवेक्षकों और व्यवस्थापकों के लिए है।",
+  newCase: "नया केस",
+  stationLockedNote: "पर्यवेक्षक केवल अपने ही स्टेशन में केस दर्ज कर सकते हैं।",
   caseIntake: "केस इनटेक",
   caseIntakeHint: "एफ़आईआर दर्ज करें, उसका साक्ष्य जोड़ें, फिर पाइपलाइन चलाएँ।",
   firNumber: "एफ़आईआर नंबर",
@@ -1871,18 +2055,39 @@ const hi: UiStrings = {
   runFailed: "विफल",
   filesQueued: "फ़ाइलें कतार में",
   graphAnalytics: "ग्राफ़ एनालिटिक्स",
-  analyticsHint: "संकलित नेटवर्क की केंद्रीयता, समुदाय और संरचना।",
+  analyticsHint:
+    "नेटवर्क में कौन पुल है, कौन से समूह बने और जोखिम कहाँ केंद्रित है — पाइपलाइन रन से सीधे।",
   centrality: "केंद्रीयता",
+  centralityHelp:
+    "डिग्री सीधे लिंक गिनती है। बीचेनेस वह हिस्सा है जो इस नोड से गुज़रता है — ऊँचा मान पुल है। निकटता बताती है कि यह बाकी नोड्स कितने पास है। आइजेनवेक्टर अच्छी तरह जुड़े पड़ोसियों का श्रेय देता है।",
   communities: "समुदाय",
   componentsLabel: "घटक",
   multiHop: "मल्टी-हॉप पथ",
+  pathsHelp:
+    "बीच के नोड्स से होकर अनुमानित रास्ते। विश्वास रास्ते के एज-विश्वासों का गुणनफल है — कम मान को तथ्य नहीं, जाँच योग्य सुराग मानें।",
   riskZones: "जोखिम क्षेत्र",
+  riskBand: "जोखिम बैंड",
   betweenness: "बीचेनेस",
   closeness: "निकटता",
   degree: "डिग्री",
   eigenvector: "आइजेनवेक्टर",
   nodeCount: "नोड्स",
   edgeCount: "एज",
+  rankedByBetweenness: "बीचेनेस से क्रमबद्ध",
+  rankedByConfidence: "विश्वास से क्रमबद्ध",
+  rankedByRisk: "जोखिम स्कोर से क्रमबद्ध",
+  hops: "हॉप",
+  inferred: "अनुमानित",
+  mostly: "मुख्यतः",
+  density: "घनत्व",
+  internalLinks: "आंतरिक लिंक",
+  nodesUnit: "नोड",
+  mainCluster: "मुख्य समूह",
+  smallClusters: "छोटे समूह",
+  isolated: "अलग-थलग",
+  investigation: "जाँच",
+  candidate: "उम्मीदवार",
+  suspectsLabel: "संदिग्ध",
 };
 
 const dictionaries: Record<Language, UiStrings> = { en, hi };

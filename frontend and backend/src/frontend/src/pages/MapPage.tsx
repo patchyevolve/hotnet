@@ -6,11 +6,13 @@ import {
   MapCanvas,
   PageHeader,
   RiskBadge,
+  StatusPill,
 } from "@/components/crimenet";
+import { caseStatusLabels, caseStatusTones } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
 import { useRole } from "@/lib/crimenet/role-context";
-import { getMapData } from "@/lib/crimenet/services";
-import type { MapData, MapMarker } from "@/lib/crimenet/types";
+import { getCases, getMapData } from "@/lib/crimenet/services";
+import type { CaseRecord, MapData, MapMarker } from "@/lib/crimenet/types";
 import { MapPin } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
@@ -38,9 +40,86 @@ function markerLayer(marker: MapMarker): LayerId {
   return "entities";
 }
 
+function bandTone(band?: string): "neutral" | "success" | "warning" | "danger" {
+  if (band === "RED") return "danger";
+  if (band === "AMBER") return "warning";
+  if (band === "GREEN") return "success";
+  return "neutral";
+}
+
+/**
+ * District filter for one marker. Spatial rows carry an exact `city`, but H3
+ * zone markers have no district column at all — dropping them under a
+ * district filter would silently hide every risk zone. Zones match against
+ * the location names the run recorded for them instead, so filtering to
+ * "Delhi" narrows to zones whose data actually names Delhi.
+ */
+function matchesDistrict(marker: MapMarker, district: string): boolean {
+  if (district === "all") return true;
+  if (marker.district) return marker.district === district;
+  const needle = district.toLowerCase();
+  return (marker.locationNames ?? []).some((name) =>
+    name.toLowerCase().includes(needle),
+  );
+}
+
+/**
+ * Stamp every marker with the case it came from. Ids are prefixed only when
+ * a merged view could collide across runs — single-case scopes keep raw ids
+ * so links and the detail panel stay stable.
+ */
+function stampScope(data: MapData, caseId: string, prefix: boolean): MapData {
+  const tag = (id: string) => (prefix ? `${caseId}:${id}` : id);
+  return {
+    ...data,
+    caseId,
+    markers: data.markers.map((marker) => ({
+      ...marker,
+      caseId,
+      id: tag(marker.id),
+    })),
+    links: data.links.map((link) => ({
+      ...link,
+      from: tag(link.from),
+      to: tag(link.to),
+    })),
+  };
+}
+
+/**
+ * Map data for a case scope. "all" merges every registered case's run —
+ * each marker stays attributed to its own case — while a specific scope
+ * requests that case's projection directly. With nothing registered we fall
+ * back to the active case so the page still shows real data.
+ */
+async function loadScopedMap(
+  scope: string,
+  rows: CaseRecord[],
+): Promise<MapData> {
+  const targets =
+    scope === "all" ? rows : rows.filter((row) => row.id === scope);
+  if (targets.length === 0) {
+    return getMapData(scope === "all" ? undefined : scope);
+  }
+  if (targets.length === 1) {
+    return stampScope(await getMapData(targets[0].id), targets[0].id, false);
+  }
+  const parts = await Promise.all(
+    targets.map(async (row) =>
+      stampScope(await getMapData(row.id), row.id, true),
+    ),
+  );
+  return {
+    markers: parts.flatMap((part) => part.markers),
+    links: parts.flatMap((part) => part.links),
+  };
+}
+
 export function MapPage() {
   const { language } = useRole();
   const strings = getStrings(language);
+  const [cases, setCases] = useState<CaseRecord[] | null>(null);
+  const [caseScope, setCaseScope] = useState("all");
   const [data, setData] = useState<MapData | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [district, setDistrict] = useState("all");
@@ -57,7 +136,22 @@ export function MapPage() {
 
   useEffect(() => {
     let cancelled = false;
-    void getMapData().then((result) => {
+    void getCases().then((rows) => {
+      if (cancelled) return;
+      setCases(rows);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    // The registry decides what the scope can resolve to — wait for it so
+    // the first paint is the real scoped fetch, not an unscoped guess.
+    if (cases === null) return;
+    let cancelled = false;
+    setLoading(true);
+    void loadScopedMap(caseScope, cases).then((result) => {
       if (cancelled) return;
       setData(result);
       setSelectedId(result.markers[0]?.id ?? null);
@@ -66,7 +160,14 @@ export function MapPage() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [cases, caseScope]);
+
+  const scopedCases = useMemo(() => {
+    const rows = cases ?? [];
+    return caseScope === "all"
+      ? rows
+      : rows.filter((row) => row.id === caseScope);
+  }, [cases, caseScope]);
 
   const districts = useMemo(
     () =>
@@ -80,7 +181,7 @@ export function MapPage() {
     if (!data) return null;
     const markers = data.markers.filter(
       (marker) =>
-        (district === "all" || marker.district === district) &&
+        matchesDistrict(marker, district) &&
         (risk === "all" || marker.risk === risk) &&
         layers[markerLayer(marker)],
     );
@@ -91,16 +192,33 @@ export function MapPage() {
     return { markers, links };
   }, [data, district, risk, layers]);
 
-  const rankedZones = useMemo(
+  // Keep the detail panel pointing at a marker that is actually on the map:
+  // a filter change used to leave a hidden marker selected.
+  useEffect(() => {
+    if (!filtered) return;
+    if (!filtered.markers.some((marker) => marker.id === selectedId)) {
+      setSelectedId(filtered.markers[0]?.id ?? null);
+    }
+  }, [filtered, selectedId]);
+
+  /** Zones ranked exactly as the map shows them — same scope, same filters. */
+  const zones = useMemo(
     () =>
-      (data?.markers ?? [])
+      (filtered?.markers ?? [])
         .filter((marker) => typeof marker.riskScore === "number")
         .sort((a, b) => (b.riskScore ?? 0) - (a.riskScore ?? 0)),
-    [data],
+    [filtered],
   );
 
   const selected =
-    data?.markers.find((marker) => marker.id === selectedId) ?? null;
+    filtered?.markers.find((marker) => marker.id === selectedId) ?? null;
+  const selectedCaseId = selected?.caseId ?? data?.caseId;
+
+  const linkedMarkers = selected
+    ? (filtered?.links ?? []).filter(
+        (link) => link.from === selected.id || link.to === selected.id,
+      )
+    : [];
 
   const toggleLayer = (id: LayerId) => {
     setLayers((current) => ({ ...current, [id]: !current[id] }));
@@ -114,8 +232,59 @@ export function MapPage() {
         description={strings.mapDescription}
       />
 
+      <section
+        data-ocid="map.case_scope"
+        aria-label={strings.caseScope}
+        className="mt-2 flex flex-wrap items-center gap-2"
+      >
+        <span className="label-caps text-muted-foreground">
+          {strings.caseScope}
+        </span>
+        {cases === null ? (
+          <span className="text-xs text-muted-foreground">
+            {strings.loading}
+          </span>
+        ) : scopedCases.length === 0 ? (
+          <span className="text-xs text-muted-foreground">
+            {strings.emptyBody}
+          </span>
+        ) : (
+          scopedCases.map((row) => (
+            <span
+              key={row.id}
+              data-ocid={`map.case_chip.${row.id}`}
+              className="flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs"
+            >
+              <span className="font-mono-id text-info">{row.id}</span>
+              <span className="font-mono-id text-muted-foreground">
+                {row.firNumber}
+              </span>
+              <span className="text-foreground">{row.title}</span>
+              <StatusPill
+                label={caseStatusLabels[row.status]}
+                tone={caseStatusTones[row.status]}
+              />
+            </span>
+          ))
+        )}
+      </section>
+
       <FilterBar
+        className="mt-4"
         filters={[
+          {
+            id: "case",
+            label: strings.caseScope,
+            value: caseScope,
+            onChange: setCaseScope,
+            options: [
+              { value: "all", label: strings.allCases },
+              ...(cases ?? []).map((row) => ({
+                value: row.id,
+                label: `${row.id} · ${row.firNumber}`,
+              })),
+            ],
+          },
           {
             id: "district",
             label: strings.district,
@@ -141,6 +310,7 @@ export function MapPage() {
           },
         ]}
         onReset={() => {
+          setCaseScope("all");
           setDistrict("all");
           setRisk("all");
           setLayers({
@@ -255,6 +425,13 @@ export function MapPage() {
                   {selected.detail}
                 </p>
                 <div className="mt-3">
+                  {selectedCaseId ? (
+                    <DetailField
+                      label={strings.caseScope}
+                      value={selectedCaseId}
+                      mono
+                    />
+                  ) : null}
                   <DetailField
                     label={strings.district}
                     value={selected.district}
@@ -264,21 +441,31 @@ export function MapPage() {
                     value={selected.kind}
                   />
                   <DetailField label={strings.risk} value={selected.risk} />
+                  {selected.riskBand ? (
+                    <DetailField
+                      label={strings.riskBand}
+                      value={selected.riskBand}
+                    />
+                  ) : null}
+                  {selected.evidenceCount !== undefined ? (
+                    <DetailField
+                      label={strings.evidence}
+                      value={selected.evidenceCount}
+                    />
+                  ) : null}
                 </div>
                 <div className="mt-4">
                   <p className="label-caps mb-2 text-muted-foreground">
                     {strings.linkedMarkers}
                   </p>
-                  <ul className="flex flex-col gap-1.5">
-                    {(data?.links ?? [])
-                      .filter(
-                        (link) =>
-                          link.from === selected.id || link.to === selected.id,
-                      )
-                      .map((link) => {
+                  {linkedMarkers.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">{"\u2014"}</p>
+                  ) : (
+                    <ul className="flex flex-col gap-1.5">
+                      {linkedMarkers.map((link) => {
                         const otherId =
                           link.from === selected.id ? link.to : link.from;
-                        const other = data?.markers.find(
+                        const other = filtered?.markers.find(
                           (marker) => marker.id === otherId,
                         );
                         return (
@@ -300,7 +487,8 @@ export function MapPage() {
                           </li>
                         );
                       })}
-                  </ul>
+                    </ul>
+                  )}
                 </div>
               </>
             ) : (
@@ -316,17 +504,26 @@ export function MapPage() {
                 {strings.riskZones}
               </h2>
               <span className="font-mono-id text-xs text-muted-foreground">
-                {rankedZones.length}
+                {zones.length}
               </span>
             </div>
             <div className="p-4">
-              {rankedZones.length === 0 ? (
+              <p className="mb-2 flex items-center gap-2 text-[11px] text-muted-foreground">
+                <span className="label-caps">{strings.caseScope}</span>
+                <span className="font-mono-id text-foreground/80">
+                  {caseScope === "all" ? strings.allCases : caseScope}
+                </span>
+              </p>
+              {zones.length === 0 ? (
                 <p className="text-sm text-muted-foreground">
                   {strings.emptyBody}
                 </p>
               ) : (
-                <ol className="flex flex-col gap-2">
-                  {rankedZones.slice(0, 6).map((zone, index) => (
+                <ol
+                  data-ocid="map.risk_zones_list"
+                  className="scrollbar-thin flex max-h-[26rem] flex-col gap-2 overflow-y-auto overscroll-contain pr-1"
+                >
+                  {zones.map((zone, index) => (
                     <li
                       key={zone.id}
                       data-ocid={`map.risk_zone.${index + 1}`}
@@ -339,8 +536,16 @@ export function MapPage() {
                       >
                         {zone.label}
                       </button>
-                      <span className="shrink-0 font-mono-id text-[11px] tabular-nums text-muted-foreground">
-                        {zone.riskScore?.toFixed(2)}
+                      <span className="flex shrink-0 items-center gap-1.5">
+                        {zone.riskBand ? (
+                          <StatusPill
+                            label={zone.riskBand}
+                            tone={bandTone(zone.riskBand)}
+                          />
+                        ) : null}
+                        <span className="font-mono-id text-[11px] tabular-nums text-muted-foreground">
+                          {zone.riskScore?.toFixed(2)}
+                        </span>
                       </span>
                     </li>
                   ))}

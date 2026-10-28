@@ -53,15 +53,17 @@ export function MetricCard({
     >
       <div className="flex items-start justify-between gap-3">
         <span className="label-caps text-muted-foreground">{label}</span>
-        <span
-          className={cn(
-            "flex items-center gap-1 text-xs font-medium",
-            toneText[tone],
-          )}
-        >
-          <TrendIcon className="size-3.5" aria-hidden />
-          {delta}
-        </span>
+        {delta ? (
+          <span
+            className={cn(
+              "flex items-center gap-1 text-xs font-medium",
+              toneText[tone],
+            )}
+          >
+            <TrendIcon className="size-3.5" aria-hidden />
+            {delta}
+          </span>
+        ) : null}
       </div>
       <div className="flex items-end justify-between gap-3">
         <span className="metric-value text-foreground">{value}</span>

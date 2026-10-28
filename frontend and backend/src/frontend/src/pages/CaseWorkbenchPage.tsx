@@ -17,6 +17,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   casePriorityLabels,
   caseStatusLabels,
+  caseStatusTones,
+  downloadCsv,
   entityKindLabels,
   formatCompactCurrency,
   formatDate,
@@ -26,10 +28,12 @@ import {
 import { getStrings } from "@/lib/crimenet/i18n";
 import { useRole } from "@/lib/crimenet/role-context";
 import {
+  type AccessLevel,
   getCase,
   getCaseCdr,
   getCdrSummary,
   getCustodyEvents,
+  getEffectiveLevel,
   getEntities,
   getEvidence,
   getMoneyFlow,
@@ -50,6 +54,7 @@ import type {
 import { Link, useParams } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, FileText, Network, Users } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ForbiddenPage } from "./ForbiddenPage";
 
 export function CaseWorkbenchPage() {
   const { caseId } = useParams({ from: "/cases/$caseId" });
@@ -65,23 +70,14 @@ export function CaseWorkbenchPage() {
   const [caseCdr, setCaseCdr] = useState<CdrRecord[]>([]);
   const [cdrSummary, setCdrSummary] = useState<CdrSummary | null>(null);
   const [moneyFlow, setMoneyFlow] = useState<MoneyFlow | null>(null);
+  const [level, setLevel] = useState<AccessLevel>("NONE");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
-    void Promise.all([
-      getCase(caseId),
-      getEntities(),
-      getNetworkGraph(caseId),
-      getTimeline(),
-      getEvidence(),
-      getCustodyEvents(),
-      getCaseCdr(caseId),
-      getCdrSummary(caseId),
-      getMoneyFlow(caseId),
-    ]).then(
-      ([
+    void (async () => {
+      const [
         caseResult,
         entityResult,
         graphResult,
@@ -91,20 +87,40 @@ export function CaseWorkbenchPage() {
         cdrResult,
         cdrSummaryResult,
         moneyFlowResult,
-      ]) => {
-        if (cancelled) return;
-        setRecord(caseResult);
-        setEntities(entityResult);
-        setGraph(graphResult);
-        setTimeline(timelineResult);
-        setEvidence(evidenceResult);
-        setCustody(custodyResult);
-        setCaseCdr(cdrResult);
-        setCdrSummary(cdrSummaryResult);
-        setMoneyFlow(moneyFlowResult);
-        setLoading(false);
-      },
-    );
+      ] = await Promise.all([
+        getCase(caseId),
+        getEntities(),
+        getNetworkGraph(caseId),
+        getTimeline(caseId),
+        getEvidence(caseId),
+        getCustodyEvents(),
+        getCaseCdr(caseId),
+        getCdrSummary(caseId),
+        getMoneyFlow(caseId),
+      ]);
+      if (cancelled) return;
+      // The effective level is fetched with the case it belongs to, so the
+      // fallback below can also weigh the station and creator of the record.
+      const caseLevel = caseResult
+        ? await getEffectiveLevel({
+            caseId,
+            station: caseResult.station,
+            createdBy: caseResult.leadOfficerId,
+          })
+        : "NONE";
+      if (cancelled) return;
+      setRecord(caseResult);
+      setEntities(entityResult);
+      setGraph(graphResult);
+      setTimeline(timelineResult);
+      setEvidence(evidenceResult);
+      setCustody(custodyResult);
+      setCaseCdr(cdrResult);
+      setCdrSummary(cdrSummaryResult);
+      setMoneyFlow(moneyFlowResult);
+      setLevel(caseLevel);
+      setLoading(false);
+    })();
     return () => {
       cancelled = true;
     };
@@ -138,10 +154,22 @@ export function CaseWorkbenchPage() {
     );
   }
 
+  // Level checked after the not-found branch so a case outside the caller's
+  // station still reports "not found" instead of leaking its existence.
+  if (level === "NONE") {
+    return <ForbiddenPage body={strings.forbiddenCaseBody} />;
+  }
+
+  const readOnly = level === "READ";
+
   const caseEntities = entities.filter((entity) =>
     record.entityIds.includes(entity.id),
   );
-  const caseEvidence = evidence.filter((item) => item.caseId === record.id);
+  // The endpoint scopes rows server-side when caseId is supplied; rows that
+  // carry no caseId belong to the run of the case that was just fetched.
+  const caseEvidence = evidence.filter(
+    (item) => !item.caseId || item.caseId === record.id,
+  );
   const caseCustody = custody.filter((event) =>
     caseEvidence.some((item) => item.id === event.evidenceId),
   );
@@ -216,7 +244,15 @@ export function CaseWorkbenchPage() {
         description={record.summary}
         actions={
           <div className="flex items-center gap-2">
-            <StatusPill label={caseStatusLabels[record.status]} tone="danger" />
+            {readOnly ? (
+              <span data-ocid="case_workbench.read_only_pill">
+                <StatusPill label={strings.readOnlyAccess} tone="neutral" />
+              </span>
+            ) : null}
+            <StatusPill
+              label={caseStatusLabels[record.status]}
+              tone={caseStatusTones[record.status]}
+            />
             <RiskBadge risk={record.risk} />
           </div>
         }
@@ -287,7 +323,7 @@ export function CaseWorkbenchPage() {
           </p>
           {record.linkedCaseIds.length === 0 ? (
             <p className="text-sm text-muted-foreground">
-              {strings.noLinkedEntities}
+              {strings.noLinkedCases}
             </p>
           ) : (
             <ul className="flex flex-col gap-2">
@@ -575,22 +611,151 @@ export function CaseWorkbenchPage() {
         </TabsContent>
 
         <TabsContent value="reports" className="mt-4">
-          <EmptyState
-            icon={<FileText className="size-5" aria-hidden />}
-            title={strings.reportsUnavailable}
-            body={strings.reportsUnavailableBody}
-            action={
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                data-ocid="case_workbench.reports_disabled_button"
-                disabled
-              >
+          <div className="panel">
+            <div className="panel-header">
+              <h2 className="font-display text-sm font-semibold text-foreground">
                 {strings.reportsTab}
-              </Button>
-            }
-          />
+              </h2>
+            </div>
+            <div className="p-4">
+              <p className="text-sm text-muted-foreground">
+                {strings.exportCenterDescription}
+              </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  data-ocid="case_workbench.export_summary"
+                  onClick={() =>
+                    downloadCsv(
+                      `${record.id}-summary.csv`,
+                      [
+                        "Case ID",
+                        "FIR",
+                        "Title",
+                        "Status",
+                        "Risk",
+                        "District",
+                        "Station",
+                        "Lead Officer",
+                        "Opened",
+                        "Updated",
+                        "Evidence",
+                        "Entities",
+                        "Relationships",
+                        "Linked Cases",
+                      ],
+                      [
+                        [
+                          record.id,
+                          record.firNumber,
+                          record.title,
+                          caseStatusLabels[record.status],
+                          record.risk,
+                          record.district ?? "",
+                          record.station ?? "",
+                          record.leadOfficer,
+                          record.openedAt,
+                          record.updatedAt,
+                          record.evidenceCount,
+                          caseEntities.length,
+                          graph?.edges.length ?? 0,
+                          record.linkedCaseIds.length,
+                        ],
+                      ],
+                    )
+                  }
+                >
+                  <FileText className="size-3.5" aria-hidden />
+                  {strings.exportCaseSummary}
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  data-ocid="case_workbench.export_entities"
+                  onClick={() =>
+                    downloadCsv(
+                      `${record.id}-entities.csv`,
+                      [
+                        "Entity ID",
+                        "Name",
+                        "Type",
+                        "Risk",
+                        "First Seen",
+                        "Last Seen",
+                      ],
+                      caseEntities.map((entity) => [
+                        entity.id,
+                        entity.name,
+                        entityKindLabels[entity.kind],
+                        entity.risk,
+                        entity.firstSeen,
+                        entity.lastSeen,
+                      ]),
+                    )
+                  }
+                >
+                  <Users className="size-3.5" aria-hidden />
+                  {`${strings.exportEntities} (${caseEntities.length})`}
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  data-ocid="case_workbench.export_evidence"
+                  onClick={() =>
+                    downloadCsv(
+                      `${record.id}-evidence.csv`,
+                      [
+                        "Evidence ID",
+                        "Label",
+                        "Kind",
+                        "Collected At",
+                        "Collected By",
+                        "Integrity",
+                      ],
+                      caseEvidence.map((item) => [
+                        item.id,
+                        item.label,
+                        item.kind,
+                        item.collectedAt,
+                        item.collectedBy ?? "",
+                        item.integrity,
+                      ]),
+                    )
+                  }
+                >
+                  <FileText className="size-3.5" aria-hidden />
+                  {`${strings.exportEvidence} (${caseEvidence.length})`}
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  data-ocid="case_workbench.export_timeline"
+                  onClick={() =>
+                    downloadCsv(
+                      `${record.id}-timeline.csv`,
+                      ["Event ID", "At", "Type", "Title", "Detail", "Risk"],
+                      timeline.map((event) => [
+                        event.id,
+                        event.at,
+                        event.kind,
+                        event.title,
+                        event.detail,
+                        event.risk,
+                      ]),
+                    )
+                  }
+                >
+                  <Network className="size-3.5" aria-hidden />
+                  {`${strings.exportTimeline} (${timeline.length})`}
+                </Button>
+              </div>
+            </div>
+          </div>
         </TabsContent>
       </Tabs>
 

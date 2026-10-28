@@ -8,8 +8,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { formatRelative } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
-import { useRole } from "@/lib/crimenet/role-context";
-import { getNotifications } from "@/lib/crimenet/services";
+import { useIdentity } from "@/lib/crimenet/identity";
+import { roleLabels, useRole } from "@/lib/crimenet/role-context";
+import { getNotifications, signOut } from "@/lib/crimenet/services";
 import type { NotificationItem } from "@/lib/crimenet/types";
 import { cn } from "@/lib/utils";
 import { useNavigate } from "@tanstack/react-router";
@@ -17,7 +18,6 @@ import { Bell, Command, Languages, LogOut, UserRound } from "lucide-react";
 import { useEffect, useState } from "react";
 import { GlobalSearch } from "./GlobalSearch";
 import { RiskBadge } from "./RiskBadge";
-import { RoleSwitcher } from "./RoleSwitcher";
 
 interface TopBarProps {
   onOpenCommandPalette: () => void;
@@ -26,7 +26,8 @@ interface TopBarProps {
 
 export function TopBar({ onOpenCommandPalette, onOpenMobileNav }: TopBarProps) {
   const navigate = useNavigate();
-  const { language, toggleLanguage } = useRole();
+  const { language, toggleLanguage, role } = useRole();
+  const identity = useIdentity();
   const strings = getStrings(language);
   const [notifications, setNotifications] = useState<NotificationItem[]>([]);
 
@@ -143,7 +144,20 @@ export function TopBar({ onOpenCommandPalette, onOpenMobileNav }: TopBarProps) {
         </DropdownMenuContent>
       </DropdownMenu>
 
-      <RoleSwitcher />
+      <div
+        data-ocid="top_bar.identity"
+        className="hidden max-w-56 items-center gap-2 truncate rounded-md border border-border bg-card/60 px-2.5 py-1.5 text-xs text-muted-foreground sm:flex"
+        title={
+          identity ? `${identity.displayName} · ${roleLabels[role]}` : undefined
+        }
+      >
+        <span className="truncate font-medium text-foreground">
+          {identity?.displayName || strings.profile}
+        </span>
+        <span className="label-caps shrink-0 text-info">
+          {roleLabels[role]}
+        </span>
+      </div>
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
@@ -158,9 +172,16 @@ export function TopBar({ onOpenCommandPalette, onOpenMobileNav }: TopBarProps) {
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-56">
           <DropdownMenuLabel className="flex flex-col gap-0.5">
-            <span>Insp. A. Deshmukh</span>
+            <span className="truncate">
+              {identity?.displayName || strings.profile}
+            </span>
             <span className="font-mono-id text-[11px] font-normal text-muted-foreground">
-              E-10021 · Central Cyber Cell
+              {roleLabels[role]}
+              {identity?.jurisdictionId
+                ? ` · ${identity.jurisdictionId
+                    .replace("JURISDICTION_", "")
+                    .replace(/_/g, " ")}`
+                : ""}
             </span>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
@@ -170,7 +191,13 @@ export function TopBar({ onOpenCommandPalette, onOpenMobileNav }: TopBarProps) {
           >
             Security &amp; Audit
           </DropdownMenuItem>
-          <DropdownMenuItem data-ocid="top_bar.profile_menu.signout" disabled>
+          <DropdownMenuItem
+            data-ocid="top_bar.profile_menu.signout"
+            onSelect={() => {
+              signOut();
+              void navigate({ to: "/signin" });
+            }}
+          >
             <LogOut className="mr-2 size-3.5" aria-hidden />
             {strings.signOut}
           </DropdownMenuItem>

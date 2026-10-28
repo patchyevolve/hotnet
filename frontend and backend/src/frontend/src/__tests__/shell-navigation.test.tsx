@@ -1,4 +1,5 @@
 import { apiMock } from "@/test/api-mock";
+import { ADMIN_DELHI, seedToken } from "@/test/identity";
 import { renderApp } from "@/test/render-app";
 import { configure, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -58,6 +59,9 @@ describe("app shell and sidebar navigation", () => {
   });
 
   it("lists all thirteen sections in the sidebar", async () => {
+    // The full section list belongs to a role that may open all thirteen —
+    // an inspector's sidebar deliberately omits Security & Audit.
+    seedToken(ADMIN_DELHI);
     renderApp("/");
     await screen.findByTestId("command_center.page");
 
@@ -72,6 +76,7 @@ describe("app shell and sidebar navigation", () => {
 
   it("navigates to every section from the sidebar with no empty-looking page", async () => {
     const user = userEvent.setup();
+    seedToken(ADMIN_DELHI);
     renderApp("/");
     await screen.findByTestId("command_center.page");
 

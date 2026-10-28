@@ -15956,7 +15956,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-05",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Transfer to Suresh",
+        "sourceFile": "05_Bank_Rakesh.csv",
+        "sourceHash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_0ce571dffaf51b45",
@@ -15968,7 +15974,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-05",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Transfer from Rakesh",
+        "sourceFile": "06_Bank_Suresh.csv",
+        "sourceHash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_e43b5c58794b8075",
@@ -15980,7 +15992,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to HDFC",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_810dc992147e58ff",
@@ -15992,7 +16010,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to PNB",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_be750962e31e4297",
@@ -16004,7 +16028,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to BoB",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_436a5eab9b01ca08",
@@ -16016,10 +16046,95 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Fraud transfer received",
+        "sourceFile": "31_Adversarial_Bank.csv",
+        "sourceHash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+        "sourceIntegrity": "tampered",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       }
     ],
-    "byChannel": []
+    "byChannel": [],
+    "sourceFiles": [
+      {
+        "file": "15_Bank_Meena.csv",
+        "records": 3,
+        "hash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "qualityScore": 1.0,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 3,
+        "volume": 1500000.0
+      },
+      {
+        "file": "31_Adversarial_Bank.csv",
+        "records": 4,
+        "hash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+        "qualityScore": 0.948,
+        "adversarialSuspicious": true,
+        "integrity": "tampered",
+        "transferCount": 1,
+        "volume": 500000.0
+      },
+      {
+        "file": "06_Bank_Suresh.csv",
+        "records": 6,
+        "hash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+        "qualityScore": 0.965,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 1,
+        "volume": 50000.0
+      },
+      {
+        "file": "05_Bank_Rakesh.csv",
+        "records": 7,
+        "hash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+        "qualityScore": 0.982,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 1,
+        "volume": 15000.0
+      },
+      {
+        "file": "07_Bank_Amit.csv",
+        "records": 4,
+        "hash": "sha256:88c1f60ddffa6053f54c9904089a0fc6c33b004c1fe09d2dd36395b89835061c",
+        "qualityScore": 0.948,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      },
+      {
+        "file": "22_Bank_No_Name.csv",
+        "records": 5,
+        "hash": "sha256:acef455eccbc32e4149928918eb6a9defa1eefe1783a24d7be3707b2ef1f0dcc",
+        "qualityScore": 0.908,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      },
+      {
+        "file": "48_Bank_Transactions.xlsx",
+        "records": 4,
+        "hash": "sha256:2bcf20c6723c64abbcf98969425c76912e2ee56395676c10629932289f8f1027",
+        "qualityScore": 1.0,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      }
+    ],
+    "ingestion": {
+      "files": 63,
+      "records": 300,
+      "bankFiles": 7,
+      "bankRecords": 33,
+      "runId": "run_20261026_185320"
+    }
   },
   "/api/money?caseId=CASE_000001": {
     "caseId": "CASE_000001",
@@ -16167,7 +16282,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-05",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Transfer to Suresh",
+        "sourceFile": "05_Bank_Rakesh.csv",
+        "sourceHash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_0ce571dffaf51b45",
@@ -16179,7 +16300,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-05",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Transfer from Rakesh",
+        "sourceFile": "06_Bank_Suresh.csv",
+        "sourceHash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_e43b5c58794b8075",
@@ -16191,7 +16318,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to HDFC",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_810dc992147e58ff",
@@ -16203,7 +16336,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to PNB",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_be750962e31e4297",
@@ -16215,7 +16354,13 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Online transfer to BoB",
+        "sourceFile": "15_Bank_Meena.csv",
+        "sourceHash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "sourceIntegrity": "verified",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       },
       {
         "id": "REL_436a5eab9b01ca08",
@@ -16227,10 +16372,95 @@
         "currency": "INR",
         "occurredAt": "2024-03-14",
         "flagged": false,
-        "risk": "medium"
+        "risk": "medium",
+        "description": "Fraud transfer received",
+        "sourceFile": "31_Adversarial_Bank.csv",
+        "sourceHash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+        "sourceIntegrity": "tampered",
+        "extractionConfidence": 1.0,
+        "extractionBasis": ["Bank record direct"]
       }
     ],
-    "byChannel": []
+    "byChannel": [],
+    "sourceFiles": [
+      {
+        "file": "15_Bank_Meena.csv",
+        "records": 3,
+        "hash": "sha256:ff78c191bb77e5b1ecae3ff8a78602470a43e7cce6c590df6a29abec7f45eca4",
+        "qualityScore": 1.0,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 3,
+        "volume": 1500000.0
+      },
+      {
+        "file": "31_Adversarial_Bank.csv",
+        "records": 4,
+        "hash": "sha256:996be4df159159b39ff064c18fa6517b1e7935a31dccafc3baa0b3f6453e1cdf",
+        "qualityScore": 0.948,
+        "adversarialSuspicious": true,
+        "integrity": "tampered",
+        "transferCount": 1,
+        "volume": 500000.0
+      },
+      {
+        "file": "06_Bank_Suresh.csv",
+        "records": 6,
+        "hash": "sha256:5f7793211bd55a7f07334e2931159e54f145653bda122da6e97505fd43bbb817",
+        "qualityScore": 0.965,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 1,
+        "volume": 50000.0
+      },
+      {
+        "file": "05_Bank_Rakesh.csv",
+        "records": 7,
+        "hash": "sha256:5ede39dc58640bef12b542c5742bfcf6d4529b5063d08ad4e415a7ec4268b099",
+        "qualityScore": 0.982,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 1,
+        "volume": 15000.0
+      },
+      {
+        "file": "07_Bank_Amit.csv",
+        "records": 4,
+        "hash": "sha256:88c1f60ddffa6053f54c9904089a0fc6c33b004c1fe09d2dd36395b89835061c",
+        "qualityScore": 0.948,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      },
+      {
+        "file": "22_Bank_No_Name.csv",
+        "records": 5,
+        "hash": "sha256:acef455eccbc32e4149928918eb6a9defa1eefe1783a24d7be3707b2ef1f0dcc",
+        "qualityScore": 0.908,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      },
+      {
+        "file": "48_Bank_Transactions.xlsx",
+        "records": 4,
+        "hash": "sha256:2bcf20c6723c64abbcf98969425c76912e2ee56395676c10629932289f8f1027",
+        "qualityScore": 1.0,
+        "adversarialSuspicious": false,
+        "integrity": "verified",
+        "transferCount": 0,
+        "volume": 0.0
+      }
+    ],
+    "ingestion": {
+      "files": 63,
+      "records": 300,
+      "bankFiles": 7,
+      "bankRecords": 33,
+      "runId": "run_20261026_185320"
+    }
   },
   "/api/map": {
     "markers": [
@@ -16246,7 +16476,13 @@
         "riskScore": 0.8,
         "evidenceCount": 2,
         "x": 65.863,
-        "y": 6.887
+        "y": 6.887,
+        "locationNames": [
+          "Amit Sharma",
+          "Lajpat Nagar Part II",
+          "Rakesh Kumar",
+          "Rose Apartments, Lajpat Nagar Part II, New Delhi"
+        ]
       },
       {
         "id": "GRID_28.653_77.189",
@@ -16260,7 +16496,8 @@
         "riskScore": 0.6,
         "evidenceCount": 3,
         "x": 64.912,
-        "y": 6.35
+        "y": 6.35,
+        "locationNames": ["Karol Bagh", "Karol Bagh, Delhi"]
       },
       {
         "id": "GRID_28.569_77.251",
@@ -16274,7 +16511,8 @@
         "riskScore": 0.6,
         "evidenceCount": 3,
         "x": 66.004,
-        "y": 6.872
+        "y": 6.872,
+        "locationNames": ["Nehru Nagar", "नेहरू नगर"]
       },
       {
         "id": "GRID_28.632_77.219",
@@ -16288,7 +16526,8 @@
         "riskScore": 0.4,
         "evidenceCount": 2,
         "x": 65.444,
-        "y": 6.481
+        "y": 6.481,
+        "locationNames": ["Connaught Place", "Connaught Place, Delhi"]
       },
       {
         "id": "GRID_28.617_77.281",
@@ -16302,7 +16541,8 @@
         "riskScore": 0.4,
         "evidenceCount": 2,
         "x": 66.516,
-        "y": 6.571
+        "y": 6.571,
+        "locationNames": ["Noida", "Noida Sector 62 Gate"]
       },
       {
         "id": "GRID_28.611_77.336",
@@ -16316,7 +16556,8 @@
         "riskScore": 0.4,
         "evidenceCount": 2,
         "x": 67.492,
-        "y": 6.611
+        "y": 6.611,
+        "locationNames": ["Flat 4B"]
       },
       {
         "id": "GRID_28.644_77.189",
@@ -16330,7 +16571,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 64.911,
-        "y": 6.404
+        "y": 6.404,
+        "locationNames": ["Karol Bagh Metro"]
       },
       {
         "id": "GRID_28.617_77.374",
@@ -16344,7 +16586,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 68.145,
-        "y": 6.573
+        "y": 6.573,
+        "locationNames": ["Noida Sector 62 residence"]
       },
       {
         "id": "GRID_28.625_77.296",
@@ -16358,7 +16601,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 66.786,
-        "y": 6.522
+        "y": 6.522,
+        "locationNames": ["East Delhi"]
       },
       {
         "id": "GRID_28.71_77.131",
@@ -16372,7 +16616,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 63.901,
-        "y": 6.0
+        "y": 6.0,
+        "locationNames": ["Rose Apartments"]
       },
       {
         "id": "GRID_28.614_77.209",
@@ -16386,7 +16631,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 65.262,
-        "y": 6.592
+        "y": 6.592,
+        "locationNames": ["New Delhi"]
       },
       {
         "id": "GRID_28.592_77.041",
@@ -16400,7 +16646,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 62.315,
-        "y": 6.726
+        "y": 6.726,
+        "locationNames": ["Dwarka Sector 12"]
       },
       {
         "id": "GRID_28.603_77.057",
@@ -16414,7 +16661,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 62.607,
-        "y": 6.66
+        "y": 6.66,
+        "locationNames": ["Dwarka Sector 12 Main Gate"]
       },
       {
         "id": "GRID_19.969_73.825",
@@ -16428,7 +16676,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 6.0,
-        "y": 60.009
+        "y": 60.009,
+        "locationNames": ["Nehru Nagar Police Station"]
       },
       {
         "id": "GRID_28.537_77.22",
@@ -16442,7 +16691,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 65.462,
-        "y": 7.065
+        "y": 7.065,
+        "locationNames": ["Noida Phase 2"]
       },
       {
         "id": "GRID_14.467_78.85",
@@ -16456,7 +16706,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 94.0,
-        "y": 94.0
+        "y": 94.0,
+        "locationNames": ["RK Telecom"]
       },
       {
         "id": "GRID_28.607_77.036",
@@ -16470,7 +16721,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 62.235,
-        "y": 6.637
+        "y": 6.637,
+        "locationNames": ["Dwarka Sector 12 residence"]
       },
       {
         "id": "GRID_28.666_77.217",
@@ -16484,7 +16736,8 @@
         "riskScore": 0.2,
         "evidenceCount": 1,
         "x": 65.402,
-        "y": 6.267
+        "y": 6.267,
+        "locationNames": ["Delhi"]
       },
       {
         "id": "SPAT_dbd6a68a6cb7c42a",
@@ -16590,7 +16843,8 @@
         "to": "GRID_28.653_77.189",
         "label": "Karol Bagh"
       }
-    ]
+    ],
+    "caseId": "CASE_000001"
   },
   "/api/faces": [
     {

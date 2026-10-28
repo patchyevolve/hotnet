@@ -89,25 +89,18 @@ export function AppShell({ children }: AppShellProps) {
           data-ocid="app_shell.main"
           className="scrollbar-thin min-h-0 flex-1 overflow-y-auto bg-background"
         >
-          <div className="mx-auto w-full max-w-[1600px] px-4 py-5 sm:px-6">
-            {children}
-          </div>
-          <footer className="mx-auto w-full max-w-[1600px] px-4 pb-6 pt-2 sm:px-6">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border pt-4 text-xs text-muted-foreground">
+          <div className="mx-auto flex min-h-full w-full max-w-[1600px] flex-col px-4 py-5 sm:px-6">
+            <div className="flex-1">{children}</div>
+            <footer
+              data-ocid="app_shell.footer"
+              className="mt-5 border-t border-border pb-6 pt-4 text-xs text-muted-foreground"
+            >
               <span>
                 CrimeNet Intelligence Workstation · All records are fictional
                 demonstration data.
               </span>
-              <a
-                href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(window.location.hostname)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-smooth hover:text-foreground"
-              >
-                © {new Date().getFullYear()}. Built with love using caffeine.ai
-              </a>
-            </div>
-          </footer>
+            </footer>
+          </div>
         </main>
       </div>
 

@@ -14,45 +14,21 @@ import {
 import { formatDateTime } from "@/lib/crimenet/format";
 import { getStrings } from "@/lib/crimenet/i18n";
 import { roleLabels, useRole } from "@/lib/crimenet/role-context";
-import { getAuditEvents } from "@/lib/crimenet/services";
-import type { AuditEvent } from "@/lib/crimenet/types";
+import { getAuditEvents, getFaceRecords } from "@/lib/crimenet/services";
+import type { AuditEvent, FaceRecord } from "@/lib/crimenet/types";
 import { ShieldCheck } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
-const auditTimeline = [
-  {
-    time: "14:02",
-    labelKey: "auditInspectorAccessedCase" as const,
-    risk: "low" as const,
-  },
-  {
-    time: "13:57",
-    labelKey: "auditCrossStationSearch" as const,
-    risk: "medium" as const,
-  },
-  {
-    time: "13:41",
-    labelKey: "auditEvidenceIntegrityVerified" as const,
-    risk: "low" as const,
-  },
-  {
-    time: "13:26",
-    labelKey: "auditExportAttemptBlocked" as const,
-    risk: "high" as const,
-  },
-];
-
-const auditBlocks = [
-  "AU-1001 · f1a9c3e7",
-  "AU-1002 · a3d7f1b9",
-  "AU-1003 · c5e2a8d1",
-  "AU-1004 · 7b4f0c6e",
-];
+/** Human-readable label for a pipeline action id (`multi_fir_started`). */
+function humanizeAction(action: string): string {
+  return action.replace(/_/g, " ");
+}
 
 export function SecurityPage() {
   const { language } = useRole();
   const strings = getStrings(language);
   const [events, setEvents] = useState<AuditEvent[]>([]);
+  const [faces, setFaces] = useState<FaceRecord[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [role, setRole] = useState("all");
   const [severity, setSeverity] = useState("all");
@@ -60,16 +36,59 @@ export function SecurityPage() {
 
   useEffect(() => {
     let cancelled = false;
-    void getAuditEvents().then((result) => {
-      if (cancelled) return;
-      setEvents(result);
-      setSelectedId(result[0]?.id ?? null);
-      setLoading(false);
-    });
+    void Promise.all([getAuditEvents(), getFaceRecords()]).then(
+      ([eventResult, faceResult]) => {
+        if (cancelled) return;
+        setEvents(eventResult);
+        setFaces(faceResult);
+        setSelectedId(eventResult[0]?.id ?? null);
+        setLoading(false);
+      },
+    );
     return () => {
       cancelled = true;
     };
   }, []);
+
+  /** Audit events bucketed per distinct minute — a real activity shape. */
+  const eventsPerMinute = useMemo(() => {
+    const buckets = new Map<string, number>();
+    for (const event of events) {
+      const key = event.at.slice(11, 16);
+      buckets.set(key, (buckets.get(key) ?? 0) + 1);
+    }
+    return [...buckets.entries()]
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([, count]) => count);
+  }, [events]);
+
+  const highSeverityEvents = useMemo(
+    () =>
+      events.filter(
+        (row) => row.severity === "critical" || row.severity === "high",
+      ),
+    [events],
+  );
+
+  /** Matches still awaiting an investigator confirm/reject decision. */
+  const pendingApprovals = useMemo(
+    () =>
+      faces.filter(
+        (row) =>
+          row.matchStatus === "probable" || row.matchStatus === "unverified",
+      ),
+    [faces],
+  );
+
+  const highRiskActors = useMemo(
+    () => new Set(highSeverityEvents.map((row) => row.actor)).size,
+    [highSeverityEvents],
+  );
+
+  const recentEvents = useMemo(
+    () => [...events].sort((a, b) => b.at.localeCompare(a.at)).slice(0, 6),
+    [events],
+  );
 
   const filtered = useMemo(
     () =>
@@ -173,41 +192,37 @@ export function SecurityPage() {
           <MetricCard
             label={strings.auditEvents}
             value={String(events.length)}
-            delta="+112 today"
-            trend="up"
+            delta=""
+            trend="flat"
             tone="info"
-            series={[4, 5, 5, 6, 7, 7, 8]}
+            series={eventsPerMinute}
             index={0}
           />
           <MetricCard
             label={strings.pendingApprovals}
-            value="7"
-            delta="+2 today"
-            trend="up"
+            value={String(pendingApprovals.length)}
+            delta=""
+            trend="flat"
             tone="medium"
-            series={[3, 4, 4, 5, 6, 6, 7]}
+            series={[pendingApprovals.length]}
             index={1}
           />
           <MetricCard
             label={strings.securityAlerts}
-            value={String(
-              events.filter(
-                (row) => row.severity === "critical" || row.severity === "high",
-              ).length,
-            )}
-            delta="+2 today"
-            trend="up"
+            value={String(highSeverityEvents.length)}
+            delta=""
+            trend="flat"
             tone="high"
-            series={[1, 1, 2, 2, 2, 3, 3]}
+            series={[highSeverityEvents.length]}
             index={2}
           />
           <MetricCard
             label={strings.highRiskUsers}
-            value="3"
-            delta="stable"
+            value={String(highRiskActors)}
+            delta=""
             trend="flat"
             tone="critical"
-            series={[3, 3, 3, 3, 3, 3, 3]}
+            series={[highRiskActors]}
             index={3}
           />
         </section>
@@ -324,19 +339,24 @@ export function SecurityPage() {
           </span>
         </div>
         <ol className="flex flex-col divide-y divide-border/60">
-          {auditTimeline.map((entry, index) => (
+          {recentEvents.map((event, index) => (
             <li
-              key={entry.time}
+              key={event.id}
               data-ocid={`security.audit_timeline.${index + 1}`}
               className="flex items-start gap-4 p-4"
             >
               <span className="font-mono-id text-sm tabular-nums text-info">
-                {entry.time}
+                {event.at.slice(11, 16)}
               </span>
-              <p className="min-w-0 flex-1 text-sm text-foreground">
-                {strings[entry.labelKey]}
-              </p>
-              <RiskBadge risk={entry.risk} showDot={false} />
+              <div className="min-w-0 flex-1">
+                <p className="text-sm text-foreground">
+                  {humanizeAction(event.action)}
+                </p>
+                <p className="mt-0.5 font-mono-id text-[11px] text-muted-foreground">
+                  {[event.actor, event.target].filter(Boolean).join(" · ")}
+                </p>
+              </div>
+              <RiskBadge risk={event.severity} showDot={false} />
             </li>
           ))}
         </ol>
@@ -351,8 +371,8 @@ export function SecurityPage() {
         </div>
         <div className="scrollbar-thin overflow-x-auto p-4">
           <ol className="flex min-w-max items-center gap-2">
-            {auditBlocks.map((block, index) => (
-              <li key={block} className="flex items-center gap-2">
+            {events.map((event, index) => (
+              <li key={event.id} className="flex items-center gap-2">
                 <div
                   data-ocid={`security.block.${index + 1}`}
                   className="flex min-w-[8.5rem] flex-col gap-1 rounded-lg border border-risk-low/40 bg-risk-low/8 p-3"
@@ -361,10 +381,10 @@ export function SecurityPage() {
                     {strings.block} {String(index + 1).padStart(3, "0")}
                   </span>
                   <span className="text-[11px] text-muted-foreground">
-                    {block}
+                    {event.id}
                   </span>
                 </div>
-                {index < auditBlocks.length - 1 ? (
+                {index < events.length - 1 ? (
                   <span className="text-muted-foreground" aria-hidden>
                     →
                   </span>
