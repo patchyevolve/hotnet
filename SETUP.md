@@ -100,11 +100,31 @@ insightface; frontend bundle is baked in). Then open:
 
 ## 6. Sign in
 
-The sign-in screen is an **identity picker** (no password): type any display
-name, choose a role (INSPECTOR / SUPERVISOR / ADMIN / AUDIT_LOGGER) and a
-jurisdiction → the API signs a session token (secret auto-created at
-`.state/session.secret`). This is the demo identity provider; swapping in
-`CredentialIdentityProvider` changes nothing in the UI.
+The sign-in screen takes an **email + password**. The API answers with a
+signed bearer token (`POST /api/auth/login`), the browser stores it, and the
+console sends it with every request — your role is read from the token, so
+navigation and actions appear or disappear to match it (the RBAC matrix is in
+`README.md`).
+
+Demo accounts (created when the API starts — `docker-compose.yml` sets
+`CRIMENET_SEED_DEMO_USERS=1`. The store skips addresses that already exist, so
+a copied `.state/` is never overwritten):
+
+| Email | Password | Role | Station |
+|---|---|---|---|
+| `admin@crimenet.local` | `Cr1menet!Demo` | ADMIN | Delhi |
+| `supervisor@crimenet.local` | `Cr1menet!Demo` | SUPERVISOR | Delhi |
+| `supervisor.mumbai@crimenet.local` | `Cr1menet!Demo` | SUPERVISOR | Mumbai |
+| `inspector@crimenet.local` | `Cr1menet!Demo` | INSPECTOR | Delhi |
+| `auditor@crimenet.local` | `Cr1menet!Demo` | AUDIT_LOGGER | Delhi |
+
+- Change the shared password with `CRIMENET_DEMO_PASSWORD` (set it alongside
+  the other `CRIMENET_*` values in `docker-compose.yml` or your shell).
+- Outside Docker the gate is **off** — start the API with
+  `CRIMENET_SEED_DEMO_USERS=1` to get the same accounts.
+- What may a role do? Sign in as that role: the top bar shows your identity,
+  restricted pages show the 403 panel, and **Security & Audit** appears only
+  for ADMIN / SUPERVISOR / AUDIT_LOGGER.
 
 ---
 
@@ -129,7 +149,7 @@ Frontend (`frontend and backend/`):
 pnpm install
 pnpm --dir src/frontend dev   # Vite dev server
 pnpm typecheck                # gates (run in frontend and backend/)
-pnpm test                     # 96 tests
+pnpm test                     # 116 tests (Vitest + Testing Library)
 pnpm build
 ```
 
@@ -138,7 +158,7 @@ Backend (`CriminalNetwork/system/`):
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-python -m pytest tests/ -q     # 389 tests
+python -m pytest tests/ -q     # 525 tests
 ```
 
 Edit–run loop:
@@ -179,7 +199,7 @@ docker compose build api && docker compose up -d api   # rebuild one service
 - [ ] Copy `.state/` (+ demo_data `*.jpeg`) if you want the existing demo intact
 - [ ] `cd CriminalNetwork/system && docker compose up -d --build`
 - [ ] Wait for `criminal_network_api` healthy → open http://localhost:8080
-- [ ] Sign in (name + role + jurisdiction)
+- [ ] Sign in (e.g. `inspector@crimenet.local` / `Cr1menet!Demo`)
 - [ ] Smoke test: Command Center loads, Case Intake runs a job, Command Map
       shows India hexes
 - [ ] (Dev) `pnpm install && pnpm typecheck && pnpm test && pnpm build`

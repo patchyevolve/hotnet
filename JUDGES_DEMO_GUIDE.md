@@ -72,9 +72,10 @@ Hypotheses always display their confidence and citations.
 
 ## 4. Demo script (~3 minutes)
 
-Sign-in uses the demo token; pick a role from the top-bar switcher
-(INSPECTOR / SUPERVISOR / ADMIN / AUDIT_LOGGER — each role sees different
-metrics).
+Sign in with a demo account (e.g. `admin@crimenet.local` / `Cr1menet!Demo`).
+Each role sees a different console: ADMIN and SUPERVISOR get all 13 sections,
+INSPECTOR loses **Security & Audit**, and `auditor@crimenet.local` is
+read-only (Command Center + Security & Audit, case pages in read-only mode).
 
 1. **Command Center** — metric cards, Risk Distribution donut (160 cases: 7
    critical / 29 high / 26 medium / 98 low), **Case Activity** bars (per-day
@@ -183,7 +184,7 @@ operable map cells, EN/हिंदी localization, dark-first professional con
 ```bash
 cd CriminalNetwork/system
 docker compose up -d          # api :8000, frontend :8080, pg/neo4j/minio
-# open http://localhost:8080  → sign in with the demo token
+# open http://localhost:8080  → sign in (demo accounts, see README/SETUP)
 ```
 
 Gates: `pnpm typecheck && pnpm test && pnpm build` (in `frontend and backend`),
